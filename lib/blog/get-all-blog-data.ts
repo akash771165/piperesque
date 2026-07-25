@@ -28,7 +28,10 @@ export interface BlogCardData {
 
   readingTime: string;
 
+  keywords?: string[];
+
 }
+
 
 
 
@@ -38,8 +41,10 @@ export function getAllBlogData(): BlogCardData[] {
   const slugs = new Set<string>();
 
 
+
   /*
-    Existing TypeScript Blogs
+    Legacy TypeScript Blog System
+    Keep compatibility
   */
 
   Object.keys(blogContent).forEach((slug)=>{
@@ -50,28 +55,35 @@ export function getAllBlogData(): BlogCardData[] {
 
 
 
+
   /*
-    New JSON CMS Blogs
+    New JSON CMS Blog System
+    Future scalable architecture
   */
 
   if(fs.existsSync(blogsDirectory)){
 
 
-    fs.readdirSync(blogsDirectory)
+    fs
+    .readdirSync(blogsDirectory)
 
-      .filter(
-        (file)=>file.endsWith(".json")
-      )
+    .filter(
+      (file)=>file.endsWith(".json")
+    )
 
-      .forEach((file)=>{
+    .forEach((file)=>{
 
-        slugs.add(
-          file.replace(".json","")
-        );
 
-      });
+      slugs.add(
+        file.replace(".json","")
+      );
+
+
+    });
+
 
   }
+
 
 
 
@@ -80,14 +92,25 @@ export function getAllBlogData(): BlogCardData[] {
 
 
 
+
+
   for(const slug of slugs){
+
 
 
     const blog = getBlogData(slug);
 
 
 
-    if(!blog){
+    /*
+      Ignore invalid / empty CMS entries
+    */
+
+    if(
+      !blog ||
+      !blog.title ||
+      !blog.description
+    ){
 
       continue;
 
@@ -95,20 +118,24 @@ export function getAllBlogData(): BlogCardData[] {
 
 
 
+
+
+
     blogs.push({
+
+
 
       slug,
 
 
+
       title:
-        blog.title ??
-        "Pipe Rescue Plumbing Guide",
+        blog.title,
 
 
 
       description:
-        blog.description ??
-        "",
+        blog.description,
 
 
 
@@ -120,8 +147,7 @@ export function getAllBlogData(): BlogCardData[] {
 
       imageAlt:
         blog.imageAlt ??
-        blog.title ??
-        "Pipe Rescue Blog",
+        blog.title,
 
 
 
@@ -139,17 +165,34 @@ export function getAllBlogData(): BlogCardData[] {
 
       readingTime:
         blog.readingTime ??
-        "5 min read",
+        "",
+
+
+
+      keywords:
+        blog.keywords ?? [],
+
 
 
     });
+
 
 
   }
 
 
 
-  return blogs;
+
+
+  return blogs.sort(
+
+    (a,b)=>
+
+      new Date(b.publishedAt).getTime() -
+
+      new Date(a.publishedAt).getTime()
+
+  );
 
 
 }
