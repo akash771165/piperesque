@@ -6,10 +6,19 @@ export interface BlogAuthor {
 }
 
 
+
+export interface BlogLink {
+  title: string;
+  url: string;
+}
+
+
+
 export interface BlogStep {
   title: string;
   description: string;
 }
+
 
 
 export interface BlogTable {
@@ -17,11 +26,6 @@ export interface BlogTable {
   rows: string[][];
 }
 
-
-export interface BlogLink {
-  title: string;
-  url: string;
-}
 
 
 export interface BlogVideo {
@@ -31,65 +35,7 @@ export interface BlogVideo {
 }
 
 
-export interface BlogSection {
 
-  id?: string;
-
-  title: string;
-
-  subtitle?: string;
-
-
-  content: string[];
-
-
-  bullets?: string[];
-
-
-  numberedList?: string[];
-
-
-  image?: string;
-
-  imageAlt?: string;
-
-
-  table?: BlogTable;
-
-
-  tips?: string[];
-
-
-  warning?: string;
-
-
-  note?: string;
-
-
-  pros?: string[];
-
-
-  cons?: string[];
-
-
-  steps?: BlogStep[];
-
-
-  relatedLinks?: BlogLink[];
-
-
-  video?: BlogVideo;
-
-
-  quote?: string;
-
-
-  code?: string;
-
-
-  highlight?: string;
-
-}
 export interface BlogFAQ {
 
   question: string;
@@ -99,6 +45,7 @@ export interface BlogFAQ {
   category?: string;
 
 }
+
 
 
 export interface BlogCallToAction {
@@ -116,19 +63,6 @@ export interface BlogCallToAction {
 }
 
 
-export interface BlogSchema {
-
-  type?:
-    | "Article"
-    | "FAQPage"
-    | "HowTo"
-    | "Service"
-    | "LocalBusiness";
-
-
-  data?: Record<string, any>;
-
-}
 
 
 export interface BlogSEO {
@@ -137,14 +71,21 @@ export interface BlogSEO {
 
   description?: string;
 
-
   canonical?: string;
-
 
   robots?: string;
 
-
   keywords?: string[];
+
+  focusKeyword?: string;
+
+  secondaryKeywords?: string[];
+
+  searchIntent?:
+    | "informational"
+    | "commercial"
+    | "transactional"
+    | "navigational";
 
 
   ogTitle?: string;
@@ -161,14 +102,84 @@ export interface BlogSEO {
   twitterImage?: string;
 
 
-  schemaType?:
+}
+
+
+
+export interface BlogSchema {
+
+  type?:
     | "Article"
     | "FAQPage"
     | "HowTo"
     | "Service"
     | "LocalBusiness";
 
+
+  data?: Record<string, unknown>;
+
 }
+
+
+
+
+export interface BlogSection {
+
+  id?: string;
+
+  title: string;
+
+  subtitle?: string;
+
+
+  content: string[];
+
+
+  bullets?: string[];
+
+  numberedList?: string[];
+
+
+  image?: string;
+
+  imageAlt?: string;
+
+
+  table?: BlogTable;
+
+
+  steps?: BlogStep[];
+
+
+  tips?: string[];
+
+  warning?: string;
+
+  note?: string;
+
+
+  pros?: string[];
+
+  cons?: string[];
+
+
+  relatedLinks?: BlogLink[];
+
+
+  video?: BlogVideo;
+
+
+  quote?: string;
+
+
+  code?: string;
+
+
+  highlight?: string;
+
+}
+
+
 
 
 
@@ -186,36 +197,30 @@ export interface BlogService {
 
 
 
+
+
 export interface BlogContent {
 
 
-  /*
-  Basic Information
-  */
-
   title?: string;
+
 
   description?: string;
 
+
   slug?: string;
 
+
   category?: string;
+
 
   subCategory?: string;
 
 
 
-  /*
-  Service SEO Data
-  */
-
   service?: BlogService;
 
 
-
-  /*
-  Media
-  */
 
   image?: string;
 
@@ -223,17 +228,9 @@ export interface BlogContent {
 
 
 
-  /*
-  Author
-  */
-
   author?: string | BlogAuthor;
 
 
-
-  /*
-  Dates
-  */
 
   publishedAt?: string;
 
@@ -241,101 +238,82 @@ export interface BlogContent {
 
 
 
-  /*
-  Reading Info
-  */
-
   readingTime?: string;
 
+  wordCount?: number;
 
 
-  /*
-  Keywords
-  */
 
   keywords?: string[];
 
 
 
-  /*
-  Advanced SEO
-  */
-
   seo?: BlogSEO;
 
 
 
-  /*
-  Main Content
-  */
-
   introduction: string[];
+
 
 
   sections: BlogSection[];
 
 
 
-  /*
-  CTA
-  */
-
   callToAction: BlogCallToAction;
 
 
-
-  /*
-  FAQ
-  */
 
   faqs: BlogFAQ[];
 
 
 
-  /*
-  Schema
-  */
-
   schema?: BlogSchema;
 
 
-
-  /*
-  Related Content
-  */
 
   relatedBlogs?: BlogLink[];
 
 
 
-  /*
-  Local SEO
-  */
+  relatedKeywords?: string[];
+
+
 
   locations?: string[];
 
 
 
-  /*
-  Internal Links
-  */
-
   internalLinks?: BlogLink[];
 
 
-
-  /*
-  External References
-  */
 
   externalLinks?: BlogLink[];
 
 
 
-  /*
-  Extra Dynamic Data
-  */
+  metadata?: {
 
-  metadata?: Record<string, any>;
+    status?:
+      | "draft"
+      | "published"
+      | "review";
+
+
+    generatedBy?:
+      | "manual"
+      | "ai";
+
+
+    reviewedBy?: string;
+
+
+    lastUpdated?: string;
+
+
+    [key:string]: unknown;
+
+  };
+
 
 }
