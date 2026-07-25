@@ -57,6 +57,7 @@ import { waterLeakDetectionHoustonTx } from "./water-leak-detection-houston-tx";
 import { plumbingCompanyHoustonTx } from "./plumbing-company-houston-tx";
 import { bestPlumberHoustonTx } from "./best-plumber-houston-tx";
 import { emergencyPlumberHoustonTx } from "./emergency-plumber-houston-tx";
+import { emergencyPlumberHoustonCost2026 } from "./emergency-plumber-houston-cost-2026";
 
 export const blogContent = {
   "emergency-plumber-near-me-houston": emergencyPlumberNearMeHouston,
@@ -118,5 +119,6 @@ export const blogContent = {
   "plumbing-company-houston-tx": plumbingCompanyHoustonTx,
   "best-plumber-houston-tx": bestPlumberHoustonTx,
   "emergency-plumber-houston-tx": emergencyPlumberHoustonTx,
+  "emergency-plumber-houston-cost-2026": emergencyPlumberHoustonCost2026,
 
 };
