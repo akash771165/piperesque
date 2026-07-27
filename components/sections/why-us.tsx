@@ -68,7 +68,7 @@ export default function WhyUs() {
         <div className="mx-auto max-w-3xl text-center">
 
           <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-bold text-blue-600">
-            WHY PIPE RESCUE
+            WHY Piperesque
           </span>
 
           <h2 className="mt-6 text-4xl font-black text-slate-900 lg:text-5xl">
@@ -76,7 +76,7 @@ export default function WhyUs() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Pipe Rescue is an informational website that helps homeowners and
+            Piperesque is an informational website that helps homeowners and
             businesses connect with local plumbing service providers for
             emergency plumbing, drain cleaning, leak detection, sewer line
             services, water heater repair and other plumbing needs.
@@ -148,12 +148,12 @@ export default function WhyUs() {
         <div className="mt-16 rounded-3xl border border-blue-100 bg-blue-50 p-8">
 
           <h3 className="text-2xl font-bold text-slate-900">
-            How Pipe Rescue Works
+            How Piperesque Works
           </h3>
 
           <p className="mt-4 leading-8 text-slate-600">
-            Pipe Rescue is an informational website that helps users connect
-            with independent plumbing service providers. Pipe Rescue does not
+            Piperesque is an informational website that helps users connect
+            with independent plumbing service providers. Piperesque does not
             directly perform plumbing work, dispatch technicians, guarantee
             arrival times, or determine pricing. Availability, scheduling,
             estimates and completed services are provided by the selected

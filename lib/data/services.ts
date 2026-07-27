@@ -43,10 +43,10 @@ export const services: Service[] = [
     shortTitle: "Emergency Plumbing",
 
     seoTitle:
-      "24/7 Emergency Plumber Houston | Pipe Rescue",
+      "24/7 Emergency Plumber Houston | Piperesque",
 
     metaDescription:
-      "Need an emergency plumber in Houston? Pipe Rescue provides fast 24/7 emergency plumbing services for burst pipes, leaks, clogged drains, and urgent repairs.",
+      "Need an emergency plumber in Houston? Piperesque provides fast 24/7 emergency plumbing services for burst pipes, leaks, clogged drains, and urgent repairs.",
 
     keywords: [
       "emergency plumber houston",
@@ -62,7 +62,7 @@ export const services: Service[] = [
       "Our experienced plumbers respond quickly to plumbing emergencies across Houston and surrounding areas. Whether it's a burst pipe, overflowing toilet, or major leak, we're ready to help day or night.",
 
     description:
-      "Pipe Rescue offers professional emergency plumbing services for residential and commercial properties. We arrive with fully equipped service vehicles to diagnose and repair plumbing emergencies quickly, minimizing water damage and restoring your plumbing system.",
+      "Piperesque offers professional emergency plumbing services for residential and commercial properties. We arrive with fully equipped service vehicles to diagnose and repair plumbing emergencies quickly, minimizing water damage and restoring your plumbing system.",
 
     benefits: [
       "24/7 Emergency Response",
@@ -85,7 +85,7 @@ export const services: Service[] = [
     shortTitle: "Drain Cleaning",
 
     seoTitle:
-      "Drain Cleaning Houston, TX | Pipe Rescue",
+      "Drain Cleaning Houston, TX | Piperesque",
 
     metaDescription:
       "Professional drain cleaning services in Houston for clogged sinks, toilets, showers, and sewer lines. Fast, affordable, and reliable service.",
@@ -104,7 +104,7 @@ export const services: Service[] = [
       "Slow or clogged drains can disrupt your day. Our plumbers use professional equipment to remove blockages and restore proper water flow.",
 
     description:
-      "From kitchen sinks to main sewer lines, Pipe Rescue provides complete drain cleaning services using modern tools and proven techniques. We remove grease, debris, roots, and stubborn clogs without damaging your plumbing.",
+      "From kitchen sinks to main sewer lines, Piperesque provides complete drain cleaning services using modern tools and proven techniques. We remove grease, debris, roots, and stubborn clogs without damaging your plumbing.",
 
     benefits: [
       "Advanced Drain Cleaning Equipment",
@@ -126,7 +126,7 @@ export const services: Service[] = [
     shortTitle: "Water Heater Repair",
 
     seoTitle:
-      "Water Heater Repair Houston | Pipe Rescue",
+      "Water Heater Repair Houston | Piperesque",
 
     metaDescription:
       "Need water heater repair in Houston? We repair, replace, and install tank and tankless water heaters for homes and businesses.",
@@ -142,7 +142,7 @@ export const services: Service[] = [
     heroTitle: "Reliable Water Heater Services",
 
     heroDescription:
-      "Restore hot water quickly with professional water heater repair and installation services from Pipe Rescue.",
+      "Restore hot water quickly with professional water heater repair and installation services from Piperesque.",
 
     description:
       "Whether your water heater is leaking, producing no hot water, or needs complete replacement, our licensed plumbers provide fast and reliable repair and installation services for all major brands.",
@@ -168,7 +168,7 @@ export const services: Service[] = [
     shortTitle: "Leak Detection",
 
     seoTitle:
-      "Leak Detection Houston, TX | Pipe Rescue",
+      "Leak Detection Houston, TX | Piperesque",
 
     metaDescription:
       "Accurate leak detection services for homes and businesses in Houston. Find hidden water leaks before they cause expensive damage.",
@@ -187,7 +187,7 @@ export const services: Service[] = [
       "Hidden plumbing leaks can waste water and damage your property. We use advanced equipment to locate leaks quickly and accurately.",
 
     description:
-      "Pipe Rescue provides non-invasive leak detection services using modern diagnostic technology. We identify hidden leaks behind walls, under floors, and inside underground plumbing systems.",
+      "Piperesque provides non-invasive leak detection services using modern diagnostic technology. We identify hidden leaks behind walls, under floors, and inside underground plumbing systems.",
 
     benefits: [
       "Non-Invasive Detection",
@@ -209,7 +209,7 @@ export const services: Service[] = [
     shortTitle: "Pipe Repair",
 
     seoTitle:
-      "Pipe Repair Houston, TX | Pipe Rescue",
+      "Pipe Repair Houston, TX | Piperesque",
 
     metaDescription:
       "Expert pipe repair services in Houston for leaking, frozen, broken, and damaged water or sewer pipes. Fast response and lasting repairs.",
@@ -225,7 +225,7 @@ export const services: Service[] = [
     heroTitle: "Reliable Pipe Repair Services",
 
     heroDescription:
-      "From minor leaks to major pipe damage, Pipe Rescue provides professional pipe repair services that restore your plumbing system quickly and efficiently.",
+      "From minor leaks to major pipe damage, Piperesque provides professional pipe repair services that restore your plumbing system quickly and efficiently.",
 
     description:
       "Our licensed plumbers diagnose and repair damaged water and sewer pipes using modern repair techniques. We minimize disruption while ensuring durable, long-lasting results for residential and commercial properties.",
@@ -251,7 +251,7 @@ export const services: Service[] = [
     shortTitle: "Sewer Line Repair",
 
     seoTitle:
-      "Sewer Line Repair Houston | Pipe Rescue",
+      "Sewer Line Repair Houston | Piperesque",
 
     metaDescription:
       "Professional sewer line repair and replacement services in Houston. We fix blocked, damaged, and broken sewer lines quickly and efficiently.",
@@ -270,7 +270,7 @@ export const services: Service[] = [
       "Damaged sewer lines can create serious plumbing issues. Our experienced plumbers provide reliable sewer inspections, repairs, and replacements.",
 
     description:
-      "Pipe Rescue uses modern inspection equipment to diagnose sewer line problems accurately. We repair cracked, collapsed, and blocked sewer lines with minimal disruption to your property.",
+      "Piperesque uses modern inspection equipment to diagnose sewer line problems accurately. We repair cracked, collapsed, and blocked sewer lines with minimal disruption to your property.",
 
     benefits: [
       "Camera Sewer Inspection",
@@ -293,7 +293,7 @@ export const services: Service[] = [
     shortTitle: "Toilet Repair",
 
     seoTitle:
-      "Toilet Repair Houston, TX | Pipe Rescue",
+      "Toilet Repair Houston, TX | Piperesque",
 
     metaDescription:
       "Professional toilet repair services in Houston for clogged, leaking, overflowing, or constantly running toilets. Fast and affordable plumbing solutions.",
@@ -312,7 +312,7 @@ export const services: Service[] = [
       "Whether your toilet is leaking, clogged, or continuously running, our experienced plumbers provide fast and reliable repairs throughout Houston.",
 
     description:
-      "Pipe Rescue offers complete toilet repair services for residential and commercial properties. We repair flushing issues, leaks, damaged components, and install new toilets when replacement is the better option.",
+      "Piperesque offers complete toilet repair services for residential and commercial properties. We repair flushing issues, leaks, damaged components, and install new toilets when replacement is the better option.",
 
     benefits: [
       "Fast Toilet Repairs",
@@ -334,7 +334,7 @@ export const services: Service[] = [
     shortTitle: "Faucet Repair",
 
     seoTitle:
-      "Faucet Repair Houston, TX | Pipe Rescue",
+      "Faucet Repair Houston, TX | Piperesque",
 
     metaDescription:
       "Expert faucet repair and replacement services for kitchens, bathrooms, and commercial properties throughout Houston.",
@@ -350,7 +350,7 @@ export const services: Service[] = [
     heroTitle: "Expert Faucet Repair Services",
 
     heroDescription:
-      "Stop dripping faucets and water waste with professional faucet repair and replacement services from Pipe Rescue.",
+      "Stop dripping faucets and water waste with professional faucet repair and replacement services from Piperesque.",
 
     description:
       "We repair and replace all types of kitchen, bathroom, utility room, and commercial faucets. Our plumbers work with all major faucet brands and provide long-lasting repairs.",
@@ -376,7 +376,7 @@ export const services: Service[] = [
     shortTitle: "Commercial Plumbing",
 
     seoTitle:
-      "Commercial Plumbing Houston, TX | Pipe Rescue",
+      "Commercial Plumbing Houston, TX | Piperesque",
 
     metaDescription:
       "Reliable commercial plumbing services for offices, restaurants, retail stores, warehouses, and commercial buildings throughout Houston.",
@@ -392,7 +392,7 @@ export const services: Service[] = [
     heroTitle: "Professional Commercial Plumbing Services",
 
     heroDescription:
-      "Pipe Rescue provides dependable commercial plumbing solutions designed to minimize downtime and keep your business running efficiently.",
+      "Piperesque provides dependable commercial plumbing solutions designed to minimize downtime and keep your business running efficiently.",
 
     description:
       "Our commercial plumbing team handles repairs, maintenance, installations, drain cleaning, leak detection, water heaters, sewer lines, and emergency plumbing for businesses of every size throughout Houston.",
@@ -418,7 +418,7 @@ export const services: Service[] = [
     shortTitle: "Residential Plumbing",
 
     seoTitle:
-      "Residential Plumbing Houston, TX | Pipe Rescue",
+      "Residential Plumbing Houston, TX | Piperesque",
 
     metaDescription:
       "Complete residential plumbing services for homes in Houston. Repairs, installations, drain cleaning, leak detection, water heaters, and emergency plumbing.",
@@ -434,7 +434,7 @@ export const services: Service[] = [
     heroTitle: "Complete Residential Plumbing Solutions",
 
     heroDescription:
-      "From small plumbing repairs to complete system installations, Pipe Rescue delivers dependable residential plumbing services across Houston.",
+      "From small plumbing repairs to complete system installations, Piperesque delivers dependable residential plumbing services across Houston.",
 
     description:
       "Our experienced plumbers provide comprehensive plumbing services for homeowners, including leak repairs, drain cleaning, fixture installation, water heater services, pipe repairs, and emergency plumbing support.",

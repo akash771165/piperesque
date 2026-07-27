@@ -116,7 +116,7 @@ export default async function ServicePage({
   faqs={[
     {
       question: `Do you provide ${service.shortTitle} in Houston?`,
-      answer: `Yes. Pipe Rescue provides professional ${service.shortTitle.toLowerCase()} services throughout Houston and nearby areas.`,
+      answer: `Yes. Piperesque provides professional ${service.shortTitle.toLowerCase()} services throughout Houston and nearby areas.`,
     },
     {
       question: "Do you offer emergency plumbing services?",
@@ -195,7 +195,7 @@ export default async function ServicePage({
             </p>
 
             <h3 className="mt-14 text-3xl font-black">
-              Why Choose Pipe Rescue?
+              Why Choose Piperesque?
             </h3>
 
             <div className="mt-8 space-y-5">

@@ -13,8 +13,8 @@ import {
 
 const faqs = [
   {
-    q: "What is Pipe Rescue?",
-    a: "Pipe Rescue is an informational website that helps homeowners and businesses connect with independent plumbing service providers serving Houston and nearby communities.",
+    q: "What is Piperesque?",
+    a: "Piperesque is an informational website that helps homeowners and businesses connect with independent plumbing service providers serving Houston and nearby communities.",
   },
   {
     q: "Do you provide emergency plumbing services?",
@@ -60,7 +60,7 @@ export default function FAQ() {
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
             Find answers to common questions about requesting plumbing services
-            through Pipe Rescue.
+            through Piperesque.
           </p>
 
         </div>
@@ -182,7 +182,7 @@ export default function FAQ() {
               <div className="mt-8 rounded-2xl border border-white/20 bg-white/10 p-4">
 
                 <p className="text-sm leading-6 text-blue-100">
-                  Pipe Rescue is an informational website that helps users
+                  Piperesque is an informational website that helps users
                   connect with independent plumbing service providers. Service
                   availability, response times, estimates and completed work are
                   determined by the selected provider.

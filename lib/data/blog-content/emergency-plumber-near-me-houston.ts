@@ -116,7 +116,7 @@ export const emergencyPlumberNearMeHouston: BlogContent = {
     title: "Need Emergency Plumbing Help?",
 
     description:
-      "If you're experiencing a plumbing emergency, contact Pipe Rescue using the number shown on this website for immediate assistance.",
+      "If you're experiencing a plumbing emergency, contact Piperesque using the number shown on this website for immediate assistance.",
 
     button: "Call Now",
 

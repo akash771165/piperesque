@@ -1,6 +1,6 @@
 export const siteConfig = {
   // Business
-  company: "Pipe Rescue",
+  company: "Piperesque",
   tagline: "24/7 Emergency Plumbing Services",
 
   // Website

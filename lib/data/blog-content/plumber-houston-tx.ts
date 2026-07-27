@@ -11,7 +11,7 @@ export const plumberHoustonTxGuide = {
 
   image: "/images/service-1.png",
 
-  author: "Pipe Rescue Editorial Team",
+  author: "Piperesque Editorial Team",
 
   publishedAt: "2026-09-14",
 
@@ -125,9 +125,9 @@ export const plumberHoustonTxGuide = {
 
     {
       id: "why-choose-pipe-rescue",
-      title: "Why Choose Pipe Rescue for Plumbing Services in Houston",
+      title: "Why Choose Piperesque for Plumbing Services in Houston",
       content: [
-        "Pipe Rescue provides reliable residential plumbing services throughout Houston for both routine repairs and emergency plumbing situations.",
+        "Piperesque provides reliable residential plumbing services throughout Houston for both routine repairs and emergency plumbing situations.",
         "Our team helps homeowners with leak detection, drain cleaning, pipe repairs, sewer services, water heater repairs, water line problems, and preventive plumbing maintenance.",
         "We focus on accurate diagnosis, dependable workmanship, quality repairs, and excellent customer service to keep your plumbing system operating efficiently."
       ]
@@ -137,8 +137,8 @@ export const plumberHoustonTxGuide = {
   callToAction: {
     title: "Need a Professional Plumber in Houston TX?",
     description:
-      "Contact Pipe Rescue for trusted plumbing services in Houston. We provide leak repair, drain cleaning, water heater repair, sewer services, pipe repair, and emergency plumbing solutions.",
-    button: "Call Pipe Rescue",
+      "Contact Piperesque for trusted plumbing services in Houston. We provide leak repair, drain cleaning, water heater repair, sewer services, pipe repair, and emergency plumbing solutions.",
+    button: "Call Piperesque",
     phone: "+18773640861"
   },
 
@@ -179,9 +179,9 @@ export const plumberHoustonTxGuide = {
         "Regular plumbing inspections, timely leak repairs, proper drain maintenance, and replacing aging plumbing components can help prevent costly repairs."
     },
     {
-      question: "Does Pipe Rescue provide plumbing services in Houston TX?",
+      question: "Does Piperesque provide plumbing services in Houston TX?",
       answer:
-        "Yes. Pipe Rescue provides professional plumbing services throughout Houston, including emergency plumbing, drain cleaning, leak detection, sewer repair, water heater services, and pipe repair."
+        "Yes. Piperesque provides professional plumbing services throughout Houston, including emergency plumbing, drain cleaning, leak detection, sewer repair, water heater services, and pipe repair."
     }
   ]
 };

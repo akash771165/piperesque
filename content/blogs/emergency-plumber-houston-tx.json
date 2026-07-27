@@ -33,11 +33,11 @@
 
   "author": {
 
-    "name": "Pipe Rescue",
+    "name": "Piperesque",
 
     "role": "Houston Plumbing Information Team",
 
-    "bio": "Pipe Rescue provides plumbing information resources and helps homeowners connect with independent plumbing service providers."
+    "bio": "Piperesque provides plumbing information resources and helps homeowners connect with independent plumbing service providers."
 
   },
 
@@ -646,7 +646,7 @@
 
       "content": [
 
-        "Pipe Rescue provides plumbing information resources for homeowners throughout Houston and nearby communities.",
+        "Piperesque provides plumbing information resources for homeowners throughout Houston and nearby communities.",
 
         "Service availability depends on the independent plumbing provider selected by the homeowner."
 
@@ -729,9 +729,9 @@
 
 
     {
-      "question": "Does Pipe Rescue provide plumbing services directly?",
+      "question": "Does Piperesque provide plumbing services directly?",
 
-      "answer": "Pipe Rescue is an informational website that helps homeowners connect with independent plumbing service providers. Service availability, pricing, repairs and warranties are determined by the selected provider."
+      "answer": "Piperesque is an informational website that helps homeowners connect with independent plumbing service providers. Service availability, pricing, repairs and warranties are determined by the selected provider."
     }
 
   ],

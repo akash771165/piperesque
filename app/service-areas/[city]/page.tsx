@@ -31,14 +31,14 @@ export async function generateMetadata({
 
   if (!city) {
     return {
-      title: "City Not Found | Pipe Rescue",
+      title: "City Not Found | Piperesque",
     };
   }
 
   return {
-    title: `Plumber in ${city.name}, TX | 24/7 Plumbing Services | Pipe Rescue`,
+    title: `Plumber in ${city.name}, TX | 24/7 Plumbing Services | Piperesque`,
 
-    description: `Pipe Rescue provides emergency plumbing, drain cleaning, leak detection, water heater repair, sewer line repair and residential plumbing services throughout ${city.name}, Texas.`,
+    description: `Piperesque provides emergency plumbing, drain cleaning, leak detection, water heater repair, sewer line repair and residential plumbing services throughout ${city.name}, Texas.`,
 
     keywords: [
       `${city.name} plumber`,
@@ -47,7 +47,7 @@ export async function generateMetadata({
       `${city.name} drain cleaning`,
       `${city.name} leak detection`,
       `${city.name} water heater repair`,
-      "Pipe Rescue",
+      "Piperesque",
     ],
 
     alternates: {
@@ -58,7 +58,7 @@ export async function generateMetadata({
       title: `Plumbing Services in ${city.name}, TX`,
       description: `Trusted plumbing services in ${city.name}, Texas.`,
       url: `https://piperescue.com/service-areas/${city.slug}`,
-      siteName: "Pipe Rescue",
+      siteName: "Piperesque",
       type: "website",
     },
 
@@ -110,7 +110,7 @@ export default async function CityPage({
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg text-slate-300">
-              Pipe Rescue proudly provides fast, affordable, and professional
+              Piperesque proudly provides fast, affordable, and professional
               plumbing services throughout {city.name}, Texas. Whether you need
               emergency plumbing, drain cleaning, leak detection, water heater
               repair, or complete residential plumbing solutions, our licensed
@@ -200,7 +200,7 @@ export default async function CityPage({
             <div className="mx-auto max-w-3xl text-center">
 
               <h2 className="text-3xl font-bold">
-                Why Choose Pipe Rescue in {city.name}?
+                Why Choose Piperesque in {city.name}?
               </h2>
 
               <p className="mt-4 text-gray-600">

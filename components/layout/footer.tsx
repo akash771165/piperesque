@@ -86,7 +86,7 @@ export default function Footer() {
       </h2>
 
       <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-        Pipe Rescue helps homeowners submit plumbing service requests and
+        Piperesque helps homeowners submit plumbing service requests and
         connect with independent plumbing service providers serving Houston
         and nearby communities.
       </p>
@@ -137,7 +137,7 @@ export default function Footer() {
     <div>
 
       <h2 className="text-3xl font-black">
-        Pipe Rescue
+        Piperesque
       </h2>
 
       <p className="text-sm text-slate-400">
@@ -149,7 +149,7 @@ export default function Footer() {
   </div>
 
   <p className="mt-6 leading-8 text-slate-400">
-    Pipe Rescue is an informational website that helps homeowners submit
+    Piperesque is an informational website that helps homeowners submit
     plumbing service requests and connect with independent plumbing service
     providers throughout the Houston area.
   </p>
@@ -382,9 +382,9 @@ export default function Footer() {
   <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
 
     <p className="text-sm leading-7 text-slate-500">
-      <strong className="text-slate-300">Disclaimer:</strong> Pipe Rescue is an
+      <strong className="text-slate-300">Disclaimer:</strong> Piperesque is an
       independent informational website that helps homeowners connect with
-      third-party plumbing service providers. Pipe Rescue does not employ,
+      third-party plumbing service providers. Piperesque does not employ,
       dispatch, or directly provide plumbing services. Service availability,
       pricing, response times, warranties and workmanship are determined solely
       by the independent plumbing company selected.
@@ -395,7 +395,7 @@ export default function Footer() {
   <div className="mt-8 flex flex-col items-center justify-between gap-6 text-center lg:flex-row">
 
     <p className="text-slate-500">
-      © 2026 Pipe Rescue. All Rights Reserved.
+      © 2026 Piperesque. All Rights Reserved.
     </p>
 
     <div className="flex flex-wrap justify-center gap-8 text-slate-500">

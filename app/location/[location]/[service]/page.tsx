@@ -39,8 +39,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | Pipe Rescue`,
-    description: `${plumbing.shortTitle} services in ${city.city}, ${city.state}. Fast response from Pipe Rescue.`,
+    title: `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | Piperesque`,
+    description: `${plumbing.shortTitle} services in ${city.city}, ${city.state}. Fast response from Piperesque.`,
     alternates: {
       canonical: `https://www.piperesque.com/location/${city.slug}/${plumbing.slug}`,
     },
@@ -73,7 +73,7 @@ export default async function LocationServicePage({
           </h1>
 
           <p className="mt-8 max-w-3xl text-xl leading-9 text-blue-100">
-            Pipe Rescue provides professional{" "}
+            Piperesque provides professional{" "}
             {plumbing.shortTitle.toLowerCase()} services throughout{" "}
             {city.city}, {city.state}.
           </p>
@@ -93,7 +93,7 @@ export default async function LocationServicePage({
           <p className="mt-8 text-lg leading-9 text-slate-600">
             Our experienced plumbing professionals provide
             residential and commercial plumbing services
-            throughout {city.city}. Contact Pipe Rescue
+            throughout {city.city}. Contact Piperesque
             for fast and reliable plumbing solutions.
           </p>
 

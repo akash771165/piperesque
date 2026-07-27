@@ -55,7 +55,7 @@ export default function Testimonials() {
 
         <div className="mx-auto max-w-3xl text-center">
           <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-bold text-blue-600">
-            HOW PIPE RESCUE WORKS
+            HOW Piperesque WORKS
           </span>
 
           <h2 className="mt-6 text-4xl font-black text-slate-900 lg:text-5xl">
@@ -63,7 +63,7 @@ export default function Testimonials() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Pipe Rescue helps homeowners and businesses connect with local
+            Piperesque helps homeowners and businesses connect with local
             plumbing service providers for emergency plumbing, drain cleaning,
             leak detection, water heater repair, sewer line services, and other
             plumbing needs throughout Houston and nearby communities.
@@ -108,7 +108,7 @@ export default function Testimonials() {
           </h3>
 
           <p className="mt-4 leading-8 text-slate-600">
-            Pipe Rescue is an informational website that helps users connect
+            Piperesque is an informational website that helps users connect
             with local plumbing service providers. Plumbing services are
             performed by independent providers. Service availability, response
             times, scheduling, pricing, and coverage may vary depending on

@@ -40,7 +40,7 @@ export default function BlogPage() {
 
         <Image
           src="/images/blog.png"
-          alt="Pipe Rescue Plumbing Blog"
+          alt="Piperesque Plumbing Blog"
           fill
           priority
           className="object-cover"
@@ -62,7 +62,7 @@ export default function BlogPage() {
               <FileText size={16} />
 
 
-              Pipe Rescue Blog
+              Piperesque
 
 
             </div>
@@ -84,7 +84,7 @@ export default function BlogPage() {
               Explore expert plumbing guides, emergency repair advice,
               drain cleaning tips, leak detection insights, water heater
               maintenance, and practical homeowner resources from the
-              Pipe Rescue editorial team.
+              Piperesque editorial team.
 
             </p>
 

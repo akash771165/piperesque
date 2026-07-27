@@ -86,7 +86,7 @@ export const slabLeakRepairHouston: BlogContent = {
   callToAction: {
     title: "Need Help With a Possible Slab Leak?",
     description:
-      "If you suspect a slab leak or hidden plumbing leak beneath your home, contact Pipe Rescue to request plumbing assistance from an independent plumbing service provider serving the Houston area.",
+      "If you suspect a slab leak or hidden plumbing leak beneath your home, contact Piperesque to request plumbing assistance from an independent plumbing service provider serving the Houston area.",
     button: "Request Service",
     phone: "(877) 364-0861",
   },

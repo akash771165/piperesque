@@ -20,7 +20,7 @@ export default function NearbyCities({
         </h2>
 
         <p className="mt-4 text-center text-gray-600">
-          Pipe Rescue also provides plumbing services throughout the Greater
+          Piperesque also provides plumbing services throughout the Greater
           Houston area.
         </p>
 

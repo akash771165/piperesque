@@ -44,7 +44,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 lg:text-xl">
-            Pipe Rescue helps homeowners connect with local plumbing
+            Piperesque helps homeowners connect with local plumbing
             professionals for emergency plumbing, drain cleaning, leak
             detection, water heater repair, sewer line services, and
             residential or commercial plumbing assistance throughout
@@ -126,7 +126,7 @@ export default function Hero() {
           </div>
 
           <p className="mt-6 max-w-2xl text-sm leading-6 text-slate-500">
-            Pipe Rescue helps connect homeowners with local plumbing service
+            Piperesque helps connect homeowners with local plumbing service
             providers. Services and availability may vary depending on
             location and provider availability.
           </p>

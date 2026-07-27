@@ -13,7 +13,7 @@ export default function Loading() {
                 </div>
 
                 <h2 className="mt-10 text-4xl font-black text-slate-900">
-                    Pipe Rescue
+                    Piperesque
                 </h2>
 
                 <p className="mt-4 text-lg text-slate-600">

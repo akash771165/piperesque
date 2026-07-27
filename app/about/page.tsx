@@ -52,11 +52,11 @@ export default function AboutPage() {
       </div>
 
       <h1 className="mt-8 text-5xl font-black leading-tight text-white md:text-7xl">
-        About Pipe Rescue
+        About Piperesque
       </h1>
 
       <p className="mt-8 max-w-2xl text-xl leading-9 text-blue-100">
-        Pipe Rescue is an informational website that helps homeowners connect
+        Piperesque is an informational website that helps homeowners connect
         with local plumbing service providers throughout Houston and surrounding
         communities. Whether you need emergency plumbing, drain cleaning, leak
         detection, water heater service or sewer line assistance, we'll help
@@ -163,7 +163,7 @@ export default function AboutPage() {
     <div>
 
       <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-bold text-blue-700">
-        ABOUT PIPE RESCUE
+        ABOUT Piperesque
       </span>
 
       <h2 className="mt-8 text-5xl font-black leading-tight text-slate-900">
@@ -171,7 +171,7 @@ export default function AboutPage() {
       </h2>
 
       <p className="mt-8 text-lg leading-9 text-slate-600">
-        Pipe Rescue is an informational website designed to help homeowners
+        Piperesque is an informational website designed to help homeowners
         and businesses connect with local plumbing service providers serving
         Houston and nearby communities.
       </p>
@@ -220,7 +220,7 @@ export default function AboutPage() {
         </h3>
 
         <p className="mt-5 leading-8 text-slate-600">
-          Pipe Rescue does not claim to directly employ plumbers or guarantee
+          Piperesque does not claim to directly employ plumbers or guarantee
           pricing, response times, scheduling or service availability. Those
           details are determined by the plumbing service provider you are
           connected with and may vary based on your location.
@@ -245,7 +245,7 @@ export default function AboutPage() {
     <div className="mx-auto max-w-3xl text-center">
 
       <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-bold text-blue-700">
-        WHY PIPE RESCUE
+        WHY Piperesque
       </span>
 
       <h2 className="mt-6 text-5xl font-black text-slate-900">
@@ -253,7 +253,7 @@ export default function AboutPage() {
       </h2>
 
       <p className="mt-6 text-lg leading-8 text-slate-600">
-        Pipe Rescue helps homeowners connect with local plumbing service
+        Piperesque helps homeowners connect with local plumbing service
         providers serving Houston and surrounding communities. Our goal is to
         make requesting plumbing assistance simple and convenient.
       </p>
@@ -361,7 +361,7 @@ export default function AboutPage() {
       </h3>
 
       <p className="mt-5 leading-8 text-slate-600">
-        Pipe Rescue is an informational website. We help connect homeowners
+        Piperesque is an informational website. We help connect homeowners
         with local plumbing service providers. We do not directly employ,
         dispatch or supervise plumbers, and we do not guarantee pricing,
         scheduling, response times or service availability. These are

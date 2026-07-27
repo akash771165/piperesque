@@ -23,7 +23,7 @@ export default function TermsPage() {
 
                     <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-blue-100">
                         Please read these Terms & Conditions carefully before using
-                        Pipe Rescue's website or requesting our plumbing services.
+                        Piperesque's website or requesting our plumbing services.
                     </p>
 
                 </div>
@@ -42,7 +42,7 @@ export default function TermsPage() {
 
                         <p className="mt-6 leading-8 text-slate-600">
                             By accessing this website or requesting services from
-                            Pipe Rescue, you agree to these Terms & Conditions.
+                            Piperesque, you agree to these Terms & Conditions.
                             If you do not agree with any part of these terms,
                             please do not use our website or services.
                         </p>
@@ -52,7 +52,7 @@ export default function TermsPage() {
                         </h3>
 
                         <p className="mt-6 leading-8 text-slate-600">
-                            Pipe Rescue provides residential and commercial plumbing
+                            Piperesque provides residential and commercial plumbing
                             services, including emergency plumbing, drain cleaning,
                             leak detection, water heater repair, sewer repair and
                             general plumbing maintenance.
@@ -99,7 +99,7 @@ export default function TermsPage() {
                         </h3>
 
                         <p className="mt-6 leading-8 text-slate-600">
-                            Pipe Rescue stands behind the quality of its workmanship.
+                            Piperesque stands behind the quality of its workmanship.
                             Warranty coverage depends on the type of repair,
                             installation and materials used.
                         </p>
@@ -109,7 +109,7 @@ export default function TermsPage() {
                         </h3>
 
                         <p className="mt-6 leading-8 text-slate-600">
-                            Pipe Rescue shall not be liable for indirect,
+                            Piperesque shall not be liable for indirect,
                             incidental or consequential damages arising from
                             the use of our website or plumbing services,
                             except where required by law.
@@ -121,7 +121,7 @@ export default function TermsPage() {
 
                         <p className="mt-6 leading-8 text-slate-600">
                             All website content including text, graphics,
-                            images and logos is the property of Pipe Rescue
+                            images and logos is the property of Piperesque
                             and may not be copied or reproduced without
                             written permission.
                         </p>
@@ -131,7 +131,7 @@ export default function TermsPage() {
                         </h3>
 
                         <p className="mt-6 leading-8 text-slate-600">
-                            Pipe Rescue reserves the right to update these
+                            Piperesque reserves the right to update these
                             Terms & Conditions at any time without prior notice.
                         </p>
 
@@ -141,7 +141,7 @@ export default function TermsPage() {
 
                         <p className="mt-6 leading-8 text-slate-600">
                             For questions regarding these Terms & Conditions,
-                            please contact Pipe Rescue directly.
+                            please contact Piperesque directly.
                         </p>
 
                         <div className="mt-16 rounded-3xl bg-slate-100 p-8">

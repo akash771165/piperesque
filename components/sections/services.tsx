@@ -64,7 +64,7 @@ export default function Services() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Pipe Rescue helps homeowners and businesses connect with
+            Piperesque helps homeowners and businesses connect with
             independent plumbing service providers offering emergency plumbing,
             drain cleaning, leak detection, sewer line services, water heater
             repair and other plumbing solutions throughout the Houston area.
@@ -159,7 +159,7 @@ export default function Services() {
           </h3>
 
           <p className="mt-4 leading-8 text-slate-600">
-            Pipe Rescue is an informational website that helps users connect
+            Piperesque is an informational website that helps users connect
             with independent plumbing service providers. Plumbing services,
             scheduling, pricing, warranties and response times are provided by
             the selected service provider and may vary depending on location and

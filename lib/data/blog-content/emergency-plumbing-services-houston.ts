@@ -18,7 +18,7 @@ export const emergencyPlumbingServicesHouston: BlogContent = {
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-11",

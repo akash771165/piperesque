@@ -22,7 +22,7 @@ export default function ContactPage() {
       <section className="relative overflow-hidden py-28">
         <Image
           src="/images/contact.png"
-          alt="Contact Pipe Rescue"
+          alt="Contact Piperesque"
           fill
           priority
           className="object-cover"
@@ -32,11 +32,11 @@ export default function ContactPage() {
 
         <div className="container-custom relative z-10 text-center">
           <span className="rounded-full bg-white/20 px-5 py-2 text-sm font-bold text-white backdrop-blur">
-            CONTACT PIPE RESCUE
+            CONTACT Piperesque
           </span>
 
           <h1 className="mt-8 text-5xl font-black text-white lg:text-6xl">
-            Contact Pipe Rescue
+            Contact Piperesque
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-blue-100">
@@ -125,9 +125,9 @@ export default function ContactPage() {
               </h3>
 
               <p className="mt-4 leading-8 text-slate-600">
-                Pipe Rescue is an independent informational website. We help
+                Piperesque is an independent informational website. We help
                 homeowners connect with independent plumbing service providers.
-                Pipe Rescue does not directly perform plumbing services and does
+                Piperesque does not directly perform plumbing services and does
                 not guarantee pricing, scheduling, response times, or service
                 availability.
               </p>

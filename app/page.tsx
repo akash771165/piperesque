@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "24/7 Emergency Plumbing Services in Houston | Pipe Rescue",
+    title: "24/7 Emergency Plumbing Services in Houston | Piperesque",
 
     description:
       "24/7 emergency plumber in Houston, TX. Fast drain cleaning, leak detection, sewer repair and water heater services.",
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Pipe Rescue Emergency Plumbing Services",
+        alt: "Piperesque Emergency Plumbing Services",
       },
     ],
   },
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Pipe Rescue | Emergency Plumbing Houston",
+    title: "Piperesque | Emergency Plumbing Houston",
 
     description:
       "24/7 emergency plumber in Houston, TX. Drain cleaning, leak detection, sewer repair and water heater services.",

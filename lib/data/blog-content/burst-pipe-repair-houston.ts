@@ -147,7 +147,7 @@ export const burstPipeRepairHouston: BlogContent = {
     title: "Need Burst Pipe Assistance?",
 
     description:
-      "If you're dealing with a burst pipe or major water leak, contact Pipe Rescue to submit your plumbing service request and connect with a local plumbing service provider.",
+      "If you're dealing with a burst pipe or major water leak, contact Piperesque to submit your plumbing service request and connect with a local plumbing service provider.",
 
     button: "Call Now",
 

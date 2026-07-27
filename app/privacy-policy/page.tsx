@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
                     </h1>
 
                     <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-blue-100">
-                        Your privacy is important to Pipe Rescue. This page explains
+                        Your privacy is important to Piperesque. This page explains
                         how we collect, use and protect your personal information.
                     </p>
 
@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
                         </h2>
 
                         <p className="mt-6 leading-8 text-slate-600">
-                            Pipe Rescue respects your privacy and is committed to
+                            Piperesque respects your privacy and is committed to
                             protecting your personal information. This Privacy Policy
                             explains how information is collected, used and safeguarded
                             when you use our website or contact our team.
@@ -105,7 +105,7 @@ export default function PrivacyPolicyPage() {
 
                         <p className="mt-6 leading-8 text-slate-600">
                             If you have questions regarding this Privacy Policy,
-                            please contact Pipe Rescue.
+                            please contact Piperesque.
                         </p>
 
                        <div className="mt-16 rounded-3xl border border-blue-200 bg-blue-50 p-8">

@@ -36,7 +36,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `Plumber in ${currentLocation.city}, ${currentLocation.stateCode} | Pipe Rescue`,
+    title: `Plumber in ${currentLocation.city}, ${currentLocation.stateCode} | Piperesque`,
     description: `Professional plumbing services in ${currentLocation.city}, ${currentLocation.state}. Emergency plumbing, drain cleaning, leak detection and water heater repair.`,
     alternates: {
       canonical: `https://www.piperesque.com/location/${currentLocation.slug}`,
@@ -68,7 +68,7 @@ export default async function LocationPage({
           </h1>
 
           <p className="mt-8 max-w-3xl text-xl leading-9 text-blue-100">
-            Pipe Rescue provides emergency plumbing, drain cleaning, leak
+            Piperesque provides emergency plumbing, drain cleaning, leak
             detection, water heater repair and residential plumbing services
             throughout {currentLocation.city}, {currentLocation.state}.
           </p>
@@ -85,7 +85,7 @@ export default async function LocationPage({
             Our licensed plumbing professionals provide residential and
             commercial plumbing services across {currentLocation.city}. Whether
             you need emergency plumbing, drain cleaning, water heater repair or
-            leak detection, Pipe Rescue is ready to help.
+            leak detection, Piperesque is ready to help.
           </p>
 
           <div className="mt-12">

@@ -27,7 +27,7 @@ export default function BlogPage() {
 
         <Image
           src="/images/blog.png"
-          alt="Pipe Rescue Plumbing Blog"
+          alt="Piperesque Plumbing Blog"
           fill
           priority
           quality={80}

@@ -30,7 +30,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-09",
@@ -71,7 +71,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-10",
@@ -112,7 +112,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-11",
@@ -152,7 +152,7 @@ export const blogs: BlogPost[] = [
     "/images/blog-burst-pipe.jpg",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-12",
@@ -193,7 +193,7 @@ export const blogs: BlogPost[] = [
     "/images/service-2.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-13",
@@ -231,7 +231,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-14",
@@ -272,7 +272,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-15",
@@ -313,7 +313,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-16",
@@ -353,7 +353,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-17",
@@ -393,7 +393,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-18",
@@ -432,7 +432,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-19",
@@ -469,7 +469,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-20",
@@ -509,7 +509,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-21",
@@ -548,7 +548,7 @@ export const blogs: BlogPost[] = [
     "/images/service-2.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-22",
@@ -588,7 +588,7 @@ export const blogs: BlogPost[] = [
     "/images/service-3.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-23",
@@ -628,7 +628,7 @@ export const blogs: BlogPost[] = [
     "/images/service-4.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-24",
@@ -668,7 +668,7 @@ export const blogs: BlogPost[] = [
     "/images/service-5.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-25",
@@ -707,7 +707,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-26",
@@ -744,7 +744,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-27",
@@ -784,7 +784,7 @@ export const blogs: BlogPost[] = [
     "/images/service-2.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-28",
@@ -823,7 +823,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-29",
@@ -862,7 +862,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-09-30",
@@ -901,7 +901,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-01",
@@ -940,7 +940,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-02",
@@ -979,7 +979,7 @@ export const blogs: BlogPost[] = [
     "/images/service-3.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-03",
@@ -1016,7 +1016,7 @@ export const blogs: BlogPost[] = [
     "/images/service-5.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-04",
@@ -1055,7 +1055,7 @@ export const blogs: BlogPost[] = [
     "/images/service-4.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-05",
@@ -1094,7 +1094,7 @@ export const blogs: BlogPost[] = [
     "/images/service-3.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-06",
@@ -1133,7 +1133,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-07",
@@ -1172,7 +1172,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-08",
@@ -1211,7 +1211,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-09",
@@ -1250,7 +1250,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-10",
@@ -1287,7 +1287,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-11",
@@ -1324,7 +1324,7 @@ export const blogs: BlogPost[] = [
     "/images/service-2.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-13",
@@ -1363,7 +1363,7 @@ export const blogs: BlogPost[] = [
     "/images/service-4.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-14",
@@ -1404,7 +1404,7 @@ export const blogs: BlogPost[] = [
     "/images/service-4.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-19",
@@ -1446,7 +1446,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-23",
@@ -1486,7 +1486,7 @@ export const blogs: BlogPost[] = [
     "/images/service-2.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-26",
@@ -1524,7 +1524,7 @@ export const blogs: BlogPost[] = [
     "/images/service-5.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-28",
@@ -1563,7 +1563,7 @@ export const blogs: BlogPost[] = [
     "/images/service-6.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-29",
@@ -1602,7 +1602,7 @@ export const blogs: BlogPost[] = [
     "/images/service-3.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-30",
@@ -1641,7 +1641,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-10-31",
@@ -1680,7 +1680,7 @@ export const blogs: BlogPost[] = [
     "/images/blog-burst-pipe.jpg",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-02",
@@ -1719,7 +1719,7 @@ export const blogs: BlogPost[] = [
     "/images/service-4.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-03",
@@ -1757,7 +1757,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-05",
@@ -1796,7 +1796,7 @@ export const blogs: BlogPost[] = [
     "/images/service-3.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-06",
@@ -1835,7 +1835,7 @@ export const blogs: BlogPost[] = [
     "/images/service-5.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-07",
@@ -1872,7 +1872,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-08",
@@ -1911,7 +1911,7 @@ export const blogs: BlogPost[] = [
     "/images/service-3.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-09",
@@ -1950,7 +1950,7 @@ export const blogs: BlogPost[] = [
     "/images/service-6.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-10",
@@ -1989,7 +1989,7 @@ export const blogs: BlogPost[] = [
     "/images/service-4.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-11",
@@ -2028,7 +2028,7 @@ export const blogs: BlogPost[] = [
     "/images/blog-burst-pipe.jpg",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-12",
@@ -2067,7 +2067,7 @@ export const blogs: BlogPost[] = [
     "/images/service-4.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-13",
@@ -2107,7 +2107,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-15",
@@ -2146,7 +2146,7 @@ export const blogs: BlogPost[] = [
     "/images/service-2.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-16",
@@ -2185,7 +2185,7 @@ export const blogs: BlogPost[] = [
     "/images/service-3.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-17",
@@ -2224,7 +2224,7 @@ export const blogs: BlogPost[] = [
     "/images/service-4.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-18",
@@ -2263,7 +2263,7 @@ export const blogs: BlogPost[] = [
     "/images/service-5.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-19",
@@ -2302,7 +2302,7 @@ export const blogs: BlogPost[] = [
     "/images/service-6.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-20",
@@ -2341,7 +2341,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-21",
@@ -2380,7 +2380,7 @@ export const blogs: BlogPost[] = [
     "/images/service-2.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-22",
@@ -2417,7 +2417,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-23",
@@ -2456,7 +2456,7 @@ export const blogs: BlogPost[] = [
     "/images/service-2.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-24",
@@ -2495,7 +2495,7 @@ export const blogs: BlogPost[] = [
     "/images/service-3.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-25",
@@ -2534,7 +2534,7 @@ export const blogs: BlogPost[] = [
     "/images/service-4.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-26",
@@ -2572,7 +2572,7 @@ export const blogs: BlogPost[] = [
     "/images/service-5.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-27",
@@ -2610,7 +2610,7 @@ export const blogs: BlogPost[] = [
     "/images/service-6.png",
 
     author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-28",
@@ -2648,7 +2648,7 @@ export const blogs: BlogPost[] = [
     "/images/blog-burst-pipe.jpg",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-29",
@@ -2686,7 +2686,7 @@ export const blogs: BlogPost[] = [
     "/images/service-1.png",
 
   author:
-    "Pipe Rescue Editorial Team",
+    "Piperesque Editorial Team",
 
   publishedAt:
     "2026-11-30",

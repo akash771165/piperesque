@@ -106,7 +106,7 @@ export async function generateMetadata(
 
     article.title ??
 
-    "Pipe Rescue Blog",
+    "Piperesque",
 
 
 
@@ -199,7 +199,7 @@ export async function generateMetadata(
 
        article.title ??
 
-       "Pipe Rescue Blog"
+       "Piperesque"
 
       }
 
@@ -380,7 +380,7 @@ article.author
 
 article.author?.name ??
 
-"Pipe Rescue"
+"Piperesque"
 
 },
 
@@ -392,7 +392,7 @@ publisher:
 
 "@type":"Organization",
 
-"name":"Pipe Rescue"
+"name":"Piperesque"
 
 }
 
@@ -642,7 +642,7 @@ article.imageAlt ??
 
 article.title ??
 
-"Pipe Rescue Blog"
+"Piperesque"
 
 }
 
@@ -724,7 +724,7 @@ article.author
 
 article.author?.name ??
 
-"Pipe Rescue"
+"Piperesque"
 
 }
 

@@ -58,7 +58,7 @@ export default function ServiceAreasPage() {
                     </h1>
 
                     <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-blue-100">
-                        Pipe Rescue proudly provides emergency plumbing services
+                        Piperesque proudly provides emergency plumbing services
                         across Houston and surrounding communities.
                     </p>
 

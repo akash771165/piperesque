@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Professional Plumbing Services in Houston, TX",
 
   description:
-    "Explore Pipe Rescue's professional plumbing services in Houston, including emergency plumbing, drain cleaning, leak detection, water heater repair, sewer line repair, and residential & commercial plumbing.",
+    "Explore Piperesque's professional plumbing services in Houston, including emergency plumbing, drain cleaning, leak detection, water heater repair, sewer line repair, and residential & commercial plumbing.",
 
   keywords: [
     "Houston Plumber",
@@ -35,11 +35,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Professional Plumbing Services in Houston | Pipe Rescue",
+    title: "Professional Plumbing Services in Houston | Piperesque",
     description:
       "Emergency plumbing, drain cleaning, leak detection, water heater repair and sewer line repair in Houston, Texas.",
     url: "https://www.piperesque.com/services",
-    siteName: "Pipe Rescue",
+    siteName: "Piperesque",
     type: "website",
     locale: "en_US",
     images: [
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Pipe Rescue Plumbing Services",
+        alt: "Piperesque Plumbing Services",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Professional Plumbing Services in Houston | Pipe Rescue",
+    title: "Professional Plumbing Services in Houston | Piperesque",
     description:
       "Professional plumbing services including emergency plumbing, drain cleaning, leak detection and water heater repair in Houston.",
     images: ["/og-image.png"],

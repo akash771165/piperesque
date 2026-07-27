@@ -13,7 +13,7 @@ export const waterLeakDetectionHoustonTx: BlogContent = {
 
   image: "/images/service-1.png",
 
-  author: "Pipe Rescue Editorial Team",
+  author: "Piperesque Editorial Team",
 
   publishedAt: "2026-09-14",
 
@@ -258,10 +258,10 @@ export const waterLeakDetectionHoustonTx: BlogContent = {
     {
       id: "why-choose-pipe-rescue",
 
-      title: "Why Choose Pipe Rescue for Water Leak Detection in Houston",
+      title: "Why Choose Piperesque for Water Leak Detection in Houston",
 
       content: [
-        "Pipe Rescue provides professional water leak detection and plumbing repair services throughout Houston TX.",
+        "Piperesque provides professional water leak detection and plumbing repair services throughout Houston TX.",
 
         "Our team helps homeowners identify hidden leaks, water line problems, slab leaks, and emergency plumbing issues.",
 
@@ -283,7 +283,7 @@ export const waterLeakDetectionHoustonTx: BlogContent = {
     title: "Need Water Leak Detection in Houston TX?",
 
     description:
-      "Contact Pipe Rescue for professional water leak detection services in Houston. We help locate hidden leaks, slab leaks, underground pipe leaks, and emergency plumbing problems.",
+      "Contact Piperesque for professional water leak detection services in Houston. We help locate hidden leaks, slab leaks, underground pipe leaks, and emergency plumbing problems.",
 
     button: "Call Now",
 
@@ -335,10 +335,10 @@ export const waterLeakDetectionHoustonTx: BlogContent = {
     },
 
     {
-      question: "Does Pipe Rescue provide leak detection services in Houston?",
+      question: "Does Piperesque provide leak detection services in Houston?",
 
       answer:
-        "Yes. Pipe Rescue provides professional water leak detection and plumbing repair services for Houston homeowners.",
+        "Yes. Piperesque provides professional water leak detection and plumbing repair services for Houston homeowners.",
     },
   ],
 };

@@ -13,7 +13,7 @@ export const twentyFourHourPlumberHoustonTx: BlogContent = {
 
   image: "/images/service-1.png",
 
-  author: "Pipe Rescue Editorial Team",
+  author: "Piperesque Editorial Team",
 
   publishedAt: "2026-09-10",
 
