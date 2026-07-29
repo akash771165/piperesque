@@ -824,7 +824,7 @@ Table of Contents
 
 {
 
-article.sections.map((section,index)=>(
+(article.sections ?? []).map((section,index)=>(
 
 
 <li key={index}>

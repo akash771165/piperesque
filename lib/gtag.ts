@@ -7,7 +7,9 @@ declare global {
 export const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
 
+// ----------------------------
 // Page View
+// ----------------------------
 export const pageview = (url: string) => {
   if (typeof window === "undefined" || !window.gtag) return;
 
@@ -16,17 +18,21 @@ export const pageview = (url: string) => {
   });
 };
 
+// ----------------------------
 // Generic Event
+// ----------------------------
 export const event = ({
   action,
   category,
   label,
   value,
+  ...params
 }: {
   action: string;
   category: string;
   label?: string;
   value?: number;
+  [key: string]: any;
 }) => {
   if (typeof window === "undefined" || !window.gtag) return;
 
@@ -34,31 +40,43 @@ export const event = ({
     event_category: category,
     event_label: label,
     value,
+    ...params,
   });
 };
 
-// Phone Call
+// ----------------------------
+// Phone Click Tracking
+// ----------------------------
 export const trackPhoneCall = (location: string) => {
   event({
-    action: "call_click",
-    category: "engagement",
+    action: "phone_click",
+    category: "lead",
     label: location,
+    value: 1,
+    phone_number: "+18773640861",
   });
 };
 
-// Contact Form
+// ----------------------------
+// Contact Form Tracking
+// ----------------------------
 export const trackContactForm = () => {
   event({
     action: "contact_form_submit",
     category: "lead",
+    label: "contact_form",
+    value: 1,
   });
 };
 
-// CTA Button
+// ----------------------------
+// CTA Button Tracking
+// ----------------------------
 export const trackCTA = (location: string) => {
   event({
     action: "cta_click",
     category: "engagement",
     label: location,
+    value: 1,
   });
 };
