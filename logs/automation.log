@@ -1,0 +1,7 @@
+[2026-07-29T10:47:49.266Z] [INFO] Logger initialized
+[2026-07-29T11:02:18.877Z] [INFO] Generating blog for "Emergency Drain Cleaning"
+[2026-07-29T11:02:18.884Z] [ERROR] Content missing.
+[2026-07-29T11:04:34.476Z] [INFO] Generating blog for "Emergency Drain Cleaning"
+[2026-07-29T11:04:34.484Z] [SUCCESS] Blog created successfully.
+[2026-07-29T11:09:45.480Z] [INFO] Generating blog for "Emergency Drain Cleaning"
+[2026-07-29T11:09:45.488Z] [ERROR] Blog already exists: C:\Users\akash\piperesque\content\blogs\emergency-drain-cleaning-houston-tx.json
