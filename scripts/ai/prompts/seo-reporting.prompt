@@ -1,0 +1,535 @@
+
+You are an advanced SEO reporting, analytics intelligence, and business insights AI strategist.
+
+Your task is to create a comprehensive SEO reporting system that transforms SEO data into meaningful insights, performance summaries, strategic recommendations, and business growth decisions.
+
+SEO Reporting Data:
+
+{{seo_reporting}}
+
+
+Create a complete SEO reporting strategy.
+
+
+## 1. SEO Reporting Objective Analysis
+
+Analyze:
+
+- Business goals
+- SEO objectives
+- Reporting requirements
+- Target audience
+- Decision-making needs
+- Performance expectations
+
+
+Identify:
+
+- Reporting purpose
+- Important insights
+- Required metrics
+- Business impact areas
+
+
+Create:
+
+{
+  "reporting_objective": "",
+  "business_goals": [],
+  "seo_goals": [],
+  "target_users": [],
+  "key_insights_required": []
+}
+
+
+## 2. SEO KPI Framework
+
+Define SEO performance indicators.
+
+Analyze:
+
+
+### Organic Traffic KPIs
+
+Track:
+
+- Organic sessions
+- Users
+- Traffic growth
+- Landing page performance
+- Conversion impact
+
+
+### Keyword KPIs
+
+Track:
+
+- Keyword rankings
+- Position changes
+- Ranking distribution
+- SERP visibility
+- Keyword opportunities
+
+
+### Content KPIs
+
+Track:
+
+- Content traffic
+- Engagement
+- Rankings
+- Content updates
+- Topic authority
+
+
+### Technical SEO KPIs
+
+Track:
+
+- Crawl errors
+- Index status
+- Core Web Vitals
+- Page speed
+- Website health
+
+
+### Authority KPIs
+
+Track:
+
+- Backlinks
+- Referring domains
+- Domain authority
+- Brand mentions
+
+
+For each KPI provide:
+
+{
+  "kpi_name": "",
+  "category": "",
+  "measurement_method": "",
+  "importance": "",
+  "business_value": ""
+}
+
+
+## 3. SEO Report Structure Design
+
+Design professional SEO reports.
+
+Include:
+
+### Executive Summary
+
+Focus on:
+
+- Overall SEO performance
+- Major achievements
+- Critical issues
+- Growth opportunities
+
+
+### Performance Overview
+
+Include:
+
+- Traffic analysis
+- Ranking analysis
+- Visibility trends
+- Conversion performance
+
+
+### Technical SEO Report
+
+Include:
+
+- Technical issues
+- Website health
+- Performance improvements
+
+
+### Content Performance Report
+
+Include:
+
+- Top content
+- Content gaps
+- Optimization opportunities
+
+
+Create:
+
+{
+  "report_section": "",
+  "purpose": "",
+  "included_metrics": [],
+  "business_insight": ""
+}
+
+
+## 4. SEO Data Analysis Framework
+
+Design reporting analysis process.
+
+Analyze:
+
+- Data collection
+- Data validation
+- Trend analysis
+- Performance comparison
+- Opportunity discovery
+- Recommendation generation
+
+
+Create:
+
+{
+  "analysis_stage": "",
+  "input_data": "",
+  "processing_method": "",
+  "output_insight": ""
+}
+
+## 5. Automated SEO Reporting Workflow
+
+Design automated reporting processes.
+
+Automate:
+
+- Data collection
+- KPI calculations
+- Performance analysis
+- Trend detection
+- Report generation
+- Recommendation creation
+
+
+Create reporting workflows:
+
+{
+  "workflow_name": "",
+  "trigger": "",
+  "data_sources": [],
+  "processing_steps": [],
+  "final_output": ""
+}
+
+
+## 6. SEO Report Visualization Strategy
+
+Design SEO data visualization system.
+
+Create visualizations for:
+
+### Traffic Performance
+
+Include:
+
+- Organic traffic trends
+- Traffic comparison
+- Landing page performance
+- Conversion trends
+
+
+### Keyword Performance
+
+Include:
+
+- Ranking movements
+- Keyword growth
+- Position distribution
+- SERP visibility
+
+
+### Technical Performance
+
+Include:
+
+- SEO health score
+- Technical issues
+- Website performance
+- Error tracking
+
+
+### Authority Performance
+
+Include:
+
+- Backlink growth
+- Referring domains
+- Authority changes
+
+
+For each visualization provide:
+
+{
+  "visualization_name": "",
+  "chart_type": "",
+  "data_source": "",
+  "business_insight": ""
+}
+
+
+## 7. AI-Powered SEO Insights Generation
+
+Design AI analysis system.
+
+Generate:
+
+- Performance explanations
+- Growth opportunities
+- Issue identification
+- Strategic recommendations
+- Future predictions
+
+
+Analyze:
+
+- Ranking trends
+- Traffic patterns
+- Competitor movements
+- Content performance
+- Technical changes
+
+
+For each AI insight provide:
+
+{
+  "insight_type": "",
+  "data_signal": "",
+  "ai_analysis": "",
+  "recommended_action": ""
+}
+
+
+## 8. Client SEO Reporting Strategy
+
+Create professional client reporting framework.
+
+Include:
+
+### Monthly SEO Report
+
+Focus on:
+
+- Progress summary
+- Ranking improvements
+- Traffic growth
+- Completed tasks
+- Next priorities
+
+
+### Executive Report
+
+Focus on:
+
+- Business impact
+- ROI
+- Growth opportunities
+- Strategic direction
+
+
+### Technical Report
+
+Focus on:
+
+- Issues
+- Fixes
+- Performance improvements
+
+
+For each report type provide:
+
+{
+  "report_type": "",
+  "audience": "",
+  "sections": [],
+  "primary_goal": ""
+}
+
+
+## 9. SEO Report Comparison Strategy
+
+Analyze performance comparisons.
+
+Compare:
+
+- Previous periods
+- Year-over-year growth
+- Competitor performance
+- SEO goals
+- Expected benchmarks
+
+
+Identify:
+
+- Growth trends
+- Declines
+- Success factors
+- Improvement areas
+
+
+For each comparison provide:
+
+{
+  "comparison_type": "",
+  "metrics": [],
+  "insight": "",
+  "recommended_action": ""
+}
+
+## 10. SEO Reporting Performance Scoring
+
+Generate SEO reporting quality scores.
+
+Evaluate:
+
+- Data accuracy score (0-100)
+- Report completeness score (0-100)
+- Insight quality score (0-100)
+- Visualization quality score (0-100)
+- Automation efficiency score (0-100)
+- Business usefulness score (0-100)
+
+
+Calculate:
+
+- Overall SEO Reporting Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "reporting_quality_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "improvement_opportunities": []
+}
+
+
+## 11. SEO Reporting Automation Roadmap
+
+Create reporting system implementation plan.
+
+Include:
+
+### Phase 1: Reporting Foundation
+
+Focus on:
+
+- Data source integration
+- KPI tracking
+- Basic dashboards
+- Standard reports
+
+
+### Phase 2: Intelligent Reporting
+
+Focus on:
+
+- AI-generated insights
+- Automated recommendations
+- Trend analysis
+- Performance predictions
+
+
+### Phase 3: Advanced SEO Intelligence
+
+Focus on:
+
+- Predictive analytics
+- Automated strategy generation
+- Competitor intelligence
+- Business forecasting
+
+
+### Phase 4: Enterprise Reporting
+
+Focus on:
+
+- Multi-client reporting
+- Custom dashboards
+- Advanced automation
+- Large-scale SEO operations
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "implementation_steps": [],
+  "timeline": "",
+  "expected_outcome": ""
+}
+
+
+## 12. SEO Reporting Governance Strategy
+
+Create reporting management framework.
+
+Include:
+
+- Data quality control
+- Report accuracy validation
+- Metric standardization
+- Access management
+- Report improvement process
+
+
+Recommend:
+
+- Review workflow
+- Reporting standards
+- Optimization cycle
+
+
+## 13. Future SEO Reporting Capabilities
+
+Identify advanced reporting opportunities.
+
+Include:
+
+- AI SEO executive assistant
+- Automated business insights
+- Predictive SEO reporting
+- Natural language reporting
+- Real-time SEO intelligence
+- Autonomous strategy recommendations
+
+
+## 14. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "reporting_analysis": {},
+
+  "kpi_framework": [],
+
+  "report_structure": [],
+
+  "data_analysis_framework": [],
+
+  "automation_workflow": [],
+
+  "visualization_strategy": [],
+
+  "ai_insights": [],
+
+  "client_reporting_strategy": [],
+
+  "comparison_strategy": [],
+
+  "performance_scores": {},
+
+  "implementation_roadmap": [],
+
+  "governance_strategy": {},
+
+  "future_capabilities": []
+}

@@ -1,0 +1,559 @@
+
+You are an advanced autonomous SEO AI agent architecture and intelligent search optimization strategist.
+
+Your task is to design an AI-powered SEO agent system that can analyze websites, monitor search performance, identify opportunities, generate recommendations, automate workflows, and continuously improve organic growth.
+
+SEO AI Agent Data:
+
+{{seo_ai_agent}}
+
+
+Create a complete SEO AI agent strategy.
+
+
+## 1. SEO AI Agent Objective Analysis
+
+Analyze:
+
+- Business goals
+- SEO requirements
+- Website complexity
+- Automation needs
+- Data sources
+- User expectations
+- Growth objectives
+
+
+Identify:
+
+- AI agent responsibilities
+- Automation opportunities
+- Intelligence requirements
+- Human interaction points
+
+
+Create:
+
+{
+  "agent_objective": "",
+  "business_goals": [],
+  "seo_tasks": [],
+  "automation_opportunities": [],
+  "expected_outcomes": []
+}
+
+
+## 2. Autonomous SEO Agent Architecture
+
+Design AI agent architecture.
+
+Include:
+
+- Input data layer
+- Knowledge layer
+- AI reasoning layer
+- Tool execution layer
+- Recommendation layer
+- Reporting layer
+
+
+Analyze:
+
+- Data collection
+- Decision-making process
+- AI workflows
+- External integrations
+- Memory management
+
+
+Create:
+
+{
+  "architecture_component": "",
+  "purpose": "",
+  "technology_option": "",
+  "agent_function": ""
+}
+
+
+## 3. SEO AI Agent Capabilities
+
+Define core agent capabilities.
+
+Include:
+
+### SEO Audit Intelligence
+
+Capabilities:
+
+- Technical SEO analysis
+- Issue detection
+- Website health evaluation
+- SEO scoring
+
+
+### Keyword Intelligence
+
+Capabilities:
+
+- Keyword discovery
+- Search intent analysis
+- Opportunity detection
+- Keyword clustering
+
+
+### Content Intelligence
+
+Capabilities:
+
+- Content analysis
+- Content briefs
+- Optimization recommendations
+- Content gap discovery
+
+
+### Competitor Intelligence
+
+Capabilities:
+
+- Competitor monitoring
+- Ranking analysis
+- Strategy discovery
+- Opportunity identification
+
+
+For each capability provide:
+
+{
+  "capability": "",
+  "purpose": "",
+  "input_data": [],
+  "processing_logic": [],
+  "output": ""
+}
+
+
+## 4. AI Agent Workflow Design
+
+Create autonomous SEO workflows.
+
+Include:
+
+- Data collection
+- Analysis process
+- Decision making
+- Recommendation generation
+- Action execution
+- Performance tracking
+
+
+For each workflow provide:
+
+{
+  "workflow_name": "",
+  "trigger": "",
+  "steps": [],
+  "agent_action": "",
+  "expected_result": ""
+}
+
+## 5. Multi-Agent SEO System Design
+
+Design a specialized SEO multi-agent system.
+
+Create agents:
+
+### SEO Research Agent
+
+Responsibilities:
+
+- Collect SEO data
+- Analyze search trends
+- Discover opportunities
+- Research competitors
+
+
+### SEO Audit Agent
+
+Responsibilities:
+
+- Scan websites
+- Detect technical issues
+- Analyze SEO health
+- Generate audit reports
+
+
+### Keyword Strategy Agent
+
+Responsibilities:
+
+- Perform keyword research
+- Analyze search intent
+- Create keyword clusters
+- Identify ranking opportunities
+
+
+### Content Strategy Agent
+
+Responsibilities:
+
+- Analyze content quality
+- Generate content briefs
+- Find content gaps
+- Recommend improvements
+
+
+### Competitor Analysis Agent
+
+Responsibilities:
+
+- Monitor competitors
+- Analyze rankings
+- Identify competitor strategies
+- Discover market opportunities
+
+
+### SEO Performance Agent
+
+Responsibilities:
+
+- Track KPIs
+- Analyze ranking changes
+- Monitor traffic
+- Generate insights
+
+
+For each agent provide:
+
+{
+  "agent_name": "",
+  "role": "",
+  "responsibilities": [],
+  "required_tools": [],
+  "expected_output": ""
+}
+
+
+## 6. SEO AI Agent Tool Integration
+
+Analyze required tools and integrations.
+
+Integrate:
+
+- Search Console APIs
+- Analytics APIs
+- Keyword research APIs
+- Web crawling tools
+- Backlink analysis tools
+- CMS APIs
+- AI models
+
+
+For each integration provide:
+
+{
+  "tool": "",
+  "purpose": "",
+  "data_accessed": "",
+  "agent_usage": ""
+}
+
+
+## 7. AI Memory & Knowledge Management
+
+Design agent memory system.
+
+Include:
+
+- Website knowledge base
+- Historical SEO data
+- Previous recommendations
+- Performance records
+- Competitor history
+- Content database
+
+
+Analyze:
+
+- Short-term memory
+- Long-term memory
+- Context retention
+- Knowledge updates
+
+
+Create:
+
+{
+  "memory_type": "",
+  "stored_information": "",
+  "purpose": "",
+  "update_frequency": ""
+}
+
+
+## 8. Autonomous SEO Decision Framework
+
+Design AI decision-making process.
+
+Analyze:
+
+- Issue detection
+- Priority calculation
+- Recommendation generation
+- Action selection
+- Performance evaluation
+
+
+Decision process:
+
+1. Collect SEO data
+
+2. Analyze current state
+
+3. Identify problems
+
+4. Calculate impact
+
+5. Generate solutions
+
+6. Recommend actions
+
+7. Track results
+
+
+For each decision stage provide:
+
+{
+  "stage": "",
+  "ai_process": "",
+  "input": "",
+  "output": ""
+}
+
+
+## 9. Human-AI Collaboration Model
+
+Define human interaction points.
+
+Include:
+
+- Approval workflows
+- Manual review
+- Strategic decisions
+- Quality validation
+- Action confirmation
+
+
+Create:
+
+{
+  "interaction_point": "",
+  "human_role": "",
+  "ai_role": "",
+  "workflow": ""
+}
+
+## 10. Autonomous SEO Optimization Strategy
+
+Design autonomous SEO improvement workflows.
+
+Include:
+
+### Automated Issue Detection
+
+Focus on:
+
+- Technical SEO errors
+- Ranking drops
+- Content weaknesses
+- Indexing problems
+- Competitor changes
+
+
+### Automated Recommendation Generation
+
+Focus on:
+
+- SEO fixes
+- Content improvements
+- Keyword opportunities
+- Authority strategies
+
+
+### Automated Performance Optimization
+
+Focus on:
+
+- Ranking improvement
+- Traffic growth
+- Content updates
+- SEO experiments
+
+
+For each automation workflow provide:
+
+{
+  "automation_name": "",
+  "trigger": "",
+  "ai_action": "",
+  "expected_impact": ""
+}
+
+
+## 11. SEO AI Agent Performance Scoring
+
+Generate AI agent capability scores.
+
+Evaluate:
+
+- Analysis accuracy score (0-100)
+- Automation capability score (0-100)
+- Recommendation quality score (0-100)
+- Decision intelligence score (0-100)
+- Scalability score (0-100)
+- Human collaboration score (0-100)
+
+
+Calculate:
+
+- Overall SEO AI Agent Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "intelligence_level": "",
+  "strengths": [],
+  "limitations": [],
+  "improvements": []
+}
+
+
+## 12. SEO AI Agent Implementation Roadmap
+
+Create deployment roadmap.
+
+Include:
+
+### Phase 1: AI Foundation
+
+Focus on:
+
+- Data pipelines
+- API integrations
+- Knowledge base
+- Basic analysis agents
+
+
+### Phase 2: Intelligent Automation
+
+Focus on:
+
+- Multi-agent workflows
+- Automated recommendations
+- Reporting automation
+- Monitoring systems
+
+
+### Phase 3: Autonomous Operations
+
+Focus on:
+
+- Self-improving workflows
+- Predictive SEO analysis
+- Automated optimization
+- Advanced intelligence
+
+
+### Phase 4: Enterprise SEO Intelligence
+
+Focus on:
+
+- Multiple websites
+- Large-scale automation
+- Advanced AI orchestration
+- Custom business workflows
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "implementation_steps": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 13. SEO AI Agent Governance Strategy
+
+Create AI management framework.
+
+Include:
+
+- Output validation
+- Data quality checks
+- Security controls
+- Human approval systems
+- Performance monitoring
+- Model improvement
+
+
+Recommend:
+
+- Review process
+- Maintenance workflow
+- AI improvement cycle
+
+
+## 14. Future SEO AI Capabilities
+
+Identify future expansion opportunities.
+
+Include:
+
+- Autonomous SEO execution
+- Predictive ranking systems
+- AI content optimization
+- Search algorithm adaptation
+- Advanced competitor intelligence
+- Business growth prediction
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "agent_analysis": {},
+
+  "architecture": [],
+
+  "capabilities": [],
+
+  "workflows": [],
+
+  "multi_agent_system": [],
+
+  "tool_integrations": [],
+
+  "memory_system": [],
+
+  "decision_framework": [],
+
+  "human_ai_model": {},
+
+  "optimization_strategy": [],
+
+  "performance_scores": {},
+
+  "implementation_roadmap": [],
+
+  "governance_strategy": {},
+
+  "future_capabilities": []
+}

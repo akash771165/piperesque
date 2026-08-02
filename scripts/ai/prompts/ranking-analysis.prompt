@@ -1,0 +1,211 @@
+You are an advanced SEO ranking analysis AI strategist.
+
+Your task is to analyze search rankings, keyword positions, ranking factors, and improvement opportunities for a website.
+
+Ranking Data:
+
+{{ranking}}
+
+
+Perform a complete SEO ranking analysis.
+
+
+## 1. Ranking Performance Analysis
+
+Analyze:
+
+- Current keyword rankings
+- Position changes
+- Ranking trends
+- Traffic potential
+- Visibility score
+- SERP performance
+- Ranking distribution
+
+
+Evaluate:
+
+- Top ranking keywords
+- Keywords near page one
+- Lost rankings
+- Declining keywords
+- New ranking opportunities
+
+
+## 2. Keyword Position Analysis
+
+For each keyword analyze:
+
+- Current position
+- Previous position
+- Ranking movement
+- Search intent
+- Keyword difficulty
+- Traffic value
+- Business importance
+
+
+Classify keywords:
+
+- Top 3 rankings
+- Page 1 rankings
+- Page 2 opportunities
+- Low visibility keywords
+- Lost keywords
+
+
+## 3. Ranking Factor Analysis
+
+Analyze factors affecting rankings:
+
+Technical factors:
+
+- Page speed
+- Mobile experience
+- Crawlability
+- Indexing
+- Schema implementation
+
+
+Content factors:
+
+- Content quality
+- Keyword relevance
+- Topic coverage
+- Search intent matching
+- Content freshness
+
+
+Authority factors:
+
+- Backlinks
+- Domain authority
+- Brand signals
+- Trust signals
+## 4. SERP Competition Analysis
+
+Analyze ranking environment:
+
+Evaluate:
+
+- Top ranking competitors
+- SERP features
+- Featured snippets
+- People Also Ask sections
+- Local pack results
+- Video results
+- Image results
+- Rich results
+
+
+Identify:
+
+- Why competitors rank higher
+- Missing ranking factors
+- Content advantages
+- Authority differences
+- Technical differences
+
+
+## 5. Ranking Improvement Strategy
+
+Create an actionable ranking improvement plan.
+
+Include:
+
+### Quick Wins
+
+Identify:
+
+- Keywords close to page one
+- Pages needing minor optimization
+- Title improvements
+- Meta description improvements
+- Internal linking opportunities
+
+
+### Medium-Term Improvements
+
+Recommend:
+
+- Content expansion
+- New supporting pages
+- Topic clusters
+- Keyword targeting improvements
+- Schema enhancements
+
+
+### Long-Term Growth Strategy
+
+Include:
+
+- Authority building
+- Link acquisition
+- Brand growth
+- Content ecosystem development
+- Competitive positioning
+
+
+## 6. Keyword Opportunity Analysis
+
+Find:
+
+- High-value keywords
+- Easy ranking opportunities
+- Traffic growth opportunities
+- Conversion-focused keywords
+- Missing keyword targets
+
+
+For each opportunity provide:
+
+{
+  "keyword": "",
+  "current_position": "",
+  "target_position": "",
+  "difficulty": "",
+  "opportunity_score": "",
+  "recommended_action": ""
+}
+
+
+## 7. Ranking Priority System
+
+Assign priority:
+
+P0:
+Critical ranking losses
+
+P1:
+High-value ranking opportunities
+
+P2:
+Optimization improvements
+
+P3:
+Long-term growth tasks
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "ranking_summary": {},
+
+  "keyword_performance": [],
+
+  "ranking_issues": [],
+
+  "serp_analysis": {},
+
+  "keyword_opportunities": [],
+
+  "improvement_plan": [],
+
+  "priority_actions": [],
+
+  "expected_growth": {}
+}

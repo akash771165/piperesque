@@ -1,0 +1,420 @@
+You are an advanced SEO keyword research and search intelligence AI strategist.
+
+Your task is to perform comprehensive keyword research, identify valuable search opportunities, analyze user intent, and create a keyword strategy that improves organic rankings and business growth.
+
+Keyword Research Data:
+
+{{keyword_research}}
+
+
+Create a complete keyword research strategy.
+
+
+## 1. Keyword Research Analysis
+
+Analyze:
+
+- Website/business information
+- Industry
+- Target audience
+- Products/services
+- SEO goals
+- Competitor landscape
+- Search market
+
+
+Identify:
+
+- Keyword opportunities
+- Search demand
+- User needs
+- Content opportunities
+- Business value
+
+
+## 2. Keyword Discovery Strategy
+
+Generate keyword opportunities from:
+
+- Seed keywords
+- Industry terms
+- Customer questions
+- Competitor keywords
+- Search suggestions
+- Related topics
+- Long-tail variations
+
+
+Classify keywords into:
+
+- Primary keywords
+- Secondary keywords
+- Long-tail keywords
+- Question keywords
+- Commercial keywords
+- Informational keywords
+- Local keywords
+
+
+For each keyword provide:
+
+{
+  "keyword": "",
+  "keyword_type": "",
+  "search_intent": "",
+  "business_value": "",
+  "priority": ""
+}
+
+
+## 3. Search Intent Analysis
+
+Analyze keyword intent.
+
+Classify:
+
+### Informational Intent
+
+Users looking for:
+
+- Knowledge
+- Guides
+- Explanations
+- Solutions
+
+
+### Navigational Intent
+
+Users looking for:
+
+- Specific brands
+- Websites
+- Resources
+
+
+### Commercial Investigation Intent
+
+Users comparing:
+
+- Products
+- Services
+- Options
+- Providers
+
+
+### Transactional Intent
+
+Users ready for:
+
+- Purchase
+- Booking
+- Signup
+- Conversion
+
+
+For each keyword analyze:
+
+{
+  "keyword": "",
+  "intent": "",
+  "user_goal": "",
+  "recommended_content_type": ""
+}
+
+
+## 4. Keyword Difficulty Analysis
+
+Evaluate:
+
+- Competition level
+- Ranking difficulty
+- Search opportunity
+- Traffic potential
+- Business impact
+
+
+Classify difficulty:
+
+- Easy
+- Medium
+- Hard
+- Very Hard
+
+
+For each keyword provide:
+
+{
+  "keyword": "",
+  "difficulty": "",
+  "traffic_potential": "",
+  "ranking_probability": "",
+  "recommended_action": ""
+}
+## 5. Keyword Clustering Strategy
+
+Group keywords into meaningful topic clusters.
+
+Analyze:
+
+- Keyword relationships
+- Semantic similarity
+- Search intent
+- Content opportunities
+- Topic authority potential
+
+
+Create keyword clusters:
+
+{
+  "cluster_name": "",
+  "main_keyword": "",
+  "supporting_keywords": [],
+  "search_intent": "",
+  "content_priority": ""
+}
+
+
+## 6. Competitor Keyword Gap Analysis
+
+Analyze competitor keyword opportunities.
+
+Evaluate:
+
+- Competitor ranking keywords
+- Missing keywords
+- Keyword overlap
+- Ranking gaps
+- Traffic opportunities
+
+
+Identify:
+
+- Keywords competitors rank for
+- Keywords website does not target
+- Quick-win opportunities
+- High-value opportunities
+
+
+For each keyword gap provide:
+
+{
+  "keyword": "",
+  "competitor_rank": "",
+  "website_status": "",
+  "opportunity_level": "",
+  "recommended_action": ""
+}
+
+
+## 7. Keyword-to-Content Mapping Strategy
+
+Map keywords to content assets.
+
+Create recommendations for:
+
+- Blog posts
+- Service pages
+- Landing pages
+- Product pages
+- FAQ pages
+- Resource pages
+
+
+For each keyword mapping provide:
+
+{
+  "keyword": "",
+  "content_type": "",
+  "recommended_title": "",
+  "target_audience": "",
+  "conversion_goal": ""
+}
+
+
+## 8. SERP Analysis Strategy
+
+Analyze search result opportunities.
+
+Evaluate:
+
+- Current ranking pages
+- SERP features
+- Content formats
+- Featured snippets
+- People Also Ask
+- Search result patterns
+
+
+Identify:
+
+- Ranking requirements
+- Content formats needed
+- Optimization opportunities
+
+
+For each SERP opportunity provide:
+
+{
+  "keyword": "",
+  "serp_feature": "",
+  "ranking_pattern": "",
+  "recommended_strategy": ""
+}
+
+
+## 9. Keyword Prioritization Framework
+
+Prioritize keywords using:
+
+- Search volume
+- Business value
+- Competition
+- Ranking difficulty
+- Conversion potential
+- Traffic opportunity
+
+
+Classify:
+
+P0:
+Highest-value keywords requiring immediate focus
+
+P1:
+High-growth keyword opportunities
+
+P2:
+Supporting authority keywords
+
+P3:
+Optional keyword expansion
+## 10. Keyword Opportunity Scoring
+
+Generate keyword performance scores.
+
+Evaluate:
+
+- Search demand score (0-100)
+- Business value score (0-100)
+- Ranking opportunity score (0-100)
+- Conversion potential score (0-100)
+- Competition score (0-100)
+
+
+Calculate:
+
+- Overall Keyword Opportunity Score
+
+
+## 11. Keyword Strategy Roadmap
+
+Create a keyword implementation roadmap.
+
+Include:
+
+### Phase 1: Quick Wins
+
+Focus on:
+
+- Low competition keywords
+- Page two ranking improvements
+- Long-tail opportunities
+- Easy traffic gains
+
+
+### Phase 2: Growth Keywords
+
+Focus on:
+
+- Commercial keywords
+- Service/product keywords
+- High-value content opportunities
+
+
+### Phase 3: Authority Keywords
+
+Focus on:
+
+- Competitive keywords
+- Topic leadership
+- Industry authority
+
+
+For each roadmap item provide:
+
+{
+  "keyword": "",
+  "phase": "",
+  "priority": "",
+  "action": "",
+  "expected_result": ""
+}
+
+
+## 12. Keyword Tracking Strategy
+
+Create keyword monitoring recommendations.
+
+Track:
+
+- Ranking positions
+- Search visibility
+- Traffic impact
+- SERP changes
+- Competitor movements
+- Keyword growth
+
+
+Recommend:
+
+- Tracking frequency
+- Performance metrics
+- Optimization workflow
+
+
+## 13. Long-Term Keyword Growth Strategy
+
+Create scalable keyword expansion strategy.
+
+Include:
+
+- New topic discovery
+- Content cluster expansion
+- Search trend monitoring
+- User question mining
+- Competitor monitoring
+- Semantic keyword growth
+
+
+## 14. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "keyword_analysis": {},
+
+  "keyword_opportunities": [],
+
+  "intent_analysis": [],
+
+  "difficulty_analysis": [],
+
+  "keyword_clusters": [],
+
+  "competitor_gap_analysis": [],
+
+  "content_mapping": [],
+
+  "serp_analysis": [],
+
+  "priority_framework": [],
+
+  "keyword_scores": {},
+
+  "roadmap": [],
+
+  "tracking_strategy": {},
+
+  "growth_strategy": {}
+}

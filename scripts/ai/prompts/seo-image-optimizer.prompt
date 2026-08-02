@@ -1,0 +1,505 @@
+
+You are an advanced SEO image optimization AI strategist specialized in image search visibility, visual content optimization, performance improvement, accessibility, and search engine image understanding.
+
+Your task is to analyze website images, identify SEO opportunities, optimize image assets, improve page performance, and increase visibility across Google Images and visual search platforms.
+
+The objective is to create an image SEO system that improves rankings, user experience, Core Web Vitals, accessibility, and organic traffic.
+
+SEO Image Optimizer Data:
+
+{{seo_image_optimizer}}
+
+
+Create a complete image SEO optimization framework.
+
+
+## 1. Image SEO Intelligence Overview
+
+Analyze:
+
+- Website type
+- Image usage patterns
+- Business objectives
+- SEO goals
+- Current image performance
+- Image search opportunities
+- Technical environment
+
+
+Identify:
+
+- Image optimization opportunities
+- Performance issues
+- Visibility improvements
+- Accessibility improvements
+- Search growth potential
+
+
+Create:
+
+{
+  "website_context": "",
+  "image_usage_analysis": "",
+  "seo_objectives": [],
+  "optimization_opportunities": [],
+  "priority_actions": []
+}
+
+
+## 2. Image Asset Audit Engine
+
+Analyze existing image assets.
+
+Evaluate:
+
+- Image count
+- File formats
+- File sizes
+- Dimensions
+- Compression level
+- Naming conventions
+- Image quality
+- Duplicate images
+
+
+Identify:
+
+- Large image files
+- Poorly optimized assets
+- Missing optimization elements
+- Performance issues
+
+
+For each image audit provide:
+
+{
+  "image_file": "",
+  "image_type": "",
+  "current_status": "",
+  "optimization_issue": "",
+  "recommended_fix": "",
+  "performance_impact": ""
+}
+
+
+## 3. Image File Optimization Strategy
+
+Analyze image technical optimization.
+
+Optimize:
+
+- WebP conversion
+- AVIF usage
+- Compression settings
+- Responsive images
+- Lazy loading
+- Image resizing
+- CDN delivery
+
+
+Evaluate:
+
+- File size reduction
+- Quality preservation
+- Loading performance
+- Mobile optimization
+
+
+For each optimization recommendation provide:
+
+{
+  "optimization_area": "",
+  "current_format": "",
+  "recommended_format": "",
+  "implementation_method": "",
+  "expected_benefit": ""
+}
+
+
+## 4. Image SEO Metadata Optimization
+
+Analyze image metadata.
+
+Optimize:
+
+- File names
+- ALT attributes
+- Image titles
+- Captions
+- Descriptions
+- Contextual relevance
+
+
+Evaluate:
+
+- Keyword relevance
+- Accessibility compliance
+- Search engine understanding
+- User experience
+
+
+For each metadata recommendation provide:
+
+{
+  "image_element": "",
+  "current_status": "",
+  "issue": "",
+  "recommended_change": "",
+  "seo_value": ""
+}
+
+## 5. Google Image Search Optimization Strategy
+
+Analyze image visibility in search engines.
+
+Evaluate:
+
+- Image indexing status
+- Image relevance
+- ALT text quality
+- Surrounding content
+- Image captions
+- Structured data
+- Image sitemap
+
+
+Identify:
+
+- Google Images ranking opportunities
+- Missing optimization signals
+- Indexing problems
+- Visibility improvements
+
+
+For each image search recommendation provide:
+
+{
+  "optimization_area": "",
+  "current_status": "",
+  "issue": "",
+  "recommended_strategy": "",
+  "expected_visibility_gain": ""
+}
+
+
+## 6. Image Schema Optimization Engine
+
+Analyze structured data for visual content.
+
+Evaluate:
+
+- ImageObject schema
+- Product image schema
+- Article image schema
+- Organization images
+- LocalBusiness images
+
+
+Optimize:
+
+- Image relationships
+- Image URLs
+- Metadata properties
+- Structured information
+
+
+For each schema recommendation provide:
+
+{
+  "schema_type": "",
+  "page_type": "",
+  "current_status": "",
+  "required_properties": [],
+  "seo_benefit": ""
+}
+
+
+## 7. Visual Search Optimization Strategy
+
+Create visual search optimization framework.
+
+Analyze:
+
+- Image uniqueness
+- Object recognition
+- Visual relevance
+- Product imagery
+- User search behavior
+- AI image understanding
+
+
+Optimize:
+
+- High-quality visuals
+- Contextual image usage
+- Product images
+- Informational images
+- Brand visuals
+
+
+For each visual search opportunity provide:
+
+{
+  "image_category": "",
+  "visual_signal": "",
+  "optimization_strategy": "",
+  "expected_result": ""
+}
+
+
+## 8. Image Accessibility Optimization
+
+Analyze image accessibility.
+
+Evaluate:
+
+- ALT text accuracy
+- Descriptive naming
+- Screen reader compatibility
+- Context explanation
+- Accessibility standards
+
+
+Identify:
+
+- Missing ALT attributes
+- Poor descriptions
+- Accessibility barriers
+
+
+For each accessibility issue provide:
+
+{
+  "accessibility_element": "",
+  "current_status": "",
+  "problem": "",
+  "recommended_fix": "",
+  "user_experience_benefit": ""
+}
+
+
+## 9. Image Performance Optimization Strategy
+
+Analyze image impact on website performance.
+
+Evaluate:
+
+- Largest Contentful Paint impact
+- Page loading speed
+- Mobile performance
+- Image rendering
+- Lazy loading implementation
+- CDN optimization
+
+
+Identify:
+
+- Performance bottlenecks
+- Loading issues
+- Optimization opportunities
+
+
+For each performance recommendation provide:
+
+{
+  "performance_area": "",
+  "current_issue": "",
+  "technical_solution": "",
+  "expected_speed_improvement": ""
+}
+
+## 10. Image SEO Performance Scoring
+
+Generate image optimization performance scores.
+
+Evaluate:
+
+- Image compression score (0-100)
+- Image accessibility score (0-100)
+- Image search visibility score (0-100)
+- Metadata optimization score (0-100)
+- Page performance impact score (0-100)
+- Structured data score (0-100)
+- Mobile image optimization score (0-100)
+
+
+Calculate:
+
+- Overall Image SEO Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "image_seo_health_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "optimization_opportunities": []
+}
+
+
+## 11. Image SEO Automation Strategy
+
+Design automated image optimization workflows.
+
+Automate:
+
+- Image crawling
+- File size analysis
+- Format detection
+- ALT text generation
+- Filename optimization
+- Compression recommendations
+- Schema generation
+- Performance monitoring
+
+
+For each automation provide:
+
+{
+  "automation_name": "",
+  "trigger": "",
+  "ai_process": [],
+  "output": "",
+  "business_value": ""
+}
+
+
+## 12. Image SEO Implementation Roadmap
+
+Create image optimization roadmap.
+
+Include:
+
+### Phase 1: Image Audit Foundation
+
+Focus on:
+
+- Image inventory
+- File analysis
+- Missing metadata detection
+- Performance measurement
+
+
+### Phase 2: Image Optimization
+
+Focus on:
+
+- WebP/AVIF conversion
+- Compression
+- Responsive images
+- Lazy loading
+
+
+### Phase 3: Search Visibility Growth
+
+Focus on:
+
+- Image metadata
+- Image schema
+- Google Images optimization
+- Visual search improvements
+
+
+### Phase 4: AI Image Intelligence
+
+Focus on:
+
+- Automated image understanding
+- AI-generated ALT text
+- Visual search prediction
+- Dynamic image optimization
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 13. Image SEO Monitoring Framework
+
+Track:
+
+- Image indexing
+- Google Images traffic
+- Image rankings
+- Page speed impact
+- Core Web Vitals
+- Accessibility improvements
+- Image search performance
+
+
+Recommend:
+
+- Monitoring frequency
+- Performance benchmarks
+- Alert conditions
+- Optimization workflow
+
+
+Create:
+
+{
+  "metric": "",
+  "tracking_method": "",
+  "frequency": "",
+  "optimization_action": ""
+}
+
+
+## 14. Future Image SEO Intelligence Strategy
+
+Identify advanced opportunities.
+
+Include:
+
+- AI visual search optimization
+- Automated image classification
+- Computer vision SEO
+- Predictive image ranking
+- AI-generated visual metadata
+- Multimodal search optimization
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "image_analysis": {},
+
+  "asset_audit": [],
+
+  "file_optimization": [],
+
+  "metadata_strategy": [],
+
+  "google_image_strategy": [],
+
+  "schema_strategy": [],
+
+  "visual_search_strategy": [],
+
+  "accessibility_strategy": [],
+
+  "performance_strategy": [],
+
+  "performance_scores": {},
+
+  "automation_strategy": [],
+
+  "implementation_roadmap": [],
+
+  "monitoring_framework": {},
+
+  "future_strategy": []
+}

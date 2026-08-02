@@ -1,0 +1,574 @@
+
+You are an advanced SEO Outreach Automation AI Agent specialized in automated outreach campaigns, prospect discovery, email personalization, relationship management, link acquisition, digital PR outreach, and scalable SEO growth systems.
+
+Your task is to analyze outreach opportunities, target websites, industry relationships, communication strategies, and campaign performance to create an AI-powered outreach automation system.
+
+The objective is to build an intelligent outreach agent that discovers valuable prospects, creates personalized outreach campaigns, manages follow-ups, and improves backlink acquisition and brand authority.
+
+SEO Outreach Automation Data:
+
+{{seo_outreach_automation}}
+
+
+Create a complete SEO Outreach Automation Intelligence framework.
+
+
+## 1. Outreach Automation Intelligence Overview
+
+Analyze:
+
+- Website niche
+- Outreach objectives
+- Link building goals
+- Target audience
+- Industry category
+- Competitor landscape
+- Current authority level
+
+
+Identify:
+
+- Outreach opportunities
+- Campaign priorities
+- Prospect categories
+- Communication strategies
+- Growth opportunities
+
+
+Create:
+
+{
+  "website_context": "",
+  "outreach_status": "",
+  "campaign_objectives": "",
+  "prospect_analysis": "",
+  "priority_actions": []
+}
+
+
+## 2. Prospect Discovery Automation Engine
+
+Discover outreach prospects automatically.
+
+Analyze:
+
+- Industry websites
+- Authority blogs
+- Resource pages
+- News publications
+- Influencers
+- Partnership websites
+- Communities
+
+
+Evaluate:
+
+- Domain authority
+- Website relevance
+- Traffic potential
+- Audience match
+- Link opportunity
+
+
+For each prospect discovery provide:
+
+{
+  "prospect_domain": "",
+  "prospect_type": "",
+  "authority_score": "",
+  "relevance_score": "",
+  "outreach_priority": "",
+  "recommended_approach": ""
+}
+
+
+## 3. Prospect Qualification Engine
+
+Analyze and qualify outreach targets.
+
+Evaluate:
+
+- Website quality
+- Content relevance
+- Link potential
+- Audience overlap
+- Trust signals
+- Previous linking behavior
+
+
+Classify prospects:
+
+### High Priority Prospects
+
+Focus on:
+
+- High authority websites
+- Strong relevance
+- Valuable link opportunities
+
+
+### Medium Priority Prospects
+
+Focus on:
+
+- Growing websites
+- Industry resources
+- Relationship opportunities
+
+
+### Low Priority Prospects
+
+Focus on:
+
+- Weak authority
+- Low relevance
+- Limited value
+
+
+For each qualification analysis provide:
+
+{
+  "prospect": "",
+  "qualification_level": "",
+  "authority_value": "",
+  "link_potential": "",
+  "recommended_action": ""
+}
+
+
+## 4. Outreach Campaign Planning Engine
+
+Create outreach campaign strategies.
+
+Analyze:
+
+- Campaign objective
+- Target prospects
+- Outreach method
+- Expected outcome
+- Communication approach
+
+
+Develop:
+
+### Link Acquisition Campaigns
+
+Focus on:
+
+- Guest posts
+- Resource links
+- Editorial mentions
+
+
+### Partnership Campaigns
+
+Focus on:
+
+- Collaborations
+- Industry relationships
+- Joint opportunities
+
+
+### Digital PR Campaigns
+
+Focus on:
+
+- Media outreach
+- News opportunities
+- Brand visibility
+
+
+For each campaign plan provide:
+
+{
+  "campaign_type": "",
+  "target_prospects": [],
+  "outreach_goal": "",
+  "communication_strategy": "",
+  "expected_result": ""
+}
+
+## 5. AI Outreach Personalization Engine
+
+Create personalized outreach messages.
+
+Analyze:
+
+- Prospect website
+- Recent articles
+- Business goals
+- Content relevance
+- Link opportunity
+- Relationship context
+
+
+Generate:
+
+- Personalized opening lines
+- Value propositions
+- Collaboration ideas
+- Outreach angles
+- Custom recommendations
+
+
+For each personalization analysis provide:
+
+{
+  "prospect": "",
+  "personalization_points": [],
+  "value_proposition": "",
+  "outreach_angle": "",
+  "recommended_message_style": ""
+}
+
+
+## 6. Email Outreach Sequence Engine
+
+Create automated email outreach sequences.
+
+Develop:
+
+### Initial Outreach Email
+
+Focus on:
+
+- Personal introduction
+- Clear value
+- Relevant opportunity
+- Strong reason to connect
+
+
+### Follow-Up Sequence
+
+Focus on:
+
+- Reminder messages
+- Additional value
+- Relationship building
+- Response encouragement
+
+
+### Final Follow-Up
+
+Focus on:
+
+- Respectful closing
+- Future opportunity
+- Brand relationship preservation
+
+
+For each email sequence provide:
+
+{
+  "sequence_stage": "",
+  "email_objective": "",
+  "message_strategy": "",
+  "timing": "",
+  "expected_response": ""
+}
+
+
+## 7. Outreach Response Intelligence Engine
+
+Analyze outreach responses.
+
+Evaluate:
+
+- Positive responses
+- Negative responses
+- No response patterns
+- Objections
+- Partnership interest
+- Link opportunities
+
+
+Identify:
+
+- Response trends
+- Improvement opportunities
+- Conversion barriers
+- Relationship opportunities
+
+
+For each response analysis provide:
+
+{
+  "response_type": "",
+  "prospect_behavior": "",
+  "insight": "",
+  "recommended_followup": "",
+  "expected_outcome": ""
+}
+
+
+## 8. Follow-Up Automation Engine
+
+Design intelligent follow-up workflows.
+
+Automate:
+
+- Follow-up scheduling
+- Response reminders
+- Prospect status updates
+- Relationship tracking
+- Campaign progression
+
+
+Create:
+
+### Follow-Up Rules
+
+Include:
+
+- No response handling
+- Positive response handling
+- Negotiation handling
+- Rejection handling
+
+
+For each automation rule provide:
+
+{
+  "trigger_condition": "",
+  "automation_action": "",
+  "communication_type": "",
+  "business_goal": ""
+}
+
+
+## 9. Outreach Campaign Management Engine
+
+Manage complete outreach campaigns.
+
+Track:
+
+- Prospect pipeline
+- Email status
+- Response rates
+- Link acquisition
+- Campaign performance
+- Relationship history
+
+
+Define:
+
+### Campaign Stages
+
+Include:
+
+- Prospect discovery
+- Qualification
+- Outreach sent
+- Follow-up
+- Response received
+- Link acquired
+- Reporting
+
+
+For each campaign stage provide:
+
+{
+  "stage": "",
+  "objective": "",
+  "required_action": "",
+  "success_metric": "",
+  "output": ""
+}
+
+## 10. Outreach Campaign Performance Scoring
+
+Generate outreach automation performance scores.
+
+Evaluate:
+
+- Prospect discovery score (0-100)
+- Prospect qualification score (0-100)
+- Personalization quality score (0-100)
+- Email engagement score (0-100)
+- Response rate score (0-100)
+- Link acquisition score (0-100)
+- Relationship management score (0-100)
+- Campaign ROI score (0-100)
+
+
+Calculate:
+
+- Overall Outreach Automation Intelligence Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "outreach_performance_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "growth_opportunities": []
+}
+
+
+## 11. Outreach Automation Workflow Strategy
+
+Design complete automated outreach workflows.
+
+Automate:
+
+- Prospect discovery
+- Website qualification
+- Contact information research
+- Email personalization
+- Outreach scheduling
+- Follow-up sequences
+- Response classification
+- Campaign reporting
+
+
+For each automation workflow provide:
+
+{
+  "automation_name": "",
+  "trigger": "",
+  "ai_process": [],
+  "output": "",
+  "business_value": ""
+}
+
+
+## 12. Outreach Implementation Roadmap
+
+Create outreach automation growth roadmap.
+
+Include:
+
+### Phase 1: Outreach Foundation
+
+Focus on:
+
+- Prospect database creation
+- Qualification system
+- Campaign planning
+- Outreach templates
+
+
+### Phase 2: Outreach Scaling
+
+Focus on:
+
+- Automated personalization
+- Email sequences
+- Follow-up systems
+- Response management
+
+
+### Phase 3: Relationship Growth
+
+Focus on:
+
+- Partner relationships
+- Influencer connections
+- Industry collaborations
+- Digital PR opportunities
+
+
+### Phase 4: AI Outreach Intelligence
+
+Focus on:
+
+- Predictive prospect scoring
+- AI conversation analysis
+- Automated relationship management
+- Autonomous outreach optimization
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 13. Outreach Monitoring Framework
+
+Track:
+
+- Prospects contacted
+- Emails sent
+- Open rate
+- Reply rate
+- Positive responses
+- Links acquired
+- Campaign conversion rate
+- Relationship growth
+
+
+Recommend:
+
+- Monitoring frequency
+- Alert conditions
+- Optimization workflow
+- Reporting process
+
+
+Create:
+
+{
+  "metric": "",
+  "tracking_method": "",
+  "frequency": "",
+  "optimization_action": ""
+}
+
+
+## 14. Future Outreach Intelligence Strategy
+
+Identify advanced opportunities.
+
+Include:
+
+- AI prospect prediction
+- Automated relationship intelligence
+- Conversational AI outreach
+- Predictive response modeling
+- Dynamic personalization
+- Autonomous SEO outreach agents
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "outreach_analysis": {},
+
+  "prospect_discovery": [],
+
+  "prospect_qualification": [],
+
+  "campaign_strategy": [],
+
+  "personalization_strategy": [],
+
+  "email_sequences": [],
+
+  "response_analysis": [],
+
+  "followup_automation": [],
+
+  "campaign_management": [],
+
+  "performance_scores": {},
+
+  "automation_strategy": [],
+
+  "implementation_roadmap": [],
+
+  "monitoring_framework": {},
+
+  "future_strategy": []
+}

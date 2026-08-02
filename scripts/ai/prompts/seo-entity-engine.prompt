@@ -1,0 +1,475 @@
+
+You are an advanced SEO entity intelligence, semantic search optimization, and knowledge graph AI strategist.
+
+Your task is to analyze entities, relationships, semantic relevance, topical authority, and search engine understanding to improve website visibility, entity recognition, and organic search performance.
+
+SEO Entity Engine Data:
+
+{{seo_entity_engine}}
+
+
+Create a complete entity SEO strategy.
+
+
+## 1. Entity Intelligence Overview Analysis
+
+Analyze:
+
+- Business/entity information
+- Industry category
+- Website purpose
+- Target audience
+- Search ecosystem
+- Existing entity signals
+- SEO objectives
+
+
+Identify:
+
+- Primary entities
+- Secondary entities
+- Entity relationships
+- Knowledge graph opportunities
+- Semantic SEO opportunities
+
+
+Create:
+
+{
+  "primary_entity": "",
+  "entity_category": "",
+  "related_entities": [],
+  "entity_opportunities": [],
+  "seo_objectives": []
+}
+
+
+## 2. Entity Discovery Engine
+
+Identify important entities connected to the website.
+
+Analyze:
+
+- Brand entities
+- Organization entities
+- Person entities
+- Product entities
+- Service entities
+- Location entities
+- Industry entities
+- Topic entities
+
+
+Discover:
+
+- Core entities
+- Supporting entities
+- Related concepts
+- Semantic connections
+
+
+For each entity provide:
+
+{
+  "entity_name": "",
+  "entity_type": "",
+  "relationship": "",
+  "importance": "",
+  "seo_value": ""
+}
+
+
+## 3. Entity Relationship Mapping
+
+Create entity relationship model.
+
+Analyze:
+
+- Entity connections
+- Topic relationships
+- Brand associations
+- User intent relationships
+- Search context
+
+
+Map:
+
+- Main entity
+- Supporting entities
+- Related topics
+- Attributes
+- Relationships
+
+
+For each relationship provide:
+
+{
+  "entity_a": "",
+  "entity_b": "",
+  "relationship_type": "",
+  "semantic_connection": "",
+  "optimization_value": ""
+}
+
+
+## 4. Knowledge Graph Optimization Analysis
+
+Analyze search engine entity understanding.
+
+Evaluate:
+
+- Organization schema
+- Person schema
+- Product schema
+- Local business schema
+- SameAs references
+- Structured data
+- Brand mentions
+
+
+Identify:
+
+- Missing entity signals
+- Knowledge graph improvements
+- Semantic optimization opportunities
+
+
+For each finding provide:
+
+{
+  "entity_signal": "",
+  "current_status": "",
+  "issue": "",
+  "recommended_improvement": "",
+  "seo_impact": ""
+}
+
+## 5. Semantic SEO Analysis Engine
+
+Analyze semantic search optimization.
+
+Evaluate:
+
+- Topic relationships
+- Entity associations
+- Contextual relevance
+- Search intent alignment
+- Semantic keyword coverage
+- Related concepts
+
+
+Identify:
+
+- Semantic gaps
+- Missing concepts
+- Content expansion opportunities
+- Relevance improvements
+
+
+For each semantic insight provide:
+
+{
+  "topic": "",
+  "related_entities": [],
+  "semantic_gap": "",
+  "optimization_strategy": "",
+  "expected_impact": ""
+}
+
+
+## 6. Entity-Based Content Strategy
+
+Create entity-focused content strategy.
+
+Develop:
+
+- Entity pages
+- Topic cluster pages
+- Knowledge articles
+- Expert content
+- FAQ content
+- Resource pages
+
+
+Optimize:
+
+- Entity mentions
+- Contextual relationships
+- Supporting concepts
+- Internal linking
+- Structured information
+
+
+For each content recommendation provide:
+
+{
+  "content_type": "",
+  "target_entity": "",
+  "related_topics": [],
+  "content_goal": "",
+  "seo_benefit": ""
+}
+
+
+## 7. Topical Authority Entity Analysis
+
+Analyze entity authority development.
+
+Evaluate:
+
+- Topic coverage
+- Entity depth
+- Content completeness
+- Industry expertise
+- Semantic relationships
+
+
+Identify:
+
+- Authority gaps
+- Missing supporting entities
+- Content expansion areas
+- Expertise opportunities
+
+
+For each authority finding provide:
+
+{
+  "entity_topic": "",
+  "current_coverage": "",
+  "authority_gap": "",
+  "recommended_action": "",
+  "priority": ""
+}
+
+
+## 8. Entity Schema Optimization Strategy
+
+Create structured data optimization plan.
+
+Analyze:
+
+- Organization schema
+- Person schema
+- Article schema
+- Product schema
+- Service schema
+- LocalBusiness schema
+- FAQ schema
+- Breadcrumb schema
+
+
+Identify:
+
+- Missing schemas
+- Incorrect relationships
+- Entity connection improvements
+
+
+For each schema recommendation provide:
+
+{
+  "schema_type": "",
+  "entity": "",
+  "current_status": "",
+  "improvement": "",
+  "search_visibility_benefit": ""
+}
+
+
+## 9. Entity Internal Linking Strategy
+
+Create entity relationship linking strategy.
+
+Analyze:
+
+- Entity connections
+- Contextual links
+- Anchor text
+- Topic clusters
+- Authority flow
+
+
+Recommend:
+
+- Entity linking opportunities
+- Supporting pages
+- Related entity connections
+
+
+For each linking recommendation provide:
+
+{
+  "source_page": "",
+  "target_entity": "",
+  "anchor_text": "",
+  "relationship": "",
+  "seo_value": ""
+}
+
+## 10. Entity SEO Performance Scoring
+
+Generate entity optimization scores.
+
+Evaluate:
+
+- Entity recognition score (0-100)
+- Semantic relevance score (0-100)
+- Knowledge graph readiness score (0-100)
+- Schema implementation score (0-100)
+- Topical authority score (0-100)
+- Entity relationship score (0-100)
+
+
+Calculate:
+
+- Overall Entity SEO Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "entity_optimization_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "improvement_opportunities": []
+}
+
+
+## 11. Entity SEO Implementation Roadmap
+
+Create entity optimization roadmap.
+
+Include:
+
+### Phase 1: Entity Foundation
+
+Focus on:
+
+- Entity identification
+- Schema implementation
+- Brand information optimization
+- Basic entity signals
+
+
+### Phase 2: Semantic Expansion
+
+Focus on:
+
+- Related entities
+- Topic relationships
+- Content expansion
+- Internal entity linking
+
+
+### Phase 3: Knowledge Authority Building
+
+Focus on:
+
+- Expert profiles
+- Brand mentions
+- Industry references
+- Knowledge graph improvements
+
+
+### Phase 4: Advanced Entity Intelligence
+
+Focus on:
+
+- AI entity analysis
+- Automated entity discovery
+- Semantic optimization
+- Search ecosystem expansion
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 12. Entity Monitoring Framework
+
+Create entity performance monitoring system.
+
+Track:
+
+- Brand entity recognition
+- Knowledge graph presence
+- Schema validity
+- Entity mentions
+- Semantic ranking changes
+- Topic authority growth
+
+
+Recommend:
+
+- Monitoring frequency
+- Data sources
+- Alert conditions
+- Optimization workflow
+
+
+Create:
+
+{
+  "metric": "",
+  "tracking_method": "",
+  "frequency": "",
+  "optimization_action": ""
+}
+
+
+## 13. Future Entity SEO Intelligence Strategy
+
+Identify advanced entity optimization opportunities.
+
+Include:
+
+- AI-powered entity discovery
+- Knowledge graph automation
+- Semantic search prediction
+- Entity relationship modeling
+- Automated schema generation
+- Search understanding optimization
+
+
+## 14. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "entity_analysis": {},
+
+  "entity_discovery": [],
+
+  "entity_relationships": [],
+
+  "knowledge_graph_analysis": [],
+
+  "semantic_analysis": [],
+
+  "content_strategy": [],
+
+  "topical_authority_analysis": [],
+
+  "schema_strategy": [],
+
+  "internal_linking_strategy": [],
+
+  "performance_scores": {},
+
+  "implementation_roadmap": [],
+
+  "monitoring_framework": {},
+
+  "future_strategy": []
+}

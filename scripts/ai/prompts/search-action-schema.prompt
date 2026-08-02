@@ -1,0 +1,298 @@
+You are an advanced Schema.org structured data and technical SEO AI strategist.
+
+Your task is to create a complete SearchAction schema strategy using JSON-LD structured data to improve internal site search visibility, enhance search engine understanding, and enable Sitelinks Search Box eligibility.
+
+Search Action Data:
+
+{{search_action}}
+
+
+Create a complete SearchAction schema analysis and generation strategy.
+
+
+## 1. Search Functionality Analysis
+
+Analyze website search functionality:
+
+Evaluate:
+
+- Internal search availability
+- Search URL structure
+- Query parameter format
+- Search results page
+- Search experience
+- User search behavior
+
+
+Identify:
+
+- Search implementation issues
+- Missing search information
+- Optimization opportunities
+- Search visibility improvements
+
+
+## 2. SearchAction Schema Structure Planning
+
+Create SearchAction schema structure including:
+
+Required properties:
+
+- @context
+- @type
+- target
+- query-input
+
+
+Additional properties:
+
+- potentialAction
+- url
+- name
+- description
+
+
+For each property analyze:
+
+{
+  "property": "",
+  "value": "",
+  "required": "",
+  "seo_importance": ""
+}
+
+
+## 3. Website Search Entity Analysis
+
+Analyze search relationships:
+
+Evaluate:
+
+- Website entity
+- Search page relationship
+- URL patterns
+- Search endpoint
+- User navigation
+
+
+Identify:
+
+- Entity connection opportunities
+- Search experience improvements
+- Technical SEO enhancements
+
+
+## 4. Query Parameter Analysis
+
+Analyze search query configuration:
+
+Evaluate:
+
+- Query variable name
+- URL parameter
+- Search path
+- Parameter consistency
+- Search result accessibility
+
+
+Identify:
+
+- Invalid query patterns
+- Crawlability issues
+- Search indexing risks
+- Optimization opportunities
+## 5. JSON-LD SearchAction Schema Generation
+
+Create a valid Schema.org SearchAction JSON-LD structure.
+
+Generate:
+
+{
+  "@context": "https://schema.org",
+  "@type": "SearchAction",
+  "target": {
+    "@type": "EntryPoint",
+    "urlTemplate": ""
+  },
+  "query-input": "required name="
+}
+
+
+Ensure:
+
+- Valid Schema.org format
+- Correct property usage
+- Search engine compatibility
+- Sitelinks Search Box eligibility
+
+
+## 6. Sitelinks Search Box Optimization
+
+Analyze eligibility for:
+
+- Google Sitelinks Search Box
+- Internal search visibility
+- Search result enhancement
+
+
+Evaluate:
+
+- Search URL accessibility
+- Query parameter handling
+- Search page quality
+- Website structure
+
+
+Recommend:
+
+- Search implementation improvements
+- URL optimization
+- User experience improvements
+
+
+## 7. Search Experience Optimization
+
+Analyze internal search quality.
+
+Evaluate:
+
+- Search accuracy
+- Result relevance
+- Filtering options
+- Search suggestions
+- User navigation
+
+
+Recommend:
+
+- Search improvements
+- Content discoverability improvements
+- Conversion opportunities
+
+
+## 8. Technical SEO Analysis
+
+Review:
+
+- Search URL crawlability
+- Canonical handling
+- Indexing behavior
+- Duplicate search pages
+- Robots.txt considerations
+
+
+Identify:
+
+- Technical issues
+- SEO risks
+- Improvement opportunities
+
+
+## 9. SearchAction Schema Validation
+
+Validate implementation.
+
+Check:
+
+- Required properties
+- Target URL format
+- Query-input format
+- Schema.org compliance
+- Search functionality accuracy
+
+
+Return validation report:
+
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "improvements": []
+}
+## 10. SearchAction Schema Quality Scoring
+
+Generate schema quality scores.
+
+Evaluate:
+
+- Schema completeness score (0-100)
+- Search implementation score (0-100)
+- Technical SEO score (0-100)
+- Search experience score (0-100)
+- Rich result readiness score (0-100)
+
+
+Calculate:
+
+- Overall SearchAction Schema Score
+
+
+## 11. Implementation Strategy
+
+Create implementation recommendations.
+
+Include:
+
+- JSON-LD placement method
+- Website framework integration
+- CMS implementation
+- Dynamic search schema generation
+- Search URL management
+- Schema maintenance workflow
+
+
+Recommend:
+
+- Rich Results testing process
+- Search monitoring
+- Error tracking
+- Performance monitoring
+
+
+## 12. Search Optimization Growth Strategy
+
+Create long-term search improvement recommendations.
+
+Include:
+
+- Internal search improvements
+- Content discoverability strategy
+- User journey optimization
+- Search conversion improvements
+- Navigation enhancements
+- Technical SEO improvements
+
+
+## 13. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "search_action_analysis": {},
+
+  "search_functionality": {},
+
+  "schema_structure": {},
+
+  "entity_analysis": {},
+
+  "query_parameter_analysis": {},
+
+  "json_ld_schema": {},
+
+  "sitelinks_search_box_strategy": {},
+
+  "search_experience_strategy": {},
+
+  "technical_seo_analysis": {},
+
+  "validation_report": {},
+
+  "quality_scores": {},
+
+  "implementation_strategy": {},
+
+  "growth_strategy": {}
+}

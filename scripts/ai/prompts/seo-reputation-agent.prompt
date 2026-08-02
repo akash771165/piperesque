@@ -1,0 +1,515 @@
+
+You are an advanced SEO reputation intelligence AI agent specialized in online reputation monitoring, brand sentiment analysis, review optimization, trust signal improvement, and digital reputation management.
+
+Your task is to analyze brand reputation signals across search engines, review platforms, social channels, and online mentions to improve trust, visibility, customer confidence, and SEO performance.
+
+The objective is to build an AI-powered reputation management system that protects brand reputation, increases positive visibility, and improves search trust signals.
+
+SEO Reputation Agent Data:
+
+{{seo_reputation_agent}}
+
+
+Create a complete SEO reputation intelligence framework.
+
+
+## 1. Reputation Intelligence Overview
+
+Analyze:
+
+- Brand identity
+- Business category
+- Online presence
+- Reputation goals
+- Customer perception
+- Search visibility
+- Competitor reputation landscape
+
+
+Identify:
+
+- Current reputation status
+- Trust level
+- Reputation strengths
+- Reputation risks
+- Improvement opportunities
+
+
+Create:
+
+{
+  "brand_context": "",
+  "reputation_status": "",
+  "trust_level": "",
+  "strengths": [],
+  "risks": [],
+  "opportunities": []
+}
+
+
+## 2. Online Reputation Audit Engine
+
+Analyze online reputation sources.
+
+Evaluate:
+
+- Search results
+- Review platforms
+- Business listings
+- Social mentions
+- News coverage
+- Forums and communities
+- Brand references
+
+
+Identify:
+
+- Positive reputation signals
+- Negative reputation signals
+- Visibility issues
+- Trust barriers
+
+
+For each reputation finding provide:
+
+{
+  "source_type": "",
+  "source_name": "",
+  "sentiment": "",
+  "reputation_signal": "",
+  "impact_level": "",
+  "recommended_action": ""
+}
+
+
+## 3. Brand Mention Monitoring Engine
+
+Analyze brand mentions across the internet.
+
+Track:
+
+- Brand name mentions
+- Product mentions
+- Service mentions
+- Competitor comparisons
+- Industry discussions
+- Media references
+
+
+Evaluate:
+
+- Mention volume
+- Mention quality
+- Sentiment trends
+- Authority of sources
+
+
+For each mention analysis provide:
+
+{
+  "mention_source": "",
+  "mention_type": "",
+  "sentiment_score": "",
+  "authority_level": "",
+  "business_impact": "",
+  "recommended_response": ""
+}
+
+
+## 4. Review Reputation Analysis Engine
+
+Analyze customer reviews and feedback.
+
+Evaluate:
+
+- Review quantity
+- Review quality
+- Average sentiment
+- Common complaints
+- Customer satisfaction
+- Response effectiveness
+
+
+Identify:
+
+- Reputation improvement areas
+- Customer experience issues
+- Positive review opportunities
+
+
+For each review analysis provide:
+
+{
+  "review_platform": "",
+  "review_pattern": "",
+  "sentiment": "",
+  "customer_issue": "",
+  "recommended_improvement": ""
+}
+
+## 5. Brand Sentiment Analysis Engine
+
+Analyze public sentiment around the brand.
+
+Evaluate:
+
+- Positive mentions
+- Negative mentions
+- Neutral mentions
+- Customer emotions
+- Common themes
+- Reputation trends
+
+
+Identify:
+
+- Sentiment patterns
+- Reputation drivers
+- Negative perception causes
+- Positive brand opportunities
+
+
+For each sentiment analysis provide:
+
+{
+  "sentiment_category": "",
+  "mention_volume": "",
+  "main_theme": "",
+  "customer_perception": "",
+  "recommended_action": ""
+}
+
+
+## 6. Trust Signal Optimization Engine
+
+Analyze SEO trust signals.
+
+Evaluate:
+
+- Customer reviews
+- Testimonials
+- Expert mentions
+- Business information accuracy
+- Awards and certifications
+- Brand authority
+- Social proof
+
+
+Identify:
+
+- Missing trust signals
+- Credibility gaps
+- Authority improvements
+
+
+For each trust signal recommendation provide:
+
+{
+  "trust_element": "",
+  "current_status": "",
+  "missing_signal": "",
+  "optimization_strategy": "",
+  "seo_benefit": ""
+}
+
+
+## 7. Reputation Recovery Strategy Engine
+
+Create reputation recovery plans.
+
+Analyze:
+
+- Negative reviews
+- Bad search results
+- Customer complaints
+- Brand reputation risks
+- Competitor attacks
+
+
+Develop:
+
+### Immediate Response Strategy
+
+Focus on:
+
+- Issue acknowledgment
+- Customer communication
+- Damage control
+
+
+### Long-Term Recovery Strategy
+
+Focus on:
+
+- Positive content creation
+- Review improvement
+- Brand authority building
+- Search result improvement
+
+
+For each recovery strategy provide:
+
+{
+  "reputation_issue": "",
+  "severity_level": "",
+  "recovery_action": "",
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 8. Review Generation & Management Strategy
+
+Create review growth framework.
+
+Optimize:
+
+- Review request process
+- Customer feedback collection
+- Response templates
+- Review response timing
+- Customer relationship management
+
+
+Generate strategies for:
+
+- Increasing positive reviews
+- Handling negative reviews
+- Improving customer satisfaction
+
+
+For each review strategy provide:
+
+{
+  "strategy_type": "",
+  "target_platform": "",
+  "implementation_steps": [],
+  "expected_impact": ""
+}
+
+
+## 9. Competitor Reputation Analysis Engine
+
+Analyze competitor reputation.
+
+Evaluate:
+
+- Review strength
+- Brand sentiment
+- Customer perception
+- Online visibility
+- Trust signals
+- Reputation advantages
+
+
+Identify:
+
+- Competitor reputation strengths
+- Market gaps
+- Reputation opportunities
+
+
+For each competitor analysis provide:
+
+{
+  "competitor": "",
+  "reputation_strength": "",
+  "customer_sentiment": "",
+  "market_gap": "",
+  "recommended_strategy": ""
+}
+
+## 10. Reputation Performance Scoring
+
+Generate reputation intelligence scores.
+
+Evaluate:
+
+- Brand trust score (0-100)
+- Sentiment score (0-100)
+- Review quality score (0-100)
+- Online visibility score (0-100)
+- Customer satisfaction score (0-100)
+- Reputation risk score (0-100)
+- Trust signal strength score (0-100)
+
+
+Calculate:
+
+- Overall Reputation Intelligence Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "reputation_health_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "improvement_opportunities": []
+}
+
+
+## 11. Reputation Monitoring Automation Strategy
+
+Design automated reputation management workflows.
+
+Automate:
+
+- Brand mention monitoring
+- Review tracking
+- Sentiment analysis
+- Negative mention detection
+- Competitor reputation tracking
+- Response recommendations
+- Reputation reporting
+
+
+For each automation provide:
+
+{
+  "automation_name": "",
+  "trigger": "",
+  "ai_process": [],
+  "output": "",
+  "business_value": ""
+}
+
+
+## 12. Reputation Improvement Roadmap
+
+Create reputation growth roadmap.
+
+Include:
+
+### Phase 1: Reputation Audit Foundation
+
+Focus on:
+
+- Brand monitoring setup
+- Review analysis
+- Sentiment measurement
+- Reputation risk identification
+
+
+### Phase 2: Trust Building
+
+Focus on:
+
+- Review generation
+- Customer testimonials
+- Social proof
+- Authority signals
+
+
+### Phase 3: Reputation Growth
+
+Focus on:
+
+- Positive content creation
+- Brand mentions
+- Digital PR
+- Industry recognition
+
+
+### Phase 4: AI Reputation Intelligence
+
+Focus on:
+
+- Predictive sentiment analysis
+- Automated reputation protection
+- AI response recommendations
+- Autonomous reputation optimization
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 13. Reputation Monitoring Framework
+
+Track:
+
+- Brand mentions
+- Review ratings
+- Review volume
+- Sentiment changes
+- Search result reputation
+- Customer complaints
+- Competitor reputation changes
+
+
+Recommend:
+
+- Monitoring frequency
+- Alert conditions
+- Response workflow
+- Optimization cycle
+
+
+Create:
+
+{
+  "metric": "",
+  "tracking_method": "",
+  "frequency": "",
+  "optimization_action": ""
+}
+
+
+## 14. Future Reputation Intelligence Strategy
+
+Identify advanced opportunities.
+
+Include:
+
+- AI sentiment prediction
+- Automated customer response systems
+- Reputation risk forecasting
+- Brand perception modeling
+- AI-powered review management
+- Autonomous trust optimization
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "reputation_analysis": {},
+
+  "online_audit": [],
+
+  "brand_mentions": [],
+
+  "review_analysis": [],
+
+  "sentiment_analysis": [],
+
+  "trust_strategy": [],
+
+  "recovery_strategy": [],
+
+  "review_management": [],
+
+  "competitor_analysis": [],
+
+  "performance_scores": {},
+
+  "automation_strategy": [],
+
+  "implementation_roadmap": [],
+
+  "monitoring_framework": {},
+
+  "future_strategy": []
+}

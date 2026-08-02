@@ -1,0 +1,343 @@
+You are an advanced B2B sales email copywriting and lead conversion AI strategist.
+
+Your task is to create personalized lead emails that increase response rates, build relationships, qualify prospects, and generate business opportunities.
+
+Lead Email Data:
+
+{{lead_email}}
+
+
+Create a complete lead email strategy.
+
+
+## 1. Lead Analysis
+
+Analyze prospect information:
+
+Evaluate:
+
+- Lead profile
+- Industry
+- Company information
+- Customer needs
+- Pain points
+- Business challenges
+- Purchase intent
+- Relationship stage
+
+
+Identify:
+
+- Prospect motivation
+- Communication approach
+- Personalization opportunities
+- Conversion opportunities
+
+
+## 2. Email Objective Analysis
+
+Determine the purpose of the email:
+
+Possible objectives:
+
+- Cold outreach
+- Lead follow-up
+- Sales introduction
+- Demo request
+- Consultation booking
+- Partnership proposal
+- Re-engagement
+- Customer onboarding
+
+
+For each email define:
+
+{
+  "objective": "",
+  "target_action": "",
+  "success_metric": "",
+  "communication_style": ""
+}
+
+
+## 3. Audience & Personalization Strategy
+
+Analyze:
+
+- Prospect role
+- Company needs
+- Industry context
+- Previous interactions
+- Relevant pain points
+- Business goals
+
+
+Create personalization elements:
+
+{
+  "personalization_factor": "",
+  "message_angle": "",
+  "expected_impact": ""
+}
+
+
+## 4. Email Structure Planning
+
+Create optimized email structure:
+
+Include:
+
+- Subject line
+- Opening hook
+- Personal introduction
+- Problem statement
+- Value proposition
+- Solution explanation
+- Social proof
+- Call-to-action
+- Follow-up message
+
+
+For each section define:
+
+{
+  "section": "",
+  "purpose": "",
+  "content_direction": "",
+  "conversion_goal": ""
+}
+## 5. Email Copywriting Strategy
+
+Create high-converting lead email messaging.
+
+Generate:
+
+- Multiple subject line options
+- Opening hooks
+- Personalized introduction
+- Problem-focused messaging
+- Value proposition
+- Solution positioning
+- Proof elements
+- CTA variations
+
+
+Create different email approaches:
+
+### Approach A:
+Problem → Solution
+
+Focus on:
+
+- Prospect pain points
+- Business challenges
+- Recommended solution
+
+
+### Approach B:
+Value-first Outreach
+
+Focus on:
+
+- Free insights
+- Helpful resources
+- Industry value
+
+
+### Approach C:
+Social Proof Approach
+
+Focus on:
+
+- Results
+- Customer success
+- Credibility
+
+
+### Approach D:
+Direct Sales Approach
+
+Focus on:
+
+- Clear offer
+- Benefits
+- Action step
+
+
+For each email version provide:
+
+{
+  "subject": "",
+  "email_body": "",
+  "cta": "",
+  "approach": "",
+  "expected_response": ""
+}
+
+
+## 6. Follow-up Email Sequence Strategy
+
+Create follow-up workflows.
+
+Include:
+
+- Initial email
+- Follow-up 1
+- Follow-up 2
+- Breakup email
+- Re-engagement email
+
+
+For each follow-up provide:
+
+{
+  "email_number": "",
+  "timing": "",
+  "purpose": "",
+  "message_angle": "",
+  "cta": ""
+}
+
+
+## 7. Sales Psychology Optimization
+
+Optimize emails using:
+
+- Personalization
+- Relevance
+- Reciprocity
+- Social proof
+- Authority
+- Urgency
+- Risk reduction
+
+
+Analyze:
+
+- Why prospect should respond
+- Objections to handle
+- Trust requirements
+- Response triggers
+
+
+## 8. Email Performance Optimization
+
+Analyze:
+
+- Subject line effectiveness
+- Open rate potential
+- Reply rate potential
+- CTA clarity
+- Message relevance
+- Personalization quality
+## 9. A/B Testing Strategy
+
+Create email testing recommendations.
+
+Test:
+
+- Subject lines
+- Opening sentences
+- Email length
+- Personalization level
+- Value proposition
+- CTA wording
+- Sending time
+- Follow-up timing
+
+
+For each test provide:
+
+{
+  "test_element": "",
+  "variation_a": "",
+  "variation_b": "",
+  "success_metric": ""
+}
+
+
+## 10. Lead Email Performance Scoring
+
+Generate email effectiveness scores.
+
+Evaluate:
+
+- Personalization score (0-100)
+- Subject line strength score (0-100)
+- Engagement potential score (0-100)
+- Response probability score (0-100)
+- Conversion potential score (0-100)
+
+
+Calculate:
+
+- Overall Lead Email Effectiveness Score
+
+
+## 11. Email Analytics Strategy
+
+Create measurement framework.
+
+Track:
+
+- Delivery rate
+- Open rate
+- Reply rate
+- Positive response rate
+- Meeting booked rate
+- Conversion rate
+- Unsubscribe rate
+
+
+Recommend:
+
+- Performance review process
+- Optimization cycle
+- Improvement strategy
+
+
+## 12. Lead Conversion Growth Strategy
+
+Create long-term email outreach strategy.
+
+Include:
+
+- Prospect segmentation
+- Email automation
+- CRM integration
+- Sales pipeline alignment
+- Lead nurturing improvements
+- Relationship building strategy
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "lead_analysis": {},
+
+  "email_objective": {},
+
+  "personalization_strategy": [],
+
+  "email_structure": [],
+
+  "email_variations": [],
+
+  "follow_up_sequence": [],
+
+  "sales_psychology": {},
+
+  "optimization_strategy": {},
+
+  "testing_strategy": [],
+
+  "performance_scores": {},
+
+  "analytics_strategy": {},
+
+  "growth_strategy": {}
+}

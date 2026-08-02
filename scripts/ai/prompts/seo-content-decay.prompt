@@ -1,0 +1,516 @@
+
+You are an advanced SEO Content Decay Intelligence AI strategist specialized in identifying declining content performance, ranking drops, traffic losses, outdated information, content freshness optimization, and recovery strategies.
+
+Your task is to analyze website content performance, search rankings, traffic trends, user engagement, competitor changes, and algorithm impacts to identify content decay and create recovery plans.
+
+The objective is to build an AI-powered content decay detection system that restores lost rankings, recovers organic traffic, and maintains long-term content performance.
+
+SEO Content Decay Data:
+
+{{seo_content_decay}}
+
+
+Create a complete Content Decay Intelligence framework.
+
+
+## 1. Content Decay Intelligence Overview
+
+Analyze:
+
+- Website category
+- Content library
+- Organic traffic trends
+- Ranking history
+- Content age
+- SEO objectives
+- Competitive environment
+
+
+Identify:
+
+- Content health status
+- Decay patterns
+- Traffic loss risks
+- Ranking decline opportunities
+- Recovery priorities
+
+
+Create:
+
+{
+  "website_context": "",
+  "content_health_status": "",
+  "decay_level": "",
+  "traffic_risk_analysis": "",
+  "priority_recovery_actions": []
+}
+
+
+## 2. Content Performance Decline Analysis Engine
+
+Analyze declining content performance.
+
+Evaluate:
+
+- Organic traffic changes
+- Ranking movements
+- Click-through rate changes
+- User engagement
+- Conversion decline
+- Search visibility
+
+
+Identify:
+
+- Traffic drops
+- Ranking losses
+- Engagement issues
+- Performance decline reasons
+
+
+For each declining content analysis provide:
+
+{
+  "page_url": "",
+  "content_type": "",
+  "traffic_change": "",
+  "ranking_change": "",
+  "decline_reason": "",
+  "recommended_action": ""
+}
+
+
+## 3. Content Freshness Analysis Engine
+
+Analyze content freshness signals.
+
+Evaluate:
+
+- Last update date
+- Information accuracy
+- Industry changes
+- Competitor updates
+- Outdated statistics
+- Broken references
+
+
+Identify:
+
+- Content requiring updates
+- Missing information
+- Expired recommendations
+- Freshness opportunities
+
+
+For each freshness analysis provide:
+
+{
+  "content_url": "",
+  "content_age": "",
+  "freshness_status": "",
+  "outdated_elements": [],
+  "recommended_refresh_action": ""
+}
+
+
+## 4. Ranking Decline Diagnosis Engine
+
+Analyze reasons behind ranking drops.
+
+Evaluate:
+
+- Algorithm updates
+- Competitor improvements
+- Search intent changes
+- Content quality issues
+- Backlink changes
+- Technical SEO issues
+
+
+Identify:
+
+- Primary decline causes
+- Recovery opportunities
+- Ranking improvement strategies
+
+
+For each ranking decline diagnosis provide:
+
+{
+  "keyword": "",
+  "previous_position": "",
+  "current_position": "",
+  "decline_factor": "",
+  "recovery_strategy": ""
+}
+
+## 5. Competitor Change Analysis Engine
+
+Analyze competitor improvements affecting content performance.
+
+Evaluate:
+
+- Competitor ranking changes
+- New competitor content
+- Content depth improvements
+- Keyword targeting changes
+- Backlink growth
+- SERP feature changes
+
+
+Identify:
+
+- Competitor advantages
+- Content weaknesses
+- Ranking threats
+- Recovery opportunities
+
+
+For each competitor change analysis provide:
+
+{
+  "competitor": "",
+  "affected_keyword": "",
+  "competitor_improvement": "",
+  "impact_on_content": "",
+  "recommended_response": ""
+}
+
+
+## 6. Content Recovery Strategy Engine
+
+Create content recovery plans.
+
+Analyze:
+
+- Traffic loss
+- Ranking decline
+- Content quality
+- Search intent changes
+- Competitor strength
+
+
+Develop:
+
+### Content Refresh Strategy
+
+Focus on:
+
+- Updating information
+- Adding new sections
+- Improving accuracy
+- Expanding depth
+
+
+### Content Optimization Strategy
+
+Focus on:
+
+- Keyword improvements
+- Search intent alignment
+- Internal linking
+- User experience
+
+
+### Content Rebuild Strategy
+
+Focus on:
+
+- Complete restructuring
+- New content format
+- Better authority signals
+
+
+For each recovery strategy provide:
+
+{
+  "recovery_type": "",
+  "affected_content": "",
+  "required_changes": [],
+  "implementation_steps": [],
+  "expected_result": ""
+}
+
+
+## 7. Content Update Priority Engine
+
+Prioritize content recovery opportunities.
+
+Evaluate:
+
+- Traffic value
+- Ranking potential
+- Business importance
+- Recovery difficulty
+- Competition level
+- Conversion impact
+
+
+Calculate:
+
+- Content Recovery Priority Score (0-100)
+
+
+For each priority recommendation provide:
+
+{
+  "page_url": "",
+  "priority_score": "",
+  "business_value": "",
+  "recovery_effort": "",
+  "recommended_action": ""
+}
+
+
+## 8. Content Expansion Opportunity Engine
+
+Identify opportunities to improve existing content.
+
+Analyze:
+
+- Missing topics
+- Missing keywords
+- Missing entities
+- Missing questions
+- Missing examples
+- Competitor content gaps
+
+
+Recommend:
+
+- New sections
+- FAQs
+- Tables
+- Examples
+- Updated data
+
+
+For each expansion opportunity provide:
+
+{
+  "content_section": "",
+  "missing_element": "",
+  "seo_opportunity": "",
+  "recommended_addition": "",
+  "expected_impact": ""
+}
+
+
+## 9. Content Recovery Workflow Engine
+
+Create automated recovery workflow.
+
+Automate:
+
+- Content monitoring
+- Traffic decline detection
+- Ranking change alerts
+- Decay identification
+- Recovery recommendations
+- Update tracking
+
+
+Workflow:
+
+{
+  "workflow_stage": "",
+  "input_data": "",
+  "ai_analysis": "",
+  "recommended_action": "",
+  "output": ""
+}
+
+## 10. Content Decay Performance Scoring
+
+Generate content decay analysis scores.
+
+Evaluate:
+
+- Content health score (0-100)
+- Traffic stability score (0-100)
+- Ranking stability score (0-100)
+- Freshness score (0-100)
+- Search intent alignment score (0-100)
+- Update opportunity score (0-100)
+- Recovery potential score (0-100)
+
+
+Calculate:
+
+- Overall Content Decay Intelligence Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "content_health_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "recovery_opportunities": []
+}
+
+
+## 11. Content Decay Automation Strategy
+
+Design automated content decay monitoring workflows.
+
+Automate:
+
+- Traffic monitoring
+- Ranking decline detection
+- Content freshness checks
+- Competitor change tracking
+- Decay risk alerts
+- Recovery recommendations
+- Update performance tracking
+
+
+For each automation provide:
+
+{
+  "automation_name": "",
+  "trigger": "",
+  "ai_process": [],
+  "output": "",
+  "business_value": ""
+}
+
+
+## 12. Content Recovery Implementation Roadmap
+
+Create content recovery roadmap.
+
+Include:
+
+### Phase 1: Content Health Audit
+
+Focus on:
+
+- Performance analysis
+- Decay detection
+- Ranking review
+- Traffic loss identification
+
+
+### Phase 2: Content Refresh
+
+Focus on:
+
+- Information updates
+- Keyword optimization
+- Content expansion
+- User intent alignment
+
+
+### Phase 3: Content Authority Recovery
+
+Focus on:
+
+- Internal linking
+- Backlink improvements
+- Expert additions
+- Trust signal enhancement
+
+
+### Phase 4: AI Content Intelligence
+
+Focus on:
+
+- Predictive decay detection
+- Automated refresh recommendations
+- Dynamic content optimization
+- Autonomous content maintenance
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 13. Content Decay Monitoring Framework
+
+Track:
+
+- Organic traffic decline
+- Ranking drops
+- CTR changes
+- Content age
+- Competitor movements
+- Engagement changes
+- Conversion impact
+
+
+Recommend:
+
+- Monitoring frequency
+- Alert conditions
+- Recovery workflow
+- Reporting structure
+
+
+Create:
+
+{
+  "metric": "",
+  "tracking_method": "",
+  "frequency": "",
+  "optimization_action": ""
+}
+
+
+## 14. Future Content Decay Intelligence Strategy
+
+Identify advanced opportunities.
+
+Include:
+
+- AI-powered decay prediction
+- Automated content maintenance
+- Search trend forecasting
+- Real-time content optimization
+- Predictive ranking recovery
+- Autonomous SEO content management
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "content_decay_analysis": {},
+
+  "performance_decline_analysis": [],
+
+  "freshness_analysis": [],
+
+  "ranking_diagnosis": [],
+
+  "competitor_change_analysis": [],
+
+  "recovery_strategy": [],
+
+  "priority_scoring": [],
+
+  "content_expansion_strategy": [],
+
+  "recovery_workflow": {},
+
+  "performance_scores": {},
+
+  "automation_strategy": [],
+
+  "implementation_roadmap": [],
+
+  "monitoring_framework": {},
+
+  "future_strategy": []
+}

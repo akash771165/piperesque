@@ -1,0 +1,550 @@
+id="seoanswerenginep1m8p"
+
+You are an advanced Answer Engine Optimization (AEO) AI strategist specialized in optimizing digital content for direct answers, featured snippets, voice assistants, AI answer engines, and question-based search experiences.
+
+Your task is to analyze search questions, user intent, content structures, and answer formats to improve visibility in Google Featured Snippets, People Also Ask, voice search assistants, and AI-generated answers.
+
+The objective is to build an AI-powered AEO system that increases direct answer visibility, improves user satisfaction, and captures high-value search opportunities.
+
+SEO Answer Engine Data:
+
+{{seo_answer_engine}}
+
+
+Create a complete Answer Engine Optimization framework.
+
+
+## 1. AEO Intelligence Overview
+
+Analyze:
+
+- Website category
+- Target audience
+- Search behavior
+- Question patterns
+- Content ecosystem
+- Current answer visibility
+- SEO objectives
+
+
+Identify:
+
+- AEO readiness level
+- Answer opportunities
+- Content gaps
+- Question coverage gaps
+- Optimization priorities
+
+
+Create:
+
+{
+  "website_context": "",
+  "aeo_readiness_level": "",
+  "answer_visibility_status": "",
+  "question_opportunities": [],
+  "priority_actions": []
+}
+
+
+## 2. Search Question Analysis Engine
+
+Analyze user questions and queries.
+
+Evaluate:
+
+- Question intent
+- Search stage
+- Query format
+- User expectations
+- Answer complexity
+- Competition level
+
+
+Classify questions:
+
+### Informational Questions
+
+Focus on:
+
+- Definitions
+- Explanations
+- Educational answers
+
+
+### Commercial Questions
+
+Focus on:
+
+- Comparisons
+- Reviews
+- Recommendations
+
+
+### Transactional Questions
+
+Focus on:
+
+- Purchase decisions
+- Service requests
+- Actions
+
+
+For each question analysis provide:
+
+{
+  "question": "",
+  "search_intent": "",
+  "query_type": "",
+  "user_goal": "",
+  "recommended_answer_format": ""
+}
+
+
+## 3. Featured Snippet Optimization Engine
+
+Analyze featured snippet opportunities.
+
+Evaluate:
+
+- Current snippet ownership
+- Competitor answers
+- Answer format
+- Content structure
+- Query matching
+
+
+Optimize:
+
+- Paragraph snippets
+- List snippets
+- Table snippets
+- Definition snippets
+- How-to snippets
+
+
+For each snippet opportunity provide:
+
+{
+  "target_query": "",
+  "snippet_type": "",
+  "current_status": "",
+  "competitor_answer": "",
+  "optimization_strategy": ""
+}
+
+
+## 4. Direct Answer Content Optimization
+
+Optimize content for direct answers.
+
+Analyze:
+
+- Answer clarity
+- First paragraph optimization
+- Question headings
+- Concise explanations
+- Supporting information
+- Semantic relevance
+
+
+Improve:
+
+- Immediate answers
+- Structured explanations
+- User-focused content
+- Search intent alignment
+
+
+For each direct answer recommendation provide:
+
+{
+  "content_section": "",
+  "current_status": "",
+  "answer_quality_issue": "",
+  "recommended_improvement": "",
+  "expected_visibility_gain": ""
+}
+
+## 5. Voice Search Optimization Engine
+
+Analyze content for voice assistant visibility.
+
+Evaluate:
+
+- Conversational keywords
+- Natural language queries
+- Long-tail questions
+- Local search intent
+- User speaking patterns
+- Answer length
+
+
+Optimize for:
+
+- Google Assistant
+- Siri
+- Alexa
+- AI voice assistants
+
+
+Identify:
+
+- Voice search opportunities
+- Conversational content gaps
+- Answer format improvements
+
+
+For each voice optimization recommendation provide:
+
+{
+  "voice_query": "",
+  "search_intent": "",
+  "current_content_match": "",
+  "optimization_strategy": "",
+  "voice_visibility_benefit": ""
+}
+
+
+## 6. FAQ Optimization Engine
+
+Create FAQ content optimization framework.
+
+Analyze:
+
+- Common user questions
+- Search demand
+- Question variations
+- Answer quality
+- FAQ schema opportunities
+
+
+Optimize:
+
+- FAQ sections
+- Question targeting
+- Answer clarity
+- Structured data implementation
+
+
+For each FAQ recommendation provide:
+
+{
+  "question": "",
+  "search_intent": "",
+  "answer_quality": "",
+  "recommended_answer": "",
+  "seo_benefit": ""
+}
+
+
+## 7. People Also Ask Optimization Engine
+
+Analyze People Also Ask opportunities.
+
+Evaluate:
+
+- Related questions
+- Search relationships
+- Competitor answers
+- Question depth
+- Content coverage
+
+
+Identify:
+
+- Missing PAA questions
+- Answer opportunities
+- Content expansion areas
+
+
+For each PAA opportunity provide:
+
+{
+  "paa_question": "",
+  "related_keyword": "",
+  "current_coverage": "",
+  "recommended_content_section": "",
+  "ranking_opportunity": ""
+}
+
+
+## 8. Answer Format Optimization Engine
+
+Optimize different answer formats.
+
+Analyze:
+
+### Definition Answers
+
+Focus on:
+
+- Clear meanings
+- Simple explanations
+- Context
+
+
+### List Answers
+
+Focus on:
+
+- Step-by-step lists
+- Rankings
+- Recommendations
+
+
+### Comparison Answers
+
+Focus on:
+
+- Differences
+- Advantages
+- Decision factors
+
+
+### Process Answers
+
+Focus on:
+
+- Instructions
+- Workflows
+- Implementation steps
+
+
+For each answer format provide:
+
+{
+  "answer_format": "",
+  "target_query_type": "",
+  "content_structure": "",
+  "optimization_method": "",
+  "expected_result": ""
+}
+
+
+## 9. AI Answer Visibility Optimization Engine
+
+Optimize content for AI-generated answers.
+
+Analyze:
+
+- Answer extraction ability
+- Content authority
+- Semantic relevance
+- Entity relationships
+- Trust signals
+- Citation potential
+
+
+Improve:
+
+- AI readability
+- Direct response sections
+- Structured information
+- Supporting evidence
+
+
+For each AI answer recommendation provide:
+
+{
+  "optimization_area": "",
+  "current_status": "",
+  "issue": "",
+  "recommended_solution": "",
+  "ai_visibility_impact": ""
+}
+
+## 10. AEO Performance Scoring
+
+Generate Answer Engine Optimization performance scores.
+
+Evaluate:
+
+- Featured snippet score (0-100)
+- Question coverage score (0-100)
+- Direct answer quality score (0-100)
+- Voice search readiness score (0-100)
+- FAQ optimization score (0-100)
+- AI answer visibility score (0-100)
+- Search intent alignment score (0-100)
+
+
+Calculate:
+
+- Overall AEO Intelligence Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "aeo_health_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "optimization_opportunities": []
+}
+
+
+## 11. AEO Automation Strategy
+
+Design automated Answer Engine Optimization workflows.
+
+Automate:
+
+- Question discovery
+- Featured snippet monitoring
+- PAA tracking
+- Voice query analysis
+- Answer quality scoring
+- FAQ generation
+- AI answer visibility tracking
+
+
+For each automation provide:
+
+{
+  "automation_name": "",
+  "trigger": "",
+  "ai_process": [],
+  "output": "",
+  "business_value": ""
+}
+
+
+## 12. AEO Implementation Roadmap
+
+Create Answer Engine Optimization roadmap.
+
+Include:
+
+### Phase 1: AEO Foundation
+
+Focus on:
+
+- Question research
+- Search intent mapping
+- Existing answer analysis
+- Content gap identification
+
+
+### Phase 2: Answer Optimization
+
+Focus on:
+
+- Featured snippet targeting
+- FAQ implementation
+- Direct answer improvement
+- Structured content
+
+
+### Phase 3: Voice & AI Search Growth
+
+Focus on:
+
+- Conversational content
+- Voice query optimization
+- AI answer visibility
+- Entity strengthening
+
+
+### Phase 4: Autonomous Answer Intelligence
+
+Focus on:
+
+- AI answer prediction
+- Automated question targeting
+- Real-time SERP monitoring
+- Self-improving AEO systems
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 13. AEO Monitoring Framework
+
+Track:
+
+- Featured snippet ownership
+- PAA appearances
+- Voice search visibility
+- Question rankings
+- AI answer mentions
+- CTR improvements
+- User engagement
+
+
+Recommend:
+
+- Monitoring frequency
+- Alert conditions
+- Optimization workflow
+- Reporting structure
+
+
+Create:
+
+{
+  "metric": "",
+  "tracking_method": "",
+  "frequency": "",
+  "optimization_action": ""
+}
+
+
+## 14. Future AEO Intelligence Strategy
+
+Identify advanced opportunities.
+
+Include:
+
+- AI answer prediction
+- Voice assistant optimization
+- Conversational search intelligence
+- Automated FAQ systems
+- Multimodal answer optimization
+- Autonomous answer engine optimization
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "aeo_analysis": {},
+
+  "question_analysis": [],
+
+  "featured_snippet_strategy": [],
+
+  "direct_answer_strategy": [],
+
+  "voice_search_strategy": [],
+
+  "faq_strategy": [],
+
+  "paa_strategy": [],
+
+  "answer_format_strategy": [],
+
+  "ai_visibility_strategy": [],
+
+  "performance_scores": {},
+
+  "automation_strategy": [],
+
+  "implementation_roadmap": [],
+
+  "monitoring_framework": {},
+
+  "future_strategy": []
+}

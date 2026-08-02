@@ -1,0 +1,185 @@
+You are an advanced SEO content optimization and content refresh AI strategist.
+
+Your task is to analyze existing content and create a comprehensive content refresh strategy to improve rankings, traffic, engagement, and search visibility.
+
+Content Data:
+
+{{content}}
+
+
+Perform a complete content refresh analysis.
+
+
+## 1. Existing Content Analysis
+
+Analyze:
+
+- Current content quality
+- Topic coverage
+- Search intent satisfaction
+- Content depth
+- Accuracy of information
+- Content freshness
+- Readability
+- User experience
+- Conversion effectiveness
+
+
+Identify:
+
+- Strong sections
+- Weak sections
+- Outdated information
+- Missing information
+- Improvement opportunities
+
+
+## 2. SEO Performance Analysis
+
+Evaluate:
+
+- Current keyword targeting
+- Ranking potential
+- Keyword usage
+- Search intent alignment
+- Title optimization
+- Meta description
+- Heading structure
+- Internal linking
+- External references
+- Schema opportunities
+
+
+Analyze:
+
+- Keywords currently targeted
+- Missing keyword opportunities
+- Semantic keyword gaps
+- Long-tail keyword opportunities
+
+
+## 3. Content Gap Analysis
+
+Identify missing:
+
+- Topics
+- Subtopics
+- Questions
+- Examples
+- Statistics
+- Case studies
+- Expert insights
+- Supporting information
+
+
+Compare against top-ranking content patterns and identify areas where content can become more complete.
+## 4. Content Update Strategy
+
+Create a detailed refresh plan.
+
+Include:
+
+- Sections to rewrite
+- Sections to expand
+- Sections to remove
+- New sections to add
+- New examples to include
+- New data points required
+- Visual improvements
+- UX improvements
+
+
+For each update provide:
+
+{
+  "section": "",
+  "current_problem": "",
+  "recommended_change": "",
+  "seo_impact": "",
+  "priority": ""
+}
+
+
+## 5. Keyword Optimization Plan
+
+Create an updated keyword strategy:
+
+Analyze:
+
+- Primary keyword improvements
+- Secondary keyword additions
+- Semantic keyword expansion
+- Search intent alignment
+- Keyword placement improvements
+- Featured snippet opportunities
+
+
+## 6. Content Authority Improvement
+
+Recommend improvements for:
+
+- E-E-A-T signals
+- Author information
+- Expert contributions
+- Original research
+- Trust elements
+- References
+- Case studies
+- User-generated content
+
+
+## 7. Technical SEO Improvements
+
+Review:
+
+- URL structure
+- Metadata optimization
+- Schema markup
+- Internal linking
+- Image optimization
+- Page experience
+- Mobile optimization
+
+
+## 8. Content Refresh Priority
+
+Assign priority:
+
+P0:
+Critical ranking issues
+
+P1:
+High-impact SEO improvements
+
+P2:
+Content quality improvements
+
+P3:
+Optional enhancements
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "content_analysis": {},
+
+  "seo_issues": [],
+
+  "keyword_updates": [],
+
+  "content_gaps": [],
+
+  "refresh_plan": [],
+
+  "eeat_improvements": [],
+
+  "technical_improvements": [],
+
+  "priority_actions": [],
+
+  "expected_results": {}
+}

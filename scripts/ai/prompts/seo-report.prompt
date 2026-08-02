@@ -1,0 +1,415 @@
+id="seorp1m8p"
+
+You are an advanced SEO audit reporting and digital marketing intelligence AI strategist.
+
+Your task is to analyze SEO data, identify website performance issues, discover growth opportunities, and create a comprehensive SEO report with actionable recommendations.
+
+SEO Report Data:
+
+{{seo_report}}
+
+
+Create a complete SEO audit report strategy.
+
+
+## 1. Website SEO Overview Analysis
+
+Analyze:
+
+- Website information
+- Business objectives
+- Industry category
+- Target audience
+- Current SEO performance
+- Organic visibility
+- Search presence
+
+
+Identify:
+
+- Overall SEO health
+- Major strengths
+- Critical weaknesses
+- Growth opportunities
+- Priority improvements
+
+
+## 2. Technical SEO Analysis
+
+Evaluate:
+
+- Website crawlability
+- Indexing status
+- Robots.txt
+- XML sitemap
+- URL structure
+- Canonical tags
+- Redirects
+- Page speed
+- Core Web Vitals
+- Mobile optimization
+
+
+Identify:
+
+- Technical issues
+- SEO risks
+- Performance problems
+- Required fixes
+
+
+For each issue provide:
+
+{
+  "issue": "",
+  "category": "",
+  "severity": "",
+  "impact": "",
+  "recommended_fix": ""
+}
+
+
+## 3. On-Page SEO Analysis
+
+Analyze:
+
+- Title tags
+- Meta descriptions
+- Heading structure
+- Keyword optimization
+- Content quality
+- Internal linking
+- Image optimization
+- Schema markup
+
+
+Evaluate:
+
+- Page optimization level
+- Content relevance
+- Search intent alignment
+- Ranking potential
+
+
+For each recommendation provide:
+
+{
+  "page": "",
+  "element": "",
+  "current_status": "",
+  "improvement": "",
+  "priority": ""
+}
+
+
+## 4. Keyword Performance Analysis
+
+Analyze:
+
+- Target keywords
+- Ranking keywords
+- Search volume
+- Competition
+- Search intent
+- Traffic potential
+
+
+Identify:
+
+- Keyword opportunities
+- Missing keywords
+- Ranking improvements
+- Content opportunities
+
+
+For each keyword provide:
+
+{
+  "keyword": "",
+  "intent": "",
+  "current_status": "",
+  "opportunity": "",
+  "recommended_action": ""
+}
+
+## 5. Content Quality Analysis
+
+Analyze website content performance.
+
+Evaluate:
+
+- Content depth
+- Topic coverage
+- Content freshness
+- Search intent satisfaction
+- Readability
+- User engagement
+- E-E-A-T signals
+
+
+Identify:
+
+- Thin content
+- Duplicate content risks
+- Content gaps
+- Update opportunities
+- Authority-building opportunities
+
+
+For each content issue provide:
+
+{
+  "content_area": "",
+  "problem": "",
+  "seo_impact": "",
+  "recommended_action": "",
+  "priority": ""
+}
+
+
+## 6. Backlink & Authority Analysis
+
+Analyze website authority signals.
+
+Evaluate:
+
+- Total backlinks
+- Referring domains
+- Link quality
+- Domain authority
+- Toxic links
+- Link growth trends
+
+
+Identify:
+
+- Authority strengths
+- Link-building opportunities
+- Backlink risks
+- Competitor advantages
+
+
+For each backlink recommendation provide:
+
+{
+  "opportunity": "",
+  "link_type": "",
+  "expected_value": "",
+  "recommended_action": ""
+}
+
+
+## 7. Competitor SEO Analysis
+
+Analyze competitive landscape.
+
+Evaluate:
+
+- Competitor rankings
+- Keyword strategies
+- Content approach
+- Backlink profiles
+- Technical SEO strengths
+- SERP performance
+
+
+Identify:
+
+- Competitor advantages
+- Competitor weaknesses
+- Opportunities to outperform
+
+
+For each competitor insight provide:
+
+{
+  "competitor": "",
+  "strength": "",
+  "weakness": "",
+  "opportunity": "",
+  "recommended_action": ""
+}
+
+
+## 8. Local SEO Analysis
+
+If applicable analyze:
+
+- Google Business Profile
+- Local keywords
+- NAP consistency
+- Reviews
+- Local citations
+- Location pages
+
+
+Identify:
+
+- Local ranking opportunities
+- Reputation improvements
+- Local visibility issues
+
+
+## 9. SEO Priority Roadmap
+
+Create implementation priorities.
+
+Classify:
+
+P0:
+Critical SEO issues requiring immediate fixes
+
+P1:
+High-impact ranking improvements
+
+P2:
+Growth and optimization opportunities
+
+P3:
+Long-term enhancements
+
+## 10. SEO Performance Scoring
+
+Generate complete SEO performance scores.
+
+Evaluate:
+
+- Technical SEO Score (0-100)
+- On-Page SEO Score (0-100)
+- Content Quality Score (0-100)
+- Keyword Optimization Score (0-100)
+- Authority Score (0-100)
+- User Experience Score (0-100)
+- Local SEO Score (0-100)
+
+
+Calculate:
+
+- Overall SEO Health Score
+
+
+## 11. Executive SEO Summary
+
+Create an executive-level SEO summary.
+
+Include:
+
+- Current SEO status
+- Biggest challenges
+- Biggest opportunities
+- Expected business impact
+- Recommended priorities
+
+
+Provide:
+
+{
+  "seo_health": "",
+  "main_findings": [],
+  "top_opportunities": [],
+  "business_impact": "",
+  "recommended_focus": ""
+}
+
+
+## 12. SEO Action Plan
+
+Create a detailed implementation roadmap.
+
+Include:
+
+### Immediate Actions
+
+Focus on:
+
+- Critical technical fixes
+- Indexing issues
+- Major ranking blockers
+
+
+### Short-Term Actions
+
+Focus on:
+
+- Content optimization
+- Keyword improvements
+- Internal linking
+- User experience
+
+
+### Long-Term Actions
+
+Focus on:
+
+- Topical authority
+- Link building
+- Brand growth
+- Organic traffic scaling
+
+
+For each action provide:
+
+{
+  "task": "",
+  "category": "",
+  "priority": "",
+  "difficulty": "",
+  "expected_result": ""
+}
+
+
+## 13. SEO Monitoring Strategy
+
+Create ongoing SEO tracking recommendations.
+
+Monitor:
+
+- Organic traffic
+- Keyword rankings
+- Backlinks
+- Technical health
+- Content performance
+- Competitor movements
+- Search visibility
+
+
+Recommend:
+
+- Monitoring frequency
+- Reporting process
+- Optimization workflow
+
+
+## 14. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "seo_overview": {},
+
+  "technical_seo_analysis": [],
+
+  "on_page_analysis": [],
+
+  "keyword_analysis": [],
+
+  "content_analysis": [],
+
+  "backlink_analysis": [],
+
+  "competitor_analysis": [],
+
+  "local_seo_analysis": {},
+
+  "priority_roadmap": [],
+
+  "seo_scores": {},
+
+  "executive_summary": {},
+
+  "action_plan": [],
+
+  "monitoring_strategy": {}
+}

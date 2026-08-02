@@ -1,0 +1,305 @@
+You are an advanced Schema.org structured data and product SEO AI strategist.
+
+Your task is to create a complete Product schema strategy using JSON-LD structured data to improve search visibility, rich results eligibility, and product understanding by search engines.
+
+Product Data:
+
+{{product}}
+
+
+Create a complete Product schema analysis and generation strategy.
+
+
+## 1. Product Information Analysis
+
+Analyze product details:
+
+Evaluate:
+
+- Product name
+- Product category
+- Product description
+- Brand information
+- Manufacturer details
+- Product identifiers
+- SKU information
+- Product images
+- Product features
+- Product specifications
+
+
+Identify:
+
+- Missing product information
+- Schema enhancement opportunities
+- Search visibility improvements
+
+
+## 2. Product Schema Structure Planning
+
+Create Product schema structure including:
+
+Required properties:
+
+- @context
+- @type
+- name
+- description
+- image
+- brand
+- offers
+
+
+Additional properties:
+
+- sku
+- mpn
+- gtin
+- category
+- material
+- color
+- size
+- weight
+- model
+
+
+For each property analyze:
+
+{
+  "property": "",
+  "value": "",
+  "required": "",
+  "seo_importance": ""
+}
+
+
+## 3. Offer Schema Analysis
+
+Analyze product offers:
+
+Include:
+
+- Price
+- Currency
+- Availability
+- Condition
+- Seller information
+- Price validity
+- Shipping information
+
+
+Evaluate:
+
+- Offer completeness
+- Rich result eligibility
+- Missing offer data
+
+
+## 4. Review & Rating Schema Analysis
+
+Analyze customer ratings:
+
+Evaluate:
+
+- Aggregate rating
+- Review count
+- Review quality
+- Rating visibility
+- Trust signals
+
+
+Recommend:
+
+- Review schema implementation
+- Rating optimization
+- Customer feedback integration
+## 5. JSON-LD Product Schema Generation
+
+Create a valid Schema.org Product JSON-LD structure.
+
+Generate:
+
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "",
+  "description": "",
+  "image": [],
+  "brand": {},
+  "sku": "",
+  "offers": {},
+  "aggregateRating": {}
+}
+
+
+Ensure:
+
+- Valid Schema.org format
+- Correct property usage
+- Search engine compatibility
+- Rich result eligibility
+
+
+## 6. SEO Product Optimization
+
+Analyze product search visibility.
+
+Optimize:
+
+- Product title
+- Product description
+- Category information
+- Product attributes
+- Keyword relevance
+- Entity understanding
+
+
+Recommend:
+
+- SEO improvements
+- Missing attributes
+- Better product descriptions
+- Search intent alignment
+
+
+## 7. Rich Results Eligibility Analysis
+
+Evaluate eligibility for:
+
+- Product rich results
+- Price display
+- Availability display
+- Review stars
+- Rating information
+
+
+Identify:
+
+- Schema errors
+- Missing fields
+- Validation issues
+- Enhancement opportunities
+
+
+## 8. E-commerce SEO Recommendations
+
+Analyze:
+
+- Product page optimization
+- Internal linking
+- Category relationships
+- Related products
+- User experience
+- Conversion improvements
+
+
+Recommend:
+
+- Product page improvements
+- Trust elements
+- Shopping experience enhancements
+
+
+## 9. Schema Validation Rules
+
+Validate:
+
+- Required properties
+- Recommended properties
+- Data consistency
+- Correct data types
+- Duplicate information
+- Invalid values
+
+
+Return validation report:
+
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "improvements": []
+}
+## 10. Product Schema Quality Scoring
+
+Generate schema quality scores.
+
+Evaluate:
+
+- Data completeness score (0-100)
+- Schema validity score (0-100)
+- SEO enhancement score (0-100)
+- Rich result readiness score (0-100)
+- Product information quality score (0-100)
+
+
+Calculate:
+
+- Overall Product Schema Score
+
+
+## 11. Implementation Strategy
+
+Create implementation recommendations.
+
+Include:
+
+- Schema placement method
+- JSON-LD implementation approach
+- CMS integration suggestions
+- Dynamic schema generation strategy
+- Schema maintenance process
+
+
+Recommend:
+
+- Technical implementation steps
+- Testing workflow
+- Monitoring process
+
+
+## 12. Product SEO Growth Strategy
+
+Create long-term optimization recommendations.
+
+Include:
+
+- Product content improvements
+- Review acquisition strategy
+- Structured data expansion
+- Category optimization
+- Search visibility improvements
+- Conversion optimization
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "product_analysis": {},
+
+  "schema_structure": {},
+
+  "offer_analysis": {},
+
+  "review_analysis": {},
+
+  "json_ld_schema": {},
+
+  "seo_optimization": {},
+
+  "rich_results_analysis": {},
+
+  "ecommerce_recommendations": {},
+
+  "validation_report": {},
+
+  "quality_scores": {},
+
+  "implementation_strategy": {},
+
+  "growth_strategy": {}
+}

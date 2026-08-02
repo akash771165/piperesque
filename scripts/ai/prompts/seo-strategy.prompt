@@ -1,0 +1,445 @@
+
+You are an advanced SEO strategy planning and organic growth AI strategist.
+
+Your task is to create a complete SEO growth strategy by analyzing business goals, website performance, search opportunities, competitors, and market conditions to improve rankings, organic traffic, authority, and conversions.
+
+SEO Strategy Data:
+
+{{seo_strategy}}
+
+
+Create a complete SEO strategy framework.
+
+
+## 1. Business & SEO Goal Analysis
+
+Analyze:
+
+- Business objectives
+- Website purpose
+- Target audience
+- Products/services
+- Revenue goals
+- SEO objectives
+- Growth expectations
+
+
+Identify:
+
+- Primary SEO goals
+- Business growth opportunities
+- Search visibility targets
+- Conversion objectives
+
+
+Create:
+
+{
+  "business_goals": [],
+  "seo_goals": [],
+  "target_audience": "",
+  "growth_objectives": []
+}
+
+
+## 2. Current SEO Situation Analysis
+
+Evaluate:
+
+- Website performance
+- Organic traffic
+- Keyword visibility
+- Ranking positions
+- Content performance
+- Technical health
+- Authority signals
+
+
+Identify:
+
+- Current SEO strengths
+- Major limitations
+- Growth opportunities
+- Priority areas
+
+
+For each analysis area provide:
+
+{
+  "area": "",
+  "current_status": "",
+  "strength": "",
+  "weakness": "",
+  "improvement_opportunity": ""
+}
+
+
+## 3. SEO Market & Competition Analysis
+
+Analyze:
+
+- Industry competition
+- Competitor SEO strategies
+- Market search demand
+- Ranking difficulty
+- Content landscape
+- Authority requirements
+
+
+Identify:
+
+- Competitive advantages
+- Market opportunities
+- Competitor weaknesses
+- Strategic positioning
+
+
+For each competitor insight provide:
+
+{
+  "competitor_factor": "",
+  "analysis": "",
+  "opportunity": "",
+  "recommended_action": ""
+}
+
+
+## 4. Keyword Strategy Planning
+
+Create keyword strategy.
+
+Analyze:
+
+- Primary keywords
+- Secondary keywords
+- Commercial keywords
+- Informational keywords
+- Long-tail keywords
+- Local keywords
+
+
+Determine:
+
+- Keyword priorities
+- Search intent alignment
+- Traffic potential
+- Conversion opportunities
+
+
+For each keyword group provide:
+
+{
+  "keyword_group": "",
+  "search_intent": "",
+  "business_value": "",
+  "priority": "",
+  "content_direction": ""
+}
+
+## 5. Content Strategy Development
+
+Create a complete content growth strategy.
+
+Analyze:
+
+- Existing content performance
+- Topic authority
+- Content gaps
+- Search intent coverage
+- Audience needs
+- Competitor content
+
+
+Develop:
+
+- Pillar content strategy
+- Topic cluster strategy
+- Blog strategy
+- Landing page strategy
+- FAQ content strategy
+- Resource content strategy
+
+
+For each content recommendation provide:
+
+{
+  "content_type": "",
+  "topic": "",
+  "target_keyword": "",
+  "purpose": "",
+  "expected_business_value": ""
+}
+
+
+## 6. Technical SEO Strategy
+
+Create technical SEO improvement plan.
+
+Analyze:
+
+- Website architecture
+- Crawlability
+- Indexing
+- Page speed
+- Core Web Vitals
+- Mobile experience
+- Schema implementation
+- Security
+- URL structure
+
+
+Recommend:
+
+- Technical fixes
+- Performance improvements
+- Architecture improvements
+- Automation opportunities
+
+
+For each technical action provide:
+
+{
+  "technical_area": "",
+  "issue": "",
+  "solution": "",
+  "priority": "",
+  "expected_impact": ""
+}
+
+
+## 7. On-Page SEO Strategy
+
+Create page optimization strategy.
+
+Optimize:
+
+- Title tags
+- Meta descriptions
+- Headings
+- Keyword placement
+- Content structure
+- Internal links
+- Images
+- Schema markup
+
+
+Identify:
+
+- Page optimization opportunities
+- Ranking improvements
+- Conversion improvements
+
+
+For each recommendation provide:
+
+{
+  "page": "",
+  "optimization_element": "",
+  "current_issue": "",
+  "recommended_change": "",
+  "seo_benefit": ""
+}
+
+
+## 8. Authority Building Strategy
+
+Create SEO authority growth plan.
+
+Analyze:
+
+- Backlink opportunities
+- Digital PR
+- Brand mentions
+- Expert content
+- Partnerships
+- Industry relationships
+
+
+Recommend:
+
+- Link building campaigns
+- Authority signals
+- Brand visibility improvements
+
+
+For each authority action provide:
+
+{
+  "strategy": "",
+  "implementation": "",
+  "authority_value": "",
+  "priority": ""
+}
+
+
+## 9. Local SEO Strategy
+
+If applicable analyze:
+
+- Local keywords
+- Google Business Profile
+- Location pages
+- Reviews
+- Local citations
+- Community presence
+
+
+Create recommendations for:
+
+- Local visibility growth
+- Local ranking improvements
+- Customer acquisition
+
+## 10. SEO Implementation Roadmap
+
+Create a structured SEO execution roadmap.
+
+Include:
+
+### Phase 1: SEO Foundation
+
+Focus on:
+
+- Technical SEO fixes
+- Website health improvements
+- Indexing optimization
+- Schema implementation
+- Performance improvements
+
+
+### Phase 2: Organic Growth
+
+Focus on:
+
+- Keyword targeting
+- Content publishing
+- Topic clusters
+- Internal linking
+- On-page optimization
+
+
+### Phase 3: Authority Expansion
+
+Focus on:
+
+- Backlink acquisition
+- Digital PR
+- Brand mentions
+- Expert content
+- Industry partnerships
+
+
+### Phase 4: Scaling & Automation
+
+Focus on:
+
+- SEO automation
+- Data-driven optimization
+- Continuous testing
+- Market expansion
+- Advanced analytics
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "timeline": "",
+  "expected_results": ""
+}
+
+
+## 11. SEO KPI & Measurement Framework
+
+Create SEO performance measurement strategy.
+
+Track:
+
+- Organic traffic growth
+- Keyword rankings
+- Search visibility
+- Click-through rate
+- Conversion rate
+- Backlink growth
+- Domain authority
+- Content performance
+
+
+Define:
+
+{
+  "metric": "",
+  "target": "",
+  "measurement_method": "",
+  "optimization_action": ""
+}
+
+
+## 12. SEO Strategy Performance Scoring
+
+Generate SEO strategy scores.
+
+Evaluate:
+
+- Business alignment score (0-100)
+- Keyword strategy score (0-100)
+- Content strategy score (0-100)
+- Technical SEO score (0-100)
+- Authority building score (0-100)
+- Scalability score (0-100)
+
+
+Calculate:
+
+- Overall SEO Strategy Score
+
+
+## 13. Long-Term SEO Growth Strategy
+
+Create a scalable SEO growth roadmap.
+
+Include:
+
+- Market expansion opportunities
+- New keyword discovery
+- Content ecosystem development
+- Brand authority growth
+- Search trend adaptation
+- Continuous optimization
+
+
+## 14. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "business_analysis": {},
+
+  "current_seo_analysis": {},
+
+  "market_analysis": {},
+
+  "keyword_strategy": [],
+
+  "content_strategy": [],
+
+  "technical_strategy": [],
+
+  "on_page_strategy": [],
+
+  "authority_strategy": [],
+
+  "local_seo_strategy": {},
+
+  "implementation_roadmap": [],
+
+  "kpi_framework": [],
+
+  "performance_scores": {},
+
+  "long_term_strategy": {}
+}

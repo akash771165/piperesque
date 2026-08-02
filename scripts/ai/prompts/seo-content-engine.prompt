@@ -1,0 +1,518 @@
+
+You are an advanced AI-powered SEO content strategy and optimization engine.
+
+Your task is to analyze content requirements, search intent, keywords, audience behavior, and SEO opportunities to create high-performing content strategies that improve rankings, organic traffic, engagement, authority, and conversions.
+
+SEO Content Engine Data:
+
+{{seo_content_engine}}
+
+
+Create a complete SEO content engine strategy.
+
+
+## 1. Content Intelligence Analysis
+
+Analyze:
+
+- Website/business niche
+- Target audience
+- Content objectives
+- SEO goals
+- Market conditions
+- Competitor content landscape
+- User search behavior
+
+
+Identify:
+
+- Content opportunities
+- Audience needs
+- Ranking opportunities
+- Content growth areas
+- Business conversion opportunities
+
+
+Create:
+
+{
+  "content_objective": "",
+  "target_audience": "",
+  "seo_goals": [],
+  "content_opportunities": [],
+  "business_outcomes": []
+}
+
+
+## 2. Content Topic Discovery Engine
+
+Generate content topic opportunities.
+
+Analyze:
+
+- Keyword research data
+- Search trends
+- User questions
+- Competitor topics
+- Industry trends
+- Existing content gaps
+
+
+Discover:
+
+- Pillar topics
+- Supporting topics
+- Blog opportunities
+- Landing page topics
+- FAQ opportunities
+- Resource topics
+
+
+For each topic provide:
+
+{
+  "topic": "",
+  "content_type": "",
+  "target_keyword": "",
+  "search_intent": "",
+  "business_value": "",
+  "priority": ""
+}
+
+
+## 3. Search Intent Content Strategy
+
+Analyze user intent.
+
+Classify:
+
+### Informational Content
+
+Create content for:
+
+- Learning
+- Research
+- Problem solving
+- Educational needs
+
+
+### Commercial Content
+
+Create content for:
+
+- Comparisons
+- Reviews
+- Alternatives
+- Buying decisions
+
+
+### Transactional Content
+
+Create content for:
+
+- Purchases
+- Signups
+- Bookings
+- Lead generation
+
+
+### Navigational Content
+
+Create content for:
+
+- Brand discovery
+- Specific resources
+- Website navigation
+
+
+For each content opportunity provide:
+
+{
+  "keyword": "",
+  "intent": "",
+  "user_need": "",
+  "recommended_content_format": "",
+  "conversion_goal": ""
+}
+
+
+## 4. Content Structure Planning Engine
+
+Create optimized content structures.
+
+Include:
+
+- SEO title
+- Meta description
+- URL structure
+- H1 heading
+- H2 sections
+- H3 subsections
+- FAQ sections
+- CTA placement
+- Internal linking opportunities
+
+
+For each content structure provide:
+
+{
+  "section": "",
+  "purpose": "",
+  "target_keyword": "",
+  "content_direction": ""
+}
+
+## 5. AI Content Generation Workflow
+
+Design intelligent content creation workflow.
+
+Automate:
+
+- Topic research
+- Keyword analysis
+- Content brief creation
+- Outline generation
+- Content optimization
+- SEO review
+- Quality evaluation
+
+
+Workflow:
+
+{
+  "stage": "",
+  "trigger": "",
+  "ai_process": "",
+  "input_data": "",
+  "output_result": ""
+}
+
+
+## 6. Content Quality Optimization Engine
+
+Analyze content quality factors.
+
+Evaluate:
+
+- Content depth
+- Originality
+- Accuracy
+- Readability
+- Search intent alignment
+- User engagement
+- Information completeness
+- Practical value
+
+
+Improve:
+
+- Content structure
+- Examples
+- Explanations
+- Formatting
+- User experience
+
+
+For each quality improvement provide:
+
+{
+  "quality_factor": "",
+  "current_status": "",
+  "improvement": "",
+  "seo_impact": "",
+  "priority": ""
+}
+
+
+## 7. E-E-A-T Content Optimization Strategy
+
+Optimize content authority signals.
+
+Analyze:
+
+### Experience
+
+Include:
+
+- Real-world examples
+- Case studies
+- Practical demonstrations
+- Customer experiences
+
+
+### Expertise
+
+Include:
+
+- Expert knowledge
+- Professional insights
+- Technical explanations
+- Industry experience
+
+
+### Authoritativeness
+
+Include:
+
+- Trusted references
+- Industry recognition
+- Expert profiles
+- Supporting evidence
+
+
+### Trustworthiness
+
+Include:
+
+- Accurate information
+- Transparency
+- Updated content
+- Clear sources
+
+
+For each E-E-A-T improvement provide:
+
+{
+  "signal": "",
+  "current_state": "",
+  "recommendation": "",
+  "expected_benefit": ""
+}
+
+
+## 8. Internal Linking Content Strategy
+
+Create content linking strategy.
+
+Analyze:
+
+- Topic relationships
+- Content clusters
+- Authority distribution
+- User navigation
+- Anchor text opportunities
+
+
+Recommend:
+
+- Internal links
+- Related content connections
+- Pillar-cluster relationships
+
+
+For each linking opportunity provide:
+
+{
+  "source_content": "",
+  "target_content": "",
+  "anchor_text": "",
+  "seo_purpose": ""
+}
+
+
+## 9. Content Optimization Intelligence
+
+Create AI-powered optimization recommendations.
+
+Analyze:
+
+- Ranking performance
+- Search intent changes
+- Competitor improvements
+- Content freshness
+- User behavior
+
+
+Generate:
+
+- Content updates
+- Expansion ideas
+- Keyword improvements
+- Engagement improvements
+
+
+For each recommendation provide:
+
+{
+  "recommendation": "",
+  "reason": "",
+  "impact": "",
+  "priority": ""
+}
+
+## 10. Content Performance Scoring
+
+Generate content quality and SEO performance scores.
+
+Evaluate:
+
+- Search intent alignment score (0-100)
+- Content quality score (0-100)
+- SEO optimization score (0-100)
+- E-E-A-T score (0-100)
+- User engagement score (0-100)
+- Conversion potential score (0-100)
+
+
+Calculate:
+
+- Overall Content Engine Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "content_quality_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "optimization_opportunities": []
+}
+
+
+## 11. Content Publishing Strategy
+
+Create scalable content publishing roadmap.
+
+Include:
+
+### Phase 1: Foundation Content
+
+Focus on:
+
+- Pillar pages
+- Core topics
+- Essential landing pages
+- Important FAQs
+
+
+### Phase 2: Growth Content
+
+Focus on:
+
+- Blog expansion
+- Topic clusters
+- Long-tail keywords
+- Supporting articles
+
+
+### Phase 3: Authority Content
+
+Focus on:
+
+- Expert guides
+- Research content
+- Industry resources
+- Thought leadership
+
+
+### Phase 4: Content Scaling
+
+Focus on:
+
+- AI-assisted production
+- Content updates
+- Performance optimization
+- Multi-channel distribution
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "content_actions": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 12. Content Performance Monitoring System
+
+Create content tracking framework.
+
+Monitor:
+
+- Organic traffic
+- Keyword rankings
+- Engagement metrics
+- Conversion rate
+- Content freshness
+- Search visibility
+- User behavior
+
+
+Recommend:
+
+- Monitoring frequency
+- Optimization workflow
+- Content update cycle
+
+
+Create:
+
+{
+  "metric": "",
+  "tracking_method": "",
+  "frequency": "",
+  "optimization_action": ""
+}
+
+
+## 13. AI Content Optimization Engine
+
+Design continuous AI improvement system.
+
+Automate:
+
+- Content analysis
+- Ranking monitoring
+- Competitor comparison
+- Update suggestions
+- SEO recommendations
+- Content refresh detection
+
+
+For each automation provide:
+
+{
+  "automation_name": "",
+  "trigger": "",
+  "ai_action": "",
+  "expected_impact": ""
+}
+
+
+## 14. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "content_analysis": {},
+
+  "topic_discovery": [],
+
+  "intent_strategy": [],
+
+  "content_structure": [],
+
+  "generation_workflow": [],
+
+  "quality_optimization": [],
+
+  "eeat_strategy": [],
+
+  "internal_linking_strategy": [],
+
+  "optimization_recommendations": [],
+
+  "performance_scores": {},
+
+  "publishing_strategy": [],
+
+  "monitoring_system": [],
+
+  "ai_optimization_engine": []
+}

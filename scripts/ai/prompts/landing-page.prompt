@@ -1,0 +1,216 @@
+You are an advanced conversion-focused landing page strategy AI.
+
+Your task is to create a high-converting SEO optimized landing page strategy based on business goals, target audience, search intent, and conversion objectives.
+
+Landing Page Data:
+
+{{landing}}
+
+
+Create a complete landing page optimization and content strategy.
+
+
+## 1. Landing Page Analysis
+
+Analyze:
+
+- Business objective
+- Target audience
+- Customer persona
+- User pain points
+- Value proposition
+- Conversion goal
+- Search intent
+- Buyer journey stage
+
+
+Identify:
+
+- Primary customer problem
+- Desired solution
+- Trust requirements
+- Conversion barriers
+- Competitive advantages
+
+
+## 2. SEO Landing Page Strategy
+
+Create SEO recommendations:
+
+Analyze:
+
+- Primary keyword
+- Secondary keywords
+- Semantic keywords
+- Search intent
+- URL structure
+- Title tag
+- Meta description
+- Heading structure
+- Schema opportunities
+
+
+Provide:
+
+{
+  "keyword": "",
+  "intent": "",
+  "page_goal": "",
+  "seo_priority": ""
+}
+
+
+## 3. Landing Page Structure
+
+Create an optimized page layout:
+
+Include:
+
+- Hero section
+- Problem section
+- Solution section
+- Benefits section
+- Features section
+- Process section
+- Social proof section
+- Testimonials section
+- FAQ section
+- CTA sections
+
+
+For each section define:
+
+- Purpose
+- Main message
+- Content direction
+- Conversion objective
+## 4. Conversion Copywriting Strategy
+
+Create persuasive landing page messaging.
+
+Develop:
+
+- Main headline
+- Supporting headline
+- Unique value proposition
+- Benefit statements
+- Feature explanations
+- Objection handling
+- CTA messaging
+
+
+Use proven frameworks:
+
+- AIDA
+- PAS (Problem-Agitate-Solution)
+- FAB (Feature-Advantage-Benefit)
+- Before-After-Bridge
+
+
+For each section provide:
+
+{
+  "section": "",
+  "headline": "",
+  "message": "",
+  "cta": "",
+  "conversion_goal": ""
+}
+
+
+## 5. Trust & Credibility Strategy
+
+Recommend trust elements:
+
+Include:
+
+- Customer testimonials
+- Reviews
+- Case studies
+- Certifications
+- Guarantees
+- Security badges
+- Statistics
+- Client logos
+- Expert proof
+
+
+Analyze:
+
+- Trust gaps
+- Credibility improvements
+- Purchase hesitation factors
+
+
+## 6. CRO Optimization Analysis
+
+Optimize for conversions:
+
+Evaluate:
+
+- CTA placement
+- Form optimization
+- Page flow
+- User friction
+- Mobile experience
+- Loading performance
+- Visual hierarchy
+
+
+Recommend:
+
+- Conversion improvements
+- A/B testing ideas
+- User experience improvements
+
+
+## 7. Local SEO Optimization
+
+If the page targets local services analyze:
+
+Include:
+
+- Location keywords
+- Service area targeting
+- LocalBusiness schema
+- NAP information
+- Local trust signals
+- Local testimonials
+
+
+## 8. Landing Page Performance Score
+
+Generate scores:
+
+- SEO Score (0-100)
+- Conversion Score (0-100)
+- Content Score (0-100)
+- Trust Score (0-100)
+- Overall Score (0-100)
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "landing_page_strategy": {},
+
+  "seo_strategy": {},
+
+  "page_structure": [],
+
+  "copywriting": [],
+
+  "trust_strategy": {},
+
+  "cro_analysis": {},
+
+  "local_seo": {},
+
+  "scores": {},
+
+  "recommendations": []
+}

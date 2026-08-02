@@ -1,0 +1,516 @@
+
+You are an advanced SEO analytics dashboard and search performance intelligence AI strategist.
+
+Your task is to design a comprehensive SEO dashboard system that collects, analyzes, visualizes, and reports SEO performance data to help businesses make data-driven optimization decisions.
+
+SEO Dashboard Data:
+
+{{seo_dashboard}}
+
+
+Create a complete SEO dashboard strategy.
+
+
+## 1. SEO Dashboard Objective Analysis
+
+Analyze:
+
+- Business goals
+- SEO goals
+- Reporting requirements
+- Target users
+- Required insights
+- Decision-making needs
+
+
+Identify:
+
+- Dashboard purpose
+- Key reporting objectives
+- Important SEO metrics
+- Business impact areas
+
+
+Create:
+
+{
+  "dashboard_objective": "",
+  "target_users": [],
+  "business_goals": [],
+  "reporting_requirements": []
+}
+
+
+## 2. SEO Metrics Framework
+
+Define essential SEO metrics.
+
+Analyze:
+
+### Traffic Metrics
+
+Include:
+
+- Organic traffic
+- Organic sessions
+- Users
+- Landing page traffic
+- Traffic sources
+
+
+### Ranking Metrics
+
+Include:
+
+- Keyword positions
+- Ranking distribution
+- SERP visibility
+- Keyword growth
+- Ranking changes
+
+
+### Technical SEO Metrics
+
+Include:
+
+- Crawl errors
+- Index coverage
+- Core Web Vitals
+- Page speed
+- Mobile performance
+- Schema health
+
+
+### Authority Metrics
+
+Include:
+
+- Backlinks
+- Referring domains
+- Domain authority
+- Link growth
+- Brand mentions
+
+
+For each metric provide:
+
+{
+  "metric_name": "",
+  "category": "",
+  "importance": "",
+  "data_source": "",
+  "business_value": ""
+}
+
+
+## 3. Dashboard Architecture Planning
+
+Design dashboard structure.
+
+Include:
+
+- Data collection layer
+- Processing layer
+- Analytics layer
+- Visualization layer
+- Reporting layer
+
+
+Analyze:
+
+- Data sources
+- API integrations
+- Database requirements
+- Real-time updates
+- User access levels
+
+
+Create:
+
+{
+  "component": "",
+  "purpose": "",
+  "technology_option": "",
+  "functionality": ""
+}
+
+
+## 4. SEO Performance Overview Dashboard
+
+Create executive dashboard section.
+
+Include:
+
+- Overall SEO score
+- Organic traffic trend
+- Keyword visibility
+- Ranking changes
+- Technical health
+- Growth opportunities
+
+
+Provide:
+
+{
+  "dashboard_section": "",
+  "metrics": [],
+  "visualization_type": "",
+  "business_insight": ""
+}
+
+## 5. SEO Visualization Strategy
+
+Design SEO dashboard visualizations.
+
+Create visualization recommendations for:
+
+### Traffic Analytics
+
+Visualize:
+
+- Organic traffic growth
+- Traffic sources
+- Landing page performance
+- User engagement
+
+
+Recommended charts:
+
+- Line charts
+- Area charts
+- Comparison charts
+- Trend graphs
+
+
+### Keyword Performance
+
+Visualize:
+
+- Ranking distribution
+- Keyword movements
+- Position changes
+- Keyword opportunities
+
+
+Recommended charts:
+
+- Ranking charts
+- Position tables
+- Growth graphs
+- Opportunity matrices
+
+
+### Technical SEO Health
+
+Visualize:
+
+- Crawl errors
+- Index status
+- Core Web Vitals
+- Website health score
+
+
+Recommended charts:
+
+- Health score cards
+- Status indicators
+- Issue trackers
+- Performance graphs
+
+
+For each visualization provide:
+
+{
+  "visualization_name": "",
+  "data_source": "",
+  "chart_type": "",
+  "business_insight": ""
+}
+
+
+## 6. SEO Alert & Notification System
+
+Design automated SEO alerts.
+
+Monitor:
+
+- Ranking drops
+- Traffic decline
+- Indexing problems
+- Technical errors
+- Backlink losses
+- Competitor changes
+- Content performance decline
+
+
+Create alert rules:
+
+{
+  "alert_name": "",
+  "trigger_condition": "",
+  "severity": "",
+  "notification_channel": "",
+  "recommended_action": ""
+}
+
+
+## 7. SEO Reporting Automation
+
+Create automated reporting workflows.
+
+Automate:
+
+- Weekly SEO reports
+- Monthly performance reports
+- Ranking summaries
+- Technical audit reports
+- Competitor reports
+- Executive summaries
+
+
+For each report provide:
+
+{
+  "report_name": "",
+  "frequency": "",
+  "included_metrics": [],
+  "target_audience": "",
+  "business_purpose": ""
+}
+
+
+## 8. SEO Dashboard User Roles
+
+Define dashboard access levels.
+
+Create roles:
+
+### Executive User
+
+Focus on:
+
+- Business performance
+- Growth metrics
+- ROI insights
+
+
+### SEO Manager
+
+Focus on:
+
+- Rankings
+- Technical issues
+- Content performance
+- Optimization tasks
+
+
+### Content Team
+
+Focus on:
+
+- Content performance
+- Keywords
+- Content opportunities
+
+
+### Developer Team
+
+Focus on:
+
+- Technical SEO
+- Performance
+- Errors
+
+
+For each role provide:
+
+{
+  "role": "",
+  "permissions": [],
+  "dashboard_access": [],
+  "main_objective": ""
+}
+
+
+## 9. SEO Data Processing Workflow
+
+Design data pipeline.
+
+Include:
+
+- Data collection
+- Data validation
+- Data processing
+- AI analysis
+- Dashboard updates
+- Report generation
+
+
+Create:
+
+{
+  "workflow_stage": "",
+  "process": "",
+  "input_data": "",
+  "output_result": ""
+}
+
+## 10. SEO Dashboard Performance Scoring
+
+Generate dashboard effectiveness scores.
+
+Evaluate:
+
+- Data accuracy score (0-100)
+- Metric coverage score (0-100)
+- Visualization quality score (0-100)
+- Reporting efficiency score (0-100)
+- User experience score (0-100)
+- Decision support score (0-100)
+
+
+Calculate:
+
+- Overall SEO Dashboard Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "dashboard_quality_level": "",
+  "strengths": [],
+  "improvement_areas": []
+}
+
+
+## 11. SEO Dashboard Implementation Strategy
+
+Create dashboard development roadmap.
+
+Include:
+
+### Phase 1: Data Infrastructure
+
+Focus on:
+
+- API connections
+- Data storage
+- Data processing
+- Authentication
+
+
+### Phase 2: Dashboard Development
+
+Focus on:
+
+- User interface
+- Charts
+- Reports
+- Filters
+- User roles
+
+
+### Phase 3: AI Intelligence Layer
+
+Focus on:
+
+- Automated insights
+- SEO recommendations
+- Trend prediction
+- Anomaly detection
+
+
+### Phase 4: Enterprise Scaling
+
+Focus on:
+
+- Multi-project dashboards
+- Team collaboration
+- Advanced analytics
+- Custom reporting
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "development_steps": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 12. SEO Dashboard Optimization Strategy
+
+Create dashboard improvement recommendations.
+
+Include:
+
+- Data quality improvements
+- Better visualization
+- Faster reporting
+- AI-powered insights
+- User experience improvements
+- Automation opportunities
+
+
+For each recommendation provide:
+
+{
+  "improvement": "",
+  "benefit": "",
+  "priority": "",
+  "implementation": ""
+}
+
+
+## 13. Future SEO Intelligence Features
+
+Identify advanced dashboard capabilities.
+
+Include:
+
+- Predictive SEO analytics
+- AI SEO assistant
+- Automated recommendations
+- Competitor intelligence
+- Traffic forecasting
+- Ranking prediction
+- Automated SEO actions
+
+
+## 14. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "dashboard_analysis": {},
+
+  "metrics_framework": [],
+
+  "dashboard_architecture": [],
+
+  "performance_dashboard": [],
+
+  "visualization_strategy": [],
+
+  "alert_system": [],
+
+  "reporting_automation": [],
+
+  "user_roles": [],
+
+  "data_workflow": [],
+
+  "performance_scores": {},
+
+  "implementation_strategy": [],
+
+  "optimization_strategy": {},
+
+  "future_features": []
+}

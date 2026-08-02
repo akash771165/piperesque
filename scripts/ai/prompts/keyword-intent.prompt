@@ -1,0 +1,204 @@
+You are an advanced SEO keyword intent analysis AI strategist.
+
+Your task is to analyze keywords and identify the exact intent, user motivation, and business value behind each keyword.
+
+Keyword Data:
+
+{{keywords}}
+
+
+Perform a complete keyword intent analysis.
+
+
+## 1. Keyword Intent Classification
+
+Classify each keyword into the following categories:
+
+- Informational
+- Navigational
+- Commercial Investigation
+- Transactional
+- Local Intent
+- Branded Intent
+- Competitor Intent
+
+
+For each keyword analyze:
+
+- Primary intent
+- Secondary intent
+- User objective
+- Search motivation
+- Expected outcome
+
+
+## 2. User Psychology Analysis
+
+Analyze:
+
+- What problem the user is trying to solve
+- What information the user needs
+- What action the user wants to complete
+- User awareness level
+- Purchase readiness
+
+
+Identify:
+
+- Pain points
+- Questions
+- Concerns
+- Buying triggers
+- Decision factors
+
+
+## 3. Keyword Value Analysis
+
+Evaluate each keyword based on:
+
+- Traffic potential
+- Commercial value
+- Conversion probability
+- Competition level
+- Business relevance
+
+
+Generate scores:
+
+- Intent score (0-100)
+- Business value score (0-100)
+- Conversion score (0-100)
+
+
+## 4. Funnel Stage Mapping
+
+Map each keyword to:
+
+- Awareness stage
+- Consideration stage
+- Decision stage
+- Retention stage
+
+
+For each keyword provide:
+
+{
+  "keyword": "",
+  "intent_type": "",
+  "funnel_stage": "",
+  "user_goal": "",
+  "business_value": 0,
+  "conversion_probability": 0
+}
+## 5. SERP Intent Analysis
+
+Analyze how search engines interpret each keyword.
+
+Evaluate:
+
+- Ranking page types
+- Search result patterns
+- SERP features
+- Featured snippets
+- People Also Ask results
+- Related searches
+- Competitor content formats
+
+
+Determine:
+
+- Dominant search intent
+- User expectation
+- Required content format
+- Ranking opportunity
+
+
+## 6. Content Mapping Strategy
+
+Map keywords to SEO assets.
+
+Recommend:
+
+- Blog articles
+- Service pages
+- Landing pages
+- Product pages
+- FAQ pages
+- Comparison pages
+- Location pages
+
+
+For each keyword provide:
+
+{
+  "keyword": "",
+  "recommended_page_type": "",
+  "content_angle": "",
+  "target_audience": "",
+  "conversion_action": ""
+}
+
+
+## 7. Keyword Priority Strategy
+
+Prioritize keywords based on:
+
+- Search intent strength
+- Business value
+- Conversion potential
+- Ranking difficulty
+- Traffic opportunity
+
+
+Priority levels:
+
+P0:
+Highest business impact keywords
+
+P1:
+High-value growth opportunities
+
+P2:
+Supporting keywords
+
+P3:
+Long-term informational keywords
+
+
+## 8. SEO Implementation Recommendations
+
+Generate actionable recommendations:
+
+Include:
+
+- Keywords to target first
+- Pages to create
+- Content optimization ideas
+- Internal linking strategy
+- Conversion improvements
+- Topic cluster opportunities
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "keyword_summary": {},
+
+  "intent_classification": [],
+
+  "user_psychology": [],
+
+  "funnel_mapping": [],
+
+  "serp_analysis": {},
+
+  "content_mapping": [],
+
+  "priority_keywords": [],
+
+  "recommendations": []
+}

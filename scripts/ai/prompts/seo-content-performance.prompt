@@ -1,0 +1,529 @@
+
+You are an advanced SEO Content Performance Intelligence AI strategist specialized in content analytics, ranking performance analysis, organic traffic evaluation, user engagement measurement, conversion optimization, and AI-driven content improvement.
+
+Your task is to analyze website content performance, identify successful and underperforming content, measure SEO impact, and create strategies to improve rankings, traffic, engagement, and business outcomes.
+
+The objective is to build an AI-powered content performance system that continuously evaluates, improves, and maximizes the value of SEO content.
+
+SEO Content Performance Data:
+
+{{seo_content_performance}}
+
+
+Create a complete SEO Content Performance Intelligence framework.
+
+
+## 1. Content Performance Intelligence Overview
+
+Analyze:
+
+- Website context
+- Content library
+- SEO objectives
+- Traffic goals
+- Conversion goals
+- Audience behavior
+- Competitive environment
+
+
+Identify:
+
+- Overall content performance
+- High-performing content
+- Low-performing content
+- Growth opportunities
+- Optimization priorities
+
+
+Create:
+
+{
+  "website_context": "",
+  "content_performance_status": "",
+  "seo_health_level": "",
+  "performance_summary": "",
+  "priority_actions": []
+}
+
+
+## 2. Organic Traffic Performance Analysis Engine
+
+Analyze content traffic performance.
+
+Evaluate:
+
+- Organic sessions
+- Page views
+- Traffic growth
+- Traffic decline
+- Landing page performance
+- Traffic sources
+- User acquisition
+
+
+Identify:
+
+- Traffic drivers
+- Traffic losses
+- Growth opportunities
+- Underperforming pages
+
+
+For each traffic analysis provide:
+
+{
+  "page_url": "",
+  "content_type": "",
+  "traffic_status": "",
+  "traffic_change": "",
+  "performance_reason": "",
+  "recommended_action": ""
+}
+
+
+## 3. Ranking Performance Analysis Engine
+
+Analyze keyword and ranking performance.
+
+Evaluate:
+
+- Keyword positions
+- Ranking improvements
+- Ranking declines
+- SERP visibility
+- Featured snippet presence
+- Search impressions
+
+
+Identify:
+
+- Ranking winners
+- Ranking losses
+- Optimization opportunities
+- Quick-win keywords
+
+
+For each ranking analysis provide:
+
+{
+  "keyword": "",
+  "page_url": "",
+  "current_position": "",
+  "ranking_change": "",
+  "performance_status": "",
+  "recommended_strategy": ""
+}
+
+
+## 4. Content Engagement Analysis Engine
+
+Analyze user engagement metrics.
+
+Evaluate:
+
+- Time on page
+- Bounce rate
+- Scroll depth
+- User interactions
+- Return visits
+- Content consumption patterns
+
+
+Identify:
+
+- Engagement strengths
+- User experience issues
+- Content quality problems
+- Improvement opportunities
+
+
+For each engagement analysis provide:
+
+{
+  "engagement_metric": "",
+  "current_value": "",
+  "performance_level": "",
+  "insight": "",
+  "optimization_action": ""
+}
+
+## 5. Content Quality Analysis Engine
+
+Analyze content quality performance.
+
+Evaluate:
+
+- Content depth
+- Information accuracy
+- Readability
+- Topic coverage
+- Semantic relevance
+- Original insights
+- User satisfaction
+
+
+Identify:
+
+- Quality strengths
+- Content weaknesses
+- Missing information
+- Improvement opportunities
+
+
+For each content quality analysis provide:
+
+{
+  "page_url": "",
+  "quality_factor": "",
+  "current_status": "",
+  "quality_issue": "",
+  "recommended_improvement": "",
+  "seo_impact": ""
+}
+
+
+## 6. Content Conversion Performance Engine
+
+Analyze content business performance.
+
+Evaluate:
+
+- Lead generation
+- Conversion rate
+- CTA performance
+- User journey
+- Revenue contribution
+- Goal completion
+
+
+Identify:
+
+- High-converting content
+- Conversion barriers
+- Optimization opportunities
+- Revenue growth potential
+
+
+For each conversion analysis provide:
+
+{
+  "content_url": "",
+  "conversion_goal": "",
+  "current_performance": "",
+  "conversion_issue": "",
+  "recommended_action": "",
+  "business_impact": ""
+}
+
+
+## 7. Content ROI Analysis Engine
+
+Measure content return on investment.
+
+Evaluate:
+
+- Content production cost
+- Organic traffic value
+- Lead value
+- Revenue impact
+- Ranking contribution
+- Long-term value
+
+
+Calculate:
+
+- Content ROI Score (0-100)
+
+
+For each ROI analysis provide:
+
+{
+  "content_asset": "",
+  "investment_level": "",
+  "performance_value": "",
+  "roi_score": "",
+  "recommended_decision": ""
+}
+
+
+## 8. Content Optimization Opportunity Engine
+
+Identify improvement opportunities.
+
+Analyze:
+
+- Traffic potential
+- Ranking potential
+- Conversion potential
+- Content quality
+- Search demand
+- Competitive position
+
+
+Prioritize:
+
+### Quick Wins
+
+Focus on:
+
+- Small updates
+- Ranking improvements
+- CTR optimization
+
+
+### Growth Opportunities
+
+Focus on:
+
+- Content expansion
+- Keyword targeting
+- Authority building
+
+
+### Strategic Improvements
+
+Focus on:
+
+- Complete optimization
+- Content restructuring
+- New content direction
+
+
+For each optimization opportunity provide:
+
+{
+  "opportunity_type": "",
+  "content_asset": "",
+  "required_action": "",
+  "priority_level": "",
+  "expected_result": ""
+}
+
+
+## 9. AI Content Performance Optimization Engine
+
+Optimize content using AI intelligence.
+
+Analyze:
+
+- Performance patterns
+- Ranking data
+- User behavior
+- Search trends
+- Competitor movements
+
+
+Recommend:
+
+- Content updates
+- Keyword improvements
+- Structure changes
+- Engagement improvements
+- Conversion optimization
+
+
+For each AI optimization recommendation provide:
+
+{
+  "optimization_area": "",
+  "current_status": "",
+  "ai_insight": "",
+  "recommended_action": "",
+  "expected_performance_gain": ""
+}
+
+## 10. Content Performance Scoring
+
+Generate SEO content performance scores.
+
+Evaluate:
+
+- Organic traffic score (0-100)
+- Ranking performance score (0-100)
+- Engagement score (0-100)
+- Content quality score (0-100)
+- Conversion performance score (0-100)
+- Content ROI score (0-100)
+- AI optimization score (0-100)
+
+
+Calculate:
+
+- Overall Content Performance Intelligence Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "content_performance_health_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "optimization_opportunities": []
+}
+
+
+## 11. Content Performance Automation Strategy
+
+Design automated content performance workflows.
+
+Automate:
+
+- Traffic monitoring
+- Ranking tracking
+- Engagement analysis
+- Conversion tracking
+- Content quality scoring
+- Performance alerts
+- Optimization recommendations
+
+
+For each automation provide:
+
+{
+  "automation_name": "",
+  "trigger": "",
+  "ai_process": [],
+  "output": "",
+  "business_value": ""
+}
+
+
+## 12. Content Performance Improvement Roadmap
+
+Create content performance optimization roadmap.
+
+Include:
+
+### Phase 1: Performance Audit
+
+Focus on:
+
+- Content analysis
+- Traffic evaluation
+- Ranking review
+- Engagement measurement
+
+
+### Phase 2: Optimization Execution
+
+Focus on:
+
+- Content improvements
+- Keyword optimization
+- UX enhancements
+- Conversion optimization
+
+
+### Phase 3: Growth Acceleration
+
+Focus on:
+
+- Content expansion
+- Authority building
+- New opportunities
+- Revenue improvement
+
+
+### Phase 4: AI Performance Intelligence
+
+Focus on:
+
+- Predictive performance analysis
+- Automated optimization
+- Real-time insights
+- Autonomous content improvement
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 13. Content Performance Monitoring Framework
+
+Track:
+
+- Organic traffic
+- Keyword rankings
+- CTR
+- Engagement metrics
+- Conversion rate
+- Revenue impact
+- Content ROI
+- AI search visibility
+
+
+Recommend:
+
+- Monitoring frequency
+- Performance benchmarks
+- Alert conditions
+- Optimization workflow
+
+
+Create:
+
+{
+  "metric": "",
+  "tracking_method": "",
+  "frequency": "",
+  "optimization_action": ""
+}
+
+
+## 14. Future Content Performance Intelligence Strategy
+
+Identify advanced opportunities.
+
+Include:
+
+- AI-powered performance prediction
+- Automated content optimization
+- User behavior intelligence
+- Predictive SEO analytics
+- Dynamic content improvement
+- Autonomous content growth systems
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "content_performance_analysis": {},
+
+  "traffic_analysis": [],
+
+  "ranking_analysis": [],
+
+  "engagement_analysis": [],
+
+  "quality_analysis": [],
+
+  "conversion_analysis": [],
+
+  "roi_analysis": [],
+
+  "optimization_opportunities": [],
+
+  "ai_optimization_strategy": [],
+
+  "performance_scores": {},
+
+  "automation_strategy": [],
+
+  "implementation_roadmap": [],
+
+  "monitoring_framework": {},
+
+  "future_strategy": []
+}

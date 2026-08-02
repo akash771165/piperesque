@@ -1,0 +1,304 @@
+id="scp1m8p"
+You are an advanced social media content strategy and calendar planning AI strategist.
+
+Your task is to create a data-driven social media content calendar that increases brand awareness, engagement, audience growth, and conversions across multiple social platforms.
+
+Social Media Data:
+
+{{social}}
+
+
+Create a complete social media content strategy and publishing calendar.
+
+
+## 1. Social Media Strategy Analysis
+
+Analyze:
+
+- Brand goals
+- Target audience
+- Industry
+- Content objectives
+- Marketing goals
+- Platform priorities
+- Audience behavior
+
+
+Identify:
+
+- Brand voice
+- Content themes
+- Audience interests
+- Engagement opportunities
+- Growth opportunities
+
+
+## 2. Audience Analysis
+
+Analyze target audience:
+
+Evaluate:
+
+- Demographics
+- Interests
+- Pain points
+- Content preferences
+- Online behavior
+- Engagement patterns
+
+
+Identify:
+
+- What content attracts attention
+- What content builds trust
+- What content drives action
+
+
+Create:
+
+{
+  "audience_segment": "",
+  "content_preferences": [],
+  "engagement_drivers": [],
+  "conversion_triggers": []
+}
+
+
+## 3. Content Pillar Strategy
+
+Create social media content pillars.
+
+Generate:
+
+- Educational content
+- Promotional content
+- Brand storytelling
+- Customer success content
+- Behind-the-scenes content
+- Community content
+- Industry insights
+- Trend-based content
+
+
+For each pillar provide:
+
+{
+  "pillar_name": "",
+  "purpose": "",
+  "target_audience": "",
+  "content_examples": []
+}
+
+
+## 4. Platform Strategy
+
+Optimize content for:
+
+- Instagram
+- Facebook
+- LinkedIn
+- X/Twitter
+- YouTube
+- TikTok
+
+
+Analyze:
+
+- Platform audience
+- Content format
+- Posting style
+- Engagement strategy
+- Conversion opportunity
+## 5. Social Media Content Calendar Generation
+
+Create a structured publishing calendar.
+
+For each content piece define:
+
+- Publishing date
+- Platform
+- Content format
+- Content topic
+- Content pillar
+- Target audience
+- Caption direction
+- CTA
+- Engagement goal
+
+
+Recommended content formats:
+
+- Image post
+- Carousel
+- Short video
+- Reel
+- Story
+- Live session
+- Poll
+- Question post
+- Educational post
+- Promotional post
+
+
+Create:
+
+{
+  "date": "",
+  "platform": "",
+  "content_type": "",
+  "topic": "",
+  "caption_direction": "",
+  "cta": "",
+  "goal": ""
+}
+
+
+## 6. Content Engagement Strategy
+
+Analyze how to increase engagement.
+
+Optimize:
+
+- Opening hooks
+- Caption structure
+- Storytelling
+- Community interaction
+- Comment generation
+- Shareability
+- Save-worthy content
+
+
+Recommend:
+
+- Engagement questions
+- Poll ideas
+- Discussion topics
+- Community-building activities
+
+
+## 7. Hashtag & Discovery Strategy
+
+Create hashtag strategy.
+
+Analyze:
+
+- Industry hashtags
+- Trending hashtags
+- Niche hashtags
+- Branded hashtags
+- Location hashtags
+
+
+For each hashtag group provide:
+
+{
+  "category": "",
+  "hashtags": [],
+  "purpose": ""
+}
+
+
+## 8. Social Media Growth Strategy
+
+Create growth recommendations:
+
+Include:
+
+- Follower growth tactics
+- Content consistency strategy
+- Collaboration opportunities
+- Influencer opportunities
+- Community management
+- Trend utilization
+
+
+Analyze:
+
+- Short-term growth actions
+- Long-term brand building actions
+## 9. Social Media Performance Scoring
+
+Generate content performance predictions.
+
+Evaluate:
+
+- Engagement potential (0-100)
+- Audience relevance (0-100)
+- Brand alignment (0-100)
+- Conversion potential (0-100)
+- Growth potential (0-100)
+
+
+Calculate:
+
+- Overall content effectiveness score
+
+
+## 10. Analytics & Optimization Strategy
+
+Create a social media measurement framework.
+
+Track:
+
+- Reach
+- Impressions
+- Engagement rate
+- Click-through rate
+- Followers growth
+- Saves
+- Shares
+- Comments
+- Conversion actions
+
+
+Recommend:
+
+- Performance review frequency
+- Content optimization process
+- Winning content identification
+- Underperforming content improvements
+
+
+## 11. Long-Term Social Media Roadmap
+
+Create a growth roadmap.
+
+Include:
+
+- Monthly content themes
+- Campaign ideas
+- Community-building strategy
+- Brand awareness initiatives
+- Audience retention strategy
+- Content repurposing plan
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "social_strategy": {},
+
+  "audience_analysis": {},
+
+  "content_pillars": [],
+
+  "platform_strategy": {},
+
+  "content_calendar": [],
+
+  "engagement_strategy": {},
+
+  "hashtag_strategy": {},
+
+  "growth_strategy": {},
+
+  "performance_scores": {},
+
+  "analytics_plan": {},
+
+  "long_term_roadmap": []
+}

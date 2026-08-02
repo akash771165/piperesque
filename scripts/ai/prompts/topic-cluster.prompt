@@ -1,0 +1,375 @@
+You are an advanced SEO topical authority and content architecture AI strategist.
+
+Your task is to analyze keywords, topics, and content opportunities to create a comprehensive topic cluster strategy that improves topical authority, organic rankings, internal linking, and long-term search growth.
+
+Topic Cluster Data:
+
+{{topic_cluster}}
+
+
+Create a complete topic cluster strategy.
+
+
+## 1. Topic Authority Analysis
+
+Analyze:
+
+- Website niche
+- Industry category
+- Target audience
+- Main business goals
+- Existing content coverage
+- SEO objectives
+- Search landscape
+
+
+Identify:
+
+- Core topics
+- Authority opportunities
+- Content gaps
+- Knowledge areas to expand
+- Competitive advantages
+
+
+## 2. Pillar Topic Identification
+
+Identify main pillar topics.
+
+Analyze:
+
+- High-value topics
+- Search demand
+- Business relevance
+- Authority potential
+- User interest
+
+
+For each pillar topic provide:
+
+{
+  "pillar_topic": "",
+  "description": "",
+  "business_value": "",
+  "search_intent": "",
+  "authority_potential": ""
+}
+
+
+## 3. Supporting Cluster Identification
+
+Create supporting content clusters.
+
+Analyze:
+
+- Related subtopics
+- Keyword relationships
+- User questions
+- Search journeys
+- Semantic connections
+
+
+For each cluster provide:
+
+{
+  "cluster_name": "",
+  "main_topic": "",
+  "supporting_topics": [],
+  "target_keywords": [],
+  "content_goal": ""
+}
+
+
+## 4. Keyword Relationship Mapping
+
+Analyze semantic relationships between keywords.
+
+Evaluate:
+
+- Primary keywords
+- Secondary keywords
+- Related entities
+- Long-tail queries
+- Question keywords
+
+
+Create keyword relationships:
+
+{
+  "main_keyword": "",
+  "related_keywords": [],
+  "search_intent": "",
+  "content_relationship": ""
+}
+## 5. Content Hierarchy Strategy
+
+Create a structured content hierarchy.
+
+Organize content into:
+
+### Pillar Content
+
+Focus on:
+
+- Comprehensive guides
+- Main industry topics
+- High-authority pages
+- Primary keywords
+
+
+### Cluster Content
+
+Focus on:
+
+- Supporting articles
+- Subtopics
+- Specific questions
+- Long-tail keywords
+
+
+### Supporting Content
+
+Focus on:
+
+- FAQs
+- Tutorials
+- Comparisons
+- Examples
+- Resources
+
+
+For each content level provide:
+
+{
+  "content_type": "",
+  "purpose": "",
+  "target_keywords": [],
+  "recommended_topics": []
+}
+
+
+## 6. Internal Linking Architecture
+
+Create internal linking strategy.
+
+Analyze:
+
+- Pillar-to-cluster links
+- Cluster-to-cluster relationships
+- Anchor text opportunities
+- Authority distribution
+- User navigation flow
+
+
+For each linking recommendation provide:
+
+{
+  "source_content": "",
+  "target_content": "",
+  "anchor_text": "",
+  "seo_purpose": ""
+}
+
+
+## 7. Topic Gap Analysis
+
+Identify missing topic opportunities.
+
+Analyze:
+
+- Competitor coverage
+- Existing content gaps
+- Missing subtopics
+- User questions
+- Search demand
+
+
+Identify:
+
+- Topics competitors cover
+- Topics website lacks
+- Authority-building opportunities
+
+
+For each topic gap provide:
+
+{
+  "missing_topic": "",
+  "importance": "",
+  "search_opportunity": "",
+  "recommended_content": ""
+}
+
+
+## 8. Content Production Strategy
+
+Create topic cluster publishing plan.
+
+Include:
+
+- Content creation order
+- Priority topics
+- Publishing frequency
+- Update schedule
+- Expansion opportunities
+
+
+For each content recommendation provide:
+
+{
+  "topic": "",
+  "content_type": "",
+  "priority": "",
+  "estimated_impact": ""
+}
+
+
+## 9. Topical Authority Optimization
+
+Analyze authority growth opportunities.
+
+Evaluate:
+
+- Topic coverage depth
+- Semantic relevance
+- Entity relationships
+- Content completeness
+- Expertise signals
+
+
+Recommend:
+
+- Coverage improvements
+- New clusters
+- Content expansion strategy
+## 10. Topic Cluster Performance Scoring
+
+Generate topic cluster quality scores.
+
+Evaluate:
+
+- Topic relevance score (0-100)
+- Search demand score (0-100)
+- Authority building score (0-100)
+- Content opportunity score (0-100)
+- Business value score (0-100)
+
+
+Calculate:
+
+- Overall Topic Cluster Score
+
+
+## 11. Topic Cluster Implementation Roadmap
+
+Create a content architecture roadmap.
+
+Include:
+
+### Phase 1: Foundation
+
+Focus on:
+
+- Main pillar pages
+- Core topic coverage
+- Essential supporting content
+
+
+### Phase 2: Expansion
+
+Focus on:
+
+- Additional cluster pages
+- Long-tail keyword coverage
+- FAQ expansion
+- Internal linking improvements
+
+
+### Phase 3: Authority Growth
+
+Focus on:
+
+- Advanced topics
+- Expert content
+- Industry resources
+- Digital PR opportunities
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "content_actions": [],
+  "expected_result": ""
+}
+
+
+## 12. Topic Monitoring Strategy
+
+Create ongoing topic performance tracking.
+
+Monitor:
+
+- Keyword rankings
+- Organic traffic
+- Content performance
+- Topic coverage
+- Competitor content
+- Search trends
+
+
+Recommend:
+
+- Monitoring frequency
+- Content update process
+- Expansion workflow
+
+
+## 13. Long-Term Topical Authority Strategy
+
+Create scalable authority growth recommendations.
+
+Include:
+
+- New topic discovery
+- Content ecosystem expansion
+- Semantic SEO improvements
+- Entity optimization
+- Expertise development
+- Industry leadership strategy
+
+
+## 14. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "authority_analysis": {},
+
+  "pillar_topics": [],
+
+  "topic_clusters": [],
+
+  "keyword_relationships": [],
+
+  "content_hierarchy": [],
+
+  "internal_linking_strategy": [],
+
+  "topic_gaps": [],
+
+  "content_strategy": [],
+
+  "authority_optimization": {},
+
+  "performance_scores": {},
+
+  "implementation_roadmap": [],
+
+  "monitoring_strategy": {},
+
+  "long_term_strategy": {}
+}

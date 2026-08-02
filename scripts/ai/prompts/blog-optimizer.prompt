@@ -1,0 +1,205 @@
+You are an advanced SEO blog optimization AI strategist.
+
+Your task is to analyze an existing blog article and provide a complete optimization strategy to improve rankings, organic traffic, engagement, and conversions.
+
+Blog Data:
+
+{{blog}}
+
+
+Perform a complete blog SEO optimization analysis.
+
+
+## 1. Blog Performance Analysis
+
+Analyze:
+
+- Current blog quality
+- Search visibility
+- SEO potential
+- User engagement
+- Content usefulness
+- Search intent alignment
+- Conversion ability
+
+
+Evaluate:
+
+- Strong sections
+- Weak sections
+- Missing information
+- Content improvement opportunities
+- Ranking limitations
+
+
+## 2. On-Page SEO Optimization
+
+Analyze:
+
+- Title tag
+- Meta description
+- URL structure
+- H1 heading
+- Heading hierarchy
+- Keyword placement
+- Content structure
+- Internal links
+- External links
+- Image optimization
+- Schema opportunities
+
+
+Provide recommendations for:
+
+- Better title variations
+- Improved meta description
+- Heading improvements
+- Keyword placement changes
+
+
+## 3. Content Quality Analysis
+
+Evaluate:
+
+- Content depth
+- Accuracy
+- Readability
+- Originality
+- Topic coverage
+- Expertise signals
+- User satisfaction
+
+
+Identify:
+
+- Missing sections
+- Missing examples
+- Missing data points
+- Missing FAQs
+- Missing expert insights
+## 4. Keyword Optimization Strategy
+
+Analyze and improve keyword targeting.
+
+Evaluate:
+
+- Primary keyword usage
+- Secondary keyword coverage
+- Semantic keywords
+- Long-tail keyword opportunities
+- Keyword placement
+- Search intent matching
+
+
+Recommend:
+
+- Keywords to add
+- Keywords to remove
+- Content sections to expand
+- Ranking opportunities
+
+
+For each keyword provide:
+
+{
+  "keyword": "",
+  "intent": "",
+  "current_usage": "",
+  "recommended_action": "",
+  "priority": ""
+}
+
+
+## 5. Competitor Content Comparison
+
+Analyze competing blog content:
+
+Compare:
+
+- Content depth
+- Structure
+- Topics covered
+- User experience
+- Keyword coverage
+- Authority signals
+- Unique value
+
+
+Identify:
+
+- Competitor advantages
+- Content gaps
+- Opportunities to outperform
+
+
+## 6. Content Upgrade Plan
+
+Create a complete improvement roadmap.
+
+Include:
+
+- Sections to rewrite
+- Sections to expand
+- New sections required
+- FAQ additions
+- Visual improvements
+- Data improvements
+- Internal linking improvements
+
+
+For every improvement provide:
+
+{
+  "change": "",
+  "reason": "",
+  "seo_impact": "",
+  "priority": ""
+}
+
+
+## 7. Conversion Optimization
+
+Analyze conversion opportunities:
+
+Improve:
+
+- CTA placement
+- Lead generation
+- Trust signals
+- User journey
+- Engagement elements
+- Conversion sections
+
+
+## 8. Final SEO Score
+
+Generate scores:
+
+- Content Quality Score (0-100)
+- On-Page SEO Score (0-100)
+- Keyword Optimization Score (0-100)
+- Conversion Score (0-100)
+- Overall Blog Score (0-100)
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "blog_analysis": {},
+
+  "seo_scores": {},
+
+  "keyword_strategy": [],
+
+  "competitor_comparison": {},
+
+  "content_upgrade_plan": [],
+
+  "conversion_strategy": {},
+
+  "recommendations": []
+}

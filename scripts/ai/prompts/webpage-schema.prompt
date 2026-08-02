@@ -1,0 +1,347 @@
+id="wpg1m8p"
+You are an advanced Schema.org structured data and technical SEO AI strategist.
+
+Your task is to create a complete WebPage schema strategy using JSON-LD structured data to improve individual page understanding, search visibility, indexing quality, and rich result eligibility.
+
+WebPage Data:
+
+{{webpage}}
+
+
+Create a complete WebPage schema analysis and generation strategy.
+
+
+## 1. WebPage Information Analysis
+
+Analyze page details:
+
+Evaluate:
+
+- Page title
+- Page URL
+- Page description
+- Page type
+- Main content
+- Target keywords
+- Search intent
+- Parent website
+- Author information
+- Publishing information
+
+
+Identify:
+
+- Missing page information
+- Entity relationships
+- SEO improvement opportunities
+- Structured data opportunities
+
+
+## 2. WebPage Schema Structure Planning
+
+Create WebPage schema structure including:
+
+Required properties:
+
+- @context
+- @type
+- name
+- url
+- description
+
+
+Additional properties:
+
+- headline
+- mainEntity
+- isPartOf
+- about
+- author
+- publisher
+- datePublished
+- dateModified
+- image
+- breadcrumb
+
+
+For each property analyze:
+
+{
+  "property": "",
+  "value": "",
+  "required": "",
+  "seo_importance": ""
+}
+
+
+## 3. WebPage Type Analysis
+
+Determine the most suitable WebPage schema type:
+
+Possible types:
+
+- WebPage
+- AboutPage
+- ContactPage
+- FAQPage
+- CollectionPage
+- ItemPage
+- ProfilePage
+- SearchResultsPage
+
+
+Analyze:
+
+- Page purpose
+- User intent
+- Content category
+- Recommended schema type
+
+
+## 4. Content Entity Analysis
+
+Analyze page entities:
+
+Evaluate:
+
+- Main topic
+- Related entities
+- Organization relationship
+- Person relationship
+- Product/service relationship
+- Content category
+
+
+Identify:
+
+- Entity connections
+- Knowledge graph opportunities
+- Semantic SEO improvements
+## 5. JSON-LD WebPage Schema Generation
+
+Create a valid Schema.org WebPage JSON-LD structure.
+
+Generate:
+
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "",
+  "url": "",
+  "description": "",
+  "isPartOf": {},
+  "about": {},
+  "author": {},
+  "publisher": {},
+  "datePublished": "",
+  "dateModified": ""
+}
+
+
+Ensure:
+
+- Valid Schema.org format
+- Correct property usage
+- Search engine compatibility
+- Clear entity relationships
+
+
+## 6. Breadcrumb Schema Analysis
+
+Analyze breadcrumb implementation.
+
+Evaluate:
+
+- Page hierarchy
+- Navigation structure
+- Parent-child relationships
+- URL organization
+
+
+Generate BreadcrumbList schema:
+
+{
+  "@type": "BreadcrumbList",
+  "itemListElement": []
+}
+
+
+Recommend:
+
+- Breadcrumb improvements
+- Navigation clarity
+- Internal linking benefits
+
+
+## 7. Content SEO Optimization
+
+Analyze page search visibility.
+
+Optimize:
+
+- Page title
+- Meta description
+- Headings
+- Content structure
+- Keyword targeting
+- Search intent alignment
+- Internal links
+
+
+Recommend:
+
+- Content improvements
+- Entity optimization
+- Semantic keyword expansion
+- User experience improvements
+
+
+## 8. Author & Publisher Relationship Analysis
+
+Analyze content ownership signals.
+
+Evaluate:
+
+- Author information
+- Organization information
+- Publishing authority
+- Trust signals
+- E-E-A-T factors
+
+
+Recommend:
+
+- Author schema connection
+- Publisher schema connection
+- Content credibility improvements
+
+
+## 9. Rich Results Eligibility Analysis
+
+Evaluate:
+
+- Schema validity
+- Search appearance
+- Structured data quality
+- Entity understanding
+
+
+Identify:
+
+- Missing properties
+- Schema errors
+- Enhancement opportunities
+## 10. WebPage Schema Validation Rules
+
+Validate WebPage schema implementation.
+
+Check:
+
+- Required properties
+- Recommended properties
+- URL consistency
+- Page name accuracy
+- Description quality
+- Author information
+- Publisher relationship
+- Date format validity
+- Breadcrumb structure
+- Schema.org compliance
+
+
+Return validation report:
+
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "improvements": []
+}
+
+
+## 11. WebPage Schema Quality Scoring
+
+Generate schema quality scores.
+
+Evaluate:
+
+- Schema completeness score (0-100)
+- Content understanding score (0-100)
+- Entity connection score (0-100)
+- SEO optimization score (0-100)
+- Rich result readiness score (0-100)
+
+
+Calculate:
+
+- Overall WebPage Schema Score
+
+
+## 12. Implementation Strategy
+
+Create implementation recommendations.
+
+Include:
+
+- JSON-LD placement method
+- Framework integration approach
+- CMS implementation
+- Dynamic schema generation
+- Schema update workflow
+
+
+Recommend:
+
+- Rich Results testing process
+- Search appearance monitoring
+- Schema error tracking
+- Future schema expansion
+
+
+## 13. WebPage SEO Growth Strategy
+
+Create long-term optimization recommendations.
+
+Include:
+
+- Content authority improvements
+- Internal linking strategy
+- Entity optimization
+- User experience improvements
+- Search visibility growth
+- Technical SEO enhancements
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "webpage_analysis": {},
+
+  "schema_structure": {},
+
+  "page_type_analysis": {},
+
+  "entity_analysis": {},
+
+  "json_ld_schema": {},
+
+  "breadcrumb_strategy": {},
+
+  "content_seo_strategy": {},
+
+  "author_publisher_analysis": {},
+
+  "rich_results_analysis": {},
+
+  "validation_report": {},
+
+  "quality_scores": {},
+
+  "implementation_strategy": {},
+
+  "growth_strategy": {}
+}

@@ -1,0 +1,527 @@
+id="seopipelinep1m8p"
+
+You are an advanced SEO automation pipeline architecture and workflow orchestration AI strategist.
+
+Your task is to design a complete end-to-end SEO pipeline that automates data collection, analysis, optimization, reporting, and continuous SEO improvement processes.
+
+SEO Pipeline Data:
+
+{{seo_pipeline}}
+
+
+Create a complete SEO pipeline strategy.
+
+
+## 1. SEO Pipeline Objective Analysis
+
+Analyze:
+
+- Business goals
+- SEO objectives
+- Website requirements
+- Automation requirements
+- Data sources
+- Team workflow
+- Expected outcomes
+
+
+Identify:
+
+- SEO process requirements
+- Automation opportunities
+- Workflow dependencies
+- Scalability requirements
+
+
+Create:
+
+{
+  "pipeline_objective": "",
+  "seo_goals": [],
+  "business_requirements": [],
+  "automation_targets": [],
+  "expected_results": []
+}
+
+
+## 2. SEO Pipeline Architecture Design
+
+Design complete SEO pipeline architecture.
+
+Include:
+
+### Data Collection Layer
+
+Handle:
+
+- Website crawling
+- Search Console data
+- Analytics data
+- Keyword data
+- Competitor data
+- Backlink data
+
+
+### Processing Layer
+
+Handle:
+
+- Data cleaning
+- Data validation
+- Data transformation
+- SEO calculations
+
+
+### Intelligence Layer
+
+Handle:
+
+- AI analysis
+- Pattern detection
+- Opportunity discovery
+- Recommendation generation
+
+
+### Action Layer
+
+Handle:
+
+- Content optimization
+- Technical fixes
+- Reporting
+- Notifications
+
+
+Create:
+
+{
+  "pipeline_layer": "",
+  "purpose": "",
+  "data_processed": [],
+  "technology_options": [],
+  "output": ""
+}
+
+
+## 3. SEO Data Flow Design
+
+Analyze complete data movement.
+
+Flow:
+
+1. Data collection
+
+2. Data processing
+
+3. SEO analysis
+
+4. AI interpretation
+
+5. Recommendation generation
+
+6. Action execution
+
+7. Performance tracking
+
+
+For each stage provide:
+
+{
+  "stage": "",
+  "input": "",
+  "process": "",
+  "ai_role": "",
+  "output": ""
+}
+
+
+## 4. SEO Pipeline Workflow Modules
+
+Design specialized modules.
+
+Include:
+
+- Technical SEO audit module
+- Keyword research module
+- Content analysis module
+- Competitor analysis module
+- Rank tracking module
+- Backlink analysis module
+- Reporting module
+
+
+For each module provide:
+
+{
+  "module_name": "",
+  "purpose": "",
+  "workflow": [],
+  "automation_level": "",
+  "business_value": ""
+}
+
+## 5. AI SEO Pipeline Orchestration
+
+Design AI-powered workflow orchestration.
+
+Include:
+
+### SEO Analysis Agent
+
+Responsibilities:
+
+- Analyze SEO data
+- Detect issues
+- Identify opportunities
+- Generate insights
+
+
+### Optimization Agent
+
+Responsibilities:
+
+- Create recommendations
+- Prioritize actions
+- Suggest improvements
+- Track outcomes
+
+
+### Content Agent
+
+Responsibilities:
+
+- Generate content strategies
+- Optimize existing content
+- Identify content gaps
+- Manage content workflows
+
+
+### Monitoring Agent
+
+Responsibilities:
+
+- Track rankings
+- Monitor technical health
+- Detect changes
+- Generate alerts
+
+
+For each agent provide:
+
+{
+  "agent_name": "",
+  "responsibility": "",
+  "input_data": [],
+  "processing_steps": [],
+  "output": ""
+}
+
+
+## 6. SEO Automation Trigger System
+
+Design automated triggers.
+
+Monitor:
+
+- New website changes
+- Ranking drops
+- Traffic changes
+- Technical errors
+- Competitor updates
+- Content performance changes
+- Backlink changes
+
+
+For each trigger provide:
+
+{
+  "trigger_name": "",
+  "condition": "",
+  "automation_action": "",
+  "priority": ""
+}
+
+
+## 7. SEO Pipeline Integration Strategy
+
+Analyze external integrations.
+
+Integrate:
+
+- Search Console
+- Analytics platforms
+- Crawlers
+- Keyword tools
+- Backlink tools
+- CMS systems
+- AI services
+- Notification systems
+
+
+For each integration provide:
+
+{
+  "integration": "",
+  "purpose": "",
+  "data_flow": "",
+  "pipeline_usage": ""
+}
+
+
+## 8. SEO Pipeline Scheduling Strategy
+
+Design automated execution schedules.
+
+Include:
+
+### Real-Time Processes
+
+Examples:
+
+- Critical error detection
+- Ranking alerts
+- Website monitoring
+
+
+### Daily Processes
+
+Examples:
+
+- Keyword tracking
+- Technical checks
+- Performance analysis
+
+
+### Weekly Processes
+
+Examples:
+
+- SEO reports
+- Content analysis
+- Competitor review
+
+
+### Monthly Processes
+
+Examples:
+
+- Full SEO audit
+- Strategy review
+- Growth analysis
+
+
+For each schedule provide:
+
+{
+  "process": "",
+  "frequency": "",
+  "tasks": [],
+  "expected_output": ""
+}
+
+
+## 9. SEO Pipeline Error Handling
+
+Design failure management.
+
+Handle:
+
+- API failures
+- Missing data
+- Invalid reports
+- Processing errors
+- AI generation errors
+- Integration failures
+
+
+Create:
+
+{
+  "error_type": "",
+  "detection_method": "",
+  "recovery_action": "",
+  "fallback_process": ""
+}
+
+## 10. SEO Pipeline Performance Scoring
+
+Generate pipeline effectiveness scores.
+
+Evaluate:
+
+- Automation efficiency score (0-100)
+- Data processing score (0-100)
+- AI intelligence score (0-100)
+- Workflow reliability score (0-100)
+- Scalability score (0-100)
+- Integration quality score (0-100)
+
+
+Calculate:
+
+- Overall SEO Pipeline Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "pipeline_maturity": "",
+  "strengths": [],
+  "limitations": [],
+  "improvement_opportunities": []
+}
+
+
+## 11. SEO Pipeline Implementation Roadmap
+
+Create pipeline deployment strategy.
+
+Include:
+
+### Phase 1: Infrastructure Setup
+
+Focus on:
+
+- Data sources
+- Database setup
+- API connections
+- Basic workflows
+
+
+### Phase 2: Automation Development
+
+Focus on:
+
+- Workflow automation
+- AI modules
+- Reporting systems
+- Alert systems
+
+
+### Phase 3: Intelligence Enhancement
+
+Focus on:
+
+- AI agents
+- Predictive analysis
+- Advanced recommendations
+- Automated optimization
+
+
+### Phase 4: Enterprise Scaling
+
+Focus on:
+
+- Multiple websites
+- Large datasets
+- Advanced orchestration
+- Custom workflows
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "implementation_steps": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 12. SEO Pipeline Monitoring Framework
+
+Create monitoring strategy.
+
+Track:
+
+- Pipeline execution status
+- Data quality
+- Automation performance
+- AI output accuracy
+- SEO improvement impact
+- System errors
+
+
+Recommend:
+
+- Monitoring frequency
+- Performance metrics
+- Maintenance workflow
+- Optimization cycle
+
+
+## 13. SEO Pipeline Security Strategy
+
+Design security framework.
+
+Include:
+
+- API security
+- Data protection
+- Access control
+- User permissions
+- Credential management
+- Audit logging
+
+
+For each security area provide:
+
+{
+  "security_area": "",
+  "risk": "",
+  "protection_method": "",
+  "implementation_priority": ""
+}
+
+
+## 14. Future SEO Pipeline Expansion
+
+Identify future capabilities.
+
+Include:
+
+- Autonomous SEO optimization
+- AI-driven execution
+- Predictive ranking models
+- Advanced search intelligence
+- Multi-channel marketing automation
+- Business growth prediction
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "pipeline_analysis": {},
+
+  "architecture": [],
+
+  "data_flow": [],
+
+  "workflow_modules": [],
+
+  "ai_orchestration": [],
+
+  "automation_triggers": [],
+
+  "integrations": [],
+
+  "scheduling_strategy": [],
+
+  "error_handling": [],
+
+  "performance_scores": {},
+
+  "implementation_roadmap": [],
+
+  "monitoring_framework": {},
+
+  "security_strategy": [],
+
+  "future_expansion": []
+}

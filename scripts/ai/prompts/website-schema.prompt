@@ -1,0 +1,309 @@
+id="wsp1m8p"
+You are an advanced Schema.org structured data and technical SEO AI strategist.
+
+Your task is to create a complete Website schema strategy using JSON-LD structured data to improve website entity recognition, search visibility, and rich result eligibility.
+
+Website Data:
+
+{{website}}
+
+
+Create a complete Website schema analysis and generation strategy.
+
+
+## 1. Website Information Analysis
+
+Analyze website details:
+
+Evaluate:
+
+- Website name
+- Website URL
+- Website description
+- Brand identity
+- Website purpose
+- Industry category
+- Target audience
+- Main services/products
+- Organization information
+
+
+Identify:
+
+- Missing website information
+- Entity recognition opportunities
+- SEO improvements
+- Structured data opportunities
+
+
+## 2. Website Schema Structure Planning
+
+Create WebSite schema structure including:
+
+Required properties:
+
+- @context
+- @type
+- name
+- url
+
+
+Additional properties:
+
+- description
+- publisher
+- potentialAction
+- inLanguage
+- copyrightYear
+- sameAs
+- about
+
+
+For each property analyze:
+
+{
+  "property": "",
+  "value": "",
+  "required": "",
+  "seo_importance": ""
+}
+
+
+## 3. Website Entity Analysis
+
+Analyze website entity signals:
+
+Evaluate:
+
+- Brand identity
+- Organization relationship
+- Social profiles
+- Business category
+- Content topics
+- Website authority
+
+
+Identify:
+
+- Knowledge graph opportunities
+- Entity consistency issues
+- Brand trust improvements
+## 4. JSON-LD Website Schema Generation
+
+Create a valid Schema.org WebSite JSON-LD structure.
+
+Generate:
+
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "",
+  "url": "",
+  "description": "",
+  "publisher": {},
+  "potentialAction": {}
+}
+
+
+Ensure:
+
+- Valid Schema.org format
+- Correct property usage
+- Search engine compatibility
+- Website entity recognition
+
+
+## 5. SearchAction Schema Analysis
+
+Analyze internal search functionality.
+
+Evaluate:
+
+- Website search availability
+- Search URL pattern
+- Query parameters
+- Search experience
+
+
+If available generate:
+
+{
+  "@type": "SearchAction",
+  "target": "",
+  "query-input": ""
+}
+
+
+Recommend:
+
+- Sitelinks Search Box optimization
+- Search experience improvements
+- Search indexing improvements
+
+
+## 6. Publisher Relationship Analysis
+
+Analyze website publisher information.
+
+Evaluate:
+
+- Organization relationship
+- Brand ownership
+- Logo information
+- Corporate identity
+- Social profiles
+
+
+Recommend:
+
+- Publisher schema connection
+- Organization schema linking
+- Brand consistency improvements
+
+
+## 7. SEO Optimization Analysis
+
+Analyze website search visibility.
+
+Optimize:
+
+- Website title
+- Description
+- Entity information
+- Internal search
+- Navigation structure
+- Content relationships
+
+
+Recommend:
+
+- Schema improvements
+- Technical SEO enhancements
+- Knowledge graph opportunities
+
+
+## 8. Rich Results Eligibility Analysis
+
+Evaluate:
+
+- Structured data validity
+- Search appearance improvements
+- Entity understanding
+- Rich result opportunities
+
+
+Identify:
+
+- Missing properties
+- Schema errors
+- Enhancement opportunities
+## 9. Website Schema Validation Rules
+
+Validate WebSite schema implementation.
+
+Check:
+
+- Required properties
+- Recommended properties
+- URL accuracy
+- Name consistency
+- Description quality
+- Publisher relationship
+- SearchAction validity
+- Schema.org compliance
+
+
+Return validation report:
+
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "improvements": []
+}
+
+
+## 10. Website Schema Quality Scoring
+
+Generate schema quality scores.
+
+Evaluate:
+
+- Schema completeness score (0-100)
+- Entity recognition score (0-100)
+- Search visibility score (0-100)
+- Technical SEO score (0-100)
+- Rich result readiness score (0-100)
+
+
+Calculate:
+
+- Overall Website Schema Score
+
+
+## 11. Implementation Strategy
+
+Create implementation recommendations.
+
+Include:
+
+- JSON-LD placement method
+- Framework integration approach
+- CMS implementation
+- Dynamic schema generation
+- Schema maintenance workflow
+
+
+Recommend:
+
+- Schema testing process
+- Search monitoring
+- Error tracking
+- Future schema expansion
+
+
+## 12. Website SEO Growth Strategy
+
+Create long-term optimization recommendations.
+
+Include:
+
+- Brand entity optimization
+- Content structure improvements
+- Internal linking strategy
+- Organization relationship improvements
+- Search visibility growth
+- Knowledge graph enhancement
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "website_analysis": {},
+
+  "schema_structure": {},
+
+  "entity_analysis": {},
+
+  "json_ld_schema": {},
+
+  "search_action_analysis": {},
+
+  "publisher_analysis": {},
+
+  "seo_strategy": {},
+
+  "rich_results_analysis": {},
+
+  "validation_report": {},
+
+  "quality_scores": {},
+
+  "implementation_strategy": {},
+
+  "growth_strategy": {}
+}

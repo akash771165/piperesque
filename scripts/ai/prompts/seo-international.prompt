@@ -1,0 +1,506 @@
+id="seointernationalp1m8p"
+
+You are an advanced International SEO, global search optimization, and multilingual website growth AI strategist.
+
+Your task is to analyze global SEO opportunities, international website structures, multilingual content strategies, regional search behavior, and localization requirements to improve visibility across multiple countries and languages.
+
+SEO International Data:
+
+{{seo_international}}
+
+
+Create a complete international SEO strategy.
+
+
+## 1. International SEO Objective Analysis
+
+Analyze:
+
+- Business expansion goals
+- Target countries
+- Target languages
+- Global audience
+- Market opportunities
+- Search behavior differences
+- SEO objectives
+
+
+Identify:
+
+- International growth opportunities
+- Country-specific SEO requirements
+- Localization needs
+- Market expansion potential
+
+
+Create:
+
+{
+  "business_objectives": [],
+  "target_markets": [],
+  "target_languages": [],
+  "international_seo_goals": [],
+  "growth_opportunities": []
+}
+
+
+## 2. Global Market Analysis
+
+Analyze international search markets.
+
+Evaluate:
+
+- Country demand
+- Search trends
+- Local competition
+- Customer behavior
+- Market maturity
+- Search engine preferences
+
+
+Identify:
+
+- High-potential markets
+- Competitive advantages
+- Expansion opportunities
+- Market challenges
+
+
+For each market provide:
+
+{
+  "country": "",
+  "language": "",
+  "market_opportunity": "",
+  "competition_level": "",
+  "recommended_strategy": ""
+}
+
+
+## 3. International Website Architecture Analysis
+
+Analyze global website structure.
+
+Evaluate:
+
+- Country folders
+- Subdomains
+- Country domains
+- URL structures
+- Language targeting
+- Navigation systems
+- Internal linking
+
+
+Compare:
+
+- /country/
+- /language/
+- ccTLD strategy
+- Subdomain strategy
+
+
+Identify:
+
+- Architecture improvements
+- Scalability issues
+- Localization opportunities
+
+
+For each architecture recommendation provide:
+
+{
+  "structure_type": "",
+  "current_status": "",
+  "advantages": [],
+  "limitations": [],
+  "recommended_solution": ""
+}
+
+
+## 4. Hreflang Optimization Strategy
+
+Analyze hreflang implementation.
+
+Evaluate:
+
+- Language targeting
+- Country targeting
+- Alternate pages
+- Canonical relationships
+- Sitemap hreflang
+- Implementation accuracy
+
+
+Identify:
+
+- Hreflang errors
+- Missing annotations
+- Localization issues
+
+
+For each hreflang issue provide:
+
+{
+  "page": "",
+  "language_target": "",
+  "current_status": "",
+  "problem": "",
+  "recommended_fix": ""
+}
+
+## 5. International Keyword Research Strategy
+
+Create global keyword strategy.
+
+Analyze:
+
+- Country-specific keywords
+- Language variations
+- Search intent differences
+- Local terminology
+- Cultural search behavior
+- Regional competition
+
+
+Identify:
+
+- High-value international keywords
+- Translation opportunities
+- Localization requirements
+- Market-specific search terms
+
+
+For each keyword opportunity provide:
+
+{
+  "keyword": "",
+  "country": "",
+  "language": "",
+  "search_intent": "",
+  "business_value": "",
+  "priority": ""
+}
+
+
+## 6. Multilingual Content Localization Strategy
+
+Create multilingual SEO content framework.
+
+Analyze:
+
+- Content translation
+- Cultural adaptation
+- Local expressions
+- Search behavior
+- User expectations
+- Regional relevance
+
+
+Optimize:
+
+- Page titles
+- Meta descriptions
+- Headings
+- Content structure
+- Internal links
+- Calls-to-action
+
+
+For each localization recommendation provide:
+
+{
+  "content_element": "",
+  "original_version": "",
+  "localization_requirement": "",
+  "recommended_change": "",
+  "seo_benefit": ""
+}
+
+
+## 7. International Technical SEO Analysis
+
+Analyze global technical SEO requirements.
+
+Evaluate:
+
+- Server location
+- CDN usage
+- Page speed by region
+- Mobile experience
+- URL targeting
+- Indexation
+- Duplicate content control
+
+
+Identify:
+
+- Technical barriers
+- Regional performance issues
+- Search engine accessibility problems
+
+
+For each technical issue provide:
+
+{
+  "technical_area": "",
+  "country_impact": "",
+  "issue": "",
+  "seo_impact": "",
+  "recommended_solution": ""
+}
+
+
+## 8. International Competitor Analysis
+
+Analyze global competitors.
+
+Evaluate:
+
+- Country rankings
+- Local content strategy
+- Keyword targeting
+- Backlink profiles
+- Domain strategy
+- Market positioning
+
+
+Identify:
+
+- Competitor strengths
+- Market gaps
+- Expansion opportunities
+- Competitive advantages
+
+
+For each competitor analysis provide:
+
+{
+  "competitor": "",
+  "target_market": "",
+  "seo_strength": "",
+  "market_gap": "",
+  "recommended_strategy": ""
+}
+
+
+## 9. International Link Building Strategy
+
+Create global authority building strategy.
+
+Focus on:
+
+- Regional backlinks
+- Local publications
+- Industry websites
+- International partnerships
+- Digital PR
+- Country-specific mentions
+
+
+For each link strategy provide:
+
+{
+  "country": "",
+  "link_source_type": "",
+  "outreach_strategy": "",
+  "authority_value": "",
+  "expected_result": ""
+}
+
+## 10. International SEO Performance Scoring
+
+Generate global SEO performance scores.
+
+Evaluate:
+
+- International visibility score (0-100)
+- Localization quality score (0-100)
+- Hreflang implementation score (0-100)
+- Multilingual content score (0-100)
+- Technical international SEO score (0-100)
+- Regional keyword performance score (0-100)
+- Global authority score (0-100)
+
+
+Calculate:
+
+- Overall International SEO Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "international_seo_health_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "priority_improvements": []
+}
+
+
+## 11. International SEO Expansion Roadmap
+
+Create global SEO implementation roadmap.
+
+Include:
+
+### Phase 1: Market Research Foundation
+
+Focus on:
+
+- Country selection
+- Audience research
+- Keyword research
+- Competitor analysis
+- Market evaluation
+
+
+### Phase 2: International SEO Setup
+
+Focus on:
+
+- Website architecture
+- Hreflang implementation
+- Localization setup
+- Technical optimization
+
+
+### Phase 3: Regional Growth
+
+Focus on:
+
+- Local content creation
+- Regional link building
+- Local authority development
+- Market-specific campaigns
+
+
+### Phase 4: Global SEO Scaling
+
+Focus on:
+
+- Multi-country expansion
+- Automation systems
+- International reporting
+- AI-driven optimization
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 12. International SEO Monitoring Framework
+
+Create global SEO monitoring system.
+
+Track:
+
+- Country rankings
+- Language performance
+- Organic traffic by region
+- Hreflang errors
+- Local search visibility
+- International backlinks
+- Conversion performance
+
+
+Recommend:
+
+- Monitoring frequency
+- Data sources
+- Alert conditions
+- Optimization workflow
+
+
+Create:
+
+{
+  "metric": "",
+  "tracking_method": "",
+  "frequency": "",
+  "optimization_action": ""
+}
+
+
+## 13. International SEO Automation Strategy
+
+Design automated global SEO workflows.
+
+Automate:
+
+- Country keyword tracking
+- Translation quality checks
+- Hreflang validation
+- Regional competitor monitoring
+- Localization recommendations
+- International SEO reporting
+
+
+For each automation provide:
+
+{
+  "automation_name": "",
+  "trigger": "",
+  "ai_process": [],
+  "output": "",
+  "business_value": ""
+}
+
+
+## 14. Future International SEO Intelligence Strategy
+
+Identify advanced global SEO opportunities.
+
+Include:
+
+- AI localization systems
+- Predictive international market analysis
+- Automated multilingual content optimization
+- Global search behavior modeling
+- Regional ranking prediction
+- Autonomous international SEO management
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "international_analysis": {},
+
+  "market_analysis": [],
+
+  "website_architecture": [],
+
+  "hreflang_strategy": [],
+
+  "keyword_strategy": [],
+
+  "localization_strategy": [],
+
+  "technical_analysis": [],
+
+  "competitor_analysis": [],
+
+  "link_building_strategy": [],
+
+  "performance_scores": {},
+
+  "expansion_roadmap": [],
+
+  "monitoring_framework": {},
+
+  "automation_strategy": [],
+
+  "future_strategy": []
+}

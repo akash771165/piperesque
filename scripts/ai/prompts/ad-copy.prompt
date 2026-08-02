@@ -1,0 +1,288 @@
+You are an advanced advertising copywriting and performance marketing AI strategist.
+
+Your task is to create high-converting ad copy optimized for clicks, engagement, leads, and sales across multiple advertising platforms.
+
+Ad Data:
+
+{{ad}}
+
+
+Create a complete advertising copy strategy.
+
+
+## 1. Campaign Analysis
+
+Analyze:
+
+- Campaign objective
+- Target audience
+- Customer persona
+- Product/service offering
+- Market position
+- Customer pain points
+- Desired action
+
+
+Identify:
+
+- Main customer problem
+- Value proposition
+- Emotional triggers
+- Buying motivations
+- Competitive advantages
+
+
+## 2. Audience Analysis
+
+Analyze target audience:
+
+Evaluate:
+
+- Demographics
+- Interests
+- Behaviors
+- Needs
+- Pain points
+- Objections
+- Purchase intent
+
+
+Create:
+
+{
+  "audience_segment": "",
+  "customer_problem": "",
+  "motivation": "",
+  "objections": [],
+  "desired_outcome": ""
+}
+
+
+## 3. Advertising Angle Strategy
+
+Generate multiple advertising angles:
+
+Include:
+
+- Problem-solution angle
+- Benefit-driven angle
+- Emotional angle
+- Trust angle
+- Urgency angle
+- Social proof angle
+- Competitive advantage angle
+
+
+For each angle provide:
+
+{
+  "angle": "",
+  "message": "",
+  "target_emotion": "",
+  "conversion_goal": ""
+}
+
+
+## 4. Platform-Specific Strategy
+
+Optimize copy for:
+
+- Google Ads
+- Facebook Ads
+- Instagram Ads
+- LinkedIn Ads
+- YouTube Ads
+- Display Ads
+
+
+Consider:
+
+- Character limits
+- User behavior
+- Platform intent
+- CTA style
+id="acp2m8p"
+## 5. Ad Copy Generation
+
+Create high-converting advertising copy.
+
+Generate:
+
+- Primary headlines
+- Secondary headlines
+- Descriptions
+- Short copy variations
+- Long-form ad copy
+- CTA variations
+- Hook variations
+
+
+Create multiple versions:
+
+Version A:
+- Benefit focused
+
+Version B:
+- Problem focused
+
+Version C:
+- Emotional focused
+
+Version D:
+- Trust focused
+
+Version E:
+- Urgency focused
+
+
+For each variation provide:
+
+{
+  "headline": "",
+  "description": "",
+  "cta": "",
+  "angle": "",
+  "target_audience": ""
+}
+
+
+## 6. Conversion Psychology Optimization
+
+Optimize ads using:
+
+- Attention hooks
+- Curiosity triggers
+- Pain points
+- Benefits
+- Social proof
+- Scarcity
+- Urgency
+- Risk reduction
+
+
+Analyze:
+
+- Why users will click
+- Why users will convert
+- Possible objections
+- Trust requirements
+
+
+## 7. A/B Testing Strategy
+
+Create testing recommendations.
+
+Test:
+
+- Headlines
+- CTAs
+- Images
+- Offers
+- Audience segments
+- Messaging angles
+
+
+For each test provide:
+
+{
+  "element": "",
+  "variation_a": "",
+  "variation_b": "",
+  "success_metric": ""
+}
+
+
+## 8. Ad Performance Prediction
+
+Generate performance scores:
+
+Evaluate:
+
+- Click-through potential (0-100)
+- Conversion potential (0-100)
+- Audience relevance (0-100)
+- Message strength (0-100)
+- Overall ad effectiveness (0-100)
+## 9. Campaign Optimization Strategy
+
+Create a complete ad optimization roadmap.
+
+Analyze:
+
+- Audience targeting improvements
+- Messaging improvements
+- Creative improvements
+- Offer optimization
+- Landing page alignment
+- Conversion tracking improvements
+
+
+Recommend:
+
+- Best performing angles
+- Audience segments to test
+- Retargeting opportunities
+- Scaling opportunities
+
+
+## 10. Budget & Performance Strategy
+
+Create advertising performance recommendations.
+
+Analyze:
+
+- Budget allocation
+- Cost per acquisition goals
+- Conversion objectives
+- Scaling approach
+- Campaign optimization cycle
+
+
+Provide:
+
+{
+  "budget_strategy": "",
+  "optimization_frequency": "",
+  "scaling_plan": "",
+  "performance_metrics": []
+}
+
+
+## 11. Final Ad Strategy Summary
+
+Generate:
+
+- Winning message strategy
+- Best audience approach
+- Recommended campaign structure
+- Expected outcomes
+- Improvement priorities
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "campaign_analysis": {},
+
+  "audience_strategy": {},
+
+  "advertising_angles": [],
+
+  "platform_strategy": {},
+
+  "ad_variations": [],
+
+  "testing_strategy": [],
+
+  "performance_scores": {},
+
+  "optimization_plan": {},
+
+  "budget_strategy": {},
+
+  "final_strategy": {}
+}

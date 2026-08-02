@@ -1,0 +1,308 @@
+You are an advanced Schema.org structured data and personal brand SEO AI strategist.
+
+Your task is to create a complete Person schema strategy using JSON-LD structured data to improve personal entity recognition, search visibility, knowledge understanding, and rich result eligibility.
+
+Person Data:
+
+{{person}}
+
+
+Create a complete Person schema analysis and generation strategy.
+
+
+## 1. Person Information Analysis
+
+Analyze person details:
+
+Evaluate:
+
+- Full name
+- Job title
+- Professional role
+- Biography
+- Expertise areas
+- Skills
+- Education
+- Work experience
+- Awards and achievements
+- Publications
+- Social profiles
+
+
+Identify:
+
+- Missing personal information
+- Entity recognition opportunities
+- Personal brand improvements
+- Search visibility enhancements
+
+
+## 2. Person Schema Structure Planning
+
+Create Person schema structure including:
+
+Required properties:
+
+- @context
+- @type
+- name
+- description
+
+
+Additional properties:
+
+- jobTitle
+- image
+- url
+- sameAs
+- worksFor
+- alumniOf
+- knowsAbout
+- award
+- hasCredential
+- email
+- telephone
+
+
+For each property analyze:
+
+{
+  "property": "",
+  "value": "",
+  "required": "",
+  "seo_importance": ""
+}
+
+
+## 3. Professional Identity Analysis
+
+Analyze:
+
+- Professional expertise
+- Industry authority
+- Career background
+- Knowledge areas
+- Personal brand positioning
+
+
+Identify:
+
+- Expertise signals
+- Trust factors
+- Authority-building opportunities
+## 4. JSON-LD Person Schema Generation
+
+Create a valid Schema.org Person JSON-LD structure.
+
+Generate:
+
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "",
+  "description": "",
+  "image": "",
+  "url": "",
+  "jobTitle": "",
+  "sameAs": [],
+  "worksFor": {},
+  "knowsAbout": []
+}
+
+
+Ensure:
+
+- Valid Schema.org format
+- Correct property usage
+- Search engine compatibility
+- Entity recognition support
+
+
+## 5. Social Profile & SameAs Analysis
+
+Analyze online identity signals.
+
+Evaluate:
+
+- LinkedIn profile
+- Social media profiles
+- Personal website
+- Portfolio pages
+- Author profiles
+- Professional platforms
+
+
+Recommend:
+
+- SameAs property improvements
+- Profile consistency
+- Entity verification opportunities
+
+
+## 6. Expertise & Knowledge Graph Optimization
+
+Optimize personal entity understanding.
+
+Analyze:
+
+- Areas of expertise
+- Professional topics
+- Industry associations
+- Published content
+- Speaking activities
+- Certifications
+
+
+Recommend:
+
+- Knowledge signals
+- Author authority improvements
+- Content attribution strategy
+
+
+## 7. Author SEO Optimization
+
+Analyze author visibility.
+
+Optimize:
+
+- Author bio pages
+- Article authorship
+- Expert credentials
+- Trust signals
+- Content contribution
+
+
+Recommend:
+
+- Author schema integration
+- E-E-A-T improvements
+- Personal brand growth strategy
+
+
+## 8. Relationship Entity Analysis
+
+Analyze connections:
+
+Include:
+
+- Organization relationships
+- Educational relationships
+- Professional relationships
+- Publication relationships
+
+
+Identify:
+
+- Entity connections
+- Authority signals
+- Missing relationships
+## 9. Person Schema Validation Rules
+
+Validate Person schema implementation.
+
+Check:
+
+- Required properties
+- Recommended properties
+- Name consistency
+- Profile URL accuracy
+- Social profile validity
+- Organization relationships
+- Education information
+- Expertise information
+
+
+Return validation report:
+
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "improvements": []
+}
+
+
+## 10. Person Schema Quality Scoring
+
+Generate schema quality scores.
+
+Evaluate:
+
+- Profile completeness score (0-100)
+- Entity recognition score (0-100)
+- Authority signal score (0-100)
+- SEO optimization score (0-100)
+- Trust signal score (0-100)
+
+
+Calculate:
+
+- Overall Person Schema Score
+
+
+## 11. Implementation Strategy
+
+Create implementation recommendations.
+
+Include:
+
+- JSON-LD placement method
+- Author page integration
+- CMS implementation
+- Dynamic person schema generation
+- Schema maintenance workflow
+
+
+Recommend:
+
+- Rich Results testing process
+- Search appearance monitoring
+- Entity optimization workflow
+
+
+## 12. Personal Brand Growth Strategy
+
+Create long-term recommendations.
+
+Include:
+
+- Content publishing strategy
+- Author authority building
+- Professional profile optimization
+- Social presence improvement
+- Knowledge graph enhancement
+- Industry credibility growth
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "person_analysis": {},
+
+  "schema_structure": {},
+
+  "professional_identity": {},
+
+  "json_ld_schema": {},
+
+  "social_profile_analysis": {},
+
+  "expertise_analysis": {},
+
+  "author_seo_strategy": {},
+
+  "entity_relationships": [],
+
+  "validation_report": {},
+
+  "quality_scores": {},
+
+  "implementation_strategy": {},
+
+  "personal_brand_strategy": {}
+}

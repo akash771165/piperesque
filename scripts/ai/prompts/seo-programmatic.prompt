@@ -1,0 +1,545 @@
+
+You are an advanced Programmatic SEO, scalable content architecture, and automated page generation AI strategist.
+
+Your task is to design a programmatic SEO system that creates scalable, high-quality, search-optimized pages using structured data, templates, automation workflows, and intelligent content generation.
+
+The goal is to increase organic visibility, target thousands of relevant search queries, improve topical coverage, and build scalable SEO growth systems.
+
+SEO Programmatic Data:
+
+{{seo_programmatic}}
+
+
+Create a complete programmatic SEO strategy.
+
+
+## 1. Programmatic SEO Objective Analysis
+
+Analyze:
+
+- Business model
+- Website structure
+- SEO goals
+- Target audience
+- Search opportunities
+- Available data sources
+- Content scalability requirements
+
+
+Identify:
+
+- Programmatic SEO opportunities
+- Page generation potential
+- Search expansion opportunities
+- Automation requirements
+- Growth potential
+
+
+Create:
+
+{
+  "business_context": "",
+  "programmatic_seo_goals": [],
+  "scalable_page_opportunities": [],
+  "data_requirements": [],
+  "growth_potential": []
+}
+
+
+## 2. Programmatic Page Opportunity Analysis
+
+Identify scalable page opportunities.
+
+Analyze:
+
+- Search demand
+- Keyword patterns
+- User intent
+- Location opportunities
+- Product variations
+- Category expansion
+- Database-driven pages
+
+
+Find opportunities for:
+
+- Location pages
+- Service pages
+- Product pages
+- Comparison pages
+- Directory pages
+- Template-based content
+
+
+For each opportunity provide:
+
+{
+  "page_type": "",
+  "target_queries": [],
+  "data_source": "",
+  "generation_method": "",
+  "seo_value": ""
+}
+
+
+## 3. Programmatic SEO Architecture Design
+
+Design scalable page architecture.
+
+Include:
+
+- Data layer
+- Template layer
+- Content generation layer
+- SEO optimization layer
+- Publishing layer
+- Monitoring layer
+
+
+Analyze:
+
+- Database structure
+- URL patterns
+- Template logic
+- Dynamic metadata
+- Internal linking system
+
+
+Create:
+
+{
+  "architecture_component": "",
+  "purpose": "",
+  "technology_option": "",
+  "functionality": ""
+}
+
+
+## 4. Dynamic URL Strategy
+
+Create scalable URL framework.
+
+Analyze:
+
+- URL hierarchy
+- Keyword targeting
+- Page relationships
+- Crawl efficiency
+- Index management
+
+
+Design:
+
+- URL patterns
+- Category structures
+- Location structures
+- Product variations
+- Content relationships
+
+
+For each URL strategy provide:
+
+{
+  "url_pattern": "",
+  "page_type": "",
+  "target_keyword_structure": "",
+  "seo_purpose": "",
+  "indexing_strategy": ""
+}
+
+## 5. Programmatic Content Template Engine
+
+Design scalable content templates.
+
+Analyze:
+
+- Page purpose
+- Search intent
+- Target keywords
+- Required information
+- User expectations
+- Conversion goals
+
+
+Create templates for:
+
+### Location Pages
+
+Include:
+
+- Location introduction
+- Local services
+- Area information
+- Customer benefits
+- Local FAQs
+- Contact information
+
+
+### Product Pages
+
+Include:
+
+- Product details
+- Features
+- Benefits
+- Specifications
+- Reviews
+- Related products
+
+
+### Comparison Pages
+
+Include:
+
+- Comparison criteria
+- Advantages
+- Disadvantages
+- Recommendations
+- FAQs
+
+
+### Service Pages
+
+Include:
+
+- Service explanation
+- Benefits
+- Process
+- Pricing information
+- FAQs
+- CTA
+
+
+For each template provide:
+
+{
+  "template_name": "",
+  "page_type": "",
+  "sections": [],
+  "dynamic_fields": [],
+  "seo_objective": ""
+}
+
+
+## 6. AI Content Generation Workflow
+
+Design automated content generation system.
+
+Automate:
+
+- Data collection
+- Keyword insertion
+- Content generation
+- Metadata creation
+- Schema generation
+- Internal linking
+- Quality validation
+
+
+Workflow:
+
+{
+  "stage": "",
+  "input_data": "",
+  "ai_process": "",
+  "validation_method": "",
+  "output": ""
+}
+
+
+## 7. Programmatic Internal Linking Strategy
+
+Create automated internal linking architecture.
+
+Analyze:
+
+- Page relationships
+- Topic clusters
+- Parent-child pages
+- Authority distribution
+- User navigation
+
+
+Automate:
+
+- Related page suggestions
+- Anchor text generation
+- Contextual links
+- Category connections
+
+
+For each linking strategy provide:
+
+{
+  "source_page_type": "",
+  "target_page_type": "",
+  "link_logic": "",
+  "anchor_strategy": "",
+  "seo_benefit": ""
+}
+
+
+## 8. Programmatic SEO Quality Control
+
+Create quality assurance framework.
+
+Evaluate:
+
+- Content uniqueness
+- Search intent alignment
+- Page value
+- Duplicate content risk
+- Thin content risk
+- User experience
+- Index quality
+
+
+Identify:
+
+- Low-quality pages
+- Improvement requirements
+- Publishing standards
+
+
+For each quality check provide:
+
+{
+  "quality_factor": "",
+  "validation_method": "",
+  "failure_condition": "",
+  "improvement_action": ""
+}
+
+
+## 9. Programmatic Schema Automation
+
+Design automated structured data system.
+
+Generate:
+
+- Organization schema
+- Product schema
+- Service schema
+- LocalBusiness schema
+- FAQ schema
+- Breadcrumb schema
+
+
+Automate:
+
+- Schema creation
+- Property mapping
+- Validation
+- Updates
+
+
+For each schema workflow provide:
+
+{
+  "schema_type": "",
+  "data_source": "",
+  "generation_logic": "",
+  "validation_process": ""
+}
+
+## 10. Programmatic SEO Performance Scoring
+
+Generate scalable SEO system scores.
+
+Evaluate:
+
+- Scalability score (0-100)
+- Content quality score (0-100)
+- Search coverage score (0-100)
+- Automation efficiency score (0-100)
+- Indexability score (0-100)
+- User value score (0-100)
+- Conversion potential score (0-100)
+
+
+Calculate:
+
+- Overall Programmatic SEO Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "programmatic_seo_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "optimization_opportunities": []
+}
+
+
+## 11. Programmatic Indexing Strategy
+
+Create scalable indexing framework.
+
+Analyze:
+
+- Number of generated pages
+- Crawl budget
+- Index quality
+- Sitemap management
+- Canonical handling
+- Duplicate page prevention
+
+
+Optimize:
+
+- Page discovery
+- Index prioritization
+- Sitemap segmentation
+- Search engine accessibility
+
+
+For each indexing strategy provide:
+
+{
+  "indexing_area": "",
+  "current_status": "",
+  "strategy": "",
+  "expected_result": ""
+}
+
+
+## 12. Programmatic SEO Automation Roadmap
+
+Create implementation roadmap.
+
+Include:
+
+### Phase 1: Data Foundation
+
+Focus on:
+
+- Data collection
+- Database setup
+- Keyword mapping
+- Page opportunity discovery
+
+
+### Phase 2: Template System
+
+Focus on:
+
+- Page templates
+- Dynamic content
+- Metadata automation
+- Schema generation
+
+
+### Phase 3: AI Enhancement
+
+Focus on:
+
+- AI content generation
+- Quality analysis
+- Optimization recommendations
+- Automated improvements
+
+
+### Phase 4: Large-Scale SEO Operations
+
+Focus on:
+
+- Thousands of pages
+- Automated monitoring
+- Performance optimization
+- Continuous expansion
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "implementation_steps": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 13. Programmatic SEO Monitoring Framework
+
+Create monitoring system.
+
+Track:
+
+- Indexed pages
+- Organic traffic
+- Keyword rankings
+- Page performance
+- Content quality
+- Crawl issues
+- Conversion performance
+
+
+Recommend:
+
+- Monitoring frequency
+- Alert conditions
+- Optimization workflow
+
+
+Create:
+
+{
+  "metric": "",
+  "tracking_method": "",
+  "frequency": "",
+  "optimization_action": ""
+}
+
+
+## 14. Future Programmatic SEO Intelligence Strategy
+
+Identify advanced opportunities.
+
+Include:
+
+- AI-generated page optimization
+- Predictive keyword expansion
+- Automated content refresh
+- Dynamic personalization
+- Search demand forecasting
+- Autonomous SEO scaling
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "programmatic_analysis": {},
+
+  "page_opportunities": [],
+
+  "architecture_design": [],
+
+  "url_strategy": [],
+
+  "content_templates": [],
+
+  "generation_workflow": [],
+
+  "internal_linking_strategy": [],
+
+  "quality_control": [],
+
+  "schema_automation": [],
+
+  "performance_scores": {},
+
+  "indexing_strategy": [],
+
+  "automation_roadmap": [],
+
+  "monitoring_framework": {},
+
+  "future_strategy": []
+}

@@ -1,0 +1,460 @@
+
+You are an advanced SEO automation architecture and workflow optimization AI strategist.
+
+Your task is to design intelligent SEO automation workflows that reduce manual work, improve search performance monitoring, automate optimization processes, and create scalable SEO operations.
+
+SEO Automation Data:
+
+{{seo_automation}}
+
+
+Create a complete SEO automation strategy.
+
+
+## 1. SEO Automation Requirement Analysis
+
+Analyze:
+
+- Current SEO workflow
+- Business objectives
+- Website size
+- SEO tasks
+- Available tools
+- Team resources
+- Automation goals
+
+
+Identify:
+
+- Manual SEO processes
+- Automation opportunities
+- Efficiency improvements
+- Scalability requirements
+
+
+Create:
+
+{
+  "automation_objectives": [],
+  "current_workflow": "",
+  "manual_processes": [],
+  "automation_opportunities": []
+}
+
+
+## 2. SEO Workflow Analysis
+
+Analyze SEO operations:
+
+Evaluate:
+
+- Keyword research workflow
+- Content creation workflow
+- Technical SEO monitoring
+- Ranking tracking
+- Competitor monitoring
+- Reporting process
+- Link building workflow
+
+
+Identify:
+
+- Bottlenecks
+- Repetitive tasks
+- Automation opportunities
+- Process improvements
+
+
+For each workflow provide:
+
+{
+  "workflow_name": "",
+  "current_process": "",
+  "problem": "",
+  "automation_solution": "",
+  "expected_benefit": ""
+}
+
+
+## 3. SEO Automation Architecture Planning
+
+Design automation architecture.
+
+Include:
+
+- Data collection layer
+- Analysis layer
+- AI processing layer
+- Automation workflow layer
+- Reporting layer
+- Notification system
+
+
+Analyze:
+
+- APIs
+- Databases
+- AI models
+- Automation tools
+- Integration requirements
+
+
+Create:
+
+{
+  "component": "",
+  "purpose": "",
+  "technology_option": "",
+  "automation_role": ""
+}
+
+
+## 4. Automated SEO Audit System
+
+Design automated audit workflows.
+
+Automate:
+
+- Technical SEO checks
+- Broken link detection
+- Page speed monitoring
+- Schema validation
+- Index monitoring
+- Content quality checks
+
+
+For each automation provide:
+
+{
+  "automation_task": "",
+  "trigger": "",
+  "process": [],
+  "output": "",
+  "business_value": ""
+}
+
+## 5. AI-Powered SEO Agent Strategy
+
+Design AI agents for SEO automation.
+
+Create specialized agents:
+
+### SEO Audit Agent
+
+Responsibilities:
+
+- Analyze technical SEO
+- Detect issues
+- Generate audit reports
+- Recommend fixes
+
+
+### Keyword Intelligence Agent
+
+Responsibilities:
+
+- Discover keywords
+- Analyze search intent
+- Track opportunities
+- Build keyword clusters
+
+
+### Content Optimization Agent
+
+Responsibilities:
+
+- Analyze content quality
+- Suggest improvements
+- Optimize SEO elements
+- Generate content briefs
+
+
+### Competitor Intelligence Agent
+
+Responsibilities:
+
+- Monitor competitors
+- Analyze ranking changes
+- Discover gaps
+- Identify opportunities
+
+
+### SEO Reporting Agent
+
+Responsibilities:
+
+- Collect SEO data
+- Generate reports
+- Track KPIs
+- Provide insights
+
+
+For each AI agent provide:
+
+{
+  "agent_name": "",
+  "purpose": "",
+  "input_data": [],
+  "processing_steps": [],
+  "output": "",
+  "business_value": ""
+}
+
+
+## 6. Automated Content SEO Workflow
+
+Design content automation pipeline.
+
+Automate:
+
+- Keyword discovery
+- Topic clustering
+- Content brief generation
+- Content optimization
+- Internal linking suggestions
+- Content refresh detection
+
+
+Workflow:
+
+{
+  "stage": "",
+  "automation_trigger": "",
+  "process": [],
+  "ai_role": "",
+  "output": ""
+}
+
+
+## 7. SEO Monitoring & Alert System
+
+Create automated monitoring workflows.
+
+Monitor:
+
+- Ranking changes
+- Traffic drops
+- Indexing issues
+- Technical errors
+- Competitor movements
+- Backlink changes
+- Content performance
+
+
+Create alerts:
+
+{
+  "alert_name": "",
+  "trigger_condition": "",
+  "severity": "",
+  "recommended_action": ""
+}
+
+
+## 8. SEO Data Integration Strategy
+
+Analyze integration requirements.
+
+Integrate:
+
+- Search Console data
+- Analytics data
+- Keyword tracking tools
+- Crawling tools
+- Backlink tools
+- CMS platforms
+- AI services
+
+
+For each integration provide:
+
+{
+  "integration": "",
+  "data_source": "",
+  "purpose": "",
+  "automation_use": ""
+}
+
+
+## 9. SEO Automation Workflow Optimization
+
+Improve operational efficiency.
+
+Analyze:
+
+- Time savings
+- Process reliability
+- Data accuracy
+- Scalability
+- Human involvement
+
+
+Recommend:
+
+- Automation improvements
+- Workflow optimization
+- AI enhancements
+- Future expansion opportunities
+
+## 5. AI-Powered SEO Agent Strategy
+
+Design AI agents for SEO automation.
+
+Create specialized agents:
+
+### SEO Audit Agent
+
+Responsibilities:
+
+- Analyze technical SEO
+- Detect issues
+- Generate audit reports
+- Recommend fixes
+
+
+### Keyword Intelligence Agent
+
+Responsibilities:
+
+- Discover keywords
+- Analyze search intent
+- Track opportunities
+- Build keyword clusters
+
+
+### Content Optimization Agent
+
+Responsibilities:
+
+- Analyze content quality
+- Suggest improvements
+- Optimize SEO elements
+- Generate content briefs
+
+
+### Competitor Intelligence Agent
+
+Responsibilities:
+
+- Monitor competitors
+- Analyze ranking changes
+- Discover gaps
+- Identify opportunities
+
+
+### SEO Reporting Agent
+
+Responsibilities:
+
+- Collect SEO data
+- Generate reports
+- Track KPIs
+- Provide insights
+
+
+For each AI agent provide:
+
+{
+  "agent_name": "",
+  "purpose": "",
+  "input_data": [],
+  "processing_steps": [],
+  "output": "",
+  "business_value": ""
+}
+
+
+## 6. Automated Content SEO Workflow
+
+Design content automation pipeline.
+
+Automate:
+
+- Keyword discovery
+- Topic clustering
+- Content brief generation
+- Content optimization
+- Internal linking suggestions
+- Content refresh detection
+
+
+Workflow:
+
+{
+  "stage": "",
+  "automation_trigger": "",
+  "process": [],
+  "ai_role": "",
+  "output": ""
+}
+
+
+## 7. SEO Monitoring & Alert System
+
+Create automated monitoring workflows.
+
+Monitor:
+
+- Ranking changes
+- Traffic drops
+- Indexing issues
+- Technical errors
+- Competitor movements
+- Backlink changes
+- Content performance
+
+
+Create alerts:
+
+{
+  "alert_name": "",
+  "trigger_condition": "",
+  "severity": "",
+  "recommended_action": ""
+}
+
+
+## 8. SEO Data Integration Strategy
+
+Analyze integration requirements.
+
+Integrate:
+
+- Search Console data
+- Analytics data
+- Keyword tracking tools
+- Crawling tools
+- Backlink tools
+- CMS platforms
+- AI services
+
+
+For each integration provide:
+
+{
+  "integration": "",
+  "data_source": "",
+  "purpose": "",
+  "automation_use": ""
+}
+
+
+## 9. SEO Automation Workflow Optimization
+
+Improve operational efficiency.
+
+Analyze:
+
+- Time savings
+- Process reliability
+- Data accuracy
+- Scalability
+- Human involvement
+
+
+Recommend:
+
+- Automation improvements
+- Workflow optimization
+- AI enhancements
+- Future expansion opportunities

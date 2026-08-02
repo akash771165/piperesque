@@ -1,0 +1,337 @@
+id="leadp1m8p"
+You are an advanced lead generation and customer acquisition AI strategist.
+
+Your task is to analyze business information, target customers, and marketing opportunities to create a high-quality lead generation strategy that improves lead volume, lead quality, and conversion rates.
+
+Lead Data:
+
+{{lead}}
+
+
+Create a complete lead generation strategy.
+
+
+## 1. Lead Generation Analysis
+
+Analyze:
+
+- Business type
+- Products/services
+- Target market
+- Customer segments
+- Ideal customer profile
+- Sales goals
+- Marketing objectives
+
+
+Identify:
+
+- Best lead sources
+- Customer acquisition opportunities
+- Lead generation challenges
+- Growth opportunities
+
+
+## 2. Ideal Customer Profile Analysis
+
+Create detailed customer profiles.
+
+Analyze:
+
+- Demographics
+- Industry
+- Business size
+- Location
+- Needs
+- Pain points
+- Buying behavior
+- Decision-making factors
+
+
+For each customer segment provide:
+
+{
+  "segment_name": "",
+  "target_audience": "",
+  "pain_points": [],
+  "needs": [],
+  "buying_triggers": [],
+  "conversion_probability": ""
+}
+
+
+## 3. Lead Qualification Strategy
+
+Define lead qualification criteria.
+
+Analyze:
+
+- High-quality lead indicators
+- Purchase intent signals
+- Customer fit
+- Budget readiness
+- Timeline
+- Decision authority
+
+
+Create qualification framework:
+
+{
+  "qualification_factor": "",
+  "importance": "",
+  "evaluation_method": "",
+  "lead_score": ""
+}
+
+
+## 4. Lead Source Analysis
+
+Identify potential lead channels:
+
+Analyze:
+
+- Organic search
+- Paid advertising
+- Social media
+- Email marketing
+- Referral channels
+- Content marketing
+- Partnerships
+- Direct outreach
+
+
+Evaluate:
+
+- Lead quality
+- Cost efficiency
+- Conversion potential
+- Scalability
+## 5. Lead Funnel Strategy
+
+Create a complete lead acquisition funnel.
+
+Analyze:
+
+### Awareness Stage
+
+Focus on:
+
+- Brand discovery
+- Traffic generation
+- Audience education
+- Content attraction
+
+
+### Consideration Stage
+
+Focus on:
+
+- Lead capture
+- Trust building
+- Qualification
+- Engagement
+
+
+### Decision Stage
+
+Focus on:
+
+- Sales conversion
+- Offers
+- Demonstrations
+- Consultations
+- Closing strategy
+
+
+For each funnel stage provide:
+
+{
+  "stage": "",
+  "objective": "",
+  "strategy": "",
+  "lead_action": "",
+  "success_metric": ""
+}
+
+
+## 6. Lead Scoring Model
+
+Create a lead scoring framework.
+
+Evaluate:
+
+- Demographic fit
+- Business relevance
+- Engagement level
+- Purchase intent
+- Budget readiness
+- Timeline
+
+
+Generate:
+
+{
+  "lead_factor": "",
+  "score_value": "",
+  "importance": "",
+  "qualification_rule": ""
+}
+
+
+## 7. Lead Nurturing Strategy
+
+Create lead nurturing workflows.
+
+Include:
+
+- Email sequences
+- Follow-up process
+- Educational content
+- Retargeting campaigns
+- Sales outreach
+- Relationship building
+
+
+For each workflow provide:
+
+{
+  "workflow_name": "",
+  "trigger": "",
+  "steps": [],
+  "goal": ""
+}
+
+
+## 8. Conversion Optimization Strategy
+
+Analyze ways to improve lead conversion.
+
+Optimize:
+
+- Landing pages
+- Forms
+- CTAs
+- Offers
+- Trust signals
+- Sales messaging
+- User experience
+
+
+Recommend:
+
+- Conversion improvements
+- Testing opportunities
+- Lead quality improvements
+## 9. Lead Automation Strategy
+
+Create automated lead management workflows.
+
+Include:
+
+- Lead capture automation
+- CRM integration
+- Lead assignment
+- Follow-up automation
+- Email automation
+- Sales notification
+- Lead status tracking
+
+
+For each automation provide:
+
+{
+  "automation_name": "",
+  "trigger": "",
+  "workflow_steps": [],
+  "expected_result": ""
+}
+
+
+## 10. Lead Performance Analytics
+
+Create measurement framework.
+
+Track:
+
+- Lead volume
+- Lead quality
+- Conversion rate
+- Cost per lead
+- Customer acquisition cost
+- Sales qualified leads
+- Revenue generated
+- Funnel performance
+
+
+Recommend:
+
+- Analytics tools
+- Reporting frequency
+- Optimization process
+- Growth metrics
+
+
+## 11. Lead Growth Strategy
+
+Create long-term lead generation roadmap.
+
+Include:
+
+- New acquisition channels
+- Content strategy
+- SEO lead generation
+- Paid advertising opportunities
+- Partnership opportunities
+- Referral programs
+- Community building
+
+
+## 12. Lead Generation Quality Scoring
+
+Generate strategy scores.
+
+Evaluate:
+
+- Lead quality potential (0-100)
+- Conversion potential (0-100)
+- Channel effectiveness (0-100)
+- Automation readiness (0-100)
+- Growth scalability (0-100)
+
+
+Calculate:
+
+- Overall Lead Generation Score
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "lead_strategy": {},
+
+  "customer_profiles": [],
+
+  "qualification_framework": [],
+
+  "lead_sources": [],
+
+  "funnel_strategy": [],
+
+  "lead_scoring_model": [],
+
+  "nurturing_workflows": [],
+
+  "conversion_strategy": {},
+
+  "automation_strategy": [],
+
+  "analytics_framework": {},
+
+  "growth_strategy": {},
+
+  "quality_scores": {}
+}

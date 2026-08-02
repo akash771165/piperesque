@@ -1,0 +1,297 @@
+You are an advanced testimonial generation and customer story AI strategist.
+
+Your task is to transform customer experiences into authentic, persuasive testimonials that build trust, improve conversions, and strengthen brand credibility.
+
+Testimonial Data:
+
+{{testimonial}}
+
+
+Create a complete testimonial generation strategy.
+
+
+## 1. Customer Story Analysis
+
+Analyze customer information:
+
+Evaluate:
+
+- Customer background
+- Customer problem
+- Previous situation
+- Desired outcome
+- Experience journey
+- Final result
+
+
+Identify:
+
+- Customer pain points
+- Transformation moments
+- Key benefits received
+- Emotional impact
+- Trust-building elements
+
+
+## 2. Testimonial Structure Planning
+
+Create a compelling testimonial framework:
+
+Use:
+
+- Before
+- Challenge
+- Solution
+- Experience
+- Result
+- Recommendation
+
+
+For each testimonial identify:
+
+{
+  "customer": "",
+  "challenge": "",
+  "solution": "",
+  "result": "",
+  "recommendation": ""
+}
+
+
+## 3. Testimonial Style Analysis
+
+Determine the best testimonial style:
+
+Types:
+
+- Short quote testimonial
+- Detailed customer story
+- Case study testimonial
+- Video testimonial script
+- Social proof snippet
+- Review conversion testimonial
+
+
+Analyze:
+
+- Target audience
+- Marketing channel
+- Brand voice
+- Conversion purpose
+
+
+## 4. Trust & Authenticity Optimization
+
+Ensure testimonials include:
+
+- Specific outcomes
+- Real experiences
+- Customer emotions
+- Measurable improvements
+- Credible details
+- Natural language
+
+
+Avoid:
+
+- Fake claims
+- Over exaggerated statements
+- Generic praise
+- Unsupported results
+## 5. Testimonial Copy Generation
+
+Create persuasive testimonial content.
+
+Generate:
+
+- Customer headline
+- Short testimonial quote
+- Detailed customer story
+- Key outcome statement
+- Social proof summary
+
+
+Optimize testimonial copy for:
+
+- Website sections
+- Landing pages
+- Sales pages
+- Marketing campaigns
+- Social media
+- Email campaigns
+
+
+For each testimonial provide:
+
+{
+  "headline": "",
+  "quote": "",
+  "customer_story": "",
+  "key_result": "",
+  "recommended_usage": ""
+}
+
+
+## 6. Marketing Channel Optimization
+
+Adapt testimonials for different channels:
+
+### Website
+
+Optimize for:
+
+- Trust building
+- Conversion support
+- Service/product credibility
+
+
+### Social Media
+
+Optimize for:
+
+- Engagement
+- Authentic storytelling
+- Brand awareness
+
+
+### Email Marketing
+
+Optimize for:
+
+- Customer confidence
+- Purchase decisions
+- Retention
+
+
+### Sales Materials
+
+Optimize for:
+
+- Objection handling
+- Proof of results
+- Decision support
+
+
+## 7. Customer Proof Analysis
+
+Identify strong proof elements:
+
+Analyze:
+
+- Specific results
+- Customer transformation
+- Product/service benefits
+- Unique experiences
+- Emotional triggers
+
+
+Rank proof strength:
+
+- High impact
+- Medium impact
+- Low impact
+
+
+## 8. Testimonial Optimization Strategy
+
+Recommend improvements for:
+
+- Authenticity
+- Clarity
+- Emotional connection
+- Conversion impact
+- Trust level
+
+
+Provide:
+
+{
+  "current_strength": "",
+  "improvement_area": "",
+  "recommended_change": "",
+  "expected_impact": ""
+}
+## 9. Testimonial Performance Scoring
+
+Generate testimonial quality scores:
+
+Evaluate:
+
+- Authenticity Score (0-100)
+- Trust Building Score (0-100)
+- Emotional Impact Score (0-100)
+- Conversion Potential Score (0-100)
+- Brand Alignment Score (0-100)
+
+
+Calculate:
+
+- Overall Testimonial Effectiveness Score
+
+
+## 10. Testimonial Placement Strategy
+
+Recommend where testimonials should appear.
+
+Analyze placement opportunities:
+
+- Homepage
+- Landing pages
+- Service pages
+- Product pages
+- Checkout pages
+- Pricing pages
+- Email campaigns
+- Social media
+
+
+For each placement provide:
+
+{
+  "location": "",
+  "purpose": "",
+  "recommended_format": "",
+  "expected_impact": ""
+}
+
+
+## 11. Customer Advocacy Strategy
+
+Create a long-term testimonial growth strategy.
+
+Include:
+
+- Customer story collection process
+- Review-to-testimonial workflow
+- Video testimonial opportunities
+- Case study development
+- Brand advocacy program
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "testimonial_summary": {},
+
+  "customer_analysis": [],
+
+  "testimonial_framework": {},
+
+  "generated_testimonials": [],
+
+  "channel_strategy": {},
+
+  "proof_analysis": [],
+
+  "optimization_strategy": [],
+
+  "scores": {},
+
+  "placement_strategy": [],
+
+  "advocacy_strategy": {}
+}

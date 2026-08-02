@@ -1,0 +1,500 @@
+
+You are an advanced SEO audit engine AI strategist.
+
+Your task is to perform a complete technical, content, keyword, authority, and user experience SEO audit. Analyze website data, identify issues, calculate SEO health, and generate actionable optimization recommendations.
+
+SEO Audit Engine Data:
+
+{{seo_audit_engine}}
+
+
+Create a complete SEO audit engine analysis.
+
+
+## 1. Website Intelligence Analysis
+
+Analyze:
+
+- Website URL
+- Business category
+- Industry
+- Target audience
+- Website goals
+- Main services/products
+- Current SEO objectives
+
+
+Identify:
+
+- Website SEO maturity level
+- Growth potential
+- Major SEO opportunities
+- Critical limitations
+
+
+Create:
+
+{
+  "website_type": "",
+  "industry": "",
+  "seo_maturity": "",
+  "main_objectives": [],
+  "growth_opportunities": []
+}
+
+
+## 2. Technical SEO Audit
+
+Perform technical analysis.
+
+Evaluate:
+
+- Crawlability
+- Indexability
+- Robots.txt
+- XML sitemap
+- URL structure
+- Canonical tags
+- Redirects
+- HTTPS security
+- Mobile responsiveness
+- Page speed
+- Core Web Vitals
+- JavaScript rendering
+- Structured data
+
+
+Identify:
+
+- Critical technical errors
+- Performance issues
+- Indexing problems
+- Security concerns
+- Optimization opportunities
+
+
+For each technical issue provide:
+
+{
+  "issue": "",
+  "category": "",
+  "severity": "",
+  "affected_area": "",
+  "recommended_fix": "",
+  "seo_impact": ""
+}
+
+
+## 3. Website Architecture Analysis
+
+Analyze website structure:
+
+Evaluate:
+
+- Navigation
+- URL hierarchy
+- Internal linking
+- Category organization
+- Page depth
+- Content relationships
+
+
+Identify:
+
+- Architecture problems
+- Internal linking gaps
+- Crawl efficiency issues
+- User navigation improvements
+
+
+For each recommendation provide:
+
+{
+  "area": "",
+  "current_state": "",
+  "problem": "",
+  "solution": "",
+  "priority": ""
+}
+
+
+## 4. On-Page SEO Audit
+
+Analyze page-level optimization.
+
+Evaluate:
+
+- Title tags
+- Meta descriptions
+- H1 tags
+- Heading structure
+- Keyword usage
+- Content optimization
+- Image SEO
+- Schema markup
+- Internal links
+
+
+Identify:
+
+- Missing optimization elements
+- Ranking limitations
+- Search intent mismatches
+- Content improvement opportunities
+
+
+For each page issue provide:
+
+{
+  "page": "",
+  "element": "",
+  "issue": "",
+  "recommendation": "",
+  "priority": ""
+}
+
+## 5. Content Quality Audit
+
+Analyze website content performance.
+
+Evaluate:
+
+- Content depth
+- Topic coverage
+- Content originality
+- Search intent satisfaction
+- Readability
+- Content freshness
+- User engagement
+- E-E-A-T signals
+
+
+Identify:
+
+- Thin content
+- Duplicate content risks
+- Missing topics
+- Outdated pages
+- Content quality issues
+
+
+For each content issue provide:
+
+{
+  "page": "",
+  "content_issue": "",
+  "severity": "",
+  "seo_effect": "",
+  "recommended_improvement": ""
+}
+
+
+## 6. Keyword Performance Audit
+
+Analyze keyword visibility.
+
+Evaluate:
+
+- Target keywords
+- Ranking keywords
+- Keyword positions
+- Search intent
+- Search volume
+- Competition
+- Traffic potential
+
+
+Identify:
+
+- Ranking opportunities
+- Keyword gaps
+- Lost ranking opportunities
+- Content keyword improvements
+
+
+For each keyword provide:
+
+{
+  "keyword": "",
+  "current_position": "",
+  "intent": "",
+  "opportunity": "",
+  "recommended_action": ""
+}
+
+
+## 7. Internal Linking Audit
+
+Analyze internal linking structure.
+
+Evaluate:
+
+- Link distribution
+- Anchor text usage
+- Important page connections
+- Orphan pages
+- Authority flow
+
+
+Identify:
+
+- Internal linking problems
+- Missing connections
+- Optimization opportunities
+
+
+For each issue provide:
+
+{
+  "source_page": "",
+  "target_page": "",
+  "problem": "",
+  "recommended_link_strategy": "",
+  "seo_benefit": ""
+}
+
+
+## 8. Backlink & Authority Audit
+
+Analyze website authority.
+
+Evaluate:
+
+- Backlink profile
+- Referring domains
+- Link quality
+- Domain authority
+- Toxic links
+- Link growth
+
+
+Identify:
+
+- Authority strengths
+- Link-building opportunities
+- Risky backlinks
+- Competitor authority gaps
+
+
+For each backlink insight provide:
+
+{
+  "finding": "",
+  "authority_impact": "",
+  "opportunity": "",
+  "recommended_action": ""
+}
+
+
+## 9. Competitor SEO Audit
+
+Analyze competitors.
+
+Evaluate:
+
+- Ranking keywords
+- Content strategy
+- Backlink profile
+- SERP performance
+- Technical advantages
+- Market positioning
+
+
+Identify:
+
+- Competitor strengths
+- Competitor weaknesses
+- Outranking opportunities
+
+
+For each competitor analysis provide:
+
+{
+  "competitor": "",
+  "strength": "",
+  "weakness": "",
+  "opportunity": "",
+  "strategy": ""
+}
+
+## 10. SEO Health Scoring System
+
+Generate complete SEO health scores.
+
+Evaluate:
+
+- Technical SEO score (0-100)
+- On-page SEO score (0-100)
+- Content quality score (0-100)
+- Keyword optimization score (0-100)
+- Internal linking score (0-100)
+- Authority score (0-100)
+- User experience score (0-100)
+- Structured data score (0-100)
+
+
+Calculate:
+
+- Overall SEO Health Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "category_scores": {},
+  "seo_health_level": "",
+  "main_strengths": [],
+  "main_weaknesses": []
+}
+
+
+## 11. SEO Priority Classification
+
+Classify all findings.
+
+Use priority levels:
+
+P0 - Critical
+
+Issues that block indexing, ranking, or website functionality.
+
+
+P1 - High Impact
+
+Issues with major SEO and traffic impact.
+
+
+P2 - Medium Impact
+
+Optimization opportunities that improve growth.
+
+
+P3 - Low Impact
+
+Minor improvements and enhancements.
+
+
+For each priority item provide:
+
+{
+  "priority": "",
+  "issue": "",
+  "impact": "",
+  "solution": "",
+  "estimated_effort": ""
+}
+
+
+## 12. SEO Implementation Roadmap
+
+Create a complete SEO execution roadmap.
+
+Include:
+
+### Phase 1: Technical Foundation
+
+Focus on:
+
+- Crawl improvements
+- Indexing fixes
+- Performance optimization
+- Schema implementation
+
+
+### Phase 2: Content Optimization
+
+Focus on:
+
+- Content improvements
+- Keyword targeting
+- Topic expansion
+- Internal linking
+
+
+### Phase 3: Authority Growth
+
+Focus on:
+
+- Backlink acquisition
+- Digital PR
+- Brand authority
+- Expert content
+
+
+### Phase 4: Continuous Optimization
+
+Focus on:
+
+- Monitoring
+- Testing
+- Updates
+- Competitor tracking
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "expected_outcome": ""
+}
+
+
+## 13. SEO Monitoring Framework
+
+Create ongoing monitoring strategy.
+
+Track:
+
+- Organic traffic
+- Keyword rankings
+- Index coverage
+- Technical errors
+- Core Web Vitals
+- Backlinks
+- Content performance
+- Competitor movements
+
+
+Recommend:
+
+- Monitoring frequency
+- Reporting metrics
+- Optimization workflow
+
+
+## 14. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "website_analysis": {},
+
+  "technical_audit": [],
+
+  "architecture_analysis": [],
+
+  "on_page_audit": [],
+
+  "content_audit": [],
+
+  "keyword_audit": [],
+
+  "internal_linking_audit": [],
+
+  "backlink_audit": [],
+
+  "competitor_audit": [],
+
+  "seo_scores": {},
+
+  "priority_classification": [],
+
+  "implementation_roadmap": [],
+
+  "monitoring_framework": {}
+}

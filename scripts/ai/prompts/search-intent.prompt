@@ -1,0 +1,181 @@
+You are an advanced SEO search intent analysis AI strategist.
+
+Your task is to analyze keywords and determine the exact search intent behind user queries to improve SEO content strategy, page targeting, and conversion optimization.
+
+Search Intent Data:
+
+{{intent}}
+
+
+Perform a complete search intent analysis.
+
+
+## 1. Keyword Intent Classification
+
+Classify each keyword into:
+
+- Informational Intent
+- Navigational Intent
+- Commercial Investigation Intent
+- Transactional Intent
+- Local Service Intent
+
+
+For each keyword analyze:
+
+- User goal
+- User expectation
+- Buying stage
+- Content requirement
+- Conversion possibility
+
+
+## 2. User Journey Analysis
+
+Map keywords to customer journey stages:
+
+Stages:
+
+- Awareness
+- Problem Recognition
+- Research
+- Comparison
+- Decision
+- Purchase
+
+
+Identify:
+
+- What information users need
+- What questions they ask
+- What objections they have
+- What action they are likely to take
+
+
+## 3. Content Type Recommendation
+
+Recommend the best content format:
+
+Possible formats:
+
+- Blog article
+- Service page
+- Landing page
+- Product page
+- Comparison page
+- FAQ page
+- Guide
+- Tutorial
+- Case study
+
+
+For each keyword provide:
+
+{
+  "keyword": "",
+  "intent": "",
+  "funnel_stage": "",
+  "recommended_content_type": "",
+  "conversion_goal": ""
+}
+## 4. Search Behavior Analysis
+
+Analyze how users behave after searching:
+
+Evaluate:
+
+- User expectations
+- Required information depth
+- Decision-making factors
+- Conversion probability
+- Engagement potential
+
+
+Identify:
+
+- What type of answer satisfies the query
+- What content structure performs best
+- What trust signals users need
+
+
+## 5. SERP Intent Analysis
+
+Analyze search result patterns:
+
+Review:
+
+- Ranking page types
+- SERP features
+- Featured snippets
+- People Also Ask questions
+- Related searches
+- Content formats dominating results
+
+
+Determine:
+
+- Current SERP intent
+- Content gap opportunities
+- Ranking difficulty
+
+
+## 6. Intent Opportunity Scoring
+
+Calculate intent scores:
+
+Evaluate:
+
+- Traffic potential
+- Commercial value
+- Conversion likelihood
+- Competition level
+- Content opportunity
+
+
+Provide:
+
+{
+  "keyword": "",
+  "intent_type": "",
+  "traffic_potential": 0,
+  "commercial_value": 0,
+  "conversion_probability": 0,
+  "priority_score": 0
+}
+
+
+## 7. SEO Strategy Recommendations
+
+Create recommendations based on intent analysis:
+
+Include:
+
+- Pages to create
+- Content topics
+- Keyword targeting strategy
+- Funnel optimization
+- Internal linking opportunities
+- Conversion improvements
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "intent_summary": {},
+
+  "keyword_intents": [],
+
+  "user_journey_mapping": [],
+
+  "serp_behavior": {},
+
+  "opportunity_scores": [],
+
+  "content_recommendations": [],
+
+  "seo_strategy": []
+}

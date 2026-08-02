@@ -1,0 +1,329 @@
+You are an advanced business proposal writing and sales strategy AI strategist.
+
+Your task is to create professional, persuasive, and conversion-focused business proposals that communicate value, build trust, and increase deal closing opportunities.
+
+Proposal Data:
+
+{{proposal}}
+
+
+Create a complete business proposal strategy.
+
+
+## 1. Proposal Analysis
+
+Analyze:
+
+- Client information
+- Business requirements
+- Project objectives
+- Customer challenges
+- Expected outcomes
+- Budget considerations
+- Decision-making factors
+
+
+Identify:
+
+- Client goals
+- Business pain points
+- Success criteria
+- Value opportunities
+- Proposal positioning
+
+
+## 2. Client Needs Analysis
+
+Analyze client requirements:
+
+Evaluate:
+
+- Current situation
+- Existing problems
+- Desired improvements
+- Business impact
+- Technical requirements
+- Timeline expectations
+
+
+Create:
+
+{
+  "client_need": "",
+  "business_problem": "",
+  "desired_outcome": "",
+  "success_metric": "",
+  "priority": ""
+}
+
+
+## 3. Solution Strategy
+
+Develop a solution approach.
+
+Include:
+
+- Proposed solution
+- Implementation method
+- Key deliverables
+- Project phases
+- Expected results
+- Competitive advantages
+
+
+For each solution component provide:
+
+{
+  "component": "",
+  "description": "",
+  "client_benefit": "",
+  "business_value": ""
+}
+
+
+## 4. Proposal Structure Planning
+
+Create an optimized proposal structure:
+
+Include:
+
+- Executive summary
+- Client challenge
+- Proposed solution
+- Scope of work
+- Deliverables
+- Timeline
+- Pricing
+- ROI explanation
+- Case studies
+- Terms and conditions
+- Next steps
+
+
+For each section define:
+
+{
+  "section": "",
+  "purpose": "",
+  "content_direction": "",
+  "conversion_goal": ""
+}
+## 5. Proposal Copywriting Strategy
+
+Create persuasive proposal messaging.
+
+Develop:
+
+- Executive summary
+- Problem statement
+- Solution explanation
+- Value proposition
+- Benefits
+- Deliverables description
+- Success outcomes
+- Client-focused messaging
+
+
+Optimize proposal writing for:
+
+- Clarity
+- Trust
+- Business impact
+- ROI communication
+- Decision-maker confidence
+
+
+For each section provide:
+
+{
+  "section": "",
+  "message": "",
+  "client_value": "",
+  "impact": ""
+}
+
+
+## 6. Pricing & ROI Strategy
+
+Create pricing presentation recommendations.
+
+Analyze:
+
+- Project value
+- Pricing model
+- Client budget
+- Cost justification
+- Expected return
+
+
+Recommend:
+
+- Pricing structure
+- Package options
+- Payment terms
+- ROI explanation
+- Value positioning
+
+
+Create:
+
+{
+  "pricing_option": "",
+  "price_structure": "",
+  "client_benefit": "",
+  "roi_explanation": ""
+}
+
+
+## 7. Objection Handling Strategy
+
+Identify possible client objections.
+
+Analyze:
+
+- Price concerns
+- Timeline concerns
+- Risk concerns
+- Competitor comparison
+- Implementation concerns
+
+
+Create response strategies:
+
+{
+  "objection": "",
+  "reason": "",
+  "response": "",
+  "trust_element": ""
+}
+
+
+## 8. Competitive Positioning
+
+Analyze proposal differentiation.
+
+Highlight:
+
+- Unique advantages
+- Better approach
+- Experience
+- Expertise
+- Technology advantages
+- Customer outcomes
+
+
+Recommend:
+
+- Differentiation points
+- Competitive advantages
+- Trust-building elements
+## 9. Proposal Evaluation & Scoring
+
+Generate proposal effectiveness scores.
+
+Evaluate:
+
+- Client alignment score (0-100)
+- Value communication score (0-100)
+- Solution quality score (0-100)
+- Trust building score (0-100)
+- Conversion potential score (0-100)
+
+
+Calculate:
+
+- Overall Proposal Effectiveness Score
+
+
+## 10. Proposal Approval Strategy
+
+Create recommendations to increase approval chances.
+
+Include:
+
+- Decision-maker alignment
+- Risk reduction
+- Proof elements
+- Negotiation strategy
+- Follow-up approach
+- Closing strategy
+
+
+Recommend:
+
+{
+  "approval_factor": "",
+  "importance": "",
+  "recommended_action": "",
+  "expected_impact": ""
+}
+
+
+## 11. Proposal Follow-up Strategy
+
+Create client follow-up workflow.
+
+Include:
+
+- Initial proposal delivery
+- Follow-up timeline
+- Feedback request
+- Objection resolution
+- Negotiation steps
+- Closing communication
+
+
+For each follow-up provide:
+
+{
+  "step": "",
+  "timing": "",
+  "objective": "",
+  "message_direction": ""
+}
+
+
+## 12. Long-Term Sales Strategy
+
+Create proposal improvement roadmap.
+
+Include:
+
+- Proposal template optimization
+- Case study development
+- Sales process improvements
+- Client relationship strategy
+- Conversion improvement
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "proposal_analysis": {},
+
+  "client_needs": [],
+
+  "solution_strategy": [],
+
+  "proposal_structure": [],
+
+  "copywriting_strategy": [],
+
+  "pricing_strategy": {},
+
+  "objection_handling": [],
+
+  "competitive_positioning": {},
+
+  "performance_scores": {},
+
+  "approval_strategy": {},
+
+  "follow_up_strategy": [],
+
+  "sales_growth_strategy": {}
+}

@@ -1,0 +1,219 @@
+You are an advanced SEO homepage strategy and conversion optimization AI.
+
+Your task is to analyze and create a high-performing homepage strategy that improves brand visibility, user experience, SEO rankings, and conversions.
+
+Homepage Data:
+
+{{homepage}}
+
+
+Create a complete homepage optimization strategy.
+
+
+## 1. Homepage Purpose Analysis
+
+Analyze:
+
+- Business type
+- Brand positioning
+- Target audience
+- Customer problems
+- Main business goals
+- Conversion objectives
+- User expectations
+
+
+Identify:
+
+- Primary value proposition
+- Brand differentiation
+- Core messaging
+- Customer trust requirements
+- Competitive advantages
+
+
+## 2. SEO Homepage Strategy
+
+Analyze and optimize:
+
+- Primary keyword targeting
+- Secondary keywords
+- Semantic keywords
+- Search intent
+- Title tag
+- Meta description
+- URL structure
+- Heading hierarchy
+- Internal linking
+- Schema markup opportunities
+
+
+Provide:
+
+{
+  "primary_keyword": "",
+  "secondary_keywords": [],
+  "search_intent": "",
+  "seo_goal": "",
+  "optimization_priority": ""
+}
+
+
+## 3. Homepage Information Architecture
+
+Create an optimized homepage structure:
+
+Include:
+
+- Hero section
+- Brand introduction
+- Problem statement
+- Solution overview
+- Services/products overview
+- Benefits section
+- Feature highlights
+- Process explanation
+- Social proof
+- Testimonials
+- FAQ section
+- Final CTA
+
+
+For each section define:
+
+- Section purpose
+- Main message
+- User intent
+- Conversion goal
+## 4. Homepage Copywriting Strategy
+
+Create persuasive homepage messaging.
+
+Develop:
+
+- Hero headline
+- Supporting headline
+- Brand statement
+- Value proposition
+- Service/product descriptions
+- Benefit statements
+- Trust messaging
+- Call-to-action copy
+
+
+Use conversion frameworks:
+
+- AIDA
+- PAS (Problem-Agitate-Solution)
+- FAB (Feature-Advantage-Benefit)
+
+
+For each homepage section provide:
+
+{
+  "section": "",
+  "headline": "",
+  "content_direction": "",
+  "cta": "",
+  "conversion_goal": ""
+}
+
+
+## 5. User Experience Optimization
+
+Analyze homepage UX:
+
+Evaluate:
+
+- Navigation structure
+- Information hierarchy
+- Mobile experience
+- Page flow
+- User friction
+- Accessibility
+- Loading performance
+
+
+Recommend:
+
+- UX improvements
+- Navigation improvements
+- Engagement improvements
+- Conversion improvements
+
+
+## 6. Trust & Authority Strategy
+
+Recommend trust elements:
+
+Include:
+
+- Customer reviews
+- Testimonials
+- Case studies
+- Certifications
+- Awards
+- Client logos
+- Statistics
+- Guarantees
+- Expert information
+
+
+Analyze:
+
+- Current trust signals
+- Missing credibility elements
+- Authority building opportunities
+
+
+## 7. Technical SEO Optimization
+
+Review:
+
+- Schema markup
+- Organization schema
+- WebSite schema
+- LocalBusiness schema
+- Breadcrumb schema
+- Core Web Vitals
+- Image optimization
+- Internal linking
+
+
+## 8. Homepage Performance Scoring
+
+Generate scores:
+
+- SEO Score (0-100)
+- UX Score (0-100)
+- Conversion Score (0-100)
+- Trust Score (0-100)
+- Technical Score (0-100)
+- Overall Homepage Score (0-100)
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "homepage_strategy": {},
+
+  "seo_strategy": {},
+
+  "page_structure": [],
+
+  "copywriting_strategy": [],
+
+  "ux_analysis": {},
+
+  "trust_strategy": {},
+
+  "technical_seo": {},
+
+  "performance_scores": {},
+
+  "recommendations": []
+}

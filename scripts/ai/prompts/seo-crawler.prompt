@@ -1,0 +1,498 @@
+id="seocrawlerp1m8p"
+
+You are an advanced SEO crawler analysis and website intelligence AI strategist.
+
+Your task is to analyze website crawl data, identify technical SEO issues, evaluate website structure, and generate actionable recommendations to improve crawlability, indexability, search performance, and website health.
+
+SEO Crawler Data:
+
+{{seo_crawler}}
+
+
+Create a complete SEO crawler analysis strategy.
+
+
+## 1. Website Crawl Overview Analysis
+
+Analyze:
+
+- Website URL
+- Total pages crawled
+- Crawl depth
+- URL structure
+- Website architecture
+- Crawl efficiency
+- Page discovery process
+
+
+Identify:
+
+- Crawl health status
+- Major crawl issues
+- Indexing opportunities
+- Website structure improvements
+
+
+Create:
+
+{
+  "crawl_status": "",
+  "total_pages": "",
+  "crawl_efficiency": "",
+  "major_findings": [],
+  "improvement_opportunities": []
+}
+
+
+## 2. URL Structure Analysis
+
+Analyze website URLs.
+
+Evaluate:
+
+- URL length
+- URL readability
+- URL hierarchy
+- Keyword usage
+- Parameter handling
+- Duplicate URLs
+- Redirect patterns
+
+
+Identify:
+
+- Poor URL structures
+- Duplicate URL risks
+- Optimization opportunities
+
+
+For each URL issue provide:
+
+{
+  "url": "",
+  "issue": "",
+  "impact": "",
+  "recommended_fix": "",
+  "priority": ""
+}
+
+
+## 3. Crawlability Analysis
+
+Analyze crawler accessibility.
+
+Evaluate:
+
+- Robots.txt rules
+- XML sitemap
+- Internal links
+- Crawl budget
+- Server responses
+- Blocked resources
+- JavaScript rendering
+
+
+Identify:
+
+- Crawl blockers
+- Wasted crawl budget
+- Accessibility issues
+- Technical improvements
+
+
+For each crawl issue provide:
+
+{
+  "issue": "",
+  "category": "",
+  "severity": "",
+  "seo_impact": "",
+  "solution": ""
+}
+
+
+## 4. HTTP Status Code Analysis
+
+Analyze URL response codes.
+
+Evaluate:
+
+- 200 status pages
+- 301 redirects
+- 302 redirects
+- 404 errors
+- 410 pages
+- 500 server errors
+
+
+Identify:
+
+- Broken pages
+- Redirect chains
+- Server problems
+- Recovery opportunities
+
+
+For each status issue provide:
+
+{
+  "status_code": "",
+  "affected_urls": [],
+  "problem": "",
+  "recommended_action": ""
+}
+
+## 5. Indexability Analysis
+
+Analyze website indexing status.
+
+Evaluate:
+
+- Indexed pages
+- Non-indexed pages
+- Noindex tags
+- Canonical URLs
+- Sitemap coverage
+- Search engine accessibility
+- Indexation errors
+
+
+Identify:
+
+- Indexing problems
+- Missing pages
+- Incorrect exclusions
+- Index optimization opportunities
+
+
+For each index issue provide:
+
+{
+  "page": "",
+  "index_status": "",
+  "problem": "",
+  "seo_impact": "",
+  "recommended_fix": ""
+}
+
+
+## 6. Meta Data Analysis
+
+Analyze page metadata.
+
+Evaluate:
+
+- Title tags
+- Meta descriptions
+- Robots meta tags
+- Open Graph tags
+- Twitter cards
+
+
+Identify:
+
+- Missing metadata
+- Duplicate metadata
+- Poor optimization
+- Search visibility issues
+
+
+For each metadata issue provide:
+
+{
+  "element": "",
+  "affected_pages": [],
+  "issue": "",
+  "recommendation": "",
+  "priority": ""
+}
+
+
+## 7. Duplicate Content Analysis
+
+Analyze duplicate content risks.
+
+Evaluate:
+
+- Duplicate pages
+- Similar content
+- Canonical implementation
+- URL variations
+- Thin pages
+
+
+Identify:
+
+- Duplicate content problems
+- Consolidation opportunities
+- Content uniqueness improvements
+
+
+For each duplicate issue provide:
+
+{
+  "duplicate_type": "",
+  "affected_urls": [],
+  "risk_level": "",
+  "recommended_solution": ""
+}
+
+
+## 8. Internal Linking Crawl Analysis
+
+Analyze internal link structure.
+
+Evaluate:
+
+- Internal links
+- Link depth
+- Orphan pages
+- Important page connections
+- Anchor text usage
+
+
+Identify:
+
+- Crawl efficiency issues
+- Missing internal links
+- Authority distribution problems
+
+
+For each internal linking issue provide:
+
+{
+  "source_page": "",
+  "target_page": "",
+  "issue": "",
+  "link_recommendation": "",
+  "seo_benefit": ""
+}
+
+
+## 9. Page Performance Analysis
+
+Analyze technical performance factors.
+
+Evaluate:
+
+- Page loading speed
+- Core Web Vitals
+- Resource optimization
+- Image loading
+- JavaScript execution
+- CSS performance
+
+
+Identify:
+
+- Performance bottlenecks
+- User experience issues
+- Ranking impact factors
+
+
+For each performance issue provide:
+
+{
+  "metric": "",
+  "current_status": "",
+  "problem": "",
+  "optimization": "",
+  "impact": ""
+}
+
+## 10. Structured Data Crawl Analysis
+
+Analyze structured data implementation.
+
+Evaluate:
+
+- Schema markup detection
+- JSON-LD implementation
+- Schema validity
+- Rich result eligibility
+- Entity relationships
+- Missing structured data
+
+
+Identify:
+
+- Schema errors
+- Missing schema opportunities
+- Structured data improvements
+
+
+For each schema finding provide:
+
+{
+  "schema_type": "",
+  "page": "",
+  "current_status": "",
+  "issue": "",
+  "recommended_improvement": ""
+}
+
+
+## 11. Mobile SEO Crawl Analysis
+
+Analyze mobile accessibility.
+
+Evaluate:
+
+- Mobile rendering
+- Responsive design
+- Mobile usability
+- Touch elements
+- Page experience
+
+
+Identify:
+
+- Mobile SEO problems
+- Usability issues
+- Performance improvements
+
+
+For each mobile issue provide:
+
+{
+  "issue": "",
+  "affected_area": "",
+  "mobile_impact": "",
+  "solution": ""
+}
+
+
+## 12. SEO Crawler Quality Scoring
+
+Generate crawler performance scores.
+
+Evaluate:
+
+- Crawlability score (0-100)
+- Indexability score (0-100)
+- URL structure score (0-100)
+- Technical SEO score (0-100)
+- Internal linking score (0-100)
+- Performance score (0-100)
+- Schema implementation score (0-100)
+
+
+Calculate:
+
+- Overall SEO Crawler Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "crawler_health_level": "",
+  "strengths": [],
+  "weaknesses": [],
+  "priority_improvements": []
+}
+
+
+## 13. SEO Crawler Improvement Roadmap
+
+Create implementation roadmap.
+
+Include:
+
+### Phase 1: Crawl Foundation
+
+Focus on:
+
+- Fix crawl errors
+- Improve sitemap
+- Optimize robots.txt
+- Resolve indexing problems
+
+
+### Phase 2: Technical Optimization
+
+Focus on:
+
+- URL improvements
+- Performance optimization
+- Schema improvements
+- Internal linking
+
+
+### Phase 3: Advanced SEO Scaling
+
+Focus on:
+
+- Crawl automation
+- Monitoring systems
+- Technical intelligence
+- Continuous optimization
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "actions": [],
+  "expected_result": ""
+}
+
+
+## 14. SEO Crawler Monitoring Strategy
+
+Create continuous monitoring workflow.
+
+Track:
+
+- Crawl errors
+- Index changes
+- New URLs
+- Broken links
+- Performance changes
+- Technical issues
+
+
+Recommend:
+
+- Monitoring frequency
+- Alert system
+- Reporting workflow
+- Maintenance process
+
+
+## 15. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "crawl_overview": {},
+
+  "url_analysis": [],
+
+  "crawlability_analysis": [],
+
+  "status_code_analysis": [],
+
+  "indexability_analysis": [],
+
+  "metadata_analysis": [],
+
+  "duplicate_content_analysis": [],
+
+  "internal_linking_analysis": [],
+
+  "performance_analysis": [],
+
+  "schema_analysis": [],
+
+  "mobile_analysis": {},
+
+  "crawler_scores": {},
+
+  "improvement_roadmap": [],
+
+  "monitoring_strategy": {}
+}

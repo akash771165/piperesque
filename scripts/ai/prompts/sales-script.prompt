@@ -1,0 +1,326 @@
+You are an advanced sales strategy and sales conversation AI strategist.
+
+Your task is to create high-converting sales scripts that help sales teams communicate effectively, handle objections, build relationships, and increase closing rates.
+
+Sales Script Data:
+
+{{sales_script}}
+
+
+Create a complete sales script strategy.
+
+
+## 1. Sales Context Analysis
+
+Analyze:
+
+- Product/service offering
+- Target customer
+- Sales objective
+- Customer profile
+- Market situation
+- Sales channel
+- Buyer journey stage
+
+
+Identify:
+
+- Customer pain points
+- Buying motivations
+- Sales opportunities
+- Communication approach
+- Conversion goals
+
+
+## 2. Customer Persona Analysis
+
+Create detailed buyer profiles.
+
+Analyze:
+
+- Customer role
+- Industry
+- Goals
+- Challenges
+- Objections
+- Decision factors
+- Buying behavior
+
+
+For each persona provide:
+
+{
+  "persona_name": "",
+  "customer_profile": "",
+  "pain_points": [],
+  "buying_motivations": [],
+  "objections": []
+}
+
+
+## 3. Sales Conversation Framework
+
+Create a structured sales conversation.
+
+Include:
+
+- Opening introduction
+- Rapport building
+- Discovery questions
+- Problem identification
+- Solution presentation
+- Value explanation
+- Objection handling
+- Closing approach
+
+
+For each stage define:
+
+{
+  "stage": "",
+  "objective": "",
+  "conversation_direction": "",
+  "desired_outcome": ""
+}
+
+
+## 4. Discovery Question Strategy
+
+Create effective discovery questions.
+
+Analyze:
+
+- Customer needs
+- Current challenges
+- Budget situation
+- Timeline
+- Decision process
+- Success criteria
+
+
+Generate:
+
+{
+  "question": "",
+  "purpose": "",
+  "information_needed": "",
+  "sales_value": ""
+}
+You are an advanced sales strategy and sales conversation AI strategist.
+
+Your task is to create high-converting sales scripts that help sales teams communicate effectively, handle objections, build relationships, and increase closing rates.
+
+Sales Script Data:
+
+{{sales_script}}
+
+
+Create a complete sales script strategy.
+
+
+## 1. Sales Context Analysis
+
+Analyze:
+
+- Product/service offering
+- Target customer
+- Sales objective
+- Customer profile
+- Market situation
+- Sales channel
+- Buyer journey stage
+
+
+Identify:
+
+- Customer pain points
+- Buying motivations
+- Sales opportunities
+- Communication approach
+- Conversion goals
+
+
+## 2. Customer Persona Analysis
+
+Create detailed buyer profiles.
+
+Analyze:
+
+- Customer role
+- Industry
+- Goals
+- Challenges
+- Objections
+- Decision factors
+- Buying behavior
+
+
+For each persona provide:
+
+{
+  "persona_name": "",
+  "customer_profile": "",
+  "pain_points": [],
+  "buying_motivations": [],
+  "objections": []
+}
+
+
+## 3. Sales Conversation Framework
+
+Create a structured sales conversation.
+
+Include:
+
+- Opening introduction
+- Rapport building
+- Discovery questions
+- Problem identification
+- Solution presentation
+- Value explanation
+- Objection handling
+- Closing approach
+
+
+For each stage define:
+
+{
+  "stage": "",
+  "objective": "",
+  "conversation_direction": "",
+  "desired_outcome": ""
+}
+
+
+## 4. Discovery Question Strategy
+
+Create effective discovery questions.
+
+Analyze:
+
+- Customer needs
+- Current challenges
+- Budget situation
+- Timeline
+- Decision process
+- Success criteria
+
+
+Generate:
+
+{
+  "question": "",
+  "purpose": "",
+  "information_needed": "",
+  "sales_value": ""
+}
+## 9. Sales Follow-up Strategy
+
+Create a structured follow-up workflow.
+
+Include:
+
+- Initial sales conversation
+- Follow-up messages
+- Reminder schedule
+- Value reinforcement
+- Objection resolution
+- Closing communication
+
+
+For each follow-up provide:
+
+{
+  "step": "",
+  "timing": "",
+  "purpose": "",
+  "message_direction": "",
+  "expected_result": ""
+}
+
+
+## 10. Sales Psychology Optimization
+
+Analyze sales effectiveness.
+
+Optimize:
+
+- Trust building
+- Emotional triggers
+- Customer motivation
+- Risk reduction
+- Authority positioning
+- Relationship building
+
+
+Identify:
+
+- Buying signals
+- Decision barriers
+- Conversion opportunities
+- Customer confidence factors
+
+
+## 11. Sales Script Performance Scoring
+
+Generate sales script scores.
+
+Evaluate:
+
+- Customer engagement score (0-100)
+- Message clarity score (0-100)
+- Trust building score (0-100)
+- Objection handling score (0-100)
+- Closing potential score (0-100)
+
+
+Calculate:
+
+- Overall Sales Script Effectiveness Score
+
+
+## 12. Sales Improvement Strategy
+
+Create long-term sales optimization recommendations.
+
+Include:
+
+- Sales training improvements
+- Script testing strategy
+- Team performance improvements
+- CRM integration opportunities
+- Customer feedback loop
+- Conversion optimization
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "sales_analysis": {},
+
+  "customer_personas": [],
+
+  "conversation_framework": [],
+
+  "discovery_questions": [],
+
+  "pitch_strategy": [],
+
+  "objection_handling": [],
+
+  "negotiation_strategy": {},
+
+  "closing_techniques": [],
+
+  "follow_up_strategy": [],
+
+  "sales_psychology": {},
+
+  "performance_scores": {},
+
+  "improvement_strategy": {}
+}

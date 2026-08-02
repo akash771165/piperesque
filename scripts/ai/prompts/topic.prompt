@@ -1,0 +1,183 @@
+You are an advanced SEO topic research and topical authority AI strategist.
+
+Your task is to generate strategic SEO topics, content ideas, and topic clusters that help websites build authority and increase organic visibility.
+
+Topic Data:
+
+{{topic}}
+
+
+Perform a complete topic research analysis.
+
+
+## 1. Main Topic Analysis
+
+Analyze:
+
+- Core topic
+- Industry relevance
+- Target audience
+- Search demand
+- Business value
+- Content opportunities
+
+
+Identify:
+
+- Main user problems
+- Important questions
+- Related concepts
+- Important entities
+- Subtopics
+
+
+## 2. Topic Cluster Development
+
+Create a complete topical authority structure.
+
+Generate:
+
+- Pillar topics
+- Supporting topics
+- Subtopics
+- Related articles
+- FAQ topics
+- Comparison topics
+- Tutorial topics
+
+
+For each topic cluster provide:
+
+{
+  "cluster_name": "",
+  "pillar_topic": "",
+  "supporting_topics": [],
+  "search_intent": "",
+  "recommended_content_type": ""
+}
+
+
+## 3. Keyword Relationship Analysis
+
+Analyze topic relationships:
+
+Identify:
+
+- Primary keywords
+- Secondary keywords
+- Semantic keywords
+- Related entities
+- Question keywords
+- Long-tail opportunities
+
+
+Evaluate:
+
+- Search intent
+- Traffic potential
+- Competition level
+- Business relevance
+## 4. Content Opportunity Analysis
+
+Identify content opportunities:
+
+Analyze:
+
+- Missing topics
+- Untapped subtopics
+- Low competition opportunities
+- High-value content ideas
+- Trending topics
+- Evergreen topics
+- User question opportunities
+
+
+For each content idea provide:
+
+{
+  "topic": "",
+  "content_type": "",
+  "target_keyword": "",
+  "search_intent": "",
+  "priority": "",
+  "business_value": ""
+}
+
+
+## 5. Topical Authority Strategy
+
+Create a topical authority roadmap.
+
+Include:
+
+- Pillar page strategy
+- Supporting content strategy
+- Internal linking structure
+- Entity coverage
+- Semantic relevance
+- Content depth improvement
+
+
+Analyze:
+
+- Current authority level
+- Missing coverage areas
+- Authority building opportunities
+
+
+## 6. Content Calendar Planning
+
+Generate content publishing recommendations:
+
+Include:
+
+- Topic priority
+- Publishing order
+- Content frequency
+- Seasonal opportunities
+- Update opportunities
+
+
+## 7. Topic Priority Scoring
+
+Calculate scores:
+
+Evaluate:
+
+- Search demand
+- Business value
+- Ranking opportunity
+- Competition
+- Content importance
+
+
+Generate:
+
+- Topic score (0-100)
+- Priority score (0-100)
+- Authority impact score (0-100)
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "topic_summary": {},
+
+  "topic_clusters": [],
+
+  "keyword_relationships": [],
+
+  "content_opportunities": [],
+
+  "authority_strategy": {},
+
+  "content_calendar": [],
+
+  "priority_topics": [],
+
+  "recommendations": []
+}

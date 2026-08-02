@@ -1,0 +1,500 @@
+
+You are an advanced SEO monitoring, performance tracking, and search intelligence AI strategist.
+
+Your task is to design a continuous SEO monitoring system that tracks website performance, detects issues, analyzes changes, generates insights, and provides actionable recommendations for improving organic search growth.
+
+SEO Monitoring Data:
+
+{{seo_monitoring}}
+
+
+Create a complete SEO monitoring strategy.
+
+
+## 1. SEO Monitoring Objective Analysis
+
+Analyze:
+
+- Business goals
+- SEO objectives
+- Website requirements
+- Monitoring needs
+- Performance expectations
+- Reporting requirements
+
+
+Identify:
+
+- Important monitoring areas
+- Critical SEO signals
+- Required tracking frequency
+- Business impact metrics
+
+
+Create:
+
+{
+  "monitoring_objectives": [],
+  "business_goals": [],
+  "seo_targets": [],
+  "critical_metrics": []
+}
+
+
+## 2. SEO Performance Tracking Framework
+
+Define SEO tracking categories.
+
+Analyze:
+
+### Organic Traffic Monitoring
+
+Track:
+
+- Organic sessions
+- Users
+- Landing page performance
+- Traffic sources
+- Conversion impact
+
+
+### Keyword Ranking Monitoring
+
+Track:
+
+- Keyword positions
+- Ranking changes
+- SERP visibility
+- Featured snippets
+- Keyword opportunities
+
+
+### Technical SEO Monitoring
+
+Track:
+
+- Crawl errors
+- Index status
+- Core Web Vitals
+- Page speed
+- Mobile performance
+- Schema health
+
+
+### Authority Monitoring
+
+Track:
+
+- Backlinks
+- Referring domains
+- Domain authority
+- Brand mentions
+- Link growth
+
+
+For each metric provide:
+
+{
+  "metric": "",
+  "category": "",
+  "tracking_method": "",
+  "importance": "",
+  "business_value": ""
+}
+
+
+## 3. SEO Monitoring Architecture
+
+Design monitoring system architecture.
+
+Include:
+
+- Data collection layer
+- Processing layer
+- Analytics layer
+- Alert layer
+- Reporting layer
+
+
+Analyze:
+
+- APIs
+- Databases
+- Crawlers
+- Tracking tools
+- AI analysis systems
+
+
+Create:
+
+{
+  "component": "",
+  "purpose": "",
+  "technology_option": "",
+  "system_role": ""
+}
+
+
+## 4. Website Health Monitoring
+
+Create website health monitoring strategy.
+
+Monitor:
+
+- Technical errors
+- Broken pages
+- Server issues
+- Indexing changes
+- Security issues
+- Performance changes
+
+
+Identify:
+
+- Health risks
+- Detection methods
+- Recovery actions
+
+
+For each monitoring rule provide:
+
+{
+  "monitoring_item": "",
+  "check_frequency": "",
+  "alert_condition": "",
+  "recommended_action": ""
+}
+
+## 5. SEO Alert & Notification System
+
+Design automated SEO alert workflows.
+
+Monitor:
+
+### Ranking Alerts
+
+Track:
+
+- Keyword position drops
+- Ranking improvements
+- SERP visibility changes
+- Competitor ranking movements
+
+
+### Traffic Alerts
+
+Track:
+
+- Organic traffic decline
+- Traffic spikes
+- Landing page performance changes
+- Conversion drops
+
+
+### Technical Alerts
+
+Track:
+
+- Website downtime
+- Crawl errors
+- Indexing problems
+- Broken links
+- Core Web Vitals failures
+
+
+### Authority Alerts
+
+Track:
+
+- Lost backlinks
+- New backlinks
+- Domain authority changes
+- Brand mentions
+
+
+For each alert provide:
+
+{
+  "alert_name": "",
+  "trigger_condition": "",
+  "severity": "",
+  "notification_method": "",
+  "recommended_response": ""
+}
+
+
+## 6. AI-Powered SEO Analysis Workflow
+
+Design AI monitoring intelligence.
+
+Automate:
+
+- Data analysis
+- Pattern detection
+- Anomaly detection
+- SEO issue identification
+- Opportunity discovery
+- Recommendation generation
+
+
+Workflow:
+
+{
+  "analysis_stage": "",
+  "input_data": "",
+  "ai_process": "",
+  "output_insight": ""
+}
+
+
+## 7. Competitor Monitoring Strategy
+
+Create competitor tracking system.
+
+Monitor:
+
+- Competitor keyword rankings
+- New content publishing
+- Backlink changes
+- SERP movements
+- Website updates
+- Marketing campaigns
+
+
+Identify:
+
+- Competitor opportunities
+- Market changes
+- Threat detection
+- Strategic advantages
+
+
+For each competitor monitoring task provide:
+
+{
+  "monitoring_area": "",
+  "data_source": "",
+  "tracking_frequency": "",
+  "business_value": ""
+}
+
+
+## 8. SEO Reporting Automation
+
+Design automated SEO reporting system.
+
+Create reports:
+
+### Daily Reports
+
+Include:
+
+- Critical alerts
+- Ranking changes
+- Technical issues
+
+
+### Weekly Reports
+
+Include:
+
+- SEO performance summary
+- Keyword movements
+- Content performance
+
+
+### Monthly Reports
+
+Include:
+
+- SEO growth analysis
+- Traffic trends
+- Strategy recommendations
+
+
+For each report provide:
+
+{
+  "report_name": "",
+  "frequency": "",
+  "metrics": [],
+  "audience": "",
+  "purpose": ""
+}
+
+
+## 9. SEO Monitoring Workflow Optimization
+
+Analyze monitoring efficiency.
+
+Evaluate:
+
+- Automation level
+- Data accuracy
+- Alert reliability
+- Response speed
+- Manual effort
+
+
+Recommend:
+
+- Process improvements
+- AI enhancements
+- Workflow automation
+- Scaling opportunities
+
+## 10. SEO Monitoring Performance Scoring
+
+Generate SEO monitoring effectiveness scores.
+
+Evaluate:
+
+- Data accuracy score (0-100)
+- Monitoring coverage score (0-100)
+- Alert efficiency score (0-100)
+- Reporting quality score (0-100)
+- Automation level score (0-100)
+- Response optimization score (0-100)
+
+
+Calculate:
+
+- Overall SEO Monitoring Score
+
+
+Provide:
+
+{
+  "overall_score": "",
+  "monitoring_maturity": "",
+  "strengths": [],
+  "limitations": [],
+  "improvement_opportunities": []
+}
+
+
+## 11. SEO Monitoring Implementation Roadmap
+
+Create monitoring system deployment plan.
+
+Include:
+
+### Phase 1: Basic Monitoring Setup
+
+Focus on:
+
+- Core SEO metrics
+- Basic alerts
+- Data collection
+- Performance tracking
+
+
+### Phase 2: Advanced Monitoring
+
+Focus on:
+
+- AI analysis
+- Competitor tracking
+- Automated reports
+- Predictive insights
+
+
+### Phase 3: Intelligent SEO Operations
+
+Focus on:
+
+- Autonomous issue detection
+- AI recommendations
+- Automated optimization workflows
+- Advanced forecasting
+
+
+### Phase 4: Enterprise SEO Intelligence
+
+Focus on:
+
+- Multi-site monitoring
+- Custom dashboards
+- Advanced automation
+- Large-scale SEO operations
+
+
+For each phase provide:
+
+{
+  "phase": "",
+  "objectives": [],
+  "implementation_steps": [],
+  "timeline": "",
+  "expected_result": ""
+}
+
+
+## 12. SEO Monitoring Governance Strategy
+
+Create monitoring management framework.
+
+Include:
+
+- Data validation
+- Alert quality control
+- Access management
+- Reporting standards
+- System maintenance
+- Performance reviews
+
+
+Recommend:
+
+- Review process
+- Optimization cycle
+- Monitoring improvements
+
+
+## 13. Future SEO Monitoring Capabilities
+
+Identify advanced monitoring opportunities.
+
+Include:
+
+- AI predictive SEO monitoring
+- Ranking forecasting
+- Automated competitor intelligence
+- Search algorithm change detection
+- Autonomous SEO recommendations
+- Business impact prediction
+
+
+## 14. Final Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "monitoring_analysis": {},
+
+  "performance_tracking": [],
+
+  "monitoring_architecture": [],
+
+  "website_health_monitoring": [],
+
+  "alert_system": [],
+
+  "ai_analysis_workflow": [],
+
+  "competitor_monitoring": [],
+
+  "reporting_automation": [],
+
+  "workflow_optimization": {},
+
+  "performance_scores": {},
+
+  "implementation_roadmap": [],
+
+  "governance_strategy": {},
+
+  "future_capabilities": []
+}

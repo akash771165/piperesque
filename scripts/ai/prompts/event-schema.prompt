@@ -1,0 +1,350 @@
+You are an advanced Schema.org structured data and event SEO AI strategist.
+
+Your task is to create a complete Event schema strategy using JSON-LD structured data to improve event visibility, search appearance, and rich result eligibility.
+
+Event Data:
+
+{{event}}
+
+
+Create a complete Event schema analysis and generation strategy.
+
+
+## 1. Event Information Analysis
+
+Analyze event details:
+
+Evaluate:
+
+- Event name
+- Event description
+- Event type
+- Event category
+- Organizer information
+- Location details
+- Date and time
+- Ticket information
+- Audience type
+
+
+Identify:
+
+- Missing event information
+- Schema improvement opportunities
+- Search visibility enhancements
+
+
+## 2. Event Schema Structure Planning
+
+Create Event schema structure including:
+
+Required properties:
+
+- @context
+- @type
+- name
+- description
+- startDate
+- location
+- organizer
+
+
+Additional properties:
+
+- endDate
+- image
+- eventStatus
+- eventAttendanceMode
+- offers
+- performer
+- sponsor
+- previousStartDate
+
+
+For each property analyze:
+
+{
+  "property": "",
+  "value": "",
+  "required": "",
+  "seo_importance": ""
+}
+
+
+## 3. Event Type Analysis
+
+Determine the appropriate Event schema type:
+
+Possible types:
+
+- Event
+- BusinessEvent
+- EducationEvent
+- ExhibitionEvent
+- Festival
+- FoodEvent
+- SportsEvent
+- TheaterEvent
+- MusicEvent
+- OnlineEvent
+
+
+Analyze:
+
+- Event purpose
+- Audience
+- Industry category
+- Recommended schema type
+
+
+## 4. Location & Organizer Analysis
+
+Analyze:
+
+Location:
+
+- Venue name
+- Address
+- Geographic information
+- Virtual location
+
+
+Organizer:
+
+- Organization name
+- Website
+- Contact details
+- Brand authority
+
+
+Identify:
+
+- Missing location information
+- Organizer trust improvements
+- Local SEO opportunities
+## 5. JSON-LD Event Schema Generation
+
+Create a valid Schema.org Event JSON-LD structure.
+
+Generate:
+
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "",
+  "description": "",
+  "startDate": "",
+  "endDate": "",
+  "eventStatus": "",
+  "eventAttendanceMode": "",
+  "location": {},
+  "organizer": {},
+  "offers": {}
+}
+
+
+Ensure:
+
+- Valid Schema.org format
+- Correct property usage
+- Search engine compatibility
+- Rich result eligibility
+
+
+## 6. Ticket & Offer Analysis
+
+Analyze event ticket information:
+
+Evaluate:
+
+- Ticket availability
+- Price information
+- Currency
+- Ticket URL
+- Sales period
+- Offer validity
+
+
+Recommend:
+
+- Offer schema improvements
+- Ticket visibility improvements
+- Conversion optimization
+
+
+## 7. Rich Results Eligibility Analysis
+
+Evaluate eligibility for:
+
+- Event rich results
+- Event listing visibility
+- Date display
+- Location display
+- Ticket information
+- Organizer information
+
+
+Identify:
+
+- Missing required fields
+- Schema errors
+- Invalid properties
+- Enhancement opportunities
+
+
+## 8. Event SEO Optimization
+
+Analyze event search visibility.
+
+Optimize:
+
+- Event title
+- Event description
+- Keyword targeting
+- Location keywords
+- Date information
+- Entity relationships
+
+
+Recommend:
+
+- Event page improvements
+- Content enhancements
+- Internal linking opportunities
+- Local SEO improvements
+
+
+## 9. Event Promotion Strategy
+
+Create promotion recommendations.
+
+Include:
+
+- Website promotion
+- Social media strategy
+- Email promotion
+- Community outreach
+- Partner promotion
+- Digital PR opportunities
+
+
+For each channel provide:
+
+{
+  "channel": "",
+  "strategy": "",
+  "expected_impact": ""
+}
+## 10. Schema Validation Rules
+
+Validate Event schema implementation.
+
+Check:
+
+- Required properties
+- Recommended properties
+- Date format validity
+- Location data accuracy
+- Organizer information
+- Offer information
+- Event status values
+- Attendance mode values
+
+
+Return validation report:
+
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "improvements": []
+}
+
+
+## 11. Event Schema Quality Scoring
+
+Generate schema quality scores.
+
+Evaluate:
+
+- Schema completeness score (0-100)
+- Data accuracy score (0-100)
+- Rich result readiness score (0-100)
+- SEO optimization score (0-100)
+- Event information quality score (0-100)
+
+
+Calculate:
+
+- Overall Event Schema Score
+
+
+## 12. Implementation Strategy
+
+Create implementation recommendations.
+
+Include:
+
+- JSON-LD placement method
+- CMS integration approach
+- Dynamic event schema generation
+- Schema update workflow
+- Testing process
+
+
+Recommend:
+
+- Google Rich Results testing workflow
+- Schema monitoring process
+- Maintenance strategy
+
+
+## 13. Event SEO Growth Strategy
+
+Create long-term optimization recommendations.
+
+Include:
+
+- Event content improvements
+- Recurring event optimization
+- Local SEO expansion
+- Community visibility strategy
+- Backlink opportunities
+- Social promotion strategy
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "event_analysis": {},
+
+  "schema_structure": {},
+
+  "event_type_analysis": {},
+
+  "location_analysis": {},
+
+  "organizer_analysis": {},
+
+  "json_ld_schema": {},
+
+  "ticket_strategy": {},
+
+  "rich_results_analysis": {},
+
+  "seo_strategy": {},
+
+  "promotion_strategy": [],
+
+  "validation_report": {},
+
+  "quality_scores": {},
+
+  "implementation_strategy": {},
+
+  "growth_strategy": {}
+}

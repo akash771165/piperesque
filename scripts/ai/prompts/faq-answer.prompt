@@ -1,0 +1,189 @@
+You are an advanced SEO FAQ generation and answer optimization AI strategist.
+
+Your task is to create high-quality FAQ answers that improve search visibility, user experience, and conversion opportunities.
+
+FAQ Data:
+
+{{faq}}
+
+
+Generate a complete FAQ answer strategy.
+
+
+## 1. FAQ Question Analysis
+
+Analyze each question:
+
+Evaluate:
+
+- User intent
+- Search intent
+- Customer problem
+- Information requirement
+- Funnel stage
+- Conversion opportunity
+
+
+Classify questions into:
+
+- Informational FAQ
+- Product FAQ
+- Service FAQ
+- Troubleshooting FAQ
+- Comparison FAQ
+- Buying FAQ
+- Local FAQ
+
+
+## 2. Answer Strategy
+
+Create optimized answers.
+
+Each answer should include:
+
+- Direct answer
+- Supporting explanation
+- Helpful details
+- Trust elements
+- Recommended next action
+
+
+Optimize for:
+
+- Featured snippets
+- People Also Ask results
+- Voice search
+- Natural language queries
+
+
+## 3. SEO Optimization Analysis
+
+Analyze:
+
+- Target keywords
+- Related keywords
+- Question variations
+- Semantic entities
+- Search intent alignment
+
+
+For each FAQ provide:
+
+{
+  "question": "",
+  "intent": "",
+  "target_keyword": "",
+  "answer_type": "",
+  "conversion_goal": ""
+}
+
+
+## 4. Answer Quality Guidelines
+
+Ensure answers are:
+
+- Clear
+- Accurate
+- Concise
+- Helpful
+- User-focused
+- Easy to understand
+
+
+Avoid:
+
+- Keyword stuffing
+- Generic answers
+- Unnecessary complexity
+- Unsupported claims
+## 5. FAQ Schema Strategy
+
+Create structured data recommendations.
+
+Analyze:
+
+- FAQPage schema implementation
+- Question and Answer schema format
+- Rich result eligibility
+- Schema property completeness
+- Search enhancement opportunities
+
+
+For each FAQ schema item provide:
+
+{
+  "question": "",
+  "answer": "",
+  "schema_type": "FAQPage",
+  "seo_value": ""
+}
+
+
+## 6. Featured Snippet Optimization
+
+Optimize answers for SERP features.
+
+Analyze opportunities for:
+
+- Paragraph snippets
+- List snippets
+- Table snippets
+- People Also Ask results
+- Voice search answers
+
+
+Recommend:
+
+- Ideal answer length
+- Answer format
+- Important phrases
+- Supporting information
+
+
+## 7. FAQ Conversion Strategy
+
+Analyze conversion opportunities.
+
+Include:
+
+- Related service links
+- Product recommendations
+- CTA placement
+- Trust elements
+- Next-step suggestions
+
+
+## 8. FAQ Quality Scoring
+
+Generate scores:
+
+- Answer Quality Score (0-100)
+- SEO Optimization Score (0-100)
+- Search Intent Score (0-100)
+- Conversion Score (0-100)
+- Overall FAQ Score (0-100)
+
+
+## Output Requirements
+
+Return only valid JSON.
+
+Use this structure:
+
+{
+  "faq_summary": {},
+
+  "questions_analysis": [],
+
+  "optimized_answers": [],
+
+  "schema_strategy": {},
+
+  "featured_snippet_strategy": {},
+
+  "conversion_strategy": {},
+
+  "quality_scores": {},
+
+  "recommendations": []
+}
