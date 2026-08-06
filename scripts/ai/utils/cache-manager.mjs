@@ -4,6 +4,11 @@ import crypto from "node:crypto";
 
 import logger from "../../shared/logger.mjs";
 
+import {
+  formatError,
+  isMissingFileError,
+} from "../../shared/errors.mjs";
+
 export class CacheManager {
 
   constructor(options = {}) {
@@ -117,7 +122,15 @@ export class CacheManager {
 
       return true;
 
-    } catch {
+    } catch (error) {
+
+      if (
+        !isMissingFileError(error)
+      ) {
+
+        throw error;
+
+      }
 
       return false;
 
@@ -157,9 +170,32 @@ export class CacheManager {
 
       );
 
-    const cache =
+    let cache;
 
-      JSON.parse(content);
+    try {
+
+      cache =
+
+        JSON.parse(content);
+
+    } catch (error) {
+
+      /*
+        A damaged cache entry must not abort the run: report it,
+        drop it and treat the key as a miss.
+      */
+
+      logger.warning(
+
+        `Discarding corrupted cache entry "${key}": ${formatError(error)}`
+
+      );
+
+      await this.delete(key);
+
+      return null;
+
+    }
 
     if (
 
@@ -453,7 +489,15 @@ export class CacheManager {
 
       };
 
-    } catch {
+    } catch (error) {
+
+      if (
+        !isMissingFileError(error)
+      ) {
+
+        throw error;
+
+      }
 
       return {
 
@@ -494,7 +538,15 @@ export class CacheManager {
         namespaceDirectory
       );
 
-    } catch {
+    } catch (error) {
+
+      if (
+        !isMissingFileError(error)
+      ) {
+
+        throw error;
+
+      }
 
       return [];
 

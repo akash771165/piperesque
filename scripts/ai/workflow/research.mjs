@@ -2,6 +2,12 @@ import logger from "../../shared/logger.mjs";
 import config from "../../shared/config.mjs";
 
 import {
+  describeFailures,
+  runBatch,
+  throwIfFailed,
+} from "../../shared/batch.mjs";
+
+import {
   researchKeyword,
   researchKeywords,
 } from "../research/keyword-research.mjs";
@@ -272,48 +278,26 @@ export class ResearchWorkflow {
     keywords = []
   ) {
 
-    if (
-      !Array.isArray(
-        keywords
-      )
-    ) {
+    return runBatch(
 
-      throw new Error(
-        "Keywords must be an array."
-      );
+      keywords,
 
-    }
+      keyword =>
+        this.run(
+          keyword
+        ),
 
-    const reports = [];
+      {
 
-    for (
-      const keyword of keywords
-    ) {
+        label:
+          "Research",
 
-      try {
-
-        const report =
-          await this.run(
-            keyword
-          );
-
-        reports.push(
-          report
-        );
-
-      } catch (
-        error
-      ) {
-
-        logger.error(
-          error.message
-        );
+        stopOnError:
+          this.options.stopOnError,
 
       }
 
-    }
-
-    return reports;
+    );
 
   }
 
@@ -340,7 +324,8 @@ export class ResearchWorkflow {
   }
 
   async exportReport(
-    reports = []
+    reports = [],
+    failures = []
   ) {
 
     const fs =
@@ -371,6 +356,11 @@ export class ResearchWorkflow {
       statistics:
         this.generateStatistics(
           reports
+        ),
+
+      failures:
+        describeFailures(
+          failures
         ),
 
       reports,
@@ -433,16 +423,23 @@ export async function runResearchBatch(
       options
     );
 
-  const reports =
+  const { results, failures } =
     await workflow.runMany(
       keywords
     );
 
   await workflow.exportReport(
-    reports
+    results,
+    failures
   );
 
-  return reports;
+  throwIfFailed(
+    failures,
+    keywords.length,
+    "Research"
+  );
+
+  return results;
 
 }
 

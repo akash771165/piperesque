@@ -1,6 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
+import { wrapError } from "./errors.mjs";
+
 export function ensureDirectory(dir) {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
@@ -17,7 +19,12 @@ export function fileExists(filePath) {
 
 export function readJson(filePath) {
   const content = fs.readFileSync(filePath, "utf8");
-  return JSON.parse(content);
+
+  try {
+    return JSON.parse(content);
+  } catch (error) {
+    throw wrapError(`Invalid JSON file: ${filePath}`, error);
+  }
 }
 
 export function writeJson(filePath, data) {

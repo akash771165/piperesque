@@ -103,7 +103,8 @@ export function getAllBlogData(): BlogCardData[] {
 
 
     /*
-      Ignore invalid / empty CMS entries
+      Skip invalid / empty CMS entries, but make them visible so a
+      broken entry does not disappear from the site unnoticed.
     */
 
     if(
@@ -111,6 +112,10 @@ export function getAllBlogData(): BlogCardData[] {
       !blog.title ||
       !blog.description
     ){
+
+      console.warn(
+        `Skipping blog "${slug}": missing title or description.`
+      );
 
       continue;
 

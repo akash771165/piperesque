@@ -4,6 +4,11 @@ import crypto from "node:crypto";
 
 import logger from "../../shared/logger.mjs";
 
+import {
+  isMissingFileError,
+  wrapError,
+} from "../../shared/errors.mjs";
+
 export class FileManager {
 
   constructor(options = {}) {
@@ -54,7 +59,15 @@ export class FileManager {
 
       return true;
 
-    } catch {
+    } catch (error) {
+
+      if (
+        !isMissingFileError(error)
+      ) {
+
+        throw error;
+
+      }
 
       return false;
 
@@ -174,11 +187,25 @@ export class FileManager {
 
       );
 
-    return JSON.parse(
+    try {
 
-      content
+      return JSON.parse(
 
-    );
+        content
+
+      );
+
+    } catch (error) {
+
+      throw wrapError(
+
+        `Invalid JSON file: ${file}`,
+
+        error
+
+      );
+
+    }
 
   }
 
