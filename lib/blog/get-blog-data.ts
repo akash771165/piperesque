@@ -28,7 +28,16 @@ export function getBlogData(
       "utf-8"
     );
 
-    const json = JSON.parse(file);
+    let json;
+
+    try {
+      json = JSON.parse(file);
+    } catch (error) {
+      throw new Error(
+        `Blog "${slug}" has invalid JSON: ${jsonPath}`,
+        { cause: error }
+      );
+    }
 
     const article: BlogContent = {
       ...json,

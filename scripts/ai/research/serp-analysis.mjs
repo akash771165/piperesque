@@ -2,6 +2,12 @@ import crypto from "node:crypto";
 
 import logger from "../../shared/logger.mjs";
 
+import {
+  describeFailures,
+  runBatch,
+  throwIfFailed,
+} from "../../shared/batch.mjs";
+
 const DEFAULT_COUNTRY = "US";
 const DEFAULT_LANGUAGE = "en";
 
@@ -526,48 +532,26 @@ export class SERPAnalysisEngine {
     keywords = []
   ) {
 
-    if (
-      !Array.isArray(
-        keywords
-      )
-    ) {
+    return runBatch(
 
-      throw new Error(
-        "Keywords must be an array."
-      );
+      keywords,
 
-    }
+      keyword =>
+        this.analyze(
+          keyword
+        ),
 
-    const reports = [];
+      {
 
-    for (
-      const keyword of keywords
-    ) {
+        label:
+          "SERP analysis",
 
-      try {
-
-        const report =
-          await this.analyze(
-            keyword
-          );
-
-        reports.push(
-          report
-        );
-
-      } catch (
-        error
-      ) {
-
-        logger.error(
-          error.message
-        );
+        stopOnError:
+          this.options.stopOnError,
 
       }
 
-    }
-
-    return reports;
+    );
 
   }
 
@@ -680,15 +664,23 @@ export class SERPAnalysisEngine {
     };
 
   }
-    async exportReport(reports = []) {
+    async exportReport(reports = [], failures = []) {
 
     const fs = await import("node:fs/promises");
     const path = await import("node:path");
 
-    const report =
-      this.buildFinalReport(
+    const report = {
+
+      ...this.buildFinalReport(
         reports
-      );
+      ),
+
+      failures:
+        describeFailures(
+          failures
+        ),
+
+    };
 
     const outputDirectory =
       path.join(
@@ -759,16 +751,23 @@ export async function analyzeSERPs(
       options
     );
 
-  const reports =
+  const { results, failures } =
     await engine.analyzeMany(
       keywords
     );
 
   await engine.exportReport(
-    reports
+    results,
+    failures
   );
 
-  return reports;
+  throwIfFailed(
+    failures,
+    keywords.length,
+    "SERP analysis"
+  );
+
+  return results;
 
 }
 
