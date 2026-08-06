@@ -3,12 +3,17 @@ import path from "path";
 
 import { BlogContent } from "@/types/blog";
 import { blogContent } from "@/lib/data/blog-content";
+import { isValidSlug } from "@/lib/blog/slug";
 
 const blogsDirectory = path.join(process.cwd(), "content/blogs");
 
 export function getBlogData(
   slug: string
 ): BlogContent | null {
+
+  if (!isValidSlug(slug)) {
+    return null;
+  }
 
   const jsonPath = path.join(
     blogsDirectory,

@@ -1,5 +1,7 @@
 import Script from "next/script";
 
+import { jsonLd } from "@/lib/utils/json-ld";
+
 interface Props {
   id: string;
   schema: object;
@@ -11,7 +13,7 @@ export default function JsonLdScript({ id, schema }: Props) {
       id={id}
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(schema),
+        __html: jsonLd(schema),
       }}
     />
   );
