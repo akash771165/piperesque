@@ -1,6 +1,12 @@
 import logger from "../../shared/logger.mjs";
 import config from "../../shared/config.mjs";
 
+import {
+  describeFailures,
+  runBatch,
+  throwIfFailed,
+} from "../../shared/batch.mjs";
+
 export class QualityWorkflow {
 
   constructor(options = {}) {
@@ -636,9 +642,21 @@ export class QualityWorkflow {
 
     };
 
-    logger.success(
-      "Quality check completed."
-    );
+    if (issues.length > 0) {
+
+      logger.warning(
+
+        `Quality check found ${issues.length} issue(s) (score ${score}): ${issues.join("; ")}`
+
+      );
+
+    } else {
+
+      logger.success(
+        "Quality check completed."
+      );
+
+    }
 
     return result;
 
@@ -648,53 +666,32 @@ export class QualityWorkflow {
     blogs = []
   ) {
 
-    if (
-      !Array.isArray(
-        blogs
-      )
-    ) {
+    return runBatch(
 
-      throw new Error(
-        "Blogs must be an array."
-      );
+      blogs,
 
-    }
+      blog =>
+        this.run(
+          blog
+        ),
 
-    const results = [];
+      {
 
-    for (
-      const blog of blogs
-    ) {
+        label:
+          "Quality check",
 
-      try {
-
-        const result =
-          await this.run(
-            blog
-          );
-
-        results.push(
-          result
-        );
-
-      } catch (
-        error
-      ) {
-
-        logger.error(
-          error.message
-        );
+        stopOnError:
+          this.options.stopOnError,
 
       }
 
-    }
-
-    return results;
+    );
 
   }
 
   async exportReport(
-    results = []
+    results = [],
+    failures = []
   ) {
 
     const fs =
@@ -724,6 +721,11 @@ export class QualityWorkflow {
 
       project:
         config.project,
+
+      failures:
+        describeFailures(
+          failures
+        ),
 
       generatedAt:
         new Date().toISOString(),
@@ -801,13 +803,20 @@ export async function checkQualityBatch(
       options
     );
 
-  const results =
+  const { results, failures } =
     await workflow.runMany(
       blogs
     );
 
   await workflow.exportReport(
-    results
+    results,
+    failures
+  );
+
+  throwIfFailed(
+    failures,
+    blogs.length,
+    "Quality check"
   );
 
   return results;

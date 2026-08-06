@@ -2,6 +2,12 @@ import logger from "../../shared/logger.mjs";
 import config from "../../shared/config.mjs";
 
 import {
+  describeFailures,
+  runBatch,
+  throwIfFailed,
+} from "../../shared/batch.mjs";
+
+import {
   runResearch,
 } from "./research.mjs";
 
@@ -398,60 +404,30 @@ export class AIWorkflow {
     keywords = []
   ) {
 
-    if (
-      !Array.isArray(
-        keywords
-      )
-    ) {
+    return runBatch(
 
-      throw new Error(
-        "Keywords must be an array."
-      );
+      keywords,
 
-    }
+      keyword =>
+        this.run(
+          keyword
+        ),
 
-    const results = [];
+      {
 
-    for (
-      const keyword of keywords
-    ) {
+        label:
+          "AI workflow",
 
-      try {
-
-        const result =
-          await this.run(
-            keyword
-          );
-
-        results.push(
-          result
-        );
-
-      } catch (
-        error
-      ) {
-
-        logger.error(
-          error.message
-        );
-
-        if (
-          this.options.stopOnError
-        ) {
-
-          throw error;
-
-        }
+        stopOnError:
+          this.options.stopOnError,
 
       }
 
-    }
-
-    return results;
+    );
 
   }
 
-  summary(results = []) {
+  summary(results = [], failures = []) {
 
     return {
 
@@ -462,15 +438,14 @@ export class AIWorkflow {
         config.project.company,
 
       totalKeywords:
-        results.length,
+        results.length +
+        failures.length,
 
       successful:
+        results.length,
 
-        results.filter(
-
-          item => item
-
-        ).length,
+      failed:
+        failures.length,
 
       generatedAt:
         new Date().toISOString(),
@@ -479,7 +454,8 @@ export class AIWorkflow {
 
   }
     async exportReport(
-    results = []
+    results = [],
+    failures = []
   ) {
 
     const fs =
@@ -515,10 +491,16 @@ export class AIWorkflow {
 
       statistics:
         this.summary(
-          results
+          results,
+          failures
         ),
 
       results,
+
+      failures:
+        describeFailures(
+          failures
+        ),
 
     };
 
@@ -578,13 +560,20 @@ export async function runAIWorkflowBatch(
       options
     );
 
-    const results =
+    const { results, failures } =
       await workflow.runMany(
         keywords
       );
 
     await workflow.exportReport(
-      results
+      results,
+      failures
+    );
+
+    throwIfFailed(
+      failures,
+      keywords.length,
+      "AI workflow"
     );
 
     return results;

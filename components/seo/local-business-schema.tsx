@@ -1,3 +1,5 @@
+import { jsonLd } from "@/lib/utils/json-ld";
+
 import { siteConfig } from "@/lib/config/site";
 import type { City } from "@/lib/data/cities";
 
@@ -113,7 +115,7 @@ export default function LocalBusinessSchema({ city }: Props) {
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(schema),
+        __html: jsonLd(schema),
       }}
     />
   );

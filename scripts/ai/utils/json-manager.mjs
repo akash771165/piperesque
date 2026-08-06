@@ -3,6 +3,13 @@ import crypto from "node:crypto";
 
 import FileManager from "./file-manager.mjs";
 
+import logger from "../../shared/logger.mjs";
+
+import {
+  formatError,
+  wrapError,
+} from "../../shared/errors.mjs";
+
 export class JSONManager {
 
   constructor(options = {}) {
@@ -53,9 +60,11 @@ export class JSONManager {
 
     } catch (error) {
 
-      throw new Error(
+      throw wrapError(
 
-        `Invalid JSON: ${error.message}`
+        "Invalid JSON",
+
+        error
 
       );
 
@@ -145,21 +154,58 @@ export class JSONManager {
 
 `${file}.tmp`;
 
-    await this.fileManager.writeJSON(
+    try {
 
-      temp,
+      await this.fileManager.writeJSON(
 
-      data
+        temp,
 
-    );
+        data
 
-    await this.fileManager.move(
+      );
 
-      temp,
+      await this.fileManager.move(
 
-      file
+        temp,
 
-    );
+        file
+
+      );
+
+    } catch (error) {
+
+      /*
+        Never leave a half written temp file behind, but keep the
+        original failure as the reported one.
+      */
+
+      try {
+
+        await this.fileManager.remove(
+
+          temp
+
+        );
+
+      } catch (cleanupError) {
+
+        logger.warning(
+
+          `Could not remove temporary file ${temp}: ${formatError(cleanupError)}`
+
+        );
+
+      }
+
+      throw wrapError(
+
+        `Atomic write failed: ${file}`,
+
+        error
+
+      );
+
+    }
 
     return file;
 

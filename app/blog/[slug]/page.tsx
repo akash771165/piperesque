@@ -22,6 +22,7 @@ import { getAllBlogs } from "@/lib/blog/get-all-blogs";
 
 import { getRelatedBlogs } from "@/lib/blog/get-related-blogs";
 import type { BlogFAQ } from "@/types/blog";
+import { jsonLd } from "@/lib/utils/json-ld";
 
 
 
@@ -554,7 +555,7 @@ dangerouslySetInnerHTML={{
 
 __html:
 
-JSON.stringify(articleSchema)
+jsonLd(articleSchema)
 
 }}
 
@@ -576,7 +577,7 @@ dangerouslySetInnerHTML={{
 
 __html:
 
-JSON.stringify(faqSchema)
+jsonLd(faqSchema)
 
 }}
 
@@ -598,7 +599,7 @@ dangerouslySetInnerHTML={{
 
 __html:
 
-JSON.stringify(breadcrumbSchema)
+jsonLd(breadcrumbSchema)
 
 }}
 
