@@ -44,8 +44,17 @@ describe("parse and stringify", () => {
     expect(manager.parse('{"a":1}')).toEqual({ a: 1 });
   });
 
-  it("wraps parse failures", () => {
-    expect(() => manager.parse("{ nope")).toThrow(/^Invalid JSON: /);
+  it("wraps parse failures and keeps the original cause", () => {
+    let thrown: Error | undefined;
+
+    try {
+      manager.parse("{ nope");
+    } catch (error) {
+      thrown = error as Error;
+    }
+
+    expect(thrown?.message).toBe("Invalid JSON");
+    expect(thrown?.cause).toBeInstanceOf(SyntaxError);
   });
 
   it("pretty prints by default", () => {

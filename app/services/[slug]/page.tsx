@@ -89,10 +89,15 @@ export default async function ServicePage({
 
   const Icon = service.icon;
 
-  const related = [...services]
-  .filter((item) => item.slug !== service.slug)
-  .sort(() => Math.random() - 0.5)
-  .slice(0, 3);
+  const currentIndex = services.findIndex(
+    (item) => item.slug === service.slug
+  );
+
+  const related = Array.from(
+    { length: Math.min(3, services.length - 1) },
+    (_, offset) =>
+      services[(currentIndex + offset + 1) % services.length]
+  );
 
   return (
     <main className="overflow-x-hidden bg-white">

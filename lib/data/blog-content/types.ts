@@ -126,7 +126,7 @@ export interface BlogSchema {
     | "LocalBusiness";
 
 
-  data?: Record<string, any>;
+  data?: Record<string, unknown>;
 
 }
 
@@ -336,6 +336,6 @@ export interface BlogContent {
   Extra Dynamic Data
   */
 
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 
 }

@@ -21,7 +21,7 @@ export default function NotFound() {
                     </h2>
 
                     <p className="mx-auto mt-8 max-w-2xl text-xl leading-9 text-slate-600">
-                        Sorry, the page you're looking for doesn't exist or may have
+                        Sorry, the page you&apos;re looking for doesn&apos;t exist or may have
                         been moved. Return to the homepage or browse our plumbing
                         services.
                     </p>
