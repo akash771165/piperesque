@@ -139,17 +139,17 @@ export class PromptLoader {
 
     }
 
-    const module =
+    const loaded =
 
       await import(file);
 
     const prompt =
 
-      module.default ??
+      loaded.default ??
 
-      module.prompt ??
+      loaded.prompt ??
 
-      module;
+      loaded;
 
     this.validate(
 

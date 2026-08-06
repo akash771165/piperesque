@@ -23,7 +23,7 @@ export default function TermsPage() {
 
                     <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-blue-100">
                         Please read these Terms & Conditions carefully before using
-                        Piperesque's website or requesting our plumbing services.
+                        Piperesque&apos;s website or requesting our plumbing services.
                     </p>
 
                 </div>

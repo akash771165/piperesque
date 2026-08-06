@@ -160,9 +160,7 @@ export class KeywordResearchEngine {
 
     return record;
   }
-}
 
-export default KeywordResearchEngine;
   detectIntent(keyword) {
     const value = keyword.toLowerCase();
 

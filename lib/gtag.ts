@@ -1,6 +1,6 @@
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }
 
@@ -32,7 +32,7 @@ export const event = ({
   category: string;
   label?: string;
   value?: number;
-  [key: string]: any;
+  [key: string]: unknown;
 }) => {
   if (typeof window === "undefined" || !window.gtag) return;
 

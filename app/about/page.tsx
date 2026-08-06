@@ -59,7 +59,7 @@ export default function AboutPage() {
         Piperesque is an informational website that helps homeowners connect
         with local plumbing service providers throughout Houston and surrounding
         communities. Whether you need emergency plumbing, drain cleaning, leak
-        detection, water heater service or sewer line assistance, we'll help
+        detection, water heater service or sewer line assistance, we&apos;ll help
         you submit a plumbing service request.
       </p>
 
