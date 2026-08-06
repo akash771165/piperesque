@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-import Script from "next/script";
+import JsonLdScript from "@/components/seo/json-ld-script";
 
 
 import Navbar from "@/components/layout/navbar";
@@ -21,8 +21,10 @@ import { getBlogData } from "@/lib/blog/get-blog-data";
 import { getAllBlogs } from "@/lib/blog/get-all-blogs";
 
 import { getRelatedBlogs } from "@/lib/blog/get-related-blogs";
-import type { BlogFAQ } from "@/types/blog";
-import { jsonLd } from "@/lib/utils/json-ld";
+import {
+  breadcrumbListSchema,
+  faqPageSchema,
+} from "@/lib/seo/schema";
 
 
 
@@ -401,140 +403,16 @@ publisher:
 };
 // FAQ Schema
 
-const faqSchema = {
-
-  "@context":
-  "https://schema.org",
-
-
-  "@type":
-  "FAQPage",
-
-
-  mainEntity:
-article.faqs?.map((faq: BlogFAQ)=>({
-
-    "@type":
-    "Question",
-
-
-    name:
-    faq.question,
-
-
-    acceptedAnswer:
-
-    {
-
-      "@type":
-      "Answer",
-
-
-      text:
-      faq.answer
-
-    }
-
-
-  })) ?? []
-
-};
-
-
-
-
+const faqSchema = faqPageSchema(article.faqs ?? []);
 
 
 // Breadcrumb Schema
 
-const breadcrumbSchema = {
-
-
-"@context":
-
-"https://schema.org",
-
-
-
-"@type":
-
-"BreadcrumbList",
-
-
-
-itemListElement:
-
-[
-
- {
-
- "@type":
-
- "ListItem",
-
-
- position:1,
-
-
- name:"Home",
-
-
- item:
-
- "https://www.piperesque.com"
-
- },
-
-
- {
-
- "@type":
-
- "ListItem",
-
-
- position:2,
-
-
- name:"Blog",
-
-
- item:
-
- "https://www.piperesque.com/blog"
-
- },
-
-
- {
-
- "@type":
-
- "ListItem",
-
-
- position:3,
-
-
- name:
-
- article.title,
-
-
- item:
-
- articleUrl
-
- }
-
-]
-
-};
-
-
-
-
-
+const breadcrumbSchema = breadcrumbListSchema([
+  { name: "Home", url: "https://www.piperesque.com" },
+  { name: "Blog", url: "https://www.piperesque.com/blog" },
+  { name: article.title ?? "", url: articleUrl },
+]);
 
 
 return (
@@ -545,21 +423,7 @@ return (
 
 {/* Article Schema */}
 
-<Script
-
-id="article-schema"
-
-type="application/ld+json"
-
-dangerouslySetInnerHTML={{
-
-__html:
-
-jsonLd(articleSchema)
-
-}}
-
-/>
+<JsonLdScript id="article-schema" schema={articleSchema} />
 
 
 
@@ -567,21 +431,7 @@ jsonLd(articleSchema)
 
 {/* FAQ Schema */}
 
-<Script
-
-id="faq-schema"
-
-type="application/ld+json"
-
-dangerouslySetInnerHTML={{
-
-__html:
-
-jsonLd(faqSchema)
-
-}}
-
-/>
+<JsonLdScript id="faq-schema" schema={faqSchema} />
 
 
 
@@ -589,21 +439,7 @@ jsonLd(faqSchema)
 
 {/* Breadcrumb Schema */}
 
-<Script
-
-id="breadcrumb-schema"
-
-type="application/ld+json"
-
-dangerouslySetInnerHTML={{
-
-__html:
-
-jsonLd(breadcrumbSchema)
-
-}}
-
-/>
+<JsonLdScript id="breadcrumb-schema" schema={breadcrumbSchema} />
 
 
 

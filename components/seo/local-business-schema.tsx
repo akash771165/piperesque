@@ -1,5 +1,5 @@
-import { jsonLd } from "@/lib/utils/json-ld";
-
+import JsonLd from "@/components/seo/json-ld";
+import { SCHEMA_CONTEXT } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/config/site";
 import type { City } from "@/lib/data/cities";
 
@@ -15,7 +15,7 @@ export default function LocalBusinessSchema({ city }: Props) {
   };
 
   const schema = {
-    "@context": "https://schema.org",
+    "@context": SCHEMA_CONTEXT,
     "@type": "Plumber",
 
     "@id": `${siteConfig.website}/service-areas/${currentCity.slug}#localbusiness`,
@@ -111,12 +111,5 @@ export default function LocalBusinessSchema({ city }: Props) {
     ].filter(Boolean),
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: jsonLd(schema),
-      }}
-    />
-  );
+  return <JsonLd schema={schema} />;
 }
