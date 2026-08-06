@@ -1,3 +1,5 @@
+import { jsonLd } from "@/lib/utils/json-ld";
+
 type BreadcrumbItem = {
   name: string;
   url: string;
@@ -23,7 +25,7 @@ export default function BreadcrumbSchema({ items }: Props) {
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(schema),
+        __html: jsonLd(schema),
       }}
     />
   );
