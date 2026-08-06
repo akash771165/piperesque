@@ -2,6 +2,8 @@ import { setTimeout as sleep } from "node:timers/promises";
 
 import logger from "../../shared/logger.mjs";
 
+import { formatError } from "../../shared/errors.mjs";
+
 import RateLimiter from "../utils/rate-limiter.mjs";
 
 export class WebCrawler {
@@ -182,7 +184,9 @@ export class WebCrawler {
 
               logger.error(
 
-                `Failed to fetch ${url}`
+                `Failed to fetch ${url}`,
+
+                error
 
               );
 
@@ -207,6 +211,12 @@ export class WebCrawler {
           }
 
         }
+
+        throw new Error(
+
+          `Fetch aborted without a response: ${url}`
+
+        );
 
       }
 
@@ -282,6 +292,14 @@ export class WebCrawler {
 
       ) {
 
+        logger.warning(
+
+          `Crawl failed: ${url}`,
+
+          error
+
+        );
+
         results.push({
 
           success: false,
@@ -290,7 +308,7 @@ export class WebCrawler {
 
           error:
 
-            error.message,
+            formatError(error),
 
         });
 
@@ -407,7 +425,20 @@ export class WebCrawler {
 
       return response.ok;
 
-    } catch {
+    } catch (error) {
+
+      /*
+        robots.txt could not be reached, so crawling is not proven
+        to be allowed. Stay conservative, but say why.
+      */
+
+      logger.warning(
+
+        `robots.txt check failed for ${url}, treating as disallowed`,
+
+        error
+
+      );
 
       return false;
 
@@ -427,7 +458,13 @@ export class WebCrawler {
 
       return true;
 
-    } catch {
+    } catch (error) {
+
+      logger.info(
+
+        `Ping failed for ${url}: ${formatError(error)}`
+
+      );
 
       return false;
 

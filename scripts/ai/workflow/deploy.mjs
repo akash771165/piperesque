@@ -6,6 +6,11 @@ import path from "node:path";
 import logger from "../../shared/logger.mjs";
 import config from "../../shared/config.mjs";
 
+import {
+  formatError,
+  wrapError,
+} from "../../shared/errors.mjs";
+
 const execute = promisify(exec);
 
 export class DeployWorkflow {
@@ -86,24 +91,45 @@ export class DeployWorkflow {
       command
     );
 
-    const result =
-      await execute(
+    let result;
 
-        command,
+    try {
 
-        {
+      result =
+        await execute(
 
-          cwd:
+          command,
 
-            this.options.projectRoot,
+          {
 
-          timeout:
+            cwd:
 
-            this.options.timeout,
+              this.options.projectRoot,
 
-        }
+            timeout:
+
+              this.options.timeout,
+
+          }
+
+        );
+
+    } catch (error) {
+
+      /*
+        The command output holds the actual reason a build or a
+        deployment failed, so it has to travel with the error.
+      */
+
+      throw wrapError(
+
+        `Command failed: ${command}\n${error.stderr ?? ""}${error.stdout ?? ""}`,
+
+        error
 
       );
+
+    }
 
     return {
 
@@ -202,9 +228,23 @@ export class DeployWorkflow {
 
       );
 
-    await fs.access(
-      nextFolder
-    );
+    try {
+
+      await fs.access(
+        nextFolder
+      );
+
+    } catch (error) {
+
+      throw wrapError(
+
+        `Build output missing: ${nextFolder}`,
+
+        error
+
+      );
+
+    }
 
     logger.success(
       ".next build verified."
@@ -384,7 +424,8 @@ export class DeployWorkflow {
     } catch (error) {
 
       logger.error(
-        error.message
+        `Deployment workflow failed: ${formatError(error)}`,
+        error
       );
 
       throw error;

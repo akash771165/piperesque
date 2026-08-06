@@ -4,6 +4,8 @@ import path from "node:path";
 
 import logger from "../../shared/logger.mjs";
 
+import { isMissingFileError } from "../../shared/errors.mjs";
+
 export class PromptLoader {
 
   constructor(options = {}) {
@@ -295,7 +297,15 @@ export class PromptLoader {
 
       return true;
 
-    } catch {
+    } catch (error) {
+
+      if (
+        !isMissingFileError(error)
+      ) {
+
+        throw error;
+
+      }
 
       return false;
 

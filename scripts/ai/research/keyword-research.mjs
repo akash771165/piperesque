@@ -16,6 +16,14 @@ import {
 
 import logger from "../../shared/logger.mjs";
 
+import {
+  describeFailures,
+  runBatch,
+  throwIfFailed,
+} from "../../shared/batch.mjs";
+
+import { formatError } from "../../shared/errors.mjs";
+
 const DEFAULT_INTENT = "informational";
 
 const DEFAULT_LANGUAGE = "en";
@@ -78,7 +86,11 @@ export class KeywordResearchEngine {
 
     try {
       return readJson(file);
-    } catch {
+    } catch (error) {
+      logger.warning(
+        `Ignoring unreadable keyword cache: ${file} (${formatError(error)})`
+      );
+
       return null;
     }
   }
@@ -127,42 +139,6 @@ export class KeywordResearchEngine {
     };
   }
 
-  async research(keyword) {
-    if (!keyword || !keyword.trim()) {
-      throw new Error("Keyword is required.");
-    }
-
-    const normalized = this.normalizeKeyword(keyword);
-
-    logger.info(`Research started: ${normalized}`);
-
-    if (this.options.cache) {
-      const cache = this.loadCache(normalized);
-
-      if (cache) {
-        logger.success("Keyword cache hit");
-
-        return cache;
-      }
-    }
-
-    const record = this.createKeywordRecord(normalized);
-
-    if (this.options.cache) {
-      this.saveCache(normalized, record);
-    }
-
-    if (this.options.saveOutput) {
-      await this.saveOutput(normalized, record);
-    }
-
-    logger.success(`Research completed: ${normalized}`);
-
-    return record;
-  }
-}
-
-export default KeywordResearchEngine;
   detectIntent(keyword) {
     const value = keyword.toLowerCase();
 
@@ -469,24 +445,14 @@ export default KeywordResearchEngine;
   }
 
   async researchMany(keywords = []) {
-    if (!Array.isArray(keywords)) {
-      throw new Error("Keywords must be an array.");
-    }
-
-    const results = [];
-
-    for (const keyword of keywords) {
-      try {
-        const result = await this.research(keyword);
-        results.push(result);
-      } catch (error) {
-        logger.error(
-          `Research failed for "${keyword}": ${error.message}`
-        );
+    return runBatch(
+      keywords,
+      keyword => this.research(keyword),
+      {
+        label: "Keyword research",
+        stopOnError: this.options.stopOnError,
       }
-    }
-
-    return results;
+    );
   }
 
   sortByOpportunity(results = []) {
@@ -539,13 +505,14 @@ export default KeywordResearchEngine;
     };
   }
 
-  async exportReport(results = []) {
+  async exportReport(results = [], failures = []) {
     const report = {
       project: config.project.name,
       domain: config.project.domain,
       generatedAt: new Date().toISOString(),
       statistics: this.generateStatistics(results),
       keywords: this.sortByOpportunity(results),
+      failures: describeFailures(failures),
     };
 
     const file = path.join(
@@ -577,9 +544,15 @@ export async function researchKeywords(
 ) {
   const engine = new KeywordResearchEngine(options);
 
-  const results = await engine.researchMany(keywords);
+  const { results, failures } = await engine.researchMany(keywords);
 
-  await engine.exportReport(results);
+  await engine.exportReport(results, failures);
+
+  throwIfFailed(
+    failures,
+    keywords.length,
+    "Keyword research"
+  );
 
   return results;
 }

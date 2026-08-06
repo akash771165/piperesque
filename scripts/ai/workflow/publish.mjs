@@ -4,6 +4,14 @@ import path from "node:path";
 import logger from "../../shared/logger.mjs";
 import config from "../../shared/config.mjs";
 
+import {
+  describeFailures,
+  runBatch,
+  throwIfFailed,
+} from "../../shared/batch.mjs";
+
+import { isMissingFileError } from "../../shared/errors.mjs";
+
 export class PublishWorkflow {
 
   constructor(options = {}) {
@@ -110,7 +118,15 @@ export class PublishWorkflow {
 
       return true;
 
-    } catch {
+    } catch (error) {
+
+      if (
+        !isMissingFileError(error)
+      ) {
+
+        throw error;
+
+      }
 
       return false;
 
@@ -305,53 +321,32 @@ export class PublishWorkflow {
     blogs = []
   ) {
 
-    if (
-      !Array.isArray(
-        blogs
-      )
-    ) {
+    return runBatch(
 
-      throw new Error(
-        "Blogs must be an array."
-      );
+      blogs,
 
-    }
+      blog =>
+        this.publish(
+          blog
+        ),
 
-    const results = [];
+      {
 
-    for (
-      const blog of blogs
-    ) {
+        label:
+          "Publish",
 
-      try {
-
-        const result =
-          await this.publish(
-            blog
-          );
-
-        results.push(
-          result
-        );
-
-      } catch (
-        error
-      ) {
-
-        logger.error(
-          error.message
-        );
+        stopOnError:
+          this.options.stopOnError,
 
       }
 
-    }
-
-    return results;
+    );
 
   }
 
   statistics(
-    results = []
+    results = [],
+    failures = []
   ) {
 
     return {
@@ -365,6 +360,9 @@ export class PublishWorkflow {
       totalPublished:
         results.length,
 
+      totalFailed:
+        failures.length,
+
       generatedAt:
         new Date().toISOString(),
 
@@ -373,18 +371,25 @@ export class PublishWorkflow {
   }
 
   async exportReport(
-    results = []
+    results = [],
+    failures = []
   ) {
 
     const report = {
 
       statistics:
         this.statistics(
-          results
+          results,
+          failures
         ),
 
       published:
         results,
+
+      failures:
+        describeFailures(
+          failures
+        ),
 
     };
 
@@ -437,13 +442,20 @@ export class PublishWorkflow {
     blogs = []
   ) {
 
-    const results =
+    const { results, failures } =
       await this.publishMany(
         blogs
       );
 
     await this.exportReport(
-      results
+      results,
+      failures
+    );
+
+    throwIfFailed(
+      failures,
+      blogs.length,
+      "Publish"
     );
 
     return results;

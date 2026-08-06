@@ -3,6 +3,8 @@ import "dotenv/config";
 import logger from "../../shared/logger.mjs";
 import config from "../../shared/config.mjs";
 
+import { formatError } from "../../shared/errors.mjs";
+
 import {
   runAIWorkflow,
   runAIWorkflowBatch,
@@ -191,7 +193,7 @@ async function main() {
 
       printHelp();
 
-      process.exit(0);
+      process.exit(1);
 
     }
 
@@ -253,9 +255,33 @@ async function main() {
 
     logger.error(
 
-      error.message
+      `Workflow failed: ${formatError(error)}`,
+
+      error
 
     );
+
+    if (
+
+      error instanceof AggregateError
+
+    ) {
+
+      for (
+
+        const failure of error.errors
+
+      ) {
+
+        console.error(
+
+          formatError(failure)
+
+        );
+
+      }
+
+    }
 
     console.error("");
 

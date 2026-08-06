@@ -4,6 +4,13 @@ import path from "node:path";
 import logger from "../../shared/logger.mjs";
 import CacheManager from "./cache-manager.mjs";
 
+import {
+  runBatch,
+  throwIfFailed,
+} from "../../shared/batch.mjs";
+
+import { isMissingFileError } from "../../shared/errors.mjs";
+
 export class PromptLoader {
 
   constructor(options = {}) {
@@ -89,7 +96,15 @@ export class PromptLoader {
 
       return true;
 
-    } catch {
+    } catch (error) {
+
+      if (
+        !isMissingFileError(error)
+      ) {
+
+        throw error;
+
+      }
 
       return false;
 
@@ -351,45 +366,43 @@ export class PromptLoader {
 
       await this.list();
 
-    const loaded = [];
+    const { results, failures } =
 
-    for (
+      await runBatch(
 
-      const prompt of prompts
+        prompts,
 
-    ) {
+        async prompt => {
 
-      try {
+          await this.load(
 
-        await this.load(
+            prompt
 
-          prompt
+          );
 
-        );
+          return prompt;
 
-        loaded.push(
+        },
 
-          prompt
+        {
 
-        );
+          label: "Prompt preload",
 
-      } catch (
+        }
 
-        error
+      );
 
-      ) {
+    throwIfFailed(
 
-        logger.error(
+      failures,
 
-          error.message
+      prompts.length,
 
-        );
+      "Prompt preload"
 
-      }
+    );
 
-    }
-
-    return loaded;
+    return results;
 
   }
     async clearCache() {
