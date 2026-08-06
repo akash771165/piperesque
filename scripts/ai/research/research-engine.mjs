@@ -1,5 +1,7 @@
 import logger from "../../shared/logger.mjs";
 
+import { runBatch } from "../../shared/batch.mjs";
+
 import SearchService from "./search-service.mjs";
 import WebCrawler from "./web-crawler.mjs";
 import ContentExtractor from "./content-extractor.mjs";
@@ -248,61 +250,31 @@ export class ResearchEngine {
 
   ) {
 
-    const results = [];
+    return runBatch(
 
-    for (
+      keywords,
 
-      const keyword of keywords
+      keyword =>
 
-    ) {
-
-      try {
-
-        const result =
-
-          await this.research(
-
-            keyword,
-
-            options
-
-          );
-
-        results.push(
-
-          result
-
-        );
-
-      } catch (
-
-        error
-
-      ) {
-
-        logger.error(
-
-          `Research failed for "${keyword}": ${error.message}`
-
-        );
-
-        results.push({
+        this.research(
 
           keyword,
 
-          success: false,
+          options
 
-          error:
+        ),
 
-            error.message,
+      {
 
-        });
+        label: "Research",
+
+        stopOnError:
+
+          options.stopOnError,
 
       }
 
-    }
-
-    return results;
+    );
 
   }
 

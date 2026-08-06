@@ -1,6 +1,12 @@
 import logger from "../../shared/logger.mjs";
 import config from "../../shared/config.mjs";
 
+import {
+  describeFailures,
+  runBatch,
+  throwIfFailed,
+} from "../../shared/batch.mjs";
+
 export class MetadataWorkflow {
 
   constructor(options = {}) {
@@ -452,53 +458,32 @@ export class MetadataWorkflow {
     blogs = []
   ) {
 
-    if (
-      !Array.isArray(
-        blogs
-      )
-    ) {
+    return runBatch(
 
-      throw new Error(
-        "Blogs must be an array."
-      );
+      blogs,
 
-    }
+      blog =>
+        this.run(
+          blog
+        ),
 
-    const results = [];
+      {
 
-    for (
-      const blog of blogs
-    ) {
+        label:
+          "Metadata generation",
 
-      try {
-
-        const result =
-          await this.run(
-            blog
-          );
-
-        results.push(
-          result
-        );
-
-      } catch (
-        error
-      ) {
-
-        logger.error(
-          error.message
-        );
+        stopOnError:
+          this.options.stopOnError,
 
       }
 
-    }
-
-    return results;
+    );
 
   }
 
   async exportReport(
-    results = []
+    results = [],
+    failures = []
   ) {
 
     const fs =
@@ -528,6 +513,11 @@ export class MetadataWorkflow {
 
       project:
         config.project,
+
+      failures:
+        describeFailures(
+          failures
+        ),
 
       generatedAt:
         new Date().toISOString(),
@@ -603,13 +593,20 @@ export async function generateMetadataBatch(
       options
     );
 
-  const results =
+  const { results, failures } =
     await workflow.runMany(
       blogs
     );
 
   await workflow.exportReport(
-    results
+    results,
+    failures
+  );
+
+  throwIfFailed(
+    failures,
+    blogs.length,
+    "Metadata generation"
   );
 
   return results;

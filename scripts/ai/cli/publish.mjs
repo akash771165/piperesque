@@ -7,6 +7,11 @@ import logger from "../../shared/logger.mjs";
 import config from "../../shared/config.mjs";
 
 import {
+  formatError,
+  wrapError,
+} from "../../shared/errors.mjs";
+
+import {
   publishBlog,
   publishBlogs,
 } from "../workflow/publish.mjs";
@@ -123,7 +128,21 @@ async function loadBlog(slug) {
 
     );
 
-  return JSON.parse(json);
+  try {
+
+    return JSON.parse(json);
+
+  } catch (error) {
+
+    throw wrapError(
+
+      `Blog ${slug} contains invalid JSON: ${file}`,
+
+      error
+
+    );
+
+  }
 
 }
 
@@ -264,7 +283,7 @@ async function main() {
 
       help();
 
-      process.exit(0);
+      process.exit(1);
 
     }
 
@@ -330,9 +349,33 @@ async function main() {
 
     logger.error(
 
-      error.message
+      `Publishing failed: ${formatError(error)}`,
+
+      error
 
     );
+
+    if (
+
+      error instanceof AggregateError
+
+    ) {
+
+      for (
+
+        const failure of error.errors
+
+      ) {
+
+        console.error(
+
+          formatError(failure)
+
+        );
+
+      }
+
+    }
 
     console.error("");
 

@@ -2,6 +2,12 @@ import crypto from "node:crypto";
 
 import logger from "../../shared/logger.mjs";
 
+import {
+  describeFailures,
+  runBatch,
+  throwIfFailed,
+} from "../../shared/batch.mjs";
+
 const DEFAULT_COUNTRY = "US";
 const DEFAULT_LANGUAGE = "en";
 
@@ -553,53 +559,32 @@ export class CompetitorAnalysisEngine {
     keywords = []
   ) {
 
-    if (
-      !Array.isArray(
-        keywords
-      )
-    ) {
+    return runBatch(
 
-      throw new Error(
-        "Keywords must be an array."
-      );
+      keywords,
 
-    }
+      keyword =>
+        this.analyze(
+          keyword
+        ),
 
-    const reports = [];
+      {
 
-    for (
-      const keyword of keywords
-    ) {
+        label:
+          "Competitor analysis",
 
-      try {
-
-        const report =
-          await this.analyze(
-            keyword
-          );
-
-        reports.push(
-          report
-        );
-
-      } catch (
-        error
-      ) {
-
-        logger.error(
-          error.message
-        );
+        stopOnError:
+          this.options.stopOnError,
 
       }
 
-    }
-
-    return reports;
+    );
 
   }
 
   async exportReport(
-    reports = []
+    reports = [],
+    failures = []
   ) {
 
     const fs =
@@ -637,6 +622,11 @@ export class CompetitorAnalysisEngine {
         reports.length,
 
       reports,
+
+      failures:
+        describeFailures(
+          failures
+        ),
 
     };
 
@@ -696,16 +686,23 @@ export async function analyzeCompetitors(
       options
     );
 
-  const reports =
+  const { results, failures } =
     await engine.analyzeMany(
       keywords
     );
 
   await engine.exportReport(
-    reports
+    results,
+    failures
   );
 
-  return reports;
+  throwIfFailed(
+    failures,
+    keywords.length,
+    "Competitor analysis"
+  );
+
+  return results;
 
 }
 

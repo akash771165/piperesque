@@ -24,6 +24,13 @@ export function getBlog(slug: string): BlogContent | null {
   );
 
 
-  return JSON.parse(file);
+  try {
+    return JSON.parse(file);
+  } catch (error) {
+    throw new Error(
+      `Blog "${slug}" has invalid JSON: ${filePath}`,
+      { cause: error }
+    );
+  }
 
 }

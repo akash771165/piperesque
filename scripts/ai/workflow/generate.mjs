@@ -1,6 +1,12 @@
 import logger from "../../shared/logger.mjs";
 import config from "../../shared/config.mjs";
 
+import {
+  describeFailures,
+  runBatch,
+  throwIfFailed,
+} from "../../shared/batch.mjs";
+
 import { runResearch } from "./research.mjs";
 
 import { generateBlog } from "../generators/blog-generator.mjs";
@@ -253,48 +259,26 @@ export class ContentGenerationWorkflow {
     keywords = []
   ) {
 
-    if (
-      !Array.isArray(
-        keywords
-      )
-    ) {
+    return runBatch(
 
-      throw new Error(
-        "Keywords must be an array."
-      );
+      keywords,
 
-    }
+      keyword =>
+        this.run(
+          keyword
+        ),
 
-    const results = [];
+      {
 
-    for (
-      const keyword of keywords
-    ) {
+        label:
+          "Content generation",
 
-      try {
-
-        const result =
-          await this.run(
-            keyword
-          );
-
-        results.push(
-          result
-        );
-
-      } catch (
-        error
-      ) {
-
-        logger.error(
-          error.message
-        );
+        stopOnError:
+          this.options.stopOnError,
 
       }
 
-    }
-
-    return results;
+    );
 
   }
 
@@ -329,7 +313,8 @@ export class ContentGenerationWorkflow {
   }
 
   async exportReport(
-    results = []
+    results = [],
+    failures = []
   ) {
 
     const fs =
@@ -364,6 +349,12 @@ export class ContentGenerationWorkflow {
         ),
 
       results,
+
+      failures:
+
+        describeFailures(
+          failures
+        ),
 
     };
 
@@ -423,13 +414,20 @@ export async function generateContents(
       options
     );
 
-  const results =
+  const { results, failures } =
     await workflow.runMany(
       keywords
     );
 
   await workflow.exportReport(
-    results
+    results,
+    failures
+  );
+
+  throwIfFailed(
+    failures,
+    keywords.length,
+    "Content generation"
   );
 
   return results;
