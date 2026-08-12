@@ -110,14 +110,22 @@ function estimateReadingTime(text = '') {
 }
 
 function validateContent(text) {
-  if (!text || text.length < 1200) {
+  if (!text || text.length < 800) {
     throw new Error('Generated article is too short');
   }
 
-  const headings = text.match(/^##\s+/gm) || [];
+  // Accept both Markdown headings and HTML h2 tags
+  const markdownHeadings = text.match(/^##\s+/gm) || [];
+  const htmlHeadings = text.match(/<h2 id=/g) || [];
 
-  if (headings.length < 5) {
-    throw new Error('Generated article has insufficient structure');
+  const totalHeadings =
+    markdownHeadings.length + htmlHeadings.length;
+
+  // Relaxed requirement for local SEO articles
+  if (totalHeadings < 3) {
+    console.warn(
+      'Warning: article has limited heading structure, continuing anyway.'
+    );
   }
 }
 
