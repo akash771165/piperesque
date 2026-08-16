@@ -38,38 +38,38 @@ export const services: Service[] = [
   {
     slug: "emergency-plumbing",
 
-    title: "24/7 Emergency Plumbing Services in Houston, TX",
+    title: "Emergency Plumbing Services",
 
     shortTitle: "Emergency Plumbing",
 
     seoTitle:
-      "24/7 Emergency Plumber Houston | Piperesque",
+      "Emergency Plumbing Services | Piperesque",
 
     metaDescription:
-      "Need an emergency plumber in Houston? Piperesque provides fast 24/7 emergency plumbing services for burst pipes, leaks, clogged drains, and urgent repairs.",
+      "Information about emergency plumbing problems including burst pipes, major leaks, sewer backups, and other urgent plumbing issues.",
 
     keywords: [
-      "emergency plumber houston",
-      "24 hour plumber houston",
-      "emergency plumbing services",
+      "emergency plumbing",
+      "emergency plumber",
       "burst pipe repair",
-      "plumber near me",
+      "plumbing emergency",
+      "urgent plumbing repair",
     ],
 
-    heroTitle: "24/7 Emergency Plumbing Services",
+    heroTitle: "Emergency Plumbing Services",
 
     heroDescription:
-      "Our experienced plumbers respond quickly to plumbing emergencies across Houston and surrounding areas. Whether it's a burst pipe, overflowing toilet, or major leak, we're ready to help day or night.",
+      "Information and service options for urgent plumbing problems such as major leaks, burst pipes, sewer backups, and other plumbing emergencies.",
 
     description:
-      "Piperesque offers professional emergency plumbing services for residential and commercial properties. We arrive with fully equipped service vehicles to diagnose and repair plumbing emergencies quickly, minimizing water damage and restoring your plumbing system.",
+      "Emergency plumbing problems can cause water damage and disruption. Learn about common warning signs, appropriate next steps, and options for connecting with a local plumbing professional.",
 
     benefits: [
-      "24/7 Emergency Response",
-      "Licensed & Experienced Plumbers",
-      "Fast Arrival Times",
-      "Upfront Pricing",
-      "Residential & Commercial Service",
+      "Emergency Plumbing Information",
+      "Burst Pipe Guidance",
+      "Major Leak Information",
+      "Sewer Backup Guidance",
+      "Local Service Options",
     ],
 
     image: "/images/services/emergency-plumbing.jpg",
@@ -80,79 +80,80 @@ export const services: Service[] = [
   {
     slug: "drain-cleaning",
 
-    title: "Professional Drain Cleaning Services in Houston",
+    title: "Drain Cleaning Services",
 
     shortTitle: "Drain Cleaning",
 
     seoTitle:
-      "Drain Cleaning Houston, TX | Piperesque",
+      "Drain Cleaning Services | Piperesque",
 
     metaDescription:
-      "Professional drain cleaning services in Houston for clogged sinks, toilets, showers, and sewer lines. Fast, affordable, and reliable service.",
+      "Learn about drain cleaning for slow or blocked sinks, showers, tubs, toilets, and other plumbing drainage problems.",
 
     keywords: [
-      "drain cleaning houston",
-      "clogged drain repair",
+      "drain cleaning",
+      "clogged drain",
       "drain unclogging",
-      "sewer drain cleaning",
-      "sink drain cleaning",
+      "blocked drain",
+      "main drain cleaning",
     ],
 
-    heroTitle: "Expert Drain Cleaning Services",
+    heroTitle: "Drain Cleaning Services",
 
     heroDescription:
-      "Slow or clogged drains can disrupt your day. Our plumbers use professional equipment to remove blockages and restore proper water flow.",
+      "Learn about common drain blockages, warning signs, professional cleaning methods, and local plumbing service options.",
 
     description:
-      "From kitchen sinks to main sewer lines, Piperesque provides complete drain cleaning services using modern tools and proven techniques. We remove grease, debris, roots, and stubborn clogs without damaging your plumbing.",
+      "Drain problems can result from buildup, debris, grease, hair, mineral deposits, or deeper plumbing issues. The appropriate cleaning method depends on the location and cause of the blockage.",
 
     benefits: [
-      "Advanced Drain Cleaning Equipment",
-      "Safe for Pipes",
-      "Fast Service",
-      "Long-Lasting Results",
-      "Affordable Pricing",
+      "Drain Blockage Information",
+      "Clog Diagnosis",
+      "Drain Cleaning Options",
+      "Recurring Clog Guidance",
+      "Local Service Options",
     ],
 
     image: "/images/services/drain-cleaning.png",
 
     icon: Droplets,
   },
-     {
+
+  {
     slug: "water-heater-repair",
 
-    title: "Water Heater Repair & Installation in Houston, TX",
+    title: "Water Heater Repair Services",
 
     shortTitle: "Water Heater Repair",
 
     seoTitle:
-      "Water Heater Repair Houston | Piperesque",
+      "Water Heater Repair Services | Piperesque",
 
     metaDescription:
-      "Need water heater repair in Houston? We repair, replace, and install tank and tankless water heaters for homes and businesses.",
+      "Learn about water heater problems including insufficient hot water, leaks, unusual noises, and possible repair or replacement options.",
 
     keywords: [
-      "water heater repair houston",
-      "tankless water heater",
+      "water heater repair",
+      "water heater problems",
       "hot water heater repair",
-      "water heater installation",
       "water heater replacement",
+      "tankless water heater",
     ],
 
-    heroTitle: "Reliable Water Heater Services",
+    heroTitle: "Water Heater Repair Services",
 
     heroDescription:
-      "Restore hot water quickly with professional water heater repair and installation services from Piperesque.",
+      "Information about water heater problems, common warning signs, diagnosis, repair, maintenance, and replacement considerations.",
 
     description:
-      "Whether your water heater is leaking, producing no hot water, or needs complete replacement, our licensed plumbers provide fast and reliable repair and installation services for all major brands.",
+      "Water heater problems can affect hot water availability and daily activities. A professional assessment can help determine whether a component repair, maintenance service, or replacement is appropriate.",
 
     benefits: [
-      "Tank & Tankless Water Heaters",
-      "Same-Day Service",
-      "Energy-Efficient Solutions",
-      "Licensed Technicians",
-      "Upfront Pricing",
+      "Water Heater Diagnosis",
+      "Repair Information",
+      "Replacement Considerations",
+      "Tank & Tankless Systems",
+      "Local Service Options",
     ],
 
     image: "/images/services/water-heater-repair.png",
@@ -163,79 +164,79 @@ export const services: Service[] = [
   {
     slug: "leak-detection",
 
-    title: "Professional Leak Detection Services in Houston",
+    title: "Leak Detection Services",
 
     shortTitle: "Leak Detection",
 
     seoTitle:
-      "Leak Detection Houston, TX | Piperesque",
+      "Leak Detection Services | Piperesque",
 
     metaDescription:
-      "Accurate leak detection services for homes and businesses in Houston. Find hidden water leaks before they cause expensive damage.",
+      "Learn about detecting hidden plumbing leaks, unexplained water loss, damp areas, and other signs of possible plumbing leaks.",
 
     keywords: [
-      "leak detection houston",
-      "water leak repair",
+      "leak detection",
+      "hidden water leak",
+      "plumbing leak detection",
       "slab leak detection",
-      "hidden pipe leak",
-      "plumbing leak service",
+      "water leak",
     ],
 
-    heroTitle: "Fast & Accurate Leak Detection",
+    heroTitle: "Leak Detection Services",
 
     heroDescription:
-      "Hidden plumbing leaks can waste water and damage your property. We use advanced equipment to locate leaks quickly and accurately.",
+      "Learn about common signs of hidden plumbing leaks and the diagnostic methods professionals may use to locate them.",
 
     description:
-      "Piperesque provides non-invasive leak detection services using modern diagnostic technology. We identify hidden leaks behind walls, under floors, and inside underground plumbing systems.",
+      "Hidden plumbing leaks can occur behind walls, beneath floors, around fixtures, or in other inaccessible areas. Accurate diagnosis helps identify the likely source and determine an appropriate repair.",
 
     benefits: [
-      "Non-Invasive Detection",
-      "Advanced Equipment",
-      "Prevent Water Damage",
-      "Fast Diagnosis",
-      "Affordable Repairs",
+      "Hidden Leak Information",
+      "Leak Warning Signs",
+      "Diagnostic Methods",
+      "Water Damage Prevention",
+      "Local Service Options",
     ],
 
     image: "/images/services/leak-detection.jpg",
 
     icon: Pipette,
   },
-      {
+    {
     slug: "pipe-repair",
 
-    title: "Professional Pipe Repair Services in Houston, TX",
+    title: "Pipe Repair Services",
 
     shortTitle: "Pipe Repair",
 
     seoTitle:
-      "Pipe Repair Houston, TX | Piperesque",
+      "Pipe Repair Services | Piperesque",
 
     metaDescription:
-      "Expert pipe repair services in Houston for leaking, frozen, broken, and damaged water or sewer pipes. Fast response and lasting repairs.",
+      "Learn about leaking, damaged, broken, and deteriorating plumbing pipes and the repair options that may be appropriate.",
 
     keywords: [
-      "pipe repair houston",
-      "burst pipe repair",
+      "pipe repair",
       "water pipe repair",
       "leaking pipe repair",
-      "plumbing pipe replacement",
+      "broken pipe repair",
+      "pipe replacement",
     ],
 
-    heroTitle: "Reliable Pipe Repair Services",
+    heroTitle: "Pipe Repair Services",
 
     heroDescription:
-      "From minor leaks to major pipe damage, Piperesque provides professional pipe repair services that restore your plumbing system quickly and efficiently.",
+      "Information about damaged plumbing pipes, common warning signs, repair considerations, and local plumbing service options.",
 
     description:
-      "Our licensed plumbers diagnose and repair damaged water and sewer pipes using modern repair techniques. We minimize disruption while ensuring durable, long-lasting results for residential and commercial properties.",
+      "Damaged pipes can cause leaks, pressure problems, water damage, and interruptions to plumbing service. The appropriate repair depends on the pipe material, location, accessibility, and extent of the damage.",
 
     benefits: [
-      "Fast Pipe Repairs",
-      "Leak Detection Included",
-      "Modern Repair Methods",
-      "Residential & Commercial",
-      "Licensed Plumbers",
+      "Pipe Problem Information",
+      "Leak Warning Signs",
+      "Repair Options",
+      "Pipe Replacement Guidance",
+      "Local Service Options",
     ],
 
     image: "/images/services/pipe-repair.png",
@@ -246,38 +247,38 @@ export const services: Service[] = [
   {
     slug: "sewer-line-repair",
 
-    title: "Sewer Line Repair Services in Houston, TX",
+    title: "Sewer Line Repair Services",
 
     shortTitle: "Sewer Line Repair",
 
     seoTitle:
-      "Sewer Line Repair Houston | Piperesque",
+      "Sewer Line Repair Services | Piperesque",
 
     metaDescription:
-      "Professional sewer line repair and replacement services in Houston. We fix blocked, damaged, and broken sewer lines quickly and efficiently.",
+      "Learn about sewer line problems including recurring backups, damaged pipes, root intrusion, blockages, and sewer repair options.",
 
     keywords: [
-      "sewer line repair houston",
+      "sewer line repair",
       "sewer pipe repair",
       "sewer replacement",
       "drain line repair",
       "underground sewer repair",
     ],
 
-    heroTitle: "Professional Sewer Line Repair",
+    heroTitle: "Sewer Line Repair Services",
 
     heroDescription:
-      "Damaged sewer lines can create serious plumbing issues. Our experienced plumbers provide reliable sewer inspections, repairs, and replacements.",
+      "Information about sewer line problems, warning signs, inspection considerations, repair methods, and local service options.",
 
     description:
-      "Piperesque uses modern inspection equipment to diagnose sewer line problems accurately. We repair cracked, collapsed, and blocked sewer lines with minimal disruption to your property.",
+      "Sewer line problems can affect multiple plumbing fixtures and may result from blockages, root intrusion, damaged pipes, or other conditions. Diagnosis helps determine the appropriate repair or replacement approach.",
 
     benefits: [
-      "Camera Sewer Inspection",
-      "Accurate Diagnosis",
-      "Long-Term Repairs",
-      "Minimal Property Damage",
-      "Emergency Service Available",
+      "Sewer Problem Information",
+      "Recurring Backup Guidance",
+      "Inspection Information",
+      "Repair Options",
+      "Replacement Considerations",
     ],
 
     image: "/images/services/sewer-line-repair.png",
@@ -288,121 +289,121 @@ export const services: Service[] = [
   {
     slug: "toilet-repair",
 
-    title: "Toilet Repair Services in Houston, TX",
+    title: "Toilet Repair Services",
 
     shortTitle: "Toilet Repair",
 
     seoTitle:
-      "Toilet Repair Houston, TX | Piperesque",
+      "Toilet Repair Services | Piperesque",
 
     metaDescription:
-      "Professional toilet repair services in Houston for clogged, leaking, overflowing, or constantly running toilets. Fast and affordable plumbing solutions.",
+      "Learn about clogged, leaking, overflowing, and continuously running toilets and the plumbing repair options available.",
 
     keywords: [
-      "toilet repair houston",
+      "toilet repair",
       "clogged toilet repair",
       "running toilet repair",
       "toilet leak repair",
-      "plumber for toilet repair",
+      "toilet plumbing service",
     ],
 
-    heroTitle: "Professional Toilet Repair Services",
+    heroTitle: "Toilet Repair Services",
 
     heroDescription:
-      "Whether your toilet is leaking, clogged, or continuously running, our experienced plumbers provide fast and reliable repairs throughout Houston.",
+      "Information about common toilet problems including clogs, leaks, flushing issues, and continuously running toilets.",
 
     description:
-      "Piperesque offers complete toilet repair services for residential and commercial properties. We repair flushing issues, leaks, damaged components, and install new toilets when replacement is the better option.",
+      "Toilet problems can result from blocked drains, worn components, leaks, or other plumbing conditions. A professional assessment can identify the cause and determine whether repair or replacement is appropriate.",
 
     benefits: [
-      "Fast Toilet Repairs",
-      "Leak & Flush Repairs",
-      "Toilet Installation Available",
-      "Affordable Pricing",
-      "Same-Day Service",
+      "Toilet Problem Information",
+      "Clog Guidance",
+      "Leak Information",
+      "Flush Problem Guidance",
+      "Replacement Considerations",
     ],
 
     image: "/images/services/toilet-repair.jpg",
 
     icon: Toilet,
   },
-    {
+
+  {
     slug: "faucet-repair",
 
-    title: "Faucet Repair & Replacement Services in Houston",
+    title: "Faucet Repair Services",
 
     shortTitle: "Faucet Repair",
 
     seoTitle:
-      "Faucet Repair Houston, TX | Piperesque",
+      "Faucet Repair Services | Piperesque",
 
     metaDescription:
-      "Expert faucet repair and replacement services for kitchens, bathrooms, and commercial properties throughout Houston.",
+      "Learn about leaking, dripping, damaged, and malfunctioning kitchen and bathroom faucets and available repair options.",
 
     keywords: [
-      "faucet repair houston",
-      "kitchen faucet repair",
-      "bathroom faucet replacement",
+      "faucet repair",
       "leaky faucet repair",
-      "plumbing faucet service",
+      "kitchen faucet repair",
+      "bathroom faucet repair",
+      "faucet replacement",
     ],
 
-    heroTitle: "Expert Faucet Repair Services",
+    heroTitle: "Faucet Repair Services",
 
     heroDescription:
-      "Stop dripping faucets and water waste with professional faucet repair and replacement services from Piperesque.",
+      "Information about common faucet problems, water leaks, worn components, fixture repairs, and replacement considerations.",
 
     description:
-      "We repair and replace all types of kitchen, bathroom, utility room, and commercial faucets. Our plumbers work with all major faucet brands and provide long-lasting repairs.",
+      "A dripping or leaking faucet can waste water and may indicate a worn component or damaged fixture. The appropriate solution depends on the faucet condition, failed component, and whether repair or replacement is more suitable.",
 
     benefits: [
-      "Repair All Faucet Brands",
-      "Kitchen & Bathroom Faucets",
-      "Leak Elimination",
-      "Modern Fixture Installation",
-      "Licensed Professionals",
+      "Faucet Problem Information",
+      "Leak Guidance",
+      "Fixture Repair Options",
+      "Replacement Considerations",
+      "Kitchen & Bathroom Information",
     ],
 
     image: "/images/services/faucet-repair.png",
 
     icon: Bath,
   },
-
-  {
+    {
     slug: "commercial-plumbing",
 
-    title: "Commercial Plumbing Services in Houston, TX",
+    title: "Commercial Plumbing Services",
 
     shortTitle: "Commercial Plumbing",
 
     seoTitle:
-      "Commercial Plumbing Houston, TX | Piperesque",
+      "Commercial Plumbing Services | Piperesque",
 
     metaDescription:
-      "Reliable commercial plumbing services for offices, restaurants, retail stores, warehouses, and commercial buildings throughout Houston.",
+      "Learn about commercial plumbing problems, maintenance considerations, repairs, drainage, water heaters, leaks, and other plumbing services for commercial properties.",
 
     keywords: [
-      "commercial plumber houston",
-      "commercial plumbing services",
+      "commercial plumbing",
+      "commercial plumber",
       "business plumbing repair",
       "commercial drain cleaning",
-      "commercial plumbing contractor",
+      "commercial plumbing services",
     ],
 
-    heroTitle: "Professional Commercial Plumbing Services",
+    heroTitle: "Commercial Plumbing Services",
 
     heroDescription:
-      "Piperesque provides dependable commercial plumbing solutions designed to minimize downtime and keep your business running efficiently.",
+      "Information about plumbing systems and common service needs for offices, retail properties, restaurants, warehouses, and other commercial buildings.",
 
     description:
-      "Our commercial plumbing team handles repairs, maintenance, installations, drain cleaning, leak detection, water heaters, sewer lines, and emergency plumbing for businesses of every size throughout Houston.",
+      "Commercial plumbing systems can involve fixtures, drainage, water heaters, supply lines, and other plumbing components. Service requirements depend on the property, plumbing system, and specific problem.",
 
     benefits: [
-      "Licensed Commercial Plumbers",
-      "Emergency Commercial Service",
-      "Preventive Maintenance",
-      "Minimal Business Downtime",
-      "Upfront Pricing",
+      "Commercial Plumbing Information",
+      "Drainage Guidance",
+      "Leak Information",
+      "Water Heater Guidance",
+      "Local Service Options",
     ],
 
     image: "/images/services/commercial-plumbing.png",
@@ -413,38 +414,38 @@ export const services: Service[] = [
   {
     slug: "residential-plumbing",
 
-    title: "Residential Plumbing Services in Houston, TX",
+    title: "Residential Plumbing Services",
 
     shortTitle: "Residential Plumbing",
 
     seoTitle:
-      "Residential Plumbing Houston, TX | Piperesque",
+      "Residential Plumbing Services | Piperesque",
 
     metaDescription:
-      "Complete residential plumbing services for homes in Houston. Repairs, installations, drain cleaning, leak detection, water heaters, and emergency plumbing.",
+      "Learn about residential plumbing problems including leaks, clogged drains, fixtures, water heaters, pipes, and emergency plumbing situations.",
 
     keywords: [
-      "residential plumber houston",
+      "residential plumbing",
+      "residential plumber",
       "home plumbing services",
-      "house plumber",
-      "plumbing repair houston",
-      "local plumber",
+      "house plumbing repair",
+      "residential plumbing repair",
     ],
 
-    heroTitle: "Complete Residential Plumbing Solutions",
+    heroTitle: "Residential Plumbing Services",
 
     heroDescription:
-      "From small plumbing repairs to complete system installations, Piperesque delivers dependable residential plumbing services across Houston.",
+      "Information about common residential plumbing problems, repairs, maintenance considerations, and local plumbing service options.",
 
     description:
-      "Our experienced plumbers provide comprehensive plumbing services for homeowners, including leak repairs, drain cleaning, fixture installation, water heater services, pipe repairs, and emergency plumbing support.",
+      "Residential plumbing systems include fixtures, supply lines, drainage, water heaters, and other components. The appropriate service depends on the property's plumbing system and the specific problem.",
 
     benefits: [
-      "Friendly Local Plumbers",
-      "Same-Day Service Available",
-      "Affordable Pricing",
-      "Licensed & Insured",
-      "100% Customer Satisfaction",
+      "Residential Plumbing Information",
+      "Leak Guidance",
+      "Drain Problem Information",
+      "Water Heater Guidance",
+      "Local Service Options",
     ],
 
     image: "/images/services/residential-plumbing.png",
