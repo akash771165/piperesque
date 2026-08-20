@@ -74,14 +74,6 @@ export function generateStaticParams() {
   return priorityPages;
 }
 
-/*
-|--------------------------------------------------------------------------
-| SERVICE-SPECIFIC SEO CONTENT
-|--------------------------------------------------------------------------
-| Each landing page has its own search intent and topical coverage.
-| Do not reuse one generic block across all plumbing services.
-*/
-
 const serviceContent: Record<string, ServiceContent> = {
   "emergency-plumbing": {
     intro:
@@ -331,6 +323,7 @@ const serviceContent: Record<string, ServiceContent> = {
       },
     ],
   },
+
   "leak-detection": {
     intro:
       "Piperesque helps Houston homeowners connect with independent plumbing professionals for leak detection, hidden water leaks, unexplained moisture, water stains, and other plumbing problems where the source may not be immediately visible.",
@@ -542,14 +535,12 @@ export default async function LocationServicePage({ params }: Props) {
     serviceType: serviceName,
     description: content.intro,
     url: canonical,
-
     areaServed: {
       "@type": "City",
       name: cityName,
       addressRegion: stateName,
       addressCountry: "US",
     },
-
     provider: {
       "@type": "Organization",
       name: "Piperesque",
@@ -562,9 +553,7 @@ export default async function LocationServicePage({ params }: Props) {
       <Navbar />
 
       <main>
-        {/* ============================================================
-            BREADCRUMB
-        ============================================================ */}
+        {/* BREADCRUMB */}
 
         <section className="border-b border-slate-200 bg-white">
           <div className="mx-auto max-w-7xl px-6 py-4">
@@ -606,9 +595,7 @@ export default async function LocationServicePage({ params }: Props) {
           </div>
         </section>
 
-        {/* ============================================================
-            HERO
-        ============================================================ */}
+        {/* HERO */}
 
         <section className="bg-slate-950 text-white">
           <div className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
@@ -625,20 +612,13 @@ export default async function LocationServicePage({ params }: Props) {
                 {content.intro}
               </p>
 
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-8">
                 <a
                   href="tel:+18773640861"
                   className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-4 font-bold text-slate-950 transition hover:bg-slate-100"
                 >
                   Call for Plumbing Help
                 </a>
-
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-4 font-bold text-white transition hover:bg-white/10"
-                >
-                  Request Plumbing Service
-                </Link>
               </div>
 
               <p className="mt-5 text-sm text-slate-400">
@@ -649,304 +629,360 @@ export default async function LocationServicePage({ params }: Props) {
           </div>
         </section>
 
-        {/* ============================================================
-            MAIN CONTENT
-        ============================================================ */}
+        {/* INTRODUCTION */}
 
         <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-6 py-16 lg:py-20">
+            <p className="text-lg leading-8 text-slate-700">
+              {content.intro}
+            </p>
+          </div>
+        </section>
+
+        {/* PRIMARY INFORMATION */}
+
+        <section className="bg-slate-50">
           <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-            <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px]">
-              <article className="min-w-0">
-                {/* INTRODUCTION */}
+            <div className="max-w-4xl">
+              <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                {content.urgencyTitle}
+              </h2>
 
-                <section>
-                  <h2 className="text-3xl font-bold tracking-tight text-slate-950">
-                    {serviceName} for {cityName} Homeowners
-                  </h2>
-
-                  <p className="mt-5 text-lg leading-8 text-slate-700">
-                    {content.intro}
-                  </p>
-
-                  <p className="mt-5 text-base leading-8 text-slate-700">
-                    Plumbing problems can have several possible causes.
-                    The correct solution depends on the condition of the
-                    plumbing system, accessibility, materials, labor,
-                    equipment, and severity of the issue. A professional
-                    assessment can help determine what is actually causing
-                    the problem before major repair work is authorized.
-                  </p>
-                </section>
-
-                {/* URGENCY / INTENT SECTION */}
-
-                <section className="mt-16">
-                  <h2 className="text-3xl font-bold tracking-tight text-slate-950">
-                    {content.urgencyTitle}
-                  </h2>
-
-                  <p className="mt-5 text-base leading-8 text-slate-700">
-                    {content.urgencyText}
-                  </p>
-                </section>
-
-                {/* COMMON PROBLEMS */}
-
-                <section className="mt-16">
-                  <h2 className="text-3xl font-bold tracking-tight text-slate-950">
-                    {content.problemsTitle}
-                  </h2>
-
-                  <div className="mt-7 grid gap-4 sm:grid-cols-2">
-                    {content.problems.map((problem) => (
-                      <div
-                        key={problem}
-                        className="rounded-2xl border border-slate-200 bg-slate-50 p-5"
-                      >
-                        <p className="font-semibold leading-7 text-slate-900">
-                          {problem}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-
-                {/* PROCESS */}
-
-                <section className="mt-16">
-                  <h2 className="text-3xl font-bold tracking-tight text-slate-950">
-                    {content.processTitle}
-                  </h2>
-
-                  <div className="mt-8 space-y-5">
-                    {content.process.map((step, index) => (
-                      <div
-                        key={step.title}
-                        className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-                      >
-                        <div className="flex gap-5">
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-950 font-bold text-white">
-                            {index + 1}
-                          </div>
-
-                          <div>
-                            <h3 className="text-xl font-bold text-slate-950">
-                              {step.title}
-                            </h3>
-
-                            <p className="mt-2 leading-7 text-slate-700">
-                              {step.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-
-                {/* LOCAL SEO SECTION */}
-
-                <section className="mt-16">
-                  <h2 className="text-3xl font-bold tracking-tight text-slate-950">
-                    {content.localTitle}
-                  </h2>
-
-                  <p className="mt-5 leading-8 text-slate-700">
-                    {content.localText}
-                  </p>
-
-                  <p className="mt-5 leading-8 text-slate-700">
-                    If the problem is recurring, affecting multiple
-                    fixtures, or causing visible water or wastewater
-                    damage, explain all of the symptoms to the plumbing
-                    professional. This can help the provider understand
-                    whether the issue may involve a larger part of the
-                    plumbing system.
-                  </p>
-                </section>
-
-                {/* COST */}
-
-                <section className="mt-16">
-                  <h2 className="text-3xl font-bold tracking-tight text-slate-950">
-                    {content.costTitle}
-                  </h2>
-
-                  <p className="mt-5 leading-8 text-slate-700">
-                    {content.costText}
-                  </p>
-
-                  <div className="mt-7 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                    <h3 className="text-xl font-bold text-slate-950">
-                      Factors That Can Affect Cost
-                    </h3>
-
-                    <ul className="mt-5 space-y-3">
-                      {content.costFactors.map((factor) => (
-                        <li
-                          key={factor}
-                          className="flex gap-3 leading-7 text-slate-700"
-                        >
-                          <span
-                            aria-hidden="true"
-                            className="mt-2 h-2 w-2 shrink-0 rounded-full bg-slate-950"
-                          />
-
-                          <span>{factor}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <p className="mt-5 text-sm leading-7 text-slate-500">
-                    Pricing is informational only. Piperesque does not
-                    guarantee pricing, availability, response time, or
-                    workmanship. Any quote or service terms are determined
-                    by the independent plumbing provider.
-                  </p>
-                </section>
-
-                {/* ======================================================
-                    INTERNAL SERVICE LINKS
-                ====================================================== */}
-
-                <section className="mt-16">
-                  <h2 className="text-3xl font-bold tracking-tight text-slate-950">
-                    More Plumbing Services in {cityName}
-                  </h2>
-
-                  <div className="mt-7 grid gap-4 sm:grid-cols-2">
-                    {services
-                      .filter(
-                        (item) => item.slug !== plumbing.slug
-                      )
-                      .slice(0, 6)
-                      .map((item) => (
-                        <Link
-                          key={item.slug}
-                          href={`/location/${city.slug}/${item.slug}`}
-                          className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-slate-400 hover:shadow-md"
-                        >
-                          <span className="font-bold text-slate-950 group-hover:underline">
-                            {item.shortTitle} in {cityName}
-                          </span>
-
-                          <span className="mt-2 block text-sm leading-6 text-slate-600">
-                            Learn about {item.shortTitle.toLowerCase()}{" "}
-                            services and plumbing options in{" "}
-                            {cityName}.
-                          </span>
-                        </Link>
-                      ))}
-                  </div>
-                </section>
-
-                {/* ======================================================
-                    FAQ
-                ====================================================== */}
-
-                <section className="mt-16">
-                  <h2 className="text-3xl font-bold tracking-tight text-slate-950">
-                    Frequently Asked Questions
-                  </h2>
-
-                  <div className="mt-7 space-y-4">
-                    {content.faqs.map((faq) => (
-                      <details
-                        key={faq.question}
-                        className="group rounded-2xl border border-slate-200 bg-white p-6"
-                      >
-                        <summary className="cursor-pointer list-none pr-8 text-lg font-bold text-slate-950">
-                          {faq.question}
-                        </summary>
-
-                        <p className="mt-4 leading-7 text-slate-700">
-                          {faq.answer}
-                        </p>
-                      </details>
-                    ))}
-                  </div>
-                </section>
-
-                {/* ======================================================
-                    CITY PAGE LINK
-                ====================================================== */}
-
-                <section className="mt-16 rounded-3xl bg-slate-950 p-8 text-white">
-                  <h2 className="text-2xl font-bold">
-                    Plumbing Services in {cityName}, {stateName}
-                  </h2>
-
-                  <p className="mt-3 leading-7 text-slate-300">
-                    Explore additional plumbing services and information
-                    for homeowners in {cityName}.
-                  </p>
-
-                  <Link
-                    href={`/location/${city.slug}`}
-                    className="mt-6 inline-flex rounded-xl bg-white px-5 py-3 font-bold text-slate-950 transition hover:bg-slate-100"
-                  >
-                    View {cityName} Plumbing Services
-                  </Link>
-                </section>
-              </article>
-
-              {/* ==========================================================
-                  SIDEBAR
-              ========================================================== */}
-
-              <aside className="lg:sticky lg:top-24 lg:self-start">
-                <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
-                  <p className="text-sm font-bold uppercase tracking-wider text-slate-500">
-                    Plumbing Assistance
-                  </p>
-
-                  <h2 className="mt-3 text-2xl font-bold text-slate-950">
-                    Need {serviceName}?
-                  </h2>
-
-                  <p className="mt-3 leading-7 text-slate-600">
-                    Connect with an independent plumbing provider serving{" "}
-                    {cityName}, {stateName}.
-                  </p>
-
-                  <a
-                    href="tel:+18773640861"
-                    className="mt-6 flex w-full items-center justify-center rounded-xl bg-slate-950 px-5 py-4 font-bold text-white transition hover:bg-slate-800"
-                  >
-                    Call (877) 364-0861
-                  </a>
-
-                  <Link
-                    href="/contact"
-                    className="mt-3 flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-4 font-bold text-slate-950 transition hover:bg-slate-100"
-                  >
-                    Request Service
-                  </Link>
-                </div>
-              </aside>
+              <p className="mt-6 text-lg leading-8 text-slate-700">
+                {content.urgencyText}
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ================================================================
-            FINAL CTA
-        ================================================================= */}
+        {/* COMMON PROBLEMS */}
 
-        <CTA />
+        <section className="bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+            <div className="max-w-4xl">
+              <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                {content.problemsTitle}
+              </h2>
+
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+                {content.problems.map((problem) => (
+                  <li
+                    key={problem}
+                    className="rounded-2xl border border-slate-200 bg-white p-5 text-base font-semibold leading-7 text-slate-800 shadow-sm"
+                  >
+                    {problem}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* PROCESS */}
+
+        <section className="bg-slate-50">
+          <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+            <div className="max-w-4xl">
+              <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                {content.processTitle}
+              </h2>
+
+              <div className="mt-10 space-y-5">
+                {content.process.map((step, index) => (
+                  <article
+                    key={step.title}
+                    className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                  >
+                    <div className="flex gap-5">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-950 text-sm font-black text-white">
+                        {index + 1}
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-black text-slate-950">
+                          {step.title}
+                        </h3>
+
+                        <p className="mt-2 leading-7 text-slate-700">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* LOCAL SEO CONTENT */}
+
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-6 py-16 lg:py-20">
+            <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+              {content.localTitle}
+            </h2>
+
+            <p className="mt-6 text-lg leading-8 text-slate-700">
+              {content.localText}
+            </p>
+
+            <p className="mt-6 text-lg leading-8 text-slate-700">
+              If the problem is recurring, affecting multiple fixtures, or
+              causing visible water or wastewater damage, explain all of the
+              symptoms to the plumbing professional. This can help the
+              provider understand whether the issue may involve a larger
+              part of the plumbing system.
+            </p>
+          </div>
+        </section>
+
+        {/* COST */}
+
+        <section className="bg-slate-50">
+          <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+            <div className="max-w-4xl">
+              <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                {content.costTitle}
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-slate-700">
+                {content.costText}
+              </p>
+
+              <h3 className="mt-10 text-2xl font-black text-slate-950">
+                Factors That Can Affect Cost
+              </h3>
+
+              <ul className="mt-6 space-y-3">
+                {content.costFactors.map((factor) => (
+                  <li
+                    key={factor}
+                    className="flex gap-3 text-base leading-7 text-slate-700"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="mt-2 h-2 w-2 shrink-0 rounded-full bg-slate-950"
+                    />
+
+                    <span>{factor}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 text-sm leading-7 text-slate-600">
+                Pricing is informational only. Piperesque does not guarantee
+                pricing, availability, response time, or workmanship. Any
+                quote or service terms are determined by the independent
+                plumbing provider.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* INTERNAL SERVICE LINKS */}
+
+        <section className="bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+            <div className="max-w-4xl">
+              <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                More Plumbing Services in {cityName}
+              </h2>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {services
+                  .filter((item) => item.slug !== plumbing.slug)
+                  .slice(0, 6)
+                  .map((item) => (
+                    <Link
+                      key={item.slug}
+                      href={`/location/${city.slug}/${item.slug}`}
+                      className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-400"
+                    >
+                      <h3 className="text-lg font-black text-slate-950">
+                        {item.shortTitle} in {cityName}
+                      </h3>
+
+                      <p className="mt-2 text-sm leading-6 text-slate-600">
+                        Learn about {item.shortTitle.toLowerCase()} services
+                        and plumbing options in {cityName}.
+                      </p>
+
+                      <span className="mt-4 inline-block text-sm font-bold text-slate-950">
+                        Learn more →
+                      </span>
+                    </Link>
+                  ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+
+        <section className="bg-slate-50">
+          <div className="mx-auto max-w-4xl px-6 py-16 lg:py-20">
+            <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="mt-8 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+              {content.faqs.map((faq) => (
+                <details
+                  key={faq.question}
+                  className="group p-6"
+                >
+                  <summary className="cursor-pointer list-none pr-8 text-lg font-black text-slate-950">
+                    {faq.question}
+                  </summary>
+
+                  <p className="mt-4 leading-7 text-slate-700">
+                    {faq.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CITY HUB */}
+
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-6 py-16 lg:py-20">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-slate-500">
+              Plumbing Services in {cityName}, {stateName}
+            </p>
+
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+              Explore Plumbing Services in {cityName}
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-slate-700">
+              Explore additional plumbing services and information for
+              homeowners in {cityName}.
+            </p>
+
+            <Link
+              href={`/location/${city.slug}`}
+              className="mt-8 inline-flex rounded-xl bg-slate-950 px-6 py-4 font-bold text-white transition hover:bg-slate-800"
+            >
+              View {cityName} Plumbing Services
+            </Link>
+          </div>
+        </section>
+
+        {/* PHONE CTA */}
+
+        <section className="bg-slate-950 text-white">
+          <div className="mx-auto max-w-4xl px-6 py-16 text-center lg:py-20">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-slate-400">
+              Plumbing Assistance
+            </p>
+
+            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
+              Need {serviceName}?
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+              Connect with an independent plumbing provider serving{" "}
+              {cityName}, {stateName}.
+            </p>
+
+            <a
+              href="tel:+18773640861"
+              className="mt-8 inline-flex items-center justify-center rounded-xl bg-white px-7 py-4 font-black text-slate-950 transition hover:bg-slate-100"
+            >
+              Call (877) 364-0861
+            </a>
+          </div>
+        </section>
       </main>
 
-      {/* ================================================================
-          STRUCTURED DATA
-      ================================================================= */}
-
-     <JsonLd schema={serviceSchema} />
+      <JsonLd schema={serviceSchema} />
 
       <BreadcrumbSchema items={breadcrumbItems} />
 
       <FAQSchema faqs={content.faqs} />
 
+      <CTA />
+
       <Footer />
     </>
   );
+}
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  const { location, service } = await params;
+
+  const city = locations.find((item) => item.slug === location);
+  const plumbing = services.find((item) => item.slug === service);
+
+  if (!city || !plumbing) {
+    return {
+      title: "Page Not Found | Piperesque",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  const content = serviceContent[plumbing.slug];
+
+  if (!content) {
+    return {
+      title: "Page Not Found | Piperesque",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  const title =
+    `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | Piperesque`;
+
+  const description =
+    content.intro.length > 155
+      ? `${content.intro.slice(0, 152).trimEnd()}...`
+      : content.intro;
+
+  const canonical =
+    `${baseUrl}/location/${city.slug}/${plumbing.slug}`;
+
+  return {
+    title,
+    description,
+
+    alternates: {
+      canonical,
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: "Piperesque",
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
 }
