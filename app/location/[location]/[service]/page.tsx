@@ -77,22 +77,24 @@ export function generateStaticParams() {
 const serviceContent: Record<string, ServiceContent> = {
   "emergency-plumbing": {
     intro:
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for urgent plumbing problems, including major leaks, burst pipes, sewer backups, overflowing fixtures, and other situations that may require prompt attention.",
+      "Piperesque helps Houston homeowners connect with independent plumbing professionals for urgent plumbing problems, including burst pipes, major leaks, sewer backups, overflowing fixtures, water-heater leaks, and other situations that may require prompt attention.",
 
     urgencyTitle: "When You May Need Emergency Plumbing in Houston",
 
     urgencyText:
-      "A plumbing emergency can cause additional property damage when water continues to flow or wastewater backs up into the home. The appropriate response depends on the source of the problem, the affected plumbing system, and the severity of the situation.",
+      "A plumbing emergency is generally a problem that can cause active water damage, wastewater exposure, loss of essential plumbing service, or additional property damage if it is not addressed promptly. The right response depends on the source of the problem, the affected plumbing system, and the severity of the situation.",
 
-    problemsTitle: "Common Houston Plumbing Emergencies",
+    problemsTitle: "Common Emergency Plumbing Problems in Houston",
 
     problems: [
       "Burst or rapidly leaking water pipes",
       "Sewage backup or wastewater entering the property",
       "Overflowing toilets that cannot be cleared normally",
-      "Major water leaks around fixtures or plumbing connections",
+      "Major leaks around fixtures, valves, or plumbing connections",
       "Sudden loss of water caused by a plumbing-system problem",
-      "Water heater leaks or failures causing active water damage",
+      "Water heater leaks causing active water damage",
+      "Multiple drains backing up at the same time",
+      "Water accumulating around plumbing fixtures or equipment",
     ],
 
     processTitle: "What to Expect From an Emergency Plumbing Service",
@@ -101,34 +103,44 @@ const serviceContent: Record<string, ServiceContent> = {
       {
         title: "Describe the emergency",
         description:
-          "Explain what happened, where the problem is located, and whether water or wastewater is actively causing damage.",
+          "Explain what happened, where the problem is located, which fixtures are affected, and whether water or wastewater is actively causing damage.",
+      },
+      {
+        title: "Stop or reduce water use",
+        description:
+          "If it is safe to do so, stop using the affected fixture and minimize additional water entering the plumbing system while waiting for professional assistance.",
       },
       {
         title: "Initial assessment",
         description:
-          "A plumbing professional can evaluate the visible symptoms and identify the likely source of the problem.",
+          "A plumbing professional can evaluate the visible symptoms and identify the likely source of the plumbing problem.",
       },
       {
         title: "Discuss repair options",
         description:
-          "Before authorizing significant work, ask about the diagnosis, repair scope, parts, labor, and applicable service charges.",
+          "Before authorizing significant work, ask about the diagnosis, repair scope, parts, labor, and applicable service or diagnostic charges.",
       },
       {
         title: "Complete the necessary repair",
         description:
-          "The selected provider determines the appropriate repair or replacement based on the condition of the plumbing system.",
+          "The selected provider determines the appropriate repair, replacement, cleaning, or other service based on the condition of the plumbing system.",
+      },
+      {
+        title: "Test the plumbing",
+        description:
+          "After the work is completed, the provider should verify that the affected plumbing is operating as expected and explain any additional recommendations.",
       },
     ],
 
     localTitle: "Emergency Plumbing Problems in Houston, TX",
 
     localText:
-      "Houston homes and properties can have different plumbing configurations, construction ages, and maintenance histories. Emergency problems may involve supply lines, fixtures, drainage systems, sewer lines, or water-heating equipment. Prompt assessment can help determine whether the issue is isolated or connected to a larger plumbing problem.",
+      "Houston properties vary in age, construction, plumbing configuration, and maintenance history. Emergency problems may involve water supply lines, fixtures, drainage systems, sewer lines, or water-heating equipment. A prompt professional assessment can help determine whether the problem is isolated or connected to a larger plumbing issue.",
 
     costTitle: "Emergency Plumbing Cost in Houston",
 
     costText:
-      "Emergency plumbing pricing varies by provider and depends on the type of failure, time of service, labor, materials, accessibility, equipment, and whether repair or replacement is required. Ask for the applicable diagnostic or service fee and understand the expected scope before authorizing work.",
+      "Emergency plumbing pricing varies by provider and depends on the type and severity of the problem, time of service, labor, materials, accessibility, equipment, and whether repair or replacement is required. Ask the provider about applicable diagnostic or service fees and understand the expected scope of work before authorizing repairs.",
 
     costFactors: [
       "Type and severity of the plumbing emergency",
@@ -136,24 +148,51 @@ const serviceContent: Record<string, ServiceContent> = {
       "Parts and replacement materials",
       "Accessibility of the affected plumbing",
       "Labor and specialized equipment",
+      "Inspection or diagnostic requirements",
       "Repair versus replacement requirements",
+      "Extent of water or wastewater damage",
     ],
 
     faqs: [
       {
         question: "What is considered a plumbing emergency in Houston?",
         answer:
-          "Major leaks, burst pipes, sewage backups, severe overflows, and plumbing problems causing active property damage may require prompt professional attention.",
+          "Major leaks, burst pipes, sewage backups, severe overflows, water-heater leaks, and plumbing problems causing active property damage may require prompt professional attention.",
+      },
+      {
+        question: "What should I do during a plumbing emergency?",
+        answer:
+          "Stop using the affected fixture and minimize additional water use when possible. If it is safe to do so, shut off the appropriate water supply and keep people away from contaminated wastewater.",
       },
       {
         question: "How quickly can an emergency plumber respond in Houston?",
         answer:
-          "Response times depend on provider availability, current demand, traffic, location, and the severity of the plumbing problem. Ask the provider for the expected arrival window.",
+          "Response times depend on provider availability, current demand, traffic, location, and the severity of the plumbing problem. Ask the provider for an expected arrival window.",
       },
       {
         question: "How much does emergency plumbing cost in Houston?",
         answer:
           "The cost depends on the plumbing problem, labor, materials, accessibility, equipment, timing, and whether repair or replacement is necessary. Providers determine their own pricing.",
+      },
+      {
+        question: "Should I use chemical drain cleaner during a plumbing emergency?",
+        answer:
+          "Avoid mixing chemical drain cleaners or repeatedly using harsh chemicals when a serious blockage is present. Chemical residue can create hazardous conditions and may not address the underlying plumbing problem.",
+      },
+      {
+        question: "What if several drains are backing up at the same time?",
+        answer:
+          "Multiple affected fixtures can indicate a blockage farther down a shared drain or sewer system. Minimize water use and have the plumbing system professionally evaluated.",
+      },
+      {
+        question: "Can a plumbing leak cause serious property damage?",
+        answer:
+          "Yes. A continuing leak can damage floors, walls, ceilings, cabinets, and personal property. If active water damage is occurring, reducing water flow and seeking prompt professional assistance can help limit further damage.",
+      },
+      {
+        question: "Does Piperesque perform the plumbing repair?",
+        answer:
+          "Piperesque helps homeowners connect with independent plumbing professionals. Availability, pricing, workmanship, and service terms are determined by the selected provider.",
       },
     ],
   },
@@ -240,8 +279,7 @@ const serviceContent: Record<string, ServiceContent> = {
       },
     ],
   },
-
-  "drain-cleaning": {
+    "drain-cleaning": {
     intro:
       "Piperesque helps Houston homeowners connect with independent plumbing professionals for clogged drains, recurring blockages, slow drainage, and other residential drain-cleaning needs.",
 
@@ -490,6 +528,7 @@ const serviceContent: Record<string, ServiceContent> = {
     ],
   },
 };
+
 export default async function LocationServicePage({ params }: Props) {
   const { location, service } = await params;
 
@@ -547,369 +586,371 @@ export default async function LocationServicePage({ params }: Props) {
       url: baseUrl,
     },
   };
-
-  return (
+    return (
     <>
       <Navbar />
 
       <main>
-        {/* BREADCRUMB */}
+        {/* Breadcrumb */}
+        <nav
+          aria-label="Breadcrumb"
+          className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8"
+        >
+          <ol className="flex flex-wrap items-center gap-2 text-sm text-gray-600">
+            <li>
+              <Link
+                href="/"
+                className="transition-colors hover:text-gray-900"
+              >
+                Home
+              </Link>
+            </li>
 
-        <section className="border-b border-slate-200 bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-4">
-            <nav
-              aria-label="Breadcrumb"
-              className="text-sm text-slate-600"
+            <li aria-hidden="true">/</li>
+
+            <li>
+              <Link
+                href={`/location/${city.slug}`}
+                className="transition-colors hover:text-gray-900"
+              >
+                {cityName}
+              </Link>
+            </li>
+
+            <li aria-hidden="true">/</li>
+
+            <li
+              aria-current="page"
+              className="font-medium text-gray-900"
             >
-              <ol className="flex flex-wrap items-center gap-2">
-                <li>
-                  <Link
-                    href="/"
-                    className="transition hover:text-slate-950"
-                  >
-                    Home
-                  </Link>
-                </li>
+              {serviceName}
+            </li>
+          </ol>
+        </nav>
 
-                <li aria-hidden="true">/</li>
+        {/* Hero */}
+        <section className="mx-auto max-w-7xl px-4 pb-12 pt-10 sm:px-6 lg:px-8 lg:pt-16">
+          <div className="max-w-4xl">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-gray-600">
+              {cityName}, {stateName}
+            </p>
 
-                <li>
-                  <Link
-                    href={`/location/${city.slug}`}
-                    className="transition hover:text-slate-950"
-                  >
-                    {cityName}
-                  </Link>
-                </li>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl">
+              {serviceName} in {cityName}, {stateName}
+            </h1>
 
-                <li aria-hidden="true">/</li>
-
-                <li
-                  className="font-medium text-slate-950"
-                  aria-current="page"
-                >
-                  {serviceName}
-                </li>
-              </ol>
-            </nav>
-          </div>
-        </section>
-
-        {/* HERO */}
-
-        <section className="bg-slate-950 text-white">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
-            <div className="max-w-4xl">
-              <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-slate-300">
-                {cityName}, {stateName}
-              </p>
-
-              <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">
-                {serviceName} in {cityName}, {stateName}
-              </h1>
-
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-                {content.intro}
-              </p>
-
-              <div className="mt-8">
-                <a
-                  href="tel:+18773640861"
-                  className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-4 font-bold text-slate-950 transition hover:bg-slate-100"
-                >
-                  Call for Plumbing Help
-                </a>
-              </div>
-
-              <p className="mt-5 text-sm text-slate-400">
-                Independent plumbing providers • Availability varies by
-                location and provider
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* INTRODUCTION */}
-
-        <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-6 py-16 lg:py-20">
-            <p className="text-lg leading-8 text-slate-700">
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700">
               {content.intro}
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="tel:+18773640861"
+                className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3 text-base font-semibold text-white transition hover:bg-gray-800"
+              >
+                Call (877) 364-0861
+              </a>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-base font-semibold text-gray-900 transition hover:bg-gray-50"
+              >
+                Contact Us
+              </Link>
+            </div>
+
+            <p className="mt-4 text-sm text-gray-500">
+              Independent plumbing providers • Availability varies by
+              location and provider
             </p>
           </div>
         </section>
 
-        {/* PRIMARY INFORMATION */}
+        {/* Main Content */}
+        <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px]">
+            <article className="min-w-0">
+              {/* Introduction */}
+              <section className="mb-12">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-950">
+                  {content.urgencyTitle}
+                </h2>
 
-        <section className="bg-slate-50">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-            <div className="max-w-4xl">
-              <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                {content.urgencyTitle}
-              </h2>
+                <p className="mt-5 text-lg leading-8 text-gray-700">
+                  {content.urgencyText}
+                </p>
+              </section>
 
-              <p className="mt-6 text-lg leading-8 text-slate-700">
-                {content.urgencyText}
-              </p>
-            </div>
-          </div>
-        </section>
+              {/* Common Problems */}
+              <section className="mb-12">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-950">
+                  {content.problemsTitle}
+                </h2>
 
-        {/* COMMON PROBLEMS */}
+                <ul className="mt-6 space-y-4">
+                  {content.problems.map((problem) => (
+                    <li
+                      key={problem}
+                      className="flex items-start gap-3 text-gray-700"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 h-2 w-2 shrink-0 rounded-full bg-gray-900"
+                      />
 
-        <section className="bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-            <div className="max-w-4xl">
-              <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                {content.problemsTitle}
-              </h2>
+                      <span className="leading-7">{problem}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
 
-              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-                {content.problems.map((problem) => (
-                  <li
-                    key={problem}
-                    className="rounded-2xl border border-slate-200 bg-white p-5 text-base font-semibold leading-7 text-slate-800 shadow-sm"
-                  >
-                    {problem}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
+              {/* Process */}
+              <section className="mb-12">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-950">
+                  {content.processTitle}
+                </h2>
 
-        {/* PROCESS */}
-
-        <section className="bg-slate-50">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-            <div className="max-w-4xl">
-              <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                {content.processTitle}
-              </h2>
-
-              <div className="mt-10 space-y-5">
-                {content.process.map((step, index) => (
-                  <article
-                    key={step.title}
-                    className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-                  >
-                    <div className="flex gap-5">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-950 text-sm font-black text-white">
+                <div className="mt-8 space-y-8">
+                  {content.process.map((step, index) => (
+                    <div
+                      key={step.title}
+                      className="flex gap-5"
+                    >
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-100 text-sm font-bold text-gray-900">
                         {index + 1}
                       </div>
 
                       <div>
-                        <h3 className="text-xl font-black text-slate-950">
+                        <h3 className="text-xl font-semibold text-gray-950">
                           {step.title}
                         </h3>
 
-                        <p className="mt-2 leading-7 text-slate-700">
+                        <p className="mt-2 leading-7 text-gray-700">
                           {step.description}
                         </p>
                       </div>
                     </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* LOCAL SEO CONTENT */}
-
-        <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-6 py-16 lg:py-20">
-            <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-              {content.localTitle}
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-slate-700">
-              {content.localText}
-            </p>
-
-            <p className="mt-6 text-lg leading-8 text-slate-700">
-              If the problem is recurring, affecting multiple fixtures, or
-              causing visible water or wastewater damage, explain all of the
-              symptoms to the plumbing professional. This can help the
-              provider understand whether the issue may involve a larger
-              part of the plumbing system.
-            </p>
-          </div>
-        </section>
-
-        {/* COST */}
-
-        <section className="bg-slate-50">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-            <div className="max-w-4xl">
-              <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                {content.costTitle}
-              </h2>
-
-              <p className="mt-6 text-lg leading-8 text-slate-700">
-                {content.costText}
-              </p>
-
-              <h3 className="mt-10 text-2xl font-black text-slate-950">
-                Factors That Can Affect Cost
-              </h3>
-
-              <ul className="mt-6 space-y-3">
-                {content.costFactors.map((factor) => (
-                  <li
-                    key={factor}
-                    className="flex gap-3 text-base leading-7 text-slate-700"
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="mt-2 h-2 w-2 shrink-0 rounded-full bg-slate-950"
-                    />
-
-                    <span>{factor}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 text-sm leading-7 text-slate-600">
-                Pricing is informational only. Piperesque does not guarantee
-                pricing, availability, response time, or workmanship. Any
-                quote or service terms are determined by the independent
-                plumbing provider.
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* INTERNAL SERVICE LINKS */}
-
-        <section className="bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-            <div className="max-w-4xl">
-              <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                More Plumbing Services in {cityName}
-              </h2>
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {services
-                  .filter((item) => item.slug !== plumbing.slug)
-                  .slice(0, 6)
-                  .map((item) => (
-                    <Link
-                      key={item.slug}
-                      href={`/location/${city.slug}/${item.slug}`}
-                      className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-400"
-                    >
-                      <h3 className="text-lg font-black text-slate-950">
-                        {item.shortTitle} in {cityName}
-                      </h3>
-
-                      <p className="mt-2 text-sm leading-6 text-slate-600">
-                        Learn about {item.shortTitle.toLowerCase()} services
-                        and plumbing options in {cityName}.
-                      </p>
-
-                      <span className="mt-4 inline-block text-sm font-bold text-slate-950">
-                        Learn more →
-                      </span>
-                    </Link>
                   ))}
-              </div>
-            </div>
-          </div>
-        </section>
+                </div>
+              </section>
 
-        {/* FAQ */}
+              {/* Local Information */}
+              <section className="mb-12">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-950">
+                  {content.localTitle}
+                </h2>
 
-        <section className="bg-slate-50">
-          <div className="mx-auto max-w-4xl px-6 py-16 lg:py-20">
-            <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-              Frequently Asked Questions
-            </h2>
+                <p className="mt-5 leading-8 text-gray-700">
+                  {content.localText}
+                </p>
+              </section>
 
-            <div className="mt-8 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
-              {content.faqs.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group p-6"
-                >
-                  <summary className="cursor-pointer list-none pr-8 text-lg font-black text-slate-950">
-                    {faq.question}
-                  </summary>
+              {/* Cost */}
+              <section className="mb-12">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-950">
+                  {content.costTitle}
+                </h2>
 
-                  <p className="mt-4 leading-7 text-slate-700">
-                    {faq.answer}
+                <p className="mt-5 leading-8 text-gray-700">
+                  {content.costText}
+                </p>
+
+                <h3 className="mt-8 text-xl font-semibold text-gray-950">
+                  Factors That Can Affect Cost
+                </h3>
+
+                <ul className="mt-5 space-y-3">
+                  {content.costFactors.map((factor) => (
+                    <li
+                      key={factor}
+                      className="flex items-start gap-3 text-gray-700"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 h-2 w-2 shrink-0 rounded-full bg-gray-900"
+                      />
+
+                      <span className="leading-7">{factor}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
+                  <p className="text-sm leading-6 text-gray-600">
+                    Piperesque does not guarantee pricing, availability,
+                    response time, or workmanship. Any estimate, service
+                    terms, scheduling, and final price are determined by
+                    the independent plumbing provider.
                   </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+                </div>
+              </section>
 
-        {/* CITY HUB */}
+              {/* Related Services */}
+              <section className="mb-12">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-950">
+                  Related Plumbing Services in {cityName}
+                </h2>
 
-        <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-6 py-16 lg:py-20">
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-slate-500">
-              Plumbing Services in {cityName}, {stateName}
-            </p>
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  {[
+                    {
+                      slug: "emergency-plumbing",
+                      name: "Emergency Plumbing",
+                    },
+                    {
+                      slug: "sewer-line-repair",
+                      name: "Sewer Line Repair",
+                    },
+                    {
+                      slug: "drain-cleaning",
+                      name: "Drain Cleaning",
+                    },
+                    {
+                      slug: "leak-detection",
+                      name: "Leak Detection",
+                    },
+                    {
+                      slug: "water-heater-repair",
+                      name: "Water Heater Repair",
+                    },
+                  ]
+                    .filter((item) => item.slug !== plumbing.slug)
+                    .map((item) => (
+                      <Link
+                        key={item.slug}
+                        href={`/location/${city.slug}/${item.slug}`}
+                        className="rounded-xl border border-gray-200 p-5 transition hover:border-gray-400 hover:bg-gray-50"
+                      >
+                        <span className="font-semibold text-gray-950">
+                          {item.name}
+                        </span>
 
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-              Explore Plumbing Services in {cityName}
-            </h2>
+                        <span className="mt-1 block text-sm text-gray-600">
+                          Learn more about {item.name.toLowerCase()} in{" "}
+                          {cityName}.
+                        </span>
+                      </Link>
+                    ))}
+                </div>
+              </section>
+            </article>
 
-            <p className="mt-5 text-lg leading-8 text-slate-700">
-              Explore additional plumbing services and information for
-              homeowners in {cityName}.
-            </p>
+            {/* Sidebar */}
+            <aside className="lg:sticky lg:top-24 lg:self-start">
+              <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+                <h2 className="text-xl font-bold text-gray-950">
+                  Need Plumbing Help?
+                </h2>
 
-            <Link
-              href={`/location/${city.slug}`}
-              className="mt-8 inline-flex rounded-xl bg-slate-950 px-6 py-4 font-bold text-white transition hover:bg-slate-800"
-            >
-              View {cityName} Plumbing Services
-            </Link>
-          </div>
-        </section>
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Connect with an independent plumbing professional
+                  serving your area.
+                </p>
 
-        {/* PHONE CTA */}
+                <a
+                  href="tel:+18773640861"
+                  className="mt-6 block rounded-lg bg-black px-5 py-3 text-center font-semibold text-white transition hover:bg-gray-800"
+                >
+                  Call (877) 364-0861
+                </a>
 
-        <section className="bg-slate-950 text-white">
-          <div className="mx-auto max-w-4xl px-6 py-16 text-center lg:py-20">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-slate-400">
-              Plumbing Assistance
-            </p>
-
-            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
-              Need {serviceName}?
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-              Connect with an independent plumbing provider serving{" "}
-              {cityName}, {stateName}.
-            </p>
-
-            <a
-              href="tel:+18773640861"
-              className="mt-8 inline-flex items-center justify-center rounded-xl bg-white px-7 py-4 font-black text-slate-950 transition hover:bg-slate-100"
-            >
-              Call (877) 364-0861
-            </a>
+                <p className="mt-4 text-xs leading-5 text-gray-500">
+                  Availability and service terms vary by provider and
+                  location.
+                </p>
+              </div>
+            </aside>
           </div>
         </section>
       </main>
+            {/* FAQ Section */}
+      <section className="border-t border-gray-200 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-950">
+              Frequently Asked Questions
+            </h2>
 
-      <JsonLd schema={serviceSchema} />
+            <p className="mt-4 leading-7 text-gray-600">
+              Common questions about {serviceName.toLowerCase()} in{" "}
+              {cityName}, {stateName}.
+            </p>
+          </div>
+
+          <div className="mt-10 max-w-4xl space-y-4">
+            {content.faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-xl border border-gray-200 bg-white p-6"
+              >
+                <summary className="cursor-pointer list-none pr-8 text-lg font-semibold text-gray-950">
+                  {faq.question}
+                </summary>
+
+                <p className="mt-4 leading-7 text-gray-700">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="rounded-2xl bg-gray-950 px-6 py-10 text-center sm:px-10">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Need {serviceName.toLowerCase()} in {cityName}?
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl leading-7 text-gray-300">
+            Get connected with an independent plumbing professional
+            serving your area.
+          </p>
+
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <a
+              href="tel:+18773640861"
+              className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-gray-950 transition hover:bg-gray-100"
+            >
+              Call (877) 364-0861
+            </a>
+
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-lg border border-gray-700 px-6 py-3 font-semibold text-white transition hover:bg-gray-900"
+            >
+              Contact Us
+            </Link>
+          </div>
+
+          <p className="mt-5 text-xs leading-5 text-gray-400">
+            Independent plumbing providers. Availability, pricing,
+            response time, and service terms vary by provider and
+            location.
+          </p>
+        </div>
+      </section>
+
+      {/* Structured Data */}
+    <JsonLd schema={serviceSchema} />
 
       <BreadcrumbSchema items={breadcrumbItems} />
 
-      <FAQSchema faqs={content.faqs} />
+      <FAQSchema
+        faqs={content.faqs.map((faq) => ({
+          question: faq.question,
+          answer: faq.answer,
+        }))}
+      />
 
+      {/* Existing CTA / Footer */}
       <CTA />
-
       <Footer />
     </>
   );
 }
+
 export async function generateMetadata({
   params,
 }: Props): Promise<Metadata> {
@@ -919,25 +960,13 @@ export async function generateMetadata({
   const plumbing = services.find((item) => item.slug === service);
 
   if (!city || !plumbing) {
-    return {
-      title: "Page Not Found | Piperesque",
-      robots: {
-        index: false,
-        follow: false,
-      },
-    };
+    return {};
   }
 
   const content = serviceContent[plumbing.slug];
 
   if (!content) {
-    return {
-      title: "Page Not Found | Piperesque",
-      robots: {
-        index: false,
-        follow: false,
-      },
-    };
+    return {};
   }
 
   const title =
@@ -945,7 +974,7 @@ export async function generateMetadata({
 
   const description =
     content.intro.length > 155
-      ? `${content.intro.slice(0, 152).trimEnd()}...`
+      ? `${content.intro.slice(0, 152)}...`
       : content.intro;
 
   const canonical =
@@ -977,6 +1006,7 @@ export async function generateMetadata({
       url: canonical,
       siteName: "Piperesque",
       type: "website",
+      locale: "en_US",
     },
 
     twitter: {
