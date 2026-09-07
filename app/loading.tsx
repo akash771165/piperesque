@@ -1,38 +1,42 @@
+import { Loader2 } from "lucide-react";
+
 export default function Loading() {
-    return (
-        <main className="flex min-h-screen items-center justify-center bg-slate-50">
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-white px-6">
+      <div className="flex w-full max-w-sm flex-col items-center text-center">
 
-            <div className="text-center">
+        {/* Loading Icon */}
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50">
+          <Loader2
+            size={30}
+            className="animate-spin text-blue-600"
+            aria-hidden="true"
+          />
+        </div>
 
-                <div className="mx-auto flex h-28 w-28 animate-spin items-center justify-center rounded-full border-[8px] border-slate-200 border-t-blue-600">
+        {/* Brand */}
+        <h1 className="mt-6 text-2xl font-black tracking-tight text-slate-900">
+          Piperesque
+        </h1>
 
-                    <span className="text-5xl">
-                        🔧
-                    </span>
+        {/* Status */}
+        <p className="mt-2 text-sm font-medium text-slate-500">
+          Loading your page...
+        </p>
 
-                </div>
+        {/* Progress Indicator */}
+        <div
+          className="mt-7 h-1.5 w-full overflow-hidden rounded-full bg-slate-100"
+          aria-hidden="true"
+        >
+          <div className="h-full w-1/2 animate-pulse rounded-full bg-blue-600" />
+        </div>
 
-                <h2 className="mt-10 text-4xl font-black text-slate-900">
-                    Piperesque
-                </h2>
-
-                <p className="mt-4 text-lg text-slate-600">
-                    Loading...
-                </p>
-
-                <div className="mx-auto mt-10 h-2 w-72 overflow-hidden rounded-full bg-slate-200">
-
-                    <div className="h-full w-1/2 animate-pulse rounded-full bg-blue-600" />
-
-                </div>
-
-                <p className="mt-8 text-sm font-medium text-slate-500">
-                    Please wait while we prepare your page...
-                </p>
-
-            </div>
-
-        </main>
-    );
+        {/* Supporting Text */}
+        <p className="mt-5 text-xs leading-5 text-slate-400">
+          Please wait while we prepare your plumbing assistance information.
+        </p>
+      </div>
+    </main>
+  );
 }
-

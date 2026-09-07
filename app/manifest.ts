@@ -5,12 +5,12 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     id: "/",
 
-    name: `${siteConfig.company} | ${siteConfig.tagline}`,
+    name: `${siteConfig.company} | Plumbing Assistance in Houston`,
 
     short_name: siteConfig.company,
 
     description:
-      "24/7 Emergency Plumbing Services in Houston, Texas. Emergency plumbing, drain cleaning, leak detection, sewer line repair, water heater repair, residential and commercial plumbing.",
+      "Piperesque helps homeowners in Houston and surrounding areas connect with independent plumbing professionals for emergency and routine plumbing needs.",
 
     start_url: "/",
 
@@ -24,7 +24,7 @@ export default function manifest(): MetadataRoute.Manifest {
 
     background_color: "#ffffff",
 
-    theme_color: "#2563eb",
+    theme_color: "#0b5fff",
 
     lang: "en-US",
 
@@ -35,7 +35,6 @@ export default function manifest(): MetadataRoute.Manifest {
       "home-services",
       "plumbing",
       "utilities",
-      "local-business",
     ],
 
     icons: [
@@ -44,18 +43,21 @@ export default function manifest(): MetadataRoute.Manifest {
         sizes: "any",
         type: "image/x-icon",
       },
+
       {
         src: "/icon-192.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "maskable",
       },
+
       {
         src: "/icon-512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",
       },
+
       {
         src: "/apple-touch-icon.png",
         sizes: "180x180",
@@ -65,17 +67,19 @@ export default function manifest(): MetadataRoute.Manifest {
 
     shortcuts: [
       {
-        name: "Call Now",
+        name: "Call for Plumbing Assistance",
         short_name: "Call",
         url: `tel:${siteConfig.phone}`,
       },
+
       {
-        name: "Request Estimate",
-        short_name: "Estimate",
+        name: "Request Plumbing Assistance",
+        short_name: "Request Help",
         url: "/contact",
       },
+
       {
-        name: "Our Services",
+        name: "Explore Plumbing Services",
         short_name: "Services",
         url: "/services",
       },

@@ -1,103 +1,202 @@
 import Link from "next/link";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Home,
+  Phone,
+  Wrench,
+} from "lucide-react";
+
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
+const popularPages = [
+  {
+    title: "Plumbing Services",
+    description: "Explore available plumbing service categories.",
+    href: "/services",
+  },
+  {
+    title: "Service Areas",
+    description: "Explore Houston and surrounding service areas.",
+    href: "/service-areas",
+  },
+  {
+    title: "About Piperesque",
+    description: "Learn how Piperesque helps homeowners.",
+    href: "/about",
+  },
+  {
+    title: "Plumbing Blog",
+    description: "Read helpful plumbing information and guides.",
+    href: "/blog",
+  },
+  {
+    title: "Contact",
+    description: "Request plumbing assistance.",
+    href: "/contact",
+  },
+];
+
 export default function NotFound() {
-    return (
-        <main className="overflow-x-hidden bg-white">
+  return (
+    <main className="min-h-screen overflow-x-hidden bg-white">
+      <Navbar />
 
-            <Navbar />
+      {/* =====================================================
+          404 HERO
+      ===================================================== */}
 
-            <section className="flex min-h-[80vh] items-center justify-center bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      <section className="section section-light flex min-h-[75vh] items-center">
+        <div className="container-custom w-full">
+          <div className="mx-auto max-w-4xl text-center">
 
-                <div className="container-custom text-center">
+            {/* Icon */}
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
+              <Wrench size={28} aria-hidden="true" />
+            </div>
 
-                    <h1 className="text-[120px] font-black leading-none text-blue-600 lg:text-[220px]">
-                        404
-                    </h1>
+            {/* Error Code */}
+            <p className="mt-8 text-8xl font-black leading-none tracking-tight text-blue-600 sm:text-9xl md:text-[11rem]">
+              404
+            </p>
 
-                    <h2 className="mt-4 text-5xl font-black text-slate-900">
-                        Page Not Found
-                    </h2>
+            {/* Heading */}
+            <h1 className="heading-xl mt-4 text-slate-900">
+              Page Not Found
+            </h1>
 
-                    <p className="mx-auto mt-8 max-w-2xl text-xl leading-9 text-slate-600">
-                        Sorry, the page you&apos;re looking for doesn&apos;t exist or may have
-                        been moved. Return to the homepage or browse our plumbing
-                        services.
-                    </p>
+            {/* Description */}
+            <p className="text-body-lg mx-auto mt-6 max-w-2xl">
+              Sorry, the page you&apos;re looking for doesn&apos;t exist or may
+              have been moved. You can return to the homepage or explore our
+              plumbing services and information.
+            </p>
 
-                    <div className="mt-12 flex flex-wrap justify-center gap-5">
+            {/* Main Actions */}
+            <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+              <Link
+                href="/"
+                className="btn btn-primary"
+              >
+                <Home size={18} aria-hidden="true" />
+                Back to Home
+              </Link>
 
-                        <Link
-                            href="/"
-                            className="rounded-full bg-blue-600 px-8 py-4 text-lg font-bold text-white transition hover:bg-blue-700"
-                        >
-                            🏠 Back To Home
-                        </Link>
+              <Link
+                href="/services"
+                className="btn btn-outline"
+              >
+                Explore Services
+                <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+            </div>
 
-                        <Link
-                            href="/contact"
-                            className="rounded-full border-2 border-slate-300 px-8 py-4 text-lg font-bold transition hover:border-blue-600 hover:text-blue-600"
-                        >
-                            Contact Us
-                        </Link>
+            {/* =================================================
+                CALL CTA
+            ================================================= */}
 
-                    </div>
+            <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="flex flex-col items-center gap-4 sm:flex-row sm:text-left">
 
-                    <div className="mt-20 rounded-[32px] bg-white p-10 shadow-xl">
-
-                        <h3 className="text-3xl font-black text-slate-900">
-                            Popular Pages
-                        </h3>
-
-                        <div className="mt-8 flex flex-wrap justify-center gap-4">
-
-                            <Link
-                                href="/services"
-                                className="rounded-full bg-slate-100 px-6 py-3 font-semibold hover:bg-blue-600 hover:text-white"
-                            >
-                                Services
-                            </Link>
-
-                            <Link
-                                href="/service-areas"
-                                className="rounded-full bg-slate-100 px-6 py-3 font-semibold hover:bg-blue-600 hover:text-white"
-                            >
-                                Service Areas
-                            </Link>
-
-                            <Link
-                                href="/about"
-                                className="rounded-full bg-slate-100 px-6 py-3 font-semibold hover:bg-blue-600 hover:text-white"
-                            >
-                                About
-                            </Link>
-
-                            <Link
-                                href="/blog"
-                                className="rounded-full bg-slate-100 px-6 py-3 font-semibold hover:bg-blue-600 hover:text-white"
-                            >
-                                Blog
-                            </Link>
-
-                            <Link
-                                href="/contact"
-                                className="rounded-full bg-slate-100 px-6 py-3 font-semibold hover:bg-blue-600 hover:text-white"
-                            >
-                                Contact
-                            </Link>
-
-                        </div>
-
-                    </div>
-
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-600">
+                  <Phone size={22} aria-hidden="true" />
                 </div>
 
-            </section>
+                <div className="flex-1">
+                  <h2 className="font-bold text-slate-900">
+                    Need Plumbing Assistance?
+                  </h2>
 
-            <Footer />
+                  <p className="mt-1 text-sm leading-6 text-slate-500">
+                    Contact Piperesque to start a plumbing service request.
+                  </p>
+                </div>
 
-        </main>
-    );
+                <a
+                  href="tel:+18773640861"
+                  className="btn btn-emergency w-full sm:w-auto"
+                >
+                  Call Now
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* =====================================================
+          POPULAR PAGES
+      ===================================================== */}
+
+      <section className="section section-white">
+        <div className="container-custom">
+
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-bold uppercase tracking-widest text-blue-600">
+              Explore Piperesque
+            </p>
+
+            <h2 className="heading-lg mt-3 text-slate-900">
+              Popular Pages
+            </h2>
+
+            <p className="text-body mx-auto mt-4 max-w-2xl">
+              Continue browsing our plumbing services, service areas, guides,
+              and contact options.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {popularPages.map((page) => (
+              <Link
+                key={page.href}
+                href={page.href}
+                className="card card-hover group p-6"
+              >
+                <div className="flex items-start justify-between gap-4">
+
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-900">
+                      {page.title}
+                    </h3>
+
+                    <p className="mt-2 text-sm leading-6 text-slate-500">
+                      {page.description}
+                    </p>
+                  </div>
+
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition group-hover:bg-blue-600 group-hover:text-white">
+                    <ArrowRight size={18} aria-hidden="true" />
+                  </div>
+
+                </div>
+              </Link>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* =====================================================
+          PROVIDER DISCLOSURE
+      ===================================================== */}
+
+      <section className="border-t border-slate-200 bg-slate-50">
+        <div className="container-custom py-10">
+          <p className="mx-auto max-w-4xl text-center text-sm leading-6 text-slate-500">
+            Piperesque is an informational service that helps homeowners
+            connect with independent plumbing professionals. Piperesque does
+            not directly perform or dispatch plumbing services. Availability,
+            response times, pricing, warranties, and workmanship are
+            determined by the independent provider handling the request.
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
 }
-

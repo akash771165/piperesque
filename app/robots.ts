@@ -1,20 +1,23 @@
 import type { MetadataRoute } from "next";
+import { siteConfig } from "@/lib/config/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: [
-        "/api/",
-        "/admin/",
-        "/dashboard/",
-        "/private/",
-      ],
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: [
+          "/api/",
+          "/admin/",
+          "/dashboard/",
+          "/private/",
+        ],
+      },
+    ],
 
-    sitemap: "https://www.piperesque.com/sitemap.xml",
+    sitemap: `${siteConfig.website}/sitemap.xml`,
 
-    host: "https://www.piperesque.com",
+    host: siteConfig.website,
   };
 }

@@ -1,132 +1,148 @@
 import type { MetadataRoute } from "next";
 
-import { services } from "@/lib/data/services";
-import { locations } from "@/lib/data/locations";
 import { getAllBlogData } from "@/lib/blog/get-all-blog-data";
+import { siteConfig } from "@/lib/config/site";
 
-const baseUrl = "https://www.piperesque.com";
+const baseUrl = siteConfig.website.replace(/\/$/, "");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const blogs = getAllBlogData();
+
+  /*
+   * =========================================================
+   * STATIC PAGES
+   * =========================================================
+   */
 
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: now,
-      changeFrequency: "daily",
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.95,
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/service-areas`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/blog`,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/about`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: now,
       changeFrequency: "yearly",
-      priority: 0.3,
+      priority: 0.2,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: now,
       changeFrequency: "yearly",
-      priority: 0.3,
+      priority: 0.2,
     },
   ];
 
-  const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
-    url: `${baseUrl}/services/${service.slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.9,
-  }));
+  /*
+   * =========================================================
+   * SERVICE PAGES
+   * =========================================================
+   */
 
-  const locationPages: MetadataRoute.Sitemap = locations.map((location) => ({
-    url: `${baseUrl}/location/${location.slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.9,
-  }));
+  const servicePages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/services/emergency-plumbing`,
+      changeFrequency: "monthly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/services/residential-plumbing`,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+  ];
+
+  /*
+   * =========================================================
+   * HOUSTON LOCATION + SERVICE PAGES
+   * =========================================================
+   */
+
+  const locationServicePages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/location/houston/emergency-plumbing`,
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/location/houston/sewer-line-repair`,
+      changeFrequency: "monthly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/location/houston/drain-cleaning`,
+      changeFrequency: "monthly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/location/houston/leak-detection`,
+      changeFrequency: "monthly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/location/houston/water-heater-repair`,
+      changeFrequency: "monthly",
+      priority: 0.95,
+    },
+  ];
+
+  /*
+   * =========================================================
+   * BLOG PAGES
+   *
+   * BlogCardData does not contain a "published" property.
+   * Therefore we use the data returned by getAllBlogData()
+   * directly and use publishedAt for lastModified.
+   * =========================================================
+   */
 
   const blogPages: MetadataRoute.Sitemap = blogs.map((blog) => {
     const publishedDate = new Date(blog.publishedAt);
 
     return {
       url: `${baseUrl}/blog/${blog.slug}`,
-      lastModified: Number.isNaN(publishedDate.getTime())
-        ? now
-        : publishedDate,
+      ...(Number.isNaN(publishedDate.getTime())
+        ? {}
+        : { lastModified: publishedDate }),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.75,
     };
   });
-    const locationServicePages: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/location/houston/emergency-plumbing`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/location/houston/sewer-line-repair`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/location/houston/drain-cleaning`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/location/houston/leak-detection`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/location/houston/water-heater-repair`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-  ];
 
-  const sitemap: MetadataRoute.Sitemap = [
+  /*
+   * =========================================================
+   * COMBINE ALL SITEMAP URLs
+   * =========================================================
+   */
+
+  return [
     ...staticPages,
     ...servicePages,
-    ...locationPages,
-    ...blogPages,
     ...locationServicePages,
+    ...blogPages,
   ];
-
-  return sitemap;
 }
