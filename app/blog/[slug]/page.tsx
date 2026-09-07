@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import {
@@ -11,6 +13,7 @@ import Link from "next/link";
 
 import { getBlogData } from "@/lib/blog/get-blog-data";
 import { getAllBlogData } from "@/lib/blog/get-all-blog-data";
+import { siteConfig } from "@/lib/config/site";
 
 export async function generateStaticParams() {
   const blogs = getAllBlogData();
@@ -18,6 +21,71 @@ export async function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const blog = getBlogData(slug);
+
+  if (!blog) {
+    return {
+      title: "Blog | Piperesque",
+      description: "Plumbing tips, guides, and information from Piperesque.",
+    };
+  }
+
+  const title =
+    blog.seo?.title ||
+    blog.title ||
+    "Plumbing Guide | Piperesque";
+
+  const description =
+    blog.seo?.description ||
+    blog.description ||
+    "Helpful plumbing information, emergency tips, and local plumbing guides.";
+
+  const canonical =
+    blog.seo?.canonical ||
+    `${siteConfig.website}/blog/${blog.slug}`;
+
+  return {
+    title,
+    description,
+    keywords: blog.seo?.keywords || blog.keywords,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: "article",
+      ...(blog.image
+        ? {
+            images: [
+              {
+                url: blog.image,
+                alt: blog.imageAlt || blog.title || "Piperesque Plumbing",
+              },
+            ],
+          }
+        : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      ...(blog.image
+        ? {
+            images: [blog.image],
+          }
+        : {}),
+    },
+  };
 }
 
 export default async function BlogPostPage({
@@ -38,7 +106,6 @@ export default async function BlogPostPage({
       {/* Hero */}
       <section className="bg-slate-950 py-20 text-white">
         <div className="container-custom mx-auto max-w-5xl px-4">
-
           <Link
             href="/blog"
             className="mb-8 inline-flex items-center gap-2 text-blue-300 transition hover:text-white"
@@ -83,14 +150,20 @@ export default async function BlogPostPage({
 
       {/* Article */}
       <article className="container-custom mx-auto max-w-4xl px-4 py-16">
-
         {/* Featured Image */}
         {blog.image && (
-          <div className="mb-12 overflow-hidden rounded-3xl">
-            <img
+          <div className="relative mb-12 aspect-[16/9] overflow-hidden rounded-3xl">
+            <Image
               src={blog.image}
-              alt={blog.imageAlt ?? blog.title ?? "Piperesque Plumbing"}
-              className="h-auto w-full object-cover"
+              alt={
+                blog.imageAlt ??
+                blog.title ??
+                "Piperesque Plumbing"
+              }
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
             />
           </div>
         )}
@@ -134,26 +207,32 @@ export default async function BlogPostPage({
               </p>
             ))}
 
-            {section.bullets && section.bullets.length > 0 && (
-              <ul className="mb-6 list-disc space-y-3 pl-6 text-lg leading-8 text-slate-700">
-                {section.bullets.map((bullet, bulletIndex) => (
-                  <li key={bulletIndex}>{bullet}</li>
-                ))}
-              </ul>
-            )}
+            {section.bullets &&
+              section.bullets.length > 0 && (
+                <ul className="mb-6 list-disc space-y-3 pl-6 text-lg leading-8 text-slate-700">
+                  {section.bullets.map(
+                    (bullet, bulletIndex) => (
+                      <li key={bulletIndex}>{bullet}</li>
+                    )
+                  )}
+                </ul>
+              )}
 
             {section.numberedList &&
               section.numberedList.length > 0 && (
                 <ol className="mb-6 list-decimal space-y-3 pl-6 text-lg leading-8 text-slate-700">
-                  {section.numberedList.map((item, itemIndex) => (
-                    <li key={itemIndex}>{item}</li>
-                  ))}
+                  {section.numberedList.map(
+                    (item, itemIndex) => (
+                      <li key={itemIndex}>{item}</li>
+                    )
+                  )}
                 </ol>
               )}
 
             {section.warning && (
               <div className="my-6 rounded-2xl border border-red-200 bg-red-50 p-6 text-red-800">
-                <strong>Warning:</strong> {section.warning}
+                <strong>Warning:</strong>{" "}
+                {section.warning}
               </div>
             )}
 
@@ -163,19 +242,22 @@ export default async function BlogPostPage({
               </div>
             )}
 
-            {section.tips && section.tips.length > 0 && (
-              <div className="my-6 rounded-2xl bg-slate-50 p-6">
-                <h3 className="mb-4 text-xl font-bold text-slate-900">
-                  Helpful Tips
-                </h3>
+            {section.tips &&
+              section.tips.length > 0 && (
+                <div className="my-6 rounded-2xl bg-slate-50 p-6">
+                  <h3 className="mb-4 text-xl font-bold text-slate-900">
+                    Helpful Tips
+                  </h3>
 
-                <ul className="list-disc space-y-2 pl-6 text-slate-700">
-                  {section.tips.map((tip, tipIndex) => (
-                    <li key={tipIndex}>{tip}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+                  <ul className="list-disc space-y-2 pl-6 text-slate-700">
+                    {section.tips.map(
+                      (tip, tipIndex) => (
+                        <li key={tipIndex}>{tip}</li>
+                      )
+                    )}
+                  </ul>
+                </div>
+              )}
           </section>
         ))}
 
