@@ -10,24 +10,31 @@ import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 import FAQSchema from "@/components/seo/faq-schema";
 
 export const metadata: Metadata = {
-  title: "24/7 Emergency Plumber Houston | Fast Response Times",
+  title: "24/7 Emergency Plumbing in Houston, TX | Piperesque",
   description:
-    "Emergency plumber in Houston, TX. 24/7 response for burst pipes, leaks, sewer backups. Licensed professionals. Call now for immediate help.",
+    "Need emergency plumbing help in Houston, TX? Piperesque helps homeowners connect with independent plumbing professionals for burst pipes, major leaks, sewer backups, and urgent plumbing problems.",
   keywords: [
     "emergency plumber houston",
     "24 hour plumber houston",
     "emergency plumbing services houston",
+    "emergency plumbing houston tx",
     "burst pipe repair houston",
-    "plumbing emergency",
+    "plumbing emergency houston",
+    "emergency plumber near me",
   ],
   openGraph: {
-    title: "24/7 Emergency Plumber Houston | Fast Response Times",
+    title: "24/7 Emergency Plumbing Help in Houston, TX | Piperesque",
     description:
-      "Emergency plumber in Houston, TX available 24/7 for burst pipes, leaks, and sewer emergencies.",
+      "Piperesque helps Houston homeowners connect with independent plumbing professionals for emergency plumbing needs, including burst pipes, major leaks, sewer backups, and other urgent problems.",
     url: "https://www.piperesque.com/services/emergency-plumbing",
+    type: "website",
   },
   alternates: {
     canonical: "https://www.piperesque.com/services/emergency-plumbing",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -36,41 +43,52 @@ export default function EmergencyPlumbingPage() {
     <main className="overflow-x-hidden bg-white">
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.piperesque.com" },
-          { name: "Services", url: "https://www.piperesque.com/services" },
-          { name: "Emergency Plumbing", url: "https://www.piperesque.com/services/emergency-plumbing" },
+          {
+            name: "Home",
+            url: "https://www.piperesque.com",
+          },
+          {
+            name: "Services",
+            url: "https://www.piperesque.com/services",
+          },
+          {
+            name: "Emergency Plumbing",
+            url: "https://www.piperesque.com/services/emergency-plumbing",
+          },
         ]}
       />
+
       <FAQSchema
         faqs={[
           {
             question: "What qualifies as a plumbing emergency?",
             answer:
-              "A plumbing emergency includes burst pipes, major leaks causing water damage, sewer backups, no water pressure, gas line issues, or water heater failures requiring immediate attention.",
+              "A plumbing emergency may include an active burst pipe, major water leak, sewer backup, overflowing fixture, significant loss of water service, or another plumbing problem that may cause property damage or require prompt professional attention.",
           },
           {
-            question: "Are you available 24/7 in Houston?",
-            answer: "Yes, we provide emergency plumbing services 24/7, 365 days a year throughout Houston and surrounding areas.",
-          },
-          {
-            question: "How quickly can you respond to an emergency?",
+            question: "Is emergency plumbing help available 24/7 in Houston?",
             answer:
-              "Our typical response time in Houston is 30-60 minutes depending on location and current service load.",
+              "Piperesque accepts plumbing service requests at any time and helps homeowners connect with independent plumbing professionals. Provider availability varies by location, time, and current service capacity.",
           },
           {
-            question: "Do you charge extra for emergency service?",
+            question: "How quickly can a plumbing professional respond?",
             answer:
-              "Emergency service rates may vary from standard rates. We provide transparent pricing upfront so you know costs before we start work.",
+              "Response times vary by provider, location, time of day, and current demand. The independent plumbing provider handling the request determines availability and scheduling.",
           },
           {
-            question: "Can I schedule an emergency appointment online?",
+            question: "Does emergency plumbing cost more?",
             answer:
-              "Yes, call our emergency line or submit a request through our website for immediate dispatch of an available plumber.",
+              "Emergency plumbing pricing varies by provider and may depend on the type of problem, time of service, labor, materials, equipment, accessibility, and whether repair or replacement is required. Ask the provider about applicable service or diagnostic fees before authorizing work.",
           },
           {
-            question: "Do your plumbers carry parts for common repairs?",
+            question: "Can I request emergency plumbing service online?",
             answer:
-              "Yes, our service trucks are fully stocked with common parts and materials for most emergency repairs.",
+              "Yes. Homeowners can submit a plumbing service request through Piperesque or call the listed phone number. The request may then be connected with an independent plumbing service provider serving the area.",
+          },
+          {
+            question: "Are plumbing providers licensed?",
+            answer:
+              "Licensing, insurance, qualifications, warranties, and service terms are determined by the independent plumbing provider. Homeowners should confirm applicable credentials and terms directly with the provider before authorizing work.",
           },
         ]}
       />
@@ -81,26 +99,32 @@ export default function EmergencyPlumbingPage() {
       <section className="relative overflow-hidden py-24 md:py-32">
         <Image
           src="/images/services/emergency-plumbing.jpg"
-          alt="Emergency plumber in Houston responding to plumbing crisis"
+          alt="Emergency plumbing assistance in Houston, Texas"
           fill
           priority
           className="object-cover"
         />
+
         <div className="absolute inset-0 bg-blue-950/85" />
 
         <div className="container-custom relative z-10">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-red-600/20 px-4 py-2 mb-6">
               <AlertTriangle size={18} className="text-red-400" />
-              <span className="text-red-200 font-semibold">Emergency Service Available</span>
+              <span className="text-red-200 font-semibold">
+                Emergency Plumbing Help
+              </span>
             </div>
 
             <h1 className="text-5xl md:text-6xl font-black leading-tight text-white">
-              24/7 Emergency Plumbing in Houston, TX
+              24/7 Emergency Plumbing Help in Houston, TX
             </h1>
 
             <p className="mt-6 text-xl leading-8 text-blue-100 max-w-2xl">
-              Burst pipes. Sewer backups. Major leaks. When your plumbing goes wrong at 2 AM, we're here. Licensed emergency plumbers ready to respond and solve your Houston plumbing crisis in 30-60 minutes.
+              Burst pipes, major leaks, sewer backups, overflowing fixtures,
+              and other urgent plumbing problems can require prompt attention.
+              Piperesque helps Houston homeowners connect with independent
+              plumbing professionals serving their area.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -109,8 +133,9 @@ export default function EmergencyPlumbingPage() {
                 className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-8 py-4 font-bold text-white hover:bg-red-700 transition"
               >
                 <Phone size={20} />
-                Call Now (877) 364-0861
+                Call (877) 364-0861
               </a>
+
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-bold text-white hover:bg-white hover:text-blue-950 transition"
@@ -119,94 +144,163 @@ export default function EmergencyPlumbingPage() {
               </Link>
             </div>
 
-            <div className="mt-12 grid grid-cols-3 gap-4 md:gap-8">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8">
               <div className="bg-white/10 backdrop-blur rounded-lg p-4 md:p-6">
                 <Clock className="text-green-400 mb-2" size={28} />
-                <p className="font-bold text-white">30-60 Min Response</p>
+                <p className="font-bold text-white">
+                  24/7 Service Requests
+                </p>
               </div>
+
               <div className="bg-white/10 backdrop-blur rounded-lg p-4 md:p-6">
                 <Users className="text-green-400 mb-2" size={28} />
-                <p className="font-bold text-white">Licensed Pros</p>
+                <p className="font-bold text-white">
+                  Independent Providers
+                </p>
               </div>
+
               <div className="bg-white/10 backdrop-blur rounded-lg p-4 md:p-6">
                 <Wrench className="text-green-400 mb-2" size={28} />
-                <p className="font-bold text-white">Same-Day Fix</p>
+                <p className="font-bold text-white">
+                  Availability Varies
+                </p>
               </div>
             </div>
+
+            <p className="mt-6 text-sm text-blue-200 max-w-2xl">
+              Piperesque is an informational service that helps homeowners
+              connect with independent plumbing providers. Availability,
+              response times, pricing, warranties, and workmanship are
+              determined by the provider handling the request.
+            </p>
           </div>
         </div>
       </section>
-
-      {/* Main Content */}
+            {/* Main Content */}
       <section className="py-20 md:py-28">
         <div className="container-custom grid gap-16 lg:grid-cols-3">
           {/* Main Content */}
           <div className="lg:col-span-2">
+
             {/* Introduction */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-black mb-6">
-                Emergency Plumbing When You Need It Most
+                Emergency Plumbing Help When You Need It
               </h2>
+
               <p className="text-lg leading-8 text-slate-600 mb-6">
-                Plumbing emergencies don't wait for business hours. A burst pipe at midnight can flood your entire Houston home, causing thousands in water damage. A sewer backup can make your bathrooms unusable. A failed water heater leaves your family without hot water in the middle of winter.
+                Plumbing emergencies can happen at any time. A burst pipe,
+                major water leak, sewer backup, or overflowing fixture can
+                create water damage and disrupt normal use of a home.
               </p>
+
               <p className="text-lg leading-8 text-slate-600 mb-6">
-                That's why Piperesque offers true 24/7 emergency plumbing service. Our licensed Houston plumbers are on call around the clock, 365 days a year. We dispatch the nearest available technician to your location, with typical response times between 30-60 minutes depending on your exact location and current service volume.
+                Piperesque helps Houston homeowners connect with independent
+                plumbing professionals for urgent plumbing problems. The
+                provider handling the request determines availability,
+                scheduling, diagnosis, pricing, and the appropriate service.
               </p>
+
               <p className="text-lg leading-8 text-slate-600">
-                We understand the stress and urgency of a plumbing emergency. Our goal isn't just to fix your immediate problem—it's to fix it right, prevent future issues, and get your life back to normal as quickly as possible.
+                If an active plumbing problem is causing water or wastewater
+                damage, consider limiting use of the affected fixture or
+                plumbing system when it is safe to do so and seek professional
+                assistance.
               </p>
             </div>
 
-            {/* What is Emergency Plumbing */}
+            {/* What Is Emergency Plumbing */}
             <div className="mb-16 pb-16 border-b border-slate-200">
               <h2 className="text-3xl font-black mb-6">
                 What Is an Emergency Plumbing Situation?
               </h2>
+
               <p className="text-lg leading-8 text-slate-600 mb-6">
-                Not every plumbing problem requires emergency service. True emergency plumbing involves situations that pose immediate risks to your home, health, or safety, and require professional attention right away.
+                Not every plumbing problem requires immediate service. An
+                emergency may involve active water damage, wastewater entering
+                the property, an overflowing fixture, a significant plumbing
+                leak, or another problem that could become more serious if it
+                is not addressed promptly.
               </p>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded mb-8">
-                <h3 className="font-bold text-lg mb-4">Common Emergencies:</h3>
+                <h3 className="font-bold text-lg mb-4">
+                  Common Plumbing Emergencies
+                </h3>
+
                 <ul className="space-y-3">
                   <li className="flex gap-3">
                     <span className="text-red-600 font-bold">•</span>
-                    <span><strong>Burst water pipes</strong> – Active water spraying or flowing from visible pipe breaks</span>
+                    <span>
+                      <strong>Burst water pipes</strong> – Active water
+                      escaping from a damaged or broken pipe
+                    </span>
                   </li>
+
                   <li className="flex gap-3">
                     <span className="text-red-600 font-bold">•</span>
-                    <span><strong>Major water leaks</strong> – Significant water damage occurring in real-time</span>
+                    <span>
+                      <strong>Major water leaks</strong> – Significant or
+                      continuing water leakage around plumbing
+                    </span>
                   </li>
+
                   <li className="flex gap-3">
                     <span className="text-red-600 font-bold">•</span>
-                    <span><strong>Sewer backups</strong> – Sewage backing up into toilets, tubs, or drains</span>
+                    <span>
+                      <strong>Sewer backups</strong> – Wastewater backing up
+                      into toilets, tubs, showers, or drains
+                    </span>
                   </li>
+
                   <li className="flex gap-3">
                     <span className="text-red-600 font-bold">•</span>
-                    <span><strong>No water pressure/flow</strong> – Complete loss of water to all or part of home</span>
+                    <span>
+                      <strong>Overflowing toilets</strong> – Toilet overflow
+                      that cannot be safely controlled through normal use
+                    </span>
                   </li>
+
                   <li className="flex gap-3">
                     <span className="text-red-600 font-bold">•</span>
-                    <span><strong>Gas line issues</strong> – Suspected gas leaks or smell of gas</span>
+                    <span>
+                      <strong>Loss of water service</strong> – Sudden loss of
+                      water affecting a property or multiple fixtures
+                    </span>
                   </li>
+
                   <li className="flex gap-3">
                     <span className="text-red-600 font-bold">•</span>
-                    <span><strong>Water heater failure</strong> – No hot water, leaking tank, or unusual sounds</span>
+                    <span>
+                      <strong>Water heater leaks</strong> – Active leakage
+                      from or around a water-heating system
+                    </span>
                   </li>
+
                   <li className="flex gap-3">
                     <span className="text-red-600 font-bold">•</span>
-                    <span><strong>Overflowing toilet</strong> – Toilet continuously running or overflowing</span>
+                    <span>
+                      <strong>Multiple drains backing up</strong> – Several
+                      fixtures experiencing drainage problems at the same time
+                    </span>
                   </li>
+
                   <li className="flex gap-3">
                     <span className="text-red-600 font-bold">•</span>
-                    <span><strong>Frozen/burst lines</strong> – Pipes frozen or burst due to temperature changes</span>
+                    <span>
+                      <strong>Suspected gas leak</strong> – If you smell gas,
+                      leave the area and contact the appropriate emergency
+                      service or utility provider rather than attempting to
+                      diagnose or repair the gas line yourself
+                    </span>
                   </li>
                 </ul>
               </div>
 
               <p className="text-lg leading-8 text-slate-600">
-                If you're unsure whether your situation qualifies as an emergency, call us anyway. Our goal is to help protect your home. We'd rather dispatch a plumber for a non-emergency and put your mind at ease than have you delay calling about a serious problem.
+                If you are unsure whether a plumbing problem requires urgent
+                attention, describe the symptoms to a qualified professional
+                and ask what level of service is appropriate.
               </p>
 
               <div className="mt-8">
@@ -215,7 +309,7 @@ export default function EmergencyPlumbingPage() {
                   className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-6 py-3 font-bold text-white hover:bg-red-700 transition"
                 >
                   <Phone size={18} />
-                  Call Emergency Line Now
+                  Call for Plumbing Help
                 </a>
               </div>
             </div>
@@ -223,59 +317,104 @@ export default function EmergencyPlumbingPage() {
             {/* Warning Signs */}
             <div className="mb-16 pb-16 border-b border-slate-200">
               <h2 className="text-3xl font-black mb-6">
-                Warning Signs You Need Emergency Plumbing
+                Warning Signs of a Serious Plumbing Problem
               </h2>
+
               <p className="text-lg leading-8 text-slate-600 mb-8">
-                Some plumbing emergencies announce themselves with obvious damage. Others develop gradually with subtle warning signs. Knowing what to look for can help you catch problems before they become catastrophic.
+                Some plumbing problems become obvious immediately, while
+                others develop through warning signs such as recurring
+                backups, unexplained moisture, unusual sounds, or changes in
+                drainage.
               </p>
 
               <div className="space-y-6">
+
                 <div className="bg-slate-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg text-slate-900 mb-3">Unexpected Water Sounds</h3>
+                  <h3 className="font-bold text-lg text-slate-900 mb-3">
+                    Unexpected Water Sounds
+                  </h3>
+
                   <p className="text-slate-700">
-                    If you hear gurgling, hissing, or strange sounds coming from your pipes when no water is running, this often indicates trapped air, water hammer (pressure shock), or pipe damage. In Houston's older neighborhoods, this might signal corrosion.
+                    Gurgling, hissing, dripping, or other unusual plumbing
+                    sounds can have several causes. A professional inspection
+                    may be appropriate when the sound is persistent or
+                    accompanied by other symptoms.
                   </p>
                 </div>
 
                 <div className="bg-slate-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg text-slate-900 mb-3">Water Stains or Wet Spots</h3>
+                  <h3 className="font-bold text-lg text-slate-900 mb-3">
+                    Water Stains or Wet Areas
+                  </h3>
+
                   <p className="text-slate-700">
-                    Brown or yellow water stains on ceilings, walls, or under sinks indicate hidden leaks. These stains grow larger over time and suggest water is actively damaging your home's structure.
+                    Unexplained water stains, damp walls, wet flooring, or
+                    moisture around plumbing fixtures can indicate a leak.
+                    Continuing moisture should be investigated before the
+                    underlying problem becomes more extensive.
                   </p>
                 </div>
 
                 <div className="bg-slate-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg text-slate-900 mb-3">Sudden Odors</h3>
+                  <h3 className="font-bold text-lg text-slate-900 mb-3">
+                    Sewer or Drain Odors
+                  </h3>
+
                   <p className="text-slate-700">
-                    Foul smells from drains, yard, or under the house often indicate sewer line issues. Houston's clay soil and aging infrastructure make sewer problems increasingly common. These require immediate attention.
+                    Persistent sewage or unusual drain odors may indicate a
+                    drainage or sewer problem. When odors occur together with
+                    slow drains or backups, professional assessment may be
+                    appropriate.
                   </p>
                 </div>
 
                 <div className="bg-slate-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg text-slate-900 mb-3">Low Water Pressure</h3>
+                  <h3 className="font-bold text-lg text-slate-900 mb-3">
+                    Sudden Loss of Water Pressure
+                  </h3>
+
                   <p className="text-slate-700">
-                    Sudden loss of water pressure throughout your home might indicate a main line break. If only one fixture is affected, it's often a local valve issue. Either way, it requires professional diagnosis.
+                    A sudden change in water pressure can have multiple causes,
+                    including a plumbing-system issue, fixture problem, valve
+                    issue, or water-supply problem. The cause should be
+                    professionally evaluated when the change is significant
+                    or persistent.
                   </p>
                 </div>
 
                 <div className="bg-slate-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg text-slate-900 mb-3">Wet Yard or Foundation Issues</h3>
+                  <h3 className="font-bold text-lg text-slate-900 mb-3">
+                    Wet Yard or Unexplained Outdoor Moisture
+                  </h3>
+
                   <p className="text-slate-700">
-                    Unusually wet patches in your yard, especially in dry weather, suggest underground water line leaks. Foundation cracks or shifting can develop as a result of these leaks.
+                    An unusually wet area around a property may have several
+                    possible causes, including drainage conditions or a
+                    plumbing leak. Persistent unexplained moisture can justify
+                    further investigation.
                   </p>
                 </div>
 
                 <div className="bg-slate-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg text-slate-900 mb-3">Multiple Drain Issues</h3>
+                  <h3 className="font-bold text-lg text-slate-900 mb-3">
+                    Multiple Drain Problems
+                  </h3>
+
                   <p className="text-slate-700">
-                    If several drains in your house are slow or backing up simultaneously, you likely have a main sewer line blockage or break, not just a single clogged drain.
+                    When multiple fixtures become slow or back up at the same
+                    time, the problem may involve a larger section of the
+                    drainage system rather than one isolated fixture.
                   </p>
                 </div>
+
               </div>
 
               <div className="mt-8 p-6 bg-yellow-50 border border-yellow-200 rounded-lg">
-                <p className="text-slate-900 font-semibold">
-                  <strong>Pro Tip:</strong> Act quickly on warning signs. A small leak discovered early might cost $200-400 to fix. The same leak left unaddressed for months can cause $5,000-20,000 in water damage.
+                <p className="text-slate-900">
+                  <strong>Important:</strong> If water is actively damaging
+                  your property or wastewater is entering the home, limit
+                  exposure to the affected area when possible and seek
+                  appropriate professional assistance.
                 </p>
               </div>
             </div>
@@ -283,535 +422,912 @@ export default function EmergencyPlumbingPage() {
             {/* Common Causes */}
             <div className="mb-16 pb-16 border-b border-slate-200">
               <h2 className="text-3xl font-black mb-6">
-                What Causes Plumbing Emergencies in Houston?
+                Common Causes of Plumbing Emergencies in Houston
               </h2>
+
               <p className="text-lg leading-8 text-slate-600 mb-8">
-                Houston's climate, infrastructure, and water quality create unique plumbing challenges. Understanding these causes helps you avoid emergencies in the future.
+                Plumbing emergencies can have many causes. The actual cause
+                depends on the property's plumbing system, installation,
+                maintenance history, environmental conditions, and the
+                specific symptoms.
               </p>
 
               <div className="space-y-6">
+
                 <div>
-                  <h3 className="font-bold text-lg mb-3">Temperature Fluctuations & Pipe Freezing</h3>
+                  <h3 className="font-bold text-lg mb-3">
+                    Temperature Changes
+                  </h3>
+
                   <p className="text-slate-700 mb-3">
-                    While Houston rarely freezes solid, sudden temperature drops can freeze exposed pipes in attics, crawlspaces, or exterior walls. When water inside a pipe freezes, it expands, creating pressure that bursts the pipe. This often goes unnoticed until temperatures warm and water begins pouring.
+                    Sudden temperature changes can place additional stress on
+                    exposed plumbing. During unusually cold weather, freezing
+                    can contribute to pipe damage in vulnerable areas.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-3">Aging Infrastructure & Corrosion</h3>
+                  <h3 className="font-bold text-lg mb-3">
+                    Aging or Deteriorating Pipes
+                  </h3>
+
                   <p className="text-slate-700 mb-3">
-                    Many Houston neighborhoods have pipes installed 40-60+ years ago. Galvanized steel pipes corrode from the inside out. Copper pipes develop pinhole leaks. Cast iron deteriorates. Replacement is often the only permanent solution.
+                    Older plumbing systems can develop corrosion, deterioration,
+                    leaks, restricted flow, or other failures over time.
+                    Inspection can help determine the condition of affected
+                    plumbing.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-3">Tree Roots in Sewer Lines</h3>
+                  <h3 className="font-bold text-lg mb-3">
+                    Tree Roots and Drainage Problems
+                  </h3>
+
                   <p className="text-slate-700 mb-3">
-                    Houston's mature trees have roots that seek moisture. They infiltrate old sewer lines through small cracks, eventually blocking flow or breaking pipes. This is one of the most common emergencies in established neighborhoods.
+                    Tree roots can enter damaged or compromised underground
+                    sewer lines and contribute to recurring blockages. A
+                    professional inspection may be needed when sewer problems
+                    repeatedly return.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-3">Hard Water Buildup</h3>
+                  <h3 className="font-bold text-lg mb-3">
+                    Mineral or Debris Buildup
+                  </h3>
+
                   <p className="text-slate-700 mb-3">
-                    Houston's water is moderately hard. Mineral deposits accumulate inside pipes and fixtures, reducing flow and eventually causing blockages. This develops slowly but can suddenly prevent water from reaching your home.
+                    Deposits, debris, grease, hair, foreign objects, and other
+                    material can restrict water or drainage flow. Repeated
+                    blockages may indicate a problem that requires more than
+                    routine clearing.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-3">Water Pressure Issues</h3>
+                  <h3 className="font-bold text-lg mb-3">
+                    Water Pressure Problems
+                  </h3>
+
                   <p className="text-slate-700 mb-3">
-                    Excessive water pressure causes premature pipe failure. If your home has pressure above 80 PSI, your pipes are under constant stress. A pressure relief valve prevents damage, but many homes lack proper regulation.
+                    Abnormally high or low water pressure can indicate an issue
+                    with the plumbing system, supply, valves, or pressure
+                    regulation. A professional can determine the likely cause.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-3">Mainline Breaks & Subsidence</h3>
+                  <h3 className="font-bold text-lg mb-3">
+                    Underground Plumbing Damage
+                  </h3>
+
                   <p className="text-slate-700 mb-3">
-                    Houston's expansive clay soil shifts with moisture changes, causing ground to settle unevenly. This subsidence cracks underground pipes and sewer lines. It's a major cause of costly emergency repairs.
+                    Underground supply or sewer lines can develop leaks,
+                    blockages, cracks, or other problems. Signs may include
+                    recurring backups, unexplained moisture, or changes in
+                    water or drainage behavior.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-3">DIY Installation Mistakes</h3>
+                  <h3 className="font-bold text-lg mb-3">
+                    Plumbing Installation or Connection Problems
+                  </h3>
+
                   <p className="text-slate-700 mb-3">
-                    Improper installation of fixtures, incorrect pipe grades, bad connections, or missed traps can appear fine initially but fail suddenly under stress or over time.
+                    Incorrect installation, deteriorated connections, damaged
+                    fittings, or improperly maintained components can contribute
+                    to plumbing failures.
                   </p>
                 </div>
+
               </div>
 
               <div className="mt-8 p-6 bg-blue-50 border border-blue-200 rounded-lg">
                 <p className="text-slate-900">
-                  <strong>Houston Climate Factor:</strong> Our hot, humid climate with clay soil and frequent temperature swings creates conditions that stress plumbing systems. Regular maintenance and professional inspections can catch problems before they become emergencies.
+                  <strong>Houston Plumbing Consideration:</strong> Properties
+                  throughout the Houston area can differ significantly in age,
+                  construction, plumbing configuration, and maintenance
+                  history. The appropriate diagnosis and repair approach
+                  depends on the individual property and plumbing problem.
                 </p>
               </div>
             </div>
-
-            {/* Our Process */}
+                        {/* How Piperesque Helps */}
             <div className="mb-16 pb-16 border-b border-slate-200">
               <h2 className="text-3xl font-black mb-6">
-                Our Emergency Plumbing Process
+                How Piperesque Helps With Emergency Plumbing Requests
               </h2>
+
               <p className="text-lg leading-8 text-slate-600 mb-8">
-                When you call us with a plumbing emergency, here's exactly what happens:
+                Piperesque is designed to help homeowners find a plumbing
+                professional for urgent service. We do not employ or directly
+                perform plumbing work. The independent provider handling the
+                request is responsible for service availability, diagnosis,
+                pricing, workmanship, and scheduling.
               </p>
 
               <div className="space-y-8">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-600 text-white font-bold text-lg">1</div>
+
+                {/* Step 1 */}
+                <div className="flex gap-5">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-lg">
+                    1
                   </div>
+
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Immediate Dispatch (Within 5 Minutes)</h3>
-                    <p className="text-slate-700">
-                      We ask essential questions about your situation to determine urgency and dispatch the appropriate plumber from our network. If you need help stopping water flow immediately, we provide phone guidance.
+                    <h3 className="text-xl font-bold mb-2">
+                      Describe the Plumbing Problem
+                    </h3>
+
+                    <p className="text-slate-600 leading-7">
+                      Tell the plumbing professional what is happening,
+                      including where the problem is located, when it started,
+                      whether water is actively leaking, and whether any
+                      fixtures are affected.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-600 text-white font-bold text-lg">2</div>
+                {/* Step 2 */}
+                <div className="flex gap-5">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-lg">
+                    2
                   </div>
+
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Rapid Arrival (30-60 Minutes)</h3>
-                    <p className="text-slate-700">
-                      Our plumber arrives with fully stocked service vehicle carrying parts and tools for most common emergencies. You'll be updated with real-time arrival information.
+                    <h3 className="text-xl font-bold mb-2">
+                      Check Provider Availability
+                    </h3>
+
+                    <p className="text-slate-600 leading-7">
+                      The independent plumbing provider determines whether
+                      service is available for your location and situation.
+                      Availability can vary depending on time, location,
+                      workload, and the type of plumbing problem.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-600 text-white font-bold text-lg">3</div>
+                {/* Step 3 */}
+                <div className="flex gap-5">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-lg">
+                    3
                   </div>
+
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Diagnostic Assessment</h3>
-                    <p className="text-slate-700">
-                      We thoroughly inspect the problem, identify root causes, and assess any additional issues. We explain findings in plain language and show you exactly what needs to be done.
+                    <h3 className="text-xl font-bold mb-2">
+                      Professional Assessment
+                    </h3>
+
+                    <p className="text-slate-600 leading-7">
+                      Once a provider accepts the request, the provider can
+                      assess the plumbing problem and determine what work may
+                      be required.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-600 text-white font-bold text-lg">4</div>
+                {/* Step 4 */}
+                <div className="flex gap-5">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-lg">
+                    4
                   </div>
+
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Transparent Pricing Quote</h3>
-                    <p className="text-slate-700">
-                      Before we do any work, we provide a detailed estimate. You know the exact cost before we proceed. No hidden fees. No surprises on your bill.
+                    <h3 className="text-xl font-bold mb-2">
+                      Review the Recommended Work
+                    </h3>
+
+                    <p className="text-slate-600 leading-7">
+                      Before authorizing non-emergency repair work, ask the
+                      provider to explain the diagnosis, recommended repair,
+                      expected scope of work, and applicable charges.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-600 text-white font-bold text-lg">5</div>
+                {/* Step 5 */}
+                <div className="flex gap-5">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-lg">
+                    5
                   </div>
+
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Professional Repair</h3>
-                    <p className="text-slate-700">
-                      Our licensed plumber completes the repair using quality parts and proper techniques. We work efficiently to restore your service quickly without compromising quality.
+                    <h3 className="text-xl font-bold mb-2">
+                      Complete the Service
+                    </h3>
+
+                    <p className="text-slate-600 leading-7">
+                      If you approve the work, the independent plumbing
+                      provider performs the agreed service according to its
+                      own terms, qualifications, availability, and applicable
+                      requirements.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-600 text-white font-bold text-lg">6</div>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">Testing & Verification</h3>
-                    <p className="text-slate-700">
-                      We thoroughly test the repair to ensure it works correctly. We check for any leaks, verify water pressure and flow, and confirm everything functions properly.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-600 text-white font-bold text-lg">7</div>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">Cleanup & Follow-up Advice</h3>
-                    <p className="text-slate-700">
-                      We clean up our work area completely. We provide guidance on preventing similar issues in the future and offer recommendations for maintenance or additional repairs if needed.
-                    </p>
-                  </div>
-                </div>
               </div>
 
-              <div className="mt-8">
-                <a
-                  href="tel:+18773640861"
-                  className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-6 py-3 font-bold text-white hover:bg-red-700 transition"
-                >
-                  <Phone size={18} />
-                  Call Now for Emergency Service
-                </a>
+              <div className="mt-10 rounded-lg bg-slate-50 border border-slate-200 p-6">
+                <p className="text-sm leading-6 text-slate-600">
+                  <strong className="text-slate-900">
+                    Provider disclosure:
+                  </strong>{" "}
+                  Piperesque does not employ, dispatch, or directly perform
+                  plumbing services. Service availability, response time,
+                  pricing, qualifications, warranties, and workmanship are
+                  determined by the independent plumbing provider handling the
+                  request.
+                </p>
               </div>
             </div>
 
-            {/* Pricing */}
+            {/* Emergency Plumbing Cost */}
             <div className="mb-16 pb-16 border-b border-slate-200">
               <h2 className="text-3xl font-black mb-6">
-                Emergency Plumbing Pricing in Houston
+                How Much Does Emergency Plumbing Cost in Houston?
               </h2>
-              <p className="text-lg leading-8 text-slate-600 mb-8">
-                Plumbing emergency costs in Houston typically range from $200-$3,000+ depending on the nature and severity of the problem. Here's what affects your final bill:
+
+              <p className="text-lg leading-8 text-slate-600 mb-6">
+                There is no single price for emergency plumbing service.
+                Pricing depends on the plumbing problem, required labor,
+                materials, equipment, accessibility, time of service, and the
+                independent provider's pricing structure.
               </p>
 
-              <div className="bg-slate-50 p-8 rounded-lg mb-8">
-                <h3 className="font-bold text-lg mb-6">Typical Emergency Service Pricing:</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center pb-4 border-b">
-                    <span>Service Call (Diagnostic) - After Hours</span>
-                    <span className="font-bold">$150-250</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-4 border-b">
-                    <span>Simple Repair (Shutoff, Valve Replacement)</span>
-                    <span className="font-bold">$250-500</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-4 border-b">
-                    <span>Moderate Repair (Pipe Repair, Toilet Replacement)</span>
-                    <span className="font-bold">$500-1,500</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-4 border-b">
-                    <span>Complex Repair (Sewer Line, Mainline Break)</span>
-                    <span className="font-bold">$1,500-5,000+</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Parts & Materials</span>
-                    <span className="font-bold">Varies by repair</span>
-                  </div>
-                </div>
-              </div>
+              <p className="text-lg leading-8 text-slate-600 mb-8">
+                For example, repairing an accessible fixture can be very
+                different from locating an underground leak, clearing a major
+                sewer blockage, replacing damaged piping, or repairing a water
+                heater. A professional inspection is often necessary before
+                the exact scope and cost can be determined.
+              </p>
 
-              <div className="space-y-6 mb-8">
-                <div>
-                  <h3 className="font-bold text-lg mb-3">Factors Affecting Emergency Pricing:</h3>
-                  <ul className="space-y-2">
-                    <li className="flex gap-3">
-                      <span className="text-red-600">•</span>
-                      <span><strong>Time of call:</strong> After-hours, weekend, and holiday calls may incur additional fees</span>
+              <div className="grid gap-6 md:grid-cols-2">
+
+                <div className="rounded-lg border border-slate-200 p-6">
+                  <h3 className="text-xl font-bold mb-3">
+                    Factors That Can Affect Cost
+                  </h3>
+
+                  <ul className="space-y-3 text-slate-700">
+                    <li>• Type and severity of the plumbing problem</li>
+                    <li>• Labor required for diagnosis and repair</li>
+                    <li>• Replacement parts and materials</li>
+                    <li>• Specialized equipment or access requirements</li>
+                    <li>• Location of the damaged plumbing</li>
+                    <li>• Repair versus replacement</li>
+                    <li>• Time and day of service</li>
+                    <li>• Independent provider pricing and service terms</li>
+                  </ul>
+                </div>
+
+                <div className="rounded-lg border border-slate-200 p-6">
+                  <h3 className="text-xl font-bold mb-3">
+                    Questions to Ask Before Authorizing Work
+                  </h3>
+
+                  <ul className="space-y-3 text-slate-700">
+                    <li>
+                      • Is there a service or diagnostic fee?
                     </li>
-                    <li className="flex gap-3">
-                      <span className="text-red-600">•</span>
-                      <span><strong>Severity:</strong> More damage requires more complex repairs</span>
+                    <li>
+                      • What problem did the inspection identify?
                     </li>
-                    <li className="flex gap-3">
-                      <span className="text-red-600">•</span>
-                      <span><strong>Location:</strong> Response time to far suburbs may be longer</span>
+                    <li>
+                      • What repair is being recommended?
                     </li>
-                    <li className="flex gap-3">
-                      <span className="text-red-600">•</span>
-                      <span><strong>Accessibility:</strong> Pipes in crawlspaces, walls, or underground cost more to access</span>
+                    <li>
+                      • Which parts or materials are required?
                     </li>
-                    <li className="flex gap-3">
-                      <span className="text-red-600">•</span>
-                      <span><strong>Parts needed:</strong> Specialty or rare parts may be more expensive</span>
+                    <li>
+                      • Is the quoted amount for the complete scope of work?
+                    </li>
+                    <li>
+                      • Are there additional charges that could apply?
+                    </li>
+                    <li>
+                      • Does the provider offer any warranty, and what are its
+                      terms?
                     </li>
                   </ul>
                 </div>
+
               </div>
 
-              <div className="p-6 bg-green-50 border border-green-200 rounded-lg mb-8">
-                <h3 className="font-bold text-lg mb-3">Our Pricing Guarantee:</h3>
-                <ul className="space-y-2 text-slate-900">
-                  <li className="flex gap-3">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>No diagnosis fee - we roll the service call into the repair cost</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Transparent estimate before any work begins</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>No surprise charges or hidden fees</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>We discuss options with you and solve for your budget</span>
-                  </li>
-                </ul>
-              </div>
+              <div className="mt-8 rounded-lg bg-yellow-50 border border-yellow-200 p-6">
+                <h3 className="font-bold text-lg mb-3">
+                  Important Pricing Information
+                </h3>
 
-              <div className="p-6 bg-blue-50 border border-blue-200 rounded-lg">
-                <p className="text-slate-900 mb-4">
-                  <strong>Pro Tip:</strong> Emergency plumbing often saves money in the long run. Addressing a minor leak immediately might cost $300-500. Ignoring it can lead to $10,000+ in water damage to your home's structure.
+                <p className="text-slate-700 leading-7">
+                  Piperesque does not set plumbing prices and does not
+                  guarantee a particular service cost. Pricing, fees, estimates,
+                  payment terms, warranties, and any financing options are
+                  determined directly by the independent plumbing provider.
                 </p>
-                <a
-                  href="tel:+18773640861"
-                  className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-6 py-3 font-bold text-white hover:bg-red-700 transition"
-                >
-                  <Phone size={18} />
-                  Get a Quote - Call Now
-                </a>
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Immediate Homeowner Actions */}
             <div className="mb-16 pb-16 border-b border-slate-200">
               <h2 className="text-3xl font-black mb-6">
-                Why Choose Piperesque for Emergency Plumbing
+                What to Do Before Plumbing Help Arrives
               </h2>
 
-              <div className="space-y-6 mb-8">
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="font-bold text-lg mb-2">Licensed, Certified Professionals</h3>
-                  <p className="text-slate-700">
-                    All our plumbers are fully licensed and insured. We stay current on training and certifications. You're not getting someone's nephew with a wrench—you're getting qualified professionals.
-                  </p>
-                </div>
-
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="font-bold text-lg mb-2">True 24/7 Availability</h3>
-                  <p className="text-slate-700">
-                    We're here 365 days a year, including holidays. Emergencies don't clock out at 5 PM, and neither do we. Call anytime—a real person answers.
-                  </p>
-                </div>
-
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="font-bold text-lg mb-2">Fast Response Times</h3>
-                  <p className="text-slate-700">
-                    30-60 minute typical response in Houston. We have multiple trucks and plumbers positioned to reach you quickly. The faster we arrive, the less damage occurs.
-                  </p>
-                </div>
-
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="font-bold text-lg mb-2">Fully Stocked Service Vehicles</h3>
-                  <p className="text-slate-700">
-                    Our trucks carry hundreds of common parts. Most repairs are completed on first visit without additional trips. This saves you time and money.
-                  </p>
-                </div>
-
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="font-bold text-lg mb-2">Transparent, Honest Pricing</h3>
-                  <p className="text-slate-700">
-                    No surprise bills. No upselling unnecessary work. We explain what needs to be done and why. You approve the cost before we proceed.
-                  </p>
-                </div>
-
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="font-bold text-lg mb-2">Quality Workmanship Guarantee</h3>
-                  <p className="text-slate-700">
-                    We stand behind our work. If something fails due to our workmanship, we fix it. Our reputation depends on quality repairs that last.
-                  </p>
-                </div>
-
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="font-bold text-lg mb-2">Houston Local Expertise</h3>
-                  <p className="text-slate-700">
-                    We know Houston's unique plumbing challenges: clay soil, aging infrastructure, temperature fluctuations, and hard water. This expertise helps us fix problems correctly and prevent future issues.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* FAQs */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-black mb-8">
-                Frequently Asked Questions About Emergency Plumbing
-              </h2>
-
-              <div className="space-y-6">
-                <details className="group border border-slate-200 rounded-lg p-6 cursor-pointer">
-                  <summary className="font-bold text-lg flex justify-between items-center">
-                    <span>What should I do while waiting for the plumber to arrive?</span>
-                    <span className="transition group-open:rotate-180">▼</span>
-                  </summary>
-                  <div className="mt-4 text-slate-700 leading-8">
-                    <p className="mb-4">
-                      First, stop the water if safely possible. Locate your main shutoff valve and turn it off clockwise. If you can't find or reach your shutoff, call us immediately—provide this information when we arrive.
-                    </p>
-                    <p className="mb-4">
-                      For active leaks, place buckets or towels to catch water. Move valuables away from the affected area. Don't try to DIY repair it while waiting—professional help is minutes away.
-                    </p>
-                    <p>
-                      Document the problem with photos for your insurance company. Have your address, phone number, and description of the problem ready when we arrive.
-                    </p>
-                  </div>
-                </details>
-
-                <details className="group border border-slate-200 rounded-lg p-6 cursor-pointer">
-                  <summary className="font-bold text-lg flex justify-between items-center">
-                    <span>Do you offer payment plans for large emergency repairs?</span>
-                    <span className="transition group-open:rotate-180">▼</span>
-                  </summary>
-                  <div className="mt-4 text-slate-700 leading-8">
-                    <p>
-                      We understand that large emergency repairs can be financially stressful. Ask about our financing options. We work with homeowners to find solutions that fit their budget while ensuring the necessary repairs are completed.
-                    </p>
-                  </div>
-                </details>
-
-                <details className="group border border-slate-200 rounded-lg p-6 cursor-pointer">
-                  <summary className="font-bold text-lg flex justify-between items-center">
-                    <span>Does my homeowner's insurance cover emergency plumbing?</span>
-                    <span className="transition group-open:rotate-180">▼</span>
-                  </summary>
-                  <div className="mt-4 text-slate-700 leading-8">
-                    <p className="mb-4">
-                      This depends on your specific policy and the cause of the emergency. Sudden, accidental damage is usually covered. Gradual leaks from aging pipes may not be.
-                    </p>
-                    <p>
-                      Contact your insurance company immediately. We'll provide documentation of the damage and repair costs. Many insurance companies require an itemized estimate.
-                    </p>
-                  </div>
-                </details>
-
-                <details className="group border border-slate-200 rounded-lg p-6 cursor-pointer">
-                  <summary className="font-bold text-lg flex justify-between items-center">
-                    <span>Can you prevent emergency plumbing problems?</span>
-                    <span className="transition group-open:rotate-180">▼</span>
-                  </summary>
-                  <div className="mt-4 text-slate-700 leading-8">
-                    <p className="mb-4">
-                      Many plumbing emergencies can be prevented through regular maintenance. Annual inspections catch problems before they become emergencies.
-                    </p>
-                    <p>
-                      We recommend:
-                    </p>
-                    <ul className="space-y-2 mt-3">
-                      <li>• Regular drain cleaning (annually or as needed)</li>
-                      <li>• Water pressure regulation (if over 80 PSI)</li>
-                      <li>• Water heater maintenance and flush (every 1-3 years)</li>
-                      <li>• Sewer line camera inspection (especially in older homes)</li>
-                      <li>• Fixture repairs as soon as leaks develop</li>
-                    </ul>
-                  </div>
-                </details>
-
-                <details className="group border border-slate-200 rounded-lg p-6 cursor-pointer">
-                  <summary className="font-bold text-lg flex justify-between items-center">
-                    <span>Do you offer warranties on emergency repairs?</span>
-                    <span className="transition group-open:rotate-180">▼</span>
-                  </summary>
-                  <div className="mt-4 text-slate-700 leading-8">
-                    <p>
-                      Yes. All repairs include a workmanship warranty. Specific warranty periods depend on the repair type. We'll detail the warranty when we complete your repair.
-                    </p>
-                  </div>
-                </details>
-              </div>
-            </div>
-
-            {/* Final CTA */}
-            <div className="p-8 bg-red-50 border-l-4 border-red-600 rounded-lg">
-              <h3 className="text-2xl font-black text-slate-900 mb-4">
-                Plumbing Emergency? Don't Wait.
-              </h3>
-              <p className="text-slate-700 mb-6 text-lg">
-                Every minute counts when you have a plumbing emergency. Water damage grows exponentially. Sewage backups create health hazards. Call us immediately.
+              <p className="text-lg leading-8 text-slate-600 mb-8">
+                If it is safe to do so, a few basic steps can help reduce
+                additional damage while you arrange professional assistance.
               </p>
+
+              <div className="space-y-5">
+
+                <div className="flex gap-4">
+                  <div className="mt-1">
+                    <AlertTriangle className="text-red-600" size={22} />
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">
+                      Stop or limit the water source when possible
+                    </h3>
+
+                    <p className="text-slate-600 leading-7">
+                      If you can safely identify and access the appropriate
+                      shutoff valve, limiting the water supply may reduce
+                      additional water damage.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="mt-1">
+                    <AlertTriangle className="text-red-600" size={22} />
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">
+                      Protect belongings from active water
+                    </h3>
+
+                    <p className="text-slate-600 leading-7">
+                      When safe, move valuables and household items away from
+                      leaking or flooded areas.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="mt-1">
+                    <AlertTriangle className="text-red-600" size={22} />
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">
+                      Avoid electrical hazards
+                    </h3>
+
+                    <p className="text-slate-600 leading-7">
+                      Do not enter standing water or handle electrical
+                      equipment in a wet area when doing so could create an
+                      electrical hazard.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="mt-1">
+                    <AlertTriangle className="text-red-600" size={22} />
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">
+                      Do not attempt dangerous repairs
+                    </h3>
+
+                    <p className="text-slate-600 leading-7">
+                      Avoid dismantling plumbing systems or attempting repairs
+                      that could increase property damage or create a safety
+                      risk.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="mt-1">
+                    <AlertTriangle className="text-red-600" size={22} />
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">
+                      If you smell gas, leave the area
+                    </h3>
+
+                    <p className="text-slate-600 leading-7">
+                      Do not attempt to locate or repair a suspected gas leak.
+                      Leave the area and contact the appropriate emergency
+                      service or gas utility provider according to local
+                      safety guidance.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="rounded-2xl bg-blue-950 p-8 md:p-10 text-white">
+              <h2 className="text-3xl font-black mb-4">
+                Need Emergency Plumbing Help in Houston?
+              </h2>
+
+              <p className="text-blue-100 text-lg leading-7 mb-6 max-w-2xl">
+                If you have an urgent plumbing problem, contact Piperesque to
+                request help connecting with an independent plumbing
+                professional serving your area.
+              </p>
+
               <a
                 href="tel:+18773640861"
-                className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-8 py-4 font-bold text-white hover:bg-red-700 transition text-lg"
+                className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-7 py-4 font-bold text-white hover:bg-red-700 transition"
               >
                 <Phone size={20} />
-                Call (877) 364-0861 NOW
+                Call (877) 364-0861
               </a>
-              <p className="text-sm text-slate-600 mt-4">
-                Available 24/7 • 30-60 minute response • Licensed professionals
+
+              <p className="mt-5 text-sm text-blue-200 leading-6">
+                Provider availability, response time, pricing, qualifications,
+                warranties, and workmanship are determined by the independent
+                provider handling the request.
               </p>
             </div>
+
           </div>
 
           {/* Sidebar */}
           <aside className="lg:col-span-1">
-            <div className="sticky top-28 space-y-6">
-              {/* Call Box */}
-              <div className="rounded-xl bg-red-600 text-white p-8 shadow-lg">
-                <h3 className="text-2xl font-black mb-4">
-                  Emergency Line
+            <div className="sticky top-24 space-y-6">
+
+              <div className="rounded-xl bg-slate-50 border border-slate-200 p-6">
+                <h3 className="text-xl font-bold mb-5">
+                  Emergency Plumbing Help
                 </h3>
-                <p className="mb-6 text-red-100">
-                  24/7 Emergency plumbing response
-                </p>
+
+                <div className="space-y-4">
+
+                  <div className="flex items-start gap-3">
+                    <Clock
+                      size={22}
+                      className="text-blue-600 mt-1 flex-shrink-0"
+                    />
+                    <div>
+                      <p className="font-semibold">
+                        Service Requests Available 24/7
+                      </p>
+                      <p className="text-sm text-slate-600 mt-1">
+                        Provider availability may vary.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Users
+                      size={22}
+                      className="text-blue-600 mt-1 flex-shrink-0"
+                    />
+                    <div>
+                      <p className="font-semibold">
+                        Independent Plumbing Providers
+                      </p>
+                      <p className="text-sm text-slate-600 mt-1">
+                        Providers determine their own service terms.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Wrench
+                      size={22}
+                      className="text-blue-600 mt-1 flex-shrink-0"
+                    />
+                    <div>
+                      <p className="font-semibold">
+                        Houston Service Area
+                      </p>
+                      <p className="text-sm text-slate-600 mt-1">
+                        Availability depends on the provider and location.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
                 <a
                   href="tel:+18773640861"
-                  className="block text-center rounded-lg bg-white text-red-600 px-6 py-4 font-bold hover:bg-red-50 transition text-lg mb-4"
+                  className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-5 py-3 font-bold text-white hover:bg-red-700 transition"
                 >
-                  (877) 364-0861
+                  <Phone size={18} />
+                  Call for Help
                 </a>
-                <div className="space-y-3 text-sm">
-                  <div className="flex gap-2">
-                    <Clock size={18} className="flex-shrink-0 mt-0.5" />
-                    <span>Available 24/7</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <AlertTriangle size={18} className="flex-shrink-0 mt-0.5" />
-                    <span>30-60 min response</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <Users size={18} className="flex-shrink-0 mt-0.5" />
-                    <span>Licensed plumbers</span>
-                  </div>
+              </div>
+
+              <div className="rounded-xl border border-slate-200 p-6">
+                <h3 className="text-xl font-bold mb-4">
+                  Related Plumbing Services
+                </h3>
+
+                <div className="space-y-3">
+
+                  <Link
+                    href="/location/houston/sewer-line-repair"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    Sewer Line Repair in Houston
+                  </Link>
+
+                  <Link
+                    href="/location/houston/drain-cleaning"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    Drain Cleaning in Houston
+                  </Link>
+
+                  <Link
+                    href="/location/houston/leak-detection"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    Leak Detection in Houston
+                  </Link>
+
+                  <Link
+                    href="/location/houston/water-heater-repair"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    Water Heater Repair in Houston
+                  </Link>
+
                 </div>
               </div>
 
-              {/* What to Expect */}
-              <div className="rounded-xl border border-slate-200 bg-white p-6 shadow">
-                <h3 className="font-bold text-lg mb-4">What to Expect</h3>
-                <ul className="space-y-3 text-sm">
-                  <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">✓</span>
-                    <span>Fast response</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">✓</span>
-                    <span>Professional diagnosis</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">✓</span>
-                    <span>Transparent pricing</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">✓</span>
-                    <span>Quality workmanship</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">✓</span>
-                    <span>Warranty on repairs</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Service Area */}
-              <div className="rounded-xl border border-slate-200 bg-white p-6 shadow">
-                <h3 className="font-bold text-lg mb-4">Service Area</h3>
-                <p className="text-sm text-slate-700 mb-4">
-                  Serving Houston and surrounding areas including:
-                </p>
-                <ul className="text-sm space-y-2 text-slate-600">
-                  <li>• Houston</li>
-                  <li>• Katy</li>
-                  <li>• Sugar Land</li>
-                  <li>• Pearland</li>
-                  <li>• Cypress</li>
-                  <li>• Pasadena</li>
-                  <li>• <Link href="/service-areas" className="text-blue-600 hover:underline">View all areas →</Link></li>
-                </ul>
-              </div>
-
-              {/* Related Services */}
-              <div className="rounded-xl border border-slate-200 bg-white p-6 shadow">
-                <h3 className="font-bold text-lg mb-4">Related Services</h3>
-                <ul className="text-sm space-y-2">
-                  <li><Link href="/services/burst-pipe-repair" className="text-blue-600 hover:underline">Burst Pipe Repair</Link></li>
-                  <li><Link href="/services/sewer-line-repair" className="text-blue-600 hover:underline">Sewer Line Repair</Link></li>
-                  <li><Link href="/services/leak-detection" className="text-blue-600 hover:underline">Leak Detection</Link></li>
-                  <li><Link href="/services/drain-cleaning" className="text-blue-600 hover:underline">Drain Cleaning</Link></li>
-                </ul>
-              </div>
             </div>
           </aside>
         </div>
       </section>
+            {/* Final FAQ + Trust Information */}
+      <section className="py-20 md:py-28 bg-slate-50">
+        <div className="container-custom max-w-5xl">
 
+          {/* Why Piperesque */}
+          <div className="mb-16">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl md:text-4xl font-black mb-6">
+                Why Use Piperesque for Emergency Plumbing Help?
+              </h2>
+
+              <p className="text-lg leading-8 text-slate-600 mb-8">
+                Finding the right plumbing professional during an emergency
+                can be difficult. Piperesque provides a simple way for
+                Houston homeowners to request help and connect with
+                independent plumbing providers.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+
+              <div className="rounded-xl bg-white border border-slate-200 p-6">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
+                  <Phone className="text-blue-700" size={24} />
+                </div>
+
+                <h3 className="text-xl font-bold mb-3">
+                  Simple Contact Option
+                </h3>
+
+                <p className="text-slate-600 leading-7">
+                  Homeowners can call the listed number to request plumbing
+                  assistance without having to search through multiple
+                  service listings.
+                </p>
+              </div>
+
+              <div className="rounded-xl bg-white border border-slate-200 p-6">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
+                  <Users className="text-blue-700" size={24} />
+                </div>
+
+                <h3 className="text-xl font-bold mb-3">
+                  Independent Providers
+                </h3>
+
+                <p className="text-slate-600 leading-7">
+                  Plumbing services are performed by independent providers.
+                  Their qualifications, availability, pricing, and service
+                  terms should be confirmed directly with the provider.
+                </p>
+              </div>
+
+              <div className="rounded-xl bg-white border border-slate-200 p-6">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
+                  <Clock className="text-blue-700" size={24} />
+                </div>
+
+                <h3 className="text-xl font-bold mb-3">
+                  Emergency-Focused Information
+                </h3>
+
+                <p className="text-slate-600 leading-7">
+                  The site provides information about common plumbing
+                  emergencies, warning signs, immediate precautions, and
+                  questions homeowners can ask a plumbing professional.
+                </p>
+              </div>
+
+              <div className="rounded-xl bg-white border border-slate-200 p-6">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
+                  <Wrench className="text-blue-700" size={24} />
+                </div>
+
+                <h3 className="text-xl font-bold mb-3">
+                  Houston Service Focus
+                </h3>
+
+                <p className="text-slate-600 leading-7">
+                  Piperesque focuses on helping homeowners looking for
+                  plumbing assistance in Houston and surrounding service
+                  areas.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* FAQ */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-black mb-8">
+              Emergency Plumbing FAQs
+            </h2>
+
+            <div className="space-y-5">
+
+              <details className="group rounded-xl bg-white border border-slate-200 p-6">
+                <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
+                  What qualifies as a plumbing emergency?
+                  <span className="absolute right-0 top-0 text-blue-600">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 text-slate-600 leading-7">
+                  A plumbing emergency may include an active burst pipe,
+                  major water leak, sewer backup, overflowing fixture,
+                  significant loss of water service, or another problem that
+                  could cause property damage or require prompt professional
+                  attention.
+                </p>
+              </details>
+
+              <details className="group rounded-xl bg-white border border-slate-200 p-6">
+                <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
+                  Is emergency plumbing help available 24/7 in Houston?
+                  <span className="absolute right-0 top-0 text-blue-600">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 text-slate-600 leading-7">
+                  Piperesque accepts plumbing service requests at any time
+                  and helps homeowners connect with independent plumbing
+                  professionals. Provider availability varies by location,
+                  time, and current service capacity.
+                </p>
+              </details>
+
+              <details className="group rounded-xl bg-white border border-slate-200 p-6">
+                <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
+                  How quickly can a plumbing professional respond?
+                  <span className="absolute right-0 top-0 text-blue-600">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 text-slate-600 leading-7">
+                  Response times vary by provider, location, time of day,
+                  current demand, and the type of plumbing problem. The
+                  independent plumbing provider handling the request
+                  determines availability and scheduling.
+                </p>
+              </details>
+
+              <details className="group rounded-xl bg-white border border-slate-200 p-6">
+                <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
+                  Does emergency plumbing cost more?
+                  <span className="absolute right-0 top-0 text-blue-600">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 text-slate-600 leading-7">
+                  Emergency plumbing pricing varies by provider and may depend
+                  on the type of problem, time of service, labor, materials,
+                  equipment, accessibility, and whether repair or replacement
+                  is required. Ask the provider about applicable service or
+                  diagnostic fees before authorizing work.
+                </p>
+              </details>
+
+              <details className="group rounded-xl bg-white border border-slate-200 p-6">
+                <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
+                  Can I request emergency plumbing service online?
+                  <span className="absolute right-0 top-0 text-blue-600">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 text-slate-600 leading-7">
+                  Yes. Homeowners can submit a plumbing service request
+                  through Piperesque or call the listed phone number. The
+                  request may then be connected with an independent plumbing
+                  service provider serving the area.
+                </p>
+              </details>
+
+              <details className="group rounded-xl bg-white border border-slate-200 p-6">
+                <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
+                  Are plumbing providers licensed?
+                  <span className="absolute right-0 top-0 text-blue-600">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 text-slate-600 leading-7">
+                  Licensing, insurance, qualifications, warranties, and
+                  service terms are determined by the independent plumbing
+                  provider. Homeowners should confirm applicable credentials
+                  and terms directly with the provider before authorizing
+                  work.
+                </p>
+              </details>
+
+              <details className="group rounded-xl bg-white border border-slate-200 p-6">
+                <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
+                  What should I do if a pipe bursts?
+                  <span className="absolute right-0 top-0 text-blue-600">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 text-slate-600 leading-7">
+                  If it is safe to do so, stop or limit the water supply using
+                  the appropriate shutoff valve and move belongings away from
+                  active water. Avoid electrical hazards and seek professional
+                  plumbing assistance for the damaged pipe.
+                </p>
+              </details>
+
+              <details className="group rounded-xl bg-white border border-slate-200 p-6">
+                <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
+                  What should I do if I smell gas?
+                  <span className="absolute right-0 top-0 text-blue-600">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 text-slate-600 leading-7">
+                  Do not attempt to locate or repair a suspected gas leak.
+                  Leave the area and contact the appropriate emergency service
+                  or gas utility provider according to local safety guidance.
+                </p>
+              </details>
+
+              <details className="group rounded-xl bg-white border border-slate-200 p-6">
+                <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
+                  Does Piperesque perform the plumbing work?
+                  <span className="absolute right-0 top-0 text-blue-600">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 text-slate-600 leading-7">
+                  No. Piperesque does not employ or directly perform plumbing
+                  services. Piperesque helps homeowners connect with
+                  independent plumbing professionals. Service availability,
+                  pricing, qualifications, warranties, and workmanship are
+                  determined by the provider handling the request.
+                </p>
+              </details>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-20 bg-blue-950">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
+              Need Emergency Plumbing Help in Houston?
+            </h2>
+
+            <p className="text-lg md:text-xl text-blue-100 leading-8 mb-8">
+              If you are dealing with an urgent plumbing problem, contact
+              Piperesque to request help connecting with an independent
+              plumbing professional serving your area.
+            </p>
+
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+
+              <a
+                href="tel:+18773640861"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-8 py-4 font-bold text-white hover:bg-red-700 transition"
+              >
+                <Phone size={20} />
+                Call (877) 364-0861
+              </a>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-bold text-white hover:bg-white hover:text-blue-950 transition"
+              >
+                Request Service
+              </Link>
+
+            </div>
+
+            <p className="mt-7 text-sm text-blue-200 leading-6">
+              Piperesque is an informational and connection service. It does
+              not directly provide plumbing services. Provider availability,
+              response times, pricing, qualifications, warranties, and
+              workmanship are determined by the independent provider.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Structured Data */}
+      <FAQSchema
+        faqs={[
+          {
+            question: "What qualifies as a plumbing emergency?",
+            answer:
+              "A plumbing emergency may include an active burst pipe, major water leak, sewer backup, overflowing fixture, significant loss of water service, or another problem that could cause property damage or require prompt professional attention.",
+          },
+          {
+            question: "Is emergency plumbing help available 24/7 in Houston?",
+            answer:
+              "Piperesque accepts plumbing service requests at any time and helps homeowners connect with independent plumbing professionals. Provider availability varies by location, time, and current service capacity.",
+          },
+          {
+            question: "How quickly can a plumbing professional respond?",
+            answer:
+              "Response times vary by provider, location, time of day, current demand, and the type of plumbing problem. The independent plumbing provider handling the request determines availability and scheduling.",
+          },
+          {
+            question: "Does emergency plumbing cost more?",
+            answer:
+              "Emergency plumbing pricing varies by provider and may depend on the type of problem, time of service, labor, materials, equipment, accessibility, and whether repair or replacement is required.",
+          },
+          {
+            question: "Are plumbing providers licensed?",
+            answer:
+              "Licensing, insurance, qualifications, warranties, and service terms are determined by the independent plumbing provider. Homeowners should confirm applicable credentials and terms directly with the provider.",
+          },
+          {
+            question: "Does Piperesque perform the plumbing work?",
+            answer:
+              "No. Piperesque does not employ or directly perform plumbing services. Piperesque helps homeowners connect with independent plumbing professionals.",
+          },
+        ]}
+      />
+
+      {/* Global CTA */}
       <CTA />
+
       <Footer />
     </main>
   );
