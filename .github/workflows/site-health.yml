@@ -1,0 +1,24 @@
+name: PipeRescue Site Health
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: piperesque-site-health
+  cancel-in-progress: true
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check production pages
+        run: node scripts/automation/health-check.mjs
+        env:
+          SITE_URL: ${{ vars.SITE_URL || 'https://www.piperesque.com' }}
+          N8N_ALERT_WEBHOOK_URL: ${{ secrets.N8N_ALERT_WEBHOOK_URL }}
