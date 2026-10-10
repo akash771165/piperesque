@@ -960,22 +960,32 @@ export async function generateMetadata({
   const plumbing = services.find((item) => item.slug === service);
 
   if (!city || !plumbing) {
-    return {};
+    return {
+      title: "Plumbing Service Not Found | Piperesque",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
   }
 
   const content = serviceContent[plumbing.slug];
 
   if (!content) {
-    return {};
+    return {
+      title: `${plumbing.shortTitle} in ${city.city} | Piperesque`,
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
   }
 
-  const title =
-    `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | Piperesque`;
+  const title = `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | Piperesque`;
 
   const description =
-    content.intro.length > 155
-      ? `${content.intro.slice(0, 152)}...`
-      : content.intro;
+    `${plumbing.shortTitle} in ${city.city}, ${city.stateCode}. ` +
+    `Explore common plumbing problems, repair considerations, and options for connecting with independent local plumbing professionals.`;
 
   const canonical =
     `${baseUrl}/location/${city.slug}/${plumbing.slug}`;
