@@ -1,9 +1,10 @@
+
 import type { MetadataRoute } from "next";
 
 import { getAllBlogData } from "@/lib/blog/get-all-blog-data";
 import { siteConfig } from "@/lib/config/site";
 
-const baseUrl = siteConfig.website.replace(/\/$/, "");
+const baseUrl = siteConfig.website.replace(/\/+$/, "");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogs = getAllBlogData();
@@ -74,6 +75,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/services/sewer-line-repair`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
 
   /*
@@ -114,9 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
    * =========================================================
    * BLOG PAGES
    *
-   * BlogCardData does not contain a "published" property.
-   * Therefore we use the data returned by getAllBlogData()
-   * directly and use publishedAt for lastModified.
+   * Use publishedAt for lastModified.
    * =========================================================
    */
 
