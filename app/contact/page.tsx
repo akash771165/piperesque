@@ -3,13 +3,13 @@ import Image from "next/image";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
+import LeadRequestForm from "@/components/forms/lead-request-form";
 
 import {
   Phone,
   Mail,
   MapPin,
   Clock3,
-  Send,
   ShieldCheck,
 } from "lucide-react";
 
@@ -116,45 +116,7 @@ export default function ContactPage() {
                 <h2 className="text-3xl font-black text-slate-900">Request service</h2>
               </div>
 
-              <form className="space-y-5">
-                <div className="grid gap-5 md:grid-cols-2">
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-bold text-slate-700">Full name</span>
-                    <input type="text" placeholder="Your name" className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 outline-none ring-0 transition focus:border-blue-600" />
-                  </label>
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-bold text-slate-700">Phone</span>
-                    <input type="tel" placeholder="(555) 123-4567" className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 outline-none ring-0 transition focus:border-blue-600" />
-                  </label>
-                </div>
-
-                <label className="block">
-                  <span className="mb-2 block text-sm font-bold text-slate-700">Email</span>
-                  <input type="email" placeholder="you@example.com" className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 outline-none ring-0 transition focus:border-blue-600" />
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-sm font-bold text-slate-700">Service needed</span>
-                  <select className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-blue-600">
-                    <option>Emergency Plumbing</option>
-                    <option>Drain Cleaning</option>
-                    <option>Leak Detection</option>
-                    <option>Water Heater Repair</option>
-                    <option>Sewer Line Repair</option>
-                    <option>Other</option>
-                  </select>
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-sm font-bold text-slate-700">Message</span>
-                  <textarea rows={6} placeholder="Tell us about the issue, property type, and urgency." className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-blue-600" />
-                </label>
-
-                <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-4 font-black text-white transition hover:bg-blue-700">
-                  <Send size={18} />
-                  Submit request
-                </button>
-              </form>
+              <LeadRequestForm />
             </div>
           </div>
         </div>
