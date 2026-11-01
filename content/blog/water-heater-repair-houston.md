@@ -169,24 +169,21 @@ monitor your usage, and stay vigilant for potential problems.
 
 **Get Professional Water Heater Repair in Houston**
 
-At [Your Company Name], our team of expert plumbers is dedicated to providi
-providing top-notch service and repair for all your plumbing needs. Contact
-Contact us today to schedule a maintenance inspection or emergency repair. 
-Don't wait until it's too late – trust the experts at [Your Company Name] t
-to keep your water heater running smoothly and efficiently.
+When water heater problems arise, connecting promptly with a licensed local plumbing technician can prevent water damage and restore your hot water quickly. Call our 24/7 hotline to be connected with an independent plumbing specialist in Houston.
+Don't wait until it's too late – connect with experienced local plumbing professionals
+to inspect and repair your water heater quickly and safely.
 
 
 </article>
 
-<div class="mt-12 rounded-3xl bg-blue-700 p-8 text-white shadow-lg">
-  <h2 class="mb-3 text-2xl font-bold">Need a Plumber in Houston Right Now?</h2>
-  <p class="mb-6 text-blue-100">
-    Pipe Rescue provides 24/7 emergency plumbing services across Houston, Texas.
-    Fast response, transparent pricing, and experienced local plumbers.
+<div class="mt-12 rounded-3xl bg-slate-900 p-8 text-white shadow-lg">
+  <h2 class="mb-3 text-2xl font-bold">Need Plumbing Assistance in Houston?</h2>
+  <p class="mb-6 text-slate-300">
+    Piperesque helps you connect with independent plumbing professionals serving Houston and nearby areas.
   </p>
   <div class="flex flex-wrap gap-3">
-    <a href="tel:8773640861"
-       class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-blue-700 shadow hover:bg-blue-50">
+    <a href="tel:+18773640861"
+       class="inline-flex items-center justify-center rounded-xl bg-amber-500 px-5 py-3 text-sm font-bold text-slate-950 shadow hover:bg-amber-400">
       📞 Call (877) 364-0861
     </a>
     <a href="/contact"

@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -64,14 +62,14 @@ const serviceFeatures = [
 
 export default function Footer() {
   return (
-    <footer className="relative isolate overflow-hidden bg-slate-950 text-white">
+    <footer className="relative isolate overflow-hidden bg-slate-950 text-white pb-20 md:pb-0">
       {/* Decorative background image */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-20"
       >
         <Image
-          src="/images/map.png"
+          src="/images/map.webp"
           alt=""
           fill
           priority={false}
@@ -119,9 +117,9 @@ export default function Footer() {
             <a
               href={`tel:${siteConfig.phone}`}
               aria-label={`Call Piperesque at ${siteConfig.phoneDisplay}`}
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-blue-600 px-7 py-4 font-bold text-white transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-amber-500 px-7 py-4 font-black text-slate-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 shadow-lg active:scale-95"
             >
-              <Phone size={18} aria-hidden="true" />
+              <Phone size={18} className="fill-slate-950" aria-hidden="true" />
               {siteConfig.phoneDisplay}
             </a>
 
@@ -129,7 +127,7 @@ export default function Footer() {
               href="/contact"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-slate-600 px-7 py-4 font-bold text-white transition-colors hover:border-white hover:bg-white hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
-              Request Service
+              Contact Us
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>

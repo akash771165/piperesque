@@ -16,7 +16,7 @@ import Footer from "@/components/layout/footer";
 export const metadata: Metadata = {
   title: "Emergency Plumbing Help in Houston, TX | Piperesque",
   description:
-    "Piperesque helps homeowners in Houston, TX connect with independent plumbing professionals for emergency plumbing, drain cleaning, leak detection, sewer line repair, and water heater services.",
+    "Need emergency plumbing in Houston, TX? Call (877) 364-0861 now for fast 24/7 help with burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
   keywords: [
     "emergency plumbing Houston",
     "emergency plumber Houston",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Emergency Plumbing Help in Houston, TX | Piperesque",
     description:
-      "Connect with independent plumbing professionals serving Houston and surrounding areas.",
+      "Need emergency plumbing in Houston, TX? Call (877) 364-0861 now for fast 24/7 help with burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
     url: "https://www.piperesque.com/",
     type: "website",
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Piperesque | Emergency Plumbing Help in Houston",
     description:
-      "Connect with independent plumbing professionals serving Houston and surrounding areas.",
+      "Need emergency plumbing in Houston, TX? Call (877) 364-0861 now for fast 24/7 help with burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
     images: ["/og-image.png"],
   },
 };
@@ -147,9 +147,9 @@ export default function Home() {
         <div className="container-custom relative z-10 py-20 md:py-28 lg:py-32">
           <div className="max-w-4xl">
 
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-blue-100">
-              <Clock3 size={17} aria-hidden="true" />
-              Plumbing Assistance Available 24/7
+            <div className="mb-6 inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-200">
+              <Clock3 size={15} aria-hidden="true" />
+              24/7 Telephone Routing • Houston, TX
             </div>
 
             <h1 className="text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
@@ -158,15 +158,14 @@ export default function Home() {
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
               Facing a burst pipe, major leak, sewer backup, clogged drain,
-              or another urgent plumbing problem? Piperesque helps Houston
-              homeowners connect with independent plumbing professionals
-              serving their area.
+              or overflowing fixture? Piperesque quickly connects Greater Houston
+              homeowners with independent, licensed plumbing professionals.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
               <a
                 href="tel:+18773640861"
-                className="btn btn-emergency"
+                className="inline-flex items-center justify-center gap-3 rounded-xl bg-amber-500 px-8 py-4 text-base md:text-lg font-black text-slate-950 shadow-lg shadow-amber-500/25 transition hover:bg-amber-400 active:scale-[0.98]"
               >
                 <Phone size={20} aria-hidden="true" />
                 Call (877) 364-0861
@@ -174,20 +173,58 @@ export default function Home() {
 
               <Link
                 href="/contact"
-                className="btn btn-outline border-white/30 bg-white/10 text-white hover:bg-white hover:text-slate-950"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-7 py-4 text-base font-semibold text-white transition hover:bg-white hover:text-slate-950"
               >
-                Request Plumbing Assistance
+                Contact by Phone or Email
                 <ArrowRight size={19} aria-hidden="true" />
               </Link>
             </div>
 
+            {/* Quick Problem Intent Bar */}
+            <div className="mt-8 pt-6 border-t border-white/10">
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+                Select your urgent plumbing issue:
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs">
+                <Link
+                  href="/services/emergency-plumbing"
+                  className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
+                >
+                  💥 Burst Pipe
+                </Link>
+                <Link
+                  href="/location/houston/drain-cleaning"
+                  className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
+                >
+                  🚰 Clogged Drain
+                </Link>
+                <Link
+                  href="/location/houston/sewer-line-repair"
+                  className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
+                >
+                  🚽 Sewer Backup
+                </Link>
+                <Link
+                  href="/location/houston/water-heater-repair"
+                  className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
+                >
+                  🔥 No Hot Water
+                </Link>
+                <Link
+                  href="/location/houston/leak-detection"
+                  className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
+                >
+                  💧 Active Leak
+                </Link>
+              </div>
+            </div>
+
             <div className="mt-8 max-w-3xl rounded-xl border border-white/10 bg-white/5 p-5">
               <p className="text-sm leading-6 text-slate-300">
-                <strong className="text-white">Important:</strong>{" "}
-                Piperesque does not directly provide or dispatch plumbing
-                services. We help connect homeowners with independent
-                plumbing providers. Availability, response times, pricing,
-                warranties, and workmanship are determined by the provider.
+                <strong className="text-white">Notice:</strong>{" "}
+                Piperesque is a referral service connecting property owners with independent,
+                third-party plumbing professionals. Piperesque does not employ plumbers, own fleet vehicles,
+                or perform repairs directly. Pricing, warranties, and availability are set by the provider.
               </p>
             </div>
 
@@ -663,7 +700,7 @@ export default function Home() {
 
             <a
               href="tel:+18773640861"
-              className="btn btn-emergency"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 transition hover:bg-amber-400 shadow-lg shadow-amber-500/20 active:scale-[0.98]"
             >
               <Phone size={20} aria-hidden="true" />
               Call (877) 364-0861
@@ -671,9 +708,9 @@ export default function Home() {
 
             <Link
               href="/contact"
-              className="btn btn-outline border-white/30 bg-white/10 text-white hover:bg-white hover:text-slate-950"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-7 py-4 font-bold text-white transition hover:bg-white hover:text-slate-950"
             >
-              Request Assistance
+              Contact by Phone or Email
               <ArrowRight size={19} aria-hidden="true" />
             </Link>
 

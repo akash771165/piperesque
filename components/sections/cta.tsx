@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -14,15 +12,14 @@ import {
 import { siteConfig } from "@/lib/config/site";
 
 export default function CTA() {
-
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
       {/* Background */}
       <Image
-        src="/images/emergency.jpg"
+        src="/images/emergency.webp"
         alt="Emergency plumbing assistance Houston"
         fill
-        quality={85}
+        quality={80}
         sizes="100vw"
         className="object-cover"
       />
@@ -78,18 +75,18 @@ export default function CTA() {
                             <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  aria-label={`Call ${siteConfig.company}`}
-                  className="inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-lg font-black text-blue-700 shadow-xl transition hover:scale-105"
+                  aria-label={`Call ${siteConfig.company} at ${siteConfig.phoneDisplay}`}
+                  className="inline-flex items-center gap-3 rounded-full bg-amber-500 px-8 py-4 text-lg font-black text-slate-950 shadow-xl transition hover:bg-amber-400 hover:scale-105 active:scale-95"
                 >
-                  <Phone size={22} />
+                  <Phone size={22} className="fill-slate-950" />
                   Call {siteConfig.phoneDisplay}
                 </a>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 text-lg font-bold text-white transition hover:bg-blue-700"
+                  className="inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/10 px-8 py-4 text-lg font-bold text-white transition hover:bg-white hover:text-slate-950"
                 >
-                  Request Service
+                  Contact by Phone or Email
                   <ArrowRight size={20} />
                 </Link>
               </div>
@@ -105,10 +102,10 @@ export default function CTA() {
             {/* IMAGE */}
             <div className="relative h-[380px] lg:h-[620px]">
               <Image
-                src="/images/emergency.jpg"
+                src="/images/emergency.webp"
                 alt="Houston plumbing service provider"
                 fill
-                quality={85}
+                quality={80}
                 sizes="(max-width:1024px)100vw,50vw"
                 className="object-cover"
               />

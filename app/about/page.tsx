@@ -1,383 +1,185 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
 
+import { Phone, CheckCircle2, ShieldCheck, Clock, Wrench } from "lucide-react";
+import { siteConfig } from "@/lib/config/site";
+
+export const metadata: Metadata = {
+  title: "About Piperesque | Plumbing Connection Service in Houston, TX",
+  description:
+    "Learn about Piperesque: how we help Houston homeowners find and connect with independent, licensed plumbing specialists for emergency and routine repairs.",
+  alternates: {
+    canonical: `${siteConfig.website}/about`,
+  },
+  openGraph: {
+    title: "About Piperesque | Houston Plumbing Resource",
+    description:
+      "Learn about Piperesque: how we help Houston homeowners find and connect with independent, licensed plumbing specialists for emergency and routine repairs.",
+    url: `${siteConfig.website}/about`,
+    siteName: siteConfig.company,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Piperesque | Houston Plumbing Resource",
+    description:
+      "Learn about Piperesque: how we help Houston homeowners find and connect with independent, licensed plumbing specialists.",
+  },
+};
+
 export default function AboutPage() {
-    return (
-        <main className="overflow-x-hidden bg-white">
+  return (
+    <main className="overflow-x-hidden bg-white text-slate-900">
+      <Navbar />
 
-            <Navbar />
+      {/* Hero */}
+      <section className="relative overflow-hidden py-24 md:py-32 bg-slate-950">
+        <Image
+          src="/images/about.webp"
+          alt="Plumbing services in Houston"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-25"
+        />
 
-            {/* Hero */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
 
-            {/* Hero */}
-
-           {/* Hero */}
-
-<section className="relative flex min-h-[700px] items-center overflow-hidden">
-
-  <Image
-    src="/images/about.png"
-    alt="Plumbing services in Houston"
-    fill
-    priority
-    sizes="100vw"
-    className="object-cover"
-  />
-
-  <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-blue-950/80 to-blue-900/70" />
-
-  <div className="container-custom relative z-10 py-28">
-
-    <div className="max-w-3xl">
-
-      <div className="flex flex-wrap gap-3">
-
-        <span className="rounded-full bg-red-600 px-5 py-2 text-sm font-bold text-white">
-          🚨 Emergency Plumbing Information
-        </span>
-
-        <span className="rounded-full bg-white/15 px-5 py-2 text-sm font-bold text-white backdrop-blur">
-          Serving Houston & Nearby Areas
-        </span>
-
-        <span className="rounded-full bg-white/15 px-5 py-2 text-sm font-bold text-white backdrop-blur">
-          Request Service 24/7
-        </span>
-
-      </div>
-
-      <h1 className="mt-8 text-5xl font-black leading-tight text-white md:text-7xl">
-        About Piperesque
-      </h1>
-
-      <p className="mt-8 max-w-2xl text-xl leading-9 text-blue-100">
-        Piperesque is an informational website that helps homeowners connect
-        with local plumbing service providers throughout Houston and surrounding
-        communities. Whether you need emergency plumbing, drain cleaning, leak
-        detection, water heater service or sewer line assistance, we&apos;ll help
-        you submit a plumbing service request.
-      </p>
-
-      <div className="mt-10 flex flex-wrap gap-5">
-
-        <a
-          href="/contact"
-          className="rounded-xl bg-blue-600 px-8 py-4 text-lg font-bold text-white transition hover:bg-blue-700"
-        >
-          Request Service
-        </a>
-
-        <a
-          href="tel:+18773640861"
-          className="rounded-xl border-2 border-white px-8 py-4 text-lg font-bold text-white transition hover:bg-white hover:text-slate-900"
-        >
-          Call (877) 364-0861
-        </a>
-
-      </div>
-
-      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
-        <div className="rounded-2xl bg-white/10 p-5 backdrop-blur">
-
-          <h3 className="text-3xl font-black text-white">
-            24/7
-          </h3>
-
-          <p className="mt-2 text-blue-100">
-            Request Submission
+        <div className="container-custom relative z-10 text-center max-w-4xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest text-amber-400">
+            About Our Directory &amp; Referral Service
           </p>
 
-        </div>
+          <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl lg:text-6xl tracking-tight">
+            Connecting Houston Homeowners With Qualified Plumbers
+          </h1>
 
-        <div className="rounded-2xl bg-white/10 p-5 backdrop-blur">
-
-          <h3 className="text-3xl font-black text-white">
-            Houston
-          </h3>
-
-          <p className="mt-2 text-blue-100">
-            Primary Service Area
+          <p className="mt-6 text-lg leading-8 text-slate-300">
+            When a plumbing emergency occurs, time matters. Piperesque provides a fast, straightforward way to reach independent local plumbing service providers across Greater Houston.
           </p>
 
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={`tel:${siteConfig.phone}`}
+              className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto rounded-xl bg-amber-500 px-7 py-4 text-base font-black text-slate-950 shadow-lg transition hover:bg-amber-400 active:scale-95"
+            >
+              <Phone size={18} className="fill-slate-950" />
+              Call {siteConfig.phoneDisplay}
+            </a>
+
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center w-full sm:w-auto rounded-xl border border-slate-600 bg-slate-900/60 px-7 py-4 text-base font-bold text-white transition hover:bg-white hover:text-slate-950"
+            >
+              Contact by Phone or Email
+            </Link>
+          </div>
         </div>
+      </section>
 
-        <div className="rounded-2xl bg-white/10 p-5 backdrop-blur">
-
-          <h3 className="text-3xl font-black text-white">
-            Local
-          </h3>
-
-          <p className="mt-2 text-blue-100">
-            Plumbing Providers
-          </p>
-
-        </div>
-
-        <div className="rounded-2xl bg-white/10 p-5 backdrop-blur">
-
-          <h3 className="text-3xl font-black text-white">
-            Easy
-          </h3>
-
-          <p className="mt-2 text-blue-100">
-            Service Requests
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-            {/* About */}
-
-          <section className="py-24">
-
-  <div className="container-custom grid items-center gap-20 lg:grid-cols-2">
-
-    {/* Image */}
-
-    <div className="relative aspect-[9/7] overflow-hidden rounded-[36px] shadow-2xl">
-
-      <Image
-        src="/images/plumber-1.png"
-        alt="Local plumbing services in Houston"
-        fill
-        sizes="(max-width:1024px)100vw,50vw"
-        className="object-cover"
-      />
-
-    </div>
-
-    {/* Content */}
-
-    <div>
-
-      <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-bold text-blue-700">
-        ABOUT Piperesque
-      </span>
-
-      <h2 className="mt-8 text-5xl font-black leading-tight text-slate-900">
-        Helping Homeowners Find Plumbing Services
-      </h2>
-
-      <p className="mt-8 text-lg leading-9 text-slate-600">
-        Piperesque is an informational website designed to help homeowners
-        and businesses connect with local plumbing service providers serving
-        Houston and nearby communities.
-      </p>
-
-      <p className="mt-6 text-lg leading-9 text-slate-600">
-        Whether you need emergency plumbing, drain cleaning, leak detection,
-        sewer line services, water heater repair or general plumbing
-        assistance, you can request service through our website or by calling
-        the phone number provided.
-      </p>
-
-      <div className="mt-10 grid gap-4">
-
-        {[
-          "Emergency plumbing service requests",
-          "Drain cleaning and clog removal",
-          "Leak detection assistance",
-          "Water heater services",
-          "Residential & commercial plumbing",
-          "Houston and surrounding service areas",
-        ].map((item) => (
-
-          <div
-            key={item}
-            className="flex items-center gap-3 rounded-xl bg-slate-100 p-4"
-          >
-
-            <span className="text-2xl text-green-600">
-              ✔
-            </span>
-
-            <span className="font-semibold">
-              {item}
-            </span>
-
+      {/* Mission & What We Do */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container-custom grid items-center gap-14 lg:grid-cols-2">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-slate-200 shadow-xl bg-slate-100">
+            <Image
+              src="/images/plumber-1.webp"
+              alt="Plumbing professional inspecting pipes"
+              fill
+              sizes="(max-width:1024px)100vw,50vw"
+              className="object-cover"
+            />
           </div>
 
-        ))}
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-blue-700">
+              Our Role
+            </span>
 
-      </div>
+            <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">
+              Simplifying the Search for Urgent Plumbing Help
+            </h2>
 
-      <div className="mt-12 rounded-3xl border border-blue-100 bg-blue-50 p-8">
+            <p className="mt-5 text-base leading-7 text-slate-600">
+              Plumbing problems rarely happen at a convenient time. Finding an available, trustworthy technician when a pipe bursts or a drain backs up can be stressful and chaotic.
+            </p>
 
-        <h3 className="text-2xl font-bold text-slate-900">
-          Important Information
-        </h3>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              Piperesque serves as a dedicated informational bridge. We do not dispatch our own trucks or employ plumbers directly; instead, we partner with independent service networks and lead providers to route your call or inquiry to licensed local professionals who can assist you.
+            </p>
 
-        <p className="mt-5 leading-8 text-slate-600">
-          Piperesque does not claim to directly employ plumbers or guarantee
-          pricing, response times, scheduling or service availability. Those
-          details are determined by the plumbing service provider you are
-          connected with and may vary based on your location.
-        </p>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 text-sm font-semibold text-slate-800">
+              {[
+                "24/7 Request Availability",
+                "Licensed Local Technicians",
+                "Clear Disclaimers & Pricing",
+                "Emergency & Routine Repairs",
+                "Drain & Sewer Line Solutions",
+                "Water Heater Assistance",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2.5 rounded-lg bg-slate-50 p-3 border border-slate-100">
+                  <CheckCircle2 size={18} className="text-emerald-600 shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-      </div>
+      {/* Trust & Transparency Guidelines */}
+      <section className="py-20 bg-slate-50 border-y border-slate-200">
+        <div className="container-custom max-w-5xl">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="heading-lg text-slate-950">
+              Transparency First
+            </h2>
+            <p className="mt-3 text-slate-600 text-base">
+              We believe in honest, upfront expectations so you always know how our service operates.
+            </p>
+          </div>
 
-    </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <div className="card p-7 bg-white">
+              <ShieldCheck size={32} className="text-blue-700" />
+              <h3 className="mt-4 text-xl font-bold text-slate-950">Independent Network</h3>
+              <p className="mt-2 text-sm text-slate-600 leading-6">
+                Calls and requests are routed to independent third-party contractors who independently determine their service availability and rates.
+              </p>
+            </div>
 
-  </div>
+            <div className="card p-7 bg-white">
+              <Wrench size={32} className="text-blue-700" />
+              <h3 className="mt-4 text-xl font-bold text-slate-950">Direct Estimates</h3>
+              <p className="mt-2 text-sm text-slate-600 leading-6">
+                All pricing, diagnostics, repair estimates, and warranties are quoted directly by the independent service professional before work begins.
+              </p>
+            </div>
 
-</section>
+            <div className="card p-7 bg-white">
+              <Clock size={32} className="text-blue-700" />
+              <h3 className="mt-4 text-xl font-bold text-slate-950">Realistic Timing</h3>
+              <p className="mt-2 text-sm text-slate-600 leading-6">
+                Arrival and response times vary based on demand, weather, traffic, and technician availability. We never promise unrealistic arrival times.
+              </p>
+            </div>
+          </div>
 
-            {/* Team */}
+          <div className="mt-12 rounded-2xl border border-blue-200 bg-blue-50/60 p-6 text-sm leading-6 text-slate-700">
+            <p>
+              <strong className="font-semibold text-slate-900">Legal Notice:</strong> Piperesque is a lead-referral website. Piperesque does not own or operate a plumbing company and does not warrant the workmanship or representations of independent providers. Customers are encouraged to confirm licenses, insurance, and terms with the servicing contractor.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            {/* Why Choose Us */}
+      <CTA />
 
-           <section className="bg-slate-50 py-24">
-
-  <div className="container-custom">
-
-    <div className="mx-auto max-w-3xl text-center">
-
-      <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-bold text-blue-700">
-        WHY Piperesque
-      </span>
-
-      <h2 className="mt-6 text-5xl font-black text-slate-900">
-        A Simple Way to Request Plumbing Services
-      </h2>
-
-      <p className="mt-6 text-lg leading-8 text-slate-600">
-        Piperesque helps homeowners connect with local plumbing service
-        providers serving Houston and surrounding communities. Our goal is to
-        make requesting plumbing assistance simple and convenient.
-      </p>
-
-    </div>
-
-    <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-      <div className="rounded-3xl bg-white p-8 shadow-xl">
-
-        <div className="text-5xl">📞</div>
-
-        <h3 className="mt-6 text-2xl font-black">
-          Easy Service Requests
-        </h3>
-
-        <p className="mt-4 leading-8 text-slate-600">
-          Submit a plumbing request online or call the number listed on our
-          website.
-        </p>
-
-      </div>
-
-      <div className="rounded-3xl bg-white p-8 shadow-xl">
-
-        <div className="text-5xl">🚨</div>
-
-        <h3 className="mt-6 text-2xl font-black">
-          Emergency Assistance
-        </h3>
-
-        <p className="mt-4 leading-8 text-slate-600">
-          Emergency plumbing requests can be submitted 24 hours a day,
-          depending on provider availability.
-        </p>
-
-      </div>
-
-      <div className="rounded-3xl bg-white p-8 shadow-xl">
-
-        <div className="text-5xl">🔧</div>
-
-        <h3 className="mt-6 text-2xl font-black">
-          Multiple Plumbing Services
-        </h3>
-
-        <p className="mt-4 leading-8 text-slate-600">
-          Request emergency plumbing, drain cleaning, leak detection, sewer
-          line services and water heater repair.
-        </p>
-
-      </div>
-
-      <div className="rounded-3xl bg-white p-8 shadow-xl">
-
-        <div className="text-5xl">🏠</div>
-
-        <h3 className="mt-6 text-2xl font-black">
-          Residential & Commercial
-        </h3>
-
-        <p className="mt-4 leading-8 text-slate-600">
-          Plumbing service requests are available for homes, apartments,
-          offices and commercial properties.
-        </p>
-
-      </div>
-
-      <div className="rounded-3xl bg-white p-8 shadow-xl">
-
-        <div className="text-5xl">📍</div>
-
-        <h3 className="mt-6 text-2xl font-black">
-          Houston Service Area
-        </h3>
-
-        <p className="mt-4 leading-8 text-slate-600">
-          Helping customers find plumbing services throughout Houston and
-          nearby communities.
-        </p>
-
-      </div>
-
-      <div className="rounded-3xl bg-white p-8 shadow-xl">
-
-        <div className="text-5xl">ℹ️</div>
-
-        <h3 className="mt-6 text-2xl font-black">
-          Helpful Information
-        </h3>
-
-        <p className="mt-4 leading-8 text-slate-600">
-          Our website provides plumbing information and helps connect
-          homeowners with local service providers.
-        </p>
-
-      </div>
-
-    </div>
-
-    <div className="mt-20 rounded-3xl border border-blue-100 bg-blue-50 p-8">
-
-      <h3 className="text-2xl font-bold text-slate-900">
-        Disclaimer
-      </h3>
-
-      <p className="mt-5 leading-8 text-slate-600">
-        Piperesque is an informational website. We help connect homeowners
-        with local plumbing service providers. We do not directly employ,
-        dispatch or supervise plumbers, and we do not guarantee pricing,
-        scheduling, response times or service availability. These are
-        determined by the selected plumbing service provider.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<CTA />
-
-<Footer />
-
-</main>
-);
+      <Footer />
+    </main>
+  );
 }

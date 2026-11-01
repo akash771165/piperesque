@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Piperesque helps homeowners in Houston, TX connect with independent plumbing professionals for emergency plumbing, drain cleaning, leak detection, sewer line repair, and water heater services.",
+    "Need emergency plumbing in Houston, TX? Call (877) 364-0861 now for fast 24/7 help with burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
 
   applicationName: siteConfig.company,
 
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
     title: `${siteConfig.company} | Emergency Plumbing Help in Houston`,
 
     description:
-      "Connect with independent plumbing professionals serving Houston and surrounding areas.",
+      "Need emergency plumbing in Houston, TX? Call (877) 364-0861 now for fast 24/7 help with burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
 
     images: [
       {
@@ -115,7 +115,7 @@ export const metadata: Metadata = {
     title: `${siteConfig.company} | Emergency Plumbing Help Houston`,
 
     description:
-      "Connect with independent plumbing professionals serving Houston and surrounding areas.",
+      "Need emergency plumbing in Houston, TX? Call (877) 364-0861 now for fast 24/7 help with burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
 
     images: [siteConfig.ogImage],
   },

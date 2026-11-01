@@ -10,7 +10,7 @@ export const siteConfig = {
   // Contact
   phone: "+18773640861",
   phoneDisplay: "(877) 364-0861",
-  email: "support@piperesque.com",
+  email: "resquepipe@gmail.com",
 
   // Leave blank if not using WhatsApp
   whatsapp: "",

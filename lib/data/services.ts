@@ -72,7 +72,7 @@ export const services: Service[] = [
       "Local Service Options",
     ],
 
-    image: "/images/services/emergency-plumbing.jpg",
+    image: "/images/services/emergency-plumbing.webp",
 
     icon: AlertTriangle,
   },
@@ -114,7 +114,7 @@ export const services: Service[] = [
       "Local Service Options",
     ],
 
-    image: "/images/services/drain-cleaning.png",
+    image: "/images/services/drain-cleaning.webp",
 
     icon: Droplets,
   },
@@ -156,7 +156,7 @@ export const services: Service[] = [
       "Local Service Options",
     ],
 
-    image: "/images/services/water-heater-repair.png",
+    image: "/images/services/water-heater-repair.webp",
 
     icon: Flame,
   },
@@ -198,7 +198,7 @@ export const services: Service[] = [
       "Local Service Options",
     ],
 
-    image: "/images/services/leak-detection.jpg",
+    image: "/images/services/leak-detection.webp",
 
     icon: Pipette,
   },
@@ -239,7 +239,7 @@ export const services: Service[] = [
       "Local Service Options",
     ],
 
-    image: "/images/services/pipe-repair.png",
+    image: "/images/services/pipe-repair.webp",
 
     icon: Wrench,
   },
@@ -281,7 +281,7 @@ export const services: Service[] = [
       "Replacement Considerations",
     ],
 
-    image: "/images/services/sewer-line-repair.png",
+    image: "/images/services/sewer-line-repair.webp",
 
     icon: ShowerHead,
   },
@@ -323,7 +323,7 @@ export const services: Service[] = [
       "Replacement Considerations",
     ],
 
-    image: "/images/services/toilet-repair.jpg",
+    image: "/images/services/toilet-repair.webp",
 
     icon: Toilet,
   },
@@ -365,7 +365,7 @@ export const services: Service[] = [
       "Kitchen & Bathroom Information",
     ],
 
-    image: "/images/services/faucet-repair.png",
+    image: "/images/services/faucet-repair.webp",
 
     icon: Bath,
   },
@@ -406,7 +406,7 @@ export const services: Service[] = [
       "Local Service Options",
     ],
 
-    image: "/images/services/commercial-plumbing.png",
+    image: "/images/services/commercial-plumbing.webp",
 
     icon: Building2,
   },
@@ -448,7 +448,7 @@ export const services: Service[] = [
       "Local Service Options",
     ],
 
-    image: "/images/services/residential-plumbing.png",
+    image: "/images/services/residential-plumbing.webp",
 
     icon: Home,
   },

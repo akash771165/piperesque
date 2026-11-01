@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 
 import {
@@ -8,7 +7,6 @@ import {
   ArrowRight,
   BadgeCheck,
   ChevronRight,
-  Clock3,
   MapPin,
   Phone,
   ShieldCheck,
@@ -527,20 +525,27 @@ export default async function ServicePage({ params }: Props) {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="tel:+18773640861"
+                className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 transition hover:bg-amber-400 shadow-lg shadow-amber-500/20 active:scale-[0.98]"
+              >
+                <Phone size={19} />
+                Call (877) 364-0861
+              </a>
+
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-red-600 px-7 py-4 font-black text-white transition hover:bg-red-700"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-7 py-4 font-bold text-white transition hover:bg-white hover:text-blue-950"
               >
-                <Phone size={18} />
-                Request service
+                Contact Us
               </Link>
 
               <Link
                 href="/service-areas"
-                className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-4 font-bold text-white transition hover:bg-white hover:text-blue-900"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-4 font-semibold text-blue-100 transition hover:bg-white/10 hover:text-white"
               >
-                <MapPin size={18} />
-                View service areas
+                <MapPin size={17} />
+                Service Areas
               </Link>
             </div>
           </div>

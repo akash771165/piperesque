@@ -39,7 +39,7 @@ export default function BlogPage() {
 
 
         <Image
-          src="/images/blog.png"
+          src="/images/blog.webp"
           alt="Piperesque Plumbing Blog"
           fill
           priority

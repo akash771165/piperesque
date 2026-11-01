@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { cities } from "@/lib/data/cities";
@@ -122,17 +123,17 @@ export default async function CityPage({
 
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="rounded-lg bg-red-600 px-6 py-3 font-semibold hover:bg-red-700 transition"
+                className="rounded-xl bg-amber-500 px-7 py-3.5 font-black text-slate-950 hover:bg-amber-400 transition shadow-lg shadow-amber-500/20 active:scale-[0.98]"
               >
                 Call {siteConfig.phoneDisplay}
               </a>
 
-              <a
+              <Link
                 href="/contact"
-                className="rounded-lg border border-white px-6 py-3 font-semibold hover:bg-white hover:text-slate-900 transition"
+                className="rounded-xl border border-white/40 bg-white/10 px-7 py-3.5 font-bold text-white hover:bg-white hover:text-slate-900 transition"
               >
-                Request Service
-              </a>
+                Contact by Phone or Email
+              </Link>
 
             </div>
 

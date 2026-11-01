@@ -180,7 +180,7 @@ export default async function LocationPage({
                 href="/contact"
                 className="rounded-full border border-slate-300 bg-white px-7 py-4 font-bold text-slate-900 transition-colors hover:border-blue-600 hover:text-blue-700"
               >
-                Request service
+                Contact Options
               </Link>
             </div>
           </div>

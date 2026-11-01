@@ -17,7 +17,7 @@ export default function AuthorBox({
       <div className="flex flex-col gap-6 md:flex-row md:items-center">
 
         <Image
-          src="/images/author.png"
+          src="/images/author.webp"
           alt={author}
           width={80}
           height={80}

@@ -98,7 +98,7 @@ export default function EmergencyPlumbingPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-24 md:py-32">
         <Image
-          src="/images/services/emergency-plumbing.jpg"
+          src="/images/services/emergency-plumbing.webp"
           alt="Emergency plumbing assistance in Houston, Texas"
           fill
           priority
@@ -130,7 +130,7 @@ export default function EmergencyPlumbingPage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="tel:+18773640861"
-                className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-8 py-4 font-bold text-white hover:bg-red-700 transition"
+                className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 hover:bg-amber-400 transition shadow-lg shadow-amber-500/20 active:scale-[0.98]"
               >
                 <Phone size={20} />
                 Call (877) 364-0861
@@ -138,9 +138,9 @@ export default function EmergencyPlumbingPage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-bold text-white hover:bg-white hover:text-blue-950 transition"
+                className="inline-flex items-center gap-2 rounded-xl border-2 border-white/40 bg-white/10 px-8 py-4 font-bold text-white hover:bg-white hover:text-blue-950 transition"
               >
-                Request Service
+                Contact Options
               </Link>
             </div>
 
@@ -1263,7 +1263,7 @@ export default function EmergencyPlumbingPage() {
 
               <a
                 href="tel:+18773640861"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-8 py-4 font-bold text-white hover:bg-red-700 transition"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 hover:bg-amber-400 transition shadow-lg shadow-amber-500/20 active:scale-[0.98]"
               >
                 <Phone size={20} />
                 Call (877) 364-0861
@@ -1271,9 +1271,9 @@ export default function EmergencyPlumbingPage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-bold text-white hover:bg-white hover:text-blue-950 transition"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/40 bg-white/10 px-8 py-4 font-bold text-white hover:bg-white hover:text-blue-950 transition"
               >
-                Request Service
+                Contact Options
               </Link>
 
             </div>

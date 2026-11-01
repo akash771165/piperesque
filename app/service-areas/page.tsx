@@ -1,203 +1,157 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
 
-import {
-    MapPin,
-    CheckCircle2,
-    Clock3,
-} from "lucide-react";
+import { MapPin, CheckCircle2, Clock3, ArrowRight } from "lucide-react";
+import { siteConfig } from "@/lib/config/site";
+import { cities } from "@/lib/data/cities";
 
-const areas = [
-    "Houston",
-    "Pasadena",
-    "Sugar Land",
-    "Pearland",
-    "Katy",
-    "Cypress",
-    "Spring",
-    "The Woodlands",
-    "Missouri City",
-    "League City",
-    "Bellaire",
-    "Stafford",
-];
+export const metadata: Metadata = {
+  title: "Plumbing Service Areas in Houston, TX | Piperesque",
+  description:
+    "Explore plumbing service coverage across Houston, Pasadena, Sugar Land, Pearland, Katy, The Woodlands, and surrounding Texas communities.",
+  alternates: {
+    canonical: `${siteConfig.website}/service-areas`,
+  },
+  openGraph: {
+    title: "Plumbing Service Areas in Houston, TX | Piperesque",
+    description:
+      "Explore plumbing service coverage across Houston, Pasadena, Sugar Land, Pearland, Katy, The Woodlands, and surrounding Texas communities.",
+    url: `${siteConfig.website}/service-areas`,
+    siteName: siteConfig.company,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Plumbing Service Areas in Houston, TX | Piperesque",
+    description:
+      "Explore plumbing service coverage across Houston, Pasadena, Sugar Land, Pearland, Katy, The Woodlands, and surrounding Texas communities.",
+  },
+};
 
 export default function ServiceAreasPage() {
-    return (
-        <main className="overflow-x-hidden bg-white">
+  return (
+    <main className="overflow-x-hidden bg-white text-slate-900">
+      <Navbar />
 
-            <Navbar />
+      {/* Hero */}
+      <section className="relative overflow-hidden py-24 md:py-32 bg-slate-950">
+        <Image
+          src="/images/service-city.webp"
+          alt="Houston Plumbing Service Areas"
+          fill
+          priority
+          quality={80}
+          sizes="100vw"
+          className="object-cover opacity-25"
+        />
 
-            {/* Hero */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
 
-            <section className="relative overflow-hidden py-28">
+        <div className="container-custom relative z-10 text-center">
+          <p className="text-xs font-bold uppercase tracking-widest text-amber-400">
+            Coverage Information
+          </p>
 
-                <Image
-                    src="/images/service-city.png"
-                    alt="Service Areas"
-                    fill
-                    priority
-                    className="object-cover"
-                />
+          <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl lg:text-6xl tracking-tight">
+            Plumbing Service Areas in Greater Houston
+          </h1>
 
-                <div className="absolute inset-0 bg-blue-900/75" />
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+            Piperesque helps homeowners across the Houston metropolitan area connect with
+            independent, licensed plumbing professionals.
+          </p>
+        </div>
+      </section>
 
-                <div className="container-custom relative z-10 text-center">
+      {/* Cities Grid */}
+      <section className="section section-light">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="heading-lg text-slate-950">
+              Communities We Help Connect
+            </h2>
+            <p className="mt-4 text-body text-slate-600">
+              Click any service area below to learn more about common plumbing solutions and local service options.
+            </p>
+          </div>
 
-                    <span className="rounded-full bg-white/20 px-5 py-2 text-sm font-bold text-white">
-                        SERVICE AREAS
-                    </span>
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {cities.map((city) => (
+              <Link
+                key={city.slug}
+                href={`/service-areas/${city.slug}`}
+                className="card card-hover group p-8 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-700 transition group-hover:bg-amber-500 group-hover:text-slate-950">
+                    <MapPin size={26} aria-hidden="true" />
+                  </div>
 
-                    <h1 className="mt-8 text-6xl font-black text-white">
-                        Areas We Serve
-                    </h1>
+                  <h3 className="mt-6 text-2xl font-bold text-slate-950">
+                    {city.name}, TX
+                  </h3>
 
-                    <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-blue-100">
-                        Piperesque proudly provides emergency plumbing services
-                        across Houston and surrounding communities.
-                    </p>
+                  <p className="mt-2 text-sm text-slate-600">
+                    Emergency plumbing, drain cleaning, leak detection, and water heater assistance.
+                  </p>
 
+                  <div className="mt-6 space-y-2 text-xs font-medium text-slate-600">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
+                      <span>24/7 Request Availability</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
+                      <span>Licensed Local Providers</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
+                      <span>Residential &amp; Commercial Help</span>
+                    </div>
+                  </div>
                 </div>
 
-            </section>
-
-            {/* Cities */}
-
-            <section className="py-24">
-
-                <div className="container-custom">
-
-                    <div className="text-center">
-
-                        <h2 className="text-5xl font-black">
-                            Serving Houston & Nearby Cities
-                        </h2>
-
-                        <p className="mt-6 text-lg text-slate-600">
-                            Fast response, licensed plumbers and same-day service.
-                        </p>
-
-                    </div>
-
-                    <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-                        {areas.map((city) => (
-
-                            <div
-                                key={city}
-                                className="rounded-[30px] border border-slate-200 bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-2 hover:border-blue-600 hover:shadow-2xl"
-                            >
-
-                                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
-
-                                    <MapPin
-                                        size={38}
-                                        className="text-blue-600"
-                                    />
-
-                                </div>
-
-                                <h3 className="mt-8 text-center text-3xl font-black">
-                                    {city}
-                                </h3>
-
-                                <p className="mt-4 text-center leading-8 text-slate-600">
-                                    Residential & Commercial Plumbing Services
-                                </p>
-
-                                <div className="mt-8 space-y-3">
-
-                                    <div className="flex items-center gap-3">
-
-                                        <CheckCircle2 className="text-green-600" />
-
-                                        <span>24/7 Emergency Service</span>
-
-                                    </div>
-
-                                    <div className="flex items-center gap-3">
-
-                                        <CheckCircle2 className="text-green-600" />
-
-                                        <span>Licensed Technicians</span>
-
-                                    </div>
-
-                                    <div className="flex items-center gap-3">
-
-                                        <CheckCircle2 className="text-green-600" />
-
-                                        <span>Same-Day Response</span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        ))}
-
-                    </div>
-
+                <div className="mt-8 flex items-center justify-between border-t border-slate-100 pt-4 text-sm font-bold text-blue-700 group-hover:text-amber-600 transition">
+                  <span>View local service options</span>
+                  <ArrowRight size={18} className="transition group-hover:translate-x-1" />
                 </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            </section>
+      {/* Informational Disclaimer Box */}
+      <section className="py-16 bg-white border-t border-slate-200">
+        <div className="container-custom max-w-4xl">
+          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 md:p-10 shadow-sm text-center">
+            <Clock3 size={36} className="mx-auto text-blue-700" />
+            <h2 className="mt-4 text-2xl font-bold text-slate-950">
+              Service Availability &amp; Response Terms
+            </h2>
+            <p className="mt-4 text-slate-600 text-sm md:text-base leading-7">
+              Piperesque is an independent informational directory and lead-referral service. We help homeowners connect with independent, licensed plumbing service providers serving Greater Houston. Piperesque does not directly dispatch technicians or perform plumbing services. Service availability, scheduling, pricing, and warranties are determined directly by the independent provider.
+            </p>
+            <div className="mt-6">
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="inline-flex items-center gap-2.5 rounded-xl bg-amber-500 px-6 py-3.5 text-base font-black text-slate-950 shadow-md transition hover:bg-amber-400 active:scale-95"
+              >
+                <span>Call {siteConfig.phoneDisplay} to Inquire</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Map */}
+      <CTA />
 
-            <section className="pb-24">
-
-                <div className="container-custom">
-
-                    <div className="overflow-hidden rounded-[36px] shadow-2xl">
-
-                        <div className="relative h-[600px]">
-
-                            <Image
-                                src="/images/service-area.png"
-                                alt="Houston Service Area Map"
-                                fill
-                                className="object-cover"
-                            />
-
-                        </div>
-
-                        <div className="bg-blue-600 p-10 text-center text-white">
-
-                            <Clock3
-                                size={42}
-                                className="mx-auto"
-                            />
-
-                            <h2 className="mt-6 text-4xl font-black">
-                                Fast Response Across Houston
-                            </h2>
-
-                            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-blue-100">
-                                Our plumbers are strategically located throughout
-                                Houston and surrounding cities, allowing us to
-                                respond quickly to residential and commercial
-                                plumbing emergencies 24 hours a day.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <CTA />
-
-            <Footer />
-
-        </main>
-    );
+      <Footer />
+    </main>
+  );
 }
-
