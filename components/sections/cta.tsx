@@ -12,16 +12,8 @@ import {
 } from "lucide-react";
 
 import { siteConfig } from "@/lib/config/site";
-import { trackPhoneCall, trackCTA } from "@/lib/gtag";
 
 export default function CTA() {
-  const handlePhoneClick = () => {
-    trackPhoneCall("cta_section");
-  };
-
-  const handleRequestService = () => {
-    trackCTA("cta_request_service");
-  };
 
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
@@ -86,7 +78,6 @@ export default function CTA() {
                             <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  onClick={handlePhoneClick}
                   aria-label={`Call ${siteConfig.company}`}
                   className="inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-lg font-black text-blue-700 shadow-xl transition hover:scale-105"
                 >
@@ -96,7 +87,6 @@ export default function CTA() {
 
                 <Link
                   href="/contact"
-                  onClick={handleRequestService}
                   className="inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 text-lg font-bold text-white transition hover:bg-blue-700"
                 >
                   Request Service

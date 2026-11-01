@@ -427,7 +427,7 @@ export default function EmergencyPlumbingPage() {
 
               <p className="text-lg leading-8 text-slate-600 mb-8">
                 Plumbing emergencies can have many causes. The actual cause
-                depends on the property's plumbing system, installation,
+                depends on the property&apos;s plumbing system, installation,
                 maintenance history, environmental conditions, and the
                 specific symptoms.
               </p>
@@ -674,7 +674,7 @@ export default function EmergencyPlumbingPage() {
                 There is no single price for emergency plumbing service.
                 Pricing depends on the plumbing problem, required labor,
                 materials, equipment, accessibility, time of service, and the
-                independent provider's pricing structure.
+                independent provider&apos;s pricing structure.
               </p>
 
               <p className="text-lg leading-8 text-slate-600 mb-8">

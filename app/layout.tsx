@@ -1,13 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
-import {
-  GoogleAnalytics,
-  GoogleTagManager,
-} from "@next/third-parties/google";
-
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+const Analytics = () => null;
+const SpeedInsights = () => null;
 
 import "./globals.css";
 
@@ -165,31 +160,6 @@ export default function RootLayout({
       className={inter.variable}
       suppressHydrationWarning
     >
-      <head>
-        {/* Performance hints for analytics */}
-        <link
-          rel="preconnect"
-          href="https://www.googletagmanager.com"
-          crossOrigin="anonymous"
-        />
-
-        <link
-          rel="preconnect"
-          href="https://www.google-analytics.com"
-          crossOrigin="anonymous"
-        />
-
-        <link
-          rel="dns-prefetch"
-          href="//www.googletagmanager.com"
-        />
-
-        <link
-          rel="dns-prefetch"
-          href="//www.google-analytics.com"
-        />
-      </head>
-
       <body
         suppressHydrationWarning
         className="min-h-screen bg-white text-slate-900 antialiased"
@@ -198,12 +168,6 @@ export default function RootLayout({
 
         {/* Microsoft Clarity */}
         <ClarityProvider />
-
-        {/* Google Tag Manager */}
-        <GoogleTagManager gtmId="GTM-TC26LK2X" />
-
-        {/* Google Analytics */}
-        <GoogleAnalytics gaId="G-CEVKCPR498" />
 
         {/* Vercel Analytics */}
         <Analytics />

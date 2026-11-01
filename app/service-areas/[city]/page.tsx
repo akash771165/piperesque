@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { cities } from "@/lib/data/cities";
 import { services } from "@/lib/data/services";
+import { siteConfig } from "@/lib/config/site";
 
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
@@ -51,13 +52,13 @@ export async function generateMetadata({
     ],
 
     alternates: {
-      canonical: `https://piperescue.com/service-areas/${city.slug}`,
+      canonical: `${siteConfig.website}/service-areas/${city.slug}`,
     },
 
     openGraph: {
       title: `Plumbing Services in ${city.name}, TX`,
       description: `Trusted plumbing services in ${city.name}, Texas.`,
-      url: `https://piperescue.com/service-areas/${city.slug}`,
+      url: `${siteConfig.website}/service-areas/${city.slug}`,
       siteName: "Piperesque",
       type: "website",
     },
@@ -120,10 +121,10 @@ export default async function CityPage({
             <div className="mt-8 flex flex-wrap gap-4">
 
               <a
-                href="tel:+18327100000"
+                href={`tel:${siteConfig.phone}`}
                 className="rounded-lg bg-red-600 px-6 py-3 font-semibold hover:bg-red-700 transition"
               >
-                Call Now
+                Call {siteConfig.phoneDisplay}
               </a>
 
               <a

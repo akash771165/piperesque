@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config/site";
-import { trackPhoneCall, trackCTA } from "@/lib/gtag";
 import {
   Menu,
   X,
@@ -32,7 +31,6 @@ export default function Navbar() {
       <a
         href={`tel:${siteConfig.phone}`}
         aria-label={`Call ${siteConfig.company}`}
-        onClick={() => trackPhoneCall("floating_call_button")}
         className="fixed bottom-6 right-5 z-[999] flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 text-white shadow-2xl transition hover:scale-110"
       >
         <Phone size={28} />
@@ -107,7 +105,6 @@ export default function Navbar() {
             <a
               href={`tel:${siteConfig.phone}`}
               aria-label={`Call ${siteConfig.company}`}
-              onClick={() => trackPhoneCall("desktop_navbar")}
             >
               <Button
                 variant="outline"
@@ -118,12 +115,7 @@ export default function Navbar() {
               </Button>
             </a>
 
-            <Link
-              href="/contact"
-              onClick={() =>
-                trackCTA("desktop_request_assistance")
-              }
-            >
+            <Link href="/contact">
               <Button className="rounded-full bg-blue-600 px-7 hover:bg-blue-700">
                 Request Assistance
               </Button>
@@ -173,16 +165,12 @@ export default function Navbar() {
                 <a
                   href={`tel:${siteConfig.phone}`}
                   aria-label={`Call ${siteConfig.company}`}
-                  onClick={() => trackPhoneCall("mobile_menu")}
                   className="rounded-full border border-blue-600 py-3 text-center font-bold text-blue-600"
                 >
                   📞 {siteConfig.phoneDisplay}
                 </a>
 
-                <Link
-                  href="/contact"
-                  onClick={() => trackCTA("mobile_request_assistance")}
-                >
+                <Link href="/contact">
                   <Button className="mt-2 w-full rounded-full bg-blue-600">
                     Request Assistance
                   </Button>
