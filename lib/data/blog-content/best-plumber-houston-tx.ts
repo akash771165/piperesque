@@ -15,7 +15,7 @@ export const bestPlumberHoustonTx: BlogContent = {
     "Plumbing Services",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",

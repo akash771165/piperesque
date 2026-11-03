@@ -11,7 +11,7 @@ export const waterLeakDetectionHoustonTx: BlogContent = {
 
   category: "Leak Detection",
 
-  image: "/images/service-1.png",
+  image: "/images/service-1.webp",
 
   author: "Piperesque Editorial Team",
 

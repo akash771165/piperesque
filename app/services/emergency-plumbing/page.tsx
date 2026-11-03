@@ -102,6 +102,7 @@ export default function EmergencyPlumbingPage() {
           alt="Emergency plumbing assistance in Houston, Texas"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
 

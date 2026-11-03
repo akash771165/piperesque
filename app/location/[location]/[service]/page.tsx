@@ -92,13 +92,7 @@ const baseUrl = "https://www.piperesque.com";
 
 
 
-const supportedServices = [
-  "emergency-plumbing",
-  "sewer-line-repair",
-  "drain-cleaning",
-  "leak-detection",
-  "water-heater-repair",
-];
+const supportedServices = services.map((s) => s.slug);
 
 export const dynamicParams = true;
 
@@ -1023,177 +1017,460 @@ const serviceContent: Record<string, ServiceContent> = {
           "Pricing depends on the water-heater type, failed component, parts, labor, accessibility, and whether repair or replacement is required.",
 
       },
-
     ],
-
   },
-
+  "pipe-repair": {
+    intro:
+      "Piperesque connects homeowners with independent plumbing professionals for damaged, corroded, leaking, or burst residential pipes throughout Greater Houston.",
+    urgencyTitle: "Signs You Need Professional Pipe Repair",
+    urgencyText:
+      "A damaged or leaking pipe can cause sudden water damage, mold growth, reduced water pressure, or structural deterioration. Timely inspection helps isolate pipe issues before widespread damage occurs.",
+    problemsTitle: "Common Pipe Problems in Houston Homes",
+    problems: [
+      "Pinhole leaks in copper or galvanized supply lines",
+      "Cracked or bursting pipes during sudden cold snaps",
+      "Visible corrosion, rust, or mineral scaling on exposed piping",
+      "Unexplained drops in household water pressure",
+      "Damp drywall, warped baseboards, or water stains on ceilings",
+      "Banging, vibrating, or whistling sounds within the plumbing system",
+    ],
+    processTitle: "Pipe Repair & Replacement Process",
+    process: [
+      {
+        title: "Isolate the water supply",
+        description: "Shut off water supply to stop active leaks and prevent further water intrusion.",
+      },
+      {
+        title: "Inspect and locate damage",
+        description: "Assess accessible and hidden pipe sections to identify the leak or pipe failure.",
+      },
+      {
+        title: "Recommend repair method",
+        description: "Explain whether localized pipe patching, sectional replacement, or repiping is recommended.",
+      },
+      {
+        title: "Execute repair and test",
+        description: "Complete the pipe repair using quality fittings and pressure test the system to verify integrity.",
+      },
+    ],
+    localTitle: "Residential Pipe Repair in the Houston Area",
+    localText:
+      "Houston homes often feature a mix of copper, CPVC, PEX, and older galvanized supply lines. Soil movement and temperature shifts can stress joints and cause fittings to fail. Local plumbing professionals assess pipe condition and recommend durable repairs.",
+    costTitle: "Pipe Repair Costs in Houston, TX",
+    costText:
+      "The cost of repairing or replacing residential pipes depends on pipe material, accessibility behind walls or slabs, repair technique, and the extent of pipe damage.",
+    costFactors: [
+      "Location and accessibility of the damaged pipe",
+      "Pipe material (copper, PEX, CPVC, galvanized)",
+      "Extent of damage (single pinhole vs. cracked section)",
+      "Drywall, slab, or ceiling access requirements",
+      "Labor, permits, and diagnostic inspection",
+    ],
+    faqs: [
+      {
+        question: "How quickly should a leaking pipe be repaired?",
+        answer:
+          "Active pipe leaks should be addressed as quickly as possible. Shut off the water supply to the affected line or the entire house to prevent structural damage while arranging professional repair.",
+      },
+      {
+        question: "Can a cracked pipe be patched or does it need replacement?",
+        answer:
+          "Temporary clamps or wraps may hold briefly, but licensed plumbers typically recommend cutting out the damaged section and installing a new replacement section or fitting for lasting security.",
+      },
+      {
+        question: "What causes pipes to burst or leak in Houston?",
+        answer:
+          "Common causes include water pressure spikes, corrosion in older pipes, shifting expansive clay soils, age-related joint deterioration, and occasional winter freezes.",
+      },
+      {
+        question: "Does Piperesque repair pipes directly?",
+        answer:
+          "No. Piperesque is an independent referral directory and does not provide direct plumbing repairs. We connect homeowners with qualified, independent plumbing contractors.",
+      },
+    ],
+  },
+  "toilet-repair": {
+    intro:
+      "Piperesque connects homeowners with local plumbing professionals for toilet repairs, continuous running, clogs, leaks, and fixture replacements across Greater Houston.",
+    urgencyTitle: "When to Call for Toilet Repair",
+    urgencyText:
+      "A toilet that constantly runs can waste hundreds of gallons of water per day, while leaks around the base can compromise flooring and subfloor structures. Prompt repair protects your home and lowers water bills.",
+    problemsTitle: "Common Toilet Issues in Residential Homes",
+    problems: [
+      "Toilet runs continuously or cycles on and off without being used",
+      "Water leaking around the base of the toilet onto the bathroom floor",
+      "Weak, incomplete, or sluggish flushing action",
+      "Persistent clogs that do not respond to a standard plunger",
+      "Cracked porcelain bowl, tank, or broken fill/flush valve components",
+      "Wobbling or unstable toilet mounting on the bathroom floor flange",
+    ],
+    processTitle: "Professional Toilet Repair Process",
+    process: [
+      {
+        title: "Initial diagnosis",
+        description: "Evaluate flush mechanism, flapper, fill valve, wax seal, and supply lines.",
+      },
+      {
+        title: "Determine cause",
+        description: "Identify whether the issue is a worn internal part, clogged drain line, or failed wax ring.",
+      },
+      {
+        title: "Perform repair or replacement",
+        description: "Install replacement parts or reset the toilet with a new wax ring and brass mounting hardware.",
+      },
+      {
+        title: "Test operation",
+        description: "Check flush performance, fill level, and seal tightness to confirm leak-free operation.",
+      },
+    ],
+    localTitle: "Toilet Repair Services in Houston Communities",
+    localText:
+      "From historic bungalows in the Heights to modern suburban residences across Katy and Sugar Land, toilet problems can quickly cause bathroom disruptions. Local plumbers carry common replacement components for swift resolution.",
+    costTitle: "Toilet Repair Pricing Factors",
+    costText:
+      "Simple toilet repairs such as replacing a flapper or fill valve are generally low cost, while pulling and resetting a toilet, repairing a cracked flange, or installing a replacement toilet involves more labor and parts.",
+    costFactors: [
+      "Type of repair (valve replacement, wax ring reset, flange repair)",
+      "Cost of replacement parts or new toilet fixture",
+      "Accessibility and floor condition under the toilet",
+      "Drain line clearing if a clog extends past the toilet trap",
+    ],
+    faqs: [
+      {
+        question: "Why is my toilet constantly running?",
+        answer:
+          "A running toilet is usually caused by a worn flapper that no longer seals properly, an improperly adjusted float, or a malfunctioning fill valve that allows water to continually overflow into the drain tube.",
+      },
+      {
+        question: "What does water around the toilet base mean?",
+        answer:
+          "Water pooling around the base usually indicates a failed wax ring seal, loose closet bolts, a cracked toilet base, or condensation. A failing wax ring should be replaced promptly to prevent subfloor rot.",
+      },
+      {
+        question: "Is it better to repair or replace an old toilet?",
+        answer:
+          "If the porcelain is in good condition and only internal valves or seals have failed, repair is often cost-effective. If the toilet frequently clogs, has cracked porcelain, or is an inefficient older high-flow model, replacement may be preferable.",
+      },
+    ],
+  },
+  "faucet-repair": {
+    intro:
+      "Piperesque helps homeowners find independent plumbing professionals for leaking, dripping, corroded, or malfunctioning kitchen and bathroom faucets.",
+    urgencyTitle: "Why Prompt Faucet Repair Matters",
+    urgencyText:
+      "Even a small drip can waste thousands of gallons of water each year and cause unsightly calcium buildup or mineral staining. Left unchecked, under-sink leaks can cause extensive cabinetry and drywall damage.",
+    problemsTitle: "Common Faucet and Fixture Problems",
+    problems: [
+      "Persistent dripping from the spout when turned off",
+      "Leaks around the faucet base or handle when in use",
+      "Under-sink moisture or dripping from supply lines and shutoff valves",
+      "Low water pressure restricted to one specific faucet",
+      "Squeaking, sticking, or loose faucet handles",
+      "Corrosion, mineral buildup, or spraying aerators",
+    ],
+    processTitle: "Faucet Inspection and Repair Steps",
+    process: [
+      {
+        title: "Inspect faucet and connections",
+        description: "Examine cartridges, O-rings, supply lines, and shutoff valves for leaks or wear.",
+      },
+      {
+        title: "Disassemble fixture",
+        description: "Remove handles and valve cartridge to check for internal wear, debris, or damaged seals.",
+      },
+      {
+        title: "Replace worn components",
+        description: "Install matching OEM cartridges, washers, seals, or supply lines.",
+      },
+      {
+        title: "Reassemble and verify",
+        description: "Restore water pressure, check for leaks under pressure, and confirm smooth operation.",
+      },
+    ],
+    localTitle: "Houston Area Faucet & Fixture Services",
+    localText:
+      "Hard water minerals present in parts of the Houston water supply can contribute to premature cartridge wear and limescale buildup. Independent plumbing professionals can service popular brands and replace failing fixtures.",
+    costTitle: "Faucet Repair & Replacement Costs",
+    costText:
+      "Repairing a faucet typically involves replacement cartridges, O-rings, and labor. If the fixture is heavily corroded, replacing the faucet assembly may offer better long-term reliability.",
+    costFactors: [
+      "Fixture type (single handle, widespread, pull-down, wall-mount)",
+      "Brand and availability of replacement cartridges",
+      "Extent of corrosion or access difficulty under the sink",
+      "Condition of underlying angle stops and supply lines",
+    ],
+    faqs: [
+      {
+        question: "Can a dripping faucet cause damage?",
+        answer:
+          "A spout drip generally causes water waste and staining in the sink basin. However, leaks beneath the faucet deck or under the sink can soak cabinets, ruin flooring, and encourage hidden mold growth.",
+      },
+      {
+        question: "Why is water leaking under my kitchen sink?",
+        answer:
+          "Under-sink leaks commonly stem from worn supply lines, leaking shutoff valves, loose drain slip joints, or water seeping down through the faucet base seal.",
+      },
+      {
+        question: "Should I replace the faucet or repair it?",
+        answer:
+          "If the fixture is relatively new and high quality, replacing cartridges or O-rings is usually straightforward. If the finish is pitted or internal components are frozen with corrosion, full replacement is often recommended.",
+      },
+    ],
+  },
+  "commercial-plumbing": {
+    intro:
+      "Piperesque connects Houston business owners, facility managers, and commercial property owners with independent commercial plumbing contractors for reliable maintenance and urgent repairs.",
+    urgencyTitle: "Keeping Business Operations Running Smoothly",
+    urgencyText:
+      "Plumbing failures in commercial properties can halt business operations, create health code violations, and damage inventory. Reliable commercial plumbing service resolves issues quickly with minimal customer disruption.",
+    problemsTitle: "Common Commercial Plumbing Challenges",
+    problems: [
+      "Restroom fixture failures and high-volume toilet/urinal clogs",
+      "Commercial kitchen grease trap backups and drain blockages",
+      "Commercial water heater and boiler malfunctions",
+      "Backflow preventer testing, maintenance, and certification",
+      "Water line leaks affecting tenant spaces and common areas",
+      "Sewer main line backups disrupting business operations",
+    ],
+    processTitle: "Commercial Plumbing Service Workflow",
+    process: [
+      {
+        title: "Rapid assessment",
+        description: "Inspect commercial plumbing systems to evaluate the problem and operational impacts.",
+      },
+      {
+        title: "Clear proposal",
+        description: "Provide commercial-grade repair recommendations and coordinate scheduling to minimize downtime.",
+      },
+      {
+        title: "Code-compliant execution",
+        description: "Perform repairs meeting commercial building codes, municipal standards, and OSHA safety guidelines.",
+      },
+      {
+        title: "Verification and sign-off",
+        description: "Test system under load and provide documentation for maintenance records.",
+      },
+    ],
+    localTitle: "Commercial Plumbing Across the Greater Houston Metro",
+    localText:
+      "From retail storefronts along Westheimer to commercial offices and industrial facilities across Harris and Fort Bend counties, commercial plumbing demands robust materials and prompt response times.",
+    costTitle: "Commercial Plumbing Pricing Overview",
+    costText:
+      "Commercial plumbing costs reflect system scale, specialized commercial components, after-hours requirements, and adherence to municipal commercial plumbing codes.",
+    costFactors: [
+      "Commercial system scale and pipe diameters",
+      "Specialized fixtures (flushometers, grease interceptors, commercial boilers)",
+      "Scheduling requirements (after-hours or weekend service to avoid disruption)",
+      "Permitting, code compliance, and backflow testing needs",
+    ],
+    faqs: [
+      {
+        question: "What types of commercial properties are served?",
+        answer:
+          "Independent commercial plumbing contractors service office buildings, retail centers, restaurants, multi-family properties, warehouses, and medical clinics.",
+      },
+      {
+        question: "Do commercial plumbers handle backflow testing?",
+        answer:
+          "Yes. Certified commercial plumbers perform annual backflow prevention assembly testing and submit compliance reports to local water authorities.",
+      },
+      {
+        question: "How does commercial plumbing differ from residential?",
+        answer:
+          "Commercial plumbing involves higher water volumes, larger pipe dimensions, strict code requirements, specialized fixtures like commercial flush valves, and stringent health regulations.",
+      },
+    ],
+  },
+  "residential-plumbing": {
+    intro:
+      "Piperesque connects Greater Houston homeowners with independent, licensed residential plumbing contractors for comprehensive repairs, upgrades, fixture installations, and maintenance.",
+    urgencyTitle: "Complete Residential Plumbing Care",
+    urgencyText:
+      "From minor fixture updates to whole-home plumbing evaluations, keeping your residential plumbing in good repair protects your home investment and ensures dependable daily comfort.",
+    problemsTitle: "Common Home Plumbing Needs in Houston",
+    problems: [
+      "Whole-home water pressure fluctuations or sudden drops",
+      "Noisy pipes, water hammer vibrations, or expansion sounds",
+      "Aging supply lines needing evaluation or partial repiping",
+      "Appliance hookups for dishwashers, ice makers, and washing machines",
+      "Outdoor hose bibb leaks and freeze damage repairs",
+      "Water filtration and water softener system installations",
+    ],
+    processTitle: "Residential Plumbing Consultation & Repair",
+    process: [
+      {
+        title: "Home plumbing evaluation",
+        description: "Assess the affected plumbing fixtures, piping, and water pressure levels.",
+      },
+      {
+        title: "Transparent explanation",
+        description: "Review findings and discuss practical repair or maintenance options suited to your home.",
+      },
+      {
+        title: "Quality workmanship",
+        description: "Complete repairs using professional-grade tools and industry-approved plumbing materials.",
+      },
+      {
+        title: "Clean-up and testing",
+        description: "Clean the work area and thoroughly test water flow and drainage.",
+      },
+    ],
+    localTitle: "Residential Plumbing Across Houston Neighborhoods",
+    localText:
+      "Whether you live in an established neighborhood with mature landscaping and cast iron pipes or a newer suburban build with modern PEX plumbing, residential plumbing contractors understand local regional requirements.",
+    costTitle: "Residential Plumbing Cost Considerations",
+    costText:
+      "Residential plumbing pricing varies based on the nature of the task, required materials, diagnostic time, and the complexity of accessing plumbing lines in walls, attics, or foundations.",
+    costFactors: [
+      "Type of plumbing service (repair, maintenance, new fixture install)",
+      "Parts and materials (fittings, valves, piping, fixtures)",
+      "Accessibility of pipes in crawl spaces, attics, or behind walls",
+      "Scope of work and estimated labor time",
+    ],
+    faqs: [
+      {
+        question: "How often should a home plumbing system be inspected?",
+        answer:
+          "Having a professional plumbing inspection every 1 to 2 years can catch minor leaks, corrosion, water heater sediment, and drain restrictions before they develop into major emergencies.",
+      },
+      {
+        question: "What should I do if my home water pressure suddenly drops?",
+        answer:
+          "Check multiple faucets to see if the issue is isolated or whole-home. If whole-home, check the main shutoff valve and pressure reducing valve (PRV), then contact a plumber to diagnose possible main line leaks.",
+      },
+      {
+        question: "Does Piperesque directly employ the plumbers?",
+        answer:
+          "No. Piperesque is an informational directory and referral service connecting Houston homeowners with independent, locally operating third-party plumbing professionals.",
+      },
+    ],
+  },
 };
 
-
+function getFallbackContent(slug: string, serviceTitle: string, cityName: string, stateName: string): ServiceContent {
+  return {
+    intro: `Piperesque connects homeowners and property owners in ${cityName}, ${stateName} with independent plumbing professionals for ${serviceTitle.toLowerCase()} services.`,
+    urgencyTitle: `Professional ${serviceTitle} in ${cityName}`,
+    urgencyText: `Timely attention to plumbing issues prevents further property damage, water waste, and costly repairs. Connect with qualified local contractors experienced in ${serviceTitle.toLowerCase()}.`,
+    problemsTitle: `Common ${serviceTitle} Issues`,
+    problems: [
+      `Signs of wear, malfunction, or active leaks requiring inspection`,
+      `Loss of expected plumbing performance or efficiency`,
+      `Unusual sounds, odors, or drainage sluggishness`,
+      `Need for professional component replacement or code-compliant repairs`,
+    ],
+    processTitle: `${serviceTitle} Service Process`,
+    process: [
+      { title: "Initial Assessment", description: `A professional evaluates the plumbing system in your ${cityName} property.` },
+      { title: "Diagnosis", description: "The technician identifies the root cause and explains repair or replacement options." },
+      { title: "Service Delivery", description: "Repairs are performed using appropriate tools and quality fittings." },
+      { title: "Testing & Verification", description: "The system is thoroughly tested under normal pressure to confirm proper operation." },
+    ],
+    localTitle: `${serviceTitle} in ${cityName}, ${stateName}`,
+    localText: `Residential and commercial properties across ${cityName} have diverse plumbing configurations. Local plumbing providers have the right diagnostic equipment and parts to service local homes.`,
+    costTitle: `${serviceTitle} Cost in ${cityName}`,
+    costText: `Costs depend on problem severity, parts required, accessibility, and labor time. Contact a local provider for an accurate quote.`,
+    costFactors: [
+      "Extent of required repair or replacement",
+      "Cost of replacement parts, pipes, or fixtures",
+      "Accessibility of the plumbing installation",
+      "Standard vs. emergency or after-hours service",
+    ],
+    faqs: [
+      {
+        question: `How do I schedule ${serviceTitle.toLowerCase()} in ${cityName}?`,
+        answer: `Call Piperesque at (877) 364-0861 to be connected with an independent plumbing professional servicing ${cityName}.`,
+      },
+      {
+        question: `How quickly can a plumber arrive in ${cityName}?`,
+        answer: `Response times depend on independent provider availability, call volume, and location within ${cityName}.`,
+      },
+      {
+        question: `Does Piperesque perform the plumbing repairs?`,
+        answer: `No. Piperesque is an informational directory and referral service connecting homeowners with independent third-party plumbing professionals.`,
+      },
+    ],
+  };
+}
 
 export default async function LocationServicePage({ params }: Props) {
-
   const { location, service } = await params;
 
-
-
   const city = locations.find((item) => item.slug === location);
-
   const plumbing = services.find((item) => item.slug === service);
 
-
-
   if (!city || !plumbing) {
-
     notFound();
-
   }
 
-
-
-  const content = serviceContent[plumbing.slug];
-
-
-
-  if (!content) {
-
-    notFound();
-
-  }
-
-
+  const content = serviceContent[plumbing.slug] || getFallbackContent(plumbing.slug, plumbing.shortTitle, city.city, city.stateCode);
 
   const cityName = city.city;
-
   const stateName = city.stateCode;
-
   const serviceName = plumbing.shortTitle;
 
-
-
   const canonical =
-
     `${baseUrl}/location/${city.slug}/${plumbing.slug}`;
 
-
-
   const breadcrumbItems = [
-
     {
-
       name: "Home",
-
       url: baseUrl,
-
     },
-
     {
-
       name: cityName,
-
-      url: `${baseUrl}/location/${city.slug}`,
-
+      url: `${baseUrl}/service-areas/${city.slug}`,
     },
-
     {
-
       name: serviceName,
-
       url: canonical,
-
     },
-
   ];
 
-
-
   const serviceSchema = {
-
     "@context": "https://schema.org",
-
     "@type": "Service",
-
     name: `${serviceName} in ${cityName}, ${stateName}`,
-
     serviceType: serviceName,
-
     description: content.intro,
-
     url: canonical,
-
     areaServed: {
-
       "@type": "City",
-
       name: cityName,
-
       addressRegion: stateName,
-
       addressCountry: "US",
-
     },
-
   };
 
-    return (
-
+  return (
     <>
-
       <Navbar />
 
-
-
       <main>
-
         {/* Breadcrumb */}
-
         <nav
-
           aria-label="Breadcrumb"
-
           className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8"
-
         >
-
           <ol className="flex flex-wrap items-center gap-2 text-sm text-gray-600">
-
             <li>
-
               <Link
-
                 href="/"
-
                 className="transition-colors hover:text-gray-900"
-
               >
-
                 Home
-
               </Link>
-
             </li>
-
-
 
             <li aria-hidden="true">/</li>
 
-
-
             <li>
-
               <Link
-
-                href={`/location/${city.slug}`}
-
+                href={`/service-areas/${city.slug}`}
                 className="transition-colors hover:text-gray-900"
-
               >
-
                 {cityName}
-
               </Link>
-
             </li>
 
 
@@ -1902,27 +2179,7 @@ export async function generateMetadata({
 
 
 
-  const content = serviceContent[plumbing.slug];
 
-
-
-  if (!content) {
-
-    return {
-
-      title: `${plumbing.shortTitle} in ${city.city} | Piperesque`,
-
-      robots: {
-
-        index: false,
-
-        follow: false,
-
-      },
-
-    };
-
-  }
 
 
 

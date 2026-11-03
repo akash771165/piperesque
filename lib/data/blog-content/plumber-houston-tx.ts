@@ -9,7 +9,7 @@ export const plumberHoustonTxGuide = {
 
   category: "General Plumbing",
 
-  image: "/images/service-1.png",
+  image: "/images/service-1.webp",
 
   author: "Piperesque Editorial Team",
 

@@ -41,9 +41,10 @@ export default function ContactPage() {
       <section className="relative overflow-hidden bg-slate-950 py-24 text-white md:py-28">
         <Image
           src="/images/contact.webp"
-          alt="Contact Piperesque"
+          alt="Contact Piperesque plumbing referral team in Houston, TX"
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-25"
         />
 

@@ -17,9 +17,10 @@ export default function CTA() {
       {/* Background */}
       <Image
         src="/images/emergency.webp"
-        alt="Emergency plumbing assistance Houston"
+        alt=""
         fill
-        quality={80}
+        loading="lazy"
+        quality={75}
         sizes="100vw"
         className="object-cover"
       />
@@ -103,8 +104,9 @@ export default function CTA() {
             <div className="relative h-[380px] lg:h-[620px]">
               <Image
                 src="/images/emergency.webp"
-                alt="Houston plumbing service provider"
+                alt="Independent plumbing specialist providing residential service in Houston, TX"
                 fill
+                loading="lazy"
                 quality={80}
                 sizes="(max-width:1024px)100vw,50vw"
                 className="object-cover"

@@ -11,7 +11,7 @@ export const twentyFourHourPlumberHoustonTx: BlogContent = {
 
   category: "Emergency Plumbing",
 
-  image: "/images/service-1.png",
+  image: "/images/service-1.webp",
 
   author: "Piperesque Editorial Team",
 

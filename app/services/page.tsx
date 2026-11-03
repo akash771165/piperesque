@@ -68,6 +68,7 @@ export default function ServicesPage() {
           alt="Plumbing services in Greater Houston"
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-25"
         />
 
@@ -145,8 +146,10 @@ export default function ServicesPage() {
                   <div className="relative h-64 overflow-hidden bg-slate-100">
                     <Image
                       src={service.image}
-                      alt={service.title}
+                      alt={`${service.shortTitle} plumbing services in Houston, TX`}
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      loading="lazy"
                       className="object-cover transition duration-300 group-hover:scale-105"
                     />
                   </div>

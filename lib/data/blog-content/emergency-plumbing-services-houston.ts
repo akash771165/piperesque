@@ -15,7 +15,7 @@ export const emergencyPlumbingServicesHouston: BlogContent = {
     "Emergency Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",

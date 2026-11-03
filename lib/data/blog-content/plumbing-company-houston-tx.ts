@@ -12,7 +12,7 @@ export const plumbingCompanyHoustonTx: BlogContent = {
 
   category: "Plumbing Services",
 
-  image: "/images/service-1.png",
+  image: "/images/service-1.webp",
 
   author: "Piperesque Editorial Team",
 

@@ -342,8 +342,8 @@ const serviceContent: Record<string, ServiceContent> = {
       "Water heater diagnosis helps determine whether a failing system needs a component repair, maintenance, or replacement."
   },
 
-  "burst-pipe-repair": {
-    heroBadge: "Burst pipe information",
+  "pipe-repair": {
+    heroBadge: "Pipe repair information",
     intro: [
       "A burst or severely damaged pipe can release a large amount of water into a property. Water may enter walls, ceilings, cabinets, floors, or other areas and can cause additional damage if the flow is not controlled.",
       "If a pipe is actively leaking, shutting off the water supply when it is safe to do so can help limit additional water loss. The next step is identifying the failed section and determining the appropriate repair.",
@@ -364,7 +364,7 @@ const serviceContent: Record<string, ServiceContent> = {
       "Restore water service and test the repaired plumbing system."
     ],
     pricing: [
-      { label: "Burst pipe diagnosis", value: "Varies by provider and access" },
+      { label: "Pipe inspection & diagnosis", value: "Varies by provider and access" },
       { label: "Localized pipe repair", value: "Varies by pipe and damage" },
       { label: "Pipe section replacement", value: "Varies by material and location" },
       { label: "Main line repair", value: "Varies by system and access" },
@@ -372,33 +372,195 @@ const serviceContent: Record<string, ServiceContent> = {
     ],
     faqs: [
       {
-        question: "What should I do if a pipe bursts?",
+        question: "What should I do if a water pipe begins leaking or bursts?",
         answer:
-          "If it is safe, shut off the main or affected water supply, move valuables away from the water, and contact a plumbing professional promptly."
+          "If it is safe, shut off the main or fixture water supply valve, move furniture away from standing water, and contact a plumbing professional promptly."
       },
       {
-        question: "Can a burst pipe be repaired instead of replaced?",
+        question: "Can a leaking pipe be repaired without replacing the whole line?",
         answer:
-          "Depending on the location and condition of the pipe, a localized repair may be possible. A professional should determine the appropriate method."
+          "Depending on the location, age, and condition of the piping, a localized section replacement or coupling repair is often possible."
       },
       {
-        question: "What causes pipes to fail?",
+        question: "What causes residential pipes to fail?",
         answer:
-          "Pipe failures can result from age, corrosion, physical damage, pressure problems, freezing conditions, or deterioration of plumbing components."
-      },
-      {
-        question: "Can a burst pipe cause hidden damage?",
-        answer:
-          "Yes. Water can enter walls, ceilings, floors, and other areas that may not be immediately visible."
-      },
-      {
-        question: "Should I keep using the plumbing after a pipe bursts?",
-        answer:
-          "If there is active leakage, avoid using the affected plumbing and shut off the water supply when safe until the problem can be assessed."
+          "Pipe failures can result from age, shifting soil, high water pressure, corrosion, freezing temperatures, or wear on fittings."
       }
     ],
     overview:
-      "A burst pipe requires prompt attention because uncontrolled water flow can cause additional property damage. Fast isolation and accurate diagnosis help determine the appropriate repair."
+      "Pipe repair requires prompt attention to prevent structural moisture damage. Fast isolation and accurate diagnosis help determine the appropriate repair approach."
+  },
+
+  "toilet-repair": {
+    heroBadge: "Toilet repair information",
+    intro: [
+      "Toilet malfunctions can disrupt an entire household. Common issues range from simple flapper leaks and running water to severe clogs, bowl cracks, and recurring backups.",
+      "Prompt inspection of toilet leaks is crucial to prevent water damage to subflooring and ceilings below. A professional plumber can determine whether a rebuild, unclogging, or complete fixture replacement is needed.",
+      "Piperesque connects Houston homeowners with independent plumbing specialists who inspect, rebuild, or install residential toilets quickly."
+    ],
+    warningSigns: [
+      "Toilet continues running long after flushing.",
+      "Water pools around the base or toilet bolts on the bathroom floor.",
+      "Weak, incomplete, or phantom flushing occurs.",
+      "Frequent clogs require repeated plunging.",
+      "Gurgling sounds come from the toilet when sinks or tubs drain."
+    ],
+    repairProcess: [
+      "Inspect the tank internals, flapper, fill valve, and flush mechanism.",
+      "Check wax ring seal and toilet flange connection for water leaks.",
+      "Clear any downstream drain blockages using an auger if needed.",
+      "Replace worn components or reset fixture on a new wax seal.",
+      "Test flush volume, bowl fill, and water shutoff."
+    ],
+    pricing: [
+      { label: "Toilet diagnosis & clearing", value: "Determined directly by provider" },
+      { label: "Component rebuild (valve/flapper)", value: "Varies by parts and fixture" },
+      { label: "Wax ring reset & reseal", value: "Varies by subfloor condition" },
+      { label: "Toilet fixture replacement", value: "Varies by fixture model and labor" }
+    ],
+    faqs: [
+      {
+        question: "Why is water leaking around the base of my toilet?",
+        answer:
+          "A leak at the base usually indicates a failed wax ring seal or a cracked toilet flange, requiring the toilet to be lifted, inspected, and resealed."
+      },
+      {
+        question: "Why does my toilet keep running continuously?",
+        answer:
+          "Continuous running is typically caused by a faulty flapper, improper float height, or a malfunctioning fill valve that wastes significant water."
+      }
+    ],
+    overview:
+      "Toilet repair addresses running water, clogs, flush failures, and base leaks to restore proper bathroom sanitation and prevent flooring damage."
+  },
+
+  "faucet-repair": {
+    heroBadge: "Faucet repair information",
+    intro: [
+      "A dripping or leaking faucet wastes gallons of water every day and can lead to water stains, cabinet damage, and elevated utility bills.",
+      "Whether in the kitchen, bathroom, or utility room, faucet problems often stem from worn cartridges, degraded O-rings, mineral buildup, or loose supply line fittings.",
+      "Piperesque helps homeowners connect with licensed plumbing professionals who can rebuild fixture valves or install modern, efficient replacements."
+    ],
+    warningSigns: [
+      "Constant dripping from the spout after the handle is turned off.",
+      "Water leaking around the base of the faucet or handle onto the countertop.",
+      "Low water pressure specifically from one faucet.",
+      "Squeaking, grinding, or stiff handles when turning water on or off.",
+      "Moisture or water droplets inside the under-sink vanity cabinet."
+    ],
+    repairProcess: [
+      "Shut off under-sink angle stop supply valves.",
+      "Disassemble faucet handle and remove stem cartridge or ball assembly.",
+      "Inspect valve seat, springs, and O-ring gaskets for wear.",
+      "Replace cartridge or worn internal seals with manufacturer-matching parts.",
+      "Reassemble, restore water pressure, and check for leaks under pressure."
+    ],
+    pricing: [
+      { label: "Faucet inspection & diagnosis", value: "Determined directly by provider" },
+      { label: "Cartridge or seal replacement", value: "Varies by faucet brand and model" },
+      { label: "Under-sink supply line repair", value: "Varies by valve access" },
+      { label: "New faucet installation", value: "Varies by fixture style and complexity" }
+    ],
+    faqs: [
+      {
+        question: "Should I repair or replace a leaking faucet?",
+        answer:
+          "If the fixture is of good quality and parts are readily available, a cartridge replacement is cost-effective. Older or heavily corroded faucets are often better replaced."
+      },
+      {
+        question: "What causes low water pressure at just one faucet?",
+        answer:
+          "A clogged aerator screen due to mineral sediment is the most common cause, followed by a partially blocked cartridge or pinched supply hose."
+      }
+    ],
+    overview:
+      "Faucet repair fixes dripping fixtures, faulty cartridges, handle leaks, and under-sink connection issues to eliminate water waste."
+  },
+
+  "commercial-plumbing": {
+    heroBadge: "Commercial plumbing information",
+    intro: [
+      "Commercial plumbing systems handle much higher usage volumes and operate under strict municipal building codes and sanitation standards.",
+      "Businesses, restaurants, offices, retail stores, and commercial facilities in Greater Houston require prompt diagnostic and repair solutions to prevent operational downtime.",
+      "Piperesque connects commercial property managers and business owners with independent plumbing professionals equipped for high-capacity systems."
+    ],
+    warningSigns: [
+      "Multiple commercial restroom fixtures backing up simultaneously.",
+      "Persistent foul sewer odors in public or employee areas.",
+      "Commercial water heater failure disrupting business operations.",
+      "Visible leaks in commercial riser piping or utility rooms.",
+      "Grease trap overflow or slow-draining kitchen lines."
+    ],
+    repairProcess: [
+      "Evaluate commercial blueprints and isolate affected branch lines.",
+      "Deploy commercial diagnostic tools such as high-resolution sewer cameras.",
+      "Perform high-capacity hydro jetting, pipe relining, or fixture repair.",
+      "Ensure compliance with Texas plumbing codes and local municipal regulations.",
+      "Verify system functionality to minimize business disruption."
+    ],
+    pricing: [
+      { label: "Commercial system evaluation", value: "Determined directly by provider" },
+      { label: "High-capacity hydro jetting", value: "Varies by line length and access" },
+      { label: "Commercial water heater service", value: "Varies by unit size and system" },
+      { label: "Facility maintenance & repair", value: "Custom quote from provider" }
+    ],
+    faqs: [
+      {
+        question: "Can commercial plumbing inquiries be made outside standard business hours?",
+        answer:
+          "Yes. Inquiries can be submitted anytime via phone to connect with independent providers who service commercial facilities."
+      },
+      {
+        question: "What types of commercial properties can receive assistance?",
+        answer:
+          "Independent contractors handle restaurants, retail storefronts, office buildings, warehouses, multi-family units, and medical facilities."
+      }
+    ],
+    overview:
+      "Commercial plumbing covers high-capacity drainage, grease interceptors, commercial water heating, backflow systems, and code-compliant repairs."
+  },
+
+  "residential-plumbing": {
+    heroBadge: "Residential plumbing information",
+    intro: [
+      "Residential plumbing systems keep clean water flowing into your home and wastewater safely draining away. When components fail, swift attention protects your home's foundation and walls.",
+      "From bathroom fixture upgrades to whole-home repiping and valve repairs, residential plumbing encompasses all domestic supply, drainage, and venting systems.",
+      "Piperesque connects Houston homeowners with independent licensed plumbing providers for routine repairs, diagnostic evaluations, and urgent repairs."
+    ],
+    warningSigns: [
+      "Discolored water coming from household faucets.",
+      "Gurgling sounds in walls or fixtures when draining.",
+      "Damp spots on carpets, drywall, or near baseboards.",
+      "Sudden spikes in monthly municipal water bills.",
+      "Aging galvanized or deteriorating copper supply lines."
+    ],
+    repairProcess: [
+      "Thorough residential plumbing inspection of supply lines, drains, and fixtures.",
+      "Identification of root cause, whether localized wear or system-wide deterioration.",
+      "Discussion of repair versus replacement options with transparent pricing.",
+      "Quality execution of plumbing repair using durable, code-approved materials.",
+      "Final pressure test and water flow verification."
+    ],
+    pricing: [
+      { label: "In-home plumbing diagnosis", value: "Determined directly by provider" },
+      { label: "General fixture & pipe repairs", value: "Varies by scope and materials" },
+      { label: "Pressure regulator repair", value: "Varies by valve location" },
+      { label: "Whole-home inspection", value: "Provided directly by contractor" }
+    ],
+    faqs: [
+      {
+        question: "What are the most common residential plumbing issues in Houston?",
+        answer:
+          "Houston's shifting clay soils and hard water often contribute to slab leaks, pipe corrosion, clogged drains, and water heater sediment buildup."
+      },
+      {
+        question: "How do I choose between pipe repair and whole-house repiping?",
+        answer:
+          "Isolated leaks in newer pipes warrant simple repairs. Multiple leaks or deteriorating galvanized/polybutylene pipes are generally best addressed with PEX repiping."
+      }
+    ],
+    overview:
+      "Residential plumbing services cover home water supply, drainage, fixtures, valves, and water heaters throughout the Houston metropolitan area."
   },
 };
 export async function generateStaticParams() {
@@ -454,11 +616,32 @@ export default async function ServicePage({ params }: Props) {
     notFound();
   }
 
-  const content = serviceContent[service.slug];
-
-  if (!content) {
-    notFound();
-  }
+  const content = serviceContent[service.slug] ?? {
+    heroBadge: `${service.shortTitle} information`,
+    intro: [service.description],
+    warningSigns: [
+      "Water pressure irregularities or visible leaks",
+      "Unusual sounds or moisture near fixtures",
+      "Slow drainage or system malfunction"
+    ],
+    repairProcess: [
+      "Contact an independent plumbing professional",
+      "Technician inspects the affected plumbing system",
+      "Transparent diagnosis and options are provided",
+      "Repairs are completed and thoroughly tested"
+    ],
+    pricing: [
+      { label: "Inspection & Diagnosis", value: "Determined directly by provider" },
+      { label: "Repair Work", value: "Varies by scope and materials" }
+    ],
+    faqs: [
+      {
+        question: `How are ${service.shortTitle.toLowerCase()} costs determined?`,
+        answer: "Costs are determined directly by the independent contractor based on parts, labor, and fixture accessibility."
+      }
+    ],
+    overview: service.description
+  };
 
   const faqItems = content.faqs;
 

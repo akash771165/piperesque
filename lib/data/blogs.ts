@@ -27,7 +27,7 @@ export const blogs: BlogPost[] = [
     "Emergency Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -68,7 +68,7 @@ export const blogs: BlogPost[] = [
     "Emergency Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -109,7 +109,7 @@ export const blogs: BlogPost[] = [
     "Emergency Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -149,7 +149,7 @@ export const blogs: BlogPost[] = [
     "Emergency Plumbing",
 
   image:
-    "/images/blog-burst-pipe.jpg",
+    "/images/blog-burst-pipe.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -190,7 +190,7 @@ export const blogs: BlogPost[] = [
     "Leak Detection",
 
   image:
-    "/images/service-2.png",
+    "/images/service-2.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -228,7 +228,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Services",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -269,7 +269,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Services",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -310,7 +310,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Services",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -350,7 +350,7 @@ export const blogs: BlogPost[] = [
     "Local Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -390,7 +390,7 @@ export const blogs: BlogPost[] = [
     "Emergency Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -429,7 +429,7 @@ export const blogs: BlogPost[] = [
     "Residential Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -466,7 +466,7 @@ export const blogs: BlogPost[] = [
     "Emergency Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -506,7 +506,7 @@ export const blogs: BlogPost[] = [
     "Emergency Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -545,7 +545,7 @@ export const blogs: BlogPost[] = [
     "Leak Repair",
 
   image:
-    "/images/service-2.png",
+    "/images/service-2.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -585,7 +585,7 @@ export const blogs: BlogPost[] = [
     "Drain Cleaning",
 
   image:
-    "/images/service-3.png",
+    "/images/service-3.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -625,7 +625,7 @@ export const blogs: BlogPost[] = [
     "Sewer Services",
 
   image:
-    "/images/service-4.png",
+    "/images/service-4.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -665,7 +665,7 @@ export const blogs: BlogPost[] = [
     "Water Heater",
 
   image:
-    "/images/service-5.png",
+    "/images/service-5.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -704,7 +704,7 @@ export const blogs: BlogPost[] = [
     "Pipe Repair",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -741,7 +741,7 @@ export const blogs: BlogPost[] = [
     "Repiping Services",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -781,7 +781,7 @@ export const blogs: BlogPost[] = [
     "Leak Repair",
 
   image:
-    "/images/service-2.png",
+    "/images/service-2.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -820,7 +820,7 @@ export const blogs: BlogPost[] = [
     "Water Line Services",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -859,7 +859,7 @@ export const blogs: BlogPost[] = [
     "Commercial Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -898,7 +898,7 @@ export const blogs: BlogPost[] = [
     "Gas Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -937,7 +937,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Maintenance",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -976,7 +976,7 @@ export const blogs: BlogPost[] = [
     "Drain Services",
 
   image:
-    "/images/service-3.png",
+    "/images/service-3.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1013,7 +1013,7 @@ export const blogs: BlogPost[] = [
     "Water Heater Services",
 
   image:
-    "/images/service-5.png",
+    "/images/service-5.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1052,7 +1052,7 @@ export const blogs: BlogPost[] = [
     "Sewer Services",
 
   image:
-    "/images/service-4.png",
+    "/images/service-4.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1091,7 +1091,7 @@ export const blogs: BlogPost[] = [
     "Drain Cleaning",
 
   image:
-    "/images/service-3.png",
+    "/images/service-3.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1130,7 +1130,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Repair",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1169,7 +1169,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Repair",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1208,7 +1208,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Repair",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1247,7 +1247,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Guide",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1284,7 +1284,7 @@ export const blogs: BlogPost[] = [
     "Emergency Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1321,7 +1321,7 @@ export const blogs: BlogPost[] = [
     "Water Line Services",
 
   image:
-    "/images/service-2.png",
+    "/images/service-2.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1360,7 +1360,7 @@ export const blogs: BlogPost[] = [
     "Slab Leak Repair",
 
   image:
-    "/images/service-4.png",
+    "/images/service-4.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1401,7 +1401,7 @@ export const blogs: BlogPost[] = [
     "Sewer Services",
 
   image:
-    "/images/service-4.png",
+    "/images/service-4.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1443,7 +1443,7 @@ export const blogs: BlogPost[] = [
     "Local Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1483,7 +1483,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Repair",
 
   image:
-    "/images/service-2.png",
+    "/images/service-2.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1521,7 +1521,7 @@ export const blogs: BlogPost[] = [
     "Sewer Services",
 
   image:
-    "/images/service-5.png",
+    "/images/service-5.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1560,7 +1560,7 @@ export const blogs: BlogPost[] = [
     "Water Heater Services",
 
   image:
-    "/images/service-6.png",
+    "/images/service-6.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1599,7 +1599,7 @@ export const blogs: BlogPost[] = [
     "Commercial Plumbing",
 
   image:
-    "/images/service-3.png",
+    "/images/service-3.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1638,7 +1638,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Cost Guide",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1677,7 +1677,7 @@ export const blogs: BlogPost[] = [
     "Pipe Repair",
 
   image:
-    "/images/blog-burst-pipe.jpg",
+    "/images/blog-burst-pipe.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1716,7 +1716,7 @@ export const blogs: BlogPost[] = [
     "Water Damage Repair",
 
   image:
-    "/images/service-4.png",
+    "/images/service-4.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1754,7 +1754,7 @@ export const blogs: BlogPost[] = [
     "Emergency Plumbing",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1793,7 +1793,7 @@ export const blogs: BlogPost[] = [
     "Residential Plumbing",
 
   image:
-    "/images/service-3.png",
+    "/images/service-3.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1832,7 +1832,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Services",
 
   image:
-    "/images/service-5.png",
+    "/images/service-5.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1869,7 +1869,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Cost Guide",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1908,7 +1908,7 @@ export const blogs: BlogPost[] = [
     "Drain Cleaning",
 
   image:
-    "/images/service-3.png",
+    "/images/service-3.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1947,7 +1947,7 @@ export const blogs: BlogPost[] = [
     "Water Heater Cost",
 
   image:
-    "/images/service-6.png",
+    "/images/service-6.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -1986,7 +1986,7 @@ export const blogs: BlogPost[] = [
     "Sewer Cost Guide",
 
   image:
-    "/images/service-4.png",
+    "/images/service-4.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2025,7 +2025,7 @@ export const blogs: BlogPost[] = [
     "Pipe Repair Cost",
 
   image:
-    "/images/blog-burst-pipe.jpg",
+    "/images/blog-burst-pipe.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2064,7 +2064,7 @@ export const blogs: BlogPost[] = [
     "Slab Leak Cost",
 
   image:
-    "/images/service-4.png",
+    "/images/service-4.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2104,7 +2104,7 @@ export const blogs: BlogPost[] = [
     "Service Area",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2143,7 +2143,7 @@ export const blogs: BlogPost[] = [
     "Service Area",
 
   image:
-    "/images/service-2.png",
+    "/images/service-2.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2182,7 +2182,7 @@ export const blogs: BlogPost[] = [
     "Service Area",
 
   image:
-    "/images/service-3.png",
+    "/images/service-3.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2221,7 +2221,7 @@ export const blogs: BlogPost[] = [
     "Service Area",
 
   image:
-    "/images/service-4.png",
+    "/images/service-4.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2260,7 +2260,7 @@ export const blogs: BlogPost[] = [
     "Service Area",
 
   image:
-    "/images/service-5.png",
+    "/images/service-5.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2299,7 +2299,7 @@ export const blogs: BlogPost[] = [
     "Service Area",
 
   image:
-    "/images/service-6.png",
+    "/images/service-6.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2338,7 +2338,7 @@ export const blogs: BlogPost[] = [
     "Service Area",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2377,7 +2377,7 @@ export const blogs: BlogPost[] = [
     "Service Area",
 
   image:
-    "/images/service-2.png",
+    "/images/service-2.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2414,7 +2414,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Guide",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2453,7 +2453,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Education",
 
   image:
-    "/images/service-2.png",
+    "/images/service-2.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2492,7 +2492,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Guide",
 
   image:
-    "/images/service-3.png",
+    "/images/service-3.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2531,7 +2531,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Education",
 
   image:
-    "/images/service-4.png",
+    "/images/service-4.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2569,7 +2569,7 @@ export const blogs: BlogPost[] = [
     "Plumbing Guide",
 
   image:
-    "/images/service-5.png",
+    "/images/service-5.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2607,7 +2607,7 @@ export const blogs: BlogPost[] = [
     "Home Plumbing Tips",
 
   image:
-    "/images/service-6.png",
+    "/images/service-6.webp",
 
     author:
     "Piperesque Editorial Team",
@@ -2645,7 +2645,7 @@ export const blogs: BlogPost[] = [
     "Seasonal Plumbing",
 
   image:
-    "/images/blog-burst-pipe.jpg",
+    "/images/blog-burst-pipe.webp",
 
   author:
     "Piperesque Editorial Team",
@@ -2683,7 +2683,7 @@ export const blogs: BlogPost[] = [
     "Maintenance Guide",
 
   image:
-    "/images/service-1.png",
+    "/images/service-1.webp",
 
   author:
     "Piperesque Editorial Team",

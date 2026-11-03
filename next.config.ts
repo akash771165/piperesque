@@ -55,7 +55,7 @@ const nextConfig: NextConfig = {
       { source: "/blog/toilet-repair-houston-tx", destination: "/services/emergency-plumbing", permanent: true },
       { source: "/blog/shower-repair-houston-tx", destination: "/services/emergency-plumbing", permanent: true },
       { source: "/blog/bathtub-repair-houston-tx", destination: "/services/emergency-plumbing", permanent: true },
-      { source: "/blog/gas-line-repair-houston-tx", destination: "/services/burst-pipe-repair", permanent: true },
+      { source: "/blog/gas-line-repair-houston-tx", destination: "/services/pipe-repair", permanent: true },
       { source: "/blog/commercial-plumbing-houston-tx", destination: "/about", permanent: true },
       { source: "/blog/emergency-drain-cleaning-houston-tx", destination: "/blog/emergency-drain-cleaning-houston", permanent: true },
 

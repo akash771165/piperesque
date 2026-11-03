@@ -88,8 +88,9 @@ export default function AboutPage() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-slate-200 shadow-xl bg-slate-100">
             <Image
               src="/images/plumber-1.webp"
-              alt="Plumbing professional inspecting pipes"
+              alt="Independent licensed plumbing professional inspecting residential pipework"
               fill
+              loading="lazy"
               sizes="(max-width:1024px)100vw,50vw"
               className="object-cover"
             />

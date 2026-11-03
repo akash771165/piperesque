@@ -40,9 +40,10 @@ export default function BlogPage() {
 
         <Image
           src="/images/blog.webp"
-          alt="Piperesque Plumbing Blog"
+          alt="Piperesque Plumbing Guide and Emergency Resources"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
 
