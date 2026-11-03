@@ -145,7 +145,7 @@ export const sewerCleanoutInstallationHouston: BlogContent = {
     {
       question: "Do you install sewer cleanouts throughout Houston?",
       answer:
-        "Yes. We provide professional sewer cleanout installation, sewer inspections, drain cleaning, and sewer line services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional sewer cleanout installation, sewer inspections, drain cleaning, and sewer line services throughout the Houston area."
     }
   ]
 };

@@ -145,7 +145,7 @@ export const waterMeterLeakHouston: BlogContent = {
     {
       question: "Do you provide water meter leak repair throughout Houston?",
       answer:
-        "Yes. We provide professional water meter leak detection, underground water line repair, and emergency plumbing services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional water meter leak detection, underground water line repair, and emergency plumbing services throughout the Houston area."
     }
   ]
 };

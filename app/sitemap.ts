@@ -1,40 +1,37 @@
-
 import type { MetadataRoute } from "next";
 
 import { getAllBlogData } from "@/lib/blog/get-all-blog-data";
 import { siteConfig } from "@/lib/config/site";
+import { services } from "@/lib/data/services";
+import { cities } from "@/lib/data/cities";
+import { locations } from "@/lib/data/locations";
 
 const baseUrl = siteConfig.website.replace(/\/+$/, "");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogs = getAllBlogData();
 
-  /*
-   * =========================================================
-   * STATIC PAGES
-   * =========================================================
-   */
-
+  // 1. Static Core Pages
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       changeFrequency: "weekly",
-      priority: 1,
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/services`,
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/service-areas`,
-      changeFrequency: "monthly",
-      priority: 0.85,
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/blog`,
       changeFrequency: "weekly",
-      priority: 0.85,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/about`,
@@ -44,108 +41,71 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/contact`,
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/privacy-policy`,
       changeFrequency: "yearly",
-      priority: 0.2,
+      priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
       changeFrequency: "yearly",
-      priority: 0.2,
+      priority: 0.3,
     },
   ];
 
-  /*
-   * =========================================================
-   * SERVICE PAGES
-   * =========================================================
-   */
+  // 2. Core Plumbing Service Pages (All 10 services)
+  const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
+    url: `${baseUrl}/services/${service.slug}`,
+    changeFrequency: "monthly",
+    priority: service.slug === "emergency-plumbing" ? 0.95 : 0.85,
+  }));
 
-  const servicePages: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/services/emergency-plumbing`,
-      changeFrequency: "monthly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/services/residential-plumbing`,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/services/sewer-line-repair`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+  // 3. Service Area City Pages (All 10 cities)
+  const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${baseUrl}/service-areas/${city.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
+  // 4. Location + Service Pages (10 locations x 5 core services = 50 pages)
+  const supportedLocationServices = [
+    "emergency-plumbing",
+    "sewer-line-repair",
+    "drain-cleaning",
+    "leak-detection",
+    "water-heater-repair",
   ];
 
-  /*
-   * =========================================================
-   * HOUSTON LOCATION + SERVICE PAGES
-   * =========================================================
-   */
+  const locationServicePages: MetadataRoute.Sitemap = [];
+  for (const loc of locations) {
+    for (const serviceSlug of supportedLocationServices) {
+      locationServicePages.push({
+        url: `${baseUrl}/location/${loc.slug}/${serviceSlug}`,
+        changeFrequency: "monthly",
+        priority: loc.slug === "houston" ? 0.9 : 0.8,
+      });
+    }
+  }
 
-  const locationServicePages: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/location/houston/emergency-plumbing`,
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/location/houston/sewer-line-repair`,
-      changeFrequency: "monthly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/location/houston/drain-cleaning`,
-      changeFrequency: "monthly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/location/houston/leak-detection`,
-      changeFrequency: "monthly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/location/houston/water-heater-repair`,
-      changeFrequency: "monthly",
-      priority: 0.95,
-    },
-  ];
-
-  /*
-   * =========================================================
-   * BLOG PAGES
-   *
-   * Use publishedAt for lastModified.
-   * =========================================================
-   */
-
+  // 5. Blog Pages with authentic lastModified timestamps
   const blogPages: MetadataRoute.Sitemap = blogs.map((blog) => {
     const publishedDate = new Date(blog.publishedAt);
-
     return {
       url: `${baseUrl}/blog/${blog.slug}`,
       ...(Number.isNaN(publishedDate.getTime())
         ? {}
         : { lastModified: publishedDate }),
       changeFrequency: "monthly",
-      priority: 0.75,
+      priority: 0.7,
     };
   });
-
-  /*
-   * =========================================================
-   * COMBINE ALL SITEMAP URLs
-   * =========================================================
-   */
 
   return [
     ...staticPages,
     ...servicePages,
+    ...cityPages,
     ...locationServicePages,
     ...blogPages,
   ];

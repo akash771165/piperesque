@@ -145,7 +145,7 @@ export const sewerLineReplacementCostHouston: BlogContent = {
     {
       question: "Do you provide sewer line replacement estimates throughout Houston?",
       answer:
-        "Yes. We provide professional sewer inspections, replacement estimates, and complete sewer line replacement services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional sewer inspections, replacement estimates, and complete sewer line replacement services throughout the Houston area."
     }
   ]
 };

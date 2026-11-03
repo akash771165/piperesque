@@ -145,7 +145,7 @@ export const trenchlessSewerRepairHouston: BlogContent = {
     {
       question: "Do you provide trenchless sewer repair throughout Houston?",
       answer:
-        "Yes. We provide professional trenchless sewer repair, sewer inspections, pipe lining, and pipe replacement services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional trenchless sewer repair, sewer inspections, pipe lining, and pipe replacement services throughout the Houston area."
     }
   ]
 };

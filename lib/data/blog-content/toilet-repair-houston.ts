@@ -140,12 +140,12 @@ export const toiletRepairHouston: BlogContent = {
     {
       question: "Do you repair clogged toilets?",
       answer:
-        "Yes. We provide professional toilet unclogging, drain cleaning, leak repairs, and complete toilet repair services throughout Houston."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional toilet unclogging, drain cleaning, leak repairs, and complete toilet repair services throughout Houston."
     },
     {
       question: "Do you offer emergency toilet repair in Houston?",
       answer:
-        "Yes. We provide emergency toilet repair services for overflowing toilets, major leaks, severe clogs, and other urgent plumbing problems."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide emergency toilet repair services for overflowing toilets, major leaks, severe clogs, and other urgent plumbing problems."
     }
   ]
 };

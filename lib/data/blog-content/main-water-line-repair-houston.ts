@@ -172,7 +172,7 @@ export const mainWaterLineRepairHouston: BlogContent = {
     {
       question: "Do you provide main water line repair in Houston?",
       answer:
-        "Yes. We provide main water line repair, replacement, leak detection, and plumbing services throughout Houston."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide main water line repair, replacement, leak detection, and plumbing services throughout Houston."
     }
   ]
 };

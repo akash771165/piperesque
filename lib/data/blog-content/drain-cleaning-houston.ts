@@ -135,7 +135,7 @@ export const drainCleaningHouston: BlogContent = {
     {
       question: "Do you clean main sewer lines?",
       answer:
-        "Yes. We provide professional cleaning for residential drain lines, main sewer lines, and underground drainage systems throughout Houston."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional cleaning for residential drain lines, main sewer lines, and underground drainage systems throughout Houston."
     },
     {
       question: "Is slow drainage a sign of a serious problem?",
@@ -145,7 +145,7 @@ export const drainCleaningHouston: BlogContent = {
     {
       question: "Do you provide emergency drain cleaning in Houston?",
       answer:
-        "Yes. We provide emergency drain cleaning services for severe blockages, sewer backups, and overflowing drains throughout Houston."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide emergency drain cleaning services for severe blockages, sewer backups, and overflowing drains throughout Houston."
     }
   ]
 };

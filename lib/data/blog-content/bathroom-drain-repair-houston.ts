@@ -145,7 +145,7 @@ export const bathroomDrainRepairHouston: BlogContent = {
     {
       question: "Do you provide bathroom drain repair throughout Houston?",
       answer:
-        "Yes. We provide professional bathroom drain repair, drain cleaning, clog removal, and plumbing services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional bathroom drain repair, drain cleaning, clog removal, and plumbing services throughout the Houston area."
     }
   ]
 };

@@ -143,9 +143,9 @@ export const sewerLineRepairHouston: BlogContent = {
         "Yes. Many localized cracks or damaged sections can be repaired without replacing the entire sewer line."
     },
     {
-      question: "Do you provide emergency sewer line repair in Houston?",
+      question: "Can PipeResque connect me with sewer repair contractors in Houston?",
       answer:
-        "Yes. We provide emergency sewer line inspection and repair services for severe blockages, sewage backups, and underground pipe damage throughout Houston."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide sewer line inspections, hydro jetting, and underground pipe repairs throughout Greater Houston."
     }
   ]
 };

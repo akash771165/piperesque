@@ -145,7 +145,7 @@ export const waterSoftenerInstallationHouston: BlogContent = {
     {
       question: "Do you install water softeners throughout Houston?",
       answer:
-        "Yes. We provide professional water softener installation, replacement, maintenance, and repair services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional water softener installation, replacement, maintenance, and repair services throughout the Houston area."
     }
   ]
 };

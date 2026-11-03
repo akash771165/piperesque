@@ -145,7 +145,7 @@ export const waterPressureLowHouseHouston: BlogContent = {
     {
       question: "Do you provide low water pressure repair services throughout Houston?",
       answer:
-        "Yes. We provide professional water pressure diagnostics, leak detection, water line repairs, pressure regulator services, and complete plumbing solutions throughout Houston."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional water pressure diagnostics, leak detection, water line repairs, pressure regulator services, and complete plumbing solutions throughout Houston."
     }
   ]
 };

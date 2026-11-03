@@ -145,7 +145,7 @@ export const kitchenDrainClogHouston: BlogContent = {
     {
       question: "Do you provide kitchen drain cleaning throughout Houston?",
       answer:
-        "Yes. We provide professional kitchen drain cleaning, clog removal, hydro jetting, and drain repair services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional kitchen drain cleaning, clog removal, hydro jetting, and drain repair services throughout the Houston area."
     }
   ]
 };

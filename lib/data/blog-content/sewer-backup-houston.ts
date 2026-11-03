@@ -140,7 +140,7 @@ export const sewerBackupHouston: BlogContent = {
     {
       question: "Do you provide emergency sewer backup service throughout Houston?",
       answer:
-        "Yes. We provide emergency sewer backup diagnosis, repair, drain cleaning, and sewer line services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide emergency sewer backup diagnosis, repair, drain cleaning, and sewer line services throughout the Houston area."
     },
     {
       question: "How quickly should I call a plumber after a sewer backup?",

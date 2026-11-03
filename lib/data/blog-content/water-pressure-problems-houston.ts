@@ -159,7 +159,7 @@ export const waterPressureProblemsHouston: BlogContent = {
     {
       question: "Do you repair water pressure problems throughout Houston?",
       answer:
-        "Yes. We provide water pressure testing, repair, leak detection, and complete plumbing services throughout Houston."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide water pressure testing, repair, leak detection, and complete plumbing services throughout Houston."
     }
   ]
 };

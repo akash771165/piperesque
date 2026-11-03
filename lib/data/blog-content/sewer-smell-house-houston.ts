@@ -145,7 +145,7 @@ export const sewerSmellHouseHouston: BlogContent = {
     {
       question: "Do you provide sewer odor diagnosis throughout Houston?",
       answer:
-        "Yes. We provide professional sewer odor diagnosis, sewer camera inspections, drain cleaning, leak detection, sewer line repair, and complete plumbing services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional sewer odor diagnosis, sewer camera inspections, drain cleaning, leak detection, sewer line repair, and complete plumbing services throughout the Houston area."
     }
   ]
 };

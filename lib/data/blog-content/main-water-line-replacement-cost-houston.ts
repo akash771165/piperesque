@@ -145,7 +145,7 @@ export const mainWaterLineReplacementCostHouston: BlogContent = {
     {
       question: "Do you provide main water line replacement services throughout Houston?",
       answer:
-        "Yes. We provide professional water line inspections, leak detection, underground water line replacement, and emergency plumbing services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional water line inspections, leak detection, underground water line replacement, and emergency plumbing services throughout the Houston area."
     }
   ]
 };

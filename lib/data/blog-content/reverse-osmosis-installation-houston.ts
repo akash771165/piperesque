@@ -145,7 +145,7 @@ export const reverseOsmosisInstallationHouston: BlogContent = {
     {
       question: "Do you install reverse osmosis systems throughout Houston?",
       answer:
-        "Yes. We provide professional reverse osmosis installation, maintenance, and repair services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional reverse osmosis installation, maintenance, and repair services throughout the Houston area."
     }
   ]
 };

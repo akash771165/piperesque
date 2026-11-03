@@ -145,7 +145,7 @@ export const emergencyPlumbingCostHouston: BlogContent = {
     {
       question: "Do you provide emergency plumbing services throughout Houston?",
       answer:
-        "Yes. We provide emergency plumbing diagnosis, repairs, leak detection, drain cleaning, sewer services, water heater repairs, and other urgent plumbing solutions throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide emergency plumbing diagnosis, repairs, leak detection, drain cleaning, sewer services, water heater repairs, and other urgent plumbing solutions throughout the Houston area."
     }
   ]
 };

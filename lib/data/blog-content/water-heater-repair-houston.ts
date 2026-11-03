@@ -145,7 +145,7 @@ export const waterHeaterRepairHouston: BlogContent = {
     {
       question: "Do you provide emergency water heater repair in Houston?",
       answer:
-        "Yes. We provide prompt water heater repair services for homeowners throughout Houston and surrounding communities."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide prompt water heater repair services for homeowners throughout Houston and surrounding communities."
     }
   ]
 };

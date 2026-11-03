@@ -145,7 +145,7 @@ export const wholeHouseWaterFiltrationHouston: BlogContent = {
     {
       question: "Do you install whole-house water filtration systems throughout Houston?",
       answer:
-        "Yes. We provide professional whole-house water filtration installation, maintenance, and water treatment solutions throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional whole-house water filtration installation, maintenance, and water treatment solutions throughout the Houston area."
     }
   ]
 };

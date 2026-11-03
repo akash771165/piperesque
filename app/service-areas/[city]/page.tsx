@@ -38,9 +38,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: `Plumber in ${city.name}, TX | 24/7 Plumbing Services | Piperesque`,
+    title: `Plumbing Services in ${city.name}, TX | Emergency Help`,
 
-    description: `Piperesque provides emergency plumbing, drain cleaning, leak detection, water heater repair, sewer line repair and residential plumbing services throughout ${city.name}, Texas.`,
+    description: `Need plumbing help in ${city.name}, TX? Piperesque connects homeowners with independent, licensed plumbing providers for emergency repairs, drains, leaks, and water heaters. Call (877) 364-0861.`,
 
     keywords: [
       `${city.name} plumber`,
@@ -273,36 +273,31 @@ export default async function CityPage({
 
                 <div className="rounded-xl border p-6">
                   <h3 className="font-semibold">
-                    Do you offer 24/7 emergency plumbing in {city.name}?
+                    Can I request plumbing assistance in {city.name} anytime?
                   </h3>
 
                   <p className="mt-2 text-gray-600">
-                    Yes. Our emergency plumbers are available 24 hours a day,
-                    7 days a week.
+                    Yes. PipeResque accepts telephone inquiries at any time to connect you with independent plumbing service providers. Provider availability and response times depend on the independent contractor serving your area.
                   </p>
                 </div>
 
                 <div className="rounded-xl border p-6">
                   <h3 className="font-semibold">
-                    What plumbing services do you provide?
+                    What plumbing services can I find help for in {city.name}?
                   </h3>
 
                   <p className="mt-2 text-gray-600">
-                    We provide drain cleaning, leak detection, water heater
-                    repair, sewer line repair, pipe repair, toilet repair,
-                    faucet repair, residential, commercial, and emergency
-                    plumbing services.
+                    Independent providers handle emergency repairs, drain cleaning, leak detection, water heater repair, sewer line repair, and general residential plumbing.
                   </p>
                 </div>
 
                 <div className="rounded-xl border p-6">
                   <h3 className="font-semibold">
-                    Are estimates free?
+                    How are estimates and service pricing determined?
                   </h3>
 
                   <p className="mt-2 text-gray-600">
-                    Contact us today for service availability and pricing in
-                    your area.
+                    Diagnostic charges, estimates, and repair prices are determined directly by the independent plumbing provider. Homeowners should confirm all pricing and terms directly with the provider before authorizing work.
                   </p>
                 </div>
 

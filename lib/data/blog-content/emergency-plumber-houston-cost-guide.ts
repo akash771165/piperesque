@@ -161,7 +161,7 @@ export const emergencyPlumberHoustonCostGuide: BlogContent = {
     {
       question: "Do you provide emergency plumbing services in Houston?",
       answer:
-        "Yes. We provide emergency plumbing repair, leak detection, pipe repair, and 24 hour plumbing services throughout Houston."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide emergency plumbing repair, leak detection, pipe repair, and 24 hour plumbing services throughout Houston."
     }
   ]
 };

@@ -145,7 +145,7 @@ export const sewerCameraInspectionHouston: BlogContent = {
     {
       question: "Do you provide sewer camera inspections throughout Houston?",
       answer:
-        "Yes. We provide professional sewer camera inspection services for residential and commercial properties throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional sewer camera inspection services for residential and commercial properties throughout the Houston area."
     }
   ]
 };

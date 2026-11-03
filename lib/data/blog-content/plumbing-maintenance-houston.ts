@@ -166,7 +166,7 @@ export const plumbingMaintenanceHouston: BlogContent = {
     {
       question: "Do you provide plumbing maintenance throughout Houston?",
       answer:
-        "Yes. We provide professional plumbing maintenance and inspection services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional plumbing maintenance and inspection services throughout the Houston area."
     }
   ]
 };

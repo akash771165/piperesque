@@ -145,7 +145,7 @@ export const garbageDisposalRepairHouston: BlogContent = {
     {
       question: "Do you provide garbage disposal repair throughout Houston?",
       answer:
-        "Yes. We provide professional garbage disposal repair, replacement, installation, and kitchen plumbing services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional garbage disposal repair, replacement, installation, and kitchen plumbing services throughout the Houston area."
     }
   ]
 };

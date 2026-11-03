@@ -145,7 +145,7 @@ export const slabLeakInsuranceHouston: BlogContent = {
     {
       question: "Do you provide slab leak detection throughout Houston?",
       answer:
-        "Yes. We provide professional slab leak detection, leak repair, emergency plumbing, and pipe replacement services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional slab leak detection, leak repair, emergency plumbing, and pipe replacement services throughout the Houston area."
     }
   ]
 };

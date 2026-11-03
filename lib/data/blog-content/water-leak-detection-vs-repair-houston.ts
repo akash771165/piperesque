@@ -157,7 +157,7 @@ export const waterLeakDetectionVsRepairHouston: BlogContent = {
     {
       question: "Do you provide water leak services throughout Houston?",
       answer:
-        "Yes. We provide water leak detection, repair, pipe repair, and emergency plumbing services throughout Houston."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide water leak detection, repair, pipe repair, and emergency plumbing services throughout Houston."
     }
   ]
 };

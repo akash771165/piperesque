@@ -11,14 +11,14 @@ import { siteConfig } from "@/lib/config/site";
 import { cities } from "@/lib/data/cities";
 
 export const metadata: Metadata = {
-  title: "Plumbing Service Areas in Houston, TX | Piperesque",
+  title: "Plumbing Service Areas in Greater Houston, TX",
   description:
     "Explore plumbing service coverage across Houston, Pasadena, Sugar Land, Pearland, Katy, The Woodlands, and surrounding Texas communities.",
   alternates: {
     canonical: `${siteConfig.website}/service-areas`,
   },
   openGraph: {
-    title: "Plumbing Service Areas in Houston, TX | Piperesque",
+    title: "Plumbing Service Areas in Greater Houston, TX",
     description:
       "Explore plumbing service coverage across Houston, Pasadena, Sugar Land, Pearland, Katy, The Woodlands, and surrounding Texas communities.",
     url: `${siteConfig.website}/service-areas`,

@@ -143,7 +143,7 @@ export const repipeHouseHouston: BlogContent = {
     {
       question: "Do you provide whole house repiping throughout Houston?",
       answer:
-        "Yes. We provide professional whole house repiping services for homeowners throughout Houston and surrounding communities."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional whole house repiping services for homeowners throughout Houston and surrounding communities."
     }
   ]
 };

@@ -145,7 +145,7 @@ export const emergencyPlumbingRepairHoustonTx: BlogContent = {
     {
       question: "Do you provide emergency plumbing services throughout Houston?",
       answer:
-        "Yes. We provide emergency plumbing repair, leak repair, drain cleaning, and sewer services throughout Houston and nearby areas."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide emergency plumbing repair, leak repair, drain cleaning, and sewer services throughout Houston and nearby areas."
     }
   ]
 };

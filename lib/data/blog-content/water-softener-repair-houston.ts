@@ -145,7 +145,7 @@ export const waterSoftenerRepairHouston: BlogContent = {
     {
       question: "Do you provide water softener repair throughout Houston?",
       answer:
-        "Yes. We provide professional water softener repair, maintenance, replacement, and water treatment services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional water softener repair, maintenance, replacement, and water treatment services throughout the Houston area."
     }
   ]
 };

@@ -145,7 +145,7 @@ export const sewerLineReplacementHouston: BlogContent = {
     {
       question: "Do you provide sewer line replacement throughout Houston?",
       answer:
-        "Yes. We provide professional sewer line replacement services for residential and commercial properties throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional sewer line replacement services for residential and commercial properties throughout the Houston area."
     }
   ]
 };

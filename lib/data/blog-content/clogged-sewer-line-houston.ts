@@ -145,7 +145,7 @@ export const cloggedSewerLineHouston: BlogContent = {
     {
       question: "Do you provide clogged sewer line services throughout Houston?",
       answer:
-        "Yes. We provide sewer inspections, hydro jetting, drain cleaning, sewer line repair, and emergency sewer services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide sewer inspections, hydro jetting, drain cleaning, sewer line repair, and emergency sewer services throughout the Houston area."
     }
   ]
 };

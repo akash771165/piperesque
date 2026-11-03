@@ -145,7 +145,7 @@ export const tanklessWaterHeaterInstallationHouston: BlogContent = {
     {
       question: "Do you install tankless water heaters throughout Houston?",
       answer:
-        "Yes. We provide professional tankless water heater installation, replacement, maintenance, and repair services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional tankless water heater installation, replacement, maintenance, and repair services throughout the Houston area."
     }
   ]
 };

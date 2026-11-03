@@ -145,7 +145,7 @@ export const pipeLeakCeilingHouston: BlogContent = {
     {
       question: "Do you provide ceiling pipe leak repair throughout Houston?",
       answer:
-        "Yes. We provide professional leak detection, pipe repair, emergency plumbing, and water damage prevention services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional leak detection, pipe repair, emergency plumbing, and water damage prevention services throughout the Houston area."
     }
   ]
 };

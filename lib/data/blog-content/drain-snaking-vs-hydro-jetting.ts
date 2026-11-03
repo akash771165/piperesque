@@ -145,7 +145,7 @@ export const drainSnakingVsHydroJetting: BlogContent = {
     {
       question: "Do you provide drain snaking and hydro jetting throughout Houston?",
       answer:
-        "Yes. We provide professional drain snaking, hydro jetting, sewer cleaning, and emergency drain services throughout the Houston area."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional drain snaking, hydro jetting, sewer cleaning, and emergency drain services throughout the Houston area."
     }
   ]
 };

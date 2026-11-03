@@ -135,7 +135,7 @@ export const gasLineRepairHouston: BlogContent = {
     {
       question: "Do you repair residential gas lines in Houston?",
       answer:
-        "Yes. We provide professional gas line repair, leak detection, inspections, and gas pipe replacement for homeowners throughout Houston."
+        "Yes. PipeResque connects homeowners with independent plumbing professionals who provide professional gas line repair, leak detection, inspections, and gas pipe replacement for homeowners throughout Houston."
     },
     {
       question: "Is gas line repair considered an emergency?",

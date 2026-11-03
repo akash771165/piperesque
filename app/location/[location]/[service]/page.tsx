@@ -92,60 +92,27 @@ const baseUrl = "https://www.piperesque.com";
 
 
 
-const priorityPages = [
-
-  {
-
-    location: "houston",
-
-    service: "emergency-plumbing",
-
-  },
-
-  {
-
-    location: "houston",
-
-    service: "sewer-line-repair",
-
-  },
-
-  {
-
-    location: "houston",
-
-    service: "drain-cleaning",
-
-  },
-
-  {
-
-    location: "houston",
-
-    service: "leak-detection",
-
-  },
-
-  {
-
-    location: "houston",
-
-    service: "water-heater-repair",
-
-  },
-
+const supportedServices = [
+  "emergency-plumbing",
+  "sewer-line-repair",
+  "drain-cleaning",
+  "leak-detection",
+  "water-heater-repair",
 ];
 
-
-
-export const dynamicParams = false;
-
-
+export const dynamicParams = true;
 
 export function generateStaticParams() {
-
-  return priorityPages;
-
+  const routes: { location: string; service: string }[] = [];
+  for (const loc of locations) {
+    for (const s of supportedServices) {
+      routes.push({
+        location: loc.slug,
+        service: s,
+      });
+    }
+  }
+  return routes;
 }
 
 

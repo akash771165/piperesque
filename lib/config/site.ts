@@ -25,7 +25,7 @@ export const siteConfig = {
   zip: "",
 
   // SEO
-  businessType: "Plumber",
+  businessType: "Plumbing Referral Service",
   primaryKeyword: "Emergency Plumber Houston TX",
   serviceArea: "Houston, Texas",
 
@@ -41,9 +41,9 @@ export const siteConfig = {
   favicon: "/favicon.ico",
   ogImage: "/og-image.png",
 
-  // Business Hours
-  openingHours: "Mo-Su 00:00-23:59",
-  emergencyService: true,
+  // Hours
+  openingHours: "",
+  emergencyService: false,
 
   // Google
   googleMaps: "",
