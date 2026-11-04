@@ -12,14 +12,14 @@ import { siteConfig } from "@/lib/config/site";
 export const metadata: Metadata = {
   title: "About Piperesque | Plumbing Connection Service in Houston, TX",
   description:
-    "Learn about Piperesque: how we help Houston homeowners find and connect with independent, licensed plumbing specialists for emergency and routine repairs.",
+    "Learn about Piperesque: how we help Houston homeowners find and connect with independent local plumbing professionals for emergency and routine repairs.",
   alternates: {
     canonical: `${siteConfig.website}/about`,
   },
   openGraph: {
     title: "About Piperesque | Houston Plumbing Resource",
     description:
-      "Learn about Piperesque: how we help Houston homeowners find and connect with independent, licensed plumbing specialists for emergency and routine repairs.",
+      "Learn about Piperesque: how we help Houston homeowners find and connect with independent local plumbing professionals for emergency and routine repairs.",
     url: `${siteConfig.website}/about`,
     siteName: siteConfig.company,
     type: "website",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Piperesque | Houston Plumbing Resource",
     description:
-      "Learn about Piperesque: how we help Houston homeowners find and connect with independent, licensed plumbing specialists.",
+      "Learn about Piperesque: how we help Houston homeowners find and connect with independent local plumbing professionals.",
   },
 };
 

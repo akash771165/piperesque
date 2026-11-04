@@ -92,7 +92,13 @@ const baseUrl = "https://www.piperesque.com";
 
 
 
-const supportedServices = services.map((s) => s.slug);
+const supportedServices = [
+  "emergency-plumbing",
+  "sewer-line-repair",
+  "drain-cleaning",
+  "leak-detection",
+  "water-heater-repair",
+];
 
 export const dynamicParams = false;
 
@@ -1075,7 +1081,7 @@ const serviceContent: Record<string, ServiceContent> = {
       {
         question: "Can a cracked pipe be patched or does it need replacement?",
         answer:
-          "Temporary clamps or wraps may hold briefly, but licensed plumbers typically recommend cutting out the damaged section and installing a new replacement section or fitting for lasting security.",
+          "Temporary clamps or wraps may hold briefly, but professional plumbing contractors typically recommend cutting out the damaged section and installing a new replacement section or fitting for lasting security.",
       },
       {
         question: "What causes pipes to burst or leak in Houston?",
@@ -1399,7 +1405,7 @@ export default async function LocationServicePage({ params }: Props) {
   const city = locations.find((item) => item.slug === location);
   const plumbing = services.find((item) => item.slug === service);
 
-  if (!city || !plumbing) {
+  if (!city || !plumbing || !supportedServices.includes(service)) {
     notFound();
   }
 
@@ -2159,7 +2165,7 @@ export async function generateMetadata({
 
 
 
-  if (!city || !plumbing) {
+  if (!city || !plumbing || !supportedServices.includes(service)) {
     notFound();
   }
 

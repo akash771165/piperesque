@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     "emergency plumbing Houston",
     "emergency plumber Houston",
     "plumbing services Houston TX",
-    "24 hour plumbing Houston",
+    "urgent plumbing Houston",
     "drain cleaning Houston",
     "leak detection Houston",
     "sewer line repair Houston",

@@ -66,9 +66,9 @@ export default function EmergencyPlumbingPage() {
               "A plumbing emergency may include an active burst pipe, major water leak, sewer backup, overflowing fixture, significant loss of water service, or another plumbing problem that may cause property damage or require prompt professional attention.",
           },
           {
-            question: "Is emergency plumbing help available 24/7 in Houston?",
+            question: "When can I call regarding an emergency plumbing problem in Houston?",
             answer:
-              "Piperesque accepts plumbing service requests at any time and helps homeowners connect with independent plumbing professionals. Provider availability varies by location, time, and current service capacity.",
+              "Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
           },
           {
             question: "How quickly can a plumbing professional respond?",
@@ -905,10 +905,10 @@ export default function EmergencyPlumbingPage() {
                     />
                     <div>
                       <p className="font-semibold">
-                        Phone Routing Available Anytime
+                        PipeResque Referral Line
                       </p>
                       <p className="text-sm text-slate-600 mt-1">
-                        Provider availability and response times vary.
+                        Independent third-party providers determine availability and response times.
                       </p>
                     </div>
                   </div>
@@ -1111,17 +1111,14 @@ export default function EmergencyPlumbingPage() {
 
               <details className="group rounded-xl bg-white border border-slate-200 p-6">
                 <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
-                  Is emergency plumbing help available 24/7 in Houston?
+                  When can I call regarding an emergency plumbing problem in Houston?
                   <span className="absolute right-0 top-0 text-blue-600">
                     +
                   </span>
                 </summary>
 
                 <p className="mt-4 text-slate-600 leading-7">
-                  Piperesque accepts plumbing service requests at any time
-                  and helps homeowners connect with independent plumbing
-                  professionals. Provider availability varies by location,
-                  time, and current service capacity.
+                  Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.
                 </p>
               </details>
 
@@ -1298,9 +1295,9 @@ export default function EmergencyPlumbingPage() {
               "A plumbing emergency may include an active burst pipe, major water leak, sewer backup, overflowing fixture, significant loss of water service, or another problem that could cause property damage or require prompt professional attention.",
           },
           {
-            question: "Is emergency plumbing help available 24/7 in Houston?",
+            question: "When can I call regarding an emergency plumbing problem in Houston?",
             answer:
-              "Piperesque accepts plumbing service requests at any time and helps homeowners connect with independent plumbing professionals. Provider availability varies by location, time, and current service capacity.",
+              "Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
           },
           {
             question: "How quickly can a plumbing professional respond?",

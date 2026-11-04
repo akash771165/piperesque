@@ -115,7 +115,7 @@ export default async function CityPage({
               Piperesque helps homeowners across {city.name}, Texas connect with
               independent third-party plumbing professionals. Whether you need
               emergency repairs, drain cleaning, leak detection, water heater
-              repair, or general residential plumbing, our telephone referral line is available anytime.
+              repair, or general residential plumbing, call the PipeResque referral line to connect with an independent local professional.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">

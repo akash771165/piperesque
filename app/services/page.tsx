@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     "Sewer Line Repair Houston",
     "Residential Plumbing Houston",
     "Commercial Plumbing Houston",
-    "Licensed Plumber Houston",
-    "24/7 Plumber Houston",
+    "Local Plumber Houston",
+    "Urgent Plumber Houston",
   ],
   alternates: {
     canonical: "https://www.piperesque.com/services",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Plumbing Services in Houston, TX | PipeResque",
     description:
-      "Connect with independent licensed plumbing specialists across Greater Houston for burst pipes, drain clogs, leaks, sewer backups, and water heaters.",
+      "Connect with independent plumbing specialists across Greater Houston for burst pipes, drain clogs, leaks, sewer backups, and water heaters.",
     url: "https://www.piperesque.com/services",
     siteName: "PipeResque",
     type: "website",
@@ -184,7 +184,7 @@ export default function ServicesPage() {
                       </div>
                       <div className="flex items-center gap-2.5">
                         <CheckCircle2 size={17} className="text-emerald-600" aria-hidden="true" />
-                        <span>24/7 phone routing for emergency situations</span>
+                        <span>Direct telephone referral line for urgent situations</span>
                       </div>
                     </div>
 

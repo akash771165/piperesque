@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "emergency plumbing Houston",
     "emergency plumber Houston",
     "plumbing services Houston TX",
-    "24 hour plumbing Houston",
+    "urgent plumbing Houston",
     "drain cleaning Houston",
     "leak detection Houston",
     "sewer line repair Houston",
@@ -118,9 +118,9 @@ const faqs = [
       "Homeowners can call (877) 364-0861 for referral assistance regarding burst pipes, active water leaks, clogged drains, sewer backups, water heaters, and general residential plumbing problems.",
   },
   {
-    question: "Is emergency plumbing assistance available 24/7?",
+    question: "When can I call regarding a plumbing emergency?",
     answer:
-      "You can call our telephone line anytime. However, provider availability, scheduling, and response capabilities depend on independent contractors operating in your area. Piperesque does not guarantee 24/7 technician dispatch.",
+      "Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
   },
   {
     question: "How quickly will a plumbing professional respond?",
