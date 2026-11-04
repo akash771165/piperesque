@@ -69,22 +69,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // 4. Location + Service Pages (10 locations x 5 core services = 50 pages)
-  const supportedLocationServices = [
-    "emergency-plumbing",
-    "sewer-line-repair",
-    "drain-cleaning",
-    "leak-detection",
-    "water-heater-repair",
-  ];
-
+  // 4. Location + Service Pages (10 locations x 10 services = 100 pages)
   const locationServicePages: MetadataRoute.Sitemap = [];
   for (const loc of locations) {
-    for (const serviceSlug of supportedLocationServices) {
+    for (const service of services) {
       locationServicePages.push({
-        url: `${baseUrl}/location/${loc.slug}/${serviceSlug}`,
+        url: `${baseUrl}/location/${loc.slug}/${service.slug}`,
         changeFrequency: "monthly",
-        priority: loc.slug === "houston" ? 0.9 : 0.8,
+        priority: loc.slug === "houston" ? 0.9 : 0.75,
       });
     }
   }

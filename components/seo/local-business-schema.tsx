@@ -24,7 +24,7 @@ export default function LocalBusinessSchema({ city }: Props) {
     logo: `${siteConfig.website}${siteConfig.logo}`,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    description: `Independent plumbing referral and informational resource connecting property owners with independent licensed plumbing service providers serving ${currentCity.name}, Texas.`,
+    description: `Independent plumbing referral and informational resource connecting property owners with independent local plumbing service providers serving ${currentCity.name}, Texas.`,
     areaServed: {
       "@type": "AdministrativeArea",
       name: `${currentCity.name}, TX`,

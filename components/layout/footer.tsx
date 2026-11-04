@@ -103,7 +103,7 @@ export default function Footer() {
             </h2>
 
             <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-              Explore plumbing service information and submit a request to
+              Explore plumbing service guides and call our referral line to
               connect with an independent plumbing service provider serving
               Houston and nearby communities.
             </p>
@@ -304,12 +304,11 @@ export default function Footer() {
 
                 <div>
                   <h3 className="font-semibold text-white">
-                    Service Requests
+                    Telephone Referral Hotline
                   </h3>
                   <p className="mt-1 text-sm leading-6 text-slate-400">
-                    Online requests can be submitted anytime. This does not
-                    guarantee immediate provider availability or a 24/7
-                    response.
+                    Call (877) 364-0861 anytime. Provider availability and dispatch
+                    hours depend on independent local contractors.
                   </p>
                 </div>
               </div>

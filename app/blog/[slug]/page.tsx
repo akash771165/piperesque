@@ -15,6 +15,8 @@ import { getBlogData } from "@/lib/blog/get-blog-data";
 import { getAllBlogData } from "@/lib/blog/get-all-blog-data";
 import { siteConfig } from "@/lib/config/site";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const blogs = getAllBlogData();
 
@@ -32,10 +34,7 @@ export async function generateMetadata({
   const blog = getBlogData(slug);
 
   if (!blog) {
-    return {
-      title: "Blog | Piperesque",
-      description: "Plumbing tips, guides, and information from Piperesque.",
-    };
+    notFound();
   }
 
   const title =

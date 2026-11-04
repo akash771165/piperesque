@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/og-image.png",
+        url: "/images/emergency.webp",
         width: 1200,
         height: 630,
         alt: "PipeResque Plumbing Services in Houston",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "Plumbing Services in Houston, TX | PipeResque",
     description:
       "Professional plumbing referral services in Greater Houston. Call (877) 364-0861 for fast plumbing help.",
-    images: ["/og-image.png"],
+    images: ["/images/emergency.webp"],
   },
 };
 
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                     <div className="mt-6 space-y-2.5 text-sm text-slate-700">
                       <div className="flex items-center gap-2.5">
                         <CheckCircle2 size={17} className="text-emerald-600" aria-hidden="true" />
-                        <span>Independent licensed local technicians</span>
+                        <span>Independent local plumbing contractors</span>
                       </div>
                       <div className="flex items-center gap-2.5">
                         <CheckCircle2 size={17} className="text-emerald-600" aria-hidden="true" />

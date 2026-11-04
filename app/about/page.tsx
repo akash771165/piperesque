@@ -115,8 +115,8 @@ export default function AboutPage() {
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2 text-sm font-semibold text-slate-800">
               {[
-                "24/7 Request Availability",
-                "Licensed Local Technicians",
+                "Direct Phone Routing",
+                "Independent Local Providers",
                 "Clear Disclaimers & Pricing",
                 "Emergency & Routine Repairs",
                 "Drain & Sewer Line Solutions",

@@ -18,6 +18,8 @@ interface PageProps {
   }>;
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return cities.map((city) => ({
     city: city.slug,
@@ -32,15 +34,13 @@ export async function generateMetadata({
   const city = cities.find((c) => c.slug === citySlug);
 
   if (!city) {
-    return {
-      title: "City Not Found | Piperesque",
-    };
+    notFound();
   }
 
   return {
     title: `Plumbing Services in ${city.name}, TX | Emergency Help`,
 
-    description: `Need plumbing help in ${city.name}, TX? Piperesque connects homeowners with independent, licensed plumbing providers for emergency repairs, drains, leaks, and water heaters. Call (877) 364-0861.`,
+    description: `Need plumbing help in ${city.name}, TX? Piperesque connects homeowners with independent local plumbing providers for emergency repairs, drains, leaks, and water heaters. Call (877) 364-0861.`,
 
     keywords: [
       `${city.name} plumber`,
@@ -58,7 +58,7 @@ export async function generateMetadata({
 
     openGraph: {
       title: `Plumbing Services in ${city.name}, TX`,
-      description: `Trusted plumbing services in ${city.name}, Texas.`,
+      description: `Trusted plumbing referral service in ${city.name}, Texas.`,
       url: `${siteConfig.website}/service-areas/${city.slug}`,
       siteName: "Piperesque",
       type: "website",
@@ -67,7 +67,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: `Plumbing Services in ${city.name}`,
-      description: `Professional plumbers serving ${city.name}, TX.`,
+      description: `Independent plumbing professionals serving ${city.name}, TX.`,
     },
 
     robots: {
@@ -112,11 +112,10 @@ export default async function CityPage({
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg text-slate-300">
-              Piperesque proudly provides fast, affordable, and professional
-              plumbing services throughout {city.name}, Texas. Whether you need
-              emergency plumbing, drain cleaning, leak detection, water heater
-              repair, or complete residential plumbing solutions, our licensed
-              plumbers are ready 24/7.
+              Piperesque helps homeowners across {city.name}, Texas connect with
+              independent third-party plumbing professionals. Whether you need
+              emergency repairs, drain cleaning, leak detection, water heater
+              repair, or general residential plumbing, our telephone referral line is available anytime.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -154,8 +153,8 @@ export default async function CityPage({
               </h2>
 
               <p className="mt-3 text-gray-600">
-                We proudly offer complete residential and commercial plumbing
-                services across {city.name}.
+                Explore common plumbing services and connect with independent contractors
+                serving {city.name} and surrounding communities.
               </p>
 
             </div>
@@ -202,13 +201,11 @@ export default async function CityPage({
             <div className="mx-auto max-w-3xl text-center">
 
               <h2 className="text-3xl font-bold">
-                Why Choose Piperesque in {city.name}?
+                Why Connect Through Piperesque in {city.name}?
               </h2>
 
               <p className="mt-4 text-gray-600">
-                We are committed to delivering fast, honest, and professional
-                plumbing solutions backed by experienced licensed plumbers and
-                exceptional customer service.
+                We make it straightforward to reach independent plumbing professionals when you need urgent help or scheduled repairs.
               </p>
 
             </div>
@@ -217,19 +214,19 @@ export default async function CityPage({
 
               <div className="rounded-xl bg-white p-6 shadow">
                 <h3 className="font-semibold text-lg">
-                  24/7 Emergency Service
+                  Phone Referral Line
                 </h3>
                 <p className="mt-3 text-gray-600">
-                  Available day and night for urgent plumbing emergencies.
+                  Call (877) 364-0861 anytime to connect with service routing.
                 </p>
               </div>
 
               <div className="rounded-xl bg-white p-6 shadow">
                 <h3 className="font-semibold text-lg">
-                  Licensed Professionals
+                  Independent Providers
                 </h3>
                 <p className="mt-3 text-gray-600">
-                  Experienced plumbers delivering quality workmanship.
+                  Work directly with independent local plumbing contractors.
                 </p>
               </div>
 
@@ -238,16 +235,16 @@ export default async function CityPage({
                   Upfront Pricing
                 </h3>
                 <p className="mt-3 text-gray-600">
-                  Honest estimates with no hidden charges.
+                  Review pricing and diagnostic fees directly with the technician before work begins.
                 </p>
               </div>
 
               <div className="rounded-xl bg-white p-6 shadow">
                 <h3 className="font-semibold text-lg">
-                  Fast Response
+                  Local Coverage
                 </h3>
                 <p className="mt-3 text-gray-600">
-                  Quick arrival across {city.name} and nearby communities.
+                  Connecting homeowners throughout {city.name} and Greater Houston.
                 </p>
               </div>
 

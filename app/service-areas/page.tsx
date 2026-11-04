@@ -103,11 +103,11 @@ export default function ServiceAreasPage() {
                   <div className="mt-6 space-y-2 text-xs font-medium text-slate-600">
                     <div className="flex items-center gap-2">
                       <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
-                      <span>24/7 Request Availability</span>
+                      <span>Direct Phone Routing</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
-                      <span>Licensed Local Providers</span>
+                      <span>Independent Local Providers</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />

@@ -10,7 +10,7 @@ import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 import FAQSchema from "@/components/seo/faq-schema";
 
 export const metadata: Metadata = {
-  title: "24/7 Emergency Plumbing in Houston, TX | Piperesque",
+  title: "Emergency Plumbing in Houston, TX | Urgent Assistance | Piperesque",
   description:
     "Need emergency plumbing help in Houston, TX? Piperesque helps homeowners connect with independent plumbing professionals for burst pipes, major leaks, sewer backups, and urgent plumbing problems.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "emergency plumber near me",
   ],
   openGraph: {
-    title: "24/7 Emergency Plumbing Help in Houston, TX | Piperesque",
+    title: "Emergency Plumbing Help in Houston, TX | Piperesque",
     description:
       "Piperesque helps Houston homeowners connect with independent plumbing professionals for emergency plumbing needs, including burst pipes, major leaks, sewer backups, and other urgent problems.",
     url: "https://www.piperesque.com/services/emergency-plumbing",
@@ -81,9 +81,9 @@ export default function EmergencyPlumbingPage() {
               "Emergency plumbing pricing varies by provider and may depend on the type of problem, time of service, labor, materials, equipment, accessibility, and whether repair or replacement is required. Ask the provider about applicable service or diagnostic fees before authorizing work.",
           },
           {
-            question: "Can I request emergency plumbing service online?",
+            question: "How do I request emergency plumbing assistance?",
             answer:
-              "Yes. Homeowners can submit a plumbing service request through Piperesque or call the listed phone number. The request may then be connected with an independent plumbing service provider serving the area.",
+              "Call our referral hotline directly at (877) 364-0861. A representative will connect you with an available independent plumbing professional servicing your Houston neighborhood.",
           },
           {
             question: "Are plumbing providers licensed?",
@@ -118,7 +118,7 @@ export default function EmergencyPlumbingPage() {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-black leading-tight text-white">
-              24/7 Emergency Plumbing Help in Houston, TX
+              Emergency Plumbing Help in Houston, TX
             </h1>
 
             <p className="mt-6 text-xl leading-8 text-blue-100 max-w-2xl">
@@ -149,7 +149,7 @@ export default function EmergencyPlumbingPage() {
               <div className="bg-white/10 backdrop-blur rounded-lg p-4 md:p-6">
                 <Clock className="text-green-400 mb-2" size={28} />
                 <p className="font-bold text-white">
-                  24/7 Service Requests
+                  Direct Phone Routing
                 </p>
               </div>
 
@@ -905,10 +905,10 @@ export default function EmergencyPlumbingPage() {
                     />
                     <div>
                       <p className="font-semibold">
-                        Service Requests Available 24/7
+                        Phone Routing Available Anytime
                       </p>
                       <p className="text-sm text-slate-600 mt-1">
-                        Provider availability may vary.
+                        Provider availability and response times vary.
                       </p>
                     </div>
                   </div>
@@ -1160,17 +1160,16 @@ export default function EmergencyPlumbingPage() {
 
               <details className="group rounded-xl bg-white border border-slate-200 p-6">
                 <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
-                  Can I request emergency plumbing service online?
+                  How do I request emergency plumbing assistance?
                   <span className="absolute right-0 top-0 text-blue-600">
                     +
                   </span>
                 </summary>
 
                 <p className="mt-4 text-slate-600 leading-7">
-                  Yes. Homeowners can submit a plumbing service request
-                  through Piperesque or call the listed phone number. The
-                  request may then be connected with an independent plumbing
-                  service provider serving the area.
+                  Call our referral hotline directly at (877) 364-0861. A representative
+                  will connect you with an available independent plumbing professional
+                  servicing your Houston neighborhood.
                 </p>
               </details>
 

@@ -110,60 +110,62 @@ const serviceContent: Record<string, ServiceContent> = {
   "sewer-line-repair": {
     heroBadge: "Sewer line repair information",
     intro: [
-      "Sewer line problems can affect multiple plumbing fixtures at the same time. Cracked pipes, root intrusion, collapsed sections, and significant blockages can cause slow drainage, backups, odors, and wastewater problems.",
-      "A proper sewer line diagnosis normally begins by determining where the problem is located and whether the issue is a blockage or a structural pipe problem. Camera inspection can be useful when the plumbing professional determines that it is appropriate.",
-      "The repair method depends on the pipe material, depth, location, accessibility, and severity of the damage. Some situations may require localized repair while others may require a larger replacement."
+      "Sewer line problems can affect multiple plumbing fixtures at the same time. Cracked pipes, tree root intrusion, ground shifting in Houston's expansive clay soil, and collapsed vintage cast iron lines can cause sluggish drainage, foul odors, and severe wastewater backups.",
+      "A proper sewer line evaluation begins with a high-definition video camera inspection. This allows an independent technician to pinpoint whether the issue is a simple paper blockage, grease accumulation, root invasion at pipe joints, or a structural pipe belly or collapse.",
+      "Repair solutions vary based on pipe depth, location beneath slabs or landscaping, accessibility, and severity of damage. Some situations require localized spot repair or trenchless pipe relining, while others call for conventional line excavation and replacement."
     ],
     warningSigns: [
-      "Multiple fixtures drain slowly or back up together.",
-      "You hear gurgling sounds from toilets or drains.",
-      "There is an unexplained sewage odor.",
-      "Wastewater appears in floor drains, tubs, or toilets.",
-      "A section of the yard remains unusually wet without an obvious explanation."
+      "Multiple plumbing fixtures gurgling or draining slowly at the same time.",
+      "Wastewater or toilet sewage backing up into lowest-level bathtubs or shower stalls.",
+      "Persistent sulfur or sewage odors inside the home or near the exterior foundation.",
+      "Unexplained lush, overly green, or soggy patches in the yard above the sewer lateral.",
+      "Frequent or recurring toilet clogs that standard plunging fails to resolve.",
+      "Gurgling sounds from the bathroom sink when the toilet is flushed."
     ],
     repairProcess: [
-      "Identify whether the problem affects a fixture, branch line, or main sewer line.",
-      "Inspect the sewer line when appropriate to identify the location and type of problem.",
-      "Determine whether the problem is a blockage, damaged pipe, root intrusion, or another condition.",
-      "Select a repair or replacement method based on the property's conditions.",
-      "Test drainage and verify that the plumbing system is operating properly."
+      "Immediate system shutoff and cleanout cap inspection to relieve line pressure.",
+      "Sewer camera diagnostic inspection through accessible ground-level cleanouts.",
+      "Evaluation of pipe condition: identification of cracks, joint separation, or tree roots.",
+      "Discussion of options: mechanical snaking, hydro-jetting, trenchless relining, or spot excavation.",
+      "Execution of repair using durable, code-compliant PVC or HDPE piping.",
+      "Post-repair camera verification to ensure unobstructed flow to the municipal sewer or septic system."
     ],
     pricing: [
-      { label: "Sewer camera inspection", value: "Varies by provider and scope" },
-      { label: "Localized sewer repair", value: "Varies by pipe and access" },
-      { label: "Trenchless repair", value: "Varies by system and damage" },
-      { label: "Sewer line replacement", value: "Varies by length and excavation requirements" },
-      { label: "Root intrusion service", value: "Varies by severity and treatment" }
+      { label: "Sewer camera inspection", value: "Determined directly by provider" },
+      { label: "High-pressure hydro jetting", value: "Varies by line length and blockage" },
+      { label: "Trenchless pipe relining (CIPP)", value: "Varies by pipe diameter and run" },
+      { label: "Localized spot repair", value: "Varies by depth and surface access" },
+      { label: "Complete sewer line replacement", value: "Varies by distance to city main" }
     ],
     faqs: [
       {
-        question: "How do I know if my sewer line has a problem?",
+        question: "What should homeowners avoid doing during an active sewer backup?",
         answer:
-          "Recurring backups, multiple slow drains, sewage odors, and wastewater appearing in unexpected fixtures can indicate a sewer line issue."
+          "Immediately stop running water, including washing machines, dishwashers, sinks, and showers. Do not pour caustic chemical drain cleaners into a completely blocked sewer line, as corrosive chemicals will sit in the pipes and present safety risks to servicing technicians."
       },
       {
-        question: "Can a sewer line be repaired without digging?",
+        question: "Why are sewer line problems so common in Greater Houston?",
         answer:
-          "Some sewer problems can be addressed using trenchless methods, but suitability depends on pipe condition, location, material, and the type of damage."
+          "Houston's subsoil consists primarily of expansive gumbo clay that swells significantly during wet periods and shrinks during summer droughts. This continuous ground movement places immense shear stress on underground sewer lines, leading to cracked joints, bellies, and root penetration from mature live oaks and pine trees."
       },
       {
-        question: "What causes sewer line problems?",
+        question: "Can a sewer line be repaired without digging up my yard or driveway?",
         answer:
-          "Common causes include blockages, root intrusion, aging pipe materials, cracks, ground movement, and collapsed sections."
+          "In many cases, yes. Trenchless technologies such as cured-in-place pipe (CIPP) lining or pipe bursting allow technicians to rehabilitate damaged sewer lines through small access pits without digging continuous trenches through landscaping, driveways, or patios. Suitability depends on pipe structural integrity."
       },
       {
-        question: "Does a sewer backup require immediate attention?",
+        question: "What questions should I ask an independent plumbing contractor before sewer work?",
         answer:
-          "A sewage backup should be addressed promptly because wastewater can create sanitation concerns and additional property damage."
+          "Ask whether the technician will perform a video camera inspection before and after work, whether they offer trenchless alternatives, what city permits are required, whether cleanouts will be installed, and what warranty terms apply to materials and labor."
       },
       {
-        question: "Will the entire sewer line need to be replaced?",
+        question: "Will insurance cover sewer line repair in Texas?",
         answer:
-          "Not necessarily. The appropriate repair depends on the location, extent, and cause of the damage."
+          "Standard homeowners insurance policies typically exclude wear-and-tear or root intrusion on exterior sewer laterals unless an optional sewer/water line endorsement or utility line coverage was added to the policy. Check with your insurance carrier regarding your specific policy riders."
       }
     ],
     overview:
-      "Sewer line problems can affect the entire drainage system. Accurate diagnosis helps determine whether clearing, localized repair, or replacement is appropriate."
+      "Sewer line problems can disrupt household sanitation and threaten property foundations. Accurate camera diagnosis helps determine whether hydro-jetting, trenchless pipe relining, or conventional pipe replacement is appropriate for your home."
   },
 
   "drain-cleaning": {
@@ -563,6 +565,8 @@ const serviceContent: Record<string, ServiceContent> = {
       "Residential plumbing services cover home water supply, drainage, fixtures, valves, and water heaters throughout the Houston metropolitan area."
   },
 };
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return services.map((service) => ({
     slug: service.slug,
@@ -577,13 +581,7 @@ export async function generateMetadata({
   const service = services.find((item) => item.slug === slug);
 
   if (!service) {
-    return {
-      title: "Service Not Found | Piperesque",
-      robots: {
-        index: false,
-        follow: false,
-      },
-    };
+    notFound();
   }
 
   const content = serviceContent[service.slug];

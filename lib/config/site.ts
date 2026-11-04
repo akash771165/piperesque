@@ -1,7 +1,7 @@
 export const siteConfig = {
   // Business
   company: "Piperesque",
-  tagline: "24/7 Emergency Plumbing Services",
+  tagline: "Houston Plumbing Referral Service",
 
   // Website
   website: "https://www.piperesque.com",
@@ -39,7 +39,7 @@ export const siteConfig = {
   // Images
   logo: "/logo.png",
   favicon: "/favicon.ico",
-  ogImage: "/og-image.png",
+  ogImage: "/images/emergency.webp",
 
   // Hours
   openingHours: "",

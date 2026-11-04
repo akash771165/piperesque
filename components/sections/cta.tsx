@@ -33,7 +33,7 @@ export default function CTA() {
             {/* LEFT CONTENT */}
             <div className="p-8 lg:p-14">
               <span className="inline-flex rounded-full bg-red-500/20 px-5 py-2 text-sm font-bold text-red-100">
-                🚨 PLUMBING SERVICE REQUESTS
+                🚨 PLUMBING REFERRAL HOTLINE
               </span>
 
               <h2 className="mt-8 text-4xl font-black leading-tight text-white lg:text-6xl">
@@ -133,11 +133,11 @@ export default function CTA() {
               />
 
               <h3 className="mt-5 text-xl font-bold text-white">
-                Emergency Requests
+                Emergency Routing
               </h3>
 
               <p className="mt-3 text-blue-100">
-                Plumbing requests can be submitted anytime.
+                Call (877) 364-0861 for provider referral.
               </p>
             </div>
 

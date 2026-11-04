@@ -83,7 +83,7 @@ export default function TermsPage() {
                   2. Description of Service
                 </h2>
                 <p className="mt-4">
-                  Piperesque acts solely as a matching and referral intermediary. When you submit a request or call our verified telephone routing line, your inquiry is connected with independent third-party plumbing contractors or plumbing network partners who operate in your local Houston area.
+                  Piperesque acts solely as a matching and referral intermediary. When you call our verified telephone routing line, your inquiry is connected with independent third-party plumbing contractors or plumbing network partners who operate in your local Houston area.
                 </p>
                 <p className="mt-3">
                   All plumbing services, emergency repairs, drain cleanings, inspections, estimates, and installations are provided strictly and directly by independent licensed contractors, not by Piperesque.

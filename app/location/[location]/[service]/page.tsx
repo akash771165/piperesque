@@ -94,7 +94,7 @@ const baseUrl = "https://www.piperesque.com";
 
 const supportedServices = services.map((s) => s.slug);
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   const routes: { location: string; service: string }[] = [];
@@ -2160,21 +2160,7 @@ export async function generateMetadata({
 
 
   if (!city || !plumbing) {
-
-    return {
-
-      title: "Plumbing Service Not Found | Piperesque",
-
-      robots: {
-
-        index: false,
-
-        follow: false,
-
-      },
-
-    };
-
+    notFound();
   }
 
 
@@ -2186,11 +2172,11 @@ export async function generateMetadata({
   const isSewerRepair = plumbing.slug === "sewer-line-repair";
 
   const title = isSewerRepair
-    ? "Sewer Line Repair Houston, TX | Repair & Replacement | Piperesque"
+    ? `Sewer Line Repair in ${city.city}, ${city.stateCode} | Repair & Replacement | Piperesque`
     : `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | Piperesque`;
 
   const description = isSewerRepair
-    ? "Need sewer line repair in Houston, TX? Review warning signs, repair vs. replacement options, cost factors, and steps to take during a sewer backup."
+    ? `Need sewer line repair in ${city.city}, ${city.stateCode}? Review warning signs, repair vs. replacement options, cost factors, and steps to take during a sewer backup.`
     : `${plumbing.shortTitle} in ${city.city}, ${city.stateCode}. Learn about common plumbing symptoms, service considerations, and connecting with independent plumbing professionals.`;
 
   const canonical =

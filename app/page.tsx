@@ -12,11 +12,12 @@ import {
 
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import FAQSchema from "@/components/seo/faq-schema";
 
 export const metadata: Metadata = {
   title: "Emergency Plumbing Help in Houston, TX | Piperesque",
   description:
-    "Need emergency plumbing in Houston, TX? Call (877) 364-0861 now for fast 24/7 help with burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
+    "Looking for plumbing assistance in Houston, TX? Call (877) 364-0861 to connect with independent local plumbing professionals for burst pipes, drains, leaks, and water heaters.",
   keywords: [
     "emergency plumbing Houston",
     "emergency plumber Houston",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     "leak detection Houston",
     "sewer line repair Houston",
     "water heater repair Houston",
+    "residential plumbing Houston",
   ],
   alternates: {
     canonical: "https://www.piperesque.com/",
@@ -33,12 +35,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Emergency Plumbing Help in Houston, TX | Piperesque",
     description:
-      "Need emergency plumbing in Houston, TX? Call (877) 364-0861 now for fast 24/7 help with burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
+      "Looking for plumbing assistance in Houston, TX? Call (877) 364-0861 to connect with independent local plumbing professionals for burst pipes, drains, leaks, and water heaters.",
     url: "https://www.piperesque.com/",
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/images/emergency.webp",
         width: 1200,
         height: 630,
         alt: "Piperesque plumbing assistance in Houston",
@@ -49,8 +51,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Piperesque | Emergency Plumbing Help in Houston",
     description:
-      "Need emergency plumbing in Houston, TX? Call (877) 364-0861 now for fast 24/7 help with burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
-    images: ["/og-image.png"],
+      "Looking for plumbing assistance in Houston, TX? Call (877) 364-0861 to connect with independent local plumbing professionals for burst pipes, drains, leaks, and water heaters.",
+    images: ["/images/emergency.webp"],
   },
 };
 
@@ -58,42 +60,42 @@ const services = [
   {
     title: "Emergency Plumbing",
     description:
-      "Get help finding an independent plumbing professional for urgent plumbing problems.",
+      "Find independent plumbing professionals for urgent problems including burst pipes and major leaks.",
     href: "/services/emergency-plumbing",
     icon: Wrench,
   },
   {
     title: "Drain Cleaning",
     description:
-      "Find plumbing assistance for clogged, slow, or backed-up drains.",
-    href: "/location/houston/drain-cleaning",
+      "Find assistance for slow, blocked, or backed-up sinks, showers, and main drain lines.",
+    href: "/services/drain-cleaning",
     icon: ArrowRight,
   },
   {
     title: "Sewer Line Repair",
     description:
-      "Connect with plumbing professionals for sewer line problems and backups.",
-    href: "/location/houston/sewer-line-repair",
+      "Connect with plumbing professionals for sewer line inspections, repairs, and clearing.",
+    href: "/services/sewer-line-repair",
     icon: Wrench,
   },
   {
     title: "Leak Detection",
     description:
-      "Get connected with professionals who can evaluate suspected plumbing leaks.",
-    href: "/location/houston/leak-detection",
+      "Connect with specialists who can locate and diagnose hidden water leaks in walls, ceilings, and slabs.",
+    href: "/services/leak-detection",
     icon: ShieldCheck,
   },
   {
     title: "Water Heater Repair",
     description:
-      "Find plumbing assistance for water heater problems and related issues.",
-    href: "/location/houston/water-heater-repair",
+      "Find plumbing assistance for no hot water, tank leaks, temperature inconsistency, and replacements.",
+    href: "/services/water-heater-repair",
     icon: Clock3,
   },
   {
     title: "Residential Plumbing",
     description:
-      "Explore plumbing assistance for common residential plumbing needs.",
+      "Explore assistance for common home plumbing fixtures, piping repairs, and general installations.",
     href: "/services/residential-plumbing",
     icon: MapPin,
   },
@@ -103,32 +105,32 @@ const faqs = [
   {
     question: "What is Piperesque?",
     answer:
-      "Piperesque is an informational service that helps homeowners find and connect with independent plumbing professionals serving their area.",
+      "Piperesque is an informational website and referral service that helps Houston homeowners find and connect with independent third-party plumbing professionals.",
   },
   {
     question: "Do you provide plumbing services directly?",
     answer:
-      "No. Piperesque does not directly perform plumbing work or employ plumbing technicians. Service is provided by an independent plumbing company that handles the customer's request.",
+      "No. Piperesque does not directly perform plumbing work, dispatch vehicles, or employ technicians. All plumbing diagnostics, quotes, and repairs are performed solely by independent third-party contractors.",
   },
   {
-    question: "What plumbing services can I request?",
+    question: "What plumbing services can I call about?",
     answer:
-      "Depending on provider availability, homeowners may request assistance for emergency plumbing, drain cleaning, sewer line problems, leak detection, water heater issues, and other common plumbing needs.",
+      "Homeowners can call (877) 364-0861 for referral assistance regarding burst pipes, active water leaks, clogged drains, sewer backups, water heaters, and general residential plumbing problems.",
   },
   {
     question: "Is emergency plumbing assistance available 24/7?",
     answer:
-      "Piperesque accepts service requests at any time. Provider availability varies by location, time, and current service capacity.",
+      "You can call our telephone line anytime. However, provider availability, scheduling, and response capabilities depend on independent contractors operating in your area. Piperesque does not guarantee 24/7 technician dispatch.",
   },
   {
     question: "How quickly will a plumbing professional respond?",
     answer:
-      "Response times depend on the independent provider, location, time of day, and current demand. Piperesque does not guarantee a specific response or arrival time.",
+      "Response times depend on independent provider availability, call volume, weather, and distance to your property. Piperesque does not guarantee a specific arrival or response time.",
   },
   {
-    question: "Does Piperesque provide pricing or estimates?",
+    question: "Does Piperesque set pricing or give estimates?",
     answer:
-      "No. Pricing and estimates are determined directly by the independent plumbing provider. Customers should discuss applicable service fees, estimates, and repair costs with the provider before authorizing work.",
+      "No. Pricing, estimates, diagnostic fees, and warranties are determined directly by the independent plumbing provider. Homeowners should review pricing with the technician before authorizing work.",
   },
 ];
 
@@ -147,9 +149,9 @@ export default function Home() {
         <div className="container-custom relative z-10 py-20 md:py-28 lg:py-32">
           <div className="max-w-4xl">
 
-            <div className="mb-6 inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-200">
-              <Clock3 size={15} aria-hidden="true" />
-              24/7 Telephone Routing • Houston, TX
+            <div className="mb-6 inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-amber-300">
+              <Phone size={14} className="text-amber-400" aria-hidden="true" />
+              Houston Plumbing Referral Hotline • (877) 364-0861
             </div>
 
             <h1 className="text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
@@ -157,17 +159,18 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-              Facing a burst pipe, major leak, sewer backup, clogged drain,
-              or overflowing fixture? Piperesque quickly connects Greater Houston
-              homeowners with independent, licensed plumbing professionals.
+              Dealing with a burst pipe, severe leak, clogged drain, sewer backup,
+              or water heater failure? Piperesque connects Greater Houston homeowners
+              with independent, third-party plumbing professionals.
             </p>
 
             <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
               <a
                 href="tel:+18773640861"
+                aria-label="Call PipeResque Referral Hotline at (877) 364-0861"
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-amber-500 px-8 py-4 text-base md:text-lg font-black text-slate-950 shadow-lg shadow-amber-500/25 transition hover:bg-amber-400 active:scale-[0.98]"
               >
-                <Phone size={20} aria-hidden="true" />
+                <Phone size={20} className="fill-slate-950" aria-hidden="true" />
                 Call (877) 364-0861
               </a>
 
@@ -175,10 +178,15 @@ export default function Home() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-7 py-4 text-base font-semibold text-white transition hover:bg-white hover:text-slate-950"
               >
-                Contact by Phone or Email
+                Contact Options
                 <ArrowRight size={19} aria-hidden="true" />
               </Link>
             </div>
+
+            <p className="mt-3.5 text-xs text-slate-300 flex items-center gap-2">
+              <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true" />
+              <span>Direct telephone connection to independent local plumbing service providers. No referral fees for callers.</span>
+            </p>
 
             {/* Quick Problem Intent Bar */}
             <div className="mt-8 pt-6 border-t border-white/10">
@@ -193,38 +201,44 @@ export default function Home() {
                   💥 Burst Pipe
                 </Link>
                 <Link
-                  href="/location/houston/drain-cleaning"
+                  href="/services/drain-cleaning"
                   className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
                 >
                   🚰 Clogged Drain
                 </Link>
                 <Link
-                  href="/location/houston/sewer-line-repair"
+                  href="/services/sewer-line-repair"
                   className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
                 >
                   🚽 Sewer Backup
                 </Link>
                 <Link
-                  href="/location/houston/water-heater-repair"
+                  href="/services/water-heater-repair"
                   className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
                 >
-                  🔥 No Hot Water
+                  🔥 Water Heater
                 </Link>
                 <Link
-                  href="/location/houston/leak-detection"
+                  href="/services/leak-detection"
                   className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
                 >
                   💧 Active Leak
+                </Link>
+                <Link
+                  href="/services/pipe-repair"
+                  className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
+                >
+                  🔧 Pipe Repair
                 </Link>
               </div>
             </div>
 
             <div className="mt-8 max-w-3xl rounded-xl border border-white/10 bg-white/5 p-5">
               <p className="text-sm leading-6 text-slate-300">
-                <strong className="text-white">Notice:</strong>{" "}
+                <strong className="text-white">Referral Notice:</strong>{" "}
                 Piperesque is a referral service connecting property owners with independent,
                 third-party plumbing professionals. Piperesque does not employ plumbers, own fleet vehicles,
-                or perform repairs directly. Pricing, warranties, and availability are set by the provider.
+                or perform repairs directly. Pricing, warranties, arrival times, and service availability are set solely by the independent provider.
               </p>
             </div>
 
@@ -240,16 +254,16 @@ export default function Home() {
         <div className="container-custom grid grid-cols-1 divide-y divide-slate-200 py-2 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
 
           <div className="flex items-center justify-center gap-3 px-5 py-5">
-            <Clock3
+            <Phone
               className="text-blue-700"
               size={24}
               aria-hidden="true"
             />
 
             <div>
-              <p className="font-bold">24/7 Requests</p>
+              <p className="font-bold">Direct Phone Access</p>
               <p className="text-sm text-slate-500">
-                Request assistance anytime
+                Call (877) 364-0861
               </p>
             </div>
           </div>
@@ -262,9 +276,9 @@ export default function Home() {
             />
 
             <div>
-              <p className="font-bold">Houston Focused</p>
+              <p className="font-bold">Greater Houston Focus</p>
               <p className="text-sm text-slate-500">
-                Houston & nearby areas
+                Houston &amp; surrounding communities
               </p>
             </div>
           </div>
@@ -279,7 +293,7 @@ export default function Home() {
             <div>
               <p className="font-bold">Independent Providers</p>
               <p className="text-sm text-slate-500">
-                Provider terms may vary
+                Transparent referral model
               </p>
             </div>
           </div>
@@ -483,8 +497,8 @@ export default function Home() {
             </h2>
 
             <p className="text-body-lg mx-auto mt-5">
-              We make it easier to start a plumbing service request without
-              claiming to be the company performing the work.
+              We connect you by telephone with independent plumbing professionals
+              serving Houston and surrounding communities.
             </p>
           </div>
 
@@ -493,21 +507,21 @@ export default function Home() {
             {[
               {
                 number: "01",
-                title: "Describe the Problem",
+                title: "Identify Your Problem",
                 text:
-                  "Tell us what type of plumbing assistance you need and where the problem is located.",
+                  "Note where your leak, drain backup, or water heater issue is located and whether water can be safely shut off.",
               },
               {
                 number: "02",
-                title: "Request Assistance",
+                title: "Call for a Referral",
                 text:
-                  "Call the listed number or submit a service request through the site.",
+                  "Call our referral hotline at (877) 364-0861 to connect with an independent local plumbing service provider.",
               },
               {
                 number: "03",
-                title: "Connect With a Provider",
+                title: "Schedule On-Site Service",
                 text:
-                  "An independent plumbing provider may handle the request based on availability and service area.",
+                  "The independent technician reviews your situation, provides upfront pricing, and schedules repairs directly with you.",
               },
             ].map((step) => (
               <div
@@ -556,23 +570,24 @@ export default function Home() {
 
           <div className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
             {[
-              "Houston",
-              "Pasadena",
-              "Sugar Land",
-              "Pearland",
-              "Missouri City",
-              "Katy",
-              "Cypress",
-              "Spring",
-              "The Woodlands",
-              "Tomball",
+              { name: "Houston", slug: "houston" },
+              { name: "Katy", slug: "katy" },
+              { name: "Sugar Land", slug: "sugar-land" },
+              { name: "Cypress", slug: "cypress" },
+              { name: "Spring", slug: "spring" },
+              { name: "Pearland", slug: "pearland" },
+              { name: "Pasadena", slug: "pasadena" },
+              { name: "Richmond", slug: "richmond" },
+              { name: "Missouri City", slug: "missouri-city" },
+              { name: "The Woodlands", slug: "the-woodlands" },
             ].map((area) => (
-              <span
-                key={area}
-                className="rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white"
+              <Link
+                key={area.slug}
+                href={`/service-areas/${area.slug}`}
+                className="rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15 hover:border-amber-400/50"
               >
-                {area}
-              </span>
+                {area.name}, TX
+              </Link>
             ))}
           </div>
 
@@ -645,6 +660,7 @@ export default function Home() {
       ===================================================== */}
 
       <section className="section section-light">
+        <FAQSchema faqs={faqs} />
         <div className="container-custom">
 
           <div className="mx-auto max-w-3xl">
@@ -692,14 +708,15 @@ export default function Home() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-            Start a service request and connect with an independent plumbing
-            professional serving your area.
+            Call our telephone referral hotline to connect with an independent
+            plumbing professional serving your neighborhood.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
 
             <a
               href="tel:+18773640861"
+              aria-label="Call PipeResque Referral Hotline at (877) 364-0861"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 transition hover:bg-amber-400 shadow-lg shadow-amber-500/20 active:scale-[0.98]"
             >
               <Phone size={20} aria-hidden="true" />
