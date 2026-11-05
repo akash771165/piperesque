@@ -16,7 +16,7 @@ export default function Loading() {
 
         {/* Brand */}
         <h1 className="mt-6 text-2xl font-black tracking-tight text-slate-900">
-          Piperesque
+          PipeResque
         </h1>
 
         {/* Status */}
