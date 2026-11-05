@@ -32,7 +32,7 @@ export async function generateMetadata({
 
   if (!currentLocation) {
     return {
-      title: "Location Not Found | Piperesque",
+      title: "Location Not Found | PipeResque",
       robots: {
         index: false,
         follow: false,
@@ -41,13 +41,13 @@ export async function generateMetadata({
   }
 
   return {
-    title: `Plumbing Services in ${currentLocation.city}, ${currentLocation.stateCode} | Piperesque`,
+    title: `Plumbing Services in ${currentLocation.city}, ${currentLocation.stateCode} | PipeResque`,
     description: `Explore plumbing services available in ${currentLocation.city}, ${currentLocation.state}. Find information about emergency plumbing, drain cleaning, water heater repair, leak detection, and other residential plumbing services.`,
     alternates: {
       canonical: `https://www.piperesque.com/location/${currentLocation.slug}`,
     },
     openGraph: {
-      title: `Plumbing Services in ${currentLocation.city}, ${currentLocation.stateCode} | Piperesque`,
+      title: `Plumbing Services in ${currentLocation.city}, ${currentLocation.stateCode} | PipeResque`,
       description: `Explore plumbing services available in ${currentLocation.city}, ${currentLocation.state}.`,
       url: `https://www.piperesque.com/location/${currentLocation.slug}`,
       type: "website",
@@ -92,7 +92,7 @@ export default async function LocationPage({
               Explore plumbing services available in{" "}
               {currentLocation.city}, {currentLocation.state}. Find
               information about common plumbing problems, service options,
-              and how to connect with a local plumbing professional.
+              and how to learn how to contact independent local plumbing service providers.
             </p>
           </div>
         </div>
