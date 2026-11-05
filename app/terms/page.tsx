@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms & Conditions | PipeResque",
   description:
-    "Review the Terms & Conditions for PipeResque. Learn how our Houston plumbing referral and matching service connects homeowners with independent licensed plumbing contractors.",
+    "Review the Terms & Conditions for PipeResque. Learn how PipeResque helps Houston homeowners contact independent plumbing service providers.",
   alternates: {
     canonical: "https://www.piperesque.com/terms",
   },
