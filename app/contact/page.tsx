@@ -19,14 +19,14 @@ import {
 import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Contact Piperesque | Phone & Email Plumbing Referral in Houston, TX",
+  title: "Contact PipeResque | Phone & Email Plumbing Referral in Houston, TX",
   description:
-    "Contact Piperesque for plumbing assistance in Houston, TX. Call (877) 364-0861 or email resquepipe@gmail.com to connect with independent local plumbing professionals.",
+    "Contact PipeResque for plumbing assistance in Houston, TX. Call (877) 364-0861 or email resquepipe@gmail.com to connect with independent local plumbing professionals.",
   alternates: {
     canonical: `${siteConfig.website}/contact`,
   },
   openGraph: {
-    title: "Contact Piperesque | Plumbing Assistance in Houston, TX",
+    title: "Contact PipeResque | Plumbing Assistance in Houston, TX",
     description:
       "Have questions about plumbing services? Call (877) 364-0861 or email resquepipe@gmail.com to connect with independent plumbing providers in Greater Houston.",
     url: `${siteConfig.website}/contact`,
@@ -50,7 +50,7 @@ export default function ContactPage() {
       <section className="relative overflow-hidden bg-slate-950 py-24 text-white md:py-28">
         <Image
           src="/images/contact.webp"
-          alt="Contact Piperesque plumbing referral team in Houston, TX"
+          alt="Contact PipeResque plumbing referral team in Houston, TX"
           fill
           priority
           sizes="100vw"
@@ -66,12 +66,12 @@ export default function ContactPage() {
           </div>
 
           <h1 className="mt-6 text-4xl font-black tracking-tight text-white sm:text-5xl md:text-6xl">
-            Contact Piperesque
+            Contact PipeResque
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
             Have questions about plumbing services or our website? Contact us by phone
-            or email. Piperesque helps connect homeowners with independent plumbing service
+            or email. PipeResque helps connect homeowners with independent plumbing service
             providers serving Houston and nearby communities.
           </p>
 
@@ -112,14 +112,14 @@ export default function ContactPage() {
 
                 <div className="mt-6">
                   <span className="text-xs font-bold uppercase tracking-wider text-amber-900">
-                    Fastest Response • Tap to Call
+                    CALL THE REFERRAL LINE • TAP TO CALL
                   </span>
                   <h2 className="mt-1 text-2xl font-black text-slate-900">
                     Phone Contact
                   </h2>
                   <p className="mt-3 text-slate-600 leading-7">
                     For urgent plumbing issues, burst pipes, drain clogs, or immediate questions,
-                    calling our telephone line connects you directly to service routing.
+                    call the PipeResque referral line to discuss the issue and ask about independent-provider referral options.
                   </p>
                 </div>
 
@@ -215,7 +215,7 @@ export default function ContactPage() {
                 <h3 className="font-bold text-slate-900">Availability</h3>
               </div>
               <p className="mt-3 text-slate-600">
-                You can contact us anytime. Service availability depends on your location and the availability of independent plumbing service providers.
+                Call the PipeResque referral line or email us with your inquiry. Independent providers determine their own service hours and availability.
               </p>
             </div>
           </div>
@@ -229,8 +229,8 @@ export default function ContactPage() {
                   Important Information About Our Service
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Piperesque is an informational and lead-generation website connecting users with independent
-                  third-party plumbing providers. Piperesque does not directly perform plumbing work, employ
+                  PipeResque is an informational and lead-generation website connecting users with independent
+                  third-party plumbing providers. PipeResque does not directly perform plumbing work, employ
                   plumbers, own fleet vehicles, dispatch technicians, or guarantee arrival times, pricing,
                   or service availability. All quotes, scheduling, diagnostic fees, and warranties are
                   determined solely by the independent plumbing provider servicing the request.
