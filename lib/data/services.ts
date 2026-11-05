@@ -43,7 +43,7 @@ export const services: Service[] = [
     shortTitle: "Emergency Plumbing",
 
     seoTitle:
-      "Emergency Plumbing Services | Piperesque",
+      "Emergency Plumbing Services | PipeResque",
 
     metaDescription:
       "Information about emergency plumbing problems including burst pipes, major leaks, sewer backups, and other urgent plumbing issues.",
@@ -85,7 +85,7 @@ export const services: Service[] = [
     shortTitle: "Drain Cleaning",
 
     seoTitle:
-      "Drain Cleaning Services | Piperesque",
+      "Drain Cleaning Services | PipeResque",
 
     metaDescription:
       "Learn about drain cleaning for slow or blocked sinks, showers, tubs, toilets, and other plumbing drainage problems.",
@@ -127,7 +127,7 @@ export const services: Service[] = [
     shortTitle: "Water Heater Repair",
 
     seoTitle:
-      "Water Heater Repair Services | Piperesque",
+      "Water Heater Repair Services | PipeResque",
 
     metaDescription:
       "Learn about water heater problems including insufficient hot water, leaks, unusual noises, and possible repair or replacement options.",
@@ -169,7 +169,7 @@ export const services: Service[] = [
     shortTitle: "Leak Detection",
 
     seoTitle:
-      "Leak Detection Services | Piperesque",
+      "Leak Detection Services | PipeResque",
 
     metaDescription:
       "Learn about detecting hidden plumbing leaks, unexplained water loss, damp areas, and other signs of possible plumbing leaks.",
@@ -210,7 +210,7 @@ export const services: Service[] = [
     shortTitle: "Pipe Repair",
 
     seoTitle:
-      "Pipe Repair Services | Piperesque",
+      "Pipe Repair Services | PipeResque",
 
     metaDescription:
       "Learn about leaking, damaged, broken, and deteriorating plumbing pipes and the repair options that may be appropriate.",
@@ -252,7 +252,7 @@ export const services: Service[] = [
     shortTitle: "Sewer Line Repair",
 
     seoTitle:
-      "Sewer Line Repair Services | Piperesque",
+      "Sewer Line Repair Services | PipeResque",
 
     metaDescription:
       "Learn about sewer line problems including recurring backups, damaged pipes, root intrusion, blockages, and sewer repair options.",
@@ -294,7 +294,7 @@ export const services: Service[] = [
     shortTitle: "Toilet Repair",
 
     seoTitle:
-      "Toilet Repair Services | Piperesque",
+      "Toilet Repair Services | PipeResque",
 
     metaDescription:
       "Learn about clogged, leaking, overflowing, and continuously running toilets and the plumbing repair options available.",
@@ -336,7 +336,7 @@ export const services: Service[] = [
     shortTitle: "Faucet Repair",
 
     seoTitle:
-      "Faucet Repair Services | Piperesque",
+      "Faucet Repair Services | PipeResque",
 
     metaDescription:
       "Learn about leaking, dripping, damaged, and malfunctioning kitchen and bathroom faucets and available repair options.",
@@ -377,7 +377,7 @@ export const services: Service[] = [
     shortTitle: "Commercial Plumbing",
 
     seoTitle:
-      "Commercial Plumbing Services | Piperesque",
+      "Commercial Plumbing Services | PipeResque",
 
     metaDescription:
       "Learn about commercial plumbing problems, maintenance considerations, repairs, drainage, water heaters, leaks, and other plumbing services for commercial properties.",
@@ -419,7 +419,7 @@ export const services: Service[] = [
     shortTitle: "Residential Plumbing",
 
     seoTitle:
-      "Residential Plumbing Services | Piperesque",
+      "Residential Plumbing Services | PipeResque",
 
     metaDescription:
       "Learn about residential plumbing problems including leaks, clogged drains, fixtures, water heaters, pipes, and emergency plumbing situations.",
