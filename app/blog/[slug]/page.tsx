@@ -49,7 +49,7 @@ export async function generateMetadata({
   const title =
     blog.seo?.title ||
     blog.title ||
-    "Plumbing Guide | Piperesque";
+    "Plumbing Guide | PipeResque";
 
   const description =
     blog.seo?.description ||
