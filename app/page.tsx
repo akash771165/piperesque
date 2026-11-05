@@ -537,7 +537,7 @@ export default function Home() {
               },
               {
                 number: "03",
-                title: "Schedule On-Site Service",
+                title: "Confirm Provider Options",
                 text:
                   "The independent provider can explain its availability, diagnostic fees, pricing, and scheduling directly. Confirm the scope and terms before authorizing work.",
               },
