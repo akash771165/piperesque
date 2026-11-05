@@ -12,25 +12,25 @@ import { Phone, CheckCircle2, ShieldCheck, Clock, Wrench } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "About Piperesque | Plumbing Connection Service in Houston, TX",
+  title: "About PipeResque | Plumbing Connection Service in Houston, TX",
   description:
-    "Learn about Piperesque: how we help Houston homeowners find and connect with independent local plumbing professionals for emergency and routine repairs.",
+    "Learn about PipeResque: how we help Houston homeowners find and connect with independent local plumbing professionals for emergency and routine repairs.",
   alternates: {
     canonical: `${siteConfig.website}/about`,
   },
   openGraph: {
-    title: "About Piperesque | Houston Plumbing Resource",
+    title: "About PipeResque | Houston Plumbing Resource",
     description:
-      "Learn about Piperesque: how we help Houston homeowners find and connect with independent local plumbing professionals for emergency and routine repairs.",
+      "Learn about PipeResque: how we help Houston homeowners find and connect with independent local plumbing professionals for emergency and routine repairs.",
     url: `${siteConfig.website}/about`,
     siteName: siteConfig.company,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Piperesque | Houston Plumbing Resource",
+    title: "About PipeResque | Houston Plumbing Resource",
     description:
-      "Learn about Piperesque: how we help Houston homeowners find and connect with independent local plumbing professionals.",
+      "Learn about PipeResque: how we help Houston homeowners find and connect with independent local plumbing professionals.",
   },
 };
 
@@ -65,11 +65,11 @@ export default function AboutPage() {
           </p>
 
           <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl lg:text-6xl tracking-tight">
-            Connecting Houston Homeowners With Qualified Plumbers
+            Connecting Houston Homeowners With Independent Plumbing Providers
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-slate-300">
-            When a plumbing emergency occurs, time matters. Piperesque provides a fast, straightforward way to reach independent local plumbing service providers across Greater Houston.
+            When a plumbing emergency occurs, time matters. PipeResque provides a straightforward way to explore plumbing information and contact independent service providers across Greater Houston.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -97,7 +97,7 @@ export default function AboutPage() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-slate-200 shadow-xl bg-slate-100">
             <Image
               src="/images/plumber-1.webp"
-              alt="Independent licensed plumbing professional inspecting residential pipework"
+              alt="Independent plumbing professional inspecting residential pipework"
               fill
               loading="lazy"
               sizes="(max-width:1024px)100vw,50vw"
@@ -119,14 +119,14 @@ export default function AboutPage() {
             </p>
 
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Piperesque serves as a dedicated informational bridge. We do not dispatch our own trucks or employ plumbers directly; instead, we partner with independent service networks and lead providers to route your call or inquiry to licensed local professionals who can assist you.
+              PipeResque is an informational referral platform. It does not employ plumbers, operate service vehicles, or perform plumbing work. It helps homeowners contact independent plumbing service providers. Each provider is responsible for its own credentials, availability, pricing, scheduling, and workmanship. Homeowners should confirm relevant licenses, insurance, and terms directly with the provider.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2 text-sm font-semibold text-slate-800">
               {[
-                "Direct Phone Routing",
+                "Referral Line Access",
                 "Independent Local Providers",
-                "Clear Disclaimers & Pricing",
+                "Clear Referral Information",
                 "Emergency & Routine Repairs",
                 "Drain & Sewer Line Solutions",
                 "Water Heater Assistance",
@@ -164,9 +164,9 @@ export default function AboutPage() {
 
             <div className="card p-7 bg-white">
               <Wrench size={32} className="text-blue-700" />
-              <h3 className="mt-4 text-xl font-bold text-slate-950">Direct Estimates</h3>
+              <h3 className="mt-4 text-xl font-bold text-slate-950">Provider-Set Pricing</h3>
               <p className="mt-2 text-sm text-slate-600 leading-6">
-                All pricing, diagnostics, repair estimates, and warranties are quoted directly by the independent service professional before work begins.
+                Pricing, diagnostic fees, repair estimates, and warranties are set by the independent provider. Confirm the details directly before authorizing work.
               </p>
             </div>
 
@@ -181,7 +181,7 @@ export default function AboutPage() {
 
           <div className="mt-12 rounded-2xl border border-blue-200 bg-blue-50/60 p-6 text-sm leading-6 text-slate-700">
             <p>
-              <strong className="font-semibold text-slate-900">Legal Notice:</strong> Piperesque is a lead-referral website. Piperesque does not own or operate a plumbing company and does not warrant the workmanship or representations of independent providers. Customers are encouraged to confirm licenses, insurance, and terms with the servicing contractor.
+              <strong className="font-semibold text-slate-900">Legal Notice:</strong> PipeResque is a lead-referral website. PipeResque does not own or operate a plumbing company and does not warrant the workmanship or representations of independent providers. Customers are encouraged to confirm licenses, insurance, and terms with the servicing contractor.
             </p>
           </div>
         </div>
