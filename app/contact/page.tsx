@@ -4,6 +4,8 @@ import Image from "next/image";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
+import OrganizationSchema from "@/components/seo/organization-schema";
+import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 
 import {
   Phone,
@@ -35,6 +37,13 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="overflow-x-hidden bg-white text-slate-900">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: siteConfig.website },
+          { name: "Contact", url: `${siteConfig.website}/contact` },
+        ]}
+      />
+      <OrganizationSchema />
       <Navbar />
 
       {/* Hero Section */}
@@ -70,6 +79,8 @@ export default function ContactPage() {
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a
               href={`tel:${siteConfig.phone}`}
+              data-event="phone_click_contact"
+              aria-label={`Call PipeResque at ${siteConfig.phoneDisplay}`}
               className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-amber-500 px-8 py-4 text-base font-black text-slate-950 shadow-lg shadow-amber-500/25 transition hover:bg-amber-400 active:scale-[0.98]"
             >
               <Phone size={20} aria-hidden="true" />
@@ -125,6 +136,8 @@ export default function ContactPage() {
               <div className="mt-8 pt-6 border-t border-amber-200/60">
                 <a
                   href={`tel:${siteConfig.phone}`}
+                  data-event="phone_click_contact"
+                  aria-label={`Call Now at ${siteConfig.phoneDisplay}`}
                   className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-amber-500 px-6 py-3.5 text-base font-black text-slate-950 shadow-sm transition hover:bg-amber-400 active:scale-[0.98]"
                 >
                   <Phone size={18} aria-hidden="true" />

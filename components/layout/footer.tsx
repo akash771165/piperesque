@@ -116,6 +116,7 @@ export default function Footer() {
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
             <a
               href={`tel:${siteConfig.phone}`}
+              data-event="phone_click_footer"
               aria-label={`Call Piperesque at ${siteConfig.phoneDisplay}`}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-amber-500 px-7 py-4 font-black text-slate-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 shadow-lg active:scale-95"
             >
@@ -255,6 +256,7 @@ export default function Footer() {
                   <h3 className="font-semibold text-white">Phone</h3>
                   <a
                     href={`tel:${siteConfig.phone}`}
+                    data-event="phone_click_footer"
                     className="mt-1 inline-block break-words text-sm leading-6 text-slate-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
                   >
                     {siteConfig.phoneDisplay}

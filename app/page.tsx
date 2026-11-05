@@ -13,6 +13,7 @@ import {
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import FAQSchema from "@/components/seo/faq-schema";
+import OrganizationSchema from "@/components/seo/organization-schema";
 
 export const metadata: Metadata = {
   title: "Emergency Plumbing Help in Houston, TX | Piperesque",
@@ -137,6 +138,7 @@ const faqs = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-white text-slate-900">
+      <OrganizationSchema />
       <Navbar />
 
       {/* =====================================================
@@ -155,18 +157,34 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-              Emergency Plumbing Help in Houston, TX
+              Plumbing Problems in Houston? Start With the Right Next Step.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-              Dealing with a burst pipe, severe leak, clogged drain, sewer backup,
-              or water heater failure? Piperesque connects Greater Houston homeowners
-              with independent, third-party plumbing professionals.
+              Facing a burst pipe, backed-up drain, hidden leak, sewer blockage, or failing water heater?
+              Explore your plumbing concern and connect with independent plumbing providers through the PipeResque referral line.
             </p>
+
+            {/* 3 Verifiable Benefit Points */}
+            <div className="mt-6 grid gap-2.5 sm:grid-cols-3 max-w-2xl text-sm text-slate-200">
+              <div className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2 border border-white/10">
+                <CheckCircle2 size={16} className="text-emerald-400 shrink-0" aria-hidden="true" />
+                <span>Discuss your concern</span>
+              </div>
+              <div className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2 border border-white/10">
+                <CheckCircle2 size={16} className="text-emerald-400 shrink-0" aria-hidden="true" />
+                <span>Understand next steps</span>
+              </div>
+              <div className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2 border border-white/10">
+                <CheckCircle2 size={16} className="text-emerald-400 shrink-0" aria-hidden="true" />
+                <span>Connect with providers</span>
+              </div>
+            </div>
 
             <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
               <a
                 href="tel:+18773640861"
+                data-event="phone_click_hero"
                 aria-label="Call PipeResque Referral Hotline at (877) 364-0861"
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-amber-500 px-8 py-4 text-base md:text-lg font-black text-slate-950 shadow-lg shadow-amber-500/25 transition hover:bg-amber-400 active:scale-[0.98]"
               >
@@ -175,10 +193,10 @@ export default function Home() {
               </a>
 
               <Link
-                href="/contact"
+                href="/services"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-7 py-4 text-base font-semibold text-white transition hover:bg-white hover:text-slate-950"
               >
-                Contact Options
+                Explore Service Guides
                 <ArrowRight size={19} aria-hidden="true" />
               </Link>
             </div>
@@ -716,6 +734,7 @@ export default function Home() {
 
             <a
               href="tel:+18773640861"
+              data-event="phone_click_content"
               aria-label="Call PipeResque Referral Hotline at (877) 364-0861"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 transition hover:bg-amber-400 shadow-lg shadow-amber-500/20 active:scale-[0.98]"
             >

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config/site";
+import { trackPhoneClick } from "@/lib/analytics/track";
 import {
   Menu,
   X,
@@ -107,6 +108,12 @@ export default function Navbar() {
             <span className="text-slate-500">|</span>
             <a
               href={`tel:${siteConfig.phone}`}
+              data-event="phone_click_header"
+              onClick={() =>
+                trackPhoneClick("phone_click_header", {
+                  location: "top_utility_bar",
+                })
+              }
               className="font-bold text-amber-400 hover:text-amber-300 transition"
             >
               Direct: {siteConfig.phoneDisplay}
@@ -243,6 +250,12 @@ export default function Navbar() {
           <div className="hidden items-center gap-3 md:flex">
             <a
               href={`tel:${siteConfig.phone}`}
+              data-event="phone_click_header"
+              onClick={() =>
+                trackPhoneClick("phone_click_header", {
+                  location: "desktop_nav",
+                })
+              }
               aria-label={`Call Now at ${siteConfig.phoneDisplay}`}
               className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3 text-sm font-black text-slate-950 shadow-md transition hover:bg-amber-400 hover:shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
             >
@@ -355,6 +368,12 @@ export default function Navbar() {
               <div className="pt-3 space-y-2.5">
                 <a
                   href={`tel:${siteConfig.phone}`}
+                  data-event="phone_click_header"
+                  onClick={() =>
+                    trackPhoneClick("phone_click_header", {
+                      location: "mobile_drawer",
+                    })
+                  }
                   aria-label={`Call Now: ${siteConfig.phoneDisplay}`}
                   className="flex items-center justify-center gap-2.5 w-full rounded-xl bg-amber-500 py-3.5 px-4 text-center font-black text-slate-950 shadow transition active:scale-95 hover:bg-amber-400"
                 >
@@ -370,6 +389,12 @@ export default function Navbar() {
       {/* Floating Desktop Hotline Card */}
       <a
         href={`tel:${siteConfig.phone}`}
+        data-event="phone_click_sticky"
+        onClick={() =>
+          trackPhoneClick("phone_click_sticky", {
+            location: "desktop_floating_badge",
+          })
+        }
         aria-label={`Call PipeResque Referral Hotline at ${siteConfig.phoneDisplay}`}
         className="fixed bottom-6 right-6 z-40 hidden md:inline-flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-slate-950 text-white border border-slate-800 shadow-2xl hover:scale-105 transition-all group"
       >
@@ -388,7 +413,13 @@ export default function Navbar() {
       <div className="fixed bottom-0 inset-x-0 z-50 px-3 pt-2 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] bg-slate-950/95 backdrop-blur-md border-t border-slate-800 md:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
         <a
           href={`tel:${siteConfig.phone}`}
-          aria-label={`Call Now at ${siteConfig.phoneDisplay}`}
+          data-event="phone_click_sticky"
+          onClick={() =>
+            trackPhoneClick("phone_click_sticky", {
+              location: "mobile_bottom_bar",
+            })
+          }
+          aria-label={`Call PipeResque Referral Line at ${siteConfig.phoneDisplay}`}
           className="flex items-center justify-center gap-2.5 w-full py-3.5 px-4 rounded-xl bg-amber-500 active:bg-amber-600 text-slate-950 font-black text-base shadow-lg transition"
         >
           <Phone size={18} className="fill-slate-950" aria-hidden="true" />

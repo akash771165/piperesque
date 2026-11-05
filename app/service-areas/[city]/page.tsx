@@ -122,6 +122,8 @@ export default async function CityPage({
 
               <a
                 href={`tel:${siteConfig.phone}`}
+                data-event="phone_click_service"
+                aria-label={`Call PipeResque for ${city.name} plumbing at ${siteConfig.phoneDisplay}`}
                 className="rounded-xl bg-amber-500 px-7 py-3.5 font-black text-slate-950 hover:bg-amber-400 transition shadow-lg shadow-amber-500/20 active:scale-[0.98]"
               >
                 Call {siteConfig.phoneDisplay}

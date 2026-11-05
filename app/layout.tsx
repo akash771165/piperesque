@@ -7,6 +7,7 @@ const SpeedInsights = () => null;
 import "./globals.css";
 
 import ClarityProvider from "@/components/providers/clarity";
+import PhoneClickTracker from "@/components/providers/phone-tracker";
 import { siteConfig } from "@/lib/config/site";
 
 /* =========================================================
@@ -165,6 +166,9 @@ export default function RootLayout({
         className="min-h-screen bg-white text-slate-900 antialiased"
       >
         {children}
+
+        {/* Global Conversion Tracking */}
+        <PhoneClickTracker />
 
         {/* Microsoft Clarity */}
         <ClarityProvider />

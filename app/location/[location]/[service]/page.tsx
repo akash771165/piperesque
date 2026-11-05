@@ -1536,15 +1536,12 @@ export default async function LocationServicePage({ params }: Props) {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
 
               <a
-
                 href="tel:+18773640861"
-
-                className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3 text-base font-semibold text-white transition hover:bg-gray-800"
-
+                data-event="phone_click_service"
+                aria-label={`Call PipeResque for ${serviceName} at (877) 364-0861`}
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-7 py-3.5 text-base font-black text-slate-950 transition hover:bg-amber-400 shadow-md shadow-amber-500/20 active:scale-95"
               >
-
                 Call (877) 364-0861
-
               </a>
 
 
@@ -1942,15 +1939,12 @@ export default async function LocationServicePage({ params }: Props) {
 
 
                 <a
-
                   href="tel:+18773640861"
-
-                  className="mt-6 block rounded-lg bg-black px-5 py-3 text-center font-semibold text-white transition hover:bg-gray-800"
-
+                  data-event="phone_click_service"
+                  aria-label="Call PipeResque referral line at (877) 364-0861"
+                  className="mt-6 block rounded-xl bg-amber-500 px-5 py-3.5 text-center font-black text-slate-950 transition hover:bg-amber-400 shadow-sm active:scale-95"
                 >
-
                   Call (877) 364-0861
-
                 </a>
 
 
@@ -2066,15 +2060,12 @@ export default async function LocationServicePage({ params }: Props) {
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
 
             <a
-
               href="tel:+18773640861"
-
-              className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-gray-950 transition hover:bg-gray-100"
-
+              data-event="phone_click_service"
+              aria-label="Call PipeResque referral line at (877) 364-0861"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 transition hover:bg-amber-400 shadow-lg active:scale-95"
             >
-
               Call (877) 364-0861
-
             </a>
 
 

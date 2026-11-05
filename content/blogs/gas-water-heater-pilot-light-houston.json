@@ -1,0 +1,93 @@
+{
+  "slug": "gas-water-heater-pilot-light-houston",
+  "title": "Gas Water Heater Pilot Light Troubleshooting & Thermocouple Repair Houston",
+  "description": "Gas water heater pilot light won't stay lit in Houston, TX? Learn thermocouple symptoms, gas control valve issues, combustion safety, and professional repair options.",
+  "author": "PipeResque Editorial Team",
+  "category": "Water Heater Repair",
+  "image": "/images/services/water-heater-repair.webp",
+  "imageAlt": "Gas water heater pilot light and thermocouple repair in Houston, TX",
+  "publishedAt": "2026-11-05",
+  "updatedAt": "2026-11-05",
+  "readingTime": "8 min read",
+  "keywords": [
+    "gas water heater pilot light Houston",
+    "water heater thermocouple replacement Houston",
+    "pilot light keeps going out Houston TX",
+    "gas control valve water heater repair"
+  ],
+  "seo": {
+    "title": "Water Heater Pilot Light Won't Light Houston TX | PipeResque",
+    "description": "Cold water and a pilot flame that won't stay lit in Houston? Understand thermocouple testing, gas control valve diagnostics, and when to call a professional.",
+    "canonical": "https://www.piperesque.com/blog/gas-water-heater-pilot-light-houston",
+    "focusKeyword": "gas water heater pilot light Houston",
+    "searchIntent": "commercial"
+  },
+  "introduction": [
+    "Waking up to cold water and discovering the small blue pilot flame beneath your gas water heater has extinguished is one of the most frequent plumbing issues reported by Houston property owners.",
+    "While relighting a pilot light following the lighting instructions printed on the tank's jacket is a routine homeowner task, a pilot flame that repeatedly goes out immediately after releasing the control knob points to an underlying mechanical failure.",
+    "In gas water heating systems, safety mechanisms are engineered to completely shut off gas flow if the pilot flame fails, preventing explosive natural gas or carbon monoxide from collecting in your home. Understanding the thermocouple, thermopile, and burner assembly helps homeowners know when to contact a qualified technician."
+  ],
+  "sections": [
+    {
+      "id": "how-thermocouple-works",
+      "title": "How the Thermocouple Protects Your Home",
+      "subtitle": "The thermoelectric safety sensor that controls gas delivery",
+      "content": [
+        "The thermocouple is a small copper tube containing two dissimilar metal wires welded together at the tip. When the pilot flame burns steadily against this tip, heat produces a tiny electrical current—typically 20 to 30 millivolts.",
+        "This small voltage energizes an electromagnet inside the gas control valve, holding an internal gas port open. If the pilot flame blows out or the thermocouple wears out, voltage drops to zero within seconds, snapping the gas valve shut.",
+        "On modern electronic ignition water heaters, a thermopile or electronic flame sensor performs an equivalent safety function, generating higher voltage (typically 300 to 750 millivolts) to power electronic status indicators and gas solenoids."
+      ]
+    },
+    {
+      "id": "reasons-pilot-goes-out",
+      "title": "Top Reasons a Water Heater Pilot Flame Won't Stay Lit",
+      "subtitle": "From dirty sensors to draft conditions in Texas attics and utility closets",
+      "content": [
+        "If holding down the pilot button produces a flame, but the flame vanishes the moment you release the knob, consider these common mechanical causes:"
+      ],
+      "bullets": [
+        "Defective or Carbon-Fouled Thermocouple: Soot and mineral deposits insulate the thermocouple tip from flame heat, preventing it from generating sufficient millivolts.",
+        "Misaligned Thermocouple: The tip must be directly engulfed by the top third of the pilot flame. If bent away during cleaning, it cannot sense temperature.",
+        "Clogged Pilot Orifice Tube: Tiny dust particles, spider webs, or rust flakes can restrict gas flow to the pilot orifice, creating a weak yellow flicker instead of a sharp, intense blue cone.",
+        "Tripped Thermal Cutoff Switch (TCO): Sealed combustion chambers include a thermal safety fuse that permanently opens if internal burner temperatures exceed safety thresholds.",
+        "Failed Gas Control Valve: If the thermocouple produces valid millivolts tested with a multimeter, but the internal magnet fails to hold, the entire gas valve requires replacement."
+      ],
+      "warning": "If you smell a pungent rotten-egg odor (mercaptan) or hear continuous hissing gas, evacuate the house immediately and contact your gas utility or emergency responders from a safe distance outside."
+    },
+    {
+      "id": "professional-diagnostic-steps",
+      "title": "What Professional Technicians Check During Pilot Service",
+      "subtitle": "Ensuring safe gas combustion and draft in Houston homes",
+      "content": [
+        "When an independent plumbing professional responds to a recurring pilot light failure, they follow strict safety diagnostic protocols:"
+      ],
+      "numberedList": [
+        "Gas supply pressure testing: Verifies correct incoming inches of water column (WC) using a digital manometer.",
+        "Open-circuit and closed-circuit millivolt testing: Accurately isolates whether the thermocouple or the gas control valve has failed.",
+        "Burner and spark igniter inspection: Cleans carbon build-up from burner ports and ensures proper spark gap.",
+        "Flue draft verification: Tests that combustion gases vent freely up through the chimney rather than back-drafting into the living space."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I replace a water heater thermocouple myself?",
+      "answer": "While replacement thermocouples are sold at hardware stores, accessing the burner assembly requires disconnecting gas lines, removing the sealed burner door gasket, and ensuring gas-tight resealing. Professional service is strongly recommended to prevent dangerous gas leaks."
+    },
+    {
+      "question": "How long does a water heater thermocouple typically last in Houston?",
+      "answer": "A thermocouple operates under extreme heat and typically lasts 5 to 8 years. Replacing the thermocouple is one of the most common and economical repairs for aging gas water heaters."
+    },
+    {
+      "question": "What does a yellow pilot light mean compared to blue?",
+      "answer": "A healthy pilot flame should be crisp, bright blue with a tiny yellow tip. A lazy, predominantly yellow flame indicates incomplete combustion caused by dirt or inadequate intake oxygen, which can generate hazardous carbon monoxide."
+    }
+  ],
+  "callToAction": {
+    "title": "Water Heater Pilot Light Won't Stay Lit in Houston?",
+    "description": "Connect with an independent local plumbing contractor to inspect gas valves, test thermocouples, and safely restore hot water to your home.",
+    "button": "Call (877) 364-0861",
+    "phone": "(877) 364-0861",
+    "url": "tel:+18773640861"
+  }
+}

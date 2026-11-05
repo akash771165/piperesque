@@ -5,6 +5,8 @@ import Link from "next/link";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
+import OrganizationSchema from "@/components/seo/organization-schema";
+import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 
 import { Phone, CheckCircle2, ShieldCheck, Clock, Wrench } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
@@ -35,6 +37,13 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="overflow-x-hidden bg-white text-slate-900">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: siteConfig.website },
+          { name: "About Us", url: `${siteConfig.website}/about` },
+        ]}
+      />
+      <OrganizationSchema />
       <Navbar />
 
       {/* Hero */}

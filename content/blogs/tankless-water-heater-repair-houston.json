@@ -1,0 +1,102 @@
+{
+  "slug": "tankless-water-heater-repair-houston",
+  "title": "Tankless Water Heater Repair Houston TX: Error Codes, Descaling & Solutions",
+  "description": "Tankless water heater flashing error codes, shutting off mid-shower, or blowing cold water in Houston, TX? Understand heat exchanger scale, ignition failures, and repair options.",
+  "author": "PipeResque Editorial Team",
+  "category": "Water Heater Repair",
+  "image": "/images/services/water-heater-repair.webp",
+  "imageAlt": "Tankless water heater diagnostic inspection and descaling in Houston, TX",
+  "publishedAt": "2026-11-05",
+  "updatedAt": "2026-11-05",
+  "readingTime": "9 min read",
+  "keywords": [
+    "tankless water heater repair Houston",
+    "tankless water heater error codes Houston",
+    "tankless flush descaling Houston TX",
+    "Rinnai repair Houston",
+    "Navien repair Houston TX"
+  ],
+  "seo": {
+    "title": "Tankless Water Heater Repair Houston TX | PipeResque",
+    "description": "Experiencing cold water sandwich, error codes, or scale buildup on your tankless water heater in Houston? Understand troubleshooting, maintenance flushes, and repair.",
+    "canonical": "https://www.piperesque.com/blog/tankless-water-heater-repair-houston",
+    "focusKeyword": "tankless water heater repair Houston",
+    "searchIntent": "commercial"
+  },
+  "introduction": [
+    "On-demand tankless water heaters deliver high energy efficiency and endless hot water under normal conditions. However, when an on-demand unit suddenly shuts down mid-shower or flashes cryptic error codes, homeowners across Greater Houston face unique mechanical challenges.",
+    "Unlike conventional storage tanks that simply hold heated water, tankless systems are sophisticated micro-boiler appliances combining electronic circuit boards, modulating gas valves, vent sensors, flow turbines, and high-conductivity copper heat exchangers.",
+    "In Houston, high water hardness and mineral content frequently precipitate inside narrow heat exchanger fins, while gas supply pressure fluctuations can trigger burner lockouts. Understanding these common failure points helps property owners recognize when professional service is required."
+  ],
+  "sections": [
+    {
+      "id": "common-tankless-symptoms",
+      "title": "Signs Your Houston Tankless Water Heater Needs Service",
+      "subtitle": "Recognizing heat exchanger, sensor, and combustion issues early",
+      "content": [
+        "Tankless units incorporate electronic safety sensors that monitor water temperature, exhaust draft, and burner flame rectification. When operating parameters deviate, the unit shuts off to protect against heat damage or carbon monoxide buildup."
+      ],
+      "bullets": [
+        "The 'Cold Water Sandwich': Water runs hot for 30 seconds, turns freezing cold, and then gradually reheats. While common during brief on/off fixture cycles, persistent temperature swings indicate a sticking flow sensor or mineral buildup.",
+        "System Shuts Down During Showers: High demand triggers an exhaust temperature safety limit, frequently caused by restricted venting or calcified heat exchanger coils.",
+        "Flashing Error Codes on the Digital Panel: Codes (such as Rinnai Code 11, Navien E003, or Noritz 11) signal ignition failure, flame rod fouling, or lack of proper gas supply.",
+        "Unusual Humming, Clicking or Rattling Sounds: Clicking indicates repeated spark igniter attempts without burner ignition, while vibrating noises often stem from a dirty combustion fan or scaled heat exchanger."
+      ]
+    },
+    {
+      "id": "houston-hard-water-descaling",
+      "title": "Why Houston Water Requires Regular Tankless Descaling",
+      "subtitle": "Hard calcium carbonate scale acts as thermal insulation on heat exchangers",
+      "content": [
+        "Water supplied across Greater Houston contains dissolved calcium and magnesium minerals. In a tankless unit, water is superheated almost instantly as it passes through thin copper or stainless steel heat exchanger tubing.",
+        "This rapid temperature rise causes minerals to precipitate out of suspension and bake onto the interior pipe walls as rock-hard limescale. Scale acts as an insulator, forcing the gas burner to burn hotter and longer to transfer heat into the water.",
+        "If left unaddressed, thermal stress eventually causes the heat exchanger wall to overheat, crack, and leak water directly into the sealed combustion chamber—resulting in costly total unit replacement."
+      ],
+      "warning": "Never run harsh muriatic acid through a residential tankless heat exchanger. Manufacturers require circulating food-grade virgin white vinegar or approved non-corrosive citric acid solutions using an isolation valve kit and submersible pump."
+    },
+    {
+      "id": "gas-pressure-venting",
+      "title": "Gas Supply and Intake Venting Issues in Texas Homes",
+      "subtitle": "High BTU requirements and concentric venting considerations",
+      "content": [
+        "Whole-house gas tankless water heaters demand massive gas flow rates—typically between 150,000 and 199,000 BTUs per hour during peak demand. In comparison, a standard 40-gallon tank heater requires only 36,000 to 40,000 BTUs.",
+        "If a tankless unit was installed without upgrading the gas supply line from 1/2-inch to 3/4-inch, or if the gas meter capacity is undersized, the burner may starve for fuel when central heat or pool heaters ignite simultaneously.",
+        "Additionally, Houston's humid subtropical climate and heavy summer rains can introduce debris or insect nests into outdoor concentric PVC or polypropylene intake vents, choking the unit of combustion air."
+      ]
+    },
+    {
+      "id": "repair-vs-replace",
+      "title": "Repair vs. Replacement: What Houston Property Owners Should Consider",
+      "subtitle": "Evaluating equipment age, parts availability, and heat exchanger condition",
+      "content": [
+        "When an independent plumbing technician evaluates a malfunctioning tankless unit, several key factors determine whether component repair or full replacement is appropriate:"
+      ],
+      "numberedList": [
+        "Unit Age: Well-maintained tankless systems typically last 15 to 20 years. Units approaching 15 years with multiple failed electronic boards or obsolete parts may be more cost-effective to replace.",
+        "Heat Exchanger Integrity: If the heat exchanger has ruptured from scale, replacement costs often rival installing a brand-new high-efficiency unit with fresh factory warranties.",
+        "Electronic Sensors and Valves: Flame sensors, igniters, thermistors, water flow servos, and PC boards can readily be replaced individually by experienced technicians."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How often should a tankless water heater be flushed in Houston?",
+      "answer": "In Greater Houston, tankless manufacturers strongly recommend an annual descaling flush (every 12 months) due to local hard water mineral content. Homes without whole-house water softeners may require flushing every 9 to 12 months."
+    },
+    {
+      "question": "Why is my tankless water heater displaying an ignition failure error code?",
+      "answer": "Ignition failure error codes are commonly caused by a closed gas shut-off valve, dirty flame sensors with carbon buildup, low gas supply pressure, moisture in the electrical igniter, or blocked air intake vents."
+    },
+    {
+      "question": "Can I replace a tank water heater with a tankless unit in my Houston home?",
+      "answer": "Yes. However, retrofitting typically requires verifying that your natural gas line diameter (often requiring 3/4-inch supply), gas meter regulator, dedicated 120V electrical outlet, and direct-vent exhaust routing through the roof or sidewall meet Houston building codes."
+    }
+  ],
+  "callToAction": {
+    "title": "Need Tankless Water Heater Repair in Houston?",
+    "description": "Connect with an independent local plumbing contractor specializing in tankless diagnostics, descaling, and burner repair throughout Greater Houston.",
+    "button": "Call (877) 364-0861",
+    "phone": "(877) 364-0861",
+    "url": "tel:+18773640861"
+  }
+}

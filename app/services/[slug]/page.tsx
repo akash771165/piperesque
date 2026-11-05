@@ -587,18 +587,18 @@ export async function generateMetadata({
   const content = serviceContent[service.slug];
 
   return {
-    title: `${service.shortTitle} | Plumbing Services | Piperesque`,
+    title: `${service.title} in Houston, TX | PipeResque`,
     description:
       content?.overview ??
-      `${service.shortTitle} information and plumbing service options from Piperesque.`,
+      `${service.title} in Houston, Texas: Understand common symptoms, repair options, and connect with independent local plumbing providers.`,
     alternates: {
       canonical: `https://www.piperesque.com/services/${service.slug}`,
     },
     openGraph: {
-      title: `${service.shortTitle} | Plumbing Services | Piperesque`,
+      title: `${service.title} in Houston, TX | PipeResque`,
       description:
         content?.overview ??
-        `${service.shortTitle} information and plumbing service options from Piperesque.`,
+        `${service.title} in Houston, Texas: Understand common symptoms, repair options, and connect with independent local plumbing providers.`,
       url: `https://www.piperesque.com/services/${service.slug}`,
       type: "website",
     },
@@ -697,8 +697,8 @@ export default async function ServicePage({ params }: Props) {
               {content.heroBadge}
             </div>
 
-            <h1 className="mt-6 text-5xl font-black leading-tight md:text-6xl">
-              {service.shortTitle}
+            <h1 className="mt-6 text-4xl font-black leading-tight sm:text-5xl md:text-6xl">
+              {service.title} in Houston, TX
             </h1>
 
             <p className="mt-6 max-w-3xl text-xl leading-9 text-blue-100">
@@ -708,6 +708,8 @@ export default async function ServicePage({ params }: Props) {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="tel:+18773640861"
+                data-event="phone_click_service"
+                aria-label={`Call PipeResque for ${service.shortTitle} assistance at (877) 364-0861`}
                 className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 transition hover:bg-amber-400 shadow-lg shadow-amber-500/20 active:scale-[0.98]"
               >
                 <Phone size={19} />
@@ -810,7 +812,46 @@ export default async function ServicePage({ params }: Props) {
           </div>
         </div>
       </section>
-            <section className="py-24">
+
+      {/* Mid-Page Conversion Action */}
+      <section className="bg-slate-900 py-14 text-white">
+        <div className="container-custom">
+          <div className="mx-auto max-w-4xl rounded-2xl border border-slate-800 bg-slate-950 p-8 md:p-10 text-center">
+            <span className="inline-flex rounded-full bg-amber-500/10 border border-amber-500/20 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-400">
+              Need Assistance Now?
+            </span>
+            <h3 className="mt-4 text-2xl md:text-3xl font-black text-white">
+              Dealing With a {service.shortTitle} Problem in Houston?
+            </h3>
+            <p className="mt-3 text-base text-slate-300 max-w-2xl mx-auto">
+              Don&apos;t let plumbing damage escalate. Call our referral line now to discuss your situation and connect with an independent local plumbing provider.
+            </p>
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="tel:+18773640861"
+                data-event="phone_click_service"
+                aria-label={`Call PipeResque for ${service.shortTitle} at (877) 364-0861`}
+                className="inline-flex items-center gap-2.5 rounded-xl bg-amber-500 px-8 py-3.5 text-base font-black text-slate-950 transition hover:bg-amber-400 active:scale-95 shadow-md shadow-amber-500/20"
+              >
+                <Phone size={18} className="fill-slate-950" aria-hidden="true" />
+                Call (877) 364-0861
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800/80 px-6 py-3.5 text-base font-semibold text-white transition hover:bg-slate-700"
+              >
+                Contact Options
+                <ArrowRight size={17} aria-hidden="true" />
+              </Link>
+            </div>
+            <p className="mt-4 text-xs text-slate-400">
+              PipeResque is a plumbing referral platform. Services are performed by independent providers, not PipeResque.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
         <div className="container-custom">
           <div className="mx-auto max-w-5xl">
             <div className="rounded-[32px] border border-blue-100 bg-blue-50 p-8 md:p-10">

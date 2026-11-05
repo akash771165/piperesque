@@ -76,6 +76,7 @@ export default function CTA() {
                             <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={`tel:${siteConfig.phone}`}
+                  data-event="phone_click_content"
                   aria-label={`Call ${siteConfig.company} at ${siteConfig.phoneDisplay}`}
                   className="inline-flex items-center gap-3 rounded-full bg-amber-500 px-8 py-4 text-lg font-black text-slate-950 shadow-xl transition hover:bg-amber-400 hover:scale-105 active:scale-95"
                 >
