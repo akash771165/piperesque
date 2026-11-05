@@ -10,7 +10,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: siteConfig.company,
 
     description:
-      "Piperesque helps homeowners in Houston and surrounding areas connect with independent plumbing professionals for emergency and routine plumbing needs.",
+      "PipeResque provides plumbing information and helps homeowners contact independent plumbing service providers in Houston and surrounding communities.",
 
     start_url: "/",
 
