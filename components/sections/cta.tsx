@@ -37,14 +37,14 @@ export default function CTA() {
               </span>
 
               <h2 className="mt-8 text-4xl font-black leading-tight text-white lg:text-6xl">
-                Need A Plumber?
+                Need Help With a Plumbing Problem?
                 <span className="block text-blue-300">
-                  Call Houston Plumbing Help
+                  Discuss Your Referral Options
                 </span>
               </h2>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-blue-100">
-                Piperesque helps homeowners connect with independent plumbing
+                PipeResque helps homeowners connect with independent plumbing
                 service providers for emergency plumbing, drain cleaning,
                 leak detection, sewer repairs, water heater services and
                 other plumbing needs throughout Houston.
@@ -94,7 +94,7 @@ export default function CTA() {
               </div>
 
               <p className="mt-6 text-sm leading-6 text-blue-100">
-                Piperesque is an informational website that connects users
+                PipeResque is an informational website that connects users
                 with independent plumbing service providers. Availability,
                 pricing, response times and services are determined by the
                 selected provider.
@@ -105,7 +105,7 @@ export default function CTA() {
             <div className="relative h-[380px] lg:h-[620px]">
               <Image
                 src="/images/emergency.webp"
-                alt="Independent plumbing specialist providing residential service in Houston, TX"
+                alt="Plumbing pipework in a residential setting"
                 fill
                 loading="lazy"
                 quality={80}
@@ -134,7 +134,7 @@ export default function CTA() {
               />
 
               <h3 className="mt-5 text-xl font-bold text-white">
-                Emergency Routing
+                Phone Referral Line
               </h3>
 
               <p className="mt-3 text-blue-100">
@@ -153,7 +153,7 @@ export default function CTA() {
               </h3>
 
               <p className="mt-3 text-blue-100">
-                Residential and commercial plumbing solutions.
+                Information for residential and commercial plumbing needs.
               </p>
             </div>
 
