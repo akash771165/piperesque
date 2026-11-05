@@ -117,7 +117,7 @@ export default function Footer() {
             <a
               href={`tel:${siteConfig.phone}`}
               data-event="phone_click_footer"
-              aria-label={`Call Piperesque at ${siteConfig.phoneDisplay}`}
+              aria-label={`Call PipeResque at ${siteConfig.phoneDisplay}`}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-amber-500 px-7 py-4 font-black text-slate-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 shadow-lg active:scale-95"
             >
               <Phone size={18} className="fill-slate-950" aria-hidden="true" />
@@ -142,7 +142,7 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              aria-label="Piperesque home"
+              aria-label="PipeResque home"
               className="inline-flex items-center gap-4 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white">
@@ -151,7 +151,7 @@ export default function Footer() {
 
               <span>
                 <span className="block text-2xl font-black tracking-tight">
-                  Piperesque
+                  PipeResque
                 </span>
                 <span className="mt-1 block text-sm text-slate-400">
                   Houston Plumbing Information
@@ -160,7 +160,7 @@ export default function Footer() {
             </Link>
 
             <p className="mt-6 text-sm leading-7 text-slate-300">
-              Piperesque helps homeowners explore plumbing information and
+              PipeResque helps homeowners explore plumbing information and
               submit requests to connect with independent plumbing service
               providers serving Houston, Texas, and nearby communities.
             </p>
@@ -216,7 +216,7 @@ export default function Footer() {
           {/* Company links */}
           <nav aria-label="Company navigation">
             <h2 className="mb-6 text-lg font-bold text-white">
-              Explore Piperesque
+              Explore PipeResque
             </h2>
 
             <ul className="space-y-4">
@@ -309,8 +309,8 @@ export default function Footer() {
                     Telephone Referral Hotline
                   </h3>
                   <p className="mt-1 text-sm leading-6 text-slate-400">
-                    Call (877) 364-0861 anytime. Provider availability and dispatch
-                    hours depend on independent local contractors.
+                    Call (877) 364-0861 to discuss a plumbing concern and referral options.
+                    Independent providers determine their own availability and service terms.
                   </p>
                 </div>
               </div>
@@ -324,9 +324,9 @@ export default function Footer() {
             <strong className="font-semibold text-slate-200">
               Important disclaimer:
             </strong>{" "}
-            Piperesque is an informational website that helps homeowners
+            PipeResque is an informational website that helps homeowners
             connect with independent third-party plumbing service providers.
-            Piperesque does not itself employ, dispatch or directly provide
+            PipeResque does not itself employ, dispatch or directly provide
             plumbing services. The independent provider is responsible for
             determining service availability, response times, scheduling,
             pricing, warranties and workmanship. Submitting a request or
@@ -338,7 +338,7 @@ export default function Footer() {
         {/* Bottom navigation and copyright */}
         <div className="mt-8 flex flex-col items-center justify-between gap-5 border-t border-slate-800 pt-8 text-center sm:flex-row sm:text-left">
           <p className="text-xs leading-6 text-slate-500 sm:text-sm">
-            © {new Date().getFullYear()} Piperesque. All rights reserved.
+            © {new Date().getFullYear()} PipeResque. All rights reserved.
           </p>
 
           <nav aria-label="Legal and contact links">
