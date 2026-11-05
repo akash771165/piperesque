@@ -21,8 +21,8 @@ const popularPages = [
     href: "/service-areas",
   },
   {
-    title: "About Piperesque",
-    description: "Learn how Piperesque helps homeowners.",
+    title: "About PipeResque",
+    description: "Learn how PipeResque helps homeowners.",
     href: "/about",
   },
   {
@@ -108,7 +108,7 @@ export default function NotFound() {
                   </h2>
 
                   <p className="mt-1 text-sm leading-6 text-slate-500">
-                    Contact Piperesque to start a plumbing service request.
+                    Call the PipeResque referral line to discuss your plumbing concern and ask about independent-provider referral options.
                   </p>
                 </div>
 
@@ -135,7 +135,7 @@ export default function NotFound() {
 
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-bold uppercase tracking-widest text-blue-600">
-              Explore Piperesque
+              Explore PipeResque
             </p>
 
             <h2 className="heading-lg mt-3 text-slate-900">
@@ -186,8 +186,8 @@ export default function NotFound() {
       <section className="border-t border-slate-200 bg-slate-50">
         <div className="container-custom py-10">
           <p className="mx-auto max-w-4xl text-center text-sm leading-6 text-slate-500">
-            Piperesque is an informational service that helps homeowners
-            connect with independent plumbing professionals. Piperesque does
+            PipeResque is an informational service that helps homeowners
+            connect with independent plumbing professionals. PipeResque does
             not directly perform or dispatch plumbing services. Availability,
             response times, pricing, warranties, and workmanship are
             determined by the independent provider handling the request.

@@ -12,7 +12,7 @@ import { services } from "@/lib/data/services";
 export const metadata: Metadata = {
   title: "Plumbing Services in Houston, TX | PipeResque",
   description:
-    "Find fast plumbing assistance in Houston for emergency plumbing, drain cleaning, leak detection, water heaters, and sewer repair. Call (877) 364-0861.",
+    "Explore plumbing information for emergency plumbing, drain cleaning, leak detection, water heaters, and sewer repair in Houston. Call (877) 364-0861 to discuss referral options.",
   keywords: [
     "Houston Plumber",
     "Emergency Plumber Houston",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Plumbing Services in Houston, TX | PipeResque",
     description:
-      "Professional plumbing referral services in Greater Houston. Call (877) 364-0861 for fast plumbing help.",
+      "Plumbing information and referral options in Greater Houston. Call (877) 364-0861 to discuss your plumbing concern.",
     images: ["/images/emergency.webp"],
   },
 };
@@ -85,7 +85,7 @@ export default function ServicesPage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
-            Connect quickly with independent plumbing specialists across Greater Houston for
+            Connect with independent plumbing service providers across Greater Houston for
             urgent repairs, routine maintenance, and scheduled installations.
           </p>
 
@@ -223,8 +223,8 @@ export default function ServicesPage() {
             About Our Houston Plumbing Referral Network
           </h3>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            PipeResque provides informational plumbing resources and connects property owners with independent,
-            licensed plumbing contractors throughout Greater Houston. PipeResque does not directly dispatch,
+            PipeResque provides informational plumbing resources and connects property owners with independent
+            plumbing service providers throughout Greater Houston. PipeResque does not directly dispatch,
             employ, or perform plumbing repairs. Final estimates, pricing, and warranties are established
             directly between you and the servicing provider.
           </p>

@@ -5,16 +5,16 @@ import { FileText, AlertCircle } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Piperesque",
+  title: "Terms & Conditions | PipeResque",
   description:
-    "Review the Terms & Conditions for Piperesque. Learn how our Houston plumbing referral and matching service connects homeowners with independent licensed plumbing contractors.",
+    "Review the Terms & Conditions for PipeResque. Learn how PipeResque helps Houston homeowners contact independent plumbing service providers.",
   alternates: {
     canonical: "https://www.piperesque.com/terms",
   },
   openGraph: {
-    title: "Terms & Conditions | Piperesque",
+    title: "Terms & Conditions | PipeResque",
     description:
-      "Review the Terms & Conditions for Piperesque's plumbing referral service in Houston, Texas.",
+      "Review the Terms & Conditions for PipeResque's plumbing referral service in Houston, Texas.",
     url: "https://www.piperesque.com/terms",
     type: "website",
   },
@@ -39,7 +39,7 @@ export default function TermsPage() {
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
             Please read these Terms &amp; Conditions carefully before using the
-            Piperesque website or contacting us for plumbing referrals.
+            PipeResque website or contacting us for plumbing referrals.
           </p>
         </div>
       </section>
@@ -58,8 +58,8 @@ export default function TermsPage() {
                     Important Notice: Referral &amp; Lead-Generation Service
                   </h2>
                   <p className="mt-2 text-sm leading-6 text-amber-900">
-                    PipeResque is a free referral and lead-generation service that connects homeowners
-                    and property owners with independent, third-party plumbing professionals serving Greater
+                    PipeResque is an informational referral and lead-generation platform that helps homeowners
+                    and property owners contact independent, third-party plumbing service providers serving Greater
                     Houston, Texas. PipeResque is <strong>not</strong> a plumbing contractor, does not directly
                     employ plumbers, does not own a plumbing fleet, does not dispatch technicians, and does not
                     perform plumbing services or repairs.
@@ -83,10 +83,10 @@ export default function TermsPage() {
                   2. Description of Service
                 </h2>
                 <p className="mt-4">
-                  Piperesque acts solely as a matching and referral intermediary. When you call our verified telephone routing line, your inquiry is connected with independent third-party plumbing contractors or plumbing network partners who operate in your local Houston area.
+                  PipeResque provides information and a telephone referral pathway. When you call the listed number, your inquiry may be routed to an independent third-party provider or service network. Coverage and availability vary, and PipeResque does not guarantee that a provider will accept or respond to a request.
                 </p>
                 <p className="mt-3">
-                  All plumbing services, emergency repairs, drain cleanings, inspections, estimates, and installations are provided strictly and directly by independent licensed contractors, not by Piperesque.
+                  Any plumbing services, repairs, inspections, estimates, or installations are provided by independent third-party providers, not by PipeResque. Provider qualifications and any required licenses should be confirmed directly with the provider.
                 </p>
               </div>
 
@@ -95,7 +95,7 @@ export default function TermsPage() {
                   3. Independent Contractor Relationship
                 </h2>
                 <p className="mt-4">
-                  Independent plumbing providers are separate third-party business entities. Piperesque does not control, supervise, manage, or employ any technician who visits your home or commercial facility. Any contractual relationship, scope of work, warranty, or financial transaction is strictly between you and the independent plumbing contractor you choose to hire.
+                  Independent plumbing providers are separate third-party business entities. PipeResque does not control, supervise, manage, or employ any technician who visits your home or commercial facility. Any contractual relationship, scope of work, warranty, or financial transaction is strictly between you and the independent service provider you choose to hire.
                 </p>
               </div>
 
@@ -104,7 +104,7 @@ export default function TermsPage() {
                   4. Estimates, Pricing &amp; Payments
                 </h2>
                 <p className="mt-4">
-                  Piperesque does not set plumbing prices, dispatch fees, or hourly rates. All diagnostic charges, written estimates, pricing structures, payment terms, and warranties are determined directly by the independent service provider. You should review and confirm all estimates and terms with the contractor prior to authorizing any work.
+                  PipeResque does not set plumbing prices, dispatch fees, or hourly rates. All diagnostic charges, written estimates, pricing structures, payment terms, and warranties are determined directly by the independent service provider. You should review and confirm all estimates and terms with the contractor prior to authorizing any work.
                 </p>
               </div>
 
@@ -113,7 +113,7 @@ export default function TermsPage() {
                   5. No Guarantees or Warranties
                 </h2>
                 <p className="mt-4">
-                  Piperesque makes no express or implied representations or warranties regarding:
+                  PipeResque makes no express or implied representations or warranties regarding:
                 </p>
                 <ul className="mt-3 list-disc space-y-2 pl-6">
                   <li>The immediate availability or arrival times of independent contractors.</li>
@@ -128,7 +128,7 @@ export default function TermsPage() {
                   6. Limitation of Liability
                 </h2>
                 <p className="mt-4">
-                  To the maximum extent permitted by applicable Texas law, Piperesque, its owners, operators, affiliates, and partners shall not be liable for any direct, indirect, incidental, consequential, special, or exemplary damages resulting from:
+                  To the maximum extent permitted by applicable Texas law, PipeResque, its owners, operators, affiliates, and partners shall not be liable for any direct, indirect, incidental, consequential, special, or exemplary damages resulting from:
                 </p>
                 <ul className="mt-3 list-disc space-y-2 pl-6">
                   <li>Any work, repairs, negligence, acts, or omissions of independent plumbing contractors.</li>
@@ -143,7 +143,7 @@ export default function TermsPage() {
                   7. Intellectual Property
                 </h2>
                 <p className="mt-4">
-                  All text, layout, graphic assets, brand styling, and code on piperesque.com are the exclusive property of Piperesque and are protected by applicable copyright, trademark, and unfair competition laws. Unauthorized copying, scraping, or redistribution is strictly prohibited.
+                  All text, layout, graphic assets, brand styling, and code on piperesque.com are the exclusive property of PipeResque and are protected by applicable copyright, trademark, and unfair competition laws. Unauthorized copying, scraping, or redistribution is strictly prohibited.
                 </p>
               </div>
 
@@ -152,7 +152,7 @@ export default function TermsPage() {
                   8. Modifications &amp; Updates
                 </h2>
                 <p className="mt-4">
-                  Piperesque reserves the right to revise these Terms &amp; Conditions at any time. Changes become effective immediately upon posting to this page. Your continued use of the website or phone referral service after any update constitutes acceptance of the revised terms.
+                  PipeResque reserves the right to revise these Terms &amp; Conditions at any time. Changes become effective immediately upon posting to this page. Your continued use of the website or phone referral service after any update constitutes acceptance of the revised terms.
                 </p>
               </div>
 

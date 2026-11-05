@@ -52,7 +52,7 @@ const serviceContent: Record<string, ServiceContent> = {
     heroBadge: "Emergency plumbing information",
     intro: [
       "A plumbing emergency can cause significant water damage when it is not addressed quickly. Burst pipes, severe leaks, sewer backups, and major water heater failures can affect walls, floors, cabinets, and other parts of a property.",
-      "Piperesque helps visitors find plumbing service options and information. If a plumbing problem is actively causing damage, shutting off the water when safe and contacting an appropriate local plumbing professional can help limit further damage.",
+      "PipeResque helps visitors find plumbing service options and information. If a plumbing problem is actively causing damage, shutting off the water when safe and contacting an appropriate local plumbing professional can help limit further damage.",
       "The right response depends on the type of plumbing failure, the location of the problem, accessibility, and the condition of the plumbing system. A professional assessment can determine the appropriate repair approach."
     ],
     warningSigns: [
@@ -398,7 +398,7 @@ const serviceContent: Record<string, ServiceContent> = {
     intro: [
       "Toilet malfunctions can disrupt an entire household. Common issues range from simple flapper leaks and running water to severe clogs, bowl cracks, and recurring backups.",
       "Prompt inspection of toilet leaks is crucial to prevent water damage to subflooring and ceilings below. A professional plumber can determine whether a rebuild, unclogging, or complete fixture replacement is needed.",
-      "Piperesque connects Houston homeowners with independent plumbing specialists who inspect, rebuild, or install residential toilets quickly."
+      "PipeResque connects Houston homeowners with independent plumbing specialists who inspect, rebuild, or install residential toilets quickly."
     ],
     warningSigns: [
       "Toilet continues running long after flushing.",
@@ -441,7 +441,7 @@ const serviceContent: Record<string, ServiceContent> = {
     intro: [
       "A dripping or leaking faucet wastes gallons of water every day and can lead to water stains, cabinet damage, and elevated utility bills.",
       "Whether in the kitchen, bathroom, or utility room, faucet problems often stem from worn cartridges, degraded O-rings, mineral buildup, or loose supply line fittings.",
-      "Piperesque helps homeowners connect with licensed plumbing professionals who can rebuild fixture valves or install modern, efficient replacements."
+      "PipeResque helps homeowners contact independent plumbing service providers for fixture assessment, valve repair, or replacement options."
     ],
     warningSigns: [
       "Constant dripping from the spout after the handle is turned off.",
@@ -484,7 +484,7 @@ const serviceContent: Record<string, ServiceContent> = {
     intro: [
       "Commercial plumbing systems handle much higher usage volumes and operate under strict municipal building codes and sanitation standards.",
       "Businesses, restaurants, offices, retail stores, and commercial facilities in Greater Houston require prompt diagnostic and repair solutions to prevent operational downtime.",
-      "Piperesque connects commercial property managers and business owners with independent plumbing professionals equipped for high-capacity systems."
+      "PipeResque helps commercial property managers and business owners explore plumbing service options and contact independent providers for high-capacity systems."
     ],
     warningSigns: [
       "Multiple commercial restroom fixtures backing up simultaneously.",
@@ -510,7 +510,7 @@ const serviceContent: Record<string, ServiceContent> = {
       {
         question: "Can commercial plumbing inquiries be made outside standard business hours?",
         answer:
-          "Yes. Inquiries can be submitted anytime via phone to connect with independent providers who service commercial facilities."
+          "Call the PipeResque referral line to discuss commercial plumbing needs and ask about referral options. Independent providers determine their own service hours, coverage, and availability."
       },
       {
         question: "What types of commercial properties can receive assistance?",
@@ -527,7 +527,7 @@ const serviceContent: Record<string, ServiceContent> = {
     intro: [
       "Residential plumbing systems keep clean water flowing into your home and wastewater safely draining away. When components fail, swift attention protects your home's foundation and walls.",
       "From bathroom fixture upgrades to whole-home repiping and valve repairs, residential plumbing encompasses all domestic supply, drainage, and venting systems.",
-      "Piperesque connects Houston homeowners with independent licensed plumbing providers for routine repairs, diagnostic evaluations, and urgent repairs."
+      "PipeResque helps Houston homeowners contact independent plumbing service providers for routine repairs, diagnostic evaluations, and urgent plumbing needs."
     ],
     warningSigns: [
       "Discolored water coming from household faucets.",

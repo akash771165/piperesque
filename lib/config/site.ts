@@ -1,6 +1,6 @@
 export const siteConfig = {
   // Business
-  company: "Piperesque",
+  company: "PipeResque",
   tagline: "Houston Plumbing Referral Service",
 
   // Website

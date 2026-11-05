@@ -10,9 +10,9 @@ import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 import FAQSchema from "@/components/seo/faq-schema";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumbing in Houston, TX | Urgent Assistance | Piperesque",
+  title: "Emergency Plumbing in Houston, TX | Urgent Assistance | PipeResque",
   description:
-    "Need emergency plumbing help in Houston, TX? Piperesque helps homeowners connect with independent plumbing professionals for burst pipes, major leaks, sewer backups, and urgent plumbing problems.",
+    "Need emergency plumbing help in Houston, TX? PipeResque helps homeowners connect with independent plumbing professionals for burst pipes, major leaks, sewer backups, and urgent plumbing problems.",
   keywords: [
     "emergency plumber houston",
     "24 hour plumber houston",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     "emergency plumber near me",
   ],
   openGraph: {
-    title: "Emergency Plumbing Help in Houston, TX | Piperesque",
+    title: "Emergency Plumbing Help in Houston, TX | PipeResque",
     description:
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for emergency plumbing needs, including burst pipes, major leaks, sewer backups, and other urgent problems.",
+      "PipeResque helps Houston homeowners connect with independent plumbing professionals for emergency plumbing needs, including burst pipes, major leaks, sewer backups, and other urgent problems.",
     url: "https://www.piperesque.com/services/emergency-plumbing",
     type: "website",
   },
@@ -68,7 +68,7 @@ export default function EmergencyPlumbingPage() {
           {
             question: "When can I call regarding an emergency plumbing problem in Houston?",
             answer:
-              "Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
+              "Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. PipeResque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
           },
           {
             question: "How quickly can a plumbing professional respond?",
@@ -83,7 +83,7 @@ export default function EmergencyPlumbingPage() {
           {
             question: "How do I request emergency plumbing assistance?",
             answer:
-              "Call our referral hotline directly at (877) 364-0861. A representative will connect you with an available independent plumbing professional servicing your Houston neighborhood.",
+              "Call the PipeResque referral line at (877) 364-0861 to discuss the issue and ask about referral options. Independent providers determine their own coverage and availability.",
           },
           {
             question: "Are plumbing providers licensed?",
@@ -124,7 +124,7 @@ export default function EmergencyPlumbingPage() {
             <p className="mt-6 text-xl leading-8 text-blue-100 max-w-2xl">
               Burst pipes, major leaks, sewer backups, overflowing fixtures,
               and other urgent plumbing problems can require prompt attention.
-              Piperesque helps Houston homeowners connect with independent
+              PipeResque helps Houston homeowners connect with independent
               plumbing professionals serving their area.
             </p>
 
@@ -149,7 +149,7 @@ export default function EmergencyPlumbingPage() {
               <div className="bg-white/10 backdrop-blur rounded-lg p-4 md:p-6">
                 <Clock className="text-green-400 mb-2" size={28} />
                 <p className="font-bold text-white">
-                  Direct Phone Routing
+                  Phone Referral Line
                 </p>
               </div>
 
@@ -169,7 +169,7 @@ export default function EmergencyPlumbingPage() {
             </div>
 
             <p className="mt-6 text-sm text-blue-200 max-w-2xl">
-              Piperesque is an informational service that helps homeowners
+              PipeResque is an informational service that helps homeowners
               connect with independent plumbing providers. Availability,
               response times, pricing, warranties, and workmanship are
               determined by the provider handling the request.
@@ -196,7 +196,7 @@ export default function EmergencyPlumbingPage() {
               </p>
 
               <p className="text-lg leading-8 text-slate-600 mb-6">
-                Piperesque helps Houston homeowners connect with independent
+                PipeResque helps Houston homeowners connect with independent
                 plumbing professionals for urgent plumbing problems. The
                 provider handling the request determines availability,
                 scheduling, diagnosis, pricing, and the appropriate service.
@@ -535,14 +535,14 @@ export default function EmergencyPlumbingPage() {
                 </p>
               </div>
             </div>
-                        {/* How Piperesque Helps */}
+                        {/* How PipeResque Helps */}
             <div className="mb-16 pb-16 border-b border-slate-200">
               <h2 className="text-3xl font-black mb-6">
-                How Piperesque Helps With Emergency Plumbing Requests
+                How PipeResque Helps With Emergency Plumbing Requests
               </h2>
 
               <p className="text-lg leading-8 text-slate-600 mb-8">
-                Piperesque is designed to help homeowners find a plumbing
+                PipeResque is designed to help homeowners find a plumbing
                 professional for urgent service. We do not employ or directly
                 perform plumbing work. The independent provider handling the
                 request is responsible for service availability, diagnosis,
@@ -656,7 +656,7 @@ export default function EmergencyPlumbingPage() {
                   <strong className="text-slate-900">
                     Provider disclosure:
                   </strong>{" "}
-                  Piperesque does not employ, dispatch, or directly perform
+                  PipeResque does not employ, dispatch, or directly perform
                   plumbing services. Service availability, response time,
                   pricing, qualifications, warranties, and workmanship are
                   determined by the independent plumbing provider handling the
@@ -744,7 +744,7 @@ export default function EmergencyPlumbingPage() {
                 </h3>
 
                 <p className="text-slate-700 leading-7">
-                  Piperesque does not set plumbing prices and does not
+                  PipeResque does not set plumbing prices and does not
                   guarantee a particular service cost. Pricing, fees, estimates,
                   payment terms, warranties, and any financing options are
                   determined directly by the independent plumbing provider.
@@ -865,7 +865,7 @@ export default function EmergencyPlumbingPage() {
               </h2>
 
               <p className="text-blue-100 text-lg leading-7 mb-6 max-w-2xl">
-                If you have an urgent plumbing problem, contact Piperesque to
+                If you have an urgent plumbing problem, contact PipeResque to
                 request help connecting with an independent plumbing
                 professional serving your area.
               </p>
@@ -1000,16 +1000,16 @@ export default function EmergencyPlumbingPage() {
       <section className="py-20 md:py-28 bg-slate-50">
         <div className="container-custom max-w-5xl">
 
-          {/* Why Piperesque */}
+          {/* Why PipeResque */}
           <div className="mb-16">
             <div className="max-w-3xl">
               <h2 className="text-3xl md:text-4xl font-black mb-6">
-                Why Use Piperesque for Emergency Plumbing Help?
+                Why Use PipeResque for Emergency Plumbing Help?
               </h2>
 
               <p className="text-lg leading-8 text-slate-600 mb-8">
                 Finding the right plumbing professional during an emergency
-                can be difficult. Piperesque provides a simple way for
+                can be difficult. PipeResque provides a simple way for
                 Houston homeowners to request help and connect with
                 independent plumbing providers.
               </p>
@@ -1075,7 +1075,7 @@ export default function EmergencyPlumbingPage() {
                 </h3>
 
                 <p className="text-slate-600 leading-7">
-                  Piperesque focuses on helping homeowners looking for
+                  PipeResque focuses on helping homeowners looking for
                   plumbing assistance in Houston and surrounding service
                   areas.
                 </p>
@@ -1118,7 +1118,7 @@ export default function EmergencyPlumbingPage() {
                 </summary>
 
                 <p className="mt-4 text-slate-600 leading-7">
-                  Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.
+                  Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. PipeResque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.
                 </p>
               </details>
 
@@ -1164,9 +1164,9 @@ export default function EmergencyPlumbingPage() {
                 </summary>
 
                 <p className="mt-4 text-slate-600 leading-7">
-                  Call our referral hotline directly at (877) 364-0861. A representative
-                  will connect you with an available independent plumbing professional
-                  servicing your Houston neighborhood.
+                  Call the PipeResque referral line at (877) 364-0861 to discuss the issue and
+                  ask about independent-provider referral options. Provider coverage
+                  and availability vary by location and provider.
                 </p>
               </details>
 
@@ -1220,15 +1220,15 @@ export default function EmergencyPlumbingPage() {
 
               <details className="group rounded-xl bg-white border border-slate-200 p-6">
                 <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
-                  Does Piperesque perform the plumbing work?
+                  Does PipeResque perform the plumbing work?
                   <span className="absolute right-0 top-0 text-blue-600">
                     +
                   </span>
                 </summary>
 
                 <p className="mt-4 text-slate-600 leading-7">
-                  No. Piperesque does not employ or directly perform plumbing
-                  services. Piperesque helps homeowners connect with
+                  No. PipeResque does not employ or directly perform plumbing
+                  services. PipeResque helps homeowners connect with
                   independent plumbing professionals. Service availability,
                   pricing, qualifications, warranties, and workmanship are
                   determined by the provider handling the request.
@@ -1252,7 +1252,7 @@ export default function EmergencyPlumbingPage() {
 
             <p className="text-lg md:text-xl text-blue-100 leading-8 mb-8">
               If you are dealing with an urgent plumbing problem, contact
-              Piperesque to request help connecting with an independent
+              PipeResque to request help connecting with an independent
               plumbing professional serving your area.
             </p>
 
@@ -1276,7 +1276,7 @@ export default function EmergencyPlumbingPage() {
             </div>
 
             <p className="mt-7 text-sm text-blue-200 leading-6">
-              Piperesque is an informational and connection service. It does
+              PipeResque is an informational and connection service. It does
               not directly provide plumbing services. Provider availability,
               response times, pricing, qualifications, warranties, and
               workmanship are determined by the independent provider.
@@ -1297,7 +1297,7 @@ export default function EmergencyPlumbingPage() {
           {
             question: "When can I call regarding an emergency plumbing problem in Houston?",
             answer:
-              "Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
+              "Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. PipeResque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
           },
           {
             question: "How quickly can a plumbing professional respond?",
@@ -1315,9 +1315,9 @@ export default function EmergencyPlumbingPage() {
               "Licensing, insurance, qualifications, warranties, and service terms are determined by the independent plumbing provider. Homeowners should confirm applicable credentials and terms directly with the provider.",
           },
           {
-            question: "Does Piperesque perform the plumbing work?",
+            question: "Does PipeResque perform the plumbing work?",
             answer:
-              "No. Piperesque does not employ or directly perform plumbing services. Piperesque helps homeowners connect with independent plumbing professionals.",
+              "No. PipeResque does not employ or directly perform plumbing services. PipeResque helps homeowners connect with independent plumbing professionals.",
           },
         ]}
       />

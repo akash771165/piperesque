@@ -7,7 +7,7 @@ function truncate(text, maxLength) {
 }
 
 export function generateTitle(keyword, city = "Houston") {
-  const title = `${keyword} | 24/7 Plumbing Services in ${city}`;
+  const title = `${keyword} in ${city}, TX | PipeResque Referral Information`;
 
   return truncate(title, SEO.TITLE_MAX);
 }
@@ -15,7 +15,7 @@ export function generateTitle(keyword, city = "Houston") {
 export function generateDescription(keyword, city = "Houston") {
   const description =
     `Need ${keyword.toLowerCase()} in ${city}? ` +
-    `PipeResque provides fast, licensed, and reliable plumbing services with 24/7 emergency support.`;
+    `PipeResque shares plumbing information and helps homeowners contact independent plumbing service providers in ${city}, TX. Call (877) 364-0861 to discuss referral options.`;
 
   return truncate(description, SEO.DESCRIPTION_MAX);
 }

@@ -123,7 +123,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
     intro:
 
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for urgent plumbing problems, including burst pipes, major leaks, sewer backups, overflowing fixtures, water-heater leaks, and other situations that may require prompt attention.",
+      "PipeResque helps Houston homeowners connect with independent plumbing professionals for urgent plumbing problems, including burst pipes, major leaks, sewer backups, overflowing fixtures, water-heater leaks, and other situations that may require prompt attention.",
 
 
 
@@ -349,11 +349,11 @@ const serviceContent: Record<string, ServiceContent> = {
 
       {
 
-        question: "Does Piperesque perform the plumbing repair?",
+        question: "Does PipeResque perform the plumbing repair?",
 
         answer:
 
-          "Piperesque helps homeowners connect with independent plumbing professionals. Availability, pricing, workmanship, and service terms are determined by the selected provider.",
+          "PipeResque helps homeowners connect with independent plumbing professionals. Availability, pricing, workmanship, and service terms are determined by the selected provider.",
 
       },
 
@@ -367,7 +367,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
     intro:
 
-      "Piperesque helps Houston homeowners explore sewer line repair, sewer line replacement, sewer backups, and inspection options, and connect with independent plumbing professionals. The right solution depends on the location and condition of the damaged pipe and should be confirmed by an on-site assessment.",
+      "PipeResque helps Houston homeowners explore sewer line repair, sewer line replacement, sewer backups, and inspection options, and connect with independent plumbing professionals. The right solution depends on the location and condition of the damaged pipe and should be confirmed by an on-site assessment.",
 
 
 
@@ -523,9 +523,9 @@ const serviceContent: Record<string, ServiceContent> = {
           "A recurring backup may mean the underlying cause was not removed or that there is damage, root intrusion, a misaligned section, or another issue farther along the line. A sewer-line inspection can help distinguish a temporary blockage from a structural problem.",
       },
       {
-        question: "Does Piperesque perform sewer line repairs?",
+        question: "Does PipeResque perform sewer line repairs?",
         answer:
-          "No. Piperesque is an informational website that helps homeowners connect with independent third-party plumbing providers. Service availability, diagnosis, pricing, workmanship, and terms are determined by the provider you choose.",
+          "No. PipeResque is an informational website that helps homeowners connect with independent third-party plumbing providers. Service availability, diagnosis, pricing, workmanship, and terms are determined by the provider you choose.",
       },
     ],
 
@@ -536,7 +536,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
     intro:
 
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for clogged drains, recurring blockages, slow drainage, and other residential drain-cleaning needs.",
+      "PipeResque helps Houston homeowners connect with independent plumbing professionals for clogged drains, recurring blockages, slow drainage, and other residential drain-cleaning needs.",
 
 
 
@@ -702,7 +702,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
     intro:
 
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for leak detection, hidden water leaks, unexplained moisture, water stains, and other plumbing problems where the source may not be immediately visible.",
+      "PipeResque helps Houston homeowners connect with independent plumbing professionals for leak detection, hidden water leaks, unexplained moisture, water stains, and other plumbing problems where the source may not be immediately visible.",
 
 
 
@@ -868,7 +868,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
     intro:
 
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for water-heater problems, including insufficient hot water, leaks, temperature issues, unusual noises, and other residential water-heating concerns.",
+      "PipeResque helps Houston homeowners connect with independent plumbing professionals for water-heater problems, including insufficient hot water, leaks, temperature issues, unusual noises, and other residential water-heating concerns.",
 
 
 
@@ -1027,7 +1027,7 @@ const serviceContent: Record<string, ServiceContent> = {
   },
   "pipe-repair": {
     intro:
-      "Piperesque connects homeowners with independent plumbing professionals for damaged, corroded, leaking, or burst residential pipes throughout Greater Houston.",
+      "PipeResque connects homeowners with independent plumbing professionals for damaged, corroded, leaking, or burst residential pipes throughout Greater Houston.",
     urgencyTitle: "Signs You Need Professional Pipe Repair",
     urgencyText:
       "A damaged or leaking pipe can cause sudden water damage, mold growth, reduced water pressure, or structural deterioration. Timely inspection helps isolate pipe issues before widespread damage occurs.",
@@ -1089,15 +1089,15 @@ const serviceContent: Record<string, ServiceContent> = {
           "Common causes include water pressure spikes, corrosion in older pipes, shifting expansive clay soils, age-related joint deterioration, and occasional winter freezes.",
       },
       {
-        question: "Does Piperesque repair pipes directly?",
+        question: "Does PipeResque repair pipes directly?",
         answer:
-          "No. Piperesque is an independent referral directory and does not provide direct plumbing repairs. We connect homeowners with qualified, independent plumbing contractors.",
+          "No. PipeResque is an independent referral directory and does not provide direct plumbing repairs. PipeResque helps homeowners contact independent plumbing service providers.",
       },
     ],
   },
   "toilet-repair": {
     intro:
-      "Piperesque connects homeowners with local plumbing professionals for toilet repairs, continuous running, clogs, leaks, and fixture replacements across Greater Houston.",
+      "PipeResque connects homeowners with local plumbing professionals for toilet repairs, continuous running, clogs, leaks, and fixture replacements across Greater Houston.",
     urgencyTitle: "When to Call for Toilet Repair",
     urgencyText:
       "A toilet that constantly runs can waste hundreds of gallons of water per day, while leaks around the base can compromise flooring and subfloor structures. Prompt repair protects your home and lowers water bills.",
@@ -1161,7 +1161,7 @@ const serviceContent: Record<string, ServiceContent> = {
   },
   "faucet-repair": {
     intro:
-      "Piperesque helps homeowners find independent plumbing professionals for leaking, dripping, corroded, or malfunctioning kitchen and bathroom faucets.",
+      "PipeResque helps homeowners find independent plumbing professionals for leaking, dripping, corroded, or malfunctioning kitchen and bathroom faucets.",
     urgencyTitle: "Why Prompt Faucet Repair Matters",
     urgencyText:
       "Even a small drip can waste thousands of gallons of water each year and cause unsightly calcium buildup or mineral staining. Left unchecked, under-sink leaks can cause extensive cabinetry and drywall damage.",
@@ -1225,7 +1225,7 @@ const serviceContent: Record<string, ServiceContent> = {
   },
   "commercial-plumbing": {
     intro:
-      "Piperesque connects Houston business owners, facility managers, and commercial property owners with independent commercial plumbing contractors for reliable maintenance and urgent repairs.",
+      "PipeResque helps Houston business owners, facility managers, and commercial property owners explore plumbing information and contact independent commercial plumbing service providers for maintenance and urgent repair needs.",
     urgencyTitle: "Keeping Business Operations Running Smoothly",
     urgencyText:
       "Plumbing failures in commercial properties can halt business operations, create health code violations, and damage inventory. Reliable commercial plumbing service resolves issues quickly with minimal customer disruption.",
@@ -1278,7 +1278,7 @@ const serviceContent: Record<string, ServiceContent> = {
       {
         question: "Do commercial plumbers handle backflow testing?",
         answer:
-          "Yes. Certified commercial plumbers perform annual backflow prevention assembly testing and submit compliance reports to local water authorities.",
+          "Backflow prevention testing and reporting requirements depend on the assembly and jurisdiction. Ask the independent provider whether the applicable testing credentials and reporting requirements are met.",
       },
       {
         question: "How does commercial plumbing differ from residential?",
@@ -1289,7 +1289,7 @@ const serviceContent: Record<string, ServiceContent> = {
   },
   "residential-plumbing": {
     intro:
-      "Piperesque connects Greater Houston homeowners with independent, licensed residential plumbing contractors for comprehensive repairs, upgrades, fixture installations, and maintenance.",
+      "PipeResque connects Greater Houston homeowners with independent residential plumbing service providers for comprehensive repairs, upgrades, fixture installations, and maintenance.",
     urgencyTitle: "Complete Residential Plumbing Care",
     urgencyText:
       "From minor fixture updates to whole-home plumbing evaluations, keeping your residential plumbing in good repair protects your home investment and ensures dependable daily comfort.",
@@ -1345,9 +1345,9 @@ const serviceContent: Record<string, ServiceContent> = {
           "Check multiple faucets to see if the issue is isolated or whole-home. If whole-home, check the main shutoff valve and pressure reducing valve (PRV), then contact a plumber to diagnose possible main line leaks.",
       },
       {
-        question: "Does Piperesque directly employ the plumbers?",
+        question: "Does PipeResque directly employ the plumbers?",
         answer:
-          "No. Piperesque is an informational directory and referral service connecting Houston homeowners with independent, locally operating third-party plumbing professionals.",
+          "No. PipeResque is an informational directory and referral service connecting Houston homeowners with independent, locally operating third-party plumbing professionals.",
       },
     ],
   },
@@ -1355,9 +1355,9 @@ const serviceContent: Record<string, ServiceContent> = {
 
 function getFallbackContent(slug: string, serviceTitle: string, cityName: string, stateName: string): ServiceContent {
   return {
-    intro: `Piperesque connects homeowners and property owners in ${cityName}, ${stateName} with independent plumbing professionals for ${serviceTitle.toLowerCase()} services.`,
+    intro: `PipeResque connects homeowners and property owners in ${cityName}, ${stateName} with independent plumbing professionals for ${serviceTitle.toLowerCase()} services.`,
     urgencyTitle: `Professional ${serviceTitle} in ${cityName}`,
-    urgencyText: `Timely attention to plumbing issues prevents further property damage, water waste, and costly repairs. Connect with qualified local contractors experienced in ${serviceTitle.toLowerCase()}.`,
+    urgencyText: `Timely attention to plumbing issues prevents further property damage, water waste, and costly repairs. Connect with independent local providers experienced in ${serviceTitle.toLowerCase()}.`,
     problemsTitle: `Common ${serviceTitle} Issues`,
     problems: [
       `Signs of wear, malfunction, or active leaks requiring inspection`,
@@ -1373,7 +1373,7 @@ function getFallbackContent(slug: string, serviceTitle: string, cityName: string
       { title: "Testing & Verification", description: "The system is thoroughly tested under normal pressure to confirm proper operation." },
     ],
     localTitle: `${serviceTitle} in ${cityName}, ${stateName}`,
-    localText: `Residential and commercial properties across ${cityName} have diverse plumbing configurations. Local plumbing providers have the right diagnostic equipment and parts to service local homes.`,
+    localText: `Residential and commercial properties across ${cityName} have diverse plumbing configurations. An independent provider can confirm whether the diagnostic equipment, parts, and service coverage needed for the issue are available.`,
     costTitle: `${serviceTitle} Cost in ${cityName}`,
     costText: `Costs depend on problem severity, parts required, accessibility, and labor time. Contact a local provider for an accurate quote.`,
     costFactors: [
@@ -1385,15 +1385,15 @@ function getFallbackContent(slug: string, serviceTitle: string, cityName: string
     faqs: [
       {
         question: `How do I schedule ${serviceTitle.toLowerCase()} in ${cityName}?`,
-        answer: `Call Piperesque at (877) 364-0861 to be connected with an independent plumbing professional servicing ${cityName}.`,
+        answer: `Call the PipeResque referral line at (877) 364-0861 to discuss your plumbing concern and ask about independent-provider referral options in ${cityName}. Provider coverage and availability vary.`,
       },
       {
         question: `How quickly can a plumber arrive in ${cityName}?`,
         answer: `Response times depend on independent provider availability, call volume, and location within ${cityName}.`,
       },
       {
-        question: `Does Piperesque perform the plumbing repairs?`,
-        answer: `No. Piperesque is an informational directory and referral service connecting homeowners with independent third-party plumbing professionals.`,
+        question: `Does PipeResque perform the plumbing repairs?`,
+        answer: `No. PipeResque is an informational directory and referral service connecting homeowners with independent third-party plumbing professionals.`,
       },
     ],
   };
@@ -1798,7 +1798,7 @@ export default async function LocationServicePage({ params }: Props) {
 
                   <p className="text-sm leading-6 text-gray-600">
 
-                    Piperesque does not guarantee pricing, availability,
+                    PipeResque does not guarantee pricing, availability,
 
                     response time, or workmanship. Any estimate, service
 
@@ -2169,8 +2169,8 @@ export async function generateMetadata({
   const isSewerRepair = plumbing.slug === "sewer-line-repair";
 
   const title = isSewerRepair
-    ? `Sewer Line Repair in ${city.city}, ${city.stateCode} | Repair & Replacement | Piperesque`
-    : `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | Piperesque`;
+    ? `Sewer Line Repair in ${city.city}, ${city.stateCode} | Repair & Replacement | PipeResque`
+    : `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | PipeResque`;
 
   const description = isSewerRepair
     ? `Need sewer line repair in ${city.city}, ${city.stateCode}? Review warning signs, repair vs. replacement options, cost factors, and steps to take during a sewer backup.`
@@ -2230,7 +2230,7 @@ export async function generateMetadata({
 
       url: canonical,
 
-      siteName: "Piperesque",
+      siteName: "PipeResque",
 
       type: "website",
 

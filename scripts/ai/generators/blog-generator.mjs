@@ -82,14 +82,14 @@ function trimToWordBoundary(text, maxLength) {
 }
 
 function buildSeoMeta({ title, keyword, city }) {
-  let metaTitle = `${title} | 24/7 Plumbing Help in ${city}, TX`;
+  let metaTitle = `${title} | PipeResque Plumbing Referral Guide in ${city}, TX`;
 
   if (metaTitle.length > 60) {
     metaTitle = trimToWordBoundary(`${title} | ${city} Plumber`, 60);
   }
 
   const metaDescription = trimToWordBoundary(
-    `${keyword} in ${city}, Texas. Fast 24/7 plumbing help from ${COMPANY_NAME}. Emergency service, drain backups, burst pipes, leaks, and water heater repairs. Call ${PHONE}.`,
+    `${keyword} in ${city}, Texas. ${COMPANY_NAME} shares plumbing information and helps homeowners contact independent plumbing service providers. Call ${PHONE} to discuss referral options.`,
     155
   );
 
@@ -197,8 +197,8 @@ function buildBlogFooter(city) {
 <div class="mt-12 rounded-3xl bg-blue-700 p-8 text-white shadow-lg">
   <h2 class="mb-3 text-2xl font-bold">Need a Plumber in ${city} Right Now?</h2>
   <p class="mb-6 text-blue-100">
-    ${COMPANY_NAME} provides 24/7 emergency plumbing services across ${city}, Texas.
-    Fast response, transparent pricing, and experienced local plumbers.
+    ${COMPANY_NAME} helps homeowners explore plumbing information and contact independent service providers across ${city}, Texas.
+    Provider availability, pricing, qualifications, and service terms are determined by each independent provider.
   </p>
   <div class="flex flex-wrap gap-3">
     <a href="tel:${PHONE.replace(/[^0-9]/g, '')}"
@@ -1041,7 +1041,7 @@ function buildAuthorBox() {
       <h3 class="text-lg font-semibold text-gray-900">Reviewed by Pipe Rescue Plumbing Team</h3>
       <p class="mt-2 text-sm text-gray-700">
         This article was reviewed by experienced residential plumbing professionals serving Houston and surrounding areas.
-        Our team focuses on drain cleaning, leak detection, water heater repair, and emergency plumbing service.
+        PipeResque publishes information about drain cleaning, leak detection, water heater repair, and emergency plumbing topics.
       </p>
     </div>
   </div>

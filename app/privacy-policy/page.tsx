@@ -4,23 +4,23 @@ import Footer from "@/components/layout/footer";
 import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Piperesque",
+  title: "Privacy Policy | PipeResque",
   description:
-    "Piperesque privacy policy explaining information collection, usage, and data security practices for website visitors.",
+    "PipeResque privacy policy explaining information collection, usage, and data security practices for website visitors.",
   alternates: {
     canonical: `${siteConfig.website}/privacy-policy`,
   },
   openGraph: {
-    title: "Privacy Policy | Piperesque",
-    description: "Piperesque privacy policy and visitor information safeguards.",
+    title: "Privacy Policy | PipeResque",
+    description: "PipeResque privacy policy and visitor information safeguards.",
     url: `${siteConfig.website}/privacy-policy`,
     siteName: siteConfig.company,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Privacy Policy | Piperesque",
-    description: "Piperesque privacy policy and visitor information safeguards.",
+    title: "Privacy Policy | PipeResque",
+    description: "PipeResque privacy policy and visitor information safeguards.",
   },
 };
 
@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="mt-4 text-base leading-7 text-slate-300">
-            Your privacy is important to Piperesque. This page explains how we collect, use, and protect your information when using our website.
+            Your privacy is important to PipeResque. This page explains how we collect, use, and protect your information when using our website.
           </p>
         </div>
       </section>
@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-2xl font-bold text-slate-950">Overview</h2>
               <p className="mt-3 leading-7 text-slate-600 text-sm md:text-base">
-                Piperesque respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how information is handled when you browse our website or make an inquiry by telephone or electronic request.
+                PipeResque respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how information is handled when you browse our website or make an inquiry by telephone or electronic request.
               </p>
             </div>
 
@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-2xl font-bold text-slate-950">Third-Party Independent Contractors</h2>
               <p className="mt-3 leading-7 text-slate-600 text-sm md:text-base">
-                When you call our listed phone number or request plumbing service, your inquiry is routed to independent third-party plumbing professionals. These contractors operate independently under their own privacy policies and business practices.
+                When you call our listed phone number or request plumbing service, your inquiry is routed to independent third-party plumbing service providers. These contractors operate independently under their own privacy policies and business practices.
               </p>
             </div>
 

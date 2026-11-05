@@ -40,7 +40,7 @@ export async function generateMetadata({
   return {
     title: `Plumbing Services in ${city.name}, TX | Emergency Help`,
 
-    description: `Need plumbing help in ${city.name}, TX? Piperesque connects homeowners with independent local plumbing providers for emergency repairs, drains, leaks, and water heaters. Call (877) 364-0861.`,
+    description: `Need plumbing help in ${city.name}, TX? PipeResque connects homeowners with independent local plumbing providers for emergency repairs, drains, leaks, and water heaters. Call (877) 364-0861.`,
 
     keywords: [
       `${city.name} plumber`,
@@ -49,7 +49,7 @@ export async function generateMetadata({
       `${city.name} drain cleaning`,
       `${city.name} leak detection`,
       `${city.name} water heater repair`,
-      "Piperesque",
+      "PipeResque",
     ],
 
     alternates: {
@@ -60,7 +60,7 @@ export async function generateMetadata({
       title: `Plumbing Services in ${city.name}, TX`,
       description: `Trusted plumbing referral service in ${city.name}, Texas.`,
       url: `${siteConfig.website}/service-areas/${city.slug}`,
-      siteName: "Piperesque",
+      siteName: "PipeResque",
       type: "website",
     },
 
@@ -112,7 +112,7 @@ export default async function CityPage({
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg text-slate-300">
-              Piperesque helps homeowners across {city.name}, Texas connect with
+              PipeResque helps homeowners across {city.name}, Texas connect with
               independent third-party plumbing professionals. Whether you need
               emergency repairs, drain cleaning, leak detection, water heater
               repair, or general residential plumbing, call the PipeResque referral line to connect with an independent local professional.
@@ -203,11 +203,11 @@ export default async function CityPage({
             <div className="mx-auto max-w-3xl text-center">
 
               <h2 className="text-3xl font-bold">
-                Why Connect Through Piperesque in {city.name}?
+                Plumbing Referral Options in {city.name}
               </h2>
 
               <p className="mt-4 text-gray-600">
-                We make it straightforward to reach independent plumbing professionals when you need urgent help or scheduled repairs.
+                PipeResque helps residents explore plumbing information and contact independent providers for urgent or scheduled plumbing needs.
               </p>
 
             </div>
@@ -219,7 +219,7 @@ export default async function CityPage({
                   Phone Referral Line
                 </h3>
                 <p className="mt-3 text-gray-600">
-                  Call (877) 364-0861 anytime to connect with service routing.
+                  Call the PipeResque referral line to discuss your plumbing concern and ask about independent-provider referral options. Provider coverage and availability vary.
                 </p>
               </div>
 
@@ -234,7 +234,7 @@ export default async function CityPage({
 
               <div className="rounded-xl bg-white p-6 shadow">
                 <h3 className="font-semibold text-lg">
-                  Upfront Pricing
+                  Provider-Set Pricing
                 </h3>
                 <p className="mt-3 text-gray-600">
                   Review pricing and diagnostic fees directly with the technician before work begins.
@@ -272,11 +272,11 @@ export default async function CityPage({
 
                 <div className="rounded-xl border p-6">
                   <h3 className="font-semibold">
-                    Can I request plumbing assistance in {city.name} anytime?
+                    How do I request plumbing referral assistance in {city.name}?
                   </h3>
 
                   <p className="mt-2 text-gray-600">
-                    Yes. PipeResque accepts telephone inquiries at any time to connect you with independent plumbing service providers. Provider availability and response times depend on the independent contractor serving your area.
+                    Call the PipeResque referral line to discuss your plumbing concern and ask about referral options. Independent providers determine their own coverage, hours, response times, and service terms.
                   </p>
                 </div>
 

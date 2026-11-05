@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Plumbing Service Areas in Houston, TX | Piperesque",
+    title: "Plumbing Service Areas in Houston, TX | PipeResque",
     description:
       "Explore plumbing service coverage across Houston, Pasadena, Sugar Land, Pearland, Katy, The Woodlands, and surrounding Texas communities.",
   },
@@ -62,8 +62,8 @@ export default function ServiceAreasPage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Piperesque helps homeowners across the Houston metropolitan area connect with
-            independent, licensed plumbing professionals.
+            PipeResque helps homeowners across the Houston metropolitan area connect with
+            independent plumbing service providers. Provider credentials and availability should be confirmed directly with the provider.
           </p>
         </div>
       </section>
@@ -103,7 +103,7 @@ export default function ServiceAreasPage() {
                   <div className="mt-6 space-y-2 text-xs font-medium text-slate-600">
                     <div className="flex items-center gap-2">
                       <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
-                      <span>Direct Phone Routing</span>
+                      <span>Referral Line Access</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
@@ -135,7 +135,7 @@ export default function ServiceAreasPage() {
               Service Availability &amp; Response Terms
             </h2>
             <p className="mt-4 text-slate-600 text-sm md:text-base leading-7">
-              Piperesque is an independent informational directory and lead-referral service. We help homeowners connect with independent, licensed plumbing service providers serving Greater Houston. Piperesque does not directly dispatch technicians or perform plumbing services. Service availability, scheduling, pricing, and warranties are determined directly by the independent provider.
+              PipeResque is an independent informational directory and lead-referral service. We help homeowners connect with independent, licensed plumbing service providers serving Greater Houston. PipeResque does not directly dispatch technicians or perform plumbing services. Service availability, scheduling, pricing, and warranties are determined directly by the independent provider.
             </p>
             <div className="mt-6">
               <a

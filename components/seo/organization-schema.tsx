@@ -23,12 +23,6 @@ export default function OrganizationSchema() {
         email: siteConfig.email,
         description:
           "PipeResque is an informational plumbing resource and referral platform connecting property owners with independent third-party plumbing professionals in Greater Houston, Texas.",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Houston",
-          addressRegion: "TX",
-          addressCountry: "US",
-        },
         areaServed: [
           {
             "@type": "City",
