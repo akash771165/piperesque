@@ -1091,7 +1091,7 @@ const serviceContent: Record<string, ServiceContent> = {
       {
         question: "Does PipeResque repair pipes directly?",
         answer:
-          "No. PipeResque is an independent referral directory and does not provide direct plumbing repairs. We connect homeowners with independent plumbing service providers.",
+          "No. PipeResque is an independent referral directory and does not provide direct plumbing repairs. PipeResque helps homeowners contact independent plumbing service providers.",
       },
     ],
   },
@@ -1225,7 +1225,7 @@ const serviceContent: Record<string, ServiceContent> = {
   },
   "commercial-plumbing": {
     intro:
-      "PipeResque connects Houston business owners, facility managers, and commercial property owners with independent commercial plumbing contractors for reliable maintenance and urgent repairs.",
+      "PipeResque helps Houston business owners, facility managers, and commercial property owners explore plumbing information and contact independent commercial plumbing service providers for maintenance and urgent repair needs.",
     urgencyTitle: "Keeping Business Operations Running Smoothly",
     urgencyText:
       "Plumbing failures in commercial properties can halt business operations, create health code violations, and damage inventory. Reliable commercial plumbing service resolves issues quickly with minimal customer disruption.",
