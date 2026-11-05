@@ -31,7 +31,7 @@ export default function AuthorBox({
           </h3>
 
           <p className="mt-2 text-slate-600">
-            Professional plumbing content reviewed and maintained by the Piperesque Editorial Team.
+            Prepared by the PipeResque Editorial Team. This information is educational and is not a substitute for an independent provider’s assessment.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-6 text-sm text-slate-500">
