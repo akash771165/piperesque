@@ -77,7 +77,7 @@ export async function generateMetadata({
             images: [
               {
                 url: blog.image,
-                alt: blog.imageAlt || blog.title || "Piperesque Plumbing",
+                alt: blog.imageAlt || blog.title || "PipeResque Plumbing",
               },
             ],
           }
@@ -204,7 +204,7 @@ export default async function BlogPostPage({
             )}
 
             <div className="flex items-center gap-2 text-slate-400">
-              <span>By {typeof blog.author === "string" ? blog.author : blog.author?.name || "Piperesque"}</span>
+              <span>By {typeof blog.author === "string" ? blog.author : blog.author?.name || "PipeResque"}</span>
             </div>
           </div>
 
@@ -238,7 +238,7 @@ export default async function BlogPostPage({
           <div className="relative mb-12 aspect-[16/9] overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
             <Image
               src={blog.image}
-              alt={blog.imageAlt ?? blog.title ?? "Piperesque Plumbing Guide"}
+              alt={blog.imageAlt ?? blog.title ?? "PipeResque Plumbing Guide"}
               fill
               priority
               sizes="(max-width: 768px) 100vw, 896px"
@@ -438,7 +438,7 @@ export default async function BlogPostPage({
             <div className="mt-8 pt-6 border-t border-slate-800">
               <p className="text-xs leading-6 text-slate-400">
                 <strong className="text-slate-300">Referral Notice:</strong>{" "}
-                PipeResque is a plumbing referral platform that connects visitors with independent plumbing service providers. Services are performed by independent providers, not PipeResque. Availability, scheduling, diagnostic fees, warranties, and workmanship are determined directly by the servicing contractor.
+                PipeResque is a plumbing referral platform that connects visitors with independent plumbing service providers. Services are performed by independent providers, not PipeResque. Availability, scheduling, diagnostic fees, warranties, and workmanship are determined directly by the independent provider.
               </p>
             </div>
           </div>
