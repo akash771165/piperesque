@@ -103,7 +103,7 @@ export default function Navbar() {
           <div className="hidden items-center gap-6 md:flex text-slate-300">
             <span className="flex items-center gap-1.5">
               <Clock size={13} className="text-amber-400" />
-              Plumbing Requests Accepted Anytime
+              Call the PipeResque Referral Line
             </span>
             <span className="text-slate-500">|</span>
             <a
@@ -116,7 +116,7 @@ export default function Navbar() {
               }
               className="font-bold text-amber-400 hover:text-amber-300 transition"
             >
-              Direct: {siteConfig.phoneDisplay}
+              Call: {siteConfig.phoneDisplay}
             </a>
           </div>
         </div>
