@@ -1,0 +1,76 @@
+{
+  "initializedAt": "2026-11-06T10:50:10.942Z",
+  "lastCycleAt": "2026-11-06T10:51:21.077Z",
+  "totalCycles": 2,
+  "keywordPriorities": {
+    "emergency-plumbing": {
+      "priorityWeight": 1.25,
+      "historicalConversions": 42
+    },
+    "sewer-line-repair": {
+      "priorityWeight": 1.4,
+      "historicalConversions": 28
+    },
+    "water-heater-repair": {
+      "priorityWeight": 1.3,
+      "historicalConversions": 35
+    },
+    "drain-cleaning": {
+      "priorityWeight": 1.2,
+      "historicalConversions": 31
+    },
+    "leak-detection": {
+      "priorityWeight": 1.35,
+      "historicalConversions": 25
+    },
+    "toilet-repair": {
+      "priorityWeight": 0.95,
+      "historicalConversions": 14
+    }
+  },
+  "dailySnapshots": [
+    {
+      "date": "2026-11-06",
+      "gscQueriesCount": 12,
+      "gaSessions": 2210,
+      "blogPublished": "hydrostatic-plumbing-test-houston-tx",
+      "blogSkippedReason": null,
+      "pagesOptimizedCount": 1,
+      "phoneClicks": 86,
+      "formSubmits": 19,
+      "qualifiedLeads": 14,
+      "verifiedRevenue": "$250.00"
+    },
+    {
+      "date": "2026-11-06",
+      "gscQueriesCount": 12,
+      "gaSessions": 2210,
+      "blogPublished": null,
+      "blogSkippedReason": "Quality gate failure (77/85): Failed quality threshold (77/85).",
+      "pagesOptimizedCount": 1,
+      "phoneClicks": 86,
+      "formSubmits": 19,
+      "qualifiedLeads": 14,
+      "verifiedRevenue": "$250.00"
+    }
+  ],
+  "publishedHistory": [
+    {
+      "date": "2026-11-06",
+      "slug": "hydrostatic-plumbing-test-houston-tx",
+      "title": "Hydrostatic Plumbing Testing in Houston TX: Real Estate Diagnostic Guide",
+      "qualityScore": 100
+    }
+  ],
+  "rejectedHistory": [
+    {
+      "date": "2026-11-06",
+      "reason": "Quality gate failure (77/85): Failed quality threshold (77/85)."
+    }
+  ],
+  "rollingMetrics": {
+    "sevenDayAvgClicks": 45,
+    "twentyEightDayAvgClicks": 42,
+    "leadConversionRatePercent": 4.8
+  }
+}

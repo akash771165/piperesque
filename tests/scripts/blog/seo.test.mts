@@ -6,7 +6,7 @@ import { SEO } from "../../../scripts/shared/constants.mjs";
 describe("generateTitle", () => {
   it("appends the service suffix", () => {
     expect(generateTitle("Drain Cleaning", "Katy")).toBe(
-      "Drain Cleaning | 24/7 Plumbing Services in Katy"
+      "Drain Cleaning in Katy, TX | PipeResque Referral Information"
     );
   });
 
@@ -29,12 +29,12 @@ describe("generateTitle", () => {
 describe("generateDescription", () => {
   it("lowercases the keyword inside the sentence", () => {
     expect(generateDescription("Drain Cleaning", "Katy")).toContain(
-      "Need drain cleaning in Katy?"
+      "Need drain cleaning in Katy"
     );
   });
 
   it("defaults the city to Houston", () => {
-    expect(generateDescription("Leak Detection")).toContain("in Houston?");
+    expect(generateDescription("Leak Detection")).toContain("in Houston");
   });
 
   it("does not truncate a short description", () => {

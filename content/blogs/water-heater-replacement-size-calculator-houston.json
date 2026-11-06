@@ -1,0 +1,136 @@
+{
+  "slug": "water-heater-replacement-size-calculator-houston",
+  "title": "Water Heater Sizing & Gallon Capacity Calculator for Houston Households",
+  "description": "Choosing the right water heater size in Houston, TX? Calculate First Hour Rating (FHR), peak hour household demand, and tank vs tankless GPM capacity.",
+  "author": "PipeResque Editorial Team",
+  "category": "Water Heater Maintenance",
+  "image": "/images/services/water-heater-repair.webp",
+  "imageAlt": "Plumber measuring water heater dimensions and calculating gallon capacity in a Houston home",
+  "publishedAt": "2026-11-05",
+  "updatedAt": "2026-11-05",
+  "readingTime": "9 min read",
+  "keywords": [
+    "water heater size calculator Houston",
+    "First Hour Rating water heater Houston",
+    "what size water heater do I need Houston",
+    "50 gallon vs 40 gallon water heater Texas",
+    "tankless water heater GPM sizing Houston"
+  ],
+  "seo": {
+    "title": "water heater size calculator Houston Houston | PipeResque",
+    "description": "Never run out of hot water again. Calculate your home's peak hour demand (FHR), evaluate gas vs electric recovery rates, and navigate Houston attic size limits.",
+    "canonical": "https://www.piperesque.com/blog/water-heater-replacement-size-calculator-houston",
+    "focusKeyword": "water heater size calculator Houston",
+    "searchIntent": "commercial"
+  },
+  "introduction": [
+    "Choosing the correct water heater size during replacement is a critical balance of comfort, energy efficiency, and physical space. Install a unit that is too small, and your family will suffer freezing showers during morning rush hours; choose a unit that is excessively large, and you will waste hundreds of dollars annually keeping unneeded water hot in Texas heat.",
+    "Many homeowners simply replace whatever tank is currently in their home. However, lifestyle changes—such as high-flow multi-head walk-in showers, soaking tubs, growing families, or teenagers—often demand higher capacity. Conversely, modern sizing relies not on total tank volume, but on the First Hour Rating (FHR) for storage tanks and Gallons Per Minute (GPM) with incoming water temperature rise for on-demand tankless systems.",
+    "In Greater Houston, seasonal groundwater temperatures and strict physical attic access dimensions (such as narrow 22.5-inch pull-down ladder openings) add unique engineering constraints that must be accounted for before purchasing a replacement water heater."
+  ],
+  "sections": [
+    {
+      "id": "understanding-first-hour-rating",
+      "title": "Why Tank Gallons Are Misleading: The First Hour Rating (FHR)",
+      "subtitle": "How recovery rate and storage capacity combine to meet peak demand",
+      "content": [
+        "When shopping for a conventional storage water heater, homeowners often focus solely on the nominal tank capacity (40, 50, or 75 gallons). In plumbing engineering, the true performance metric is the First Hour Rating (FHR) listed on the yellow EnergyGuide label:",
+        "The First Hour Rating represents the total number of gallons of hot water the appliance can supply in one hour of peak demand, starting with a fully heated tank. It accounts for two factors: initial stored capacity and the fuel recovery rate.",
+        "Gas vs. Electric Recovery Rates: Natural gas water heaters typically recover at 30 to 45 gallons per hour at a 90°F rise, meaning a 50-gallon gas tank can deliver an FHR of 80 to 90 gallons. Standard electric water heaters, limited by 4,500W heating elements, recover at only 18 to 22 gallons per hour, giving a 50-gallon electric tank an FHR of only 60 to 65 gallons."
+      ]
+    },
+    {
+      "id": "peak-hour-calculation-table",
+      "title": "Calculating Your Household's Peak Hour Demand",
+      "subtitle": "A step-by-step sizing worksheet for Houston homes",
+      "content": [
+        "To determine the minimum required FHR for your home, calculate the maximum amount of hot water your family uses during your busiest 60-minute window of the day (typically 6:30 AM to 7:30 AM):"
+      ],
+      "table": {
+        "headers": [
+          "Household Peak Activity",
+          "Average Hot Water Consumption",
+          "Typical Duration / Frequency"
+        ],
+        "rows": [
+          [
+            "Standard Shower (2.5 GPM)",
+            "10 - 15 Gallons",
+            "per 6 - 8 minute shower"
+          ],
+          [
+            "Water-Saving Shower (1.8 GPM)",
+            "7 - 10 Gallons",
+            "per 6 - 8 minute shower"
+          ],
+          [
+            "Soaking Bathtub Fill",
+            "25 - 40 Gallons",
+            "per bath fill"
+          ],
+          [
+            "Automatic Dishwasher",
+            "6 - 10 Gallons",
+            "per full wash cycle"
+          ],
+          [
+            "Washing Machine (Warm/Hot)",
+            "15 - 25 Gallons",
+            "per laundry load"
+          ],
+          [
+            "Kitchen Sink Food Prep / Shaving",
+            "2 - 4 Gallons",
+            "continuous flow"
+          ]
+        ]
+      },
+      "bullets": [
+        "1 to 2 People (1-2 Bathrooms): Recommended FHR: 45 to 55 Gallons (Typically 40-gallon gas or 50-gallon electric).",
+        "3 to 4 People (2-3 Bathrooms): Recommended FHR: 60 to 75 Gallons (Typically 50-gallon gas or 65-gallon electric).",
+        "5+ People / Luxury Baths (3+ Bathrooms): Recommended FHR: 80 to 95+ Gallons (Typically 75-gallon gas or tankless cascade system)."
+      ]
+    },
+    {
+      "id": "houston-groundwater-temperatures",
+      "title": "The Houston Winter Groundwater Factor for Tankless Units",
+      "subtitle": "Why inlet temperature swings change tankless GPM capacity",
+      "content": [
+        "If you are upgrading from a tank to an on-demand tankless water heater, sizing is calculated in Gallons Per Minute (GPM) based on Temperature Rise (ΔT):",
+        "In Greater Houston, municipal groundwater temperatures vary significantly by season. In July and August, surface water entering your home can be as warm as 78°F to 80°F. To achieve a comfortable 120°F shower, the unit only needs to heat the water by 42°F (ΔT = 42°F). Under these conditions, an 8.0 GPM tankless unit easily runs three showers simultaneously.",
+        "However, during cold winter freezes in January, incoming municipal water drops to 55°F–58°F. To reach 120°F, the unit must generate a 62°F to 65°F temperature rise. Because the gas burner has a fixed maximum BTU capacity, high temperature rises throttle the maximum flow rate, reducing that same 8.0 GPM unit to only 4.8 to 5.2 GPM. An experienced Houston plumbing contractor always sizes tankless systems based on winter inlet temperatures to prevent freezing winter showers."
+      ]
+    },
+    {
+      "id": "attic-door-clearance-constraints",
+      "title": "Attic Access Dimensions & Structural Constraints",
+      "subtitle": "Navigating narrow pull-down staircases in Houston subdivisions",
+      "content": [
+        "In thousands of Houston homes, water heaters are located in the attic above the second floor. A frequent obstacle during replacement is physical access:",
+        "Standard attic pull-down staircases have rough openings measuring only 22.5 to 25.5 inches wide. Modern energy efficiency standards (NAECA III) mandate thicker polyurethane insulation jackets on storage tanks, making new 50- and 75-gallon tanks 2 to 4 inches wider than older tanks installed in the 1990s and 2000s.",
+        "If an oversized 75-gallon tank cannot physically pass through the attic ladder opening, technicians either install two parallel 40-gallon tanks, enlarge the ceiling framing, or convert the home to a space-saving wall-mounted tankless unit."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I replace a 40-gallon water heater with a 50-gallon tank in my Houston attic?",
+      "answer": "In most cases, yes, provided your attic pull-down stairs are at least 25 inches wide, the attic platform can support the additional weight (a 50-gallon tank full of water weighs over 500 lbs), and the existing secondary drain pan is large enough to accommodate the wider tank diameter."
+    },
+    {
+      "question": "Is a 50-gallon water heater big enough for a family of 4 in Houston?",
+      "answer": "A 50-gallon natural gas water heater is generally sufficient for a 4-person family due to its rapid recovery rate (80+ GPM FHR). However, if your water heater is electric, a standard 50-gallon tank may run cold if multiple showers, laundry, and dishwashers run within the same hour; a 65-gallon or hybrid heat pump unit is recommended."
+    },
+    {
+      "question": "How much does it cost to convert from a tank to a tankless water heater in Houston?",
+      "answer": "Converting from a storage tank to an on-demand tankless system in Houston typically ranges from $3,500 to $6,500 depending on gas supply line upgrades (sizing from 1/2\" to 3/4\" or 1\"), concentric roof venting through the attic, electrical outlet additions, and municipal permitting."
+    }
+  ],
+  "callToAction": {
+    "title": "Need Help Sizing Your Water Heater Replacement in Houston?",
+    "description": "Connect with an independent licensed plumbing contractor to evaluate your household peak demand, verify attic framing clearances, and install the perfect capacity system.",
+    "button": "Call (877) 364-0861",
+    "phone": "(877) 364-0861",
+    "url": "tel:+18773640861"
+  }
+}

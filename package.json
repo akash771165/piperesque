@@ -21,12 +21,15 @@
     "ai:build": "npm run build",
     "ai:deploy": "vercel --prod",
     "ai:full": "npm run ai:workflow && npm run ai:build && npm run ai:deploy",
+    "growth:run": "node scripts/growth/runner.mjs",
+    "growth:dry-run": "node scripts/growth/runner.mjs --dry-run",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",
+    "@google/genai": "^3.0.0",
     "@hookform/resolvers": "^5.4.0",
     "@microsoft/clarity": "^1.0.2",
     "@next/bundle-analyzer": "^16.2.11",

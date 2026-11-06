@@ -7,15 +7,18 @@ function truncate(text, maxLength) {
 }
 
 export function generateTitle(keyword, city = "Houston") {
-  const title = `${keyword} | 24/7 Plumbing Services in ${city}`;
-
-  return truncate(title, SEO.TITLE_MAX);
+  const fullTitle = `${keyword} in ${city}, TX | PipeResque Referral Information`;
+  if (fullTitle.length <= SEO.TITLE_MAX) {
+    return fullTitle;
+  }
+  const compactTitle = `${keyword} in ${city}, TX | PipeResque Referral`;
+  return truncate(compactTitle, SEO.TITLE_MAX);
 }
 
 export function generateDescription(keyword, city = "Houston") {
   const description =
     `Need ${keyword.toLowerCase()} in ${city}? ` +
-    `PipeResque provides fast, licensed, and reliable plumbing services with 24/7 emergency support.`;
+    `Connect with independent licensed plumbing contractors through PipeResque for prompt referral service.`;
 
   return truncate(description, SEO.DESCRIPTION_MAX);
 }

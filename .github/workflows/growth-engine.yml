@@ -1,0 +1,85 @@
+name: PipeResque Autonomous Growth Engine
+
+on:
+  schedule:
+    # Runs daily at 06:00 UTC (12:00 AM CST / midnight Houston local time)
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Execute in dry-run mode (analysis only, no writes)'
+        required: false
+        default: 'false'
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  growth-cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Autonomous Growth Cycle
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
+          GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          NODE_ENV: production
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            node scripts/growth/runner.mjs --dry-run
+          else
+            node scripts/growth/runner.mjs
+          fi
+
+      - name: Run Quality & Test Suite Verification
+        run: npm test
+
+      - name: Run Production Static Build Verification
+        run: npm run build
+
+      - name: Verify Git Diff Against Strict Allowlist
+        id: diff-check
+        run: |
+          git status --short
+          
+          # Ensure no forbidden files were touched
+          FORBIDDEN_TOUCHED=$(git status --short | grep -E '\.(env|github\/workflows|next\.config|tsconfig)|package(-lock)?\.json' || true)
+          if [ -n "$FORBIDDEN_TOUCHED" ]; then
+            echo "::error::Autonomous engine touched forbidden files: $FORBIDDEN_TOUCHED"
+            exit 1
+          fi
+
+      - name: Commit and Push Permitted Updates
+        run: |
+          git config user.name "PipeResque Autonomous Growth Engine"
+          git config user.email "growth-engine@piperesque.com"
+
+          # Add only permitted directories
+          git add content/blogs/*.json content/growth/ content/seo/ reports/daily/ || true
+
+          if git diff --staged --quiet; then
+            echo "No eligible autonomous changes to commit today."
+          else
+            TODAY=$(date -u +"%Y-%m-%d")
+            git commit -m "chore(growth): autonomous daily research, intelligence & content update for ${TODAY} [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          fi

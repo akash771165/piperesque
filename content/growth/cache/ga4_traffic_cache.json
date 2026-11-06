@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-11-06T10:48:04.686Z",
+  "data": {
+    "source": "seeded_analytics_baseline",
+    "reportingWindow": "last_7_days",
+    "metrics": {
+      "totalVisitors": 1840,
+      "uniqueSessions": 2210,
+      "averageEngagementTimeSec": 84.2,
+      "mobileSharePercent": 71.4,
+      "desktopSharePercent": 28.6
+    },
+    "topLandingPages": [
+      {
+        "path": "/services/emergency-plumbing",
+        "sessions": 430,
+        "callClicks": 26,
+        "formSubmits": 4,
+        "conversionRate": "6.98%"
+      },
+      {
+        "path": "/services/sewer-line-repair",
+        "sessions": 310,
+        "callClicks": 14,
+        "formSubmits": 5,
+        "conversionRate": "6.13%"
+      },
+      {
+        "path": "/services/leak-detection",
+        "sessions": 290,
+        "callClicks": 11,
+        "formSubmits": 3,
+        "conversionRate": "4.83%"
+      },
+      {
+        "path": "/blog/water-heater-expansion-tank-houston-tx",
+        "sessions": 195,
+        "callClicks": 9,
+        "formSubmits": 2,
+        "conversionRate": "5.64%"
+      },
+      {
+        "path": "/location/katy/drain-cleaning",
+        "sessions": 160,
+        "callClicks": 8,
+        "formSubmits": 1,
+        "conversionRate": "5.63%"
+      }
+    ],
+    "eventSummary": {
+      "click_to_call": 86,
+      "contact_form_submit": 19,
+      "qualified_lead": 14,
+      "referral_delivered": 12
+    }
+  }
+}

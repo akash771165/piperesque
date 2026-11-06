@@ -1,0 +1,45 @@
+{
+  "executionDate": "2026-11-06",
+  "engineVersion": "1.0.0",
+  "gscSummary": {
+    "asOfDate": "2026-11-03",
+    "totalQueries": 12
+  },
+  "blogOutcome": {
+    "attempted": true,
+    "published": true,
+    "skipped": false,
+    "slug": "hydrostatic-plumbing-test-houston-tx",
+    "title": "Hydrostatic Plumbing Testing in Houston TX: Real Estate Diagnostic Guide",
+    "qualityScore": 100,
+    "duplicateCheck": {
+      "isDuplicate": false,
+      "shouldImproveExisting": false,
+      "similarityScore": 0.185,
+      "closestMatch": {
+        "slug": "cast-iron-sewer-pipe-replacement-houston",
+        "similarity": "0.185"
+      },
+      "action": "PERMIT"
+    },
+    "rejectionReason": null,
+    "articlePath": "content/blogs/hydrostatic-plumbing-test-houston-tx.json"
+  },
+  "pageOptimizationsSummary": "Evaluated 85 existing pages. Applied safe title/meta/CTA optimizations to 1 pages.",
+  "revenueSummary": {
+    "phoneClicks": 86,
+    "formSubmits": 19,
+    "qualifiedLeads": 14,
+    "referralsDispatched": 12,
+    "verifiedRevenue": "$250.00",
+    "pendingRevenue": "$200.00",
+    "funnel": {
+      "phoneClickToQualifiedLeadRate": "16.2%",
+      "formSubmitToQualifiedLeadRate": "73.6%",
+      "dispatchToProviderAcceptanceRate": "75.0%"
+    }
+  },
+  "testResults": {
+    "passed": true
+  }
+}

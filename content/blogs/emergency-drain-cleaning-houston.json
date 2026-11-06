@@ -22,7 +22,7 @@
     "emergency plumbing Houston"
   ],
   "seo": {
-    "title": "Emergency Drain Cleaning in Houston, TX | Urgent Assistance Guide",
+    "title": "emergency drain cleaning Houston Houston | PipeResque",
     "description": "Emergency drain cleaning in Houston, TX. Learn when a clogged drain is an emergency, what to do before service, and when professional help is needed.",
     "canonical": "https://www.piperesque.com/blog/emergency-drain-cleaning-houston",
     "keywords": [
@@ -221,9 +221,9 @@
   "callToAction": {
     "title": "Need Emergency Drain Cleaning in Houston?",
     "description": "If you are dealing with a serious drain blockage or wastewater backup, connect with a plumbing professional for help.",
-    "phone": "+18773640861",
-    "button": "Call for Plumbing Help",
-    "url": "/contact"
+    "phone": "(877) 364-0861",
+    "button": "Call (877) 364-0861",
+    "url": "tel:+18773640861"
   },
   "schema": {
     "type": "Article",

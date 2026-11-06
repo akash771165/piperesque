@@ -6,6 +6,7 @@ import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
 import OrganizationSchema from "@/components/seo/organization-schema";
 import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
+import ReferralLeadForm from "@/components/contact/referral-lead-form";
 
 import {
   Phone,
@@ -188,6 +189,11 @@ export default function ContactPage() {
               </div>
             </div>
 
+          </div>
+
+          {/* Online Referral Intake Form */}
+          <div className="mt-12">
+            <ReferralLeadForm />
           </div>
 
           {/* Service Area & Availability Cards */}

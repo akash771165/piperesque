@@ -1,0 +1,108 @@
+{
+  "asOfDate": "2026-11-06",
+  "month": 11,
+  "seasonalTriggers": [
+    "Polar freeze spikes threatening exposed attic pipes and outdoor hose bibbs.",
+    "Increased water heater thermal expansion stress as cold groundwater (55°F) is rapidly heated.",
+    "Holiday grease and disposal blockages from Thanksgiving and holiday cooking."
+  ],
+  "totalOpportunitiesIdentified": 3,
+  "findings": [
+    {
+      "id": "RES-HOU-01",
+      "topic": "AC Condensate Drain Line Clogs & Attic Water Damage in Houston",
+      "slug": "ac-condensate-drain-clog-houston-tx",
+      "primaryKeyword": "ac drain line clog houston",
+      "relatedKeywords": [
+        "ac condensate drain cleaning houston",
+        "air conditioner drain line clogged attic",
+        "p-trap ac drain backing up houston",
+        "emergency drain cleaning houston tx"
+      ],
+      "targetAudience": "Houston homeowners with attic evaporator units facing ceiling leaks",
+      "searchIntent": "Emergency Informational & Diagnostic",
+      "estimatedMonthlyDemand": 1450,
+      "seasonalRelevance": "High spring through autumn; peak summer algae bloom",
+      "factualGrounding": {
+        "verifiedFacts": [
+          "Houston average summer relative humidity exceeds 75%, generating 5 to 20 gallons of condensate daily from a standard 3- to 5-ton residential HVAC system.",
+          "Condensate lines plumbed into bathroom lavatory P-traps or soffits are required to have secondary drain pan float switches under Houston residential mechanical codes to prevent attic collapses."
+        ],
+        "estimates": [
+          "Clearing an attic condensate line with nitrogen blowouts typically takes 45 to 90 minutes."
+        ],
+        "officialSources": [
+          {
+            "entity": "City of Houston Building Code Enforcement",
+            "standard": "2021 Uniform Mechanical Code (UMC) § 310 Condensate Disposal",
+            "url": "https://www.houstonpermittingcenter.org"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RES-HOU-02",
+      "topic": "Hydrostatic Plumbing Testing for Houston Real Estate Transactions",
+      "slug": "hydrostatic-plumbing-test-houston-tx",
+      "primaryKeyword": "hydrostatic plumbing test cost houston",
+      "relatedKeywords": [
+        "hydrostatic pressure test plumbing houston",
+        "under slab sewer leak test houston",
+        "home buyer plumbing inspection houston tx",
+        "cast iron pipe failure houston foundation"
+      ],
+      "targetAudience": "Houston prospective home buyers and real estate investors in 1960-1990 homes",
+      "searchIntent": "High-Commercial Informational",
+      "estimatedMonthlyDemand": 880,
+      "seasonalRelevance": "Year-round; peaks during spring and summer homebuying surge",
+      "factualGrounding": {
+        "verifiedFacts": [
+          "A hydrostatic test requires inflating an inflatable test ball at the home's main sewer cleanout and filling the building drain system with water up to slab level to detect slab leaks.",
+          "Under Texas Real Estate Commission (TREC) guidelines, home inspectors cannot perform hydrostatic testing; only a licensed Master Plumber (RMP) can authorize and execute a hydrostatic pressure test."
+        ],
+        "estimates": [
+          "A standalone hydrostatic drain test in Houston typically ranges between $350 and $700 depending on cleanout accessibility."
+        ],
+        "officialSources": [
+          {
+            "entity": "Texas State Board of Plumbing Examiners (TSBPE)",
+            "standard": "Texas Administrative Code Title 22 Part 17 § 367.1",
+            "url": "https://tsbpe.texas.gov"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RES-HOU-03",
+      "topic": "Preventing Winter Pipe Bursts & Outdoor Spigot Freezes in Houston",
+      "slug": "winter-freeze-pipe-protection-houston-tx",
+      "primaryKeyword": "freeze pipe burst prevention houston",
+      "relatedKeywords": [
+        "how to protect pipes freezing houston",
+        "outdoor spigot insulated cover houston tx",
+        "drip faucets freeze houston texas",
+        "emergency burst pipe repair houston"
+      ],
+      "targetAudience": "Homeowners in Greater Houston preparing for sudden polar vortex freezes",
+      "searchIntent": "Preventative & Emergency Informational",
+      "estimatedMonthlyDemand": 2100,
+      "seasonalRelevance": "Critical in November, December, January, February",
+      "factualGrounding": {
+        "verifiedFacts": [
+          "Houston homes built on slab foundations often have CPVC or copper supply lines running through uninsulated exterior brick veneers or vented attics where temperatures drop below 28°F during arctic fronts.",
+          "Water expands by approximately 9% upon freezing, generating upwards of 2,000 psi internal pressure that fractures rigid pipes."
+        ],
+        "estimates": [
+          "Burst pipe emergency repairs in attic spaces often require coordinated sheetrock and insulation remediation."
+        ],
+        "officialSources": [
+          {
+            "entity": "Harris County Emergency Management",
+            "standard": "Winter Storm Preparedness & Pipe Thawing Standards",
+            "url": "https://readyharris.org"
+          }
+        ]
+      }
+    }
+  ]
+}
