@@ -25,9 +25,11 @@ const INITIAL_FORM: FormData = {
 export default function ReferralLeadForm() {
   const [formData, setFormData] = useState<FormData>(INITIAL_FORM);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
+  const [serverError, setServerError] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [leadId, setLeadId] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
 
   function validate(): boolean {
     const newErrors: Partial<Record<keyof FormData, string>> = {};
@@ -58,44 +60,52 @@ export default function ReferralLeadForm() {
     return Object.keys(newErrors).length === 0;
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setServerError(null);
+
     if (!validate()) return;
 
     setIsSubmitting(true);
 
-    // Generate random lead tracking reference ID
-    const generatedId = `PR-${formData.zipCode}-${Math.floor(1000 + Math.random() * 9000)}`;
-    setLeadId(generatedId);
+    try {
+      const response = await fetch("/api/referral-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          phone: formData.phone,
+          zipCode: formData.zipCode,
+          serviceRequested: formData.serviceRequested,
+          details: formData.details,
+          consentAccepted: formData.consentAccepted,
+          sourcePage: typeof window !== "undefined" ? window.location.pathname : "/contact",
+          honeypot
+        })
+      });
 
-    // Track submission event safely (ZERO PII sent to analytics)
-    trackContactFormSubmit({
-      serviceRequested: formData.serviceRequested,
-      pagePath: typeof window !== "undefined" ? window.location.pathname : "/contact",
-      source: "web_referral_form",
-    });
+      const data = await response.json();
 
-    // In a full production server deployment, this POSTs to /api/leads
-    // Store in session storage for attribution verification
-    if (typeof window !== "undefined") {
-      try {
-        const leadRecord = {
-          leadId: generatedId,
-          timestamp: new Date().toISOString(),
-          zip: formData.zipCode,
-          service: formData.serviceRequested,
-          status: "pending_provider_assignment",
-        };
-        sessionStorage.setItem("piperesque_last_lead", JSON.stringify(leadRecord));
-      } catch {
-        // Safe fallback
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || "Unable to submit referral request. Please try calling directly.");
       }
-    }
 
-    setTimeout(() => {
-      setIsSubmitting(false);
+      setLeadId(data.leadId);
       setIsSubmitted(true);
-    }, 400);
+
+      // Track submission event only on real verified server success
+      trackContactFormSubmit({
+        serviceRequested: formData.serviceRequested,
+        pagePath: typeof window !== "undefined" ? window.location.pathname : "/contact",
+        source: "web_referral_form",
+      });
+
+    } catch (err: unknown) {
+      const errorMsg = err instanceof Error ? err.message : "A network or server error occurred. Please call (877) 364-0861.";
+      setServerError(errorMsg);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   if (isSubmitted) {
@@ -162,6 +172,30 @@ export default function ReferralLeadForm() {
       </p>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-4" noValidate>
+        {/* Anti-Spam Honeypot Field */}
+        <div style={{ display: "none" }} aria-hidden="true">
+          <label htmlFor="company-website">Do not fill this</label>
+          <input
+            id="company-website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+          />
+        </div>
+
+        {/* Server-Side Error Alert */}
+        {serverError && (
+          <div className="rounded-xl border border-rose-300 bg-rose-50 p-4 text-xs text-rose-800 flex items-start gap-2">
+            <AlertCircle size={16} className="text-rose-600 shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold">Submission Notice</p>
+              <p className="mt-0.5">{serverError}</p>
+            </div>
+          </div>
+        )}
+
         {/* Full Name */}
         <div>
           <label htmlFor="lead-fullname" className="block text-xs font-bold uppercase tracking-wider text-slate-700">

@@ -1,9 +1,9 @@
 name: PipeResque Autonomous Growth Engine
 
 on:
-  schedule:
-    # Runs daily at 06:00 UTC (12:00 AM CST / midnight Houston local time)
-    - cron: '0 6 * * *'
+  # Automated daily cron schedule remains disabled until authorized by site owner
+  # schedule:
+  #   - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
       dry_run:

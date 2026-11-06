@@ -69,13 +69,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // 4. Location + Service Pages (10 locations x 5 core services = 50 pages)
+  // 4. Location + Service Pages (10 locations x 10 services = 100 pages)
   const supportedLocationServices = [
     "emergency-plumbing",
     "sewer-line-repair",
     "drain-cleaning",
     "leak-detection",
     "water-heater-repair",
+    "pipe-repair",
+    "toilet-repair",
+    "faucet-repair",
+    "commercial-plumbing",
+    "residential-plumbing",
   ];
 
   const locationServicePages: MetadataRoute.Sitemap = [];

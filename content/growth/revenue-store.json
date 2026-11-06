@@ -1,0 +1,20 @@
+{
+  "lastUpdated": "2026-11-06T00:00:00.000Z",
+  "summary": {
+    "totalPhoneClicks": 0,
+    "totalFormSubmissions": 0,
+    "totalQualifiedLeads": 0,
+    "totalReferralsDispatched": 0,
+    "totalReferralsAcceptedByProvider": 0,
+    "totalJobsCompleted": 0,
+    "totalVerifiedReferralRevenue": "$0.00",
+    "totalPendingReferralRevenue": "$0.00"
+  },
+  "conversionFunnel": {
+    "phoneClickToQualifiedLeadRate": "0.0%",
+    "formSubmitToQualifiedLeadRate": "0.0%",
+    "dispatchToProviderAcceptanceRate": "0.0%"
+  },
+  "transactions": [],
+  "auditNotice": "Real business metrics initialized with zero verified transactions. No fabricated demo figures."
+}

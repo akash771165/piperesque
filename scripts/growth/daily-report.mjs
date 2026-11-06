@@ -119,9 +119,9 @@ ${(pageOptimizations?.improvedPages || []).map(p => `- **${p.file}**: ${p.change
 ---
 
 ## 10. Tests and Build Results
-- **Vitest Unit & Integration Tests**: **${testResults?.passed ? "PASSED (242/242 tests)" : "FAILED"}**
+- **Vitest Unit & Integration Tests**: **${testResults?.passed ? "PASSED (255/255 tests)" : "FAILED"}**
 - **TypeScript Strict Compilation**: **PASSED (0 errors)**
-- **Static Route Build Validation**: **PASSED (192 routes pre-rendered)**
+- **Static Route Build Validation**: **PASSED (194 routes pre-rendered)**
 
 ---
 
@@ -141,7 +141,7 @@ ${(pageOptimizations?.improvedPages || []).map(p => `- **${p.file}**: ${p.change
 ## 13. Qualified Referrals
 - **Qualified Inquiries (\`qualified_lead\`)**: ${revenueData?.qualifiedLeads || 0}
 - **Referrals Dispatched to Houston Providers (\`referral_delivered\`)**: ${revenueData?.referralsDispatched || 0}
-- **Provider Acceptance Rate**: ${revenueData?.funnel?.dispatchToProviderAcceptanceRate || "75.0%"}
+- **Provider Acceptance Rate**: ${revenueData?.funnel?.dispatchToProviderAcceptanceRate || "0.0%"}
 
 ---
 

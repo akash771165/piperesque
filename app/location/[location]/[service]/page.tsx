@@ -98,6 +98,11 @@ const supportedServices = [
   "drain-cleaning",
   "leak-detection",
   "water-heater-repair",
+  "pipe-repair",
+  "toilet-repair",
+  "faucet-repair",
+  "commercial-plumbing",
+  "residential-plumbing",
 ];
 
 export const dynamicParams = false;

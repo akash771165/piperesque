@@ -59,8 +59,8 @@ async function runAutonomousGrowthCycle() {
     // PHASE 3: Houston Market Research
     console.log("[Phase 3/11] Conducting Houston Market Research & Seasonal Trigger Audit...");
     const researchEngine = new MarketResearchEngine();
-    const marketResearch = await researchEngine.conductDailyResearch();
-    console.log(`  -> Generated ${marketResearch.findings.length} research opportunities grounded in Houston municipal codes.`);
+    const marketResearch = await researchEngine.conductDailyResearch({ gscQueries: gscData.rows || [] });
+    console.log(`  -> Evaluated ${marketResearch.findings.length} research opportunities grounded in Houston municipal codes.`);
 
     // PHASE 4: Content Registry & Duplicate Check
     console.log("[Phase 4/11] Indexing Permanent Content Registry & Semantic Vectors...");
@@ -68,13 +68,14 @@ async function runAutonomousGrowthCycle() {
     console.log(`  -> Active indexed items: ${registry.entries.length} pages.`);
 
     // PHASE 5: Conditional Daily Blog Engine (Max 1 article)
-    console.log("[Phase 5/11] Evaluating Candidate Opportunities for Conditional Blog Publication...");
+    const autoPublish = process.env.GROWTH_AUTO_PUBLISH !== "false" && !isDryRun;
+    console.log(`[Phase 5/11] Evaluating Candidate Opportunities (Auto-Publish: ${autoPublish ? "ENABLED" : "DISABLED"})...`);
     const blogEngine = new DailyBlogEngine();
     let blogOutcome;
 
-    if (isDryRun) {
-      console.log("  -> [DRY RUN] Skipping actual blog file creation.");
-      blogOutcome = { attempted: true, published: false, skipped: true, rejectionReason: "Dry run mode active." };
+    if (!autoPublish) {
+      console.log("  -> [AUTO-PUBLISH OFF / DRY RUN] Skipping actual blog file creation.");
+      blogOutcome = { attempted: true, published: false, skipped: true, rejectionReason: "Auto-publish disabled or dry run mode active." };
     } else {
       blogOutcome = await blogEngine.processDailyCandidate(marketResearch.findings);
       if (blogOutcome.published) {
@@ -87,8 +88,8 @@ async function runAutonomousGrowthCycle() {
     // PHASE 6: Existing Page Optimization
     console.log("[Phase 6/11] Auditing Existing Pages for Title/Meta/Internal Link Improvements...");
     const pageOptimizer = new PageOptimizer();
-    let pageOptimizations = { evaluatedCount: 0, improvedPages: [], summary: "Skipped in dry-run" };
-    if (!isDryRun) {
+    let pageOptimizations = { evaluatedCount: 0, improvedPages: [], summary: "Skipped in dry-run or auto-publish disabled" };
+    if (autoPublish) {
       pageOptimizations = await pageOptimizer.optimizeExistingPages(gscAnalysis);
       console.log(`  -> ${pageOptimizations.summary}`);
     }

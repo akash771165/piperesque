@@ -23,6 +23,7 @@
     "ai:full": "npm run ai:workflow && npm run ai:build && npm run ai:deploy",
     "growth:run": "node scripts/growth/runner.mjs",
     "growth:dry-run": "node scripts/growth/runner.mjs --dry-run",
+    "api:smoke": "node scripts/growth/api-smoke-test.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
