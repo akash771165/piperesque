@@ -43,33 +43,33 @@ export const services: Service[] = [
     shortTitle: "Emergency Plumbing",
 
     seoTitle:
-      "Emergency Plumbing Services | Piperesque",
+      "Emergency Plumber Houston, TX | 24/7 Urgent Plumbing Referral | PipeResque",
 
     metaDescription:
-      "Information about emergency plumbing problems including burst pipes, major leaks, sewer backups, and other urgent plumbing issues.",
+      "Facing a plumbing emergency in Houston, TX? Connect with licensed independent plumbers for burst pipes, sewer backups & active leaks. Fast phone referral: (877) 364-0861.",
 
     keywords: [
-      "emergency plumbing",
-      "emergency plumber",
-      "burst pipe repair",
-      "plumbing emergency",
-      "urgent plumbing repair",
+      "emergency plumbing houston tx",
+      "emergency plumber houston",
+      "burst pipe repair houston",
+      "24 hour plumber houston",
+      "urgent plumbing repair houston tx",
     ],
 
-    heroTitle: "Emergency Plumbing Services",
+    heroTitle: "Emergency Plumbing Services in Houston, TX",
 
     heroDescription:
-      "Information and service options for urgent plumbing problems such as major leaks, burst pipes, sewer backups, and other plumbing emergencies.",
+      "Urgent assistance connecting Houston homeowners with independent licensed plumbing contractors for burst pipes, active flooding, and sewer backups.",
 
     description:
-      "Emergency plumbing problems can cause water damage and disruption. Learn about common warning signs, appropriate next steps, and options for connecting with a local plumbing professional.",
+      "Emergency plumbing problems can cause severe water damage and property disruption. PipeResque connects you with independent licensed plumbing contractors who can evaluate burst supply lines, sewer overflows, and active flooding across Greater Houston.",
 
     benefits: [
-      "Emergency Plumbing Information",
-      "Burst Pipe Guidance",
-      "Major Leak Information",
-      "Sewer Backup Guidance",
-      "Local Service Options",
+      "Urgent Phone Referral Matching",
+      "Burst Pipe & Active Leak Response",
+      "Major Sewer Backup Evaluation",
+      "Direct Hotline: (877) 364-0861",
+      "Independent Licensed Providers",
     ],
 
     image: "/images/services/emergency-plumbing.webp",
@@ -85,33 +85,33 @@ export const services: Service[] = [
     shortTitle: "Drain Cleaning",
 
     seoTitle:
-      "Drain Cleaning Services | Piperesque",
+      "Drain Cleaning Houston, TX | Hydro-Jetting & Clog Clearing | PipeResque",
 
     metaDescription:
-      "Learn about drain cleaning for slow or blocked sinks, showers, tubs, toilets, and other plumbing drainage problems.",
+      "Clogged drains or slow sinks in Houston, TX? Connect with licensed independent plumbers for motorized snaking, hydro-jetting & main cleanout clearing. Call (877) 364-0861.",
 
     keywords: [
-      "drain cleaning",
-      "clogged drain",
-      "drain unclogging",
-      "blocked drain",
-      "main drain cleaning",
+      "drain cleaning houston tx",
+      "clogged drain houston",
+      "hydro jetting houston",
+      "unclog drain houston tx",
+      "main sewer cleanout houston",
     ],
 
-    heroTitle: "Drain Cleaning Services",
+    heroTitle: "Drain Cleaning Services in Houston, TX",
 
     heroDescription:
-      "Learn about common drain blockages, warning signs, professional cleaning methods, and local plumbing service options.",
+      "Connect with independent local plumbing professionals for kitchen sinks, shower drains, and main sewer line cleanouts across Greater Houston.",
 
     description:
-      "Drain problems can result from buildup, debris, grease, hair, mineral deposits, or deeper plumbing issues. The appropriate cleaning method depends on the location and cause of the blockage.",
+      "Drain problems can result from grease buildup, hair accumulation, mineral scale, or root infiltration into Houston lateral lines. We connect you with local independent contractors equipped with motorized augers and high-pressure hydro-jetting.",
 
     benefits: [
-      "Drain Blockage Information",
-      "Clog Diagnosis",
-      "Drain Cleaning Options",
-      "Recurring Clog Guidance",
-      "Local Service Options",
+      "Motorized Cable Snaking",
+      "High-Pressure Hydro-Jetting",
+      "Main Sewer Cleanout Clearing",
+      "Kitchen & Bathroom Drain Help",
+      "Independent Contractor Network",
     ],
 
     image: "/images/services/drain-cleaning.webp",
@@ -127,33 +127,33 @@ export const services: Service[] = [
     shortTitle: "Water Heater Repair",
 
     seoTitle:
-      "Water Heater Repair Services | Piperesque",
+      "Water Heater Repair Houston, TX | Gas, Electric & Tankless | PipeResque",
 
     metaDescription:
-      "Learn about water heater problems including insufficient hot water, leaks, unusual noises, and possible repair or replacement options.",
+      "Water heater leaking or no hot water in Houston, TX? Connect with licensed independent plumbers for gas, electric & tankless diagnosis. Fast referral: (877) 364-0861.",
 
     keywords: [
-      "water heater repair",
-      "water heater problems",
-      "hot water heater repair",
-      "water heater replacement",
-      "tankless water heater",
+      "water heater repair houston",
+      "hot water heater repair houston tx",
+      "tankless water heater repair houston",
+      "water heater leaking houston",
+      "attic water heater replacement houston",
     ],
 
-    heroTitle: "Water Heater Repair Services",
+    heroTitle: "Water Heater Repair Services in Houston, TX",
 
     heroDescription:
-      "Information about water heater problems, common warning signs, diagnosis, repair, maintenance, and replacement considerations.",
+      "Independent contractor referral for water heater leaks, heating element failures, thermal expansion issues, and code compliance in Greater Houston.",
 
     description:
-      "Water heater problems can affect hot water availability and daily activities. A professional assessment can help determine whether a component repair, maintenance service, or replacement is appropriate.",
+      "From leaking attic tanks to extinguished pilot lights and failed heating elements, water heater breakdowns disrupt household sanitation. PipeResque connects you with independent licensed plumbers serving the Greater Houston metropolitan area.",
 
     benefits: [
-      "Water Heater Diagnosis",
-      "Repair Information",
-      "Replacement Considerations",
-      "Tank & Tankless Systems",
-      "Local Service Options",
+      "Gas & Electric Tank Systems",
+      "Tankless Water Heater Diagnosis",
+      "Attic Drain Pan & Relief Valve Inspection",
+      "Sediment Flush & Element Replacement",
+      "Licensed Independent Plumbers",
     ],
 
     image: "/images/services/water-heater-repair.webp",
@@ -169,40 +169,41 @@ export const services: Service[] = [
     shortTitle: "Leak Detection",
 
     seoTitle:
-      "Leak Detection Services | Piperesque",
+      "Water Leak Detection Houston, TX | Slab Leaks & Hidden Pipes | PipeResque",
 
     metaDescription:
-      "Learn about detecting hidden plumbing leaks, unexplained water loss, damp areas, and other signs of possible plumbing leaks.",
+      "Suspect a slab leak or hidden pipe leak in Houston, TX? Connect with independent leak detection specialists for non-invasive acoustic & thermal diagnostics. Call (877) 364-0861.",
 
     keywords: [
-      "leak detection",
-      "hidden water leak",
-      "plumbing leak detection",
-      "slab leak detection",
-      "water leak",
+      "leak detection houston tx",
+      "slab leak detection houston",
+      "hidden water leak houston",
+      "foundation leak detection houston",
+      "under slab leak test houston",
     ],
 
-    heroTitle: "Leak Detection Services",
+    heroTitle: "Water Leak Detection in Houston, TX",
 
     heroDescription:
-      "Learn about common signs of hidden plumbing leaks and the diagnostic methods professionals may use to locate them.",
+      "Connect with independent Houston leak detection contractors for precision acoustic listening, thermal imaging, and foundation slab leak diagnosis.",
 
     description:
-      "Hidden plumbing leaks can occur behind walls, beneath floors, around fixtures, or in other inaccessible areas. Accurate diagnosis helps identify the likely source and determine an appropriate repair.",
+      "Hidden water leaks beneath concrete foundation slabs or behind drywall cause structural damage and inflated water bills. We connect homeowners with independent plumbing specialists utilizing non-invasive acoustic, thermal, and hydrostatic testing.",
 
     benefits: [
-      "Hidden Leak Information",
-      "Leak Warning Signs",
-      "Diagnostic Methods",
-      "Water Damage Prevention",
-      "Local Service Options",
+      "Non-Invasive Acoustic Listening",
+      "Infrared Thermal Imaging",
+      "Under-Slab Hydrostatic Pressure Tests",
+      "High Water Bill Investigation",
+      "Independent Specialized Providers",
     ],
 
     image: "/images/services/leak-detection.webp",
 
     icon: Pipette,
   },
-    {
+
+  {
     slug: "pipe-repair",
 
     title: "Pipe Repair Services",
@@ -210,33 +211,33 @@ export const services: Service[] = [
     shortTitle: "Pipe Repair",
 
     seoTitle:
-      "Pipe Repair Services | Piperesque",
+      "Pipe Repair Services in Houston, TX | Burst & Leaking Pipes | PipeResque",
 
     metaDescription:
-      "Learn about leaking, damaged, broken, and deteriorating plumbing pipes and the repair options that may be appropriate.",
+      "Leaking or burst pipes in Houston, TX? Connect with independent licensed plumbers for copper, CPVC & PEX pipe repairs, repiping & valve fixes. Call (877) 364-0861.",
 
     keywords: [
-      "pipe repair",
-      "water pipe repair",
-      "leaking pipe repair",
-      "broken pipe repair",
-      "pipe replacement",
+      "pipe repair houston tx",
+      "burst pipe repair houston",
+      "leaking water pipe houston",
+      "pex repipe houston",
+      "copper pipe repair houston",
     ],
 
-    heroTitle: "Pipe Repair Services",
+    heroTitle: "Plumbing Pipe Repair Services in Houston, TX",
 
     heroDescription:
-      "Information about damaged plumbing pipes, common warning signs, repair considerations, and local plumbing service options.",
+      "Information and referral options for frozen burst pipes, pinhole copper leaks, corroded galvanized lines, and whole-home PEX repiping across Greater Houston.",
 
     description:
-      "Damaged pipes can cause leaks, pressure problems, water damage, and interruptions to plumbing service. The appropriate repair depends on the pipe material, location, accessibility, and extent of the damage.",
+      "Damaged water supply lines threaten drywall, flooring, and property structure. PipeResque connects Houston homeowners with independent licensed contractors for localized pipe spot repairs, valve replacements, and whole-home repiping.",
 
     benefits: [
-      "Pipe Problem Information",
-      "Leak Warning Signs",
-      "Repair Options",
-      "Pipe Replacement Guidance",
-      "Local Service Options",
+      "Copper Pinhole Leak Repair",
+      "PEX & CPVC Supply Line Fixes",
+      "Frozen Pipe Thawing & Repair",
+      "Main Water Shutoff Valve Replacement",
+      "Independent Contractor Connection",
     ],
 
     image: "/images/services/pipe-repair.webp",
@@ -252,33 +253,33 @@ export const services: Service[] = [
     shortTitle: "Sewer Line Repair",
 
     seoTitle:
-      "Sewer Line Repair Services | Piperesque",
+      "Sewer Line Repair Houston, TX | Camera Inspections & Replacement | PipeResque",
 
     metaDescription:
-      "Learn about sewer line problems including recurring backups, damaged pipes, root intrusion, blockages, and sewer repair options.",
+      "Main sewer line backing up in Houston, TX? Connect with licensed independent contractors for video camera diagnostics, trenchless relining & pipe replacement. Call (877) 364-0861.",
 
     keywords: [
-      "sewer line repair",
-      "sewer pipe repair",
-      "sewer replacement",
-      "drain line repair",
-      "underground sewer repair",
+      "sewer line repair houston tx",
+      "sewer replacement houston",
+      "sewer camera inspection houston",
+      "trenchless sewer repair houston",
+      "sewer backup repair houston tx",
     ],
 
-    heroTitle: "Sewer Line Repair Services",
+    heroTitle: "Sewer Line Repair & Replacement in Houston, TX",
 
     heroDescription:
-      "Information about sewer line problems, warning signs, inspection considerations, repair methods, and local service options.",
+      "Connect with independent Houston plumbing contractors specializing in video camera line inspections, tree root clearing, trenchless relining, and sewer replacement.",
 
     description:
-      "Sewer line problems can affect multiple plumbing fixtures and may result from blockages, root intrusion, damaged pipes, or other conditions. Diagnosis helps determine the appropriate repair or replacement approach.",
+      "Sewer line problems can cause raw wastewater to back up into bathtubs, toilets, and floor drains. Houston's expansive clay soil and mature tree roots often crack or belly underground sewer laterals. PipeResque connects you with independent licensed contractors for camera evaluations, trenchless CIPP lining, and structural excavation.",
 
     benefits: [
-      "Sewer Problem Information",
-      "Recurring Backup Guidance",
-      "Inspection Information",
-      "Repair Options",
-      "Replacement Considerations",
+      "High-Definition Video Camera Inspections",
+      "Trenchless CIPP Pipe Relining Options",
+      "Tree Root Intrusion Hydro-Jetting",
+      "Sewer Lateral Line Spot & Full Replacement",
+      "Independent Licensed Plumbing Contractors",
     ],
 
     image: "/images/services/sewer-line-repair.webp",

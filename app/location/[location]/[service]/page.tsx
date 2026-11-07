@@ -1404,6 +1404,77 @@ function getFallbackContent(slug: string, serviceTitle: string, cityName: string
   };
 }
 
+function getLocalizedSection(
+  serviceSlug: string,
+  cityName: string,
+  stateName: string,
+  citySlug: string,
+  defaultTitle: string,
+  defaultText: string
+): { title: string; paragraphs: string[] } {
+  if (citySlug === "houston") {
+    if (serviceSlug === "sewer-line-repair") {
+      return {
+        title: "Houston Soil Movement, Beaumont Clay & Sewer Line Integrity",
+        paragraphs: [
+          "In Houston, underground sewer lines endure immense mechanical stress from the region's infamous Beaumont Formation gumbo clay. This expansive soil expands dramatically during humid, rainy seasons and contracts during severe Texas summer droughts, creating ground fissures and foundation shifts that crack aging cast iron lines (common in pre-1975 homes across The Heights, Montrose, Oak Forest, and Meyerland) or snap PVC joints.",
+          "Replacing or rehabilitating an underground sewer lateral in the City of Houston requires adherence to City of Houston Code of Ordinances Chapter 26 plumbing regulations and utility line clearances. Licensed independent plumbing contractors utilize non-destructive closed-circuit video inspections to map the exact breach, determine whether trenchless pipe relining or excavation is appropriate, and secure required municipal permits.",
+        ],
+      };
+    }
+    if (serviceSlug === "emergency-plumbing") {
+      return {
+        title: "Houston Freeze Guidelines, Rapid Surges & Emergency Water Shutoffs",
+        paragraphs: [
+          "Plumbing emergencies in the Greater Houston area are frequently triggered by coastal Gulf weather extremes. Hard winter freezes—such as Arctic cold snaps that drop temperatures below freezing for consecutive hours—can rapidly rupture uninsulated copper lines in vented attics, exterior hose bibbs, and above-ground backflow preventers.",
+          "When an emergency leak strikes, shutting off water immediately at your private home shutoff valve or municipal curb stop meter box in the front right-of-way prevents thousands of dollars in drywall, hardwood, and foundation flooding. PipeResque connects you directly with local independent emergency technicians dispatched to stop active water flow, execute emergency pipe clamping, and restore safe domestic water.",
+        ],
+      };
+    }
+    if (serviceSlug === "leak-detection") {
+      return {
+        title: "Concrete Slab Foundation Leaks in Greater Houston Soils",
+        paragraphs: [
+          "The vast majority of residential homes in Houston are built on monolithic slab-on-grade concrete foundations. Over decades, constant soil subsidence and hydraulic shifting from expansive clay exert severe pressure against hot and cold copper lines embedded directly beneath or within the slab, causing microscopic friction pinhole leaks.",
+          "Because slab leaks stay concealed underneath structural concrete, common early warning signs include inexplicable warm spots on tiled or wood floors, sudden unexplained drops in water pressure, and astronomical spikes on City of Houston water bills. Independent leak detection contractors use non-invasive acoustic amplification microphones, line-pressure decay tests, and thermal imaging to pinpoint sub-slab leaks without destructive concrete trenching.",
+        ],
+      };
+    }
+    if (serviceSlug === "water-heater-repair") {
+      return {
+        title: "City of Houston Water Heater Codes, Mineral Hardness & Attic Installations",
+        paragraphs: [
+          "Houston water heating systems face unique operating conditions. Many Houston single-family homes house traditional tank water heaters inside unconditioned attics, where summer temperatures regularly exceed 130°F, accelerating tank expansion stresses. Additionally, municipal surface water from Lake Houston and the Trinity River carries dissolved minerals that settle as calcium carbonate sediment at the base of water tanks, causing loud rumbling and premature element burnout.",
+          "Under City of Houston plumbing codes and Texas safety mandates, water heater replacements require thermal expansion tanks on closed-loop systems, properly pitched temperature and pressure relief (TPR) discharge lines routed to the exterior, sediment traps on gas lines, and code-compliant drain pans with independent drain lines to prevent ceiling collapses.",
+        ],
+      };
+    }
+    if (serviceSlug === "drain-cleaning") {
+      return {
+        title: "Houston Subtropical Drainage, Tree Roots & Heavy Stoppages",
+        paragraphs: [
+          "Houston's flat coastal elevation and torrential subtropical downpours frequently create backpressure on neighborhood lateral drainage systems. Common kitchen drain stoppages from grease coagulation combine with invasive roots from Southern live oaks, crepe myrtles, and pine trees that penetrate clay and cast iron pipe joints seeking moisture.",
+          "Rather than using harsh store-bought caustic chemicals that eat away at aging metal pipes, independent Houston drain cleaning specialists utilize professional motorized mechanical rooter augers and high-pressure water hydro-jetting machines (3,000–4,000 PSI) through cleanouts to thoroughly blast away roots, solidified grease, and heavy sludge without damaging lateral pipes.",
+        ],
+      };
+    }
+  }
+
+  const localizedTitle =
+    defaultTitle.includes("Houston") && cityName !== "Houston"
+      ? defaultTitle.replace("Houston, TX", `${cityName}, ${stateName}`).replace("Houston", cityName)
+      : defaultTitle;
+  const localizedText =
+    defaultText.includes("Houston") && cityName !== "Houston"
+      ? defaultText.replace(/Houston, TX/g, `${cityName}, ${stateName}`).replace(/Houston/g, cityName)
+      : defaultText;
+
+  return {
+    title: localizedTitle,
+    paragraphs: [localizedText],
+  };
+}
+
 export default async function LocationServicePage({ params }: Props) {
   const { location, service } = await params;
 
@@ -1419,6 +1490,25 @@ export default async function LocationServicePage({ params }: Props) {
   const cityName = city.city;
   const stateName = city.stateCode;
   const serviceName = plumbing.shortTitle;
+
+  const localSectionData = getLocalizedSection(
+    plumbing.slug,
+    cityName,
+    stateName,
+    city.slug,
+    content.localTitle,
+    content.localText
+  );
+
+  const localizedCostTitle =
+    content.costTitle.includes("Houston") && cityName !== "Houston"
+      ? content.costTitle.replace("Houston", cityName)
+      : content.costTitle;
+
+  const localizedCostText =
+    content.costText.includes("Houston") && cityName !== "Houston"
+      ? content.costText.replace(/Houston/g, cityName)
+      : content.costText;
 
   const canonical =
     `${baseUrl}/location/${city.slug}/${plumbing.slug}`;
@@ -1723,17 +1813,25 @@ export default async function LocationServicePage({ params }: Props) {
 
                 <h2 className="text-3xl font-bold tracking-tight text-gray-950">
 
-                  {content.localTitle}
+                  {localSectionData.title}
 
                 </h2>
 
 
 
-                <p className="mt-5 leading-8 text-gray-700">
+                <div className="mt-5 space-y-4">
 
-                  {content.localText}
+                  {localSectionData.paragraphs.map((paragraph, idx) => (
 
-                </p>
+                    <p key={idx} className="leading-8 text-gray-700">
+
+                      {paragraph}
+
+                    </p>
+
+                  ))}
+
+                </div>
 
               </section>
 
@@ -1745,7 +1843,7 @@ export default async function LocationServicePage({ params }: Props) {
 
                 <h2 className="text-3xl font-bold tracking-tight text-gray-950">
 
-                  {content.costTitle}
+                  {localizedCostTitle}
 
                 </h2>
 
@@ -1753,7 +1851,7 @@ export default async function LocationServicePage({ params }: Props) {
 
                 <p className="mt-5 leading-8 text-gray-700">
 
-                  {content.costText}
+                  {localizedCostText}
 
                 </p>
 
@@ -2171,15 +2269,25 @@ export async function generateMetadata({
 
 
 
-  const isSewerRepair = plumbing.slug === "sewer-line-repair";
+  let title = `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | PipeResque`;
+  let description = `Need ${plumbing.shortTitle.toLowerCase()} in ${city.city}, ${city.stateCode}? Review local symptoms, service considerations, and connect with independent plumbing professionals. Call (877) 364-0861.`;
 
-  const title = isSewerRepair
-    ? `Sewer Line Repair in ${city.city}, ${city.stateCode} | Repair & Replacement | Piperesque`
-    : `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | Piperesque`;
-
-  const description = isSewerRepair
-    ? `Need sewer line repair in ${city.city}, ${city.stateCode}? Review warning signs, repair vs. replacement options, cost factors, and steps to take during a sewer backup.`
-    : `${plumbing.shortTitle} in ${city.city}, ${city.stateCode}. Learn about common plumbing symptoms, service considerations, and connecting with independent plumbing professionals.`;
+  if (plumbing.slug === "sewer-line-repair") {
+    title = `Sewer Line Repair in ${city.city}, ${city.stateCode} | Pipe Camera & Contractor Referral`;
+    description = `Underground sewer line backing up in ${city.city}, ${city.stateCode}? Connect with independent local plumbers for video camera diagnostics, trenchless relining & repair. Call (877) 364-0861.`;
+  } else if (plumbing.slug === "emergency-plumbing") {
+    title = `Emergency Plumbing in ${city.city}, ${city.stateCode} | Urgent Referral Hotline`;
+    description = `Facing a plumbing emergency in ${city.city}, ${city.stateCode}? Connect with independent licensed plumbers for burst pipes, active leaks & sewer backups. Fast hotline: (877) 364-0861.`;
+  } else if (plumbing.slug === "leak-detection") {
+    title = `Water Leak Detection in ${city.city}, ${city.stateCode} | Slab Leaks & Hidden Pipes`;
+    description = `Suspect a slab leak or hidden pipe leak in ${city.city}, ${city.stateCode}? Connect with independent leak detection specialists for non-invasive acoustic & thermal diagnostics. Call (877) 364-0861.`;
+  } else if (plumbing.slug === "water-heater-repair") {
+    title = `Water Heater Repair in ${city.city}, ${city.stateCode} | Gas & Tankless Services`;
+    description = `No hot water or leaking water heater in ${city.city}, ${city.stateCode}? Connect with independent local plumbers for gas, electric & tankless unit diagnosis. Call (877) 364-0861.`;
+  } else if (plumbing.slug === "drain-cleaning") {
+    title = `Drain Cleaning in ${city.city}, ${city.stateCode} | Clog Clearing & Hydro-Jetting`;
+    description = `Severe drain blockage in ${city.city}, ${city.stateCode}? Connect with independent licensed plumbers for motorized cable snaking, hydro-jetting & cleanout access. Call (877) 364-0861.`;
+  }
 
   const canonical =
 

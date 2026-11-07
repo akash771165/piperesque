@@ -587,17 +587,19 @@ export async function generateMetadata({
   const content = serviceContent[service.slug];
 
   return {
-    title: `${service.title} in Houston, TX | PipeResque`,
+    title: service.seoTitle || `${service.title} in Houston, TX | PipeResque`,
     description:
-      content?.overview ??
+      service.metaDescription ||
+      content?.overview ||
       `${service.title} in Houston, Texas: Understand common symptoms, repair options, and connect with independent local plumbing providers.`,
     alternates: {
       canonical: `https://www.piperesque.com/services/${service.slug}`,
     },
     openGraph: {
-      title: `${service.title} in Houston, TX | PipeResque`,
+      title: service.seoTitle || `${service.title} in Houston, TX | PipeResque`,
       description:
-        content?.overview ??
+        service.metaDescription ||
+        content?.overview ||
         `${service.title} in Houston, Texas: Understand common symptoms, repair options, and connect with independent local plumbing providers.`,
       url: `https://www.piperesque.com/services/${service.slug}`,
       type: "website",
@@ -730,6 +732,12 @@ export default async function ServicePage({ params }: Props) {
                 <MapPin size={17} />
                 Service Areas
               </Link>
+            </div>
+
+            {/* Transparent Referral Platform Notice */}
+            <div className="mt-8 rounded-2xl border border-blue-400/30 bg-blue-900/60 p-4 text-xs leading-relaxed text-blue-100 backdrop-blur-sm max-w-3xl">
+              <span className="font-bold text-amber-300">Referral Platform Notice: </span>
+              PipeResque is an informational plumbing referral platform connecting Greater Houston homeowners with independent licensed plumbing contractors. PipeResque does not directly perform physical plumbing work. Independent service providers determine their own pricing, availability, and warranty terms.
             </div>
           </div>
         </div>
