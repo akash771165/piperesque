@@ -20,8 +20,8 @@ export default function NearbyCities({
         </h2>
 
         <p className="mt-4 text-center text-gray-600">
-          Piperesque also provides plumbing services throughout the Greater
-          Houston area.
+          PipeResque connects homeowners with independent plumbing service
+          providers throughout the Greater Houston area.
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Plumbing Service Areas in Houston, TX | Piperesque",
+    title: "Plumbing Service Areas in Houston, TX | PipeResque",
     description:
       "Explore plumbing service coverage across Houston, Pasadena, Sugar Land, Pearland, Katy, The Woodlands, and surrounding Texas communities.",
   },

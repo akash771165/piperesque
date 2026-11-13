@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   /* =====================================================
@@ -60,14 +60,10 @@ export function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-/* =========================================================
-   MIDDLEWARE MATCHER
-========================================================= */
-
 export const config = {
   matcher: [
     /*
-     * Run middleware only on application routes.
+     * Run proxy only on application routes.
      *
      * Excludes:
      * - _next/static

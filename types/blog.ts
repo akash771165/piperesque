@@ -123,60 +123,90 @@ export interface BlogSchema {
 
 
 
+export interface BlogCardEntry {
+  title?: string;
+  name?: string;
+  factor?: string;
+  item?: string;
+  reason?: string;
+  option?: string;
+  step?: string;
+  description?: string;
+  details?: string[];
+  service?: string;
+  purpose?: string;
+  benefit?: string;
+}
+
 export interface BlogSection {
-
   id?: string;
-
   title: string;
-
   subtitle?: string;
-
-
   content: string[];
-
-
   bullets?: string[];
-
   numberedList?: string[];
-
-
   image?: string;
-
   imageAlt?: string;
-
-
   table?: BlogTable;
-
-
   steps?: BlogStep[];
-
-
   tips?: string[];
-
   warning?: string;
-
   note?: string;
-
-
   pros?: string[];
-
   cons?: string[];
-
-
   relatedLinks?: BlogLink[];
-
-
   video?: BlogVideo;
-
-
   quote?: string;
-
-
   code?: string;
-
-
   highlight?: string;
-
+  importantNote?: string;
+  emergencySigns?: string[];
+  warningSigns?: string[];
+  signs?: string[];
+  preventionBenefits?: string[];
+  locations?: string[];
+  benefits?: Array<string | BlogCardEntry>;
+  checklist?: Array<string | BlogCardEntry>;
+  services?: Array<string | BlogCardEntry>;
+  advantages?: Array<string | BlogCardEntry>;
+  inspectionMethods?: Array<string | BlogCardEntry>;
+  types?: Array<string | BlogCardEntry>;
+  problems?: BlogCardEntry[];
+  process?: BlogCardEntry[];
+  methods?: BlogCardEntry[];
+  costFactors?: BlogCardEntry[];
+  solutions?: BlogCardEntry[];
+  causes?: BlogCardEntry[];
+  repairOptions?: BlogCardEntry[];
+  replacementReasons?: BlogCardEntry[];
+  selectionFactors?: BlogCardEntry[];
+  serviceList?: BlogCardEntry[];
+  situations?: BlogCardEntry[];
+  technology?: BlogCardEntry[];
+  materials?: BlogCardEntry[];
+  mistakes?: BlogCardEntry[];
+  emergencyIssues?: BlogCardEntry[];
+  emergencyServices?: BlogCardEntry[];
+  maintenanceSteps?: BlogCardEntry[];
+  maintenanceTips?: BlogCardEntry[];
+  preventionSteps?: Array<string | BlogCardEntry>;
+  comparisonPoints?: BlogCardEntry[];
+  propertyTypes?: Array<{
+    type?: string;
+    services?: string[];
+  }>;
+  comparison?: Array<{
+    method?: string;
+    type?: string;
+    title?: string;
+    option?: string;
+    description?: string;
+    service?: string;
+    purpose?: string;
+    benefit?: string;
+    benefits?: string[];
+    features?: string[];
+  }>;
 }
 
 

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,6 +7,7 @@ import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
 
 import { getAllBlogData } from "@/lib/blog/get-all-blog-data";
+import { siteConfig } from "@/lib/config/site";
 
 import {
   Calendar,
@@ -13,7 +15,38 @@ import {
   FileText,
 } from "lucide-react";
 
-
+export const metadata: Metadata = {
+  title: "Houston Plumbing Guides & Repair Advice",
+  description:
+    "Explore practical Houston plumbing guides, emergency shutoff checklists, sewer line diagnostics, water heater troubleshooting, and local homeowner resources.",
+  alternates: {
+    canonical: `${siteConfig.website}/blog`,
+  },
+  openGraph: {
+    title: "Houston Plumbing Guides & Repair Advice | PipeResque",
+    description:
+      "Practical plumbing guides, repair cost factors, and homeowner checklists for Greater Houston, TX.",
+    url: `${siteConfig.website}/blog`,
+    siteName: "PipeResque",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/images/blog.webp",
+        width: 1200,
+        height: 630,
+        alt: "PipeResque Houston Plumbing Guides",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Houston Plumbing Guides & Repair Advice | PipeResque",
+    description:
+      "Practical plumbing guides, repair cost factors, and homeowner checklists for Greater Houston, TX.",
+    images: ["/images/blog.webp"],
+  },
+};
 
 export default function BlogPage() {
 
@@ -95,21 +128,21 @@ export default function BlogPage() {
 
               <div className="rounded-full bg-white/10 px-5 py-3 text-white backdrop-blur">
 
-                {blogs.length} Expert Articles
+                {blogs.length} Plumbing Guides
 
               </div>
 
 
               <div className="rounded-full bg-white/10 px-5 py-3 text-white backdrop-blur">
 
-                Houston Plumbing Guides
+                Houston Homeowner Resources
 
               </div>
 
 
               <div className="rounded-full bg-white/10 px-5 py-3 text-white backdrop-blur">
 
-                Houston Plumbing Experts
+                Independent Provider Referral
 
               </div>
 
@@ -217,6 +250,8 @@ export default function BlogPage() {
 
                     fill
 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+
                     className="object-cover transition duration-500 group-hover:scale-110"
 
                   />
@@ -279,13 +314,13 @@ export default function BlogPage() {
 
 
 
-                  <h2 className="mt-5 text-2xl font-black leading-tight text-slate-900 transition group-hover:text-blue-700">
+                  <h3 className="mt-5 text-2xl font-black leading-tight text-slate-900 transition group-hover:text-blue-700">
 
 
                     {post.title}
 
 
-                  </h2>
+                  </h3>
 
 
 

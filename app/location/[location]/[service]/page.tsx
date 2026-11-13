@@ -18,6 +18,8 @@ import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 
 import JsonLd from "@/components/seo/json-ld";
 
+import ReferralLeadForm from "@/components/contact/referral-lead-form";
+
 
 
 import { services } from "@/lib/data/services";
@@ -1427,7 +1429,7 @@ function getLocalizedSection(
         title: "Houston Freeze Guidelines, Rapid Surges & Emergency Water Shutoffs",
         paragraphs: [
           "Plumbing emergencies in the Greater Houston area are frequently triggered by coastal Gulf weather extremes. Hard winter freezes—such as Arctic cold snaps that drop temperatures below freezing for consecutive hours—can rapidly rupture uninsulated copper lines in vented attics, exterior hose bibbs, and above-ground backflow preventers.",
-          "When an emergency leak strikes, shutting off water immediately at your private home shutoff valve or municipal curb stop meter box in the front right-of-way prevents thousands of dollars in drywall, hardwood, and foundation flooding. PipeResque connects you directly with local independent emergency technicians dispatched to stop active water flow, execute emergency pipe clamping, and restore safe domestic water.",
+          "When an emergency leak strikes, shutting off water immediately at your private home shutoff valve or municipal curb stop meter box in the front right-of-way prevents thousands of dollars in drywall, hardwood, and foundation flooding. PipeResque connects you with independent local plumbing professionals who handle active water shutoffs, emergency pipe clamping, and water line restoration directly.",
         ],
       };
     }
@@ -1643,13 +1645,13 @@ export default async function LocationServicePage({ params }: Props) {
 
               <Link
 
-                href="/contact"
+                href="#request-referral"
 
                 className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-base font-semibold text-gray-900 transition hover:bg-gray-50"
 
               >
 
-                Contact Us
+                Request Callback
 
               </Link>
 
@@ -2136,6 +2138,15 @@ export default async function LocationServicePage({ params }: Props) {
 
 
 
+      {/* Inline Callback Referral Form */}
+      <section className="mx-auto max-w-4xl px-4 pt-14 sm:px-6 lg:px-8">
+        <ReferralLeadForm
+          defaultService={serviceName}
+          heading={`Request ${serviceName} Referral in ${cityName}`}
+          id="request-referral"
+        />
+      </section>
+
       {/* Final CTA */}
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -2269,23 +2280,23 @@ export async function generateMetadata({
 
 
 
-  let title = `${plumbing.shortTitle} in ${city.city}, ${city.stateCode} | PipeResque`;
+  let title = `${plumbing.shortTitle} in ${city.city}, ${city.stateCode}`;
   let description = `Need ${plumbing.shortTitle.toLowerCase()} in ${city.city}, ${city.stateCode}? Review local symptoms, service considerations, and connect with independent plumbing professionals. Call (877) 364-0861.`;
 
   if (plumbing.slug === "sewer-line-repair") {
-    title = `Sewer Line Repair in ${city.city}, ${city.stateCode} | Pipe Camera & Contractor Referral`;
+    title = `Sewer Line Repair ${city.city}, ${city.stateCode} | Camera & Replacement`;
     description = `Underground sewer line backing up in ${city.city}, ${city.stateCode}? Connect with independent local plumbers for video camera diagnostics, trenchless relining & repair. Call (877) 364-0861.`;
   } else if (plumbing.slug === "emergency-plumbing") {
-    title = `Emergency Plumbing in ${city.city}, ${city.stateCode} | Urgent Referral Hotline`;
+    title = `Emergency Plumbing ${city.city}, ${city.stateCode} | Urgent Referral Line`;
     description = `Facing a plumbing emergency in ${city.city}, ${city.stateCode}? Connect with independent licensed plumbers for burst pipes, active leaks & sewer backups. Fast hotline: (877) 364-0861.`;
   } else if (plumbing.slug === "leak-detection") {
-    title = `Water Leak Detection in ${city.city}, ${city.stateCode} | Slab Leaks & Hidden Pipes`;
+    title = `Water Leak Detection ${city.city}, ${city.stateCode} | Slab & Hidden Leaks`;
     description = `Suspect a slab leak or hidden pipe leak in ${city.city}, ${city.stateCode}? Connect with independent leak detection specialists for non-invasive acoustic & thermal diagnostics. Call (877) 364-0861.`;
   } else if (plumbing.slug === "water-heater-repair") {
-    title = `Water Heater Repair in ${city.city}, ${city.stateCode} | Gas & Tankless Services`;
+    title = `Water Heater Repair ${city.city}, ${city.stateCode} | Gas & Tankless Help`;
     description = `No hot water or leaking water heater in ${city.city}, ${city.stateCode}? Connect with independent local plumbers for gas, electric & tankless unit diagnosis. Call (877) 364-0861.`;
   } else if (plumbing.slug === "drain-cleaning") {
-    title = `Drain Cleaning in ${city.city}, ${city.stateCode} | Clog Clearing & Hydro-Jetting`;
+    title = `Drain Cleaning ${city.city}, ${city.stateCode} | Clogs & Hydro-Jetting`;
     description = `Severe drain blockage in ${city.city}, ${city.stateCode}? Connect with independent licensed plumbers for motorized cable snaking, hydro-jetting & cleanout access. Call (877) 364-0861.`;
   }
 

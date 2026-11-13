@@ -164,7 +164,7 @@ export default async function CityPage({
             <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
               {services.map((service) => (
-                <a
+                <Link
                   key={service.slug}
                   href={`/services/${service.slug}`}
                   className="rounded-xl border bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
@@ -186,7 +186,7 @@ export default async function CityPage({
                     Learn More →
                   </span>
 
-                </a>
+                </Link>
               ))}
 
             </div>
@@ -219,7 +219,7 @@ export default async function CityPage({
                   Phone Referral Line
                 </h3>
                 <p className="mt-3 text-gray-600">
-                  Call (877) 364-0861 anytime to connect with service routing.
+                  Call (877) 364-0861 to connect with independent local service routing.
                 </p>
               </div>
 
@@ -272,11 +272,11 @@ export default async function CityPage({
 
                 <div className="rounded-xl border p-6">
                   <h3 className="font-semibold">
-                    Can I request plumbing assistance in {city.name} anytime?
+                    How can I submit a plumbing inquiry in {city.name}?
                   </h3>
 
                   <p className="mt-2 text-gray-600">
-                    Yes. PipeResque accepts telephone inquiries at any time to connect you with independent plumbing service providers. Provider availability and response times depend on the independent contractor serving your area.
+                    Call (877) 364-0861 or use our online contact form to connect with independent plumbing service providers. Contractor availability and response times depend on independent provider schedules in {city.name}.
                   </p>
                 </div>
 

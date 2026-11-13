@@ -36,8 +36,10 @@ export async function POST(req: NextRequest) {
     // 3. Validation
     const fullName = (body.fullName || "").trim();
     const phone = (body.phone || "").replace(/\D/g, "");
+    const email = typeof body.email === "string" ? body.email.trim() : "";
     const zipCode = (body.zipCode || "").trim();
     const serviceRequested = (body.serviceRequested || "").trim();
+    const urgency = body.urgency === "urgent" ? "urgent" : "standard";
     const details = (body.details || "").trim();
     const consentAccepted = Boolean(body.consentAccepted);
     const sourcePage = (body.sourcePage || "/contact").trim();
@@ -48,6 +50,10 @@ export async function POST(req: NextRequest) {
 
     if (phone.length < 10) {
       return NextResponse.json({ success: false, error: "A valid 10-digit phone number is required." }, { status: 400 });
+    }
+
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json({ success: false, error: "Please provide a valid email address or leave it blank." }, { status: 400 });
     }
 
     if (!/^\d{5}$/.test(zipCode)) {
@@ -76,6 +82,7 @@ export async function POST(req: NextRequest) {
       leadId,
       createdAt: new Date().toISOString(),
       serviceCategory: serviceRequested || "General Plumbing",
+      urgency,
       zipCode,
       sourcePage,
       consentStatus: "EXPLICIT_ACCEPTED",
@@ -90,6 +97,7 @@ export async function POST(req: NextRequest) {
       _restrictedCustomer: {
         fullName,
         phone,
+        ...(email ? { email } : {}),
         details,
         ipHash: Buffer.from(ip).toString("base64")
       }

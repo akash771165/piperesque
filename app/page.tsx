@@ -16,7 +16,9 @@ import FAQSchema from "@/components/seo/faq-schema";
 import OrganizationSchema from "@/components/seo/organization-schema";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumbing Help in Houston, TX | Piperesque",
+  title: {
+    absolute: "Emergency Plumbing Help in Houston, TX | PipeResque",
+  },
   description:
     "Looking for plumbing assistance in Houston, TX? Call (877) 364-0861 to connect with independent local plumbing professionals for burst pipes, drains, leaks, and water heaters.",
   keywords: [

@@ -5,7 +5,7 @@ import { FileText, AlertCircle } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Piperesque",
+  title: "Terms & Conditions",
   description:
     "Review the Terms & Conditions for Piperesque. Learn how our Houston plumbing referral and matching service connects homeowners with independent licensed plumbing contractors.",
   alternates: {

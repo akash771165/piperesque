@@ -21,6 +21,7 @@ import JsonLd from "@/components/seo/json-ld";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
+import ReferralLeadForm from "@/components/contact/referral-lead-form";
 
 import { services } from "@/lib/data/services";
 import { siteConfig } from "@/lib/config/site";
@@ -585,9 +586,12 @@ export async function generateMetadata({
   }
 
   const content = serviceContent[service.slug];
+  const baseTitle = (
+    service.seoTitle || `${service.title} in Houston, TX`
+  ).replace(/\s*\|\s*Pipe[rR]esque$/i, "");
 
   return {
-    title: service.seoTitle || `${service.title} in Houston, TX | PipeResque`,
+    title: baseTitle,
     description:
       service.metaDescription ||
       content?.overview ||
@@ -596,7 +600,7 @@ export async function generateMetadata({
       canonical: `https://www.piperesque.com/services/${service.slug}`,
     },
     openGraph: {
-      title: service.seoTitle || `${service.title} in Houston, TX | PipeResque`,
+      title: `${baseTitle} | PipeResque`,
       description:
         service.metaDescription ||
         content?.overview ||
@@ -648,19 +652,24 @@ export default async function ServicePage({ params }: Props) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: service.shortTitle,
+    name: `${service.shortTitle} Referral`,
     serviceType: service.shortTitle,
     description: content.overview,
     url: `https://www.piperesque.com/services/${service.slug}`,
     areaServed: {
-      "@type": "State",
-      name: "Texas",
+      "@type": "City",
+      name: "Houston",
+      addressRegion: "TX",
       addressCountry: "US",
     },
-    provider: {
+    broker: {
       "@type": "Organization",
       name: siteConfig.company,
       url: "https://www.piperesque.com",
+    },
+    provider: {
+      "@type": "Organization",
+      name: "Independent Licensed Houston Plumbing Contractors (via PipeResque)",
     },
   };
 
@@ -719,10 +728,10 @@ export default async function ServicePage({ params }: Props) {
               </a>
 
               <Link
-                href="/contact"
+                href="#request-referral"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-7 py-4 font-bold text-white transition hover:bg-white hover:text-blue-950"
               >
-                Contact Us
+                Request Callback
               </Link>
 
               <Link
@@ -845,10 +854,10 @@ export default async function ServicePage({ params }: Props) {
                 Call (877) 364-0861
               </a>
               <Link
-                href="/contact"
+                href="#request-referral"
                 className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800/80 px-6 py-3.5 text-base font-semibold text-white transition hover:bg-slate-700"
               >
-                Contact Options
+                Request Callback
                 <ArrowRight size={17} aria-hidden="true" />
               </Link>
             </div>
@@ -931,6 +940,18 @@ export default async function ServicePage({ params }: Props) {
                 </details>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white border-t border-slate-200">
+        <div className="container-custom">
+          <div className="mx-auto max-w-4xl">
+            <ReferralLeadForm
+              defaultService={service.shortTitle}
+              heading={`Request ${service.shortTitle} Referral in Houston`}
+              id="request-referral"
+            />
           </div>
         </div>
       </section>

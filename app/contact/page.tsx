@@ -20,7 +20,7 @@ import {
 import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Contact Piperesque | Phone & Email Plumbing Referral in Houston, TX",
+  title: "Contact PipeResque — Phone & Email Plumbing Referral in Houston, TX",
   description:
     "Contact Piperesque for plumbing assistance in Houston, TX. Call (877) 364-0861 or email resquepipe@gmail.com to connect with independent local plumbing professionals.",
   alternates: {
@@ -209,7 +209,7 @@ export default function ContactPage() {
                 Houston, Texas &amp; Nearby Communities
               </p>
               <p className="mt-1 text-xs text-slate-500">
-                Including Pasadena, Sugar Land, Pearland, Katy, Cypress, Spring, The Woodlands, and Tomball.
+                Including Pasadena, Sugar Land, Pearland, Katy, Cypress, Spring, The Woodlands, Richmond, and Missouri City.
               </p>
             </div>
 

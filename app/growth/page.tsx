@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Autonomous AI Growth Engine Dashboard | PipeResque",
+  title: "Autonomous AI Growth Engine Dashboard",
   description: "Live operational overview of real Search Console telemetry, Houston market research, duplicate content prevention, and verified referral revenue tracking.",
   robots: {
     index: false,

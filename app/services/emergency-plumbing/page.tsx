@@ -8,11 +8,12 @@ import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
 import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 import FAQSchema from "@/components/seo/faq-schema";
+import ReferralLeadForm from "@/components/contact/referral-lead-form";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumbing in Houston, TX | Urgent Assistance | Piperesque",
+  title: "Emergency Plumbing in Houston, TX | Urgent Referral Help",
   description:
-    "Need emergency plumbing help in Houston, TX? Piperesque helps homeowners connect with independent plumbing professionals for burst pipes, major leaks, sewer backups, and urgent plumbing problems.",
+    "Need emergency plumbing help in Houston, TX? PipeResque helps homeowners connect with independent plumbing professionals for burst pipes, major leaks, sewer backups, and urgent plumbing problems.",
   keywords: [
     "emergency plumber houston",
     "24 hour plumber houston",
@@ -23,9 +24,9 @@ export const metadata: Metadata = {
     "emergency plumber near me",
   ],
   openGraph: {
-    title: "Emergency Plumbing Help in Houston, TX | Piperesque",
+    title: "Emergency Plumbing Help in Houston, TX | PipeResque",
     description:
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for emergency plumbing needs, including burst pipes, major leaks, sewer backups, and other urgent problems.",
+      "PipeResque helps Houston homeowners connect with independent plumbing professionals for emergency plumbing needs, including burst pipes, major leaks, sewer backups, and other urgent problems.",
     url: "https://www.piperesque.com/services/emergency-plumbing",
     type: "website",
   },
@@ -83,7 +84,7 @@ export default function EmergencyPlumbingPage() {
           {
             question: "How do I request emergency plumbing assistance?",
             answer:
-              "Call our referral hotline directly at (877) 364-0861. A representative will connect you with an available independent plumbing professional servicing your Houston neighborhood.",
+              "Call our referral line directly at (877) 364-0861 or submit a callback request on this page to seek connection with independent plumbing professionals serving Greater Houston, subject to provider availability.",
           },
           {
             question: "Are plumbing providers licensed?",
@@ -138,10 +139,10 @@ export default function EmergencyPlumbingPage() {
               </a>
 
               <Link
-                href="/contact"
+                href="#request-referral"
                 className="inline-flex items-center gap-2 rounded-xl border-2 border-white/40 bg-white/10 px-8 py-4 font-bold text-white hover:bg-white hover:text-blue-950 transition"
               >
-                Contact Options
+                Request Callback
               </Link>
             </div>
 
@@ -1164,9 +1165,7 @@ export default function EmergencyPlumbingPage() {
                 </summary>
 
                 <p className="mt-4 text-slate-600 leading-7">
-                  Call our referral hotline directly at (877) 364-0861. A representative
-                  will connect you with an available independent plumbing professional
-                  servicing your Houston neighborhood.
+                  Call our referral line directly at (877) 364-0861 or submit a callback request on this page to seek connection with independent plumbing professionals serving Greater Houston, subject to provider availability.
                 </p>
               </details>
 
@@ -1241,6 +1240,16 @@ export default function EmergencyPlumbingPage() {
         </div>
       </section>
 
+      {/* Callback Lead Form */}
+      <section className="py-16 bg-white border-t border-slate-200">
+        <div className="container-custom max-w-4xl">
+          <ReferralLeadForm
+            defaultService="Emergency Plumbing"
+            heading="Request an Urgent Plumbing Callback in Houston"
+          />
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 bg-blue-950">
         <div className="container-custom">
@@ -1252,7 +1261,7 @@ export default function EmergencyPlumbingPage() {
 
             <p className="text-lg md:text-xl text-blue-100 leading-8 mb-8">
               If you are dealing with an urgent plumbing problem, contact
-              Piperesque to request help connecting with an independent
+              PipeResque to request help connecting with an independent
               plumbing professional serving your area.
             </p>
 
@@ -1267,10 +1276,10 @@ export default function EmergencyPlumbingPage() {
               </a>
 
               <Link
-                href="/contact"
+                href="#request-referral"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/40 bg-white/10 px-8 py-4 font-bold text-white hover:bg-white hover:text-blue-950 transition"
               >
-                Contact Options
+                Request Callback
               </Link>
 
             </div>

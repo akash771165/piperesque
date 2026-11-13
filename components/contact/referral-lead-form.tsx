@@ -7,23 +7,53 @@ import { trackContactFormSubmit } from "@/lib/analytics/track";
 interface FormData {
   fullName: string;
   phone: string;
+  email: string;
   zipCode: string;
   serviceRequested: string;
+  urgency: "urgent" | "standard";
   details: string;
   consentAccepted: boolean;
 }
 
-const INITIAL_FORM: FormData = {
-  fullName: "",
-  phone: "",
-  zipCode: "",
-  serviceRequested: "Emergency Plumbing",
-  details: "",
-  consentAccepted: false,
-};
+interface ReferralLeadFormProps {
+  defaultService?: string;
+  heading?: string;
+  id?: string;
+}
 
-export default function ReferralLeadForm() {
-  const [formData, setFormData] = useState<FormData>(INITIAL_FORM);
+const SERVICE_OPTIONS = [
+  { value: "Emergency Plumbing", label: "Emergency Plumbing" },
+  { value: "Sewer Line Repair", label: "Sewer Line Repair / Camera Inspection" },
+  { value: "Water Heater Repair", label: "Water Heater Repair / Replacement" },
+  { value: "Drain Cleaning", label: "Drain Cleaning / Hydro-Jetting" },
+  { value: "Leak Detection", label: "Slab Leak Detection & Repair" },
+  { value: "Pipe Repair", label: "Pipe Repair & Whole-House Repiping" },
+  { value: "Toilet Repair", label: "Toilet / Fixture Repair" },
+  { value: "Faucet Repair", label: "Faucet Repair & Replacement" },
+  { value: "Residential Plumbing", label: "General Residential Plumbing" },
+  { value: "Commercial Plumbing", label: "Commercial Facility Plumbing" },
+];
+
+export default function ReferralLeadForm({
+  defaultService = "Emergency Plumbing",
+  heading = "Request an Independent Plumbing Referral",
+  id = "request-referral",
+}: ReferralLeadFormProps) {
+  const matchedOption =
+    SERVICE_OPTIONS.find(
+      (opt) => opt.value.toLowerCase() === defaultService.toLowerCase()
+    )?.value || "Emergency Plumbing";
+
+  const [formData, setFormData] = useState<FormData>({
+    fullName: "",
+    phone: "",
+    email: "",
+    zipCode: "",
+    serviceRequested: matchedOption,
+    urgency: matchedOption === "Emergency Plumbing" ? "urgent" : "standard",
+    details: "",
+    consentAccepted: false,
+  });
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [serverError, setServerError] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -41,6 +71,10 @@ export default function ReferralLeadForm() {
     const cleanPhone = formData.phone.replace(/\D/g, "");
     if (cleanPhone.length < 10) {
       newErrors.phone = "Please enter a valid 10-digit phone number.";
+    }
+
+    if (formData.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+      newErrors.email = "Please enter a valid email address or leave blank.";
     }
 
     const cleanZip = formData.zipCode.trim();
@@ -75,8 +109,10 @@ export default function ReferralLeadForm() {
         body: JSON.stringify({
           fullName: formData.fullName,
           phone: formData.phone,
+          email: formData.email.trim() || undefined,
           zipCode: formData.zipCode,
           serviceRequested: formData.serviceRequested,
+          urgency: formData.urgency,
           details: formData.details,
           consentAccepted: formData.consentAccepted,
           sourcePage: typeof window !== "undefined" ? window.location.pathname : "/contact",
@@ -93,7 +129,7 @@ export default function ReferralLeadForm() {
       setLeadId(data.leadId);
       setIsSubmitted(true);
 
-      // Track submission event only on real verified server success
+      // Track submission event only on real verified server success (zero PII)
       trackContactFormSubmit({
         serviceRequested: formData.serviceRequested,
         pagePath: typeof window !== "undefined" ? window.location.pathname : "/contact",
@@ -110,7 +146,7 @@ export default function ReferralLeadForm() {
 
   if (isSubmitted) {
     return (
-      <div className="rounded-3xl border-2 border-emerald-500/30 bg-emerald-50/50 p-8 text-slate-900 shadow-sm md:p-10">
+      <div id={id} className="rounded-3xl border-2 border-emerald-500/30 bg-emerald-50/50 p-8 text-slate-900 shadow-sm md:p-10">
         <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-600 text-white shadow-md">
           <CheckCircle2 size={28} aria-hidden="true" />
         </div>
@@ -127,15 +163,15 @@ export default function ReferralLeadForm() {
           Thank you, <span className="font-semibold">{formData.fullName}</span>. Your request for{" "}
           <span className="font-semibold">{formData.serviceRequested}</span> in{" "}
           <span className="font-semibold">{formData.zipCode}</span> has been logged. An independent
-          licensed plumbing contractor servicing your area will contact you shortly.
+          plumbing service provider serving your area will review your request; availability and response timing depend on the independent provider.
         </p>
 
         <div className="mt-6 rounded-2xl border border-emerald-200 bg-white p-6 shadow-sm">
           <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
-            Need Immediate Emergency Service?
+            Dealing With an Active Leak or Backup?
           </p>
           <p className="mt-1 text-sm text-slate-600">
-            For active water leaks or urgent sewage backups, phone calls receive the fastest response.
+            For active water leaks or urgent sewage backups, calling directly is the fastest way to reach telephone routing.
           </p>
           <a
             href="tel:+18773640861"
@@ -151,7 +187,7 @@ export default function ReferralLeadForm() {
   }
 
   return (
-    <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:p-10">
+    <div id={id} className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:p-10">
       <div className="flex items-center gap-3">
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-700">
           <Send size={20} aria-hidden="true" />
@@ -161,22 +197,21 @@ export default function ReferralLeadForm() {
             Online Plumbing Referral Request
           </span>
           <h2 className="text-2xl font-black text-slate-900">
-            Request an Independent Plumbing Referral
+            {heading}
           </h2>
         </div>
       </div>
 
       <p className="mt-3 text-sm leading-6 text-slate-600">
-        Describe your plumbing problem below. We connect Houston homeowners with qualified independent
-        plumbing contractors for diagnostics, repairs, and estimates.
+        Describe your plumbing problem below. PipeResque is a referral platform that connects Houston homeowners with independent plumbing service providers for diagnostics, repairs, and estimates.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-4" noValidate>
         {/* Anti-Spam Honeypot Field */}
         <div style={{ display: "none" }} aria-hidden="true">
-          <label htmlFor="company-website">Do not fill this</label>
+          <label htmlFor={`${id}-company-website`}>Do not fill this</label>
           <input
-            id="company-website"
+            id={`${id}-company-website`}
             type="text"
             tabIndex={-1}
             autoComplete="off"
@@ -196,37 +231,60 @@ export default function ReferralLeadForm() {
           </div>
         )}
 
-        {/* Full Name */}
-        <div>
-          <label htmlFor="lead-fullname" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
-            Your Full Name *
-          </label>
-          <input
-            id="lead-fullname"
-            type="text"
-            required
-            value={formData.fullName}
-            onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-            placeholder="e.g. Sarah Johnson"
-            className={`mt-1.5 w-full rounded-xl border px-4 py-3 text-sm text-slate-900 transition focus:outline-none focus:ring-2 focus:ring-blue-600 ${
-              errors.fullName ? "border-rose-500 bg-rose-50/20" : "border-slate-300"
-            }`}
-          />
-          {errors.fullName && (
-            <p className="mt-1 flex items-center gap-1 text-xs text-rose-600">
-              <AlertCircle size={12} /> {errors.fullName}
-            </p>
-          )}
+        {/* Full Name & Email Row */}
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label htmlFor={`${id}-fullname`} className="block text-xs font-bold uppercase tracking-wider text-slate-700">
+              Your Full Name *
+            </label>
+            <input
+              id={`${id}-fullname`}
+              type="text"
+              required
+              value={formData.fullName}
+              onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+              placeholder="e.g. Sarah Johnson"
+              className={`mt-1.5 w-full rounded-xl border px-4 py-3 text-sm text-slate-900 transition focus:outline-none focus:ring-2 focus:ring-blue-600 ${
+                errors.fullName ? "border-rose-500 bg-rose-50/20" : "border-slate-300"
+              }`}
+            />
+            {errors.fullName && (
+              <p className="mt-1 flex items-center gap-1 text-xs text-rose-600">
+                <AlertCircle size={12} /> {errors.fullName}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label htmlFor={`${id}-email`} className="block text-xs font-bold uppercase tracking-wider text-slate-700">
+              Email Address (Optional)
+            </label>
+            <input
+              id={`${id}-email`}
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              placeholder="you@example.com"
+              className={`mt-1.5 w-full rounded-xl border px-4 py-3 text-sm text-slate-900 transition focus:outline-none focus:ring-2 focus:ring-blue-600 ${
+                errors.email ? "border-rose-500 bg-rose-50/20" : "border-slate-300"
+              }`}
+            />
+            {errors.email && (
+              <p className="mt-1 flex items-center gap-1 text-xs text-rose-600">
+                <AlertCircle size={12} /> {errors.email}
+              </p>
+            )}
+          </div>
         </div>
 
         {/* Phone & Zip Row */}
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <label htmlFor="lead-phone" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
+            <label htmlFor={`${id}-phone`} className="block text-xs font-bold uppercase tracking-wider text-slate-700">
               Phone Number *
             </label>
             <input
-              id="lead-phone"
+              id={`${id}-phone`}
               type="tel"
               required
               value={formData.phone}
@@ -244,11 +302,11 @@ export default function ReferralLeadForm() {
           </div>
 
           <div>
-            <label htmlFor="lead-zipcode" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
+            <label htmlFor={`${id}-zipcode`} className="block text-xs font-bold uppercase tracking-wider text-slate-700">
               Houston ZIP Code *
             </label>
             <input
-              id="lead-zipcode"
+              id={`${id}-zipcode`}
               type="text"
               required
               maxLength={5}
@@ -267,35 +325,54 @@ export default function ReferralLeadForm() {
           </div>
         </div>
 
-        {/* Service Requested */}
-        <div>
-          <label htmlFor="lead-service" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
-            Plumbing Service Needed *
-          </label>
-          <select
-            id="lead-service"
-            value={formData.serviceRequested}
-            onChange={(e) => setFormData({ ...formData, serviceRequested: e.target.value })}
-            className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 transition focus:outline-none focus:ring-2 focus:ring-blue-600"
-          >
-            <option value="Emergency Plumbing">Emergency Plumbing</option>
-            <option value="Water Heater Repair">Water Heater Repair / Replacement</option>
-            <option value="Sewer Line Repair">Sewer Line Repair / Camera Inspection</option>
-            <option value="Drain Cleaning">Drain Cleaning / Hydro-Jetting</option>
-            <option value="Leak Detection">Slab Leak Detection &amp; Repair</option>
-            <option value="Pipe Repair">Pipe Repair &amp; Whole-House Repiping</option>
-            <option value="Toilet Repair">Toilet / Fixture Repair</option>
-            <option value="Commercial Plumbing">Commercial Facility Plumbing</option>
-          </select>
+        {/* Service & Urgency Row */}
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label htmlFor={`${id}-service`} className="block text-xs font-bold uppercase tracking-wider text-slate-700">
+              Plumbing Service Needed *
+            </label>
+            <select
+              id={`${id}-service`}
+              value={formData.serviceRequested}
+              onChange={(e) => setFormData({ ...formData, serviceRequested: e.target.value })}
+              className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 transition focus:outline-none focus:ring-2 focus:ring-blue-600"
+            >
+              {SERVICE_OPTIONS.map((opt) => (
+                <option key={opt.value} value={opt.value}>
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor={`${id}-urgency`} className="block text-xs font-bold uppercase tracking-wider text-slate-700">
+              Situation Urgency
+            </label>
+            <select
+              id={`${id}-urgency`}
+              value={formData.urgency}
+              onChange={(e) =>
+                setFormData({
+                  ...formData,
+                  urgency: e.target.value === "urgent" ? "urgent" : "standard",
+                })
+              }
+              className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 transition focus:outline-none focus:ring-2 focus:ring-blue-600"
+            >
+              <option value="urgent">Urgent — Active Leak, Backup, or No Hot Water</option>
+              <option value="standard">Standard — Inspection or Scheduled Repair</option>
+            </select>
+          </div>
         </div>
 
         {/* Details */}
         <div>
-          <label htmlFor="lead-details" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
+          <label htmlFor={`${id}-details`} className="block text-xs font-bold uppercase tracking-wider text-slate-700">
             Brief Details of Plumbing Issue (Optional)
           </label>
           <textarea
-            id="lead-details"
+            id={`${id}-details`}
             rows={3}
             value={formData.details}
             onChange={(e) => setFormData({ ...formData, details: e.target.value })}
@@ -315,7 +392,7 @@ export default function ReferralLeadForm() {
             />
             <span className="text-xs leading-5 text-slate-600">
               <strong className="text-slate-900">Customer Referral Consent:</strong> I authorize PipeResque
-              to share my service inquiry with independent licensed local plumbing contractors servicing
+              to share my service inquiry with independent local plumbing contractors servicing
               Greater Houston for the sole purpose of receiving service information, diagnostics, or an
               estimate. I understand PipeResque is an informational referral platform and not the plumbing
               contractor. *

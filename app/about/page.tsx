@@ -12,7 +12,7 @@ import { Phone, CheckCircle2, ShieldCheck, Clock, Wrench } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "About Piperesque | Plumbing Connection Service in Houston, TX",
+  title: "About PipeResque — Plumbing Referral Resource in Houston, TX",
   description:
     "Learn about Piperesque: how we help Houston homeowners find and connect with independent local plumbing professionals for emergency and routine repairs.",
   alternates: {

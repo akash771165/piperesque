@@ -14,18 +14,18 @@
     "schemaType": "Article",
     "ogTitle": "Houston Water Heater Repair Guide: Troubleshooting & Costs (2026)",
     "ogDescription": "Learn how to diagnose water heater rumbling, pilot outages, tank leaks, and Houston permitting rules before calling a technician.",
-    "ogImage": "/images/blog/water-heater-repair-houston.jpg",
+    "ogImage": "/images/services/water-heater-repair.webp",
     "twitterTitle": "Houston Water Heater Repair Guide: Troubleshooting & Costs",
     "twitterDescription": "Homeowner guide for gas & tankless water heater troubleshooting in Houston."
   },
   "hero": {
     "title": "Water Heater Diagnostic & Repair Guide for Houston Homeowners",
     "subtitle": "Understand water heater failures, municipal code requirements, and when to call a professional.",
-    "image": "/images/blog/water-heater-repair-houston.jpg"
+    "image": "/images/services/water-heater-repair.webp"
   },
   "introduction": [
     "A water heater failure can quickly disrupt essential daily household needs, from morning showers to dishwasher cycles.",
-    "If your water heater is actively leaking onto your floor, flooding an attic, or producing a gas odor, and you require immediate contractor assistance, visit our commercial [Houston Water Heater Repair Services](/services/water-heater-repair) page or call our dispatch hotline at (877) 364-0861.",
+    "If your water heater is actively leaking onto your floor, flooding an attic, or producing a gas odor, and you require immediate contractor assistance, visit our commercial [Houston Water Heater Repair Services](/services/water-heater-repair) page or call our referral hotline at (877) 364-0861.",
     "This homeowner troubleshooting guide covers the primary causes of water heater breakdowns in Greater Houston, how mineral-heavy water causes sediment popping, and what local Harris County codes require for safe replacement."
   ],
   "sections": [
@@ -355,7 +355,7 @@
   ],
   "relatedBlogs": [
     {
-      "title": "Emergency Plumber Houston TX | 24/7 Emergency Plumbing Services",
+      "title": "Emergency Plumber Houston TX | Urgent Emergency Plumbing Services",
       "url": "/blog/emergency-plumber-houston-tx"
     },
     {
@@ -400,5 +400,9 @@
     "aiReady": true,
     "futureCMS": true,
     "version": "2.0"
-  }
+  },
+  "image": "/images/services/water-heater-repair.webp",
+  "publishedAt": "2026-07-28",
+  "updatedAt": "2026-07-28",
+  "readingTime": "8 min read"
 }

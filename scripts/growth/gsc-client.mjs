@@ -46,8 +46,15 @@ export class GSCClient {
 
   /**
    * Fetches real performance data from Search Console API
+   * Supports United States country filtering ('usa') and device segmentation.
    */
-  async getPerformanceData({ startDate, endDate, dimensions = ["query", "page", "device"] } = {}) {
+  async getPerformanceData({
+    startDate,
+    endDate,
+    dimensions = ["query", "page", "device"],
+    country = "usa",
+    searchType = "web"
+  } = {}) {
     // Calculate default date window with Search Console's 3-day lag
     const now = new Date();
     const defaultEnd = new Date(now.getTime() - 3 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
@@ -60,6 +67,7 @@ export class GSCClient {
       return {
         status: "NOT_CONFIGURED",
         siteUrl: this.siteUrl,
+        countryFilter: country,
         asOfDate: queryEnd,
         totalQueriesAnalyzed: 0,
         rows: [],
@@ -67,7 +75,7 @@ export class GSCClient {
       };
     }
 
-    const cacheKey = `gsc_${queryStart}_${queryEnd}_${dimensions.join("_")}.json`;
+    const cacheKey = `gsc_${queryStart}_${queryEnd}_${country}_${dimensions.join("_")}.json`;
     const cacheFile = path.join(CACHE_DIR, cacheKey);
 
     // Return cached live response if under 6 hours old
@@ -87,7 +95,9 @@ export class GSCClient {
       const liveData = await this._fetchFromLiveAPI({
         startDate: queryStart,
         endDate: queryEnd,
-        dimensions
+        dimensions,
+        country,
+        searchType
       });
 
       fs.writeFileSync(
@@ -102,6 +112,7 @@ export class GSCClient {
       return {
         status: "ERROR",
         siteUrl: this.siteUrl,
+        countryFilter: country,
         asOfDate: queryEnd,
         totalQueriesAnalyzed: 0,
         rows: [],
@@ -114,7 +125,7 @@ export class GSCClient {
   /**
    * Executes genuine authenticated Search Console API searchAnalytics.query call
    */
-  async _fetchFromLiveAPI({ startDate, endDate, dimensions }) {
+  async _fetchFromLiveAPI({ startDate, endDate, dimensions, country, searchType = "web" }) {
     const accessToken = await this.auth.getAccessToken(GSC_SCOPE);
     const endpoint = `https://searchconsole.googleapis.com/webmasters/v3/sites/${encodeURIComponent(this.siteUrl)}/searchAnalytics/query`;
 
@@ -122,8 +133,22 @@ export class GSCClient {
       startDate,
       endDate,
       dimensions,
+      type: searchType,
       rowLimit: 500,
-      startRow: 0
+      startRow: 0,
+      ...(country ? {
+        dimensionFilterGroups: [
+          {
+            filters: [
+              {
+                dimension: "country",
+                operator: "equals",
+                expression: country.toLowerCase()
+              }
+            ]
+          }
+        ]
+      } : {})
     };
 
     const response = await fetch(endpoint, {

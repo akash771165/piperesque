@@ -55,6 +55,7 @@ export function getBlogData(
 
       image:
         json.image ??
+        json.hero?.image ??
         "/images/blog/default.jpg",
 
       imageAlt:
@@ -65,15 +66,18 @@ export function getBlogData(
       publishedAt:
         json.publishedAt ??
         json.createdAt ??
+        json.date ??
         "",
 
       updatedAt:
         json.updatedAt ??
         json.createdAt ??
+        json.date ??
         "",
 
       readingTime:
         json.readingTime ??
+        json.readTime ??
         "5 min read",
 
       keywords:

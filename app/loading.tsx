@@ -15,9 +15,9 @@ export default function Loading() {
         </div>
 
         {/* Brand */}
-        <h1 className="mt-6 text-2xl font-black tracking-tight text-slate-900">
-          Piperesque
-        </h1>
+        <p className="mt-6 text-2xl font-black tracking-tight text-slate-900">
+          PipeResque
+        </p>
 
         {/* Status */}
         <p className="mt-2 text-sm font-medium text-slate-500">

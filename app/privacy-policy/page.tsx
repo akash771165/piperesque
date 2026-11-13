@@ -4,7 +4,7 @@ import Footer from "@/components/layout/footer";
 import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Piperesque",
+  title: "Privacy Policy",
   description:
     "Piperesque privacy policy explaining information collection, usage, and data security practices for website visitors.",
   alternates: {

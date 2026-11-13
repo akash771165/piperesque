@@ -67,7 +67,11 @@ export function trackPhoneClick(
 ): void {
   if (typeof window === "undefined") return;
 
-  const fingerprint = `${eventName}_${metadata?.tel || "tollfree"}`;
+  const normalizedTel =
+    typeof metadata?.tel === "string" && metadata.tel.trim().length > 0
+      ? metadata.tel.trim()
+      : "tel:+18773640861";
+  const fingerprint = `${eventName}_${normalizedTel}`;
   if (isDuplicateEvent(fingerprint)) return;
 
   const cleanMetadata = sanitizeAnalyticsMetadata(metadata);

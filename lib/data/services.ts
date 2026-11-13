@@ -43,7 +43,7 @@ export const services: Service[] = [
     shortTitle: "Emergency Plumbing",
 
     seoTitle:
-      "Emergency Plumber Houston, TX | 24/7 Urgent Plumbing Referral | PipeResque",
+      "Emergency Plumber Houston, TX | Urgent Pipe & Leak Referral",
 
     metaDescription:
       "Facing a plumbing emergency in Houston, TX? Connect with licensed independent plumbers for burst pipes, sewer backups & active leaks. Fast phone referral: (877) 364-0861.",
@@ -85,7 +85,7 @@ export const services: Service[] = [
     shortTitle: "Drain Cleaning",
 
     seoTitle:
-      "Drain Cleaning Houston, TX | Hydro-Jetting & Clog Clearing | PipeResque",
+      "Drain Cleaning Houston, TX | Hydro-Jetting & Clog Clearing",
 
     metaDescription:
       "Clogged drains or slow sinks in Houston, TX? Connect with licensed independent plumbers for motorized snaking, hydro-jetting & main cleanout clearing. Call (877) 364-0861.",
@@ -127,7 +127,7 @@ export const services: Service[] = [
     shortTitle: "Water Heater Repair",
 
     seoTitle:
-      "Water Heater Repair Houston, TX | Gas, Electric & Tankless | PipeResque",
+      "Water Heater Repair Houston, TX | Gas, Electric & Tankless",
 
     metaDescription:
       "Water heater leaking or no hot water in Houston, TX? Connect with licensed independent plumbers for gas, electric & tankless diagnosis. Fast referral: (877) 364-0861.",
@@ -169,7 +169,7 @@ export const services: Service[] = [
     shortTitle: "Leak Detection",
 
     seoTitle:
-      "Water Leak Detection Houston, TX | Slab Leaks & Hidden Pipes | PipeResque",
+      "Water Leak Detection Houston, TX | Slab Leaks & Hidden Pipes",
 
     metaDescription:
       "Suspect a slab leak or hidden pipe leak in Houston, TX? Connect with independent leak detection specialists for non-invasive acoustic & thermal diagnostics. Call (877) 364-0861.",
@@ -211,7 +211,7 @@ export const services: Service[] = [
     shortTitle: "Pipe Repair",
 
     seoTitle:
-      "Pipe Repair Services in Houston, TX | Burst & Leaking Pipes | PipeResque",
+      "Pipe Repair in Houston, TX | Burst & Leaking Water Lines",
 
     metaDescription:
       "Leaking or burst pipes in Houston, TX? Connect with independent licensed plumbers for copper, CPVC & PEX pipe repairs, repiping & valve fixes. Call (877) 364-0861.",
@@ -253,7 +253,7 @@ export const services: Service[] = [
     shortTitle: "Sewer Line Repair",
 
     seoTitle:
-      "Sewer Line Repair Houston, TX | Camera Inspections & Replacement | PipeResque",
+      "Sewer Line Repair Houston, TX | Camera & Pipe Replacement",
 
     metaDescription:
       "Main sewer line backing up in Houston, TX? Connect with licensed independent contractors for video camera diagnostics, trenchless relining & pipe replacement. Call (877) 364-0861.",
@@ -295,7 +295,7 @@ export const services: Service[] = [
     shortTitle: "Toilet Repair",
 
     seoTitle:
-      "Toilet Repair Services | Piperesque",
+      "Toilet Repair Services in Houston, TX",
 
     metaDescription:
       "Learn about clogged, leaking, overflowing, and continuously running toilets and the plumbing repair options available.",
@@ -337,7 +337,7 @@ export const services: Service[] = [
     shortTitle: "Faucet Repair",
 
     seoTitle:
-      "Faucet Repair Services | Piperesque",
+      "Faucet Repair Services in Houston, TX",
 
     metaDescription:
       "Learn about leaking, dripping, damaged, and malfunctioning kitchen and bathroom faucets and available repair options.",
@@ -378,7 +378,7 @@ export const services: Service[] = [
     shortTitle: "Commercial Plumbing",
 
     seoTitle:
-      "Commercial Plumbing Services | Piperesque",
+      "Commercial Plumbing Referral in Houston, TX",
 
     metaDescription:
       "Learn about commercial plumbing problems, maintenance considerations, repairs, drainage, water heaters, leaks, and other plumbing services for commercial properties.",
@@ -420,7 +420,7 @@ export const services: Service[] = [
     shortTitle: "Residential Plumbing",
 
     seoTitle:
-      "Residential Plumbing Services | Piperesque",
+      "Residential Plumbing Services in Houston, TX",
 
     metaDescription:
       "Learn about residential plumbing problems including leaks, clogged drains, fixtures, water heaters, pipes, and emergency plumbing situations.",

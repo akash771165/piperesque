@@ -58,6 +58,7 @@ const nextConfig: NextConfig = {
       { source: "/blog/gas-line-repair-houston-tx", destination: "/services/pipe-repair", permanent: true },
       { source: "/blog/commercial-plumbing-houston-tx", destination: "/about", permanent: true },
       { source: "/blog/emergency-drain-cleaning-houston-tx", destination: "/blog/emergency-drain-cleaning-houston", permanent: true },
+      { source: "/blog/burst-pipe-repair-houston", destination: "/blog/burst-pipe-repair-houston-tx", permanent: true },
 
       // Service area city pages for deleted cities
       { source: "/service-areas/tomball", destination: "/service-areas", permanent: true },

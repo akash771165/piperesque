@@ -60,15 +60,12 @@ ${(gscAnalysis?.contentGaps || []).map(g => `- **${g.topic}** (Focus: \`${g.prim
 ---
 
 ## 3. Pages Gaining Impressions (Rising Visibility)
-- **\`/blog/water-heater-expansion-tank-houston-tx\`**: +28% impression trajectory; average position 4.1 for \`water heater expansion tank symptoms houston\`.
-- **\`/services/sewer-line-repair\`**: +14% impressions across Harris County; ranking position 8.4 for \`sewer line repair houston\`.
-- **\`/services/emergency-plumbing\`**: Steady top-10 presence (pos 6.2); mobile share 74%.
+${(gscAnalysis?.pagesGainingImpressions || []).map(p => `- **\`${p.page}\`**: ${p.details}`).join("\n") || "- No live GSC trajectory data available (GSC API NOT_CONFIGURED or historical baseline only). Zero simulated ranking positions reported."}
 
 ---
 
 ## 4. Pages Losing Impressions (Declining Visibility)
-- **\`/services/toilet-repair\`**: -8% impressions week-over-week (position slipped from 13.8 to 15.1; recommended for FAQ schema update).
-- **\`/services/gas-line-repair\`**: Slight position slip from 8.6 to 9.4; seasonal demand shift toward winter heating checks underway.
+${(gscAnalysis?.pagesLosingImpressions || []).map(p => `- **\`${p.page}\`**: ${p.details}`).join("\n") || "- No live GSC trajectory data available (GSC API NOT_CONFIGURED or historical baseline only). Zero simulated ranking positions reported."}
 
 ---
 

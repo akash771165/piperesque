@@ -10,7 +10,7 @@ import { CheckCircle2, Phone, ArrowRight, ShieldCheck, Clock3 } from "lucide-rea
 import { services } from "@/lib/data/services";
 
 export const metadata: Metadata = {
-  title: "Plumbing Services in Houston, TX | PipeResque",
+  title: "Plumbing Services in Houston, TX",
   description:
     "Find fast plumbing assistance in Houston for emergency plumbing, drain cleaning, leak detection, water heaters, and sewer repair. Call (877) 364-0861.",
   keywords: [

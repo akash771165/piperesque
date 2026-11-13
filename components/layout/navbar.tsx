@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config/site";
-import { trackPhoneClick } from "@/lib/analytics/track";
 import {
   Menu,
   X,
@@ -109,11 +108,6 @@ export default function Navbar() {
             <a
               href={`tel:${siteConfig.phone}`}
               data-event="phone_click_header"
-              onClick={() =>
-                trackPhoneClick("phone_click_header", {
-                  location: "top_utility_bar",
-                })
-              }
               className="font-bold text-amber-400 hover:text-amber-300 transition"
             >
               Direct: {siteConfig.phoneDisplay}
@@ -251,16 +245,11 @@ export default function Navbar() {
             <a
               href={`tel:${siteConfig.phone}`}
               data-event="phone_click_header"
-              onClick={() =>
-                trackPhoneClick("phone_click_header", {
-                  location: "desktop_nav",
-                })
-              }
-              aria-label={`Call Now at ${siteConfig.phoneDisplay}`}
+              aria-label={`Call PipeResque at ${siteConfig.phoneDisplay}`}
               className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3 text-sm font-black text-slate-950 shadow-md transition hover:bg-amber-400 hover:shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
             >
               <Phone size={17} className="fill-slate-950" aria-hidden="true" />
-              <span>Call Now: {siteConfig.phoneDisplay}</span>
+              <span>Call PipeResque: {siteConfig.phoneDisplay}</span>
             </a>
           </div>
 
@@ -369,16 +358,11 @@ export default function Navbar() {
                 <a
                   href={`tel:${siteConfig.phone}`}
                   data-event="phone_click_header"
-                  onClick={() =>
-                    trackPhoneClick("phone_click_header", {
-                      location: "mobile_drawer",
-                    })
-                  }
-                  aria-label={`Call Now: ${siteConfig.phoneDisplay}`}
+                  aria-label={`Call PipeResque at ${siteConfig.phoneDisplay}`}
                   className="flex items-center justify-center gap-2.5 w-full rounded-xl bg-amber-500 py-3.5 px-4 text-center font-black text-slate-950 shadow transition active:scale-95 hover:bg-amber-400"
                 >
                   <Phone size={18} className="fill-slate-950" aria-hidden="true" />
-                  <span>Call Now: {siteConfig.phoneDisplay}</span>
+                  <span>Call PipeResque: {siteConfig.phoneDisplay}</span>
                 </a>
               </div>
             </div>
@@ -390,11 +374,6 @@ export default function Navbar() {
       <a
         href={`tel:${siteConfig.phone}`}
         data-event="phone_click_sticky"
-        onClick={() =>
-          trackPhoneClick("phone_click_sticky", {
-            location: "desktop_floating_badge",
-          })
-        }
         aria-label={`Call PipeResque Referral Hotline at ${siteConfig.phoneDisplay}`}
         className="fixed bottom-6 right-6 z-40 hidden md:inline-flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-slate-950 text-white border border-slate-800 shadow-2xl hover:scale-105 transition-all group"
       >
@@ -414,16 +393,16 @@ export default function Navbar() {
         <a
           href={`tel:${siteConfig.phone}`}
           data-event="phone_click_sticky"
-          onClick={() =>
-            trackPhoneClick("phone_click_sticky", {
-              location: "mobile_bottom_bar",
-            })
-          }
           aria-label={`Call PipeResque Referral Line at ${siteConfig.phoneDisplay}`}
-          className="flex items-center justify-center gap-2.5 w-full py-3.5 px-4 rounded-xl bg-amber-500 active:bg-amber-600 text-slate-950 font-black text-base shadow-lg transition"
+          className="flex flex-col items-center justify-center w-full py-2.5 px-4 rounded-xl bg-amber-500 active:bg-amber-600 text-slate-950 shadow-lg transition"
         >
-          <Phone size={18} className="fill-slate-950" aria-hidden="true" />
-          <span>Call Now: {siteConfig.phoneDisplay}</span>
+          <div className="flex items-center gap-2 font-black text-base">
+            <Phone size={18} className="fill-slate-950" aria-hidden="true" />
+            <span>Call PipeResque: {siteConfig.phoneDisplay}</span>
+          </div>
+          <span className="text-[11px] font-semibold text-slate-900 tracking-tight">
+            Discuss your plumbing concern • Independent provider referral
+          </span>
         </a>
       </div>
     </>
