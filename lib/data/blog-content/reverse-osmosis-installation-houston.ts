@@ -103,7 +103,7 @@ export const reverseOsmosisInstallationHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional reverse osmosis installation, maintenance, filter replacement, and water treatment services throughout Houston. Contact us today for cleaner, better-tasting drinking water.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

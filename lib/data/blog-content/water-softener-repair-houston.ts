@@ -103,7 +103,7 @@ export const waterSoftenerRepairHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional water softener repair, maintenance, replacement, and water treatment services throughout Houston. Contact us today to restore soft, clean water in your home.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

@@ -119,7 +119,7 @@ export const emergencyPlumberHoustonCostGuide: BlogContent = {
     description:
       "Our 24 hour emergency plumbers provide fast repairs for leaks, burst pipes, sewer backups, and urgent plumbing problems throughout Houston.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

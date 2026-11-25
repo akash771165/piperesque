@@ -103,7 +103,7 @@ export const waterSoftenerInstallationCostHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional water softener installation, replacement, maintenance, and water treatment solutions throughout Houston. Contact us today for a customized installation estimate.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

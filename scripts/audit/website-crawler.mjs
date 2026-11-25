@@ -191,7 +191,7 @@ async function runAudit() {
         const hrefMatches = extractMatches(body, /href=["']([^"'#\s]+)["']/gi);
         for (const href of hrefMatches) {
           if (href.startsWith("tel:")) {
-            if (href !== "tel:+18773640861") {
+            if (href !== "tel:+18775873986") {
               results.phoneLinkIssues.push({ page: pathname, invalidHref: href });
             }
             continue;

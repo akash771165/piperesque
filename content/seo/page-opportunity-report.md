@@ -3,7 +3,7 @@
 ## Executive Overview
 * **Platform:** PipeResque (https://www.piperesque.com)
 * **Target Market:** Greater Houston, Texas, USA (Harris, Fort Bend, Montgomery counties)
-* **Primary Objective:** Convert qualified inbound organic and AI search visitors into genuine telephone referral inquiries at **(877) 364-0861**.
+* **Primary Objective:** Convert qualified inbound organic and AI search visitors into genuine telephone referral inquiries at **(877) 587-3986**.
 * **Business Model:** Plumbing information & telephone referral platform connecting homeowners with independent third-party plumbing contractors.
 * **Manifest Status:** `content/seo/page-opportunity-manifest.json` — 100/100 Distinct Pages Implemented & Completed.
 * **Build Status:** 225/225 static routes generated cleanly via Next.js Turbopack SSG (`npm run build` exited 0).
@@ -56,7 +56,7 @@ Every proposed page was evaluated on a 100-point multi-factor commercial rubric:
   - `FAQPage` schema
   - `Article` schema
   - LeadSmart referral disclaimer embedded on every article template.
-* Passive phone tracking route mounted at `components/providers/phone-tracker.tsx` intercepting all `tel:+18773640861` clicks without delaying call initiation.
+* Passive phone tracking route mounted at `components/providers/phone-tracker.tsx` intercepting all `tel:+18775873986` clicks without delaying call initiation.
 
 ---
 

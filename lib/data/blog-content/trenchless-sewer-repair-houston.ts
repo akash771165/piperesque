@@ -103,7 +103,7 @@ export const trenchlessSewerRepairHouston: BlogContent = {
     description:
       "Our experienced plumbers provide professional trenchless sewer repair services throughout Houston. We use advanced equipment to repair damaged sewer lines with minimal excavation and long-lasting results.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

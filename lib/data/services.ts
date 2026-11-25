@@ -42,11 +42,10 @@ export const services: Service[] = [
 
     shortTitle: "Emergency Plumbing",
 
-    seoTitle:
-      "Emergency Plumber Houston, TX | Urgent Pipe & Leak Referral",
+    seoTitle: "Emergency Plumbing Help in Houston, TX",
 
     metaDescription:
-      "Facing a plumbing emergency in Houston, TX? Connect with licensed independent plumbers for burst pipes, sewer backups & active leaks. Fast phone referral: (877) 364-0861.",
+      "Facing a plumbing emergency in Houston, TX? Connect with licensed independent plumbers for burst pipes, sewer backups & leaks. Call (877) 587-3986.",
 
     keywords: [
       "emergency plumbing houston tx",
@@ -68,7 +67,7 @@ export const services: Service[] = [
       "Urgent Phone Referral Matching",
       "Burst Pipe & Active Leak Response",
       "Major Sewer Backup Evaluation",
-      "Direct Hotline: (877) 364-0861",
+      "Direct Hotline: (877) 587-3986",
       "Independent Licensed Providers",
     ],
 
@@ -84,11 +83,10 @@ export const services: Service[] = [
 
     shortTitle: "Drain Cleaning",
 
-    seoTitle:
-      "Drain Cleaning Houston, TX | Hydro-Jetting & Clog Clearing",
+    seoTitle: "Drain Cleaning & Hydro-Jetting Houston, TX",
 
     metaDescription:
-      "Clogged drains or slow sinks in Houston, TX? Connect with licensed independent plumbers for motorized snaking, hydro-jetting & main cleanout clearing. Call (877) 364-0861.",
+      "Clogged drains or slow sinks in Houston, TX? Connect with licensed independent plumbers for snaking, hydro-jetting & cleanout clearing. Call (877) 587-3986.",
 
     keywords: [
       "drain cleaning houston tx",
@@ -101,7 +99,7 @@ export const services: Service[] = [
     heroTitle: "Drain Cleaning Services in Houston, TX",
 
     heroDescription:
-      "Connect with independent local plumbing professionals for kitchen sinks, shower drains, and main sewer line cleanouts across Greater Houston.",
+      "Connect with independent local plumbing professionals for kitchen sinks, shower drains, hydro-jetting, and main sewer cleanouts across Greater Houston.",
 
     description:
       "Drain problems can result from grease buildup, hair accumulation, mineral scale, or root infiltration into Houston lateral lines. We connect you with local independent contractors equipped with motorized augers and high-pressure hydro-jetting.",
@@ -126,11 +124,10 @@ export const services: Service[] = [
 
     shortTitle: "Water Heater Repair",
 
-    seoTitle:
-      "Water Heater Repair Houston, TX | Gas, Electric & Tankless",
+    seoTitle: "Water Heater Repair & Tankless Houston, TX",
 
     metaDescription:
-      "Water heater leaking or no hot water in Houston, TX? Connect with licensed independent plumbers for gas, electric & tankless diagnosis. Fast referral: (877) 364-0861.",
+      "Water heater leaking or no hot water in Houston, TX? Connect with licensed independent plumbers for gas, electric & tankless repairs. Call (877) 587-3986.",
 
     keywords: [
       "water heater repair houston",
@@ -168,11 +165,10 @@ export const services: Service[] = [
 
     shortTitle: "Leak Detection",
 
-    seoTitle:
-      "Water Leak Detection Houston, TX | Slab Leaks & Hidden Pipes",
+    seoTitle: "Slab & Water Leak Detection in Houston, TX",
 
     metaDescription:
-      "Suspect a slab leak or hidden pipe leak in Houston, TX? Connect with independent leak detection specialists for non-invasive acoustic & thermal diagnostics. Call (877) 364-0861.",
+      "Suspect a slab leak or hidden pipe leak in Houston, TX? Connect with independent acoustic & thermal leak detection specialists. Call (877) 587-3986.",
 
     keywords: [
       "leak detection houston tx",
@@ -210,11 +206,10 @@ export const services: Service[] = [
 
     shortTitle: "Pipe Repair",
 
-    seoTitle:
-      "Pipe Repair in Houston, TX | Burst & Leaking Water Lines",
+    seoTitle: "Burst & Copper Pipe Repair in Houston, TX",
 
     metaDescription:
-      "Leaking or burst pipes in Houston, TX? Connect with independent licensed plumbers for copper, CPVC & PEX pipe repairs, repiping & valve fixes. Call (877) 364-0861.",
+      "Leaking or burst pipes in Houston, TX? Connect with independent licensed plumbers for copper, CPVC & PEX repiping and valve fixes. Call (877) 587-3986.",
 
     keywords: [
       "pipe repair houston tx",
@@ -252,11 +247,10 @@ export const services: Service[] = [
 
     shortTitle: "Sewer Line Repair",
 
-    seoTitle:
-      "Sewer Line Repair Houston, TX | Camera & Pipe Replacement",
+    seoTitle: "Sewer Line Repair & Backups in Houston, TX",
 
     metaDescription:
-      "Main sewer line backing up in Houston, TX? Connect with licensed independent contractors for video camera diagnostics, trenchless relining & pipe replacement. Call (877) 364-0861.",
+      "Main sewer backing up in Houston, TX? Connect with independent plumbers for video camera checks, hydro-jetting & line repair. Call (877) 587-3986.",
 
     keywords: [
       "sewer line repair houston tx",
@@ -264,21 +258,22 @@ export const services: Service[] = [
       "sewer camera inspection houston",
       "trenchless sewer repair houston",
       "sewer backup repair houston tx",
+      "emergency sewer backup houston",
     ],
 
     heroTitle: "Sewer Line Repair & Replacement in Houston, TX",
 
     heroDescription:
-      "Connect with independent Houston plumbing contractors specializing in video camera line inspections, tree root clearing, trenchless relining, and sewer replacement.",
+      "Connect with independent Houston plumbing contractors specializing in emergency sewer backups, video camera inspections, hydro-jetting, and pipe replacement.",
 
     description:
-      "Sewer line problems can cause raw wastewater to back up into bathtubs, toilets, and floor drains. Houston's expansive clay soil and mature tree roots often crack or belly underground sewer laterals. PipeResque connects you with independent licensed contractors for camera evaluations, trenchless CIPP lining, and structural excavation.",
+      "Sewer line problems can cause raw wastewater to back up into bathtubs, toilets, and floor drains. Houston's expansive clay soil and mature tree roots often crack or belly underground sewer laterals. PipeResque connects you with independent licensed contractors for camera evaluations, hydro-jetting, trenchless CIPP lining, and excavation.",
 
     benefits: [
       "High-Definition Video Camera Inspections",
+      "Emergency Sewer Backup Evaluation",
       "Trenchless CIPP Pipe Relining Options",
       "Tree Root Intrusion Hydro-Jetting",
-      "Sewer Lateral Line Spot & Full Replacement",
       "Independent Licensed Plumbing Contractors",
     ],
 
@@ -294,34 +289,33 @@ export const services: Service[] = [
 
     shortTitle: "Toilet Repair",
 
-    seoTitle:
-      "Toilet Repair Services in Houston, TX",
+    seoTitle: "Toilet Repair, Clogs & Leaks Houston, TX",
 
     metaDescription:
-      "Learn about clogged, leaking, overflowing, and continuously running toilets and the plumbing repair options available.",
+      "Overflowing, leaking, or continuously running toilet in Houston, TX? Connect with independent local plumbers for wax rings & valve fixes: (877) 587-3986.",
 
     keywords: [
-      "toilet repair",
-      "clogged toilet repair",
-      "running toilet repair",
-      "toilet leak repair",
-      "toilet plumbing service",
+      "toilet repair houston tx",
+      "clogged toilet repair houston",
+      "running toilet repair houston",
+      "toilet leak repair houston",
+      "wax ring replacement houston",
     ],
 
-    heroTitle: "Toilet Repair Services",
+    heroTitle: "Toilet Repair Services in Houston, TX",
 
     heroDescription:
-      "Information about common toilet problems including clogs, leaks, flushing issues, and continuously running toilets.",
+      "Connect with independent Houston plumbing professionals for overflowing bowls, base wax-ring leaks, fill valve failures, and toilet replacements.",
 
     description:
-      "Toilet problems can result from blocked drains, worn components, leaks, or other plumbing conditions. A professional assessment can identify the cause and determine whether repair or replacement is appropriate.",
+      "Toilet problems can stem from trap obstructions, failed wax seals, worn flappers, or deeper main sewer backups. PipeResque connects Houston homeowners with independent licensed contractors for reliable diagnostics and repairs.",
 
     benefits: [
-      "Toilet Problem Information",
-      "Clog Guidance",
-      "Leak Information",
-      "Flush Problem Guidance",
-      "Replacement Considerations",
+      "Stubborn Clog & Auger Clearing",
+      "Base Leak & Wax Ring Replacement",
+      "Fill Valve & Flush Mechanism Repair",
+      "New Toilet Installation Help",
+      "Independent Licensed Providers",
     ],
 
     image: "/images/services/toilet-repair.webp",
@@ -336,75 +330,73 @@ export const services: Service[] = [
 
     shortTitle: "Faucet Repair",
 
-    seoTitle:
-      "Faucet Repair Services in Houston, TX",
+    seoTitle: "Faucet & Hose Bibb Repair in Houston, TX",
 
     metaDescription:
-      "Learn about leaking, dripping, damaged, and malfunctioning kitchen and bathroom faucets and available repair options.",
+      "Dripping kitchen faucet or leaking outdoor hose bibb in Houston, TX? Connect with independent plumbers for cartridge & fixture repairs: (877) 587-3986.",
 
     keywords: [
-      "faucet repair",
-      "leaky faucet repair",
-      "kitchen faucet repair",
-      "bathroom faucet repair",
-      "faucet replacement",
+      "faucet repair houston tx",
+      "leaky faucet repair houston",
+      "kitchen faucet replacement houston",
+      "hose bibb repair houston",
+      "cartridge valve repair houston",
     ],
 
-    heroTitle: "Faucet Repair Services",
+    heroTitle: "Faucet Repair Services in Houston, TX",
 
     heroDescription:
-      "Information about common faucet problems, water leaks, worn components, fixture repairs, and replacement considerations.",
+      "Connect with independent Greater Houston plumbers for leaking kitchen faucets, worn bathroom cartridges, under-sink supply lines, and outdoor hose bibbs.",
 
     description:
-      "A dripping or leaking faucet can waste water and may indicate a worn component or damaged fixture. The appropriate solution depends on the faucet condition, failed component, and whether repair or replacement is more suitable.",
+      "A dripping faucet or leaking outdoor sillcock wastes treated water and can damage cabinetry or exterior brick framing. PipeResque connects Houston homeowners with independent contractors for cartridge rebuilds, shutoff valves, and fixture swaps.",
 
     benefits: [
-      "Faucet Problem Information",
-      "Leak Guidance",
-      "Fixture Repair Options",
-      "Replacement Considerations",
-      "Kitchen & Bathroom Information",
+      "Kitchen & Bathroom Cartridge Fixes",
+      "Under-Sink Supply Valve Replacement",
+      "Frost-Free Outdoor Hose Bibbs",
+      "Pressure & Aerator Diagnostics",
+      "Independent Local Plumbing Pros",
     ],
 
     image: "/images/services/faucet-repair.webp",
 
     icon: Bath,
   },
-    {
+  {
     slug: "commercial-plumbing",
 
     title: "Commercial Plumbing Services",
 
     shortTitle: "Commercial Plumbing",
 
-    seoTitle:
-      "Commercial Plumbing Referral in Houston, TX",
+    seoTitle: "Commercial Plumbing Services Houston, TX",
 
     metaDescription:
-      "Learn about commercial plumbing problems, maintenance considerations, repairs, drainage, water heaters, leaks, and other plumbing services for commercial properties.",
+      "Need commercial plumbing in Houston, TX? Connect with independent licensed contractors for grease traps, backflow testing, drains & boilers: (877) 587-3986.",
 
     keywords: [
-      "commercial plumbing",
-      "commercial plumber",
-      "business plumbing repair",
-      "commercial drain cleaning",
-      "commercial plumbing services",
+      "commercial plumbing houston tx",
+      "commercial plumber houston",
+      "grease trap drain cleaning houston",
+      "commercial backflow testing houston",
+      "commercial water heater houston",
     ],
 
-    heroTitle: "Commercial Plumbing Services",
+    heroTitle: "Commercial Plumbing Referral in Houston, TX",
 
     heroDescription:
-      "Information about plumbing systems and common service needs for offices, retail properties, restaurants, warehouses, and other commercial buildings.",
+      "Connect with independent commercial plumbing contractors serving Houston offices, restaurants, retail centers, and multi-family properties.",
 
     description:
-      "Commercial plumbing systems can involve fixtures, drainage, water heaters, supply lines, and other plumbing components. Service requirements depend on the property, plumbing system, and specific problem.",
+      "Commercial properties across Greater Houston face strict health-code standards for hot water delivery, backflow prevention, grease traps, and high-traffic restroom drains. PipeResque connects facility managers with independent commercial plumbers.",
 
     benefits: [
-      "Commercial Plumbing Information",
-      "Drainage Guidance",
-      "Leak Information",
-      "Water Heater Guidance",
-      "Local Service Options",
+      "Commercial Hydro-Jetting & Drains",
+      "Backflow Preventer Testing Prep",
+      "Commercial Water Heaters & Boilers",
+      "Restroom Flushometer & Valve Repairs",
+      "Independent Commercial Contractors",
     ],
 
     image: "/images/services/commercial-plumbing.webp",
@@ -419,34 +411,33 @@ export const services: Service[] = [
 
     shortTitle: "Residential Plumbing",
 
-    seoTitle:
-      "Residential Plumbing Services in Houston, TX",
+    seoTitle: "Residential Plumbing Help in Houston, TX",
 
     metaDescription:
-      "Learn about residential plumbing problems including leaks, clogged drains, fixtures, water heaters, pipes, and emergency plumbing situations.",
+      "Need a residential plumber in Houston, TX? Connect with independent local contractors for leaks, slow drains, water heaters & repiping: (877) 587-3986.",
 
     keywords: [
-      "residential plumbing",
-      "residential plumber",
-      "home plumbing services",
-      "house plumbing repair",
-      "residential plumbing repair",
+      "residential plumbing houston tx",
+      "residential plumber houston",
+      "home plumbing repair houston",
+      "house plumbing service houston",
+      "greater houston home plumber",
     ],
 
-    heroTitle: "Residential Plumbing Services",
+    heroTitle: "Residential Plumbing Services in Houston, TX",
 
     heroDescription:
-      "Information about common residential plumbing problems, repairs, maintenance considerations, and local plumbing service options.",
+      "Referral assistance for Greater Houston homeowners needing trusted help with leaks, clogged drains, water heaters, shutoff valves, and everyday fixtures.",
 
     description:
-      "Residential plumbing systems include fixtures, supply lines, drainage, water heaters, and other components. The appropriate service depends on the property's plumbing system and the specific problem.",
+      "Greater Houston homes experience unique stresses from expansive clay soil, coastal freeze events, and mineralized water. PipeResque connects homeowners with independent licensed plumbers for diagnostic inspections, repairs, and replacements.",
 
     benefits: [
-      "Residential Plumbing Information",
-      "Leak Guidance",
-      "Drain Problem Information",
-      "Water Heater Guidance",
-      "Local Service Options",
+      "Supply Line & Fixture Repairs",
+      "Main Shutoff & PRV Valves",
+      "Leak & Drainage Troubleshooting",
+      "Whole-Home PEX Repiping Referrals",
+      "Clear Independent Provider Terms",
     ],
 
     image: "/images/services/residential-plumbing.webp",

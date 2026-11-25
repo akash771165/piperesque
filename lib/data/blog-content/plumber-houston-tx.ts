@@ -139,7 +139,7 @@ export const plumberHoustonTxGuide = {
     description:
       "Contact Piperesque for trusted plumbing services in Houston. We provide leak repair, drain cleaning, water heater repair, sewer services, pipe repair, and emergency plumbing solutions.",
     button: "Call Piperesque",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

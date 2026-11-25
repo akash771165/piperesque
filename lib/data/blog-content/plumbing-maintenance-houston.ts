@@ -124,7 +124,7 @@ export const plumbingMaintenanceHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional plumbing inspections, preventive maintenance, drain cleaning, leak detection, water heater service, and complete residential plumbing solutions throughout Houston. Contact us today to schedule service.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

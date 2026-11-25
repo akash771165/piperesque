@@ -77,7 +77,7 @@ Best regards,
 
 [Your Name]
 Founder | PipeResque
-Phone: (877) 364-0861
+Phone: (877) 587-3986
 Website: https://www.piperesque.com
 Email: resquepipe@gmail.com
 ```

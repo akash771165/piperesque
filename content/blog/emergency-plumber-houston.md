@@ -177,9 +177,9 @@ situations that may arise in the future.
     Piperesque helps you connect with independent plumbing professionals serving Houston and nearby areas.
   </p>
   <div class="flex flex-wrap gap-3">
-    <a href="tel:+18773640861"
+    <a href="tel:+18775873986"
        class="inline-flex items-center justify-center rounded-xl bg-amber-500 px-5 py-3 text-sm font-bold text-slate-950 shadow hover:bg-amber-400">
-      📞 Call (877) 364-0861
+      📞 Call (877) 587-3986
     </a>
     <a href="/contact"
        class="inline-flex items-center justify-center rounded-xl border border-white/30 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">

@@ -103,7 +103,7 @@ export const emergencyPlumbingCostHouston: BlogContent = {
     description:
       "Our licensed emergency plumbers provide fast diagnosis, reliable repairs, and professional plumbing solutions throughout Houston. Contact us anytime for immediate assistance with plumbing emergencies.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

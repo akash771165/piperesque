@@ -120,8 +120,8 @@ export const PROHIBITED_FILE_PATTERNS = [
 
 // Verified Contact Points (Canonical)
 export const CANONICAL_CONTACT = {
-  PHONE: "(877) 364-0861",
-  PHONE_URL: "tel:+18773640861",
+  PHONE: "(877) 587-3986",
+  PHONE_URL: "tel:+18775873986",
   EMAIL: "resquepipe@gmail.com",
   EMAIL_URL: "mailto:resquepipe@gmail.com",
   BRAND: "PipeResque",

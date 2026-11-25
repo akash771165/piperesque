@@ -115,7 +115,7 @@ export const waterLeakDetectionVsRepairHouston: BlogContent = {
     description:
       "Our licensed plumbers provide accurate leak detection and professional water leak repair services to protect your Houston home from costly water damage.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

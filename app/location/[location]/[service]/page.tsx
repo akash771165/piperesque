@@ -23,8 +23,8 @@ import ReferralLeadForm from "@/components/contact/referral-lead-form";
 
 
 import { services } from "@/lib/data/services";
-
-import { locations } from "@/lib/data/locations";
+import { locations, locationContent } from "@/lib/data/locations";
+import { siteConfig } from "@/lib/config/site";
 
 
 
@@ -93,6 +93,46 @@ type ServiceContent = {
 const baseUrl = "https://www.piperesque.com";
 
 
+
+const indexableCoreServices = new Set([
+  "emergency-plumbing",
+  "sewer-line-repair",
+  "drain-cleaning",
+  "leak-detection",
+  "water-heater-repair",
+  "pipe-repair",
+]);
+
+const relatedBlogsByService: Record<string, { title: string; href: string }[]> = {
+  "emergency-plumbing": [
+    { title: "How to Shut Off Your Main Water Valve in Houston", href: "/blog/how-to-shut-off-main-water-houston" },
+    { title: "Burst Pipe Repair & Stabilization Steps", href: "/blog/burst-pipe-repair-houston-tx" },
+  ],
+  "sewer-line-repair": [
+    { title: "Sewer Line Repair Guide: Clay Soil & Tree Roots", href: "/blog/sewer-line-repair-houston-tx" },
+    { title: "Hydro-Jetting vs. Mechanical Clearing", href: "/blog/hydro-jetting-sewer-lines-houston" },
+    { title: "Sewer Camera Inspection Before Repair", href: "/blog/sewer-camera-inspection-houston" },
+  ],
+  "drain-cleaning": [
+    { title: "Drain Cleaning vs. Main Sewer Blockages", href: "/blog/drain-cleaning-houston-tx" },
+    { title: "Hydro-Jetting Sewer Lines in Greater Houston", href: "/blog/hydro-jetting-sewer-lines-houston" },
+    { title: "Why Chemical Drain Openers Damage Pipes", href: "/blog/chemical-drain-cleaner-pipe-damage-houston" },
+  ],
+  "leak-detection": [
+    { title: "Hidden Leak Detection Diagnostics", href: "/blog/leak-detection-houston-tx" },
+    { title: "Slab Leak Repair & Rerouting Options", href: "/blog/slab-leak-repair-houston-tx" },
+    { title: "High Water Bill? How to Spot Hidden Leaks", href: "/blog/high-water-bill-hidden-leak-houston" },
+  ],
+  "water-heater-repair": [
+    { title: "Water Heater Repair & Diagnosis Guide", href: "/blog/water-heater-repair-houston-tx" },
+    { title: "Tankless Water Heater Descaling & Repairs", href: "/blog/tankless-water-heater-repair-houston" },
+    { title: "Attic Water Heater Texas Code Essentials", href: "/blog/attic-water-heater-code-requirements-houston" },
+  ],
+  "pipe-repair": [
+    { title: "Burst Pipe Repair & Emergency Shutoff", href: "/blog/burst-pipe-repair-houston-tx" },
+    { title: "PEX vs. Copper Repiping Comparison", href: "/blog/pex-vs-copper-repipe-houston" },
+  ],
+};
 
 const supportedServices = [
   "emergency-plumbing",
@@ -1392,7 +1432,7 @@ function getFallbackContent(slug: string, serviceTitle: string, cityName: string
     faqs: [
       {
         question: `How do I schedule ${serviceTitle.toLowerCase()} in ${cityName}?`,
-        answer: `Call Piperesque at (877) 364-0861 to be connected with an independent plumbing professional servicing ${cityName}.`,
+        answer: `Call Piperesque at (877) 587-3986 to be connected with an independent plumbing professional servicing ${cityName}.`,
       },
       {
         question: `How quickly can a plumber arrive in ${cityName}?`,
@@ -1406,6 +1446,45 @@ function getFallbackContent(slug: string, serviceTitle: string, cityName: string
   };
 }
 
+function replaceHoustonWithCity(text: string, cityName: string, stateName: string): string {
+  const normalizedBrand = text.replace(/Piperesque/g, "PipeResque");
+  if (cityName === "Houston") {
+    return normalizedBrand;
+  }
+  return normalizedBrand
+    .replace(/Greater Houston/g, `${cityName} and Greater Houston`)
+    .replace(/Houston,\s*TX/g, `${cityName}, ${stateName}`)
+    .replace(/\bHouston\b/g, cityName);
+}
+
+function localizeServiceContent(
+  raw: ServiceContent,
+  cityName: string,
+  stateName: string
+): ServiceContent {
+  return {
+    intro: replaceHoustonWithCity(raw.intro, cityName, stateName),
+    urgencyTitle: replaceHoustonWithCity(raw.urgencyTitle, cityName, stateName),
+    urgencyText: replaceHoustonWithCity(raw.urgencyText, cityName, stateName),
+    problemsTitle: replaceHoustonWithCity(raw.problemsTitle, cityName, stateName),
+    problems: raw.problems.map((p) => replaceHoustonWithCity(p, cityName, stateName)),
+    processTitle: replaceHoustonWithCity(raw.processTitle, cityName, stateName),
+    process: raw.process.map((step) => ({
+      title: replaceHoustonWithCity(step.title, cityName, stateName),
+      description: replaceHoustonWithCity(step.description, cityName, stateName),
+    })),
+    localTitle: replaceHoustonWithCity(raw.localTitle, cityName, stateName),
+    localText: replaceHoustonWithCity(raw.localText, cityName, stateName),
+    costTitle: replaceHoustonWithCity(raw.costTitle, cityName, stateName),
+    costText: replaceHoustonWithCity(raw.costText, cityName, stateName),
+    costFactors: raw.costFactors.map((f) => replaceHoustonWithCity(f, cityName, stateName)),
+    faqs: raw.faqs.map((faq) => ({
+      question: replaceHoustonWithCity(faq.question, cityName, stateName),
+      answer: replaceHoustonWithCity(faq.answer, cityName, stateName),
+    })),
+  };
+}
+
 function getLocalizedSection(
   serviceSlug: string,
   cityName: string,
@@ -1414,6 +1493,8 @@ function getLocalizedSection(
   defaultTitle: string,
   defaultText: string
 ): { title: string; paragraphs: string[] } {
+  const locData = locationContent[citySlug];
+
   if (citySlug === "houston") {
     if (serviceSlug === "sewer-line-repair") {
       return {
@@ -1462,18 +1543,22 @@ function getLocalizedSection(
     }
   }
 
-  const localizedTitle =
-    defaultTitle.includes("Houston") && cityName !== "Houston"
-      ? defaultTitle.replace("Houston, TX", `${cityName}, ${stateName}`).replace("Houston", cityName)
-      : defaultTitle;
-  const localizedText =
-    defaultText.includes("Houston") && cityName !== "Houston"
-      ? defaultText.replace(/Houston, TX/g, `${cityName}, ${stateName}`).replace(/Houston/g, cityName)
-      : defaultText;
+  const localizedTitle = replaceHoustonWithCity(defaultTitle, cityName, stateName);
+  const localizedText = replaceHoustonWithCity(defaultText, cityName, stateName);
+  const paragraphs = [localizedText];
+
+  if (locData) {
+    paragraphs.push(
+      `Local Infrastructure in ${cityName} (${locData.county} — ZIP Codes ${locData.zipSample}): ${locData.localSoilAndWater}`
+    );
+    paragraphs.push(
+      `Regional Housing & Pipe Profile: ${locData.housingProfile}`
+    );
+  }
 
   return {
     title: localizedTitle,
-    paragraphs: [localizedText],
+    paragraphs,
   };
 }
 
@@ -1487,7 +1572,10 @@ export default async function LocationServicePage({ params }: Props) {
     notFound();
   }
 
-  const content = serviceContent[plumbing.slug] || getFallbackContent(plumbing.slug, plumbing.shortTitle, city.city, city.stateCode);
+  const rawContent =
+    serviceContent[plumbing.slug] ||
+    getFallbackContent(plumbing.slug, plumbing.shortTitle, city.city, city.stateCode);
+  const content = localizeServiceContent(rawContent, city.city, city.stateCode);
 
   const cityName = city.city;
   const stateName = city.stateCode;
@@ -1502,18 +1590,10 @@ export default async function LocationServicePage({ params }: Props) {
     content.localText
   );
 
-  const localizedCostTitle =
-    content.costTitle.includes("Houston") && cityName !== "Houston"
-      ? content.costTitle.replace("Houston", cityName)
-      : content.costTitle;
+  const localizedCostTitle = content.costTitle;
+  const localizedCostText = content.costText;
 
-  const localizedCostText =
-    content.costText.includes("Houston") && cityName !== "Houston"
-      ? content.costText.replace(/Houston/g, cityName)
-      : content.costText;
-
-  const canonical =
-    `${baseUrl}/location/${city.slug}/${plumbing.slug}`;
+  const canonical = `${baseUrl}/location/${city.slug}/${plumbing.slug}`;
 
   const breadcrumbItems = [
     {
@@ -1533,7 +1613,7 @@ export default async function LocationServicePage({ params }: Props) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `${serviceName} in ${cityName}, ${stateName}`,
+    name: `${serviceName} Referral in ${cityName}, ${stateName}`,
     serviceType: serviceName,
     description: content.intro,
     url: canonical,
@@ -1543,7 +1623,18 @@ export default async function LocationServicePage({ params }: Props) {
       addressRegion: stateName,
       addressCountry: "US",
     },
+    broker: {
+      "@type": "Organization",
+      name: siteConfig.company,
+      url: baseUrl,
+    },
+    provider: {
+      "@type": "Organization",
+      name: `Independent Licensed Plumbing Contractors Serving ${cityName}, ${stateName} (via PipeResque)`,
+    },
   };
+
+  const relatedBlogs = relatedBlogsByService[plumbing.slug] ?? [];
 
   return (
     <>
@@ -1633,12 +1724,12 @@ export default async function LocationServicePage({ params }: Props) {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
 
               <a
-                href="tel:+18773640861"
+                href="tel:+18775873986"
                 data-event="phone_click_service"
-                aria-label={`Call PipeResque for ${serviceName} at (877) 364-0861`}
+                aria-label={`Call PipeResque for ${serviceName} at (877) 587-3986`}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-7 py-3.5 text-base font-black text-slate-950 transition hover:bg-amber-400 shadow-md shadow-amber-500/20 active:scale-95"
               >
-                Call (877) 364-0861
+                Call (877) 587-3986
               </a>
 
 
@@ -1900,119 +1991,64 @@ export default async function LocationServicePage({ params }: Props) {
 
 
                 <div className="mt-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
-
                   <p className="text-sm leading-6 text-gray-600">
-
-                    Piperesque does not guarantee pricing, availability,
-
+                    PipeResque does not guarantee pricing, availability,
                     response time, or workmanship. Any estimate, service
-
                     terms, scheduling, and final price are determined by
-
                     the independent plumbing provider.
-
                   </p>
-
                 </div>
-
               </section>
 
-
-
-              {/* Related Services */}
-
+              {/* Related Services & Guides */}
               <section className="mb-12">
-
                 <h2 className="text-3xl font-bold tracking-tight text-gray-950">
-
                   Related Plumbing Services in {cityName}
-
                 </h2>
 
-
-
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
-
                   {[
-
-                    {
-
-                      slug: "emergency-plumbing",
-
-                      name: "Emergency Plumbing",
-
-                    },
-
-                    {
-
-                      slug: "sewer-line-repair",
-
-                      name: "Sewer Line Repair",
-
-                    },
-
-                    {
-
-                      slug: "drain-cleaning",
-
-                      name: "Drain Cleaning",
-
-                    },
-
-                    {
-
-                      slug: "leak-detection",
-
-                      name: "Leak Detection",
-
-                    },
-
-                    {
-
-                      slug: "water-heater-repair",
-
-                      name: "Water Heater Repair",
-
-                    },
-
+                    { slug: "emergency-plumbing", name: "Emergency Plumbing" },
+                    { slug: "sewer-line-repair", name: "Sewer Line Repair" },
+                    { slug: "drain-cleaning", name: "Drain Cleaning" },
+                    { slug: "leak-detection", name: "Leak Detection" },
+                    { slug: "water-heater-repair", name: "Water Heater Repair" },
+                    { slug: "pipe-repair", name: "Pipe Repair" },
                   ]
-
                     .filter((item) => item.slug !== plumbing.slug)
-
                     .map((item) => (
-
                       <Link
-
                         key={item.slug}
-
                         href={`/location/${city.slug}/${item.slug}`}
-
                         className="rounded-xl border border-gray-200 p-5 transition hover:border-gray-400 hover:bg-gray-50"
-
                       >
-
                         <span className="font-semibold text-gray-950">
-
-                          {item.name}
-
+                          {item.name} in {cityName}
                         </span>
-
-
-
                         <span className="mt-1 block text-sm text-gray-600">
-
-                          Learn more about {item.name.toLowerCase()} in{" "}
-
-                          {cityName}.
-
+                          Learn more about {item.name.toLowerCase()} in {cityName}, {stateName}.
                         </span>
-
                       </Link>
-
                     ))}
-
                 </div>
 
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Link
+                    href={`/services/${plumbing.slug}`}
+                    className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-2.5 text-sm font-bold text-blue-800 transition hover:bg-blue-100"
+                  >
+                    Overview: {serviceName} in Greater Houston →
+                  </Link>
+                  {relatedBlogs.map((blog) => (
+                    <Link
+                      key={blog.href}
+                      href={blog.href}
+                      className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-2.5 text-sm font-semibold text-gray-800 transition hover:border-gray-400"
+                    >
+                      {blog.title} →
+                    </Link>
+                  ))}
+                </div>
               </section>
 
             </article>
@@ -2044,12 +2080,12 @@ export default async function LocationServicePage({ params }: Props) {
 
 
                 <a
-                  href="tel:+18773640861"
+                  href="tel:+18775873986"
                   data-event="phone_click_service"
-                  aria-label="Call PipeResque referral line at (877) 364-0861"
+                  aria-label="Call PipeResque referral line at (877) 587-3986"
                   className="mt-6 block rounded-xl bg-amber-500 px-5 py-3.5 text-center font-black text-slate-950 transition hover:bg-amber-400 shadow-sm active:scale-95"
                 >
-                  Call (877) 364-0861
+                  Call (877) 587-3986
                 </a>
 
 
@@ -2174,26 +2210,21 @@ export default async function LocationServicePage({ params }: Props) {
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
 
             <a
-              href="tel:+18773640861"
+              href="tel:+18775873986"
               data-event="phone_click_service"
-              aria-label="Call PipeResque referral line at (877) 364-0861"
+              aria-label="Call PipeResque referral line at (877) 587-3986"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 transition hover:bg-amber-400 shadow-lg active:scale-95"
             >
-              Call (877) 364-0861
+              Call (877) 587-3986
             </a>
 
 
 
             <Link
-
-              href="/contact"
-
+              href="#request-referral"
               className="inline-flex items-center justify-center rounded-lg border border-gray-700 px-6 py-3 font-semibold text-white transition hover:bg-gray-900"
-
             >
-
-              Contact Us
-
+              Request Callback
             </Link>
 
           </div>
@@ -2274,106 +2305,64 @@ export async function generateMetadata({
     notFound();
   }
 
-
-
-
-
-
+  const shouldIndex =
+    city.slug === "houston" || indexableCoreServices.has(plumbing.slug);
 
   let title = `${plumbing.shortTitle} in ${city.city}, ${city.stateCode}`;
-  let description = `Need ${plumbing.shortTitle.toLowerCase()} in ${city.city}, ${city.stateCode}? Review local symptoms, service considerations, and connect with independent plumbing professionals. Call (877) 364-0861.`;
+  let description = `Need ${plumbing.shortTitle.toLowerCase()} in ${city.city}, ${city.stateCode}? Call (877) 587-3986 to connect with independent local plumbing professionals via PipeResque.`;
 
   if (plumbing.slug === "sewer-line-repair") {
-    title = `Sewer Line Repair ${city.city}, ${city.stateCode} | Camera & Replacement`;
-    description = `Underground sewer line backing up in ${city.city}, ${city.stateCode}? Connect with independent local plumbers for video camera diagnostics, trenchless relining & repair. Call (877) 364-0861.`;
+    title = `Sewer Line Repair in ${city.city}, ${city.stateCode}`;
+    description = `Sewer backup or slow main drains in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for camera inspection, relining & sewer repair referrals.`;
   } else if (plumbing.slug === "emergency-plumbing") {
-    title = `Emergency Plumbing ${city.city}, ${city.stateCode} | Urgent Referral Line`;
-    description = `Facing a plumbing emergency in ${city.city}, ${city.stateCode}? Connect with independent licensed plumbers for burst pipes, active leaks & sewer backups. Fast hotline: (877) 364-0861.`;
+    title = `Emergency Plumbing Help in ${city.city}, ${city.stateCode}`;
+    description = `Burst pipe, major leak, or backup in ${city.city}, ${city.stateCode}? Call (877) 587-3986 to reach independent local plumbing pros via PipeResque.`;
   } else if (plumbing.slug === "leak-detection") {
-    title = `Water Leak Detection ${city.city}, ${city.stateCode} | Slab & Hidden Leaks`;
-    description = `Suspect a slab leak or hidden pipe leak in ${city.city}, ${city.stateCode}? Connect with independent leak detection specialists for non-invasive acoustic & thermal diagnostics. Call (877) 364-0861.`;
+    title = `Slab & Leak Detection in ${city.city}, ${city.stateCode}`;
+    description = `Suspect a slab or hidden water leak in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for non-invasive acoustic and thermal leak detection referrals.`;
   } else if (plumbing.slug === "water-heater-repair") {
-    title = `Water Heater Repair ${city.city}, ${city.stateCode} | Gas & Tankless Help`;
-    description = `No hot water or leaking water heater in ${city.city}, ${city.stateCode}? Connect with independent local plumbers for gas, electric & tankless unit diagnosis. Call (877) 364-0861.`;
+    title = `Water Heater Repair in ${city.city}, ${city.stateCode}`;
+    description = `No hot water or leaking tank in ${city.city}, ${city.stateCode}? Call (877) 587-3986 to connect with independent gas, electric & tankless water heater pros.`;
   } else if (plumbing.slug === "drain-cleaning") {
-    title = `Drain Cleaning ${city.city}, ${city.stateCode} | Clogs & Hydro-Jetting`;
-    description = `Severe drain blockage in ${city.city}, ${city.stateCode}? Connect with independent licensed plumbers for motorized cable snaking, hydro-jetting & cleanout access. Call (877) 364-0861.`;
+    title = `Drain Cleaning & Jetting in ${city.city}, ${city.stateCode}`;
+    description = `Backed-up drains or main line clogs in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for cable snaking and hydro-jetting plumbing referrals.`;
+  } else if (plumbing.slug === "pipe-repair") {
+    title = `Burst & Pipe Repair in ${city.city}, ${city.stateCode}`;
+    description = `Leaking or frozen pipes in ${city.city}, ${city.stateCode}? Call (877) 587-3986 to connect with independent local plumbers for PEX, copper & shutoff repair.`;
   }
 
-  const canonical =
-
-    `${baseUrl}/location/${city.slug}/${plumbing.slug}`;
-
-
+  const canonical = `${baseUrl}/location/${city.slug}/${plumbing.slug}`;
 
   return {
-
     title,
-
     description,
-
-
-
     alternates: {
-
       canonical,
-
     },
-
-
-
     robots: {
-
-      index: true,
-
+      index: shouldIndex,
       follow: true,
-
       googleBot: {
-
-        index: true,
-
+        index: shouldIndex,
         follow: true,
-
         "max-image-preview": "large",
-
         "max-snippet": -1,
-
         "max-video-preview": -1,
-
       },
-
     },
-
-
-
     openGraph: {
-
-      title,
-
+      title: `${title} | PipeResque`,
       description,
-
       url: canonical,
-
-      siteName: "Piperesque",
-
+      siteName: "PipeResque",
       type: "website",
-
       locale: "en_US",
-
     },
-
-
-
     twitter: {
-
       card: "summary_large_image",
-
-      title,
-
+      title: `${title} | PipeResque`,
       description,
-
     },
-
   };
 
 }

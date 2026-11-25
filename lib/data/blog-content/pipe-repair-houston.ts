@@ -105,7 +105,7 @@ export const pipeRepairHouston: BlogContent = {
     description:
       "Our experienced plumbers provide fast, reliable pipe repair services for water lines, drain pipes, underground plumbing, and emergency leaks throughout Houston. We diagnose the problem accurately and recommend the most cost-effective repair solution.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

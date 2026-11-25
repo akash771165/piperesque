@@ -104,7 +104,7 @@ export const waterLineRepairHouston: BlogContent = {
     description:
       "Our experienced plumbers provide professional water line repair, underground leak detection, and complete water line replacement services throughout Houston. We locate problems quickly and recommend the most cost-effective repair solution.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

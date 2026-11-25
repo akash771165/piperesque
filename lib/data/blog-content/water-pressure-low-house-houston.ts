@@ -103,7 +103,7 @@ export const waterPressureLowHouseHouston: BlogContent = {
     description:
       "Our licensed plumbers diagnose and repair low water pressure problems, hidden leaks, water line issues, pressure regulators, and plumbing system failures throughout Houston. Contact us today for fast, reliable service.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

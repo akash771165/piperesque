@@ -10,7 +10,7 @@ describe("QualityGate Automated Scoring & Zero-Tolerance Compliance", () => {
       seo: { title: "Drain Cleaning Houston | PipeResque", description: "Call our plumbers for fast drain cleaning in Houston TX today." },
       introduction: ["Our team of licensed plumbers can fix any drain in Houston."],
       sections: [{ title: "Section 1", content: ["Our master plumber arrives with our trucks."] }],
-      callToAction: { phone: "(877) 364-0861", url: "tel:+18773640861" }
+      callToAction: { phone: "(877) 587-3986", url: "tel:+18775873986" }
     };
 
     const evaluation = gate.evaluate(invalidArticle);
@@ -26,7 +26,7 @@ describe("QualityGate Automated Scoring & Zero-Tolerance Compliance", () => {
       seo: { title: "Water Heater Repair Houston", description: "Check our verified review from John: 5 stars on google!" },
       introduction: ["We hold licensed master plumber #12345 in Texas."],
       sections: [{ title: "Section 1", content: ["Reliable service."] }],
-      callToAction: { phone: "(877) 364-0861", url: "tel:+18773640861" }
+      callToAction: { phone: "(877) 587-3986", url: "tel:+18775873986" }
     };
 
     const evaluation = gate.evaluate(invalidArticle);
@@ -69,9 +69,9 @@ describe("QualityGate Automated Scoring & Zero-Tolerance Compliance", () => {
       callToAction: {
         title: "Facing an Attic AC Drain Line Backup in Houston?",
         description: "Connect with independent licensed Houston plumbing professionals through PipeResque.",
-        button: "Call (877) 364-0861",
-        phone: "(877) 364-0861",
-        url: "tel:+18773640861"
+        button: "Call (877) 587-3986",
+        phone: "(877) 587-3986",
+        url: "tel:+18775873986"
       }
     };
 

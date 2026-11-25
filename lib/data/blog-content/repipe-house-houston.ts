@@ -101,7 +101,7 @@ export const repipeHouseHouston: BlogContent = {
     description:
       "Our experienced plumbers provide complete house repiping services using high-quality PEX and copper piping. We replace aging plumbing systems efficiently while minimizing disruption to your home.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

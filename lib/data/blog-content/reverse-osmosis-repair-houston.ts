@@ -103,7 +103,7 @@ export const reverseOsmosisRepairHouston: BlogContent = {
     description:
       "Our licensed plumbers provide fast reverse osmosis repair, filter replacement, membrane replacement, leak repair, and complete RO system maintenance throughout Houston.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

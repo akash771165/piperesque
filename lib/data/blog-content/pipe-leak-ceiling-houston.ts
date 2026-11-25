@@ -103,7 +103,7 @@ export const pipeLeakCeilingHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional leak detection, pipe repair, emergency plumbing, and water damage prevention services throughout Houston. Contact us today to schedule service.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

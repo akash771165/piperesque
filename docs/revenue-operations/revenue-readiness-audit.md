@@ -3,7 +3,7 @@
 **Date:** November 6, 2026  
 **Subject:** End-to-End Revenue Generation, Lead Attribution, and Provider Monetization Audit  
 **Website:** https://www.piperesque.com  
-**Primary Referral Phone:** `(877) 364-0861` (`tel:+18773640861`)  
+**Primary Referral Phone:** `(877) 587-3986` (`tel:+18775873986`)  
 **Email:** `resquepipe@gmail.com`
 
 ---
@@ -11,7 +11,7 @@
 ## 1. CURRENT REVENUE INFRASTRUCTURE AUDIT
 
 ### A. Phone System & Routing
-* **Telephone Number:** `(877) 364-0861`
+* **Telephone Number:** `(877) 587-3986`
 * **Current Operational State:** Active toll-free tracking line provisioned via third-party affiliate pay-per-call network (LeadSmart / Invoca tracking pool).
 * **Call Routing & Forwarding:** Inbound calls route to the network's automated IVR / call distribution system, which dynamically filters by caller caller-ID (ANI), geographic location (Texas area codes: 713, 281, 832, 346, 936), and service intent before forwarding to participating plumbing contractors.
 * **Missed Call Handling:** Currently handled entirely upstream by the third-party network IVR; PipeResque does not retain direct access to missed call logs or voicemail recordings.
@@ -50,7 +50,7 @@
 
 To transition from pure affiliate reliance to a direct, profitable lead network:
 
-1. **Step 1 (Immediate):** Verify `(877) 364-0861` connectivity and ensure the LeadSmart affiliate tracking route is active and logging conversions in GA4.
+1. **Step 1 (Immediate):** Verify `(877) 587-3986` connectivity and ensure the LeadSmart affiliate tracking route is active and logging conversions in GA4.
 2. **Step 2 (Days 1–3):** Deploy the Houston Provider Acquisition Kit (see `docs/revenue-operations/houston-provider-acquisition-kit.md`) to contact 10 mid-sized independent plumbing contractors in Houston (focusing on Katy, Spring, Sugar Land, and Central Houston).
 3. **Step 3 (Days 3–5):** Secure agreement from at least 1 provider using the legal draft in `docs/revenue-operations/provider-referral-agreement.md` for a $55 flat fee per qualified residential inquiry.
 4. **Step 4 (Days 5–7):** Implement the lightweight lead intake form with explicit customer consent to route written requests directly to the partner plumber via secure SMS/email.

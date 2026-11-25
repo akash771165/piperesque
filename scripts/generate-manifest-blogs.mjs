@@ -148,9 +148,9 @@ function generatePageContent(batchNumber, page) {
     callToAction: {
       title: `Need Expert Assistance with ${primaryKeyword} in Houston?`,
       description: `Connect with an independent licensed plumbing contractor serving Houston and surrounding communities for fast diagnostic evaluations and reliable repairs.`,
-      button: "Call (877) 364-0861",
-      phone: "(877) 364-0861",
-      url: "tel:+18773640861"
+      button: "Call (877) 587-3986",
+      phone: "(877) 587-3986",
+      url: "tel:+18775873986"
     }
   };
 

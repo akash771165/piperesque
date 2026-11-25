@@ -103,7 +103,7 @@ export const gasLineRepairHouston: BlogContent = {
     description:
       "Our experienced plumbers provide safe, reliable gas line inspections, leak detection, repairs, and gas pipe replacement throughout Houston. We prioritize safety and restore your gas system with professional workmanship.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

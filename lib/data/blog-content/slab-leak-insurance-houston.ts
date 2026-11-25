@@ -103,7 +103,7 @@ export const slabLeakInsuranceHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional slab leak detection, pipe repair, leak documentation, and emergency plumbing services throughout Houston. Contact us today to schedule service.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

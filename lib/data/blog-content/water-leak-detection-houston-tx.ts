@@ -287,7 +287,7 @@ export const waterLeakDetectionHoustonTx: BlogContent = {
 
     button: "Call Now",
 
-    phone: "+18773640861",
+    phone: "+18775873986",
   },
 
 

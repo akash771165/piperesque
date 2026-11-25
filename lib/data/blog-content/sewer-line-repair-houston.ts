@@ -103,7 +103,7 @@ export const sewerLineRepairHouston: BlogContent = {
     description:
       "Our experienced plumbers provide professional sewer line inspection, repair, trenchless solutions, and emergency sewer services throughout Houston. We quickly diagnose underground sewer problems and restore reliable plumbing performance.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

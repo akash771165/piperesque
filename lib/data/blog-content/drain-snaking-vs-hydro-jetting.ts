@@ -103,7 +103,7 @@ export const drainSnakingVsHydroJetting: BlogContent = {
     description:
       "Whether your home needs drain snaking or hydro jetting, our licensed plumbers provide fast, professional drain cleaning and sewer services throughout Houston.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

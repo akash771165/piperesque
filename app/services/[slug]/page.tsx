@@ -53,7 +53,7 @@ const serviceContent: Record<string, ServiceContent> = {
     heroBadge: "Emergency plumbing information",
     intro: [
       "A plumbing emergency can cause significant water damage when it is not addressed quickly. Burst pipes, severe leaks, sewer backups, and major water heater failures can affect walls, floors, cabinets, and other parts of a property.",
-      "Piperesque helps visitors find plumbing service options and information. If a plumbing problem is actively causing damage, shutting off the water when safe and contacting an appropriate local plumbing professional can help limit further damage.",
+      "PipeResque helps visitors find plumbing service options and information. If a plumbing problem is actively causing damage, shutting off the water when safe and contacting an appropriate local plumbing professional can help limit further damage.",
       "The right response depends on the type of plumbing failure, the location of the problem, accessibility, and the condition of the plumbing system. A professional assessment can determine the appropriate repair approach."
     ],
     warningSigns: [
@@ -399,7 +399,7 @@ const serviceContent: Record<string, ServiceContent> = {
     intro: [
       "Toilet malfunctions can disrupt an entire household. Common issues range from simple flapper leaks and running water to severe clogs, bowl cracks, and recurring backups.",
       "Prompt inspection of toilet leaks is crucial to prevent water damage to subflooring and ceilings below. A professional plumber can determine whether a rebuild, unclogging, or complete fixture replacement is needed.",
-      "Piperesque connects Houston homeowners with independent plumbing specialists who inspect, rebuild, or install residential toilets quickly."
+      "PipeResque connects Houston homeowners with independent plumbing specialists who inspect, rebuild, or install residential toilets quickly."
     ],
     warningSigns: [
       "Toilet continues running long after flushing.",
@@ -442,7 +442,7 @@ const serviceContent: Record<string, ServiceContent> = {
     intro: [
       "A dripping or leaking faucet wastes gallons of water every day and can lead to water stains, cabinet damage, and elevated utility bills.",
       "Whether in the kitchen, bathroom, or utility room, faucet problems often stem from worn cartridges, degraded O-rings, mineral buildup, or loose supply line fittings.",
-      "Piperesque helps homeowners connect with licensed plumbing professionals who can rebuild fixture valves or install modern, efficient replacements."
+      "PipeResque helps homeowners connect with licensed plumbing professionals who can rebuild fixture valves or install modern, efficient replacements."
     ],
     warningSigns: [
       "Constant dripping from the spout after the handle is turned off.",
@@ -485,7 +485,7 @@ const serviceContent: Record<string, ServiceContent> = {
     intro: [
       "Commercial plumbing systems handle much higher usage volumes and operate under strict municipal building codes and sanitation standards.",
       "Businesses, restaurants, offices, retail stores, and commercial facilities in Greater Houston require prompt diagnostic and repair solutions to prevent operational downtime.",
-      "Piperesque connects commercial property managers and business owners with independent plumbing professionals equipped for high-capacity systems."
+      "PipeResque connects commercial property managers and business owners with independent plumbing professionals equipped for high-capacity systems."
     ],
     warningSigns: [
       "Multiple commercial restroom fixtures backing up simultaneously.",
@@ -528,7 +528,7 @@ const serviceContent: Record<string, ServiceContent> = {
     intro: [
       "Residential plumbing systems keep clean water flowing into your home and wastewater safely draining away. When components fail, swift attention protects your home's foundation and walls.",
       "From bathroom fixture upgrades to whole-home repiping and valve repairs, residential plumbing encompasses all domestic supply, drainage, and venting systems.",
-      "Piperesque connects Houston homeowners with independent licensed plumbing providers for routine repairs, diagnostic evaluations, and urgent repairs."
+      "PipeResque connects Houston homeowners with independent licensed plumbing providers for routine repairs, diagnostic evaluations, and urgent repairs."
     ],
     warningSigns: [
       "Discolored water coming from household faucets.",
@@ -566,6 +566,179 @@ const serviceContent: Record<string, ServiceContent> = {
       "Residential plumbing services cover home water supply, drainage, fixtures, valves, and water heaters throughout the Houston metropolitan area."
   },
 };
+const indexableCoreServices = new Set([
+  "emergency-plumbing",
+  "sewer-line-repair",
+  "drain-cleaning",
+  "leak-detection",
+  "water-heater-repair",
+  "pipe-repair",
+]);
+
+const relatedGuidesByService: Record<
+  string,
+  { title: string; href: string; summary: string }[]
+> = {
+  "sewer-line-repair": [
+    {
+      title: "Sewer Line Repair Guide for Houston Homeowners",
+      href: "/blog/sewer-line-repair-houston-tx",
+      summary: "Clay soil shifting, tree roots, trenchless relining, and camera inspections.",
+    },
+    {
+      title: "Hydro-Jetting Sewer Lines in Houston",
+      href: "/blog/hydro-jetting-sewer-lines-houston",
+      summary: "When pressurized water scouring clears grease and root scale.",
+    },
+    {
+      title: "Cast Iron Sewer Pipe Replacement in Houston",
+      href: "/blog/cast-iron-sewer-pipe-replacement-houston",
+      summary: "Warning signs and replacement methods for pre-1975 Houston homes.",
+    },
+    {
+      title: "Sewer Camera Inspection Before Buying or Repairing",
+      href: "/blog/sewer-camera-inspection-houston",
+      summary: "Pinpointing pipe bellies, cracks, and offsets without guesswork.",
+    },
+  ],
+  "drain-cleaning": [
+    {
+      title: "Drain Cleaning Guide for Houston Homes",
+      href: "/blog/drain-cleaning-houston-tx",
+      summary: "Distinguishing fixture clogs from main sewer lateral blockages.",
+    },
+    {
+      title: "Hydro-Jetting Sewer Lines in Houston",
+      href: "/blog/hydro-jetting-sewer-lines-houston",
+      summary: "How 3,000–4,000 PSI jetting compares to mechanical cable snaking.",
+    },
+    {
+      title: "Why Chemical Drain Cleaners Damage Pipes",
+      href: "/blog/chemical-drain-cleaner-pipe-damage-houston",
+      summary: "Risks of caustic drain openers on cast iron, PVC, and metal traps.",
+    },
+    {
+      title: "Kitchen Double-Basin & Main Floor Drain Backups",
+      href: "/blog/kitchen-sink-double-basin-backup-houston",
+      summary: "Troubleshooting shared branch backups and cleanout access.",
+    },
+  ],
+  "leak-detection": [
+    {
+      title: "Hidden Leak Detection in Houston, TX",
+      href: "/blog/leak-detection-houston-tx",
+      summary: "Acoustic sensors, thermal imaging, and isolation pressure testing.",
+    },
+    {
+      title: "Slab Leak Repair & Rerouting Options",
+      href: "/blog/slab-leak-repair-houston-tx",
+      summary: "Handling under-slab copper leaks without unnecessary jackhammering.",
+    },
+    {
+      title: "High Water Bill? Check for Hidden Leaks",
+      href: "/blog/high-water-bill-hidden-leak-houston",
+      summary: "Simple meter-dial checks to confirm silent water loss.",
+    },
+    {
+      title: "Hot Spots on Slab Floors Explained",
+      href: "/blog/hot-spots-floor-slab-leak-houston",
+      summary: "Why warm tile or wood flooring often points to a hot-water slab leak.",
+    },
+  ],
+  "water-heater-repair": [
+    {
+      title: "Water Heater Repair & Replacement in Houston",
+      href: "/blog/water-heater-repair-houston-tx",
+      summary: "Diagnosing thermostats, heating elements, gas pilots, and tank leaks.",
+    },
+    {
+      title: "Tankless Water Heater Repair & Descaling",
+      href: "/blog/tankless-water-heater-repair-houston",
+      summary: "Addressing Houston mineral scale and ignition error codes.",
+    },
+    {
+      title: "Attic Water Heater Texas Code Requirements",
+      href: "/blog/attic-water-heater-code-requirements-houston",
+      summary: "Drain pans, T&P relief discharge lines, and thermal expansion tanks.",
+    },
+    {
+      title: "Why a Water Heater Leaks From the Bottom",
+      href: "/blog/leaking-water-heater-bottom-houston",
+      summary: "Separating drain-valve drips from internal tank shell failure.",
+    },
+  ],
+  "pipe-repair": [
+    {
+      title: "Burst Pipe Repair in Houston, TX",
+      href: "/blog/burst-pipe-repair-houston-tx",
+      summary: "Immediate shutoff steps and sectional piping repair after freezes.",
+    },
+    {
+      title: "PEX vs. Copper Repiping for Houston Homes",
+      href: "/blog/pex-vs-copper-repipe-houston",
+      summary: "Comparing freeze resilience, cost factors, and water chemistry.",
+    },
+    {
+      title: "Main Water Shutoff Valve Replacement",
+      href: "/blog/main-water-shutoff-valve-replacement-houston",
+      summary: "Upgrading seized gate valves to quarter-turn ball valves.",
+    },
+    {
+      title: "High Water Pressure & PRV Damage Prevention",
+      href: "/blog/high-water-pressure-plumbing-damage-houston",
+      summary: "Protecting supply lines and fixtures above 80 PSI.",
+    },
+  ],
+  "toilet-repair": [
+    {
+      title: "Recurrent Toilet Clogging & Rebuild Guide",
+      href: "/blog/recurrent-toilet-clogging-rebuild-houston",
+      summary: "Flapper seals, wax rings, closet augers, and venting checks.",
+    },
+    {
+      title: "Shower & Bathtub Drain Clogs",
+      href: "/blog/bathroom-shower-bathtub-drain-clog-houston",
+      summary: "When bathroom gurgling points to a shared branch line restriction.",
+    },
+  ],
+  "faucet-repair": [
+    {
+      title: "High Water Pressure Plumbing Stress",
+      href: "/blog/high-water-pressure-plumbing-damage-houston",
+      summary: "How excessive supply pressure wears out cartridges and supply lines.",
+    },
+    {
+      title: "Outdoor Hose Bibb Freeze Burst Prevention",
+      href: "/blog/outdoor-hose-bibb-freeze-burst-houston",
+      summary: "Replacing frost-damaged sillcocks and exterior spigots.",
+    },
+  ],
+  "commercial-plumbing": [
+    {
+      title: "Commercial Grease Trap Backup Recovery",
+      href: "/blog/commercial-grease-trap-backup-houston",
+      summary: "Preventing kitchen downtime and FOG line blockages.",
+    },
+    {
+      title: "Commercial Backflow Preventer Testing",
+      href: "/blog/commercial-backflow-preventer-testing-houston",
+      summary: "Annual certification and compliance for Greater Houston properties.",
+    },
+  ],
+  "residential-plumbing": [
+    {
+      title: "Whole-Home Repiping in Houston, TX",
+      href: "/blog/repipe-services-houston-tx",
+      summary: "Replacing aging galvanized or pinhole-prone copper supply piping.",
+    },
+    {
+      title: "How to Shut Off Your Main Water Valve",
+      href: "/blog/how-to-shut-off-main-water-houston",
+      summary: "Step-by-step property protection before a plumber arrives.",
+    },
+  ],
+};
+
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
@@ -606,6 +779,7 @@ export async function generateMetadata({
         content?.overview ||
         `${service.title} in Houston, Texas: Understand common symptoms, repair options, and connect with independent local plumbing providers.`,
       url: `https://www.piperesque.com/services/${service.slug}`,
+      siteName: siteConfig.company,
       type: "website",
     },
   };
@@ -718,13 +892,13 @@ export default async function ServicePage({ params }: Props) {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="tel:+18773640861"
+                href="tel:+18775873986"
                 data-event="phone_click_service"
-                aria-label={`Call PipeResque for ${service.shortTitle} assistance at (877) 364-0861`}
+                aria-label={`Call PipeResque for ${service.shortTitle} assistance at (877) 587-3986`}
                 className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 transition hover:bg-amber-400 shadow-lg shadow-amber-500/20 active:scale-[0.98]"
               >
                 <Phone size={19} />
-                Call (877) 364-0861
+                Call (877) 587-3986
               </a>
 
               <Link
@@ -767,6 +941,46 @@ export default async function ServicePage({ params }: Props) {
                 {paragraph}
               </p>
             ))}
+
+            {service.slug === "drain-cleaning" && (
+              <div className="mt-10 rounded-2xl border border-blue-200 bg-blue-50/70 p-6 md:p-8">
+                <h3 className="text-2xl font-black text-slate-900">
+                  Hydro-Jetting vs. Mechanical Snaking in Houston
+                </h3>
+                <p className="mt-3 leading-7 text-slate-700">
+                  Standard mechanical cable snaking punches a temporary opening through localized hair or soap clogs. When kitchen grease buildup, scale, or early tree roots coat an entire sewer lateral, independent contractors often evaluate high-pressure{" "}
+                  <Link
+                    href="/blog/hydro-jetting-sewer-lines-houston"
+                    className="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-900"
+                  >
+                    hydro-jetting in Houston
+                  </Link>{" "}
+                  after a camera check confirms the pipe wall is structurally intact.
+                </p>
+              </div>
+            )}
+
+            {service.slug === "sewer-line-repair" && (
+              <div className="mt-10 rounded-2xl border border-amber-200 bg-amber-50/80 p-6 md:p-8">
+                <h3 className="text-2xl font-black text-slate-900">
+                  Emergency Sewer Backup: Immediate Safety &amp; Shutoff Checklist
+                </h3>
+                <ul className="mt-4 space-y-2 text-slate-700">
+                  <li>• Pause washing machines, dishwashers, and showers immediately so wastewater cannot rise higher inside lowest-level tubs.</li>
+                  <li>• Keep children and pets away from any backed-up floor drain or toilet overflow.</li>
+                  <li>• Do not pour caustic chemical drain openers into standing sewage, as trapped chemicals create splash hazards for technicians.</li>
+                  <li>• Locate your outdoor ground-level sewer cleanout cap if safe to inspect, or read our{" "}
+                    <Link
+                      href="/blog/how-to-shut-off-main-water-houston"
+                      className="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-900"
+                    >
+                      main water shutoff guide
+                    </Link>{" "}
+                    if fresh water continues supplying overflowing fixtures.
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -845,13 +1059,13 @@ export default async function ServicePage({ params }: Props) {
             </p>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+18773640861"
+                href="tel:+18775873986"
                 data-event="phone_click_service"
-                aria-label={`Call PipeResque for ${service.shortTitle} at (877) 364-0861`}
+                aria-label={`Call PipeResque for ${service.shortTitle} at (877) 587-3986`}
                 className="inline-flex items-center gap-2.5 rounded-xl bg-amber-500 px-8 py-3.5 text-base font-black text-slate-950 transition hover:bg-amber-400 active:scale-95 shadow-md shadow-amber-500/20"
               >
                 <Phone size={18} className="fill-slate-950" aria-hidden="true" />
-                Call (877) 364-0861
+                Call (877) 587-3986
               </a>
               <Link
                 href="#request-referral"
@@ -956,6 +1170,48 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
+      {/* Curated Internal Guides */}
+      <section className="py-16 bg-slate-50 border-t border-slate-200">
+        <div className="container-custom">
+          <div className="mx-auto max-w-5xl">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+              <div>
+                <h2 className="text-3xl font-black text-slate-900">
+                  Helpful Houston {service.shortTitle} Guides
+                </h2>
+                <p className="mt-2 text-slate-600">
+                  Review local technical resources and jump straight to the Houston neighborhood hub.
+                </p>
+              </div>
+              <Link
+                href={`/location/houston/${service.slug}`}
+                className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 shrink-0"
+              >
+                Houston {service.shortTitle} Hub
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {(relatedGuidesByService[service.slug] ?? []).map((guide) => (
+                <Link
+                  key={guide.href}
+                  href={guide.href}
+                  className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-blue-400 hover:shadow-sm"
+                >
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-700">
+                    {guide.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    {guide.summary}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="container-custom">
           <div className="mx-auto max-w-5xl">
@@ -964,13 +1220,13 @@ export default async function ServicePage({ params }: Props) {
                 <MapPin className="text-blue-600" size={24} />
 
                 <h2 className="text-3xl font-black text-slate-900">
-                  Explore local service pages
+                  Explore local service areas
                 </h2>
               </div>
 
               <p className="mt-4 max-w-3xl leading-8 text-slate-600">
-                Looking for this service in a specific Texas community?
-                Explore the available location pages below.
+                Looking for plumbing assistance in a specific Greater Houston community?
+                Explore our local referral hubs below.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -985,28 +1241,35 @@ export default async function ServicePage({ params }: Props) {
                   "richmond",
                   "missouri-city",
                   "the-woodlands",
-                ].map((city) => (
-                  <Link
-                    key={city}
-                    href={`/location/${city}/${service.slug}`}
-                    className="group flex items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-800 transition hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
-                  >
-                    <span>
-                      {city
-                        .split("-")
-                        .map(
-                          (word) =>
-                            word.charAt(0).toUpperCase() + word.slice(1)
-                        )
-                        .join(" ")}
-                    </span>
+                ].map((city) => {
+                  const targetHref =
+                    city === "houston" || indexableCoreServices.has(service.slug)
+                      ? `/location/${city}/${service.slug}`
+                      : `/service-areas/${city}`;
 
-                    <ArrowRight
-                      size={18}
-                      className="transition-transform group-hover:translate-x-1"
-                    />
-                  </Link>
-                ))}
+                  return (
+                    <Link
+                      key={city}
+                      href={targetHref}
+                      className="group flex items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-800 transition hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
+                    >
+                      <span>
+                        {city
+                          .split("-")
+                          .map(
+                            (word) =>
+                              word.charAt(0).toUpperCase() + word.slice(1)
+                          )
+                          .join(" ")}
+                      </span>
+
+                      <ArrowRight
+                        size={18}
+                        className="transition-transform group-hover:translate-x-1"
+                      />
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>

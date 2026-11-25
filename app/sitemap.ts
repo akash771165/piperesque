@@ -69,14 +69,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // 4. Location + Service Pages (10 locations x 10 services = 100 pages)
-  const supportedLocationServices = [
+  // 4. Location + Service Pages (Houston gets all 10; 9 suburbs get 6 high-intent core services = 64 indexable pages)
+  const coreLocationServices = [
     "emergency-plumbing",
     "sewer-line-repair",
     "drain-cleaning",
     "leak-detection",
     "water-heater-repair",
     "pipe-repair",
+  ];
+
+  const allLocationServices = [
+    ...coreLocationServices,
     "toilet-repair",
     "faucet-repair",
     "commercial-plumbing",
@@ -85,7 +89,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const locationServicePages: MetadataRoute.Sitemap = [];
   for (const loc of locations) {
-    for (const serviceSlug of supportedLocationServices) {
+    const allowedServices =
+      loc.slug === "houston" ? allLocationServices : coreLocationServices;
+    for (const serviceSlug of allowedServices) {
       locationServicePages.push({
         url: `${baseUrl}/location/${loc.slug}/${serviceSlug}`,
         changeFrequency: "monthly",

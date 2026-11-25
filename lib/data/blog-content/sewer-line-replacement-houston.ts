@@ -103,7 +103,7 @@ export const sewerLineReplacementHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional sewer line replacement services throughout Houston. Whether your sewer line is cracked, collapsed, or beyond repair, we'll recommend the most effective replacement solution for your property.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

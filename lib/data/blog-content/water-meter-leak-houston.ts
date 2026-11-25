@@ -103,7 +103,7 @@ export const waterMeterLeakHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional water meter leak detection, underground water line repair, emergency plumbing, and complete water service line solutions throughout Houston. Contact us today to schedule service.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

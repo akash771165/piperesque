@@ -44,7 +44,7 @@ export default function CTA() {
               </h2>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-blue-100">
-                Piperesque helps homeowners connect with independent plumbing
+                PipeResque helps homeowners connect with independent plumbing
                 service providers for emergency plumbing, drain cleaning,
                 leak detection, sewer repairs, water heater services and
                 other plumbing needs throughout Houston.
@@ -94,7 +94,7 @@ export default function CTA() {
               </div>
 
               <p className="mt-6 text-sm leading-6 text-blue-100">
-                Piperesque is an informational website that connects users
+                PipeResque is an informational website that connects users
                 with independent plumbing service providers. Availability,
                 pricing, response times and services are determined by the
                 selected provider.
@@ -138,7 +138,7 @@ export default function CTA() {
               </h3>
 
               <p className="mt-3 text-blue-100">
-                Call (877) 364-0861 for provider referral.
+                Call (877) 587-3986 for provider referral.
               </p>
             </div>
 

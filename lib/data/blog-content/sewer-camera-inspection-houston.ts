@@ -103,7 +103,7 @@ export const sewerCameraInspectionHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional sewer camera inspections to identify blockages, damaged pipes, root intrusion, and hidden plumbing problems. We'll locate the issue quickly and recommend the most effective repair solution.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

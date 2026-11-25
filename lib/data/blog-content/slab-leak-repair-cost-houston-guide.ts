@@ -116,7 +116,7 @@ export const slabLeakRepairCostHoustonGuide: BlogContent = {
     description:
       "Our experienced plumbers provide slab leak detection and repair services to protect your Houston home from water damage and foundation problems.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

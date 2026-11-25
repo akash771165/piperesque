@@ -8,8 +8,8 @@ export const siteConfig = {
   domain: "piperesque.com",
 
   // Contact
-  phone: "+18773640861",
-  phoneDisplay: "(877) 364-0861",
+  phone: "+18775873986",
+  phoneDisplay: "(877) 587-3986",
   email: "resquepipe@gmail.com",
 
   // Leave blank if not using WhatsApp

@@ -130,7 +130,7 @@ export const mainWaterLineRepairHouston: BlogContent = {
     description:
       "Our experienced plumbers provide main water line repair, replacement, leak detection, and emergency plumbing services throughout Houston.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

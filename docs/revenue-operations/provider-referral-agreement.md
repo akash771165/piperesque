@@ -5,7 +5,7 @@
 ---
 
 **PARTIES:**
-1. **PipeResque** ("Referral Platform" or "Company"), operating https://www.piperesque.com, Email: resquepipe@gmail.com, Phone: (877) 364-0861.
+1. **PipeResque** ("Referral Platform" or "Company"), operating https://www.piperesque.com, Email: resquepipe@gmail.com, Phone: (877) 587-3986.
 2. **[PROVIDER BUSINESS NAME]** ("Contractor" or "Plumbing Provider"), a Texas business entity, Texas State Board of Plumbing Examiners (TSBPE) Responsible Master Plumber License #: [RMP-XXXXX], Business Address: [ADDRESS, HOUSTON, TX].
 
 ---

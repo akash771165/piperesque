@@ -30,12 +30,12 @@
     "plumbing services houston"
   ],
   "seo": {
-    "title": "Houston Sewer Line Repair Guide: Diagnosis, Clay Soils & Costs (2026) | PipeResque",
-    "description": "Homeowner guide to Houston sewer line failures: shifting gumbo clay stress, cast iron corrosion & tree roots. Camera tests, repair vs replacement, and contractor tips.",
+    "title": "Houston Sewer Line Repair Guide: Clay Soils & Costs | PipeResque",
+    "description": "Houston sewer line failures explained: Beaumont clay shifting, cast iron rot, camera tests & emergency sewer backup steps. Referral help: (877) 587-3986.",
     "canonical": "https://www.piperesque.com/blog/sewer-line-repair-houston-tx",
     "robots": "index,follow",
     "schemaType": "Article",
-    "ogTitle": "Houston Sewer Line Repair Diagnostic Guide (2026)",
+    "ogTitle": "Houston Sewer Line Repair Guide: Clay Soils & Costs",
     "ogDescription": "Learn about Houston sewer line problems, Beaumont clay soil shifting, cast iron deterioration, and repair options.",
     "ogImage": "/images/blog/default.jpg",
     "twitterTitle": "Houston Sewer Line Repair Diagnostic Guide",
@@ -51,7 +51,7 @@
   },
   "introduction": [
     "Sewer line problems can create serious plumbing emergencies for Houston homeowners. Damaged sewer pipes may cause backups, unpleasant odors, slow drainage and potential property damage.",
-    "Understanding sewer line warning signs and repair options helps homeowners take action before small problems become major plumbing issues. For homeowners experiencing active wastewater backups who need licensed contractor assistance, camera evaluations, and trenchless replacement, visit our commercial [Houston Sewer Line Repair Services](/services/sewer-line-repair) or call the referral hotline at (877) 364-0861.",
+    "Understanding sewer line warning signs and repair options helps homeowners take action before small problems become major plumbing issues. For homeowners experiencing active wastewater backups who need licensed contractor assistance, camera evaluations, and trenchless replacement, visit our commercial [Houston Sewer Line Repair Services](/services/sewer-line-repair) or call the referral hotline at (877) 587-3986.",
     "This diagnostic guide explains common sewer problems, repair solutions, cost factors, and prevention methods for Houston properties."
   ],
   "sections": [
@@ -327,9 +327,9 @@
   "callToAction": {
     "title": "Need Sewer Line Repair or Diagnostic Help in Houston?",
     "description": "Connect with an independent licensed plumbing contractor serving Greater Houston for video camera diagnostics, trenchless relining, and sewer repairs.",
-    "button": "Call (877) 364-0861",
-    "phone": "(877) 364-0861",
-    "url": "tel:+18773640861"
+    "button": "Call (877) 587-3986",
+    "phone": "(877) 587-3986",
+    "url": "tel:+18775873986"
   },
   "faqs": [
     {
@@ -359,27 +359,27 @@
   ],
   "internalLinks": [
     {
-      "title": "Emergency Plumber Houston TX",
-      "url": "/blog/emergency-plumber-houston-tx"
+      "title": "Sewer Line Repair Services in Houston",
+      "url": "/services/sewer-line-repair"
     },
     {
-      "title": "24 Hour Plumber Houston TX",
-      "url": "/blog/24-hour-plumber-houston-tx"
+      "title": "Houston Sewer Line Repair & Backup Help",
+      "url": "/location/houston/sewer-line-repair"
     },
     {
-      "title": "Burst Pipe Repair Houston TX",
-      "url": "/blog/burst-pipe-repair-houston-tx"
+      "title": "Hydro-Jetting Houston Sewer Lines",
+      "url": "/blog/hydro-jetting-sewer-lines-houston"
     },
     {
-      "title": "Emergency Plumbing Services Houston",
-      "url": "/blog/emergency-plumbing-services-houston"
+      "title": "Sewer Camera Inspection Guide",
+      "url": "/blog/sewer-camera-inspection-houston"
     },
     {
-      "title": "Drain Cleaning Houston",
-      "url": "/services/drain-cleaning"
+      "title": "Cast Iron Sewer Pipe Replacement",
+      "url": "/blog/cast-iron-sewer-pipe-replacement-houston"
     },
     {
-      "title": "Emergency Plumbing Service",
+      "title": "Emergency Plumbing Help in Houston",
       "url": "/services/emergency-plumbing"
     }
   ],

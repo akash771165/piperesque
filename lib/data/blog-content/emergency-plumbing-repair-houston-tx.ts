@@ -103,7 +103,7 @@ export const emergencyPlumbingRepairHoustonTx: BlogContent = {
     description:
       "Our licensed emergency plumbers provide fast repairs for burst pipes, leaks, sewer backups, water heaters, and urgent plumbing problems throughout Houston.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

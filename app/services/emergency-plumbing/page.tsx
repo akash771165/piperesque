@@ -8,12 +8,13 @@ import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
 import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 import FAQSchema from "@/components/seo/faq-schema";
+import JsonLd from "@/components/seo/json-ld";
 import ReferralLeadForm from "@/components/contact/referral-lead-form";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumbing in Houston, TX | Urgent Referral Help",
+  title: "Emergency Plumbing Help in Houston, TX",
   description:
-    "Need emergency plumbing help in Houston, TX? PipeResque helps homeowners connect with independent plumbing professionals for burst pipes, major leaks, sewer backups, and urgent plumbing problems.",
+    "Burst pipe, active leak, or sewer backup in Houston, TX? Call (877) 587-3986 to connect with independent Houston plumbing professionals through PipeResque.",
   keywords: [
     "emergency plumber houston",
     "24 hour plumber houston",
@@ -26,8 +27,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Emergency Plumbing Help in Houston, TX | PipeResque",
     description:
-      "PipeResque helps Houston homeowners connect with independent plumbing professionals for emergency plumbing needs, including burst pipes, major leaks, sewer backups, and other urgent problems.",
+      "Burst pipe, active leak, or sewer backup in Houston, TX? Call (877) 587-3986 to connect with independent Houston plumbing professionals through PipeResque.",
     url: "https://www.piperesque.com/services/emergency-plumbing",
+    siteName: "PipeResque",
     type: "website",
   },
   alternates: {
@@ -36,6 +38,31 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+};
+
+const emergencyServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Emergency Plumbing Referral in Houston, TX",
+  serviceType: "Emergency Plumbing",
+  description:
+    "Informational resource and telephone referral platform connecting Houston property owners with independent third-party plumbing contractors for burst pipes, major leaks, and sewer backups.",
+  url: "https://www.piperesque.com/services/emergency-plumbing",
+  areaServed: {
+    "@type": "City",
+    name: "Houston",
+    addressRegion: "TX",
+    addressCountry: "US",
+  },
+  broker: {
+    "@type": "Organization",
+    name: "PipeResque",
+    url: "https://www.piperesque.com",
+  },
+  provider: {
+    "@type": "Organization",
+    name: "Independent Licensed Houston Plumbing Contractors (via PipeResque)",
   },
 };
 
@@ -59,6 +86,8 @@ export default function EmergencyPlumbingPage() {
         ]}
       />
 
+      <JsonLd schema={emergencyServiceSchema} />
+
       <FAQSchema
         faqs={[
           {
@@ -69,7 +98,7 @@ export default function EmergencyPlumbingPage() {
           {
             question: "When can I call regarding an emergency plumbing problem in Houston?",
             answer:
-              "Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
+              "Homeowners can call the PipeResque referral line at (877) 587-3986. Independent third-party providers determine their own availability, response times, pricing, and service terms. PipeResque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
           },
           {
             question: "How quickly can a plumbing professional respond?",
@@ -84,7 +113,7 @@ export default function EmergencyPlumbingPage() {
           {
             question: "How do I request emergency plumbing assistance?",
             answer:
-              "Call our referral line directly at (877) 364-0861 or submit a callback request on this page to seek connection with independent plumbing professionals serving Greater Houston, subject to provider availability.",
+              "Call our referral line directly at (877) 587-3986 or submit a callback request on this page to seek connection with independent plumbing professionals serving Greater Houston, subject to provider availability.",
           },
           {
             question: "Are plumbing providers licensed?",
@@ -103,6 +132,7 @@ export default function EmergencyPlumbingPage() {
           alt="Emergency plumbing assistance in Houston, Texas"
           fill
           priority
+          quality={80}
           sizes="100vw"
           className="object-cover"
         />
@@ -125,17 +155,17 @@ export default function EmergencyPlumbingPage() {
             <p className="mt-6 text-xl leading-8 text-blue-100 max-w-2xl">
               Burst pipes, major leaks, sewer backups, overflowing fixtures,
               and other urgent plumbing problems can require prompt attention.
-              Piperesque helps Houston homeowners connect with independent
+              PipeResque helps Houston homeowners connect with independent
               plumbing professionals serving their area.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="tel:+18773640861"
+                href="tel:+18775873986"
                 className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 hover:bg-amber-400 transition shadow-lg shadow-amber-500/20 active:scale-[0.98]"
               >
                 <Phone size={20} />
-                Call (877) 364-0861
+                Call (877) 587-3986
               </a>
 
               <Link
@@ -307,7 +337,7 @@ export default function EmergencyPlumbingPage() {
 
               <div className="mt-8">
                 <a
-                  href="tel:+18773640861"
+                  href="tel:+18775873986"
                   className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-6 py-3 font-bold text-white hover:bg-red-700 transition"
                 >
                   <Phone size={18} />
@@ -872,11 +902,11 @@ export default function EmergencyPlumbingPage() {
               </p>
 
               <a
-                href="tel:+18773640861"
+                href="tel:+18775873986"
                 className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-7 py-4 font-bold text-white hover:bg-red-700 transition"
               >
                 <Phone size={20} />
-                Call (877) 364-0861
+                Call (877) 587-3986
               </a>
 
               <p className="mt-5 text-sm text-blue-200 leading-6">
@@ -947,7 +977,7 @@ export default function EmergencyPlumbingPage() {
                 </div>
 
                 <a
-                  href="tel:+18773640861"
+                  href="tel:+18775873986"
                   className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-5 py-3 font-bold text-white hover:bg-red-700 transition"
                 >
                   <Phone size={18} />
@@ -961,35 +991,81 @@ export default function EmergencyPlumbingPage() {
                 </h3>
 
                 <div className="space-y-3">
-
                   <Link
-                    href="/location/houston/sewer-line-repair"
+                    href="/location/houston/emergency-plumbing"
                     className="block text-blue-700 font-semibold hover:underline"
                   >
-                    Sewer Line Repair in Houston
+                    Houston Emergency Plumbing Hub
                   </Link>
-
                   <Link
-                    href="/location/houston/drain-cleaning"
+                    href="/services/sewer-line-repair"
                     className="block text-blue-700 font-semibold hover:underline"
                   >
-                    Drain Cleaning in Houston
+                    Sewer Line Repair &amp; Backups
                   </Link>
-
                   <Link
-                    href="/location/houston/leak-detection"
+                    href="/services/leak-detection"
                     className="block text-blue-700 font-semibold hover:underline"
                   >
-                    Leak Detection in Houston
+                    Slab &amp; Hidden Leak Detection
                   </Link>
-
                   <Link
-                    href="/location/houston/water-heater-repair"
+                    href="/services/water-heater-repair"
                     className="block text-blue-700 font-semibold hover:underline"
                   >
-                    Water Heater Repair in Houston
+                    Water Heater Repair &amp; Leaks
                   </Link>
+                  <Link
+                    href="/services/drain-cleaning"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    Drain Cleaning &amp; Hydro-Jetting
+                  </Link>
+                  <Link
+                    href="/services/pipe-repair"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    Burst Pipe &amp; Valve Repair
+                  </Link>
+                </div>
+              </div>
 
+              <div className="rounded-xl border border-slate-200 p-6">
+                <h3 className="text-xl font-bold mb-4">
+                  Emergency Shutoff &amp; Repair Guides
+                </h3>
+
+                <div className="space-y-3 text-sm">
+                  <Link
+                    href="/blog/how-to-shut-off-main-water-houston"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    How to Shut Off Your Main Water Valve in Houston
+                  </Link>
+                  <Link
+                    href="/blog/emergency-plumber-houston-tx"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    Emergency Plumber Guide for Houston Homes
+                  </Link>
+                  <Link
+                    href="/blog/emergency-plumber-near-me-houston"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    How to Prepare Before Calling a Houston Plumber
+                  </Link>
+                  <Link
+                    href="/blog/burst-pipe-repair-houston-tx"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    Burst Pipe Stabilization &amp; Repair Steps
+                  </Link>
+                  <Link
+                    href="/blog/sewer-line-repair-houston-tx"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    Emergency Sewer Line Backup Guide
+                  </Link>
                 </div>
               </div>
 
@@ -1119,7 +1195,7 @@ export default function EmergencyPlumbingPage() {
                 </summary>
 
                 <p className="mt-4 text-slate-600 leading-7">
-                  Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.
+                  Homeowners can call the PipeResque referral line at (877) 587-3986. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.
                 </p>
               </details>
 
@@ -1165,7 +1241,7 @@ export default function EmergencyPlumbingPage() {
                 </summary>
 
                 <p className="mt-4 text-slate-600 leading-7">
-                  Call our referral line directly at (877) 364-0861 or submit a callback request on this page to seek connection with independent plumbing professionals serving Greater Houston, subject to provider availability.
+                  Call our referral line directly at (877) 587-3986 or submit a callback request on this page to seek connection with independent plumbing professionals serving Greater Houston, subject to provider availability.
                 </p>
               </details>
 
@@ -1246,6 +1322,7 @@ export default function EmergencyPlumbingPage() {
           <ReferralLeadForm
             defaultService="Emergency Plumbing"
             heading="Request an Urgent Plumbing Callback in Houston"
+            id="request-referral"
           />
         </div>
       </section>
@@ -1268,11 +1345,11 @@ export default function EmergencyPlumbingPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
 
               <a
-                href="tel:+18773640861"
+                href="tel:+18775873986"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 hover:bg-amber-400 transition shadow-lg shadow-amber-500/20 active:scale-[0.98]"
               >
                 <Phone size={20} />
-                Call (877) 364-0861
+                Call (877) 587-3986
               </a>
 
               <Link
@@ -1285,7 +1362,7 @@ export default function EmergencyPlumbingPage() {
             </div>
 
             <p className="mt-7 text-sm text-blue-200 leading-6">
-              Piperesque is an informational and connection service. It does
+              PipeResque is an informational and connection service. It does
               not directly provide plumbing services. Provider availability,
               response times, pricing, qualifications, warranties, and
               workmanship are determined by the independent provider.
@@ -1294,42 +1371,6 @@ export default function EmergencyPlumbingPage() {
           </div>
         </div>
       </section>
-
-      {/* Structured Data */}
-      <FAQSchema
-        faqs={[
-          {
-            question: "What qualifies as a plumbing emergency?",
-            answer:
-              "A plumbing emergency may include an active burst pipe, major water leak, sewer backup, overflowing fixture, significant loss of water service, or another problem that could cause property damage or require prompt professional attention.",
-          },
-          {
-            question: "When can I call regarding an emergency plumbing problem in Houston?",
-            answer:
-              "Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
-          },
-          {
-            question: "How quickly can a plumbing professional respond?",
-            answer:
-              "Response times vary by provider, location, time of day, current demand, and the type of plumbing problem. The independent plumbing provider handling the request determines availability and scheduling.",
-          },
-          {
-            question: "Does emergency plumbing cost more?",
-            answer:
-              "Emergency plumbing pricing varies by provider and may depend on the type of problem, time of service, labor, materials, equipment, accessibility, and whether repair or replacement is required.",
-          },
-          {
-            question: "Are plumbing providers licensed?",
-            answer:
-              "Licensing, insurance, qualifications, warranties, and service terms are determined by the independent plumbing provider. Homeowners should confirm applicable credentials and terms directly with the provider.",
-          },
-          {
-            question: "Does Piperesque perform the plumbing work?",
-            answer:
-              "No. Piperesque does not employ or directly perform plumbing services. Piperesque helps homeowners connect with independent plumbing professionals.",
-          },
-        ]}
-      />
 
       {/* Global CTA */}
       <CTA />

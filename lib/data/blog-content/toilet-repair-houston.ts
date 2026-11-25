@@ -103,7 +103,7 @@ export const toiletRepairHouston: BlogContent = {
     description:
       "Our experienced plumbers provide fast and reliable toilet repair services throughout Houston. From leaking and clogged toilets to complete fixture repairs, we restore your plumbing quickly and efficiently.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

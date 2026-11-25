@@ -107,7 +107,7 @@ export const leakDetectionHouston: BlogContent = {
     description:
       "Our experienced plumbers use advanced leak detection technology to locate hidden plumbing leaks quickly and accurately. Whether you suspect a slab leak, underground water line leak, or hidden pipe leak, we're ready to help with fast, reliable service throughout Houston.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

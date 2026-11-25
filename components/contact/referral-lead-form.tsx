@@ -122,8 +122,8 @@ export default function ReferralLeadForm({
 
       const data = await response.json();
 
-      if (!response.ok || !data.success) {
-        throw new Error(data.error || "Unable to submit referral request. Please try calling directly.");
+      if (!response.ok || !data.success || !data.leadId) {
+        throw new Error(data.error || "Unable to submit referral request. Please try calling (877) 587-3986 directly.");
       }
 
       setLeadId(data.leadId);
@@ -137,7 +137,7 @@ export default function ReferralLeadForm({
       });
 
     } catch (err: unknown) {
-      const errorMsg = err instanceof Error ? err.message : "A network or server error occurred. Please call (877) 364-0861.";
+      const errorMsg = err instanceof Error ? err.message : "A network or server error occurred. Please call (877) 587-3986.";
       setServerError(errorMsg);
     } finally {
       setIsSubmitting(false);
@@ -174,12 +174,12 @@ export default function ReferralLeadForm({
             For active water leaks or urgent sewage backups, calling directly is the fastest way to reach telephone routing.
           </p>
           <a
-            href="tel:+18773640861"
+            href="tel:+18775873986"
             data-event="phone_click_contact"
             className="mt-4 inline-flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3 text-base font-black text-slate-950 shadow-md transition hover:bg-amber-400"
           >
             <Phone size={18} aria-hidden="true" />
-            Call (877) 364-0861
+            Call (877) 587-3986
           </a>
         </div>
       </div>

@@ -103,7 +103,7 @@ export const slabLeakRepairCostHouston: BlogContent = {
     description:
       "Our experienced plumbers provide professional slab leak detection, foundation leak repair, underground pipe repair, and complete plumbing solutions throughout Houston. We locate leaks quickly and recommend the most cost-effective repair option.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

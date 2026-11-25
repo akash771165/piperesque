@@ -103,7 +103,7 @@ export const kitchenDrainClogHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional kitchen drain cleaning, clog removal, hydro jetting, and complete drain repair services throughout Houston. Contact us today to schedule service.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

@@ -103,7 +103,7 @@ export const sewerSmellHouseHouston: BlogContent = {
     description:
       "Our licensed plumbers diagnose sewer smells, locate hidden plumbing problems, perform sewer camera inspections, and provide reliable plumbing repairs throughout Houston. Contact us today for professional assistance.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

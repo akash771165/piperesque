@@ -103,7 +103,7 @@ export const wholeHouseWaterFiltrationHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional whole-house water filtration installation, maintenance, water treatment, and plumbing services throughout Houston. Contact us today for cleaner, healthier water in every room of your home.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

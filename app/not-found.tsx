@@ -113,7 +113,7 @@ export default function NotFound() {
                 </div>
 
                 <a
-                  href="tel:+18773640861"
+                  href="tel:+18775873986"
                   className="btn btn-emergency w-full sm:w-auto"
                 >
                   Call Now

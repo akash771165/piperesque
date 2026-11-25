@@ -30,8 +30,8 @@
     "plumber near me houston tx"
   ],
   "seo": {
-    "title": "Houston Emergency Plumbing Guide: Immediate Action, Leaks & Shutoffs (2026) | PipeResque",
-    "description": "Homeowner triage guide for Houston plumbing emergencies: how to shut off main valves, mitigate slab leaks or burst pipes, and connect with licensed contractors.",
+    "title": "Houston Emergency Plumbing: Shutoffs & Triage | PipeResque",
+    "description": "Urgent Houston plumbing triage: shut off main valves, limit burst pipe or sewer backup damage & connect with independent plumbers via (877) 587-3986.",
     "canonical": "https://www.piperesque.com/blog/emergency-plumber-houston-tx",
     "robots": "index,follow",
     "schemaType": "Article",
@@ -40,7 +40,7 @@
       "houston plumbing emergency steps",
       "water shutoff valve houston"
     ],
-    "ogTitle": "Houston Emergency Plumbing Guide: Triage & Action Steps (2026)",
+    "ogTitle": "Houston Emergency Plumbing: Shutoffs & Triage",
     "ogDescription": "Learn how to shut off main water lines, prevent flood damage during pipe bursts, and connect with local emergency plumbers in Houston.",
     "ogImage": "/images/blog/default.jpg",
     "twitterTitle": "Houston Emergency Plumbing Guide: Triage & Action Steps",
@@ -56,7 +56,7 @@
   },
   "introduction": [
     "Plumbing emergencies can happen without warning. Burst pipes, major leaks, sewer backups and water heater failures can quickly flood living areas and require immediate triage.",
-    "If you are experiencing an active flood, burst pipe, or sewer backup right now and require immediate contractor matching, go directly to our commercial [Emergency Plumbing Referral Service](/services/emergency-plumbing) or call our referral hotline at (877) 364-0861.",
+    "If you are experiencing an active flood, burst pipe, or sewer backup right now and require immediate contractor matching, go directly to our commercial [Emergency Plumbing Referral Service](/services/emergency-plumbing) or call our referral hotline at (877) 587-3986.",
     "This educational guide walks you through essential damage-mitigation steps: locating your municipal or private water shutoff valve, safely isolating power near standing water, and understanding what to expect when an independent plumbing technician arrives."
   ],
   "sections": [
@@ -333,8 +333,8 @@
     "title": "Need Emergency Plumbing Help in Houston TX?",
     "description": "Connect with plumbing service providers serving Houston and surrounding areas for emergency plumbing repairs, leaks, burst pipes, sewer issues and urgent plumbing needs.",
     "button": "Call Now",
-    "phone": "(877) 364-0861",
-    "url": "tel:+18773640861"
+    "phone": "(877) 587-3986",
+    "url": "tel:+18775873986"
   },
   "faqs": [
     {
@@ -373,28 +373,28 @@
   ],
   "internalLinks": [
     {
-      "title": "Emergency Plumber Houston Cost 2026",
-      "url": "/blog/emergency-plumber-houston-cost-2026"
-    },
-    {
-      "title": "24 Hour Plumber Houston TX",
-      "url": "/blog/24-hour-plumber-houston-tx"
-    },
-    {
-      "title": "Burst Pipe Repair Houston TX",
-      "url": "/blog/burst-pipe-repair-houston-tx"
-    },
-    {
-      "title": "Emergency Plumbing Services",
+      "title": "Emergency Plumbing Services in Houston",
       "url": "/services/emergency-plumbing"
     },
     {
-      "title": "Drain Cleaning Houston",
-      "url": "/services/drain-cleaning"
+      "title": "Houston Emergency Plumbing Local Info",
+      "url": "/location/houston/emergency-plumbing"
     },
     {
-      "title": "Water Heater Repair Houston",
-      "url": "/services/water-heater-repair"
+      "title": "How to Shut Off Main Water in Houston",
+      "url": "/blog/how-to-shut-off-main-water-houston"
+    },
+    {
+      "title": "Emergency Plumber Near Me Guide",
+      "url": "/blog/emergency-plumber-near-me-houston"
+    },
+    {
+      "title": "Burst Pipe Triage & Shutoff Guide",
+      "url": "/blog/burst-pipe-repair-houston-tx"
+    },
+    {
+      "title": "Sewer Line Repair in Houston",
+      "url": "/services/sewer-line-repair"
     }
   ],
   "relatedBlogs": [

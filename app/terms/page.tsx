@@ -74,7 +74,7 @@ export default function TermsPage() {
                   1. Agreement to Terms
                 </h2>
                 <p className="mt-4">
-                  By accessing or using piperesque.com (the &quot;Site&quot;) or calling any telephone number listed on our website, including (877) 364-0861, you agree to be bound by these Terms &amp; Conditions and our Privacy Policy. If you do not agree to these terms, please do not use our website or phone referral service.
+                  By accessing or using piperesque.com (the &quot;Site&quot;) or calling any telephone number listed on our website, including (877) 587-3986, you agree to be bound by these Terms &amp; Conditions and our Privacy Policy. If you do not agree to these terms, please do not use our website or phone referral service.
                 </p>
               </div>
 
@@ -168,8 +168,8 @@ export default function TermsPage() {
                   <p className="mt-1 text-sm text-slate-600">Greater Houston, Texas</p>
                   <p className="mt-2 text-sm">
                     Phone:{" "}
-                    <a href="tel:+18773640861" className="font-bold text-blue-700 hover:underline">
-                      (877) 364-0861
+                    <a href="tel:+18775873986" className="font-bold text-blue-700 hover:underline">
+                      (877) 587-3986
                     </a>
                   </p>
                   <p className="mt-1 text-sm">

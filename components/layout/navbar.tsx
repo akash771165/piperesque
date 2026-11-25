@@ -95,7 +95,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="font-semibold text-slate-200">
-              Houston Plumbing Referral Hotline • Call (877) 364-0861
+              Houston Plumbing Referral Hotline • Call (877) 587-3986
             </span>
           </div>
 

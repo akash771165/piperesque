@@ -103,7 +103,7 @@ export const waterHeaterInstallationCostHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional water heater installation, replacement, maintenance, and repair services throughout Houston. Contact us today to schedule your installation.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

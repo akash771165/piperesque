@@ -103,7 +103,7 @@ export const sewerLineReplacementCostHouston: BlogContent = {
     description:
       "Our licensed plumbers provide professional sewer inspections, honest recommendations, and reliable sewer line replacement services throughout Houston. Contact us today to schedule an inspection and receive an accurate estimate.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

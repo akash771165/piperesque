@@ -14,13 +14,14 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import FAQSchema from "@/components/seo/faq-schema";
 import OrganizationSchema from "@/components/seo/organization-schema";
+import ReferralLeadForm from "@/components/contact/referral-lead-form";
 
 export const metadata: Metadata = {
   title: {
     absolute: "Emergency Plumbing Help in Houston, TX | PipeResque",
   },
   description:
-    "Looking for plumbing assistance in Houston, TX? Call (877) 364-0861 to connect with independent local plumbing professionals for burst pipes, drains, leaks, and water heaters.",
+    "Need plumbing help in Houston, TX? Call (877) 587-3986 to connect with independent local plumbers for burst pipes, drains, sewer backups, leaks & water heaters.",
   keywords: [
     "emergency plumbing Houston",
     "emergency plumber Houston",
@@ -36,25 +37,26 @@ export const metadata: Metadata = {
     canonical: "https://www.piperesque.com/",
   },
   openGraph: {
-    title: "Emergency Plumbing Help in Houston, TX | Piperesque",
+    title: "Emergency Plumbing Help in Houston, TX | PipeResque",
     description:
-      "Looking for plumbing assistance in Houston, TX? Call (877) 364-0861 to connect with independent local plumbing professionals for burst pipes, drains, leaks, and water heaters.",
+      "Need plumbing help in Houston, TX? Call (877) 587-3986 to connect with independent local plumbers for burst pipes, drains, sewer backups, leaks & water heaters.",
     url: "https://www.piperesque.com/",
+    siteName: "PipeResque",
     type: "website",
     images: [
       {
         url: "/images/emergency.webp",
         width: 1200,
         height: 630,
-        alt: "Piperesque plumbing assistance in Houston",
+        alt: "PipeResque plumbing referral assistance in Houston",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Piperesque | Emergency Plumbing Help in Houston",
+    title: "Emergency Plumbing Help in Houston, TX | PipeResque",
     description:
-      "Looking for plumbing assistance in Houston, TX? Call (877) 364-0861 to connect with independent local plumbing professionals for burst pipes, drains, leaks, and water heaters.",
+      "Need plumbing help in Houston, TX? Call (877) 587-3986 to connect with independent local plumbers for burst pipes, drains, sewer backups, leaks & water heaters.",
     images: ["/images/emergency.webp"],
   },
 };
@@ -106,32 +108,32 @@ const services = [
 
 const faqs = [
   {
-    question: "What is Piperesque?",
+    question: "What is PipeResque?",
     answer:
-      "Piperesque is an informational website and referral service that helps Houston homeowners find and connect with independent third-party plumbing professionals.",
+      "PipeResque is an informational website and referral service that helps Houston homeowners find and connect with independent third-party plumbing professionals.",
   },
   {
     question: "Do you provide plumbing services directly?",
     answer:
-      "No. Piperesque does not directly perform plumbing work, dispatch vehicles, or employ technicians. All plumbing diagnostics, quotes, and repairs are performed solely by independent third-party contractors.",
+      "No. PipeResque does not directly perform plumbing work, dispatch vehicles, or employ technicians. All plumbing diagnostics, quotes, and repairs are performed solely by independent third-party contractors.",
   },
   {
     question: "What plumbing services can I call about?",
     answer:
-      "Homeowners can call (877) 364-0861 for referral assistance regarding burst pipes, active water leaks, clogged drains, sewer backups, water heaters, and general residential plumbing problems.",
+      "Homeowners can call (877) 587-3986 for referral assistance regarding burst pipes, active water leaks, clogged drains, sewer backups, water heaters, and general residential plumbing problems.",
   },
   {
     question: "When can I call regarding a plumbing emergency?",
     answer:
-      "Homeowners can call the PipeResque referral line at (877) 364-0861. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
+      "Homeowners can call the PipeResque referral line at (877) 587-3986. Independent third-party providers determine their own availability, response times, pricing, and service terms. PipeResque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
   },
   {
     question: "How quickly will a plumbing professional respond?",
     answer:
-      "Response times depend on independent provider availability, call volume, weather, and distance to your property. Piperesque does not guarantee a specific arrival or response time.",
+      "Response times depend on independent provider availability, call volume, weather, and distance to your property. PipeResque does not guarantee a specific arrival or response time.",
   },
   {
-    question: "Does Piperesque set pricing or give estimates?",
+    question: "Does PipeResque set pricing or give estimates?",
     answer:
       "No. Pricing, estimates, diagnostic fees, and warranties are determined directly by the independent plumbing provider. Homeowners should review pricing with the technician before authorizing work.",
   },
@@ -155,7 +157,7 @@ export default function Home() {
 
             <div className="mb-6 inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-amber-300">
               <Phone size={14} className="text-amber-400" aria-hidden="true" />
-              Houston Plumbing Referral Hotline • (877) 364-0861
+              Houston Plumbing Referral Hotline • (877) 587-3986
             </div>
 
             <h1 className="text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
@@ -185,21 +187,28 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
               <a
-                href="tel:+18773640861"
+                href="tel:+18775873986"
                 data-event="phone_click_hero"
-                aria-label="Call PipeResque Referral Hotline at (877) 364-0861"
+                aria-label="Call PipeResque Referral Hotline at (877) 587-3986"
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-amber-500 px-8 py-4 text-base md:text-lg font-black text-slate-950 shadow-lg shadow-amber-500/25 transition hover:bg-amber-400 active:scale-[0.98]"
               >
                 <Phone size={20} className="fill-slate-950" aria-hidden="true" />
-                Call (877) 364-0861
+                Call (877) 587-3986
               </a>
 
               <Link
-                href="/services"
+                href="#request-referral"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-7 py-4 text-base font-semibold text-white transition hover:bg-white hover:text-slate-950"
               >
-                Explore Service Guides
+                Request Callback
                 <ArrowRight size={19} aria-hidden="true" />
+              </Link>
+
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-4 text-base font-semibold text-slate-200 transition hover:bg-white/15 hover:text-white"
+              >
+                Explore Services
               </Link>
             </div>
 
@@ -233,6 +242,12 @@ export default function Home() {
                   🚽 Sewer Backup
                 </Link>
                 <Link
+                  href="/blog/hydro-jetting-sewer-lines-houston"
+                  className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
+                >
+                  💦 Hydro-Jetting
+                </Link>
+                <Link
                   href="/services/water-heater-repair"
                   className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 font-medium text-slate-200 transition hover:bg-white/15 hover:text-white"
                 >
@@ -256,8 +271,8 @@ export default function Home() {
             <div className="mt-8 max-w-3xl rounded-xl border border-white/10 bg-white/5 p-5">
               <p className="text-sm leading-6 text-slate-300">
                 <strong className="text-white">Referral Notice:</strong>{" "}
-                Piperesque is a referral service connecting property owners with independent,
-                third-party plumbing professionals. Piperesque does not employ plumbers, own fleet vehicles,
+                PipeResque is a referral service connecting property owners with independent,
+                third-party plumbing professionals. PipeResque does not employ plumbers, own fleet vehicles,
                 or perform repairs directly. Pricing, warranties, arrival times, and service availability are set solely by the independent provider.
               </p>
             </div>
@@ -283,7 +298,7 @@ export default function Home() {
             <div>
               <p className="font-bold">Direct Phone Access</p>
               <p className="text-sm text-slate-500">
-                Call (877) 364-0861
+                Call (877) 587-3986
               </p>
             </div>
           </div>
@@ -513,7 +528,7 @@ export default function Home() {
             </p>
 
             <h2 className="heading-lg mt-3 text-slate-900">
-              How Piperesque Works
+              How PipeResque Works
             </h2>
 
             <p className="text-body-lg mx-auto mt-5">
@@ -535,7 +550,7 @@ export default function Home() {
                 number: "02",
                 title: "Call for a Referral",
                 text:
-                  "Call our referral hotline at (877) 364-0861 to connect with an independent local plumbing service provider.",
+                  "Call our referral hotline at (877) 587-3986 to connect with an independent local plumbing service provider.",
               },
               {
                 number: "03",
@@ -583,7 +598,7 @@ export default function Home() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-100">
-              Piperesque focuses on Houston and nearby communities. Provider
+              PipeResque focuses on Houston and nearby communities. Provider
               availability varies by location.
             </p>
           </div>
@@ -625,7 +640,7 @@ export default function Home() {
 
             <div>
               <p className="text-sm font-bold uppercase tracking-widest text-blue-700">
-                About Piperesque
+                About PipeResque
               </p>
 
               <h2 className="heading-lg mt-3 text-slate-900">
@@ -634,7 +649,7 @@ export default function Home() {
 
               <p className="text-body-lg mt-5">
                 Finding plumbing assistance during an urgent problem can be
-                difficult. Piperesque provides plumbing information and helps
+                difficult. PipeResque provides plumbing information and helps
                 homeowners connect with independent service providers.
               </p>
 
@@ -642,7 +657,7 @@ export default function Home() {
                 href="/about"
                 className="btn btn-outline mt-8"
               >
-                Learn More About Piperesque
+                Learn More About PipeResque
                 <ArrowRight size={18} aria-hidden="true" />
               </Link>
             </div>
@@ -717,6 +732,20 @@ export default function Home() {
       </section>
 
       {/* =====================================================
+          INLINE REFERRAL CALLBACK FORM
+      ===================================================== */}
+
+      <section className="border-t border-slate-200 bg-white py-16">
+        <div className="container-custom max-w-4xl">
+          <ReferralLeadForm
+            defaultService="Emergency Plumbing"
+            heading="Request a Houston Plumbing Callback"
+            id="request-referral"
+          />
+        </div>
+      </section>
+
+      {/* =====================================================
           FINAL CTA
       ===================================================== */}
 
@@ -735,27 +764,27 @@ export default function Home() {
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
 
             <a
-              href="tel:+18773640861"
+              href="tel:+18775873986"
               data-event="phone_click_content"
-              aria-label="Call PipeResque Referral Hotline at (877) 364-0861"
+              aria-label="Call PipeResque Referral Hotline at (877) 587-3986"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-8 py-4 font-black text-slate-950 transition hover:bg-amber-400 shadow-lg shadow-amber-500/20 active:scale-[0.98]"
             >
               <Phone size={20} aria-hidden="true" />
-              Call (877) 364-0861
+              Call (877) 587-3986
             </a>
 
             <Link
-              href="/contact"
+              href="#request-referral"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-7 py-4 font-bold text-white transition hover:bg-white hover:text-slate-950"
             >
-              Contact by Phone or Email
+              Request Callback
               <ArrowRight size={19} aria-hidden="true" />
             </Link>
 
           </div>
 
           <p className="mx-auto mt-8 max-w-3xl text-sm leading-6 text-slate-400">
-            Piperesque does not employ, dispatch, or directly provide
+            PipeResque does not employ, dispatch, or directly provide
             plumbing services. Independent providers determine service
             availability, response times, pricing, warranties, and
             workmanship.

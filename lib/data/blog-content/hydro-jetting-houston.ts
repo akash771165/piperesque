@@ -189,7 +189,7 @@ const hydroJettingHouston: BlogContent = {
     description:
       "Recurring drain clogs, sewer backups, slow drains, or foul odors may indicate buildup deep inside your plumbing system. A professional inspection can determine whether hydro jetting is the right solution for restoring proper flow and preventing future blockages.",
     button: "Call 24/7 Emergency Plumbing",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

@@ -103,7 +103,7 @@ export const waterHeaterRepairHouston: BlogContent = {
     description:
       "Our experienced plumbers provide professional water heater repair, maintenance, troubleshooting, and replacement services throughout Houston. We restore reliable hot water quickly and safely.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

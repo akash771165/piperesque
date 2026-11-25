@@ -47,7 +47,20 @@ function isDuplicateEvent(fingerprint: string, windowMs = 3000): boolean {
 function sanitizeAnalyticsMetadata(metadata?: Record<string, unknown>): Record<string, unknown> {
   if (!metadata) return {};
   const sanitized: Record<string, unknown> = {};
-  const forbiddenKeys = ["email", "phone", "customer_phone", "customer_email", "name", "address"];
+  const forbiddenKeys = [
+    "email",
+    "phone",
+    "customer_phone",
+    "customer_email",
+    "name",
+    "fullname",
+    "full_name",
+    "address",
+    "zip",
+    "zipcode",
+    "zip_code",
+    "details",
+  ];
 
   for (const [key, value] of Object.entries(metadata)) {
     if (!forbiddenKeys.includes(key.toLowerCase()) && typeof value !== "function") {
@@ -70,7 +83,7 @@ export function trackPhoneClick(
   const normalizedTel =
     typeof metadata?.tel === "string" && metadata.tel.trim().length > 0
       ? metadata.tel.trim()
-      : "tel:+18773640861";
+      : "tel:+18775873986";
   const fingerprint = `${eventName}_${normalizedTel}`;
   if (isDuplicateEvent(fingerprint)) return;
 
@@ -80,7 +93,7 @@ export function trackPhoneClick(
     event: eventName,
     action: "click_to_call",
     category: "engagement",
-    referral_phone: "+18773640861",
+    referral_phone: "+18775873986",
     timestamp: new Date().toISOString(),
     ...cleanMetadata,
   };
@@ -164,7 +177,6 @@ export function trackContactFormSubmit(metadata: {
 export function trackQualifiedLead(metadata: {
   leadId: string;
   serviceCategory: string;
-  zipCode?: string;
 }): void {
   if (typeof window === "undefined") return;
 
@@ -172,7 +184,6 @@ export function trackQualifiedLead(metadata: {
     event: "qualified_lead",
     lead_id: metadata.leadId,
     service: metadata.serviceCategory,
-    zip: metadata.zipCode,
     timestamp: new Date().toISOString(),
   };
 
@@ -182,6 +193,38 @@ export function trackQualifiedLead(metadata: {
     }
     if (typeof window.gtag === "function") {
       window.gtag("event", "qualified_lead", payload);
+    }
+  } catch {
+    // Silent fail
+  }
+}
+
+/**
+ * Zero-PII CTA click tracking for anchor buttons and callback links.
+ */
+export function trackCtaClick(metadata: {
+  ctaLabel: string;
+  pagePath: string;
+}): void {
+  if (typeof window === "undefined") return;
+  const fingerprint = `cta_${metadata.ctaLabel}_${metadata.pagePath}`;
+  if (isDuplicateEvent(fingerprint, 2000)) return;
+
+  try {
+    if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: "cta_click",
+        cta_label: metadata.ctaLabel,
+        page_path: metadata.pagePath,
+        timestamp: new Date().toISOString(),
+      });
+    }
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "cta_click", {
+        event_category: "engagement",
+        event_label: metadata.ctaLabel,
+        page_path: metadata.pagePath,
+      });
     }
   } catch {
     // Silent fail

@@ -103,7 +103,7 @@ export const hardWaterProblemsHouston: BlogContent = {
     description:
       "Our licensed plumbers provide water testing, water softener installation, water treatment solutions, and plumbing services to help protect your home from hard water damage.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

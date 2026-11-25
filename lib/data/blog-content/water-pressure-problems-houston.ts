@@ -117,7 +117,7 @@ export const waterPressureProblemsHouston: BlogContent = {
     description:
       "Our licensed plumbers diagnose and repair low water pressure problems, leaks, blocked pipes, and water line issues throughout Houston.",
     button: "Call Now",
-    phone: "+18773640861"
+    phone: "+18775873986"
   },
 
   faqs: [

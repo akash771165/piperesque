@@ -6,7 +6,7 @@
 
 const SITE_URL = 'https://piperesque.com';
 const COMPANY_NAME = 'Pipe Rescue';
-const PHONE = '(877) 364-0861';
+const PHONE = '(877) 587-3986';
 const DEFAULT_CITY = 'Houston';
 
 // =====================================================

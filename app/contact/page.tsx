@@ -22,14 +22,14 @@ import { siteConfig } from "@/lib/config/site";
 export const metadata: Metadata = {
   title: "Contact PipeResque — Phone & Email Plumbing Referral in Houston, TX",
   description:
-    "Contact Piperesque for plumbing assistance in Houston, TX. Call (877) 364-0861 or email resquepipe@gmail.com to connect with independent local plumbing professionals.",
+    "Contact Piperesque for plumbing assistance in Houston, TX. Call (877) 587-3986 or email resquepipe@gmail.com to connect with independent local plumbing professionals.",
   alternates: {
     canonical: `${siteConfig.website}/contact`,
   },
   openGraph: {
     title: "Contact Piperesque | Plumbing Assistance in Houston, TX",
     description:
-      "Have questions about plumbing services? Call (877) 364-0861 or email resquepipe@gmail.com to connect with independent plumbing providers in Greater Houston.",
+      "Have questions about plumbing services? Call (877) 587-3986 or email resquepipe@gmail.com to connect with independent plumbing providers in Greater Houston.",
     url: `${siteConfig.website}/contact`,
     type: "website",
   },

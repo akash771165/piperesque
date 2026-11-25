@@ -78,7 +78,7 @@ describe("getBlogData", () => {
       callToAction: {
         title: "Need Emergency Plumbing Service?",
         description: "Contact a plumbing service provider today.",
-        phone: "+1-877-364-0861",
+        phone: "+1-877-587-3986",
       },
     });
   });

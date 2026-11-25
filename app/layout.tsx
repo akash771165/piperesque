@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Looking for emergency plumbing assistance in Houston, TX? Call (877) 364-0861 to connect with independent local plumbing professionals for burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
+    "Looking for emergency plumbing assistance in Houston, TX? Call (877) 587-3986 to connect with independent local plumbing professionals for burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
 
   applicationName: siteConfig.company,
 
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     title: `${siteConfig.company} | Emergency Plumbing Help in Houston`,
 
     description:
-      "Looking for emergency plumbing assistance in Houston, TX? Call (877) 364-0861 to connect with independent local plumbing professionals for burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
+      "Looking for emergency plumbing assistance in Houston, TX? Call (877) 587-3986 to connect with independent local plumbing professionals for burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
 
     images: [
       {
@@ -117,7 +117,7 @@ export const metadata: Metadata = {
     title: `${siteConfig.company} | Emergency Plumbing Help Houston`,
 
     description:
-      "Looking for emergency plumbing assistance in Houston, TX? Call (877) 364-0861 to connect with independent local plumbing professionals for burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
+      "Looking for emergency plumbing assistance in Houston, TX? Call (877) 587-3986 to connect with independent local plumbing professionals for burst pipes, clogged drains, leaks, sewer backups, and water heaters.",
 
     images: [siteConfig.ogImage],
   },

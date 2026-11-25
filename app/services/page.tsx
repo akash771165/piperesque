@@ -12,7 +12,7 @@ import { services } from "@/lib/data/services";
 export const metadata: Metadata = {
   title: "Plumbing Services in Houston, TX",
   description:
-    "Find fast plumbing assistance in Houston for emergency plumbing, drain cleaning, leak detection, water heaters, and sewer repair. Call (877) 364-0861.",
+    "Find fast plumbing assistance in Houston for emergency plumbing, drain cleaning, leak detection, water heaters, and sewer repair. Call (877) 587-3986.",
   keywords: [
     "Houston Plumber",
     "Emergency Plumber Houston",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Plumbing Services in Houston, TX | PipeResque",
     description:
-      "Professional plumbing referral services in Greater Houston. Call (877) 364-0861 for fast plumbing help.",
+      "Professional plumbing referral services in Greater Houston. Call (877) 587-3986 for fast plumbing help.",
     images: ["/images/emergency.webp"],
   },
 };
@@ -91,11 +91,11 @@ export default function ServicesPage() {
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a
-              href="tel:+18773640861"
+              href="tel:+18775873986"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-8 py-4 text-base font-black text-slate-950 shadow-lg shadow-amber-500/20 transition hover:bg-amber-400 active:scale-[0.98]"
             >
               <Phone size={20} aria-hidden="true" />
-              Call (877) 364-0861
+              Call (877) 587-3986
             </a>
 
             <Link
@@ -190,11 +190,11 @@ export default function ServicesPage() {
 
                     <div className="mt-8 flex flex-wrap items-center gap-3 pt-6 border-t border-slate-100">
                       <a
-                        href="tel:+18773640861"
+                        href="tel:+18775873986"
                         className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-5 py-2.5 text-sm font-black text-slate-950 transition hover:bg-amber-400"
                       >
                         <Phone size={15} aria-hidden="true" />
-                        Call (877) 364-0861
+                        Call (877) 587-3986
                       </a>
 
                       <Link
