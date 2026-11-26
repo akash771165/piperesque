@@ -18,7 +18,7 @@ import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 
 import JsonLd from "@/components/seo/json-ld";
 
-import ReferralLeadForm from "@/components/contact/referral-lead-form";
+import LeadSmartEmbedSection from "@/components/contact/leadsmart-embed-section";
 
 
 
@@ -105,28 +105,34 @@ const indexableCoreServices = new Set([
 
 const relatedBlogsByService: Record<string, { title: string; href: string }[]> = {
   "emergency-plumbing": [
+    { title: "Emergency Plumber Near Me: 3-Minute Shutoff & Vetting Guide", href: "/blog/emergency-plumber-near-me-houston" },
     { title: "How to Shut Off Your Main Water Valve in Houston", href: "/blog/how-to-shut-off-main-water-houston" },
-    { title: "Burst Pipe Repair & Stabilization Steps", href: "/blog/burst-pipe-repair-houston-tx" },
+    { title: "Sewer Line Repair & Emergency Backup Guide", href: "/blog/sewer-line-repair-houston-tx" },
+    { title: "Cypress, TX Plumbing & Sewer Stoppage Help", href: "/service-areas/cypress" },
   ],
   "sewer-line-repair": [
-    { title: "Sewer Line Repair Guide: Clay Soil & Tree Roots", href: "/blog/sewer-line-repair-houston-tx" },
-    { title: "Hydro-Jetting vs. Mechanical Clearing", href: "/blog/hydro-jetting-sewer-lines-houston" },
+    { title: "Sewer Line Repair Guide: Clay Soil, Stoppages & Costs", href: "/blog/sewer-line-repair-houston-tx" },
+    { title: "Sewer Line Repair Services in Houston", href: "/services/sewer-line-repair" },
+    { title: "Cypress, TX Sewer Stoppage & Plumbing Help", href: "/service-areas/cypress" },
     { title: "Sewer Camera Inspection Before Repair", href: "/blog/sewer-camera-inspection-houston" },
   ],
   "drain-cleaning": [
-    { title: "Drain Cleaning vs. Main Sewer Blockages", href: "/blog/drain-cleaning-houston-tx" },
+    { title: "Drain Cleaning vs. Main Sewer Stoppages", href: "/blog/drain-cleaning-houston-tx" },
+    { title: "Sewer Line Repair Guide: Clay Soil & Tree Roots", href: "/blog/sewer-line-repair-houston-tx" },
     { title: "Hydro-Jetting Sewer Lines in Greater Houston", href: "/blog/hydro-jetting-sewer-lines-houston" },
-    { title: "Why Chemical Drain Openers Damage Pipes", href: "/blog/chemical-drain-cleaner-pipe-damage-houston" },
+    { title: "Cypress, TX Plumbing & Drain Clearing Help", href: "/service-areas/cypress" },
   ],
   "leak-detection": [
-    { title: "Hidden Leak Detection Diagnostics", href: "/blog/leak-detection-houston-tx" },
+    { title: "Hidden Leak Detection & Plumbing Inspection Guide", href: "/blog/leak-detection-houston-tx" },
     { title: "Slab Leak Repair & Rerouting Options", href: "/blog/slab-leak-repair-houston-tx" },
     { title: "High Water Bill? How to Spot Hidden Leaks", href: "/blog/high-water-bill-hidden-leak-houston" },
+    { title: "Emergency Plumbing Services in Houston", href: "/services/emergency-plumbing" },
   ],
   "water-heater-repair": [
-    { title: "Water Heater Repair & Diagnosis Guide", href: "/blog/water-heater-repair-houston-tx" },
+    { title: "Gas & Electric Water Heater Repair Guide", href: "/blog/water-heater-repair-houston-tx" },
     { title: "Tankless Water Heater Descaling & Repairs", href: "/blog/tankless-water-heater-repair-houston" },
     { title: "Attic Water Heater Texas Code Essentials", href: "/blog/attic-water-heater-code-requirements-houston" },
+    { title: "Emergency Plumbing in Houston, TX", href: "/location/houston/emergency-plumbing" },
   ],
   "pipe-repair": [
     { title: "Burst Pipe Repair & Emergency Shutoff", href: "/blog/burst-pipe-repair-houston-tx" },
@@ -170,7 +176,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
     intro:
 
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for urgent plumbing problems, including burst pipes, major leaks, sewer backups, overflowing fixtures, water-heater leaks, and other situations that may require prompt attention.",
+      "Facing a burst pipe, active water leak, main sewer backup, or leaking water heater in Houston? Shut off your nearest fixture or main home water valve first, then call (877) 587-3986 or request a free estimate below to connect with independent local plumbers offering emergency plumbing services near you.",
 
 
 
@@ -346,11 +352,11 @@ const serviceContent: Record<string, ServiceContent> = {
 
       {
 
-        question: "How quickly can an emergency plumber respond in Houston?",
+        question: "How can I reach a 24-hour or after-hours emergency plumber in Houston?",
 
         answer:
 
-          "Response times depend on provider availability, current demand, traffic, location, and the severity of the plumbing problem. Ask the provider for an expected arrival window.",
+          "You can call PipeResque at (877) 587-3986 or submit the estimate form on this page anytime to seek connection with independent local plumbers in Houston. Each independent provider sets its own after-hours availability, arrival window, and dispatch pricing.",
 
       },
 
@@ -414,7 +420,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
     intro:
 
-      "Piperesque helps Houston homeowners explore sewer line repair, sewer line replacement, sewer backups, and inspection options, and connect with independent plumbing professionals. The right solution depends on the location and condition of the damaged pipe and should be confirmed by an on-site assessment.",
+      "Dealing with a main sewer stoppage, gurgling toilets, or wastewater rising in a tub in Houston? Stop running washers, dishwashers, and showers immediately, then call (877) 587-3986 or request a free estimate below to connect with independent local plumbers for emergency sewer repair, video camera inspections, hydro-jetting, and trenchless line relining.",
 
 
 
@@ -583,7 +589,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
     intro:
 
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for clogged drains, recurring blockages, slow drainage, and other residential drain-cleaning needs.",
+      "Slow kitchen sinks, standing shower water, or a main sewer stoppage backing up multiple fixtures in Houston? Avoid harsh chemical drain openers and call (877) 587-3986 or request a free estimate below to connect with independent local plumbers for motorized snaking, cleanout clearing, and hydro-jetting.",
 
 
 
@@ -731,11 +737,21 @@ const serviceContent: Record<string, ServiceContent> = {
 
       {
 
+        question: "How do I tell a simple drain clog from a main sewer stoppage in Houston?",
+
+        answer:
+
+          "A single slow sink or tub usually points to a localized P-trap or branch-line clog. When multiple drains back up simultaneously, toilets gurgle while the washer runs, or water rises into a ground-floor tub, the blockage is typically a main sewer stoppage that needs cleanout clearing and a camera inspection.",
+
+      },
+
+      {
+
         question: "How much does drain cleaning cost in Houston?",
 
         answer:
 
-          "Pricing depends on the location and severity of the blockage, labor, equipment, accessibility, and whether additional inspection or repair is required.",
+          "Pricing depends on the location and severity of the blockage, whether cable snaking or high-pressure hydro-jetting is needed, cleanout access, and whether a sewer camera inspection is requested.",
 
       },
 
@@ -749,7 +765,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
     intro:
 
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for leak detection, hidden water leaks, unexplained moisture, water stains, and other plumbing problems where the source may not be immediately visible.",
+      "Noticing an unexplained spike in your water bill, warm spots on a concrete slab floor, or damp drywall in Houston? Check your water meter leak indicator with all fixtures off, then call (877) 587-3986 or request a free estimate below to arrange a non-invasive plumbing leak detection and inspection with independent local specialists.",
 
 
 
@@ -897,11 +913,31 @@ const serviceContent: Record<string, ServiceContent> = {
 
       {
 
-        question: "How much does leak detection cost in Houston?",
+        question: "What happens during a professional plumbing leak inspection in Houston?",
 
         answer:
 
-          "The cost varies according to the location and complexity of the suspected leak, accessibility, diagnostic equipment, and labor. Providers determine their own pricing.",
+          "An independent leak detection specialist typically verifies water-meter movement, isolates hot and cold supply lines with pressure tests, and uses acoustic listening sensors or infrared thermal imaging to pinpoint hidden pipe or under-slab leaks without unnecessary wall or concrete demolition.",
+
+      },
+
+      {
+
+        question: "How can I check for a hidden water leak before calling a plumber?",
+
+        answer:
+
+          "Turn off all indoor faucets, outdoor irrigation, and ice makers, then watch your curbside water meter dial or flow triangle for 15–30 minutes. Any movement confirms active water loss. You can also check for warm floor spots, hissing behind walls, or damp soil near the foundation.",
+
+      },
+
+      {
+
+        question: "How much does plumbing leak detection cost in Houston?",
+
+        answer:
+
+          "The cost varies according to whether the leak is visible or beneath a concrete slab, diagnostic equipment required (acoustic, thermal, or hydrostatic testing), and accessibility. Independent providers confirm diagnostic fees before beginning work.",
 
       },
 
@@ -915,7 +951,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
     intro:
 
-      "Piperesque helps Houston homeowners connect with independent plumbing professionals for water-heater problems, including insufficient hot water, leaks, temperature issues, unusual noises, and other residential water-heating concerns.",
+      "No hot water, pilot light going out, or water pooling in your attic drain pan in Houston? If you smell gas, leave immediately and call your utility; for leaking tanks, close the cold-water inlet valve above the heater, then call (877) 587-3986 or request a free estimate below for independent gas hot water heater repair, electric, and tankless service.",
 
 
 
@@ -1053,11 +1089,31 @@ const serviceContent: Record<string, ServiceContent> = {
 
       {
 
+        question: "What causes a gas hot water heater to stop heating or lose its pilot light?",
+
+        answer:
+
+          "Common causes on gas hot water heaters include a worn thermocouple or thermopile, dirty burner assembly, faulty gas control valve, blocked combustion air intake, or heavy mineral sediment insulating the bottom of the tank. An independent licensed plumber can test gas pressure and safety controls safely.",
+
+      },
+
+      {
+
+        question: "What should I do if my attic or garage water heater is leaking?",
+
+        answer:
+
+          "Turn off the cold-water shutoff valve located on the supply pipe above the unit and switch off the gas control valve or dedicated electrical breaker. Check whether the leak comes from a loose fitting, temperature-and-pressure relief valve, or rusted tank bottom, then call (877) 587-3986 to connect with a local technician.",
+
+      },
+
+      {
+
         question: "Should I repair or replace my water heater?",
 
         answer:
 
-          "The appropriate choice depends on the unit's age, condition, failure type, repair cost, efficiency, and expected remaining service life. A provider can evaluate the equipment and explain the available options.",
+          "The appropriate choice depends on the unit's age, condition, failure type, repair cost, efficiency, and expected remaining service life. A leaking tank shell typically requires replacement, while failed gas valves, thermostats, elements, or dip tubes can often be repaired.",
 
       },
 
@@ -1067,7 +1123,7 @@ const serviceContent: Record<string, ServiceContent> = {
 
         answer:
 
-          "Pricing depends on the water-heater type, failed component, parts, labor, accessibility, and whether repair or replacement is required.",
+          "Pricing depends on whether you have a gas tank, electric tank, or tankless system, the failed component, attic or garage accessibility, and Texas code upgrades such as expansion tanks or drain pans.",
 
       },
     ],
@@ -1541,6 +1597,16 @@ function getLocalizedSection(
         ],
       };
     }
+  }
+
+  if (citySlug === "cypress" && (serviceSlug === "sewer-line-repair" || serviceSlug === "drain-cleaning")) {
+    return {
+      title: "Sewer Stoppages, Shifting Clay Soil & MUD Cleanouts in Cypress, TX",
+      paragraphs: [
+        "Homeowners across Cypress (ZIP codes 77410, 77429, and 77433) frequently experience sudden main sewer stoppages caused by expansive Northwest Harris County clay shifting beneath rear-yard PVC sewer laterals, grease accumulation, and tree-root intrusion along established subdivisions such as Fairfield, Bridgeland, Towne Lake, and Coles Crossing.",
+        "When multiple downstairs drains slow down, toilets gurgle, or wastewater backs up through a backyard cleanout or shower drain, stop running water-using appliances immediately and skip harsh chemical drain cleaners. Independent Cypress plumbing contractors use ground-level cleanout access, sewer camera inspections, and high-pressure hydro-jetting to pinpoint whether a stoppage can be cleared or requires localized pipe repair.",
+      ],
+    };
   }
 
   const localizedTitle = replaceHoustonWithCity(defaultTitle, cityName, stateName);
@@ -2174,12 +2240,14 @@ export default async function LocationServicePage({ params }: Props) {
 
 
 
-      {/* Inline Callback Referral Form */}
-      <section className="mx-auto max-w-4xl px-4 pt-14 sm:px-6 lg:px-8">
-        <ReferralLeadForm
-          defaultService={serviceName}
-          heading={`Request ${serviceName} Referral in ${cityName}`}
+      {/* Inline Plumbing Estimate Embed */}
+      <section className="mx-auto max-w-5xl px-4 pt-14 sm:px-6 lg:px-8">
+        <LeadSmartEmbedSection
+          variant="full-form"
+          eyebrow={`${cityName} ${serviceName} Estimate`}
+          heading={`Get a Free ${serviceName} Estimate in ${cityName}`}
           id="request-referral"
+          phoneEvent="phone_click_service"
         />
       </section>
 
@@ -2312,20 +2380,26 @@ export async function generateMetadata({
   let description = `Need ${plumbing.shortTitle.toLowerCase()} in ${city.city}, ${city.stateCode}? Call (877) 587-3986 to connect with independent local plumbing professionals via PipeResque.`;
 
   if (plumbing.slug === "sewer-line-repair") {
-    title = `Sewer Line Repair in ${city.city}, ${city.stateCode}`;
-    description = `Sewer backup or slow main drains in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for camera inspection, relining & sewer repair referrals.`;
+    if (city.slug === "cypress") {
+      title = "Sewer Line Repair & Stoppages in Cypress, TX";
+      description =
+        "Dealing with a sewer stoppage or backup in Cypress, TX? Call (877) 587-3986 for camera checks, hydro-jetting & independent sewer line repair referrals.";
+    } else {
+      title = `Emergency Sewer Line Repair in ${city.city}, ${city.stateCode}`;
+      description = `Main sewer stoppage or backup in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for emergency sewer repair, camera inspection & relining referrals.`;
+    }
   } else if (plumbing.slug === "emergency-plumbing") {
-    title = `Emergency Plumbing Help in ${city.city}, ${city.stateCode}`;
-    description = `Burst pipe, major leak, or backup in ${city.city}, ${city.stateCode}? Call (877) 587-3986 to reach independent local plumbing pros via PipeResque.`;
+    title = `Emergency Plumber & 24-Hour Help in ${city.city}, ${city.stateCode}`;
+    description = `Need emergency plumbing services in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for burst pipes, major leaks & sewer backups via independent local pros.`;
   } else if (plumbing.slug === "leak-detection") {
-    title = `Slab & Leak Detection in ${city.city}, ${city.stateCode}`;
-    description = `Suspect a slab or hidden water leak in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for non-invasive acoustic and thermal leak detection referrals.`;
+    title = `Plumbing Leak Detection & Inspection in ${city.city}, ${city.stateCode}`;
+    description = `High water bill or warm slab floor in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for non-invasive plumbing leak detection & inspection referrals.`;
   } else if (plumbing.slug === "water-heater-repair") {
-    title = `Water Heater Repair in ${city.city}, ${city.stateCode}`;
-    description = `No hot water or leaking tank in ${city.city}, ${city.stateCode}? Call (877) 587-3986 to connect with independent gas, electric & tankless water heater pros.`;
+    title = `Gas & Tankless Water Heater Repair in ${city.city}, ${city.stateCode}`;
+    description = `No hot water or leaking tank in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for independent gas hot water heater repair, electric & tankless help.`;
   } else if (plumbing.slug === "drain-cleaning") {
-    title = `Drain Cleaning & Jetting in ${city.city}, ${city.stateCode}`;
-    description = `Backed-up drains or main line clogs in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for cable snaking and hydro-jetting plumbing referrals.`;
+    title = `Drain Cleaning & Sewer Clearing in ${city.city}, ${city.stateCode}`;
+    description = `Clogged drains, slow tubs, or main sewer stoppages in ${city.city}, ${city.stateCode}? Call (877) 587-3986 for local snaking & hydro-jetting referrals.`;
   } else if (plumbing.slug === "pipe-repair") {
     title = `Burst & Pipe Repair in ${city.city}, ${city.stateCode}`;
     description = `Leaking or frozen pipes in ${city.city}, ${city.stateCode}? Call (877) 587-3986 to connect with independent local plumbers for PEX, copper & shutoff repair.`;

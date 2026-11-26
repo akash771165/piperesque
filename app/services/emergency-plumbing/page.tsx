@@ -9,28 +9,36 @@ import CTA from "@/components/sections/cta";
 import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 import FAQSchema from "@/components/seo/faq-schema";
 import JsonLd from "@/components/seo/json-ld";
-import ReferralLeadForm from "@/components/contact/referral-lead-form";
+import LeadSmartEmbedSection from "@/components/contact/leadsmart-embed-section";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumbing Help in Houston, TX",
+  title: "Emergency Plumber & 24-Hour Help in Houston, TX",
   description:
-    "Burst pipe, active leak, or sewer backup in Houston, TX? Call (877) 587-3986 to connect with independent Houston plumbing professionals through PipeResque.",
+    "Need emergency plumbing services in Houston, TX? Follow shutoff steps & call (877) 587-3986 to reach independent local plumbers or get a free estimate.",
   keywords: [
     "emergency plumber houston",
     "24 hour plumber houston",
+    "emergency plumbing services near me",
     "emergency plumbing services houston",
     "emergency plumbing houston tx",
+    "emergency sewer repair houston",
     "burst pipe repair houston",
     "plumbing emergency houston",
     "emergency plumber near me",
   ],
   openGraph: {
-    title: "Emergency Plumbing Help in Houston, TX | PipeResque",
+    title: "Emergency Plumber & 24-Hour Help in Houston, TX | PipeResque",
     description:
-      "Burst pipe, active leak, or sewer backup in Houston, TX? Call (877) 587-3986 to connect with independent Houston plumbing professionals through PipeResque.",
+      "Need emergency plumbing services in Houston, TX? Follow shutoff steps & call (877) 587-3986 to reach independent local plumbers or get a free estimate.",
     url: "https://www.piperesque.com/services/emergency-plumbing",
     siteName: "PipeResque",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emergency Plumber & 24-Hour Help in Houston, TX | PipeResque",
+    description:
+      "Burst pipe, major water leak, or sewer backup in Houston or Cypress? Call (877) 587-3986 to reach independent local plumbers via PipeResque.",
   },
   alternates: {
     canonical: "https://www.piperesque.com/services/emergency-plumbing",
@@ -93,12 +101,12 @@ export default function EmergencyPlumbingPage() {
           {
             question: "What qualifies as a plumbing emergency?",
             answer:
-              "A plumbing emergency may include an active burst pipe, major water leak, sewer backup, overflowing fixture, significant loss of water service, or another plumbing problem that may cause property damage or require prompt professional attention.",
+              "A plumbing emergency includes an active burst pipe, major water leak, raw sewage backup, overflowing toilet or tub drain, leaking attic or gas water heater, or any plumbing failure threatening immediate water damage or loss of essential water service.",
           },
           {
-            question: "When can I call regarding an emergency plumbing problem in Houston?",
+            question: "Can I reach a 24-hour or after-hours emergency plumber in Houston or Cypress, TX?",
             answer:
-              "Homeowners can call the PipeResque referral line at (877) 587-3986. Independent third-party providers determine their own availability, response times, pricing, and service terms. PipeResque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
+              "You can call the PipeResque referral line at (877) 587-3986 or submit an estimate request on this page anytime to seek connection with independent local plumbers serving Houston and Cypress. Independent third-party providers determine their own after-hours availability, response times, pricing, and service terms. PipeResque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.",
           },
           {
             question: "How quickly can a plumbing professional respond?",
@@ -111,9 +119,9 @@ export default function EmergencyPlumbingPage() {
               "Emergency plumbing pricing varies by provider and may depend on the type of problem, time of service, labor, materials, equipment, accessibility, and whether repair or replacement is required. Ask the provider about applicable service or diagnostic fees before authorizing work.",
           },
           {
-            question: "How do I request emergency plumbing assistance?",
+            question: "How do I request emergency plumbing assistance or a free estimate?",
             answer:
-              "Call our referral line directly at (877) 587-3986 or submit a callback request on this page to seek connection with independent plumbing professionals serving Greater Houston, subject to provider availability.",
+              "Call our referral line directly at (877) 587-3986 or submit the estimate form on this page to seek connection with independent plumbing professionals serving Greater Houston and Cypress, subject to provider availability.",
           },
           {
             question: "Are plumbing providers licensed?",
@@ -149,14 +157,15 @@ export default function EmergencyPlumbingPage() {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-black leading-tight text-white">
-              Emergency Plumbing Help in Houston, TX
+              Emergency Plumbing Services &amp; Help in Houston, TX
             </h1>
 
             <p className="mt-6 text-xl leading-8 text-blue-100 max-w-2xl">
-              Burst pipes, major leaks, sewer backups, overflowing fixtures,
-              and other urgent plumbing problems can require prompt attention.
-              PipeResque helps Houston homeowners connect with independent
-              plumbing professionals serving their area.
+              Dealing with a burst pipe, active water leak, main sewer backup,
+              or leaking gas water heater right now? Shut off your nearest
+              fixture or main water valve first, then call (877) 587-3986 or
+              request a free estimate below to connect with independent local
+              plumbers serving Houston and Cypress, TX.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -1001,31 +1010,37 @@ export default function EmergencyPlumbingPage() {
                     href="/services/sewer-line-repair"
                     className="block text-blue-700 font-semibold hover:underline"
                   >
-                    Sewer Line Repair &amp; Backups
+                    Emergency Sewer Line Repair &amp; Backups
                   </Link>
                   <Link
-                    href="/services/leak-detection"
+                    href="/location/houston/leak-detection"
                     className="block text-blue-700 font-semibold hover:underline"
                   >
-                    Slab &amp; Hidden Leak Detection
+                    Houston Plumbing Leak Detection &amp; Inspection
                   </Link>
                   <Link
-                    href="/services/water-heater-repair"
+                    href="/location/houston/water-heater-repair"
                     className="block text-blue-700 font-semibold hover:underline"
                   >
-                    Water Heater Repair &amp; Leaks
+                    Gas &amp; Tankless Water Heater Repair
                   </Link>
                   <Link
-                    href="/services/drain-cleaning"
+                    href="/location/houston/drain-cleaning"
                     className="block text-blue-700 font-semibold hover:underline"
                   >
-                    Drain Cleaning &amp; Hydro-Jetting
+                    Houston Drain Cleaning &amp; Hydro-Jetting
                   </Link>
                   <Link
-                    href="/services/pipe-repair"
+                    href="/service-areas/cypress"
                     className="block text-blue-700 font-semibold hover:underline"
                   >
-                    Burst Pipe &amp; Valve Repair
+                    Cypress, TX Plumbing &amp; Sewer Stoppage Help
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="block text-blue-700 font-semibold hover:underline"
+                  >
+                    Request a Free Plumbing Estimate
                   </Link>
                 </div>
               </div>
@@ -1188,14 +1203,14 @@ export default function EmergencyPlumbingPage() {
 
               <details className="group rounded-xl bg-white border border-slate-200 p-6">
                 <summary className="cursor-pointer list-none font-bold text-lg pr-8 relative">
-                  When can I call regarding an emergency plumbing problem in Houston?
+                  Can I reach a 24-hour or after-hours emergency plumber in Houston or Cypress, TX?
                   <span className="absolute right-0 top-0 text-blue-600">
                     +
                   </span>
                 </summary>
 
                 <p className="mt-4 text-slate-600 leading-7">
-                  Homeowners can call the PipeResque referral line at (877) 587-3986. Independent third-party providers determine their own availability, response times, pricing, and service terms. Piperesque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.
+                  You can call the PipeResque referral line at (877) 587-3986 or submit an estimate request on this page anytime to seek connection with independent local plumbers serving Houston and Cypress. Independent third-party providers determine their own after-hours availability, response times, pricing, and service terms. PipeResque does not employ plumbers, perform physical repairs, or guarantee technician dispatch.
                 </p>
               </details>
 
@@ -1316,13 +1331,15 @@ export default function EmergencyPlumbingPage() {
         </div>
       </section>
 
-      {/* Callback Lead Form */}
+      {/* Plumbing Estimate Embed */}
       <section className="py-16 bg-white border-t border-slate-200">
-        <div className="container-custom max-w-4xl">
-          <ReferralLeadForm
-            defaultService="Emergency Plumbing"
-            heading="Request an Urgent Plumbing Callback in Houston"
+        <div className="container-custom max-w-5xl">
+          <LeadSmartEmbedSection
+            variant="full-form"
+            eyebrow="Emergency Plumbing Estimate"
+            heading="Request an Emergency Plumbing Estimate in Houston"
             id="request-referral"
+            phoneEvent="phone_click_service"
           />
         </div>
       </section>

@@ -4,12 +4,14 @@ import {
   Phone,
   ArrowRight,
   Clock3,
+  ExternalLink,
   MapPin,
   Wrench,
   CheckCircle2,
 } from "lucide-react";
 
 import { siteConfig } from "@/lib/config/site";
+import { LEADSMART_ESTIMATE_URL } from "@/components/contact/leadsmart-embed-section";
 
 export default function CTA() {
   return (
@@ -73,7 +75,7 @@ export default function CTA() {
               </div>
 
               {/* BUTTONS */}
-                            <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={`tel:${siteConfig.phone}`}
                   data-event="phone_click_content"
@@ -82,6 +84,16 @@ export default function CTA() {
                 >
                   <Phone size={22} className="fill-slate-950" />
                   Call {siteConfig.phoneDisplay}
+                </a>
+
+                <a
+                  href={LEADSMART_ESTIMATE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 rounded-full bg-emerald-600 px-8 py-4 text-lg font-bold text-white shadow-xl transition hover:bg-emerald-500 hover:scale-105 active:scale-95"
+                >
+                  Get a Free Estimate
+                  <ExternalLink size={20} aria-hidden="true" />
                 </a>
 
                 <Link

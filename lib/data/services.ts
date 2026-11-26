@@ -42,14 +42,15 @@ export const services: Service[] = [
 
     shortTitle: "Emergency Plumbing",
 
-    seoTitle: "Emergency Plumbing Help in Houston, TX",
+    seoTitle: "Emergency Plumber & 24-Hour Help in Houston, TX",
 
     metaDescription:
-      "Facing a plumbing emergency in Houston, TX? Connect with licensed independent plumbers for burst pipes, sewer backups & leaks. Call (877) 587-3986.",
+      "Need emergency plumbing services in Houston, TX? Reach independent local plumbers for burst pipes, active leaks & sewer backups. Call (877) 587-3986.",
 
     keywords: [
       "emergency plumbing houston tx",
       "emergency plumber houston",
+      "emergency plumbing services near me",
       "burst pipe repair houston",
       "24 hour plumber houston",
       "urgent plumbing repair houston tx",
@@ -58,7 +59,7 @@ export const services: Service[] = [
     heroTitle: "Emergency Plumbing Services in Houston, TX",
 
     heroDescription:
-      "Urgent assistance connecting Houston homeowners with independent licensed plumbing contractors for burst pipes, active flooding, and sewer backups.",
+      "Urgent assistance connecting Houston and Cypress homeowners with independent licensed plumbing contractors for burst pipes, active flooding, and sewer backups.",
 
     description:
       "Emergency plumbing problems can cause severe water damage and property disruption. PipeResque connects you with independent licensed plumbing contractors who can evaluate burst supply lines, sewer overflows, and active flooding across Greater Houston.",
@@ -83,15 +84,16 @@ export const services: Service[] = [
 
     shortTitle: "Drain Cleaning",
 
-    seoTitle: "Drain Cleaning & Hydro-Jetting Houston, TX",
+    seoTitle: "Drain Cleaning & Main Line Clearing Houston, TX",
 
     metaDescription:
-      "Clogged drains or slow sinks in Houston, TX? Connect with licensed independent plumbers for snaking, hydro-jetting & cleanout clearing. Call (877) 587-3986.",
+      "Slow drains or main sewer stoppages in Houston, TX? Connect with independent local plumbers for snaking & hydro-jetting. Call (877) 587-3986.",
 
     keywords: [
       "drain cleaning houston tx",
       "clogged drain houston",
       "hydro jetting houston",
+      "sewer stoppage cypress tx",
       "unclog drain houston tx",
       "main sewer cleanout houston",
     ],
@@ -124,13 +126,14 @@ export const services: Service[] = [
 
     shortTitle: "Water Heater Repair",
 
-    seoTitle: "Water Heater Repair & Tankless Houston, TX",
+    seoTitle: "Gas & Tankless Water Heater Repair Houston, TX",
 
     metaDescription:
-      "Water heater leaking or no hot water in Houston, TX? Connect with licensed independent plumbers for gas, electric & tankless repairs. Call (877) 587-3986.",
+      "No hot water or leaking tank in Houston, TX? Connect with local pros for gas hot water heater repair, electric & tankless service. Call (877) 587-3986.",
 
     keywords: [
       "water heater repair houston",
+      "gas hot water heater repair",
       "hot water heater repair houston tx",
       "tankless water heater repair houston",
       "water heater leaking houston",
@@ -165,12 +168,14 @@ export const services: Service[] = [
 
     shortTitle: "Leak Detection",
 
-    seoTitle: "Slab & Water Leak Detection in Houston, TX",
+    seoTitle: "Plumbing Leak Detection & Inspection Houston, TX",
 
     metaDescription:
-      "Suspect a slab leak or hidden pipe leak in Houston, TX? Connect with independent acoustic & thermal leak detection specialists. Call (877) 587-3986.",
+      "Suspect a slab or hidden pipe leak in Houston, TX? Arrange non-invasive plumbing leak detection & inspection with local pros. Call (877) 587-3986.",
 
     keywords: [
+      "plumbing leak detection",
+      "plumbing leak inspection",
       "leak detection houston tx",
       "slab leak detection houston",
       "hidden water leak houston",
@@ -247,24 +252,25 @@ export const services: Service[] = [
 
     shortTitle: "Sewer Line Repair",
 
-    seoTitle: "Sewer Line Repair & Backups in Houston, TX",
+    seoTitle: "Emergency Sewer Line Repair in Houston, TX",
 
     metaDescription:
-      "Main sewer backing up in Houston, TX? Connect with independent plumbers for video camera checks, hydro-jetting & line repair. Call (877) 587-3986.",
+      "Main sewer stoppage or backup in Houston or Cypress, TX? Get camera checks, hydro-jetting & sewer line repair referrals. Call (877) 587-3986.",
 
     keywords: [
       "sewer line repair houston tx",
+      "emergency sewer repair houston",
+      "sewer stoppage cypress tx",
       "sewer replacement houston",
       "sewer camera inspection houston",
       "trenchless sewer repair houston",
       "sewer backup repair houston tx",
-      "emergency sewer backup houston",
     ],
 
-    heroTitle: "Sewer Line Repair & Replacement in Houston, TX",
+    heroTitle: "Emergency Sewer Line Repair & Replacement in Houston, TX",
 
     heroDescription:
-      "Connect with independent Houston plumbing contractors specializing in emergency sewer backups, video camera inspections, hydro-jetting, and pipe replacement.",
+      "Connect with independent Houston and Cypress plumbing contractors specializing in emergency sewer stoppages, video camera inspections, hydro-jetting, and pipe replacement.",
 
     description:
       "Sewer line problems can cause raw wastewater to back up into bathtubs, toilets, and floor drains. Houston's expansive clay soil and mature tree roots often crack or belly underground sewer laterals. PipeResque connects you with independent licensed contractors for camera evaluations, hydro-jetting, trenchless CIPP lining, and excavation.",

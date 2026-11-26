@@ -21,7 +21,7 @@ import JsonLd from "@/components/seo/json-ld";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
-import ReferralLeadForm from "@/components/contact/referral-lead-form";
+import LeadSmartEmbedSection from "@/components/contact/leadsmart-embed-section";
 
 import { services } from "@/lib/data/services";
 import { siteConfig } from "@/lib/config/site";
@@ -109,11 +109,11 @@ const serviceContent: Record<string, ServiceContent> = {
   },
 
   "sewer-line-repair": {
-    heroBadge: "Sewer line repair information",
+    heroBadge: "Sewer line repair & emergency backups",
     intro: [
-      "Sewer line problems can affect multiple plumbing fixtures at the same time. Cracked pipes, tree root intrusion, ground shifting in Houston's expansive clay soil, and collapsed vintage cast iron lines can cause sluggish drainage, foul odors, and severe wastewater backups.",
-      "A proper sewer line evaluation begins with a high-definition video camera inspection. This allows an independent technician to pinpoint whether the issue is a simple paper blockage, grease accumulation, root invasion at pipe joints, or a structural pipe belly or collapse.",
-      "Repair solutions vary based on pipe depth, location beneath slabs or landscaping, accessibility, and severity of damage. Some situations require localized spot repair or trenchless pipe relining, while others call for conventional line excavation and replacement."
+      "When multiple drains slow down at once, toilets gurgle, or wastewater backs up into a downstairs tub, you are usually facing a main sewer stoppage or damaged sewer lateral—not a single fixture clog. Across Houston and nearby Cypress, TX, shifting Beaumont clay soil, aging cast-iron piping, and tree roots are the leading causes of sudden sewer backups.",
+      "Effective emergency sewer repair starts with a high-definition video camera inspection through your ground-level cleanout. An independent licensed technician can confirm whether hydro-jetting clears grease and roots or whether cracked joints, pipe bellies, or collapsed cast iron call for localized spot repair, trenchless CIPP relining, or line replacement.",
+      "Pause washing machines, dishwashers, and showers immediately during an active backup, then call (877) 587-3986 or submit the free estimate form below to connect with independent local plumbers serving Greater Houston and Cypress."
     ],
     warningSigns: [
       "Multiple plumbing fixtures gurgling or draining slowly at the same time.",
@@ -140,24 +140,29 @@ const serviceContent: Record<string, ServiceContent> = {
     ],
     faqs: [
       {
-        question: "What should homeowners avoid doing during an active sewer backup?",
+        question: "When do I need emergency sewer repair in Houston or Cypress, TX?",
         answer:
-          "Immediately stop running water, including washing machines, dishwashers, sinks, and showers. Do not pour caustic chemical drain cleaners into a completely blocked sewer line, as corrosive chemicals will sit in the pipes and present safety risks to servicing technicians."
+          "Request emergency sewer repair when raw sewage backs up into a tub, shower, or floor drain, when multiple toilets and sinks stop draining together, or when an exterior yard cleanout overflows. Stop running water immediately and call (877) 587-3986 or request a free estimate below to connect with independent local plumbers."
       },
       {
-        question: "Why are sewer line problems so common in Greater Houston?",
+        question: "What should homeowners avoid doing during an active sewer stoppage or backup?",
         answer:
-          "Houston's subsoil consists primarily of expansive gumbo clay that swells significantly during wet periods and shrinks during summer droughts. This continuous ground movement places immense shear stress on underground sewer lines, leading to cracked joints, bellies, and root penetration from mature live oaks and pine trees."
+          "Immediately stop running water, including washing machines, dishwashers, sinks, and showers. Do not pour caustic chemical drain cleaners into a completely blocked sewer line, as corrosive chemicals sit in standing wastewater and create safety hazards for servicing technicians."
+      },
+      {
+        question: "Why are sewer line problems and stoppages so common in Greater Houston and Cypress?",
+        answer:
+          "Houston and Cypress subsoils consist heavily of expansive gumbo clay that swells during wet seasons and shrinks during summer droughts. This ground movement stresses buried sewer laterals, causing offset PVC joints, cracked cast iron, bellies, and tree-root intrusion from live oaks and pines."
       },
       {
         question: "Can a sewer line be repaired without digging up my yard or driveway?",
         answer:
-          "In many cases, yes. Trenchless technologies such as cured-in-place pipe (CIPP) lining or pipe bursting allow technicians to rehabilitate damaged sewer lines through small access pits without digging continuous trenches through landscaping, driveways, or patios. Suitability depends on pipe structural integrity."
+          "In many cases, yes. Trenchless technologies such as cured-in-place pipe (CIPP) lining or pipe bursting allow technicians to rehabilitate damaged sewer lines through small access pits without digging continuous trenches through landscaping, driveways, or patios. Suitability depends on pipe structural integrity confirmed via camera inspection."
       },
       {
         question: "What questions should I ask an independent plumbing contractor before sewer work?",
         answer:
-          "Ask whether the technician will perform a video camera inspection before and after work, whether they offer trenchless alternatives, what city permits are required, whether cleanouts will be installed, and what warranty terms apply to materials and labor."
+          "Ask whether the technician will perform a video camera inspection before and after work, whether they offer trenchless alternatives, what city or Harris County permits are required, whether cleanouts will be installed, and what warranty terms apply to materials and labor."
       },
       {
         question: "Will insurance cover sewer line repair in Texas?",
@@ -166,7 +171,7 @@ const serviceContent: Record<string, ServiceContent> = {
       }
     ],
     overview:
-      "Sewer line problems can disrupt household sanitation and threaten property foundations. Accurate camera diagnosis helps determine whether hydro-jetting, trenchless pipe relining, or conventional pipe replacement is appropriate for your home."
+      "Main sewer stoppage, gurgling toilets, or wastewater backing up into a downstairs tub? Stop running water fixtures and call (877) 587-3986 or request a free estimate to connect with independent Houston and Cypress plumbers for camera inspection, hydro-jetting, trenchless relining, or sewer line repair."
   },
 
   "drain-cleaning": {
@@ -581,24 +586,34 @@ const relatedGuidesByService: Record<
 > = {
   "sewer-line-repair": [
     {
-      title: "Sewer Line Repair Guide for Houston Homeowners",
+      title: "Sewer Line Repair Guide for Houston & Cypress",
       href: "/blog/sewer-line-repair-houston-tx",
-      summary: "Clay soil shifting, tree roots, trenchless relining, and camera inspections.",
+      summary: "Clay soil shifting, sewer stoppages, tree roots, trenchless relining, and camera tests.",
     },
     {
-      title: "Hydro-Jetting Sewer Lines in Houston",
-      href: "/blog/hydro-jetting-sewer-lines-houston",
-      summary: "When pressurized water scouring clears grease and root scale.",
+      title: "Sewer Stoppages & Plumbing Help in Cypress, TX",
+      href: "/service-areas/cypress",
+      summary: "Northwest Harris County cleanout backups, shifting clay laterals, and local plumber referrals.",
     },
     {
-      title: "Cast Iron Sewer Pipe Replacement in Houston",
-      href: "/blog/cast-iron-sewer-pipe-replacement-houston",
-      summary: "Warning signs and replacement methods for pre-1975 Houston homes.",
+      title: "Emergency Plumbing in Houston, TX",
+      href: "/location/houston/emergency-plumbing",
+      summary: "Immediate shutoff guidance and urgent referral routing for active backups and flooding.",
+    },
+    {
+      title: "Plumbing Leak Detection & Inspection in Houston",
+      href: "/location/houston/leak-detection",
+      summary: "Non-invasive acoustic, thermal, and pressure diagnostics for hidden pipe or slab leaks.",
     },
     {
       title: "Sewer Camera Inspection Before Buying or Repairing",
       href: "/blog/sewer-camera-inspection-houston",
-      summary: "Pinpointing pipe bellies, cracks, and offsets without guesswork.",
+      summary: "Pinpointing pipe bellies, cracks, and offsets without unnecessary digging.",
+    },
+    {
+      title: "Request a Free Plumbing Estimate",
+      href: "/contact",
+      summary: "Submit your ZIP code and issue details online or call (877) 587-3986 directly.",
     },
   ],
   "drain-cleaning": [
@@ -763,24 +778,28 @@ export async function generateMetadata({
     service.seoTitle || `${service.title} in Houston, TX`
   ).replace(/\s*\|\s*Pipe[rR]esque$/i, "");
 
+  const metaDescription =
+    service.metaDescription ||
+    content?.overview ||
+    `${service.title} in Houston, Texas: Understand common symptoms, repair options, and connect with independent local plumbing providers.`;
+
   return {
     title: baseTitle,
-    description:
-      service.metaDescription ||
-      content?.overview ||
-      `${service.title} in Houston, Texas: Understand common symptoms, repair options, and connect with independent local plumbing providers.`,
+    description: metaDescription,
     alternates: {
       canonical: `https://www.piperesque.com/services/${service.slug}`,
     },
     openGraph: {
       title: `${baseTitle} | PipeResque`,
-      description:
-        service.metaDescription ||
-        content?.overview ||
-        `${service.title} in Houston, Texas: Understand common symptoms, repair options, and connect with independent local plumbing providers.`,
+      description: metaDescription,
       url: `https://www.piperesque.com/services/${service.slug}`,
       siteName: siteConfig.company,
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${baseTitle} | PipeResque`,
+      description: metaDescription,
     },
   };
 }
@@ -978,6 +997,22 @@ export default async function ServicePage({ params }: Props) {
                     </Link>{" "}
                     if fresh water continues supplying overflowing fixtures.
                   </li>
+                  <li>• Facing a recurring sewer stoppage in Northwest Harris County? Review our{" "}
+                    <Link
+                      href="/service-areas/cypress"
+                      className="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-900"
+                    >
+                      Cypress, TX plumbing &amp; sewer guide
+                    </Link>{" "}
+                    or visit{" "}
+                    <Link
+                      href="/location/houston/emergency-plumbing"
+                      className="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-900"
+                    >
+                      Houston emergency plumbing
+                    </Link>{" "}
+                    for active flooding triage.
+                  </li>
                 </ul>
               </div>
             )}
@@ -1160,11 +1195,13 @@ export default async function ServicePage({ params }: Props) {
 
       <section className="py-16 bg-white border-t border-slate-200">
         <div className="container-custom">
-          <div className="mx-auto max-w-4xl">
-            <ReferralLeadForm
-              defaultService={service.shortTitle}
-              heading={`Request ${service.shortTitle} Referral in Houston`}
+          <div className="mx-auto max-w-5xl">
+            <LeadSmartEmbedSection
+              variant="full-form"
+              eyebrow={`${service.shortTitle} Estimate`}
+              heading={`Get a Free ${service.shortTitle} Estimate in Houston`}
               id="request-referral"
+              phoneEvent="phone_click_service"
             />
           </div>
         </div>

@@ -69,8 +69,13 @@ export async function generateMetadata({
     notFound();
   }
 
-  const pageTitle = `Plumbing Referral in ${city.name}, TX`;
-  const pageDescription = `Need plumbing help in ${city.name}, TX (${city.county})? Call (877) 587-3986 to connect with independent plumbers for leaks, drains, sewers & water heaters.`;
+  const isCypress = city.slug === "cypress";
+  const pageTitle = isCypress
+    ? "Plumber in Cypress, TX | Sewer & Emergency Help"
+    : `Plumber & Plumbing Help in ${city.name}, TX`;
+  const pageDescription = isCypress
+    ? "Need a plumber in Cypress, TX (77410, 77429, 77433)? Call (877) 587-3986 for sewer stoppages, emergency leaks, drain cleaning & water heater referrals."
+    : `Need a plumber in ${city.name}, TX (${city.county})? Call (877) 587-3986 to connect with independent local plumbers for leaks, sewer backups, drains & water heaters.`;
 
   return {
     title: pageTitle,
@@ -82,6 +87,14 @@ export async function generateMetadata({
       `${city.name} drain cleaning`,
       `${city.name} leak detection`,
       `${city.name} water heater repair`,
+      ...(isCypress
+        ? [
+            "sewer stoppage cypress tx",
+            "cypress tx sewer line repair",
+            "sewer backup cypress tx",
+            "24 hour plumber cypress tx",
+          ]
+        : []),
       "PipeResque",
     ],
     alternates: {
@@ -119,14 +132,27 @@ export default async function CityPage({ params }: PageProps) {
   const infraNote = getCityInfrastructureNote(city.name, city.slug, city.county);
   const zipText = city.zipCodes.join(", ");
 
+  const isCypress = city.slug === "cypress";
   const faqs = [
+    ...(isCypress
+      ? [
+          {
+            question: "What should I do first for a sewer stoppage in Cypress, TX?",
+            answer: `If multiple drains are backing up or water rises into a downstairs tub or shower in Cypress, stop running washers, dishwashers, and toilets immediately and avoid pouring chemical drain cleaners into standing water. Call ${siteConfig.phoneDisplay} or submit the estimate form below to connect with an independent Cypress plumber who can inspect your backyard cleanout, run a sewer camera, and clear or repair the main line.`,
+          },
+          {
+            question: "Why do sewer backups and high water pressure happen frequently in Cypress neighborhoods?",
+            answer: "Expansive Northwest Harris County clay soil shifts seasonally around buried PVC sewer laterals—creating bellies, offset joints, and tree-root intrusion—while local Cypress MUD supply lines often run above 75–80 PSI, accelerating pressure-reducing valve (PRV), toilet fill-valve, and attic water heater wear.",
+          },
+        ]
+      : []),
     {
-      question: `How can I request plumbing help in ${city.name}, TX?`,
-      answer: `Call PipeResque at ${siteConfig.phoneDisplay} or submit the callback request form on this page to connect with independent plumbing contractors serving ${city.name} (${zipText}). Provider availability varies by schedule.`,
+      question: `How can I request plumbing help or a free estimate in ${city.name}, TX?`,
+      answer: `Call PipeResque at ${siteConfig.phoneDisplay} or submit the callback request form on this page to connect with independent plumbing contractors serving ${city.name} (${zipText}). Provider availability, scheduling, and pricing are determined directly by the servicing contractor.`,
     },
     {
       question: `What plumbing problems are common in ${city.name}?`,
-      answer: `Homeowners in ${city.name} and ${city.county} commonly request help for emergency pipe leaks, sewer line backups, hydro-jetting and drain clearing, slab leak diagnostics, and gas or tankless water heater repairs.`,
+      answer: `Homeowners in ${city.name} and ${city.county} commonly request help for main sewer stoppages and backups, emergency pipe leaks, hydro-jetting and drain clearing, slab leak inspections, and gas or tankless water heater repairs.`,
     },
     {
       question: `Does PipeResque perform plumbing repairs in ${city.name}?`,
@@ -159,14 +185,15 @@ export default async function CityPage({ params }: PageProps) {
             </span>
 
             <h1 className="mt-6 text-4xl font-bold md:text-6xl">
-              Plumbing Services in {city.name}, TX
+              {isCypress
+                ? "Plumbing, Sewer Stoppage & Emergency Help in Cypress, TX"
+                : `Plumbing Services in ${city.name}, TX`}
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg text-slate-300">
-              PipeResque helps homeowners across {city.name}, Texas ({city.county}) connect with
-              independent third-party plumbing professionals. Whether you need
-              emergency repairs, drain cleaning, slab leak detection, water heater
-              repair, or sewer line evaluation, call the PipeResque referral line or request a callback below.
+              {isCypress
+                ? `Dealing with a main sewer stoppage, slab leak, burst pipe, or gas water heater issue in Cypress (${zipText})? Stop water flow at your main shutoff if active flooding is occurring, then call ${siteConfig.phoneDisplay} or request a callback below to connect with independent local plumbers serving Cypress and Northwest Harris County.`
+                : `PipeResque helps homeowners across ${city.name}, Texas (${city.county}) connect with independent third-party plumbing professionals for emergency leaks, sewer line backups, drain cleaning, slab leak detection, and water heater repair. Call ${siteConfig.phoneDisplay} or request a callback below.`}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -210,6 +237,55 @@ export default async function CityPage({ params }: PageProps) {
                 </p>
               </div>
             </div>
+
+            {isCypress && (
+              <div className="mx-auto mt-8 max-w-5xl rounded-2xl border border-amber-200 bg-amber-50/80 p-6 md:p-8">
+                <h2 className="text-2xl font-bold text-slate-900">
+                  Sewer Stoppages &amp; Main Line Backups in Cypress, TX
+                </h2>
+                <p className="mt-3 text-slate-700 leading-7">
+                  In Cypress ZIP codes {zipText}, a recurring main sewer stoppage often shows up as gurgling downstairs toilets, wastewater rising in ground-floor tubs when the washer drains, or sewage weeping from an exterior yard cleanout. Before pouring chemical openers down a backed-up line, pause water-using appliances and arrange a video camera inspection to determine whether root clearing, hydro-jetting, or localized pipe repair is needed.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-3 text-sm font-semibold">
+                  <Link
+                    href="/location/cypress/sewer-line-repair"
+                    className="rounded-lg border border-amber-300 bg-white px-4 py-2 text-blue-800 hover:bg-blue-50 transition"
+                  >
+                    Cypress Sewer Line Repair →
+                  </Link>
+                  <Link
+                    href="/services/sewer-line-repair"
+                    className="rounded-lg border border-amber-300 bg-white px-4 py-2 text-blue-800 hover:bg-blue-50 transition"
+                  >
+                    Houston &amp; Cypress Sewer Services →
+                  </Link>
+                  <Link
+                    href="/blog/sewer-line-repair-houston-tx"
+                    className="rounded-lg border border-amber-300 bg-white px-4 py-2 text-blue-800 hover:bg-blue-50 transition"
+                  >
+                    Sewer Backup &amp; Clay Soil Guide →
+                  </Link>
+                  <Link
+                    href="/location/houston/emergency-plumbing"
+                    className="rounded-lg border border-amber-300 bg-white px-4 py-2 text-blue-800 hover:bg-blue-50 transition"
+                  >
+                    Houston Emergency Plumbing →
+                  </Link>
+                  <Link
+                    href="/location/houston/leak-detection"
+                    className="rounded-lg border border-amber-300 bg-white px-4 py-2 text-blue-800 hover:bg-blue-50 transition"
+                  >
+                    Plumbing Leak Detection →
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="rounded-lg border border-amber-300 bg-white px-4 py-2 text-blue-800 hover:bg-blue-50 transition"
+                  >
+                    Request a Free Estimate →
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </section>
 

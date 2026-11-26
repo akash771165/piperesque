@@ -4,6 +4,7 @@ import {
   ArrowRight,
   CheckCircle2,
   Clock3,
+  ExternalLink,
   MapPin,
   Phone,
   ShieldCheck,
@@ -15,6 +16,7 @@ import Footer from "@/components/layout/footer";
 import FAQSchema from "@/components/seo/faq-schema";
 import OrganizationSchema from "@/components/seo/organization-schema";
 import ReferralLeadForm from "@/components/contact/referral-lead-form";
+import { LEADSMART_ESTIMATE_URL } from "@/components/contact/leadsmart-embed-section";
 
 export const metadata: Metadata = {
   title: {
@@ -185,7 +187,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:flex-wrap">
               <a
                 href="tel:+18775873986"
                 data-event="phone_click_hero"
@@ -194,6 +196,16 @@ export default function Home() {
               >
                 <Phone size={20} className="fill-slate-950" aria-hidden="true" />
                 Call (877) 587-3986
+              </a>
+
+              <a
+                href={LEADSMART_ESTIMATE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-7 py-4 text-base font-bold text-white shadow-lg shadow-emerald-600/20 transition hover:bg-emerald-500 active:scale-[0.98]"
+              >
+                Get a Free Estimate
+                <ExternalLink size={18} aria-hidden="true" />
               </a>
 
               <Link
@@ -761,7 +773,7 @@ export default function Home() {
             plumbing professional serving your neighborhood.
           </p>
 
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
 
             <a
               href="tel:+18775873986"
@@ -771,6 +783,16 @@ export default function Home() {
             >
               <Phone size={20} aria-hidden="true" />
               Call (877) 587-3986
+            </a>
+
+            <a
+              href={LEADSMART_ESTIMATE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-7 py-4 font-bold text-white shadow-lg shadow-emerald-600/20 transition hover:bg-emerald-500 active:scale-[0.98]"
+            >
+              Get a Free Estimate
+              <ExternalLink size={18} aria-hidden="true" />
             </a>
 
             <Link

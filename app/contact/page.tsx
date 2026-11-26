@@ -6,7 +6,7 @@ import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
 import OrganizationSchema from "@/components/seo/organization-schema";
 import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
-import ReferralLeadForm from "@/components/contact/referral-lead-form";
+import LeadSmartEmbedSection from "@/components/contact/leadsmart-embed-section";
 
 import {
   Phone,
@@ -191,9 +191,13 @@ export default function ContactPage() {
 
           </div>
 
-          {/* Online Referral Intake Form */}
+          {/* Online Plumbing Quote Embed */}
           <div className="mt-12">
-            <ReferralLeadForm />
+            <LeadSmartEmbedSection
+              variant="quote-form"
+              heading="Get a Free Plumbing Quote in Houston"
+              phoneEvent="phone_click_contact"
+            />
           </div>
 
           {/* Service Area & Availability Cards */}

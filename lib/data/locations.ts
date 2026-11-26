@@ -119,15 +119,15 @@ export const locationContent: Record<string, LocationContent> = {
 
   cypress: {
     intro:
-      "Explore plumbing service information and independent contractor referrals for homeowners across Cypress, Texas.",
+      "Explore plumbing service information and independent contractor referrals for homeowners across Cypress, Texas (77410, 77429, 77433).",
     description:
-      "Connect with independent local plumbers in Cypress, TX for high water pressure PRV fixes, attic water heaters, slab leaks, and drain cleaning.",
+      "Connect with independent local plumbers in Cypress, TX for sewer stoppages and backups, slab leak inspections, high water pressure PRV fixes, and gas water heater repair.",
     county: "Harris County",
     zipSample: "77410, 77429, 77433",
     localSoilAndWater:
-      "Northwest Harris County MUD water systems frequently deliver elevated static supply pressures above 75–80 PSI alongside mineral hardness that shortens anode rod and PRV lifespans.",
+      "Northwest Harris County clay soils expand and contract seasonally—shifting backyard sewer laterals and causing recurring sewer stoppages—while local MUD water systems frequently deliver static pressures above 75–80 PSI alongside hardness minerals that wear down PRVs and water heater anode rods.",
     housingProfile:
-      "Rapidly built master-planned communities combine attic water heaters, irrigation backflow preventers, and early-generation PEX/CPVC runs vulnerable to hard winter freezes.",
+      "Master-planned Cypress communities such as Fairfield, Bridgeland, Towne Lake, and Coles Crossing commonly pair slab-on-grade foundations and rear-yard sewer cleanouts with attic-mounted gas water heaters and PEX/CPVC supply runs vulnerable to hard winter freezes.",
   },
 
   spring: {
