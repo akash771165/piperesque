@@ -22,6 +22,7 @@ import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 import FAQSchema from "@/components/seo/faq-schema";
 import JsonLd from "@/components/seo/json-ld";
 import RelatedServices from "@/components/blog/related-services";
+import { getPageSeoOverride } from "@/lib/growth/closed-loop-store";
 
 import { getBlogData } from "@/lib/blog/get-blog-data";
 import { getAllBlogData } from "@/lib/blog/get-all-blog-data";
@@ -58,11 +59,15 @@ export async function generateMetadata({
     notFound();
   }
 
-  const cleanTitle = normalizeSeoTitle(
-    blog.seo?.title || blog.title || "Houston Plumbing Guide"
-  );
+  const seoOverride = getPageSeoOverride(`/blog/${blog.slug}`);
+  const cleanTitle =
+    seoOverride?.title ||
+    normalizeSeoTitle(
+      blog.seo?.title || blog.title || "Houston Plumbing Guide"
+    );
 
   const description =
+    seoOverride?.description ||
     blog.seo?.description ||
     blog.description ||
     "Helpful plumbing information, emergency shutoff checklists, and Houston plumbing referral resources.";

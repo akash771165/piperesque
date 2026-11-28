@@ -10,44 +10,53 @@ import BreadcrumbSchema from "@/components/seo/breadcrumb-schema";
 import FAQSchema from "@/components/seo/faq-schema";
 import JsonLd from "@/components/seo/json-ld";
 import LeadSmartEmbedSection from "@/components/contact/leadsmart-embed-section";
+import { getPageSeoOverride } from "@/lib/growth/closed-loop-store";
 
-export const metadata: Metadata = {
-  title: "Emergency Plumber & 24-Hour Help in Houston, TX",
-  description:
-    "Need emergency plumbing services in Houston, TX? Follow shutoff steps & call (877) 587-3986 to reach independent local plumbers or get a free estimate.",
-  keywords: [
-    "emergency plumber houston",
-    "24 hour plumber houston",
-    "emergency plumbing services near me",
-    "emergency plumbing services houston",
-    "emergency plumbing houston tx",
-    "emergency sewer repair houston",
-    "burst pipe repair houston",
-    "plumbing emergency houston",
-    "emergency plumber near me",
-  ],
-  openGraph: {
-    title: "Emergency Plumber & 24-Hour Help in Houston, TX | PipeResque",
-    description:
-      "Need emergency plumbing services in Houston, TX? Follow shutoff steps & call (877) 587-3986 to reach independent local plumbers or get a free estimate.",
-    url: "https://www.piperesque.com/services/emergency-plumbing",
-    siteName: "PipeResque",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Emergency Plumber & 24-Hour Help in Houston, TX | PipeResque",
-    description:
-      "Burst pipe, major water leak, or sewer backup in Houston or Cypress? Call (877) 587-3986 to reach independent local plumbers via PipeResque.",
-  },
-  alternates: {
-    canonical: "https://www.piperesque.com/services/emergency-plumbing",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+const DEFAULT_EMERGENCY_TITLE =
+  "Emergency Plumber & 24-Hour Help in Houston, TX";
+const DEFAULT_EMERGENCY_DESCRIPTION =
+  "Need emergency plumbing services in Houston, TX? Follow shutoff steps & call (877) 587-3986 to reach independent local plumbers or get a free estimate.";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const override = getPageSeoOverride("/services/emergency-plumbing");
+  const title = override?.title || DEFAULT_EMERGENCY_TITLE;
+  const description = override?.description || DEFAULT_EMERGENCY_DESCRIPTION;
+
+  return {
+    title,
+    description,
+    keywords: [
+      "emergency plumber houston",
+      "24 hour plumber houston",
+      "emergency plumbing services near me",
+      "emergency plumbing services houston",
+      "emergency plumbing houston tx",
+      "emergency sewer repair houston",
+      "burst pipe repair houston",
+      "plumbing emergency houston",
+      "emergency plumber near me",
+    ],
+    openGraph: {
+      title: `${title} | PipeResque`,
+      description,
+      url: "https://www.piperesque.com/services/emergency-plumbing",
+      siteName: "PipeResque",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | PipeResque`,
+      description,
+    },
+    alternates: {
+      canonical: "https://www.piperesque.com/services/emergency-plumbing",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 const emergencyServiceSchema = {
   "@context": "https://schema.org",

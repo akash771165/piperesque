@@ -22,6 +22,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
 import LeadSmartEmbedSection from "@/components/contact/leadsmart-embed-section";
+import { getPageSeoOverride } from "@/lib/growth/closed-loop-store";
 
 import { services } from "@/lib/data/services";
 import { siteConfig } from "@/lib/config/site";
@@ -774,11 +775,16 @@ export async function generateMetadata({
   }
 
   const content = serviceContent[service.slug];
-  const baseTitle = (
-    service.seoTitle || `${service.title} in Houston, TX`
-  ).replace(/\s*\|\s*Pipe[rR]esque$/i, "");
+  const seoOverride = getPageSeoOverride(`/services/${service.slug}`);
+  const baseTitle =
+    seoOverride?.title ||
+    (service.seoTitle || `${service.title} in Houston, TX`).replace(
+      /\s*\|\s*Pipe[rR]esque$/i,
+      ""
+    );
 
   const metaDescription =
+    seoOverride?.description ||
     service.metaDescription ||
     content?.overview ||
     `${service.title} in Houston, Texas: Understand common symptoms, repair options, and connect with independent local plumbing providers.`;

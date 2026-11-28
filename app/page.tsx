@@ -8,6 +8,7 @@ import {
   MapPin,
   Phone,
   ShieldCheck,
+  TrendingUp,
   Wrench,
 } from "lucide-react";
 
@@ -17,51 +18,65 @@ import FAQSchema from "@/components/seo/faq-schema";
 import OrganizationSchema from "@/components/seo/organization-schema";
 import ReferralLeadForm from "@/components/contact/referral-lead-form";
 import { LEADSMART_ESTIMATE_URL } from "@/components/contact/leadsmart-embed-section";
+import {
+  getPageSeoOverride,
+  getTrendingServiceHighlight,
+} from "@/lib/growth/closed-loop-store";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Emergency Plumbing Help in Houston, TX | PipeResque",
-  },
-  description:
-    "Need plumbing help in Houston, TX? Call (877) 587-3986 to connect with independent local plumbers for burst pipes, drains, sewer backups, leaks & water heaters.",
-  keywords: [
-    "emergency plumbing Houston",
-    "emergency plumber Houston",
-    "plumbing services Houston TX",
-    "urgent plumbing Houston",
-    "drain cleaning Houston",
-    "leak detection Houston",
-    "sewer line repair Houston",
-    "water heater repair Houston",
-    "residential plumbing Houston",
-  ],
-  alternates: {
-    canonical: "https://www.piperesque.com/",
-  },
-  openGraph: {
-    title: "Emergency Plumbing Help in Houston, TX | PipeResque",
-    description:
-      "Need plumbing help in Houston, TX? Call (877) 587-3986 to connect with independent local plumbers for burst pipes, drains, sewer backups, leaks & water heaters.",
-    url: "https://www.piperesque.com/",
-    siteName: "PipeResque",
-    type: "website",
-    images: [
-      {
-        url: "/images/emergency.webp",
-        width: 1200,
-        height: 630,
-        alt: "PipeResque plumbing referral assistance in Houston",
-      },
+export const dynamic = "force-dynamic";
+
+const DEFAULT_HOME_TITLE =
+  "Emergency Plumbing Help in Houston, TX | PipeResque";
+const DEFAULT_HOME_DESCRIPTION =
+  "Need plumbing help in Houston, TX? Call (877) 587-3986 to connect with independent local plumbers for burst pipes, drains, sewer backups, leaks & water heaters.";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const override = getPageSeoOverride("/");
+  const title = override?.title || DEFAULT_HOME_TITLE;
+  const description = override?.description || DEFAULT_HOME_DESCRIPTION;
+
+  return {
+    title: {
+      absolute: title,
+    },
+    description,
+    keywords: [
+      "emergency plumbing Houston",
+      "emergency plumber Houston",
+      "plumbing services Houston TX",
+      "urgent plumbing Houston",
+      "drain cleaning Houston",
+      "leak detection Houston",
+      "sewer line repair Houston",
+      "water heater repair Houston",
+      "residential plumbing Houston",
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Emergency Plumbing Help in Houston, TX | PipeResque",
-    description:
-      "Need plumbing help in Houston, TX? Call (877) 587-3986 to connect with independent local plumbers for burst pipes, drains, sewer backups, leaks & water heaters.",
-    images: ["/images/emergency.webp"],
-  },
-};
+    alternates: {
+      canonical: "https://www.piperesque.com/",
+    },
+    openGraph: {
+      title,
+      description,
+      url: "https://www.piperesque.com/",
+      siteName: "PipeResque",
+      type: "website",
+      images: [
+        {
+          url: "/images/emergency.webp",
+          width: 1200,
+          height: 630,
+          alt: "PipeResque plumbing referral assistance in Houston",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/emergency.webp"],
+    },
+  };
+}
 
 const services = [
   {
@@ -142,10 +157,12 @@ const faqs = [
 ];
 
 export default function Home() {
+  const trendingHighlight = getTrendingServiceHighlight();
+
   return (
     <main className="min-h-screen overflow-x-hidden bg-white text-slate-900">
       <OrganizationSchema />
-      <Navbar />
+      <Navbar trendingHighlight={trendingHighlight} />
 
       {/* =====================================================
           HERO
@@ -157,9 +174,29 @@ export default function Home() {
         <div className="container-custom relative z-10 py-20 md:py-28 lg:py-32">
           <div className="max-w-4xl">
 
-            <div className="mb-6 inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-amber-300">
-              <Phone size={14} className="text-amber-400" aria-hidden="true" />
-              Houston Plumbing Referral Hotline • (877) 587-3986
+            <div className="mb-6 flex flex-wrap items-center gap-2.5">
+              <div className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-amber-300">
+                <Phone size={14} className="text-amber-400" aria-hidden="true" />
+                Houston Plumbing Referral Hotline • (877) 587-3986
+              </div>
+
+              {trendingHighlight && (
+                <Link
+                  href={`/services/${trendingHighlight.serviceSlug}`}
+                  data-testid="hero-trending-badge"
+                  className="inline-flex items-center gap-2 rounded-lg border border-emerald-400/35 bg-emerald-500/15 px-3.5 py-1.5 text-xs font-bold tracking-wide text-emerald-200 transition hover:bg-emerald-500/25 hover:text-white"
+                >
+                  <TrendingUp
+                    size={14}
+                    className="text-emerald-300 shrink-0"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    Trending / High-Demand in {trendingHighlight.city}:{" "}
+                    {trendingHighlight.service}
+                  </span>
+                </Link>
+              )}
             </div>
 
             <h1 className="text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
@@ -200,6 +237,7 @@ export default function Home() {
 
               <a
                 href={LEADSMART_ESTIMATE_URL}
+                data-intent="form"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-7 py-4 text-base font-bold text-white shadow-lg shadow-emerald-600/20 transition hover:bg-emerald-500 active:scale-[0.98]"

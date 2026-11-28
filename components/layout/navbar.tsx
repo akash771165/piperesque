@@ -15,7 +15,9 @@ import {
   AlertTriangle,
   Home,
   ShieldAlert,
+  TrendingUp,
 } from "lucide-react";
+import type { TrendingServiceHighlight } from "@/lib/growth/closed-loop-store";
 
 const serviceDropdownLinks = [
   {
@@ -56,7 +58,11 @@ const serviceDropdownLinks = [
   },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  trendingHighlight?: TrendingServiceHighlight | null;
+}
+
+export default function Navbar({ trendingHighlight = null }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -374,10 +380,11 @@ export default function Navbar() {
       <a
         href={`tel:${siteConfig.phone}`}
         data-event="phone_click_sticky"
+        data-testid="sticky-call-bar-desktop"
         aria-label={`Call PipeResque Referral Hotline at ${siteConfig.phoneDisplay}`}
         className="fixed bottom-6 right-6 z-40 hidden md:inline-flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-slate-950 text-white border border-slate-800 shadow-2xl hover:scale-105 transition-all group"
       >
-        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500 text-slate-950 font-black group-hover:bg-amber-400 transition">
+        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500 text-slate-950 font-black group-hover:bg-amber-400 transition shrink-0">
           <Phone size={18} className="fill-slate-950" />
         </span>
         <div className="text-left">
@@ -385,6 +392,17 @@ export default function Navbar() {
             Plumbing Referral Line
           </p>
           <p className="text-sm font-black text-white">{siteConfig.phoneDisplay}</p>
+          {trendingHighlight && (
+            <p
+              data-testid="sticky-trending-badge"
+              className="mt-0.5 flex items-center gap-1 text-[11px] font-semibold text-emerald-300"
+            >
+              <TrendingUp size={12} className="shrink-0" aria-hidden="true" />
+              <span>
+                High Demand: {trendingHighlight.service} ({trendingHighlight.city})
+              </span>
+            </p>
+          )}
         </div>
       </a>
 
@@ -400,8 +418,10 @@ export default function Navbar() {
             <Phone size={18} className="fill-slate-950" aria-hidden="true" />
             <span>Call PipeResque: {siteConfig.phoneDisplay}</span>
           </div>
-          <span className="text-[11px] font-semibold text-slate-900 tracking-tight">
-            Discuss your plumbing concern • Independent provider referral
+          <span className="text-[11px] font-semibold text-slate-900 tracking-tight truncate max-w-full">
+            {trendingHighlight
+              ? `Trending in ${trendingHighlight.city}: ${trendingHighlight.service}`
+              : "Discuss your plumbing concern • Independent provider referral"}
           </span>
         </a>
       </div>

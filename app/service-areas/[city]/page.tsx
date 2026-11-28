@@ -6,6 +6,7 @@ import { cities } from "@/lib/data/cities";
 import { locationContent, locations } from "@/lib/data/locations";
 import { services } from "@/lib/data/services";
 import { siteConfig } from "@/lib/config/site";
+import { getPageSeoOverride } from "@/lib/growth/closed-loop-store";
 
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
@@ -70,12 +71,17 @@ export async function generateMetadata({
   }
 
   const isCypress = city.slug === "cypress";
-  const pageTitle = isCypress
-    ? "Plumber in Cypress, TX | Sewer & Emergency Help"
-    : `Plumber & Plumbing Help in ${city.name}, TX`;
-  const pageDescription = isCypress
-    ? "Need a plumber in Cypress, TX (77410, 77429, 77433)? Call (877) 587-3986 for sewer stoppages, emergency leaks, drain cleaning & water heater referrals."
-    : `Need a plumber in ${city.name}, TX (${city.county})? Call (877) 587-3986 to connect with independent local plumbers for leaks, sewer backups, drains & water heaters.`;
+  const seoOverride = getPageSeoOverride(`/service-areas/${city.slug}`);
+  const pageTitle =
+    seoOverride?.title ||
+    (isCypress
+      ? "Plumber in Cypress, TX | Sewer & Emergency Help"
+      : `Plumber & Plumbing Help in ${city.name}, TX`);
+  const pageDescription =
+    seoOverride?.description ||
+    (isCypress
+      ? "Need a plumber in Cypress, TX (77410, 77429, 77433)? Call (877) 587-3986 for sewer stoppages, emergency leaks, drain cleaning & water heater referrals."
+      : `Need a plumber in ${city.name}, TX (${city.county})? Call (877) 587-3986 to connect with independent local plumbers for leaks, sewer backups, drains & water heaters.`);
 
   return {
     title: pageTitle,

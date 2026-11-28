@@ -102,6 +102,24 @@ export default function ReferralLeadForm({
 
     setIsSubmitting(true);
 
+    const currentPagePath =
+      typeof window !== "undefined" ? window.location.pathname : "/contact";
+
+    // Log zero-PII form intent to data/revenue-store.json before forwarding
+    void fetch("/api/track-intent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      keepalive: true,
+      body: JSON.stringify({
+        type: "form",
+        service: formData.serviceRequested,
+        page: currentPagePath,
+        event: "quote_form_submit",
+      }),
+    }).catch(() => {
+      // Non-blocking intent logging
+    });
+
     try {
       const response = await fetch("/api/referral-lead", {
         method: "POST",
@@ -115,7 +133,7 @@ export default function ReferralLeadForm({
           urgency: formData.urgency,
           details: formData.details,
           consentAccepted: formData.consentAccepted,
-          sourcePage: typeof window !== "undefined" ? window.location.pathname : "/contact",
+          sourcePage: currentPagePath,
           honeypot
         })
       });

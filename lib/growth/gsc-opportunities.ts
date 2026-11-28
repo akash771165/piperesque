@@ -10,7 +10,7 @@ import {
   type GscTopQueriesStore,
   type LowCtrQueryOpportunity,
   type RawGscQueryRow,
-} from "@/lib/services/gsc-service";
+} from "@/lib/services/gsc";
 
 export {
   classifyRankingTier,
@@ -38,7 +38,7 @@ interface StoredGscPayload {
 }
 
 /**
- * Reads the dedicated top-queries JSON store (`content/growth/gsc-top-queries.json`)
+ * Reads the dedicated top-queries JSON store (`content/growth/gsc-opportunities.json`)
  * if it contains freshly stored live queries.
  */
 function readTopQueriesStore(
@@ -190,7 +190,7 @@ export function readGscRowsFromDataStores(
 
 /**
  * Loads the top N high-impression / low-CTR queries using GoogleSearchConsoleService
- * (caching results in content/growth/gsc-top-queries.json) when configured and
+ * (caching results in content/growth/gsc-opportunities.json) when configured and
  * falling back transparently to persisted data stores in content/growth/.
  */
 export async function loadTopLowCtrQueries(
@@ -207,7 +207,7 @@ export async function loadTopLowCtrQueries(
   const privateKey = process.env.GSC_PRIVATE_KEY;
   const siteUrl = process.env.GSC_SITE_URL || DEFAULT_GSC_SITE_URL;
 
-  // Reuse freshly written gsc-top-queries.json if under 6 hours old
+  // Reuse freshly written gsc-opportunities.json if under 6 hours old
   if (fs.existsSync(topStorePath)) {
     try {
       const cached = JSON.parse(
@@ -272,7 +272,7 @@ export async function loadTopLowCtrQueries(
     }
   }
 
-  // Fallback 1: previously stored live top queries in gsc-top-queries.json
+  // Fallback 1: previously stored live top queries in gsc-opportunities.json
   const storedTop = readTopQueriesStore(rootDir, limit);
   if (storedTop) {
     return {

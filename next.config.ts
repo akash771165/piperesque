@@ -30,6 +30,7 @@ const nextConfig: NextConfig = {
 
   experimental: {
     optimizePackageImports: ["lucide-react"],
+    reactDebugChannel: false,
   },
 
   async redirects() {

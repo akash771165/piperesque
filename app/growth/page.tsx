@@ -16,12 +16,27 @@ import {
   PhoneCall,
   AlertCircle
 } from "lucide-react";
+import { ClosedLoopControlPanel } from "@/components/growth/closed-loop-control-panel";
 import { GscOpportunitySummary } from "@/components/growth/gsc-opportunity-summary";
 import { GrowthVelocity } from "@/components/growth/growth-velocity";
+import { QualifiedLeadRevenueChart } from "@/components/growth/qualified-lead-revenue-chart";
 import { RevenueConversionCard } from "@/components/growth/revenue-conversion-card";
+import { SystemHealthAlert } from "@/components/growth/system-health-alert";
+import {
+  loadEffectiveGscPages,
+  readClosedLoopRevenueStore,
+  readSeoOverridesStore,
+} from "@/lib/growth/closed-loop-store";
 import { resolveDailyLeadTarget } from "@/lib/growth/daily-lead-goal";
 import { loadTopLowCtrQueries } from "@/lib/growth/gsc-opportunities";
+import { buildLast30DaysRevenueTrend } from "@/lib/growth/revenue-trend";
+import { sanitizeClientErrorReport } from "@/lib/growth/system-health";
+import { readGscErrorReport } from "@/lib/services/gsc";
 import type { WeeklyLeadSnapshot } from "@/lib/growth/growth-velocity";
+import type {
+  DailyRevenueSnapshot,
+  RevenueTransactionRecord,
+} from "@/lib/growth/revenue-trend";
 
 export const metadata: Metadata = {
   title: "Autonomous AI Growth Engine Dashboard",
@@ -69,6 +84,8 @@ interface RevenueStoreData {
     formSubmitToQualifiedLeadRate: string;
     dispatchToProviderAcceptanceRate: string;
   };
+  transactions?: RevenueTransactionRecord[];
+  dailyRevenueHistory?: DailyRevenueSnapshot[];
 }
 
   // 1. Read real persistent data stores
@@ -155,6 +172,98 @@ interface ResearchStoreData {
   // 3. Load Top 3 High-Impression / Low-CTR Search Console queries (live API when available, persisted stores otherwise)
   const gscOpportunitySummary = await loadTopLowCtrQueries(3);
 
+  // 4. Read persisted GSC error report (after live attempt so fresh interruptions are immediately surfaced)
+  const gscErrorReport = sanitizeClientErrorReport(readGscErrorReport());
+
+  // 5. Read closed-loop data/*.json stores (graceful defaults if files do not exist yet)
+  const closedLoopRevenue = readClosedLoopRevenueStore();
+  const { store: closedLoopGsc } = loadEffectiveGscPages();
+  const seoOverrides = readSeoOverridesStore();
+
+  // Merge data/revenue-store.json metrics with content/growth/revenue-store.json for cohesive KPI + 30-day chart display
+  const baseVerifiedRevenue =
+    Number(
+      String(revenueStore.summary.totalVerifiedReferralRevenue || "0").replace(
+        /[^0-9.-]/g,
+        ""
+      )
+    ) || 0;
+  const combinedVerifiedRevenue = baseVerifiedRevenue + closedLoopRevenue.revenue;
+  const formattedCombinedRevenue = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(combinedVerifiedRevenue);
+
+  const combinedSummary = {
+    ...revenueStore.summary,
+    totalPhoneClicks:
+      revenueStore.summary.totalPhoneClicks + closedLoopRevenue.callIntents,
+    totalFormSubmissions:
+      revenueStore.summary.totalFormSubmissions + closedLoopRevenue.formIntents,
+    totalQualifiedLeads:
+      revenueStore.summary.totalQualifiedLeads +
+      closedLoopRevenue.qualifiedLeads,
+    totalVerifiedReferralRevenue: formattedCombinedRevenue,
+  };
+
+  const mergedDailyMap = new Map<string, DailyRevenueSnapshot>();
+  for (const snap of revenueStore.dailyRevenueHistory ?? []) {
+    mergedDailyMap.set(snap.date, { ...snap });
+  }
+  for (const [dateKey, revAmount] of Object.entries(
+    closedLoopRevenue.dailyRevenue
+  )) {
+    const existing = mergedDailyMap.get(dateKey);
+    const leadsCount = closedLoopRevenue.dailyQualifiedLeads[dateKey] ?? 0;
+    if (existing) {
+      existing.revenue = Number((existing.revenue + revAmount).toFixed(2));
+      existing.settlementCount = (existing.settlementCount ?? 0) + leadsCount;
+    } else {
+      mergedDailyMap.set(dateKey, {
+        date: dateKey,
+        revenue: Number(revAmount.toFixed(2)),
+        settlementCount: leadsCount,
+      });
+    }
+  }
+  const mergedDailyRevenueHistory = Array.from(mergedDailyMap.values()).sort(
+    (a, b) => a.date.localeCompare(b.date)
+  );
+
+  // 6. Build 30-day qualified lead revenue time series from merged revenue stores
+  const qualifiedLeadRevenue30d = buildLast30DaysRevenueTrend({
+    transactions: revenueStore.transactions,
+    dailyRevenueHistory: mergedDailyRevenueHistory,
+  });
+
+  // Sync rolling 7-day vs prior 7-day qualified leads from data/revenue-store.json into Growth Velocity
+  const nowUtcMs = Date.parse(`${currentTimestamp}T00:00:00.000Z`);
+  const dayMs = 24 * 60 * 60 * 1000;
+  let closedLoopCurrentWeekLeads = 0;
+  let closedLoopPriorWeekLeads = 0;
+  for (const [dateKey, count] of Object.entries(
+    closedLoopRevenue.dailyQualifiedLeads
+  )) {
+    const ts = Date.parse(`${dateKey}T00:00:00.000Z`);
+    if (Number.isNaN(ts)) continue;
+    const daysAgo = Math.floor((nowUtcMs - ts) / dayMs);
+    if (daysAgo >= 0 && daysAgo < 7) {
+      closedLoopCurrentWeekLeads += count;
+    } else if (daysAgo >= 7 && daysAgo < 14) {
+      closedLoopPriorWeekLeads += count;
+    }
+  }
+  const mergedWeeklyMetrics = {
+    currentWeekQualifiedLeads:
+      (revenueStore.weeklyMetrics?.currentWeekQualifiedLeads ?? 0) +
+      closedLoopCurrentWeekLeads,
+    previousWeekQualifiedLeads:
+      (revenueStore.weeklyMetrics?.previousWeekQualifiedLeads ?? 0) +
+      closedLoopPriorWeekLeads,
+  };
+
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-8">
@@ -225,6 +334,12 @@ interface ResearchStoreData {
           </div>
         </div>
 
+        {/* System Health Visual Alert (reads content/growth/gsc-errors.json + manual retry) */}
+        <SystemHealthAlert
+          initialReport={gscErrorReport}
+          gscConfigured={gscConfigured}
+        />
+
         {/* Real KPI Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-slate-800/80 border border-slate-700/80 rounded-xl p-5 shadow-sm">
@@ -244,7 +359,7 @@ interface ResearchStoreData {
               <span>Phone Inquiries</span>
               <PhoneCall className="w-4 h-4 text-blue-400" />
             </div>
-            <div className="mt-2 text-2xl font-bold text-white">{revenueStore.summary.totalPhoneClicks} Clicks</div>
+            <div className="mt-2 text-2xl font-bold text-white font-mono tabular-nums">{combinedSummary.totalPhoneClicks} Clicks</div>
             <p className="text-xs text-slate-400 mt-1">
               Direct click-to-call intent signals
             </p>
@@ -255,9 +370,9 @@ interface ResearchStoreData {
               <span>Form Submissions</span>
               <Search className="w-4 h-4 text-emerald-400" />
             </div>
-            <div className="mt-2 text-2xl font-bold text-white">{revenueStore.summary.totalFormSubmissions} Inquiries</div>
+            <div className="mt-2 text-2xl font-bold text-white font-mono tabular-nums">{combinedSummary.totalFormSubmissions} Inquiries</div>
             <p className="text-xs text-slate-400 mt-1">
-              {revenueStore.summary.totalQualifiedLeads} Qualified Greater Houston Leads
+              {combinedSummary.totalQualifiedLeads} Qualified Greater Houston Leads
             </p>
           </div>
 
@@ -266,15 +381,37 @@ interface ResearchStoreData {
               <span>Verified Revenue</span>
               <DollarSign className="w-4 h-4 text-amber-400" />
             </div>
-            <div className="mt-2 text-2xl font-bold text-emerald-400">{revenueStore.summary.totalVerifiedReferralRevenue || "$0.00"}</div>
+            <div className="mt-2 text-2xl font-bold text-emerald-400 font-mono tabular-nums">{combinedSummary.totalVerifiedReferralRevenue || "$0.00"}</div>
             <p className="text-xs text-slate-400 mt-1">
-              {revenueStore.summary.totalPendingReferralRevenue || "$0.00"} Pending Settlements
+              {combinedSummary.totalPendingReferralRevenue || "$0.00"} Pending Settlements
             </p>
           </div>
         </div>
 
-        {/* Week-over-Week Growth Velocity */}
-        <GrowthVelocity revenueStore={revenueStore} />
+        {/* Week-over-Week Growth Velocity & 30-Day Qualified Lead Revenue Line Chart */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          <div className="lg:col-span-5">
+            <GrowthVelocity
+              revenueStore={{
+                ...revenueStore,
+                summary: combinedSummary,
+                weeklyMetrics: mergedWeeklyMetrics,
+              }}
+              layout="split"
+            />
+          </div>
+          <div className="lg:col-span-7">
+            <QualifiedLeadRevenueChart trend={qualifiedLeadRevenue30d} />
+          </div>
+        </div>
+
+        {/* Closed-Loop Leads Smart, Free GSC Sync & Self-Updating SEO Control Panel */}
+        <ClosedLoopControlPanel
+          initialRevenue={closedLoopRevenue}
+          initialGsc={closedLoopGsc}
+          initialOverrides={seoOverrides}
+          dailyLeadTarget={dailyLeadTarget}
+        />
 
         {/* 3-Column Operations Breakdown */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -377,8 +514,10 @@ interface ResearchStoreData {
 
           {/* Column 3: Conversion Funnel & Verified Revenue */}
           <RevenueConversionCard
-            summary={revenueStore.summary}
+            summary={combinedSummary}
             dailyLeadTarget={dailyLeadTarget}
+            transactions={revenueStore.transactions}
+            dailyRevenueHistory={mergedDailyRevenueHistory}
           />
         </div>
 

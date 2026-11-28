@@ -13,6 +13,12 @@ import {
   getProgressWidthClass,
 } from "@/lib/growth/daily-lead-goal";
 import { calculateLeadSourceRatio } from "@/lib/growth/lead-source-ratio";
+import {
+  buildLast30DaysRevenueTrend,
+  type DailyRevenueSnapshot,
+  type RevenueTransactionRecord,
+} from "@/lib/growth/revenue-trend";
+import { RevenueTrendChart } from "@/components/growth/revenue-trend-chart";
 
 export interface RevenueConversionSummary {
   totalPhoneClicks: number;
@@ -26,11 +32,15 @@ export interface RevenueConversionSummary {
 interface RevenueConversionCardProps {
   summary: RevenueConversionSummary;
   dailyLeadTarget: number;
+  transactions?: RevenueTransactionRecord[];
+  dailyRevenueHistory?: DailyRevenueSnapshot[];
 }
 
 export function RevenueConversionCard({
   summary,
   dailyLeadTarget,
+  transactions,
+  dailyRevenueHistory,
 }: RevenueConversionCardProps) {
   const goal = evaluateDailyLeadGoal(summary.totalQualifiedLeads, dailyLeadTarget);
   const theme = getDailyLeadGoalTheme(goal.status);
@@ -39,6 +49,10 @@ export function RevenueConversionCard({
     summary.totalPhoneClicks,
     summary.totalFormSubmissions
   );
+  const revenueTrend = buildLast30DaysRevenueTrend({
+    transactions,
+    dailyRevenueHistory,
+  });
   const phoneShareWidthClass = getProgressWidthClass(sourceRatio.phoneSharePercent);
   const formShareWidthClass = getProgressWidthClass(sourceRatio.formSharePercent);
   const verifiedRevenue = summary.totalVerifiedReferralRevenue || "$0.00";
@@ -254,6 +268,9 @@ export function RevenueConversionCard({
           </tbody>
         </table>
       </div>
+
+      {/* 30-Day Qualified Lead Revenue ROI Trend */}
+      <RevenueTrendChart trend={revenueTrend} />
 
       <div className="pt-2 text-slate-400 text-xs">
         <span className="text-amber-400 font-medium">Business Integrity</span>: PipeResque is strictly a referral platform. Revenue is only booked upon verified provider payment settlement.

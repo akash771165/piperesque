@@ -9,13 +9,17 @@ export default defineConfig({
   },
   test: {
     environment: "node",
-    include: ["tests/**/*.test.{ts,mts,mjs}"],
+    include: [
+      "tests/**/*.test.{ts,mts,mjs}",
+      "lib/**/*.test.{ts,mts,mjs}",
+    ],
     coverage: {
       provider: "v8",
       reporter: ["text", "json-summary", "lcov"],
       include: ["lib/**", "scripts/**"],
       // Static content and prompt text carry no logic to cover.
       exclude: [
+        "**/*.test.{ts,mts,mjs}",
         "lib/data/**",
         "lib/config/**",
         "scripts/ai/architecture/**",

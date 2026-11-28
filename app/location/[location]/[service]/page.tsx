@@ -23,6 +23,7 @@ import LeadSmartEmbedSection from "@/components/contact/leadsmart-embed-section"
 
 
 import { services } from "@/lib/data/services";
+import { getPageSeoOverride } from "@/lib/growth/closed-loop-store";
 import { locations, locationContent } from "@/lib/data/locations";
 import { siteConfig } from "@/lib/config/site";
 
@@ -2406,6 +2407,11 @@ export async function generateMetadata({
   }
 
   const canonical = `${baseUrl}/location/${city.slug}/${plumbing.slug}`;
+  const seoOverride = getPageSeoOverride(`/location/${city.slug}/${plumbing.slug}`);
+  if (seoOverride) {
+    title = seoOverride.title;
+    description = seoOverride.description;
+  }
 
   return {
     title,

@@ -1,0 +1,99 @@
+{
+  "lastSyncedAt": "2026-11-28T06:51:04.561Z",
+  "source": "local_cache",
+  "totals": {
+    "clicks": 176,
+    "impressions": 9150,
+    "avgCtr": 1.92
+  },
+  "pages": [
+    {
+      "page": "/services/drain-cleaning",
+      "topQuery": "ac condensate line backing up into sink houston",
+      "clicks": 14,
+      "impressions": 1450,
+      "ctr": 0.97,
+      "position": 17.2
+    },
+    {
+      "page": "/services/emergency-plumbing",
+      "topQuery": "emergency plumbing houston tx",
+      "clicks": 34,
+      "impressions": 1420,
+      "ctr": 2.39,
+      "position": 6.2
+    },
+    {
+      "page": "/services/sewer-line-repair",
+      "topQuery": "sewer line repair houston",
+      "clicks": 18,
+      "impressions": 1190,
+      "ctr": 1.51,
+      "position": 8.4
+    },
+    {
+      "page": "/services/leak-detection",
+      "topQuery": "slab leak detection cost houston",
+      "clicks": 12,
+      "impressions": 980,
+      "ctr": 1.22,
+      "position": 12.3
+    },
+    {
+      "page": "/blog/attic-water-heater-code-requirements-houston",
+      "topQuery": "attic water heater code requirements houston",
+      "clicks": 29,
+      "impressions": 890,
+      "ctr": 3.26,
+      "position": 3.8
+    },
+    {
+      "page": "/blog/water-heater-expansion-tank-houston-tx",
+      "topQuery": "water heater expansion tank symptoms houston",
+      "clicks": 22,
+      "impressions": 680,
+      "ctr": 3.24,
+      "position": 4.1
+    },
+    {
+      "page": "/location/katy/drain-cleaning",
+      "topQuery": "drain cleaning katy tx",
+      "clicks": 15,
+      "impressions": 620,
+      "ctr": 2.42,
+      "position": 7.9
+    },
+    {
+      "page": "/services/toilet-repair",
+      "topQuery": "toilet constantly running repair cost houston",
+      "clicks": 11,
+      "impressions": 560,
+      "ctr": 1.96,
+      "position": 15.1
+    },
+    {
+      "page": "/location/sugar-land/water-heater-repair",
+      "topQuery": "tankless water heater repair sugar land",
+      "clicks": 9,
+      "impressions": 540,
+      "ctr": 1.67,
+      "position": 11.2
+    },
+    {
+      "page": "/services/pipe-repair",
+      "topQuery": "burst pipe repair winter houston",
+      "clicks": 5,
+      "impressions": 430,
+      "ctr": 1.16,
+      "position": 18.2
+    },
+    {
+      "page": "/services/gas-line-repair",
+      "topQuery": "gas line leak test houston permit",
+      "clicks": 7,
+      "impressions": 390,
+      "ctr": 1.79,
+      "position": 9.4
+    }
+  ]
+}
