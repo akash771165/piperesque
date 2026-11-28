@@ -96,10 +96,12 @@ export function verifySecretToken(
 /**
  * Rejects cross-origin browser requests when an Origin header is present and
  * does not match the request Host / X-Forwarded-Host.
+ * Handles comma-separated proxy headers and Cloud Run / AI Studio preview
+ * reverse-proxied origins where the internal Host is localhost/127.0.0.1.
  */
 export function isCrossOriginRequest(req: NextRequest): boolean {
   const originHeader = req.headers.get("origin");
-  if (!originHeader) return false;
+  if (!originHeader || originHeader === "null") return false;
 
   let urlHost = "";
   try {
@@ -108,15 +110,36 @@ export function isCrossOriginRequest(req: NextRequest): boolean {
     urlHost = "";
   }
 
-  const expectedHost =
-    req.headers.get("x-forwarded-host") ||
-    req.headers.get("host") ||
-    urlHost;
-  if (!expectedHost) return false;
+  const forwardedHosts = (req.headers.get("x-forwarded-host") || "")
+    .split(",")
+    .map((h) => h.trim().toLowerCase())
+    .filter(Boolean);
+  const directHost = (req.headers.get("host") || "").trim().toLowerCase();
+  const allowedHosts = new Set<string>(
+    [...forwardedHosts, directHost, urlHost.toLowerCase()].filter(Boolean)
+  );
+
+  if (allowedHosts.size === 0) return false;
 
   try {
     const parsedOrigin = new URL(originHeader);
-    return parsedOrigin.host.toLowerCase() !== expectedHost.trim().toLowerCase();
+    const originHost = parsedOrigin.host.toLowerCase();
+    if (allowedHosts.has(originHost)) {
+      return false;
+    }
+
+    // Allow Cloud Run / AI Studio preview reverse-proxied requests when internal
+    // Next.js Host is localhost / 127.0.0.1
+    const isLocalInternalHost =
+      directHost.startsWith("localhost") ||
+      directHost.startsWith("127.0.0.1") ||
+      urlHost.toLowerCase().startsWith("localhost") ||
+      urlHost.toLowerCase().startsWith("127.0.0.1");
+    if (isLocalInternalHost && originHost.endsWith(".run.app")) {
+      return false;
+    }
+
+    return true;
   } catch {
     return true;
   }

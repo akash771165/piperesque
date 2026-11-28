@@ -1,12 +1,29 @@
 {
-  "lastUpdated": null,
-  "qualifiedLeads": 0,
-  "revenue": 0,
-  "soldCalls": 0,
+  "lastUpdated": "2026-11-28T07:17:47.385Z",
+  "qualifiedLeads": 1,
+  "revenue": 65,
+  "soldCalls": 1,
   "soldForms": 0,
-  "callIntents": 0,
+  "callIntents": 1,
   "formIntents": 0,
-  "dailyQualifiedLeads": {},
-  "dailyRevenue": {},
-  "logs": []
+  "dailyQualifiedLeads": {
+    "2026-11-28": 1
+  },
+  "dailyRevenue": {
+    "2026-11-28": 65
+  },
+  "logs": [
+    {
+      "id": "ls-mx02vqpm-12b284",
+      "timestamp": "2026-11-28T07:17:47.385Z",
+      "eventType": "conversion",
+      "channel": "call",
+      "payout": 65,
+      "status": "sold",
+      "city": "Katy",
+      "service": "Sewer Line Repair",
+      "page": "/services/sewer-line-repair",
+      "source": "dashboard_simulation"
+    }
+  ]
 }

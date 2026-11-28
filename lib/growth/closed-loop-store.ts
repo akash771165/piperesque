@@ -2,6 +2,13 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { readGscRowsFromDataStores } from "@/lib/growth/gsc-opportunities";
+import {
+  DEFAULT_GSC_SITE_URL,
+  resolveSafeStorePath,
+  selectTopHighImpressionLowCtrQueries,
+  type GscTopQueriesStore,
+  type RawGscQueryRow,
+} from "@/lib/services/gsc";
 
 export const MAX_REVENUE_LOGS = 250;
 export const MAX_GSC_PAGES = 500;
@@ -256,6 +263,63 @@ export function createDefaultSeoOverridesStore(): SeoOverridesStore {
   };
 }
 
+/**
+ * Ensures `<rootDir>/data` and `revenue-store.json`, `gsc-store.json`, and
+ * `seo-overrides.json` exist with valid JSON so filesystem reads/writes never
+ * fail with ENOENT or JSON parse errors in preview or production.
+ */
+export function ensureClosedLoopDataStores(
+  rootDir: string = process.cwd()
+): {
+  revenueStore: ClosedLoopRevenueStore;
+  gscStore: GscPerformanceStore;
+  overrides: SeoOverridesStore;
+} {
+  const dataDir = path.resolve(rootDir, "data");
+  try {
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+  } catch {
+    // Gracefully continue if directory creation is restricted
+  }
+
+  const ensureValidFile = <T>(
+    fileName: "revenue-store.json" | "gsc-store.json" | "seo-overrides.json",
+    createDefault: () => T
+  ): void => {
+    try {
+      const filePath = resolveDataStorePath(fileName, rootDir);
+      if (!fs.existsSync(filePath)) {
+        writeJsonAtomically(filePath, createDefault());
+        return;
+      }
+      const raw = fs.readFileSync(filePath, "utf-8");
+      const parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed !== "object") {
+        writeJsonAtomically(filePath, createDefault());
+      }
+    } catch {
+      try {
+        const filePath = resolveDataStorePath(fileName, rootDir);
+        writeJsonAtomically(filePath, createDefault());
+      } catch {
+        // Never throw unhandled errors during auto-init
+      }
+    }
+  };
+
+  ensureValidFile("revenue-store.json", createDefaultRevenueStore);
+  ensureValidFile("gsc-store.json", createDefaultGscStore);
+  ensureValidFile("seo-overrides.json", createDefaultSeoOverridesStore);
+
+  const revenueStore = readClosedLoopRevenueStore(rootDir);
+  const { store: gscStore } = loadEffectiveGscPages(rootDir);
+  const overrides = readSeoOverridesStore(rootDir);
+
+  return { revenueStore, gscStore, overrides };
+}
+
 export function readClosedLoopRevenueStore(
   rootDir: string = process.cwd()
 ): ClosedLoopRevenueStore {
@@ -307,6 +371,7 @@ export function recordLeadSmartConversion(
     page?: string;
     source?: "leadsmart_webhook" | "dashboard_simulation";
     timestamp?: string;
+    incrementIntent?: boolean;
   },
   rootDir: string = process.cwd()
 ): { store: ClosedLoopRevenueStore; entry: RevenueLogEntry } {
@@ -339,6 +404,14 @@ export function recordLeadSmartConversion(
     ...(page ? { page } : {}),
     source: input.source ?? "leadsmart_webhook",
   };
+
+  if (input.incrementIntent) {
+    if (channel === "call") {
+      store.callIntents += 1;
+    } else {
+      store.formIntents += 1;
+    }
+  }
 
   if (isQualifiedSale) {
     store.qualifiedLeads += 1;
@@ -796,6 +869,208 @@ export function loadEffectiveGscPages(
 }
 
 /**
+ * Parses and imports real Google Search Console JSON pasted or uploaded from
+ * the dashboard (supports arrays, `{ rows }`, `{ pages }`, `{ data: { rows } }`,
+ * and raw GSC Search Analytics `{ rows: [{ keys: [query, page], ... }] }`).
+ * Updates `data/gsc-store.json` and, when query rows are present, refreshes
+ * `content/growth/gsc-opportunities.json` so all dashboard widgets stay unified.
+ */
+export function importRawGscJson(
+  rawInput: unknown,
+  rootDir: string = process.cwd(),
+  options?: { replace?: boolean }
+): {
+  store: GscPerformanceStore;
+  importedRowCount: number;
+  opportunitiesUpdated: boolean;
+} {
+  let rawRows: unknown[] = [];
+
+  if (Array.isArray(rawInput)) {
+    rawRows = rawInput;
+  } else if (rawInput && typeof rawInput === "object") {
+    const obj = rawInput as Record<string, unknown>;
+    if (Array.isArray(obj.pages)) {
+      rawRows = obj.pages;
+    } else if (Array.isArray(obj.rows)) {
+      rawRows = obj.rows;
+    } else if (
+      obj.data &&
+      typeof obj.data === "object" &&
+      Array.isArray((obj.data as Record<string, unknown>).rows)
+    ) {
+      rawRows = (obj.data as Record<string, unknown>).rows as unknown[];
+    } else if (
+      obj.data &&
+      typeof obj.data === "object" &&
+      Array.isArray((obj.data as Record<string, unknown>).pages)
+    ) {
+      rawRows = (obj.data as Record<string, unknown>).pages as unknown[];
+    } else if (typeof obj.page === "string") {
+      rawRows = [obj];
+    }
+  }
+
+  if (rawRows.length === 0) {
+    throw new Error(
+      "No valid GSC rows found. Provide an array of rows or an object containing `rows` or `pages`."
+    );
+  }
+
+  const byPage = new Map<
+    string,
+    {
+      page: string;
+      topQuery: string;
+      topQueryImpressions: number;
+      clicks: number;
+      impressions: number;
+      weightedPos: number;
+    }
+  >();
+  const queryRows: RawGscQueryRow[] = [];
+
+  for (const item of rawRows.slice(0, MAX_GSC_PAGES * 4)) {
+    if (!item || typeof item !== "object") continue;
+    const rec = item as Record<string, unknown>;
+
+    let rawPage: unknown = rec.page ?? rec.url ?? rec.landingPage;
+    let rawQuery: unknown = rec.topQuery ?? rec.query ?? rec.keyword;
+
+    // Support raw Google Search Console Search Analytics API `keys: [query, page]`
+    if (Array.isArray(rec.keys) && rec.keys.length > 0) {
+      const k0 = typeof rec.keys[0] === "string" ? rec.keys[0] : "";
+      const k1 = typeof rec.keys[1] === "string" ? rec.keys[1] : "";
+      if (!rawPage) {
+        if (k1.startsWith("http") || k1.startsWith("/")) {
+          rawPage = k1;
+        } else if (k0.startsWith("http") || k0.startsWith("/")) {
+          rawPage = k0;
+        }
+      }
+      if (!rawQuery) {
+        if (k0 && k0 !== rawPage) {
+          rawQuery = k0;
+        } else if (k1 && k1 !== rawPage) {
+          rawQuery = k1;
+        }
+      }
+    }
+
+    const pagePath = normalizePagePath(rawPage);
+    if (!pagePath) continue;
+
+    const clicks = Math.round(toFiniteNonNegative(rec.clicks));
+    const impressions = Math.round(toFiniteNonNegative(rec.impressions));
+    const position = Number(toFiniteNonNegative(rec.position).toFixed(1));
+    const query = sanitizeText(rawQuery, 140, "");
+
+    if (query) {
+      const ctrFraction =
+        impressions > 0
+          ? clicks / impressions
+          : normalizeCtrPercent(rec.ctr, clicks, impressions) / 100;
+      queryRows.push({
+        query,
+        page: pagePath,
+        clicks,
+        impressions,
+        ctr: ctrFraction,
+        position,
+      });
+    }
+
+    const existing = byPage.get(pagePath);
+    if (!existing) {
+      byPage.set(pagePath, {
+        page: pagePath,
+        topQuery: query,
+        topQueryImpressions: impressions,
+        clicks,
+        impressions,
+        weightedPos: position * Math.max(1, impressions),
+      });
+    } else {
+      existing.clicks += clicks;
+      existing.impressions += impressions;
+      existing.weightedPos += position * Math.max(1, impressions);
+      if (impressions > existing.topQueryImpressions && query) {
+        existing.topQuery = query;
+        existing.topQueryImpressions = impressions;
+      }
+    }
+  }
+
+  const aggregated: GscPageMetric[] = Array.from(byPage.values()).map((entry) => ({
+    page: entry.page,
+    topQuery: entry.topQuery,
+    clicks: entry.clicks,
+    impressions: entry.impressions,
+    ctr:
+      entry.impressions > 0
+        ? Number(((entry.clicks / entry.impressions) * 100).toFixed(2))
+        : 0,
+    position:
+      entry.impressions > 0
+        ? Number((entry.weightedPos / entry.impressions).toFixed(1))
+        : 0,
+  }));
+
+  if (aggregated.length === 0) {
+    throw new Error(
+      "Could not extract any valid page paths from the provided GSC JSON. Each row must include a valid `page` URL or `/` path."
+    );
+  }
+
+  const store = saveGscPerformanceMetrics(aggregated, "post_sync", rootDir, {
+    mergeWithExisting: options?.replace !== true,
+  });
+
+  // Also refresh content/growth/gsc-opportunities.json when query rows are present
+  let opportunitiesUpdated = false;
+  if (queryRows.length > 0) {
+    try {
+      const growthDir = path.resolve(rootDir, "content/growth");
+      const oppPath = resolveSafeStorePath("gsc-opportunities.json", growthDir);
+      const topQueries = selectTopHighImpressionLowCtrQueries(queryRows, 3);
+      if (topQueries.length > 0) {
+        const nowIso = new Date().toISOString();
+        const today = nowIso.slice(0, 10);
+        const oppStore: GscTopQueriesStore = {
+          status: "LIVE",
+          source: "google_search_console_api",
+          siteUrl: DEFAULT_GSC_SITE_URL,
+          updatedAt: nowIso,
+          dateRange: { startDate: today, endDate: today },
+          asOfDate: today,
+          totalQueriesAnalyzed: queryRows.length,
+          topLimit: 3,
+          criteria: {
+            primaryMinImpressions: 100,
+            primaryMaxCtr: 0.02,
+            fallbackMinImpressions: 10,
+            fallbackMaxCtr: 0.03,
+          },
+          queries: topQueries,
+          auditNotice:
+            "Updated via verified Search Console JSON import from the Growth Engine Dashboard.",
+        };
+        writeJsonAtomically(oppPath, oppStore);
+        opportunitiesUpdated = true;
+      }
+    } catch {
+      // Non-fatal if content/growth directory is unavailable
+    }
+  }
+
+  return {
+    store,
+    importedRowCount: aggregated.length,
+    opportunitiesUpdated,
+  };
+}
+
+/**
  * Closed-loop auto-optimizer:
  * 1. Analyzes `data/gsc-store.json` (seeding from persisted local GSC cache if empty).
  *    Any page with `impressions > 100` and `ctr < 2.5%` receives an upgraded
@@ -905,6 +1180,29 @@ export function runSiteAutoOptimizer(
       badgeText: `Trending in ${winningCity.label}: ${winningService.label}`,
       updatedAt: nowIso,
     };
+  } else if (gscStore.pages.length > 0) {
+    // Fallback to highest-impression Houston service page from real GSC data when no leads are logged yet
+    const topDemandPage = [...gscStore.pages]
+      .filter((p) => p.page.startsWith("/services/") || p.page.startsWith("/location/"))
+      .sort((a, b) => b.impressions - a.impressions)[0] ?? gscStore.pages[0];
+    if (topDemandPage) {
+      const winningService = resolveCanonicalService(
+        inferServiceFromPage(topDemandPage.page)
+      );
+      const winningCity = resolveCanonicalCity(
+        inferCityFromPage(topDemandPage.page)
+      );
+      trendingHighlight = {
+        service: winningService.label,
+        serviceSlug: winningService.slug,
+        city: winningCity.label,
+        citySlug: winningCity.slug,
+        conversions: topDemandPage.clicks,
+        revenue: 0,
+        badgeText: `High-Demand in ${winningCity.label}: ${winningService.label}`,
+        updatedAt: nowIso,
+      };
+    }
   }
 
   const nextOverrides: SeoOverridesStore = {

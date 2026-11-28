@@ -12,21 +12,17 @@ import {
   ArrowRight, 
   Database, 
   BarChart3, 
-  Clock, 
   PhoneCall,
   AlertCircle
 } from "lucide-react";
 import { ClosedLoopControlPanel } from "@/components/growth/closed-loop-control-panel";
+import { GscManualSyncHeader } from "@/components/growth/gsc-manual-sync-button";
 import { GscOpportunitySummary } from "@/components/growth/gsc-opportunity-summary";
 import { GrowthVelocity } from "@/components/growth/growth-velocity";
 import { QualifiedLeadRevenueChart } from "@/components/growth/qualified-lead-revenue-chart";
 import { RevenueConversionCard } from "@/components/growth/revenue-conversion-card";
 import { SystemHealthAlert } from "@/components/growth/system-health-alert";
-import {
-  loadEffectiveGscPages,
-  readClosedLoopRevenueStore,
-  readSeoOverridesStore,
-} from "@/lib/growth/closed-loop-store";
+import { ensureClosedLoopDataStores } from "@/lib/growth/closed-loop-store";
 import { resolveDailyLeadTarget } from "@/lib/growth/daily-lead-goal";
 import { loadTopLowCtrQueries } from "@/lib/growth/gsc-opportunities";
 import { buildLast30DaysRevenueTrend } from "@/lib/growth/revenue-trend";
@@ -171,16 +167,22 @@ interface ResearchStoreData {
 
   // 3. Load Top 3 High-Impression / Low-CTR Search Console queries (live API when available, persisted stores otherwise)
   const gscOpportunitySummary = await loadTopLowCtrQueries(3);
+  const gscOpportunitiesMeta = readJsonFile<{ updatedAt?: string | null }>(
+    "content/growth/gsc-opportunities.json",
+    { updatedAt: null }
+  );
 
   // 4. Read persisted GSC error report (after live attempt so fresh interruptions are immediately surfaced)
   const gscErrorReport = sanitizeClientErrorReport(readGscErrorReport());
 
-  // 5. Read closed-loop data/*.json stores (graceful defaults if files do not exist yet)
-  const closedLoopRevenue = readClosedLoopRevenueStore();
-  const { store: closedLoopGsc } = loadEffectiveGscPages();
-  const seoOverrides = readSeoOverridesStore();
+  // 5. Auto-initialize and read unified closed-loop data/*.json stores (seeding real GSC cache automatically)
+  const {
+    revenueStore: closedLoopRevenue,
+    gscStore: closedLoopGsc,
+    overrides: seoOverrides,
+  } = ensureClosedLoopDataStores();
 
-  // Merge data/revenue-store.json metrics with content/growth/revenue-store.json for cohesive KPI + 30-day chart display
+  // Unify all dashboard counters from revenue-store.json so Leads Smart calls/forms update every card in lockstep
   const baseVerifiedRevenue =
     Number(
       String(revenueStore.summary.totalVerifiedReferralRevenue || "0").replace(
@@ -196,12 +198,21 @@ interface ResearchStoreData {
     maximumFractionDigits: 2,
   }).format(combinedVerifiedRevenue);
 
+  const unifiedCallCount = Math.max(
+    closedLoopRevenue.callIntents,
+    closedLoopRevenue.soldCalls
+  );
+  const unifiedFormCount = Math.max(
+    closedLoopRevenue.formIntents,
+    closedLoopRevenue.soldForms
+  );
+
   const combinedSummary = {
     ...revenueStore.summary,
     totalPhoneClicks:
-      revenueStore.summary.totalPhoneClicks + closedLoopRevenue.callIntents,
+      revenueStore.summary.totalPhoneClicks + unifiedCallCount,
     totalFormSubmissions:
-      revenueStore.summary.totalFormSubmissions + closedLoopRevenue.formIntents,
+      revenueStore.summary.totalFormSubmissions + unifiedFormCount,
     totalQualifiedLeads:
       revenueStore.summary.totalQualifiedLeads +
       closedLoopRevenue.qualifiedLeads,
@@ -268,32 +279,23 @@ interface ResearchStoreData {
     <div className="min-h-screen bg-slate-900 text-slate-100 py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-8">
         
-        {/* Header Section */}
-        <div className="border-b border-slate-800 pb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-3">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              Autonomous Growth Engine (Scheduled Execution)
-            </div>
-            <h1 className="text-3xl font-bold tracking-tight text-white flex items-center gap-3">
-              <Cpu className="w-8 h-8 text-blue-400" />
-              PipeResque AI Growth Engine
-            </h1>
-            <p className="text-slate-400 text-sm mt-1 max-w-2xl">
-              Real-time operational dashboard for Houston plumbing SEO intelligence, duplicate content prevention, customer inquiry routing, and verified referral revenue attribution.
-            </p>
+        {/* Header Section with Manual GSC API Sync Trigger */}
+        <GscManualSyncHeader
+          scheduleLabel="Daily Schedule: 06:00 UTC (12:00 AM CST)"
+          asOfDate={latestReport.executionDate || currentTimestamp}
+          lastSyncedAt={gscOpportunitiesMeta.updatedAt ?? null}
+        >
+          <div className="text-xs font-medium text-emerald-400 mb-2">
+            Autonomous Growth Engine · Scheduled &amp; On-Demand Sync
           </div>
-
-          <div className="flex items-center gap-3">
-            <span className="text-xs text-slate-400">
-              <Clock className="w-3.5 h-3.5 inline mr-1" />
-              Daily Schedule: 06:00 UTC (12:00 AM CST)
-            </span>
-            <div className="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-300 border border-slate-700">
-              As-Of: {latestReport.executionDate || currentTimestamp}
-            </div>
-          </div>
-        </div>
+          <h1 className="text-3xl font-bold tracking-tight text-white flex items-center gap-3">
+            <Cpu className="w-8 h-8 text-blue-400 shrink-0" />
+            PipeResque AI Growth Engine
+          </h1>
+          <p className="text-slate-400 text-sm mt-1 max-w-2xl">
+            Real-time operational dashboard for Houston plumbing SEO intelligence, duplicate content prevention, customer inquiry routing, and verified referral revenue attribution.
+          </p>
+        </GscManualSyncHeader>
 
         {/* Integration Status Badges */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -359,7 +361,10 @@ interface ResearchStoreData {
               <span>Phone Inquiries</span>
               <PhoneCall className="w-4 h-4 text-blue-400" />
             </div>
-            <div className="mt-2 text-2xl font-bold text-white font-mono tabular-nums">{combinedSummary.totalPhoneClicks} Clicks</div>
+            <div className="mt-2 text-2xl font-bold text-white font-mono tabular-nums" data-testid="kpi-phone-inquiries">
+              {combinedSummary.totalPhoneClicks}{" "}
+              {combinedSummary.totalPhoneClicks === 1 ? "Click" : "Clicks"}
+            </div>
             <p className="text-xs text-slate-400 mt-1">
               Direct click-to-call intent signals
             </p>
@@ -370,7 +375,10 @@ interface ResearchStoreData {
               <span>Form Submissions</span>
               <Search className="w-4 h-4 text-emerald-400" />
             </div>
-            <div className="mt-2 text-2xl font-bold text-white font-mono tabular-nums">{combinedSummary.totalFormSubmissions} Inquiries</div>
+            <div className="mt-2 text-2xl font-bold text-white font-mono tabular-nums" data-testid="kpi-form-submissions">
+              {combinedSummary.totalFormSubmissions}{" "}
+              {combinedSummary.totalFormSubmissions === 1 ? "Inquiry" : "Inquiries"}
+            </div>
             <p className="text-xs text-slate-400 mt-1">
               {combinedSummary.totalQualifiedLeads} Qualified Greater Houston Leads
             </p>
@@ -381,7 +389,9 @@ interface ResearchStoreData {
               <span>Verified Revenue</span>
               <DollarSign className="w-4 h-4 text-amber-400" />
             </div>
-            <div className="mt-2 text-2xl font-bold text-emerald-400 font-mono tabular-nums">{combinedSummary.totalVerifiedReferralRevenue || "$0.00"}</div>
+            <div className="mt-2 text-2xl font-bold text-emerald-400 font-mono tabular-nums" data-testid="kpi-verified-revenue">
+              {combinedSummary.totalVerifiedReferralRevenue || "$0.00"}
+            </div>
             <p className="text-xs text-slate-400 mt-1">
               {combinedSummary.totalPendingReferralRevenue || "$0.00"} Pending Settlements
             </p>

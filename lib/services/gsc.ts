@@ -230,25 +230,42 @@ export function normalizePrivateKey(rawPrivateKey: string): string {
 
 /**
  * Validates and normalizes a Google Search Console property identifier.
- * Accepts verified `https://` URL-prefix properties or `sc-domain:` properties.
+ * Accepts verified `https://` URL-prefix properties (with or without trailing
+ * slash, optional surrounding quotes, or bare hostnames) and `sc-domain:` properties.
  */
 export function validateSiteUrl(rawSiteUrl: string): string {
-  const trimmed = rawSiteUrl.trim();
-  if (!trimmed) {
+  let cleaned = rawSiteUrl.replace(/[\r\n\t]+/g, "").trim();
+  while (
+    (cleaned.startsWith('"') && cleaned.endsWith('"')) ||
+    (cleaned.startsWith("'") && cleaned.endsWith("'"))
+  ) {
+    cleaned = cleaned.slice(1, -1).trim();
+  }
+
+  if (!cleaned) {
     throw new Error("GSC site URL cannot be empty.");
   }
 
-  if (trimmed.startsWith("sc-domain:")) {
-    const domain = trimmed.slice("sc-domain:".length).trim();
+  if (cleaned.startsWith("sc-domain:")) {
+    let domain = cleaned.slice("sc-domain:".length).trim();
+    domain = domain.replace(/^https?:\/\//i, "").replace(/\/+$/, "");
     if (!/^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(domain)) {
       throw new Error("Invalid sc-domain Search Console property.");
     }
     return `sc-domain:${domain}`;
   }
 
+  // Support bare domain values like `www.piperesque.com` or `www.piperesque.com/`
+  if (!cleaned.includes("://") && !cleaned.includes(":")) {
+    const bareHost = cleaned.split("/")[0]?.trim() ?? "";
+    if (/^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(bareHost)) {
+      cleaned = `https://${cleaned}`;
+    }
+  }
+
   let parsed: URL;
   try {
-    parsed = new URL(trimmed);
+    parsed = new URL(cleaned);
   } catch {
     throw new Error("Invalid GSC_SITE_URL format. Must be a valid HTTPS URL.");
   }
@@ -257,8 +274,14 @@ export function validateSiteUrl(rawSiteUrl: string): string {
     throw new Error("GSC_SITE_URL must use the https: protocol.");
   }
 
-  const normalized = parsed.toString();
-  return normalized.endsWith("/") ? normalized : `${normalized}/`;
+  if (!parsed.hostname || !parsed.hostname.includes(".")) {
+    throw new Error("Invalid GSC_SITE_URL format. Must be a valid HTTPS URL.");
+  }
+
+  // Collapse redundant trailing slashes and ensure a clean single trailing slash
+  const normalizedPathname = parsed.pathname.replace(/\/+$/, "") || "";
+  const normalized = `${parsed.origin}${normalizedPathname}/`;
+  return normalized;
 }
 
 /**
@@ -303,7 +326,12 @@ export function loadGscCredentialsFromEnv(
     return null;
   }
 
-  const rawSiteUrl = env.GSC_SITE_URL?.trim() || DEFAULT_GSC_SITE_URL;
+  const strippedSiteUrl = (env.GSC_SITE_URL ?? "")
+    .replace(/[\r\n\t]+/g, "")
+    .trim()
+    .replace(/^["']+|["']+$/g, "")
+    .trim();
+  const rawSiteUrl = strippedSiteUrl || DEFAULT_GSC_SITE_URL;
   return {
     clientEmail,
     privateKey: normalizePrivateKey(privateKey),
@@ -804,10 +832,15 @@ export class GoogleSearchConsoleService {
     const rawKey = options.privateKey?.trim() || envCreds?.privateKey;
     this.privateKey = rawKey ? normalizePrivateKey(rawKey) : undefined;
 
+    const strippedEnvSiteUrl = (process.env.GSC_SITE_URL ?? "")
+      .replace(/[\r\n\t]+/g, "")
+      .trim()
+      .replace(/^["']+|["']+$/g, "")
+      .trim();
     const rawSiteUrl =
       options.siteUrl?.trim() ||
       envCreds?.siteUrl ||
-      process.env.GSC_SITE_URL?.trim() ||
+      strippedEnvSiteUrl ||
       DEFAULT_GSC_SITE_URL;
     this.siteUrl = validateSiteUrl(rawSiteUrl);
 

@@ -5,12 +5,14 @@ import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { NextRequest } from "next/server";
 import {
   handleDashboardClosedLoopAction,
+  handleDashboardClosedLoopGet,
   handleGscSyncGet,
   handleGscSyncPost,
   handleLeadSmartWebhook,
   handleOptimizeSitePost,
   handleTrackIntent,
 } from "@/lib/growth/closed-loop-handlers";
+import { validateSiteUrl } from "@/lib/services/gsc";
 import {
   getPageSeoOverride,
   getTrendingServiceHighlight,
@@ -148,6 +150,25 @@ describe("Closed-Loop Lead Generation & Self-Optimizing SEO System", () => {
       expect(store.logs).toHaveLength(2);
       expect(store.logs[0].channel).toBe("form");
       expect(store.logs[1].channel).toBe("call");
+    });
+
+    it("supports GET postback requests with query parameters for affiliate networks like Leads Smart", async () => {
+      const env = { LEADSMART_WEBHOOK_SECRET: "postback-secret-456" };
+
+      const getRes = await handleLeadSmartWebhook(
+        makeRequest(
+          "http://127.0.0.1:3000/api/webhooks/leadsmart?token=postback-secret-456&type=call&payout=72.5&status=sold&city=Katy&service=Sewer+Line+Repair",
+          { method: "GET" }
+        ),
+        { rootDir: tmpDir, env, skipRevalidate: true }
+      );
+      expect(getRes.status).toBe(200);
+      const json = await getRes.json();
+      expect(json.success).toBe(true);
+      expect(json.method).toBe("GET");
+      expect(json.summary.qualifiedLeads).toBe(1);
+      expect(json.summary.revenue).toBe(72.5);
+      expect(json.summary.soldCalls).toBe(1);
     });
   });
 
@@ -313,6 +334,88 @@ describe("Closed-Loop Lead Generation & Self-Optimizing SEO System", () => {
       expect(optJson.overrides.trendingHighlight).not.toBeNull();
       expect(optJson.overrides.trendingHighlight.service).toBe("Sewer Line Repair");
       expect(optJson.overrides.trendingHighlight.city).toBe("Katy");
+    });
+
+    it("auto-initializes missing data stores on GET and allows iframe/preview POST actions plus GSC JSON import", async () => {
+      const buckets = new Map<string, number[]>();
+
+      // GET auto-initializes data/*.json even when directory does not exist yet
+      const getRes = await handleDashboardClosedLoopGet(
+        makeRequest("http://127.0.0.1:3000/api/growth/closed-loop", {
+          method: "GET",
+        }),
+        { rootDir: tmpDir }
+      );
+      expect(getRes.status).toBe(200);
+      const getJson = await getRes.json();
+      expect(getJson.success).toBe(true);
+      expect(fs.existsSync(path.join(tmpDir, "data", "revenue-store.json"))).toBe(true);
+      expect(fs.existsSync(path.join(tmpDir, "data", "gsc-store.json"))).toBe(true);
+      expect(fs.existsSync(path.join(tmpDir, "data", "seo-overrides.json"))).toBe(true);
+
+      // POST works cleanly from a reverse-proxied AI Studio Preview origin
+      const importRes = await handleDashboardClosedLoopAction(
+        makeRequest("http://127.0.0.1:3000/api/growth/closed-loop", {
+          headers: { origin: "https://ais-dev-preview.asia-northeast1.run.app" },
+          body: {
+            action: "import_gsc",
+            jsonText: JSON.stringify({
+              rows: [
+                {
+                  keys: [
+                    "sewer line repair houston",
+                    "https://www.piperesque.com/services/sewer-line-repair",
+                  ],
+                  clicks: 18,
+                  impressions: 1200,
+                  ctr: 0.015,
+                  position: 8.2,
+                },
+              ],
+            }),
+          },
+        }),
+        { rootDir: tmpDir, rateLimitMap: buckets, skipRevalidate: true }
+      );
+      expect(importRes.status).toBe(200);
+      const importJson = await importRes.json();
+      expect(importJson.success).toBe(true);
+      expect(importJson.importedRowCount).toBe(1);
+      expect(importJson.gscStore.totals.impressions).toBe(1200);
+      expect(importJson.opportunitiesUpdated).toBe(true);
+
+      // Running optimizer with zero leads still upgrades low-CTR pages AND sets GSC-backed highlight
+      const optRes = await handleDashboardClosedLoopAction(
+        makeRequest("http://127.0.0.1:3000/api/growth/closed-loop", {
+          headers: { origin: "https://ais-dev-preview.asia-northeast1.run.app" },
+          body: { action: "run_optimizer" },
+        }),
+        { rootDir: tmpDir, rateLimitMap: buckets, skipRevalidate: true }
+      );
+      expect(optRes.status).toBe(200);
+      const optJson = await optRes.json();
+      expect(optJson.success).toBe(true);
+      expect(optJson.overrides.pages["/services/sewer-line-repair"]).toBeDefined();
+      expect(optJson.overrides.trendingHighlight).not.toBeNull();
+    });
+  });
+
+  describe("GSC_SITE_URL validation hardening", () => {
+    it("accepts trailing slashes, no trailing slash, quoted env values, and bare domains while rejecting insecure schemes", () => {
+      expect(validateSiteUrl("https://www.piperesque.com")).toBe(
+        "https://www.piperesque.com/"
+      );
+      expect(validateSiteUrl("https://www.piperesque.com/")).toBe(
+        "https://www.piperesque.com/"
+      );
+      expect(validateSiteUrl('"https://www.piperesque.com/"')).toBe(
+        "https://www.piperesque.com/"
+      );
+      expect(validateSiteUrl("www.piperesque.com")).toBe(
+        "https://www.piperesque.com/"
+      );
+      expect(() => validateSiteUrl("http://www.piperesque.com/")).toThrow();
+      expect(() => validateSiteUrl("javascript:alert(1)")).toThrow();
     });
   });
 });

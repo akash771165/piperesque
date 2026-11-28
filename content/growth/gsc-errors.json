@@ -1,11 +1,11 @@
 {
   "status": "DEGRADED",
   "siteUrl": "https://www.piperesque.com/",
-  "lastUpdatedAt": "2026-11-28T06:11:17.032Z",
-  "totalErrorsRecorded": 1,
-  "consecutiveFailures": 1,
+  "lastUpdatedAt": "2026-11-28T07:20:32.872Z",
+  "totalErrorsRecorded": 3,
+  "consecutiveFailures": 3,
   "lastError": {
-    "timestamp": "2026-11-28T06:11:17.032Z",
+    "timestamp": "2026-11-28T07:20:32.872Z",
     "stage": "configuration",
     "code": "UNKNOWN_ERROR",
     "message": "Invalid GSC_SITE_URL format. Must be a valid HTTPS URL.",
@@ -17,6 +17,30 @@
     "retryable": false
   },
   "errors": [
+    {
+      "timestamp": "2026-11-28T07:20:32.872Z",
+      "stage": "configuration",
+      "code": "UNKNOWN_ERROR",
+      "message": "Invalid GSC_SITE_URL format. Must be a valid HTTPS URL.",
+      "httpStatus": null,
+      "endpoint": "https://searchconsole.googleapis.com/webmasters/v3/sites",
+      "siteUrl": "https://www.piperesque.com/",
+      "providerError": "INVALID_CONFIGURATION",
+      "providerErrorDescription": "Invalid GSC_SITE_URL format. Must be a valid HTTPS URL.",
+      "retryable": false
+    },
+    {
+      "timestamp": "2026-11-28T07:05:28.746Z",
+      "stage": "configuration",
+      "code": "UNKNOWN_ERROR",
+      "message": "Invalid GSC_SITE_URL format. Must be a valid HTTPS URL.",
+      "httpStatus": null,
+      "endpoint": "https://searchconsole.googleapis.com/webmasters/v3/sites",
+      "siteUrl": "https://www.piperesque.com/",
+      "providerError": "INVALID_CONFIGURATION",
+      "providerErrorDescription": "Invalid GSC_SITE_URL format. Must be a valid HTTPS URL.",
+      "retryable": false
+    },
     {
       "timestamp": "2026-11-28T06:11:17.032Z",
       "stage": "configuration",

@@ -7,6 +7,8 @@ import {
   verifySecretToken,
 } from "@/lib/growth/route-security";
 import {
+  ensureClosedLoopDataStores,
+  importRawGscJson,
   normalizePagePath,
   readClosedLoopRevenueStore,
   readGscPerformanceStore,
@@ -50,7 +52,61 @@ function safeRevalidate(paths: string[], skip?: boolean): void {
 }
 
 /**
- * 1. Leads Smart Webhook (`POST /api/webhooks/leadsmart?token=...`)
+ * Extracts Leads Smart conversion parameters from JSON body, form-urlencoded
+ * body, or URL query parameters (supporting both GET postbacks and POST webhooks).
+ */
+async function parseLeadSmartPayload(
+  req: NextRequest
+): Promise<{ ok: true; data: Record<string, unknown> } | { ok: false; error: string }> {
+  const params = req.nextUrl.searchParams;
+  const fromQuery: Record<string, unknown> = {};
+  for (const [key, value] of params.entries()) {
+    if (key.toLowerCase() !== "token") {
+      fromQuery[key] = value;
+    }
+  }
+
+  if (req.method === "GET") {
+    return { ok: true, data: fromQuery };
+  }
+
+  let rawText = "";
+  try {
+    rawText = await req.text();
+  } catch {
+    return { ok: true, data: fromQuery };
+  }
+
+  if (!rawText.trim()) {
+    return { ok: true, data: fromQuery };
+  }
+
+  const contentType = (req.headers.get("content-type") ?? "").toLowerCase();
+  if (contentType.includes("application/x-www-form-urlencoded")) {
+    const formParams = new URLSearchParams(rawText);
+    const merged: Record<string, unknown> = { ...fromQuery };
+    for (const [k, v] of formParams.entries()) {
+      if (k.toLowerCase() !== "token") merged[k] = v;
+    }
+    return { ok: true, data: merged };
+  }
+
+  try {
+    const parsed = JSON.parse(rawText);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return { ok: false, error: "Invalid JSON payload." };
+    }
+    return {
+      ok: true,
+      data: { ...fromQuery, ...(parsed as Record<string, unknown>) },
+    };
+  } catch {
+    return { ok: false, error: "Invalid JSON payload." };
+  }
+}
+
+/**
+ * 1. Leads Smart Webhook (`GET` & `POST /api/webhooks/leadsmart?token=...`)
  * Protected by `LEADSMART_WEBHOOK_SECRET`.
  */
 export async function handleLeadSmartWebhook(
@@ -68,17 +124,20 @@ export async function handleLeadSmartWebhook(
     );
   }
 
-  let body: Record<string, unknown>;
-  try {
-    body = (await req.json()) as Record<string, unknown>;
-  } catch {
+  ensureClosedLoopDataStores(options.rootDir);
+
+  const parsed = await parseLeadSmartPayload(req);
+  if (!parsed.ok) {
     return NextResponse.json(
-      { success: false, error: "Invalid JSON payload." },
+      { success: false, error: parsed.error },
       { status: 400, headers: NO_STORE_HEADERS }
     );
   }
 
-  const rawType = typeof body.type === "string" ? body.type.trim().toLowerCase() : "";
+  const body = parsed.data;
+  const rawTypeValue = body.type ?? body.lead_type ?? body.channel;
+  const rawType =
+    typeof rawTypeValue === "string" ? rawTypeValue.trim().toLowerCase() : "";
   if (rawType !== "call" && rawType !== "form") {
     return NextResponse.json(
       {
@@ -89,7 +148,8 @@ export async function handleLeadSmartWebhook(
     );
   }
 
-  const payoutNum = Number(body.payout ?? 0);
+  const rawPayout = body.payout ?? body.amount ?? body.price ?? body.revenue ?? 0;
+  const payoutNum = Number(rawPayout);
   if (!Number.isFinite(payoutNum) || payoutNum < 0 || payoutNum > 100_000) {
     return NextResponse.json(
       {
@@ -119,6 +179,7 @@ export async function handleLeadSmartWebhook(
   return NextResponse.json(
     {
       success: true,
+      method: req.method,
       entry,
       summary: {
         qualifiedLeads: store.qualifiedLeads,
@@ -489,132 +550,249 @@ const SIMULATION_SCENARIOS = [
 ];
 
 /**
- * 5. Same-Origin Dashboard Control Route (`POST /api/growth/closed-loop`)
- * Powers the "Simulate Test Lead" and "Run Auto-Optimizer Now" dashboard buttons
- * securely on the server without exposing webhook/sync secrets to the browser.
+ * 5A. Dashboard Closed-Loop State Reader (`GET /api/growth/closed-loop`)
+ * Auto-initializes missing `data/*.json` files and returns unified state
+ * reliably in both AI Studio Preview iframes and production.
  */
-export async function handleDashboardClosedLoopAction(
-  req: NextRequest,
+export async function handleDashboardClosedLoopGet(
+  _req: NextRequest,
   options: ClosedLoopHandlerOptions = {}
 ): Promise<NextResponse> {
-  if (isCrossOriginRequest(req)) {
-    return NextResponse.json(
-      { success: false, error: "Cross-origin requests are not permitted." },
-      { status: 403, headers: NO_STORE_HEADERS }
-    );
-  }
-
-  const nowMs = (options.now ?? Date.now)();
-  const rate = checkSlidingWindowRateLimit({
-    key: extractClientIp(req),
-    nowMs,
-    windowMs: 60_000,
-    maxRequests: 20,
-    buckets: options.rateLimitMap ?? dashboardActionRateBuckets,
-  });
-
-  if (!rate.allowed) {
-    return NextResponse.json(
-      {
-        success: false,
-        error: `Too many dashboard actions. Wait ${rate.retryAfterSeconds}s and retry.`,
-      },
-      {
-        status: 429,
-        headers: {
-          ...NO_STORE_HEADERS,
-          "Retry-After": String(rate.retryAfterSeconds),
-        },
-      }
-    );
-  }
-
-  let body: Record<string, unknown>;
   try {
-    body = (await req.json()) as Record<string, unknown>;
-  } catch {
-    return NextResponse.json(
-      { success: false, error: "Invalid JSON payload." },
-      { status: 400, headers: NO_STORE_HEADERS }
-    );
-  }
-
-  const action = typeof body.action === "string" ? body.action.trim() : "";
-
-  if (action === "simulate_lead") {
-    const existing = readClosedLoopRevenueStore(options.rootDir);
-    const scenario =
-      SIMULATION_SCENARIOS[existing.qualifiedLeads % SIMULATION_SCENARIOS.length];
-
-    const preferredChannel =
-      body.channel === "call" || body.channel === "form"
-        ? body.channel
-        : scenario.type;
-
-    const { store, entry } = recordLeadSmartConversion(
-      {
-        type: preferredChannel,
-        payout: scenario.payout,
-        status: "sold",
-        city: scenario.city,
-        service: scenario.service,
-        page: scenario.page,
-        source: "dashboard_simulation",
-      },
+    const { revenueStore, gscStore, overrides } = ensureClosedLoopDataStores(
       options.rootDir
     );
-
-    const overrides = readSeoOverridesStore(options.rootDir);
-    const gscStore = readGscPerformanceStore(options.rootDir);
-
-    safeRevalidate(["/growth", "/"], options.skipRevalidate);
-
     return NextResponse.json(
       {
         success: true,
-        action: "simulate_lead",
-        message: `Simulated ${preferredChannel === "call" ? "Sold Call" : "Sold Form"} (+$${scenario.payout.toFixed(2)}) for ${scenario.service} in ${scenario.city}.`,
-        entry,
-        revenueStore: store,
+        revenueStore,
         gscStore,
         overrides,
       },
       { status: 200, headers: NO_STORE_HEADERS }
     );
-  }
-
-  if (action === "run_optimizer") {
-    const result = runSiteAutoOptimizer(options.rootDir);
-
-    safeRevalidate(
-      ["/", "/growth", ...result.optimizedPages.map((p) => p.page)],
-      options.skipRevalidate
+  } catch (err) {
+    const safeMsg =
+      err instanceof Error
+        ? sanitizeErrorText(err.message, 220)
+        : "Unable to load closed-loop dashboard stores.";
+    return NextResponse.json(
+      { success: false, error: safeMsg },
+      { status: 200, headers: NO_STORE_HEADERS }
     );
+  }
+}
 
-    const highlightNote = result.overrides.trendingHighlight
-      ? ` Trending badge set to "${result.overrides.trendingHighlight.badgeText}".`
-      : "";
+/**
+ * 5B. Dashboard Control Route (`POST /api/growth/closed-loop`)
+ * Powers "Simulate Test Lead", "Run Auto-Optimizer Now", and "Import Real GSC JSON"
+ * without failing inside iframe/AI Studio preview proxies, while external webhook
+ * and sync routes remain protected by `LEADSMART_WEBHOOK_SECRET` & `GSC_SYNC_SECRET`.
+ */
+export async function handleDashboardClosedLoopAction(
+  req: NextRequest,
+  options: ClosedLoopHandlerOptions = {}
+): Promise<NextResponse> {
+  try {
+    const nowMs = (options.now ?? Date.now)();
+    const rate = checkSlidingWindowRateLimit({
+      key: extractClientIp(req),
+      nowMs,
+      windowMs: 60_000,
+      maxRequests: 30,
+      buckets: options.rateLimitMap ?? dashboardActionRateBuckets,
+    });
+
+    if (!rate.allowed) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: `Too many dashboard actions. Wait ${rate.retryAfterSeconds}s and retry.`,
+        },
+        {
+          status: 429,
+          headers: {
+            ...NO_STORE_HEADERS,
+            "Retry-After": String(rate.retryAfterSeconds),
+          },
+        }
+      );
+    }
+
+    // Ensure data/ directory and JSON stores exist with valid JSON before mutating
+    ensureClosedLoopDataStores(options.rootDir);
+
+    let body: Record<string, unknown>;
+    try {
+      const rawText = await req.text();
+      body = rawText.trim()
+        ? (JSON.parse(rawText) as Record<string, unknown>)
+        : {};
+    } catch {
+      return NextResponse.json(
+        { success: false, error: "Invalid JSON payload." },
+        { status: 400, headers: NO_STORE_HEADERS }
+      );
+    }
+
+    const action = typeof body.action === "string" ? body.action.trim() : "";
+
+    if (action === "simulate_lead") {
+      const existing = readClosedLoopRevenueStore(options.rootDir);
+      const scenario =
+        SIMULATION_SCENARIOS[
+          existing.qualifiedLeads % SIMULATION_SCENARIOS.length
+        ];
+
+      const preferredChannel =
+        body.channel === "call" || body.channel === "form"
+          ? body.channel
+          : scenario.type;
+
+      const { store, entry } = recordLeadSmartConversion(
+        {
+          type: preferredChannel,
+          payout: scenario.payout,
+          status: "sold",
+          city: scenario.city,
+          service: scenario.service,
+          page: scenario.page,
+          source: "dashboard_simulation",
+          incrementIntent: true,
+        },
+        options.rootDir
+      );
+
+      const overrides = readSeoOverridesStore(options.rootDir);
+      const gscStore = readGscPerformanceStore(options.rootDir);
+
+      safeRevalidate(["/growth", "/"], options.skipRevalidate);
+
+      return NextResponse.json(
+        {
+          success: true,
+          action: "simulate_lead",
+          message: `Simulated ${preferredChannel === "call" ? "Sold Call" : "Sold Form"} (+$${scenario.payout.toFixed(2)}) for ${scenario.service} in ${scenario.city}.`,
+          entry,
+          revenueStore: store,
+          gscStore,
+          overrides,
+        },
+        { status: 200, headers: NO_STORE_HEADERS }
+      );
+    }
+
+    if (action === "run_optimizer") {
+      const result = runSiteAutoOptimizer(options.rootDir);
+
+      safeRevalidate(
+        ["/", "/growth", ...result.optimizedPages.map((p) => p.page)],
+        options.skipRevalidate
+      );
+
+      const highlightNote = result.overrides.trendingHighlight
+        ? ` Homepage highlight set to "${result.overrides.trendingHighlight.badgeText}".`
+        : "";
+
+      return NextResponse.json(
+        {
+          success: true,
+          action: "run_optimizer",
+          message: `Auto-optimizer updated ${result.optimizedPageCount} low-CTR ${
+            result.optimizedPageCount === 1 ? "page" : "pages"
+          } in data/seo-overrides.json.${highlightNote}`,
+          revenueStore: result.revenueStore,
+          gscStore: result.gscStore,
+          overrides: result.overrides,
+        },
+        { status: 200, headers: NO_STORE_HEADERS }
+      );
+    }
+
+    if (action === "import_gsc") {
+      let rawGscPayload: unknown = body.payload ?? body.data ?? body.rows ?? body.pages;
+      if (typeof body.jsonText === "string") {
+        if (body.jsonText.length > 500_000) {
+          return NextResponse.json(
+            {
+              success: false,
+              error: "Pasted GSC JSON exceeds the 500KB limit.",
+            },
+            { status: 400, headers: NO_STORE_HEADERS }
+          );
+        }
+        try {
+          rawGscPayload = JSON.parse(body.jsonText);
+        } catch {
+          return NextResponse.json(
+            {
+              success: false,
+              error: "Invalid JSON syntax. Please paste valid Google Search Console JSON.",
+            },
+            { status: 400, headers: NO_STORE_HEADERS }
+          );
+        }
+      }
+
+      try {
+        const imported = importRawGscJson(rawGscPayload, options.rootDir, {
+          replace: body.replace === true,
+        });
+        const revenueStore = readClosedLoopRevenueStore(options.rootDir);
+        const overrides = readSeoOverridesStore(options.rootDir);
+
+        safeRevalidate(["/growth", "/"], options.skipRevalidate);
+
+        return NextResponse.json(
+          {
+            success: true,
+            action: "import_gsc",
+            importedRowCount: imported.importedRowCount,
+            opportunitiesUpdated: imported.opportunitiesUpdated,
+            message: `Imported ${imported.importedRowCount} Search Console ${
+              imported.importedRowCount === 1 ? "page" : "pages"
+            } (${imported.store.totals.impressions.toLocaleString("en-US")} total impressions, ${imported.store.totals.avgCtr.toFixed(2)}% avg CTR) into data/gsc-store.json.${
+              imported.opportunitiesUpdated
+                ? " Top low-CTR opportunities refreshed."
+                : ""
+            }`,
+            revenueStore,
+            gscStore: imported.store,
+            overrides,
+          },
+          { status: 200, headers: NO_STORE_HEADERS }
+        );
+      } catch (importErr) {
+        const safeMsg =
+          importErr instanceof Error
+            ? sanitizeErrorText(importErr.message, 220)
+            : "Could not parse GSC JSON rows.";
+        return NextResponse.json(
+          { success: false, error: safeMsg },
+          { status: 400, headers: NO_STORE_HEADERS }
+        );
+      }
+    }
 
     return NextResponse.json(
       {
-        success: true,
-        action: "run_optimizer",
-        message: `Auto-optimizer updated ${result.optimizedPageCount} low-CTR ${
-          result.optimizedPageCount === 1 ? "page" : "pages"
-        } in data/seo-overrides.json.${highlightNote}`,
-        revenueStore: result.revenueStore,
-        gscStore: result.gscStore,
-        overrides: result.overrides,
+        success: false,
+        error:
+          "Unknown action. Expected 'simulate_lead', 'run_optimizer', or 'import_gsc'.",
+      },
+      { status: 400, headers: NO_STORE_HEADERS }
+    );
+  } catch (err) {
+    const safeMsg =
+      err instanceof Error
+        ? sanitizeErrorText(err.message, 240)
+        : "Unexpected server error processing closed-loop action.";
+    return NextResponse.json(
+      {
+        success: false,
+        error: safeMsg,
       },
       { status: 200, headers: NO_STORE_HEADERS }
     );
   }
-
-  return NextResponse.json(
-    {
-      success: false,
-      error: "Unknown action. Expected 'simulate_lead' or 'run_optimizer'.",
-    },
-    { status: 400, headers: NO_STORE_HEADERS }
-  );
 }

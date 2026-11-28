@@ -17,6 +17,7 @@ import {
   ArrowUpRight,
   MousePointerClick,
 } from "lucide-react";
+import { ConnectionSetupPanel } from "@/components/growth/connection-setup-panel";
 import type {
   ClosedLoopRevenueStore,
   GscPerformanceStore,
@@ -74,11 +75,36 @@ export function ClosedLoopControlPanel({
   const router = useRouter();
   const [isRefreshing, startTransition] = useTransition();
 
-  const [revenueStore, setRevenueStore] =
-    useState<ClosedLoopRevenueStore>(initialRevenue);
-  const [gscStore, setGscStore] = useState<GscPerformanceStore>(initialGsc);
-  const [overrides, setOverrides] =
-    useState<SeoOverridesStore>(initialOverrides);
+  // Stamp-keyed optimistic state: immediately displays API mutations, then seamlessly adopts fresh server props on router.refresh()
+  const revStamp = `${initialRevenue.lastUpdated ?? ""}:${initialRevenue.qualifiedLeads}:${initialRevenue.revenue}:${initialRevenue.callIntents}:${initialRevenue.formIntents}`;
+  const gscStamp = `${initialGsc.lastSyncedAt ?? ""}:${initialGsc.pages.length}:${initialGsc.totals.impressions}`;
+  const ovStamp = `${initialOverrides.lastOptimizedAt ?? ""}:${Object.keys(initialOverrides.pages).length}`;
+
+  const [optimisticRev, setOptimisticRev] = useState<{
+    stamp: string;
+    data: ClosedLoopRevenueStore;
+  } | null>(null);
+  const [optimisticGsc, setOptimisticGsc] = useState<{
+    stamp: string;
+    data: GscPerformanceStore;
+  } | null>(null);
+  const [optimisticOv, setOptimisticOv] = useState<{
+    stamp: string;
+    data: SeoOverridesStore;
+  } | null>(null);
+
+  const revenueStore =
+    optimisticRev && optimisticRev.stamp === revStamp
+      ? optimisticRev.data
+      : initialRevenue;
+  const gscStore =
+    optimisticGsc && optimisticGsc.stamp === gscStamp
+      ? optimisticGsc.data
+      : initialGsc;
+  const overrides =
+    optimisticOv && optimisticOv.stamp === ovStamp
+      ? optimisticOv.data
+      : initialOverrides;
 
   const [pendingAction, setPendingAction] = useState<
     "simulate_lead" | "run_optimizer" | null
@@ -97,7 +123,15 @@ export function ClosedLoopControlPanel({
   );
   const goalMet = todayQualifiedLeads >= safeTarget;
 
-  const totalIntents = revenueStore.callIntents + revenueStore.formIntents;
+  const effectiveCallIntents = Math.max(
+    revenueStore.callIntents,
+    revenueStore.soldCalls
+  );
+  const effectiveFormIntents = Math.max(
+    revenueStore.formIntents,
+    revenueStore.soldForms
+  );
+  const totalIntents = effectiveCallIntents + effectiveFormIntents;
   const optimizedPages = Object.values(overrides.pages).sort(
     (a, b) => b.impressions - a.impressions
   );
@@ -118,21 +152,37 @@ export function ClosedLoopControlPanel({
         body: JSON.stringify({ action }),
       });
 
-      const payload = (await response.json()) as ActionResponse;
+      const rawText = await response.text();
+      let payload: ActionResponse;
+      try {
+        payload = JSON.parse(rawText) as ActionResponse;
+      } catch {
+        setFeedback({
+          tone: "error",
+          text: `Unexpected server response (HTTP ${response.status}) from /api/growth/closed-loop. Please retry.`,
+        });
+        return;
+      }
 
       if (!response.ok || !payload.success) {
         setFeedback({
           tone: "error",
           text:
             payload.error ||
-            "Action failed. Check server logs and try again.",
+            `Action failed (HTTP ${response.status}). Check server logs and try again.`,
         });
         return;
       }
 
-      if (payload.revenueStore) setRevenueStore(payload.revenueStore);
-      if (payload.gscStore) setGscStore(payload.gscStore);
-      if (payload.overrides) setOverrides(payload.overrides);
+      if (payload.revenueStore) {
+        setOptimisticRev({ stamp: revStamp, data: payload.revenueStore });
+      }
+      if (payload.gscStore) {
+        setOptimisticGsc({ stamp: gscStamp, data: payload.gscStore });
+      }
+      if (payload.overrides) {
+        setOptimisticOv({ stamp: ovStamp, data: payload.overrides });
+      }
 
       setFeedback({
         tone: "success",
@@ -146,10 +196,11 @@ export function ClosedLoopControlPanel({
       startTransition(() => {
         router.refresh();
       });
-    } catch {
+    } catch (err) {
+      const detail = err instanceof Error ? ` (${err.message})` : "";
       setFeedback({
         tone: "error",
-        text: "Network error reaching /api/growth/closed-loop. Please retry.",
+        text: `Unable to reach /api/growth/closed-loop${detail}. Please retry.`,
       });
     } finally {
       setPendingAction(null);
@@ -279,12 +330,12 @@ export function ClosedLoopControlPanel({
                 <div className="text-[11px] text-slate-400 mt-0.5 flex items-center gap-2 font-mono tabular-nums">
                   <span className="inline-flex items-center gap-1">
                     <PhoneCall className="w-3 h-3 text-blue-400" aria-hidden="true" />
-                    {revenueStore.callIntents} calls
+                    {effectiveCallIntents} calls
                   </span>
                   <span className="text-slate-600">·</span>
                   <span className="inline-flex items-center gap-1">
                     <FileText className="w-3 h-3 text-emerald-400" aria-hidden="true" />
-                    {revenueStore.formIntents} forms
+                    {effectiveFormIntents} forms
                   </span>
                 </div>
               </div>
@@ -591,6 +642,30 @@ export function ClosedLoopControlPanel({
           </div>
         </div>
       </div>
+
+      {/* Collapsible Connection & Webhook Setup + Sync Real GSC JSON Importer */}
+      <ConnectionSetupPanel
+        onGscImported={(payload) => {
+          if (payload.revenueStore) {
+            setOptimisticRev({ stamp: revStamp, data: payload.revenueStore });
+          }
+          if (payload.gscStore) {
+            setOptimisticGsc({ stamp: gscStamp, data: payload.gscStore });
+          }
+          if (payload.overrides) {
+            setOptimisticOv({ stamp: ovStamp, data: payload.overrides });
+          }
+          setFeedback({
+            tone: "success",
+            text:
+              payload.message ||
+              "Imported fresh Google Search Console data into data/gsc-store.json.",
+          });
+          startTransition(() => {
+            router.refresh();
+          });
+        }}
+      />
     </section>
   );
 }

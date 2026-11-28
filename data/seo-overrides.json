@@ -1,7 +1,119 @@
 {
-  "lastOptimizedAt": null,
-  "pages": {},
-  "topServices": [],
-  "topCities": [],
-  "trendingHighlight": null
+  "lastOptimizedAt": "2026-11-28T07:17:57.482Z",
+  "pages": {
+    "/services/drain-cleaning": {
+      "page": "/services/drain-cleaning",
+      "title": "Urgent Drain Cleaning in Houston, TX | Fast Help",
+      "description": "Need fast drain cleaning in Houston, TX? Call (877) 587-3986 now to connect with independent local Houston-area plumbers for urgent repairs & free estimates.",
+      "topQuery": "ac condensate line backing up into sink houston",
+      "previousCtr": 0.97,
+      "impressions": 1450,
+      "position": 17.2,
+      "optimizedAt": "2026-11-28T07:17:57.482Z"
+    },
+    "/services/emergency-plumbing": {
+      "page": "/services/emergency-plumbing",
+      "title": "Urgent Emergency Plumbing in Houston, TX | Fast Help",
+      "description": "Need fast emergency plumbing in Houston, TX? Call (877) 587-3986 now to connect with independent local Houston-area plumbers for urgent repairs & free estimates.",
+      "topQuery": "emergency plumbing houston tx",
+      "previousCtr": 2.39,
+      "impressions": 1420,
+      "position": 6.2,
+      "optimizedAt": "2026-11-28T07:17:57.482Z"
+    },
+    "/services/sewer-line-repair": {
+      "page": "/services/sewer-line-repair",
+      "title": "Urgent Sewer Line Repair in Houston, TX | Fast Help",
+      "description": "Need fast sewer line repair in Houston, TX? Call (877) 587-3986 now to connect with independent local Houston-area plumbers for urgent repairs & free estimates.",
+      "topQuery": "sewer line repair houston",
+      "previousCtr": 1.51,
+      "impressions": 1190,
+      "position": 8.4,
+      "optimizedAt": "2026-11-28T07:17:57.482Z"
+    },
+    "/services/leak-detection": {
+      "page": "/services/leak-detection",
+      "title": "Urgent Slab Leak Detection in Houston, TX | Fast Help",
+      "description": "Need fast slab leak detection in Houston, TX? Call (877) 587-3986 now to connect with independent local Houston-area plumbers for urgent repairs & free estimates.",
+      "topQuery": "slab leak detection cost houston",
+      "previousCtr": 1.22,
+      "impressions": 980,
+      "position": 12.3,
+      "optimizedAt": "2026-11-28T07:17:57.482Z"
+    },
+    "/location/katy/drain-cleaning": {
+      "page": "/location/katy/drain-cleaning",
+      "title": "Urgent Drain Cleaning in Katy, TX | Fast Help",
+      "description": "Need fast drain cleaning in Katy, TX? Call (877) 587-3986 now to connect with independent local Houston-area plumbers for urgent repairs & free estimates.",
+      "topQuery": "drain cleaning katy tx",
+      "previousCtr": 2.42,
+      "impressions": 620,
+      "position": 7.9,
+      "optimizedAt": "2026-11-28T07:17:57.482Z"
+    },
+    "/services/toilet-repair": {
+      "page": "/services/toilet-repair",
+      "title": "Urgent Toilet Repair in Houston, TX | Fast Help",
+      "description": "Need fast toilet repair in Houston, TX? Call (877) 587-3986 now to connect with independent local Houston-area plumbers for urgent repairs & free estimates.",
+      "topQuery": "toilet constantly running repair cost houston",
+      "previousCtr": 1.96,
+      "impressions": 560,
+      "position": 15.1,
+      "optimizedAt": "2026-11-28T07:17:57.482Z"
+    },
+    "/location/sugar-land/water-heater-repair": {
+      "page": "/location/sugar-land/water-heater-repair",
+      "title": "Urgent Water Heater Repair in Sugar Land, TX | Fast Help",
+      "description": "Need fast water heater repair in Sugar Land, TX? Call (877) 587-3986 now to connect with independent local Houston-area plumbers for urgent repairs & free estimates.",
+      "topQuery": "tankless water heater repair sugar land",
+      "previousCtr": 1.67,
+      "impressions": 540,
+      "position": 11.2,
+      "optimizedAt": "2026-11-28T07:17:57.482Z"
+    },
+    "/services/pipe-repair": {
+      "page": "/services/pipe-repair",
+      "title": "Urgent Burst Pipe Repair Winter in Houston, TX | Fast Help",
+      "description": "Need fast burst pipe repair winter in Houston, TX? Call (877) 587-3986 now to connect with independent local Houston-area plumbers for urgent repairs & free estimate",
+      "topQuery": "burst pipe repair winter houston",
+      "previousCtr": 1.16,
+      "impressions": 430,
+      "position": 18.2,
+      "optimizedAt": "2026-11-28T07:17:57.482Z"
+    },
+    "/services/gas-line-repair": {
+      "page": "/services/gas-line-repair",
+      "title": "Urgent Gas Line Leak Test Permit in Houston, TX | Fast Help",
+      "description": "Need fast gas line leak test permit in Houston, TX? Call (877) 587-3986 now to connect with independent local Houston-area plumbers for urgent repairs & free estimat",
+      "topQuery": "gas line leak test houston permit",
+      "previousCtr": 1.79,
+      "impressions": 390,
+      "position": 9.4,
+      "optimizedAt": "2026-11-28T07:17:57.482Z"
+    }
+  },
+  "topServices": [
+    {
+      "service": "Sewer Line Repair",
+      "conversions": 1,
+      "revenue": 65
+    }
+  ],
+  "topCities": [
+    {
+      "city": "Katy",
+      "conversions": 1,
+      "revenue": 65
+    }
+  ],
+  "trendingHighlight": {
+    "service": "Sewer Line Repair",
+    "serviceSlug": "sewer-line-repair",
+    "city": "Katy",
+    "citySlug": "katy",
+    "conversions": 1,
+    "revenue": 65,
+    "badgeText": "Trending in Katy: Sewer Line Repair",
+    "updatedAt": "2026-11-28T07:17:57.482Z"
+  }
 }
