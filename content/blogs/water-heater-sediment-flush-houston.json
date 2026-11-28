@@ -25,7 +25,7 @@
   },
   "introduction": [
     "Hearing loud popping, snapping, rumbling, or tea-kettle whistling coming from your water heater during heating cycles is an unmistakable sign of heavy mineral sediment accumulation. Many Houston homeowners describe the sound as pebbles rattling or popcorn popping inside the tank.",
-    "While often dismissed as a minor acoustic annoyance, this noise is caused by steam cavitation—a violent physical reaction occurring under inches of baked calcium carbonate and magnesium scale. As sediment insulates the bottom of the tank, water trapped beneath becomes superheated, flashes into high-pressure steam bubbles, and violently bursts through the sediment crust.",
+    "While often dismissed as a minor acoustic annoyance, this noise is caused by steam cavitation—a violent physical reaction occurring under inches of baked calcium carbonate and magnesium scale. As sediment insulates the bottom of the tank, water trapped beneath becomes superheated, flashes into high-pressure steam bubbles, and violently bursts through the sediment crust. When on-site diagnostics or licensed repairs are required, review our [water heater sediment flush and repair services](/services/water-heater-repair) overview to see how PipeResque connects property owners with independent Texas plumbing professionals.",
     "Greater Houston's municipal water supplies contain moderate to hard mineral concentrations that precipitate rapidly when heated. Without regular professional flushing, heavy sediment beds cause premature heating element burnout, overheat gas burner bottoms, spike monthly energy bills by up to 25%, and ultimately crack the internal glass lining of the tank."
   ],
   "sections": [
@@ -70,7 +70,8 @@
       "title": "Professional Flush & Deliming Procedures",
       "subtitle": "Agitation flushes, full-port brass valve upgrades, and chemical deliming",
       "content": [
-        "Licensed plumbing technicians use heavy-duty procedures to safely evacuate heavy mineral beds from aging water heaters:"
+        "Licensed plumbing technicians use heavy-duty procedures to safely evacuate heavy mineral beds from aging water heaters:",
+        "To connect with independent licensed plumbers familiar with local soil, water pressure, and municipal code requirements, explore [water heater repair in Houston, TX](/location/houston/water-heater-repair) or call [(877) 587-3986](tel:+18775873986) for referral assistance."
       ],
       "numberedList": [
         "Full-Port Brass Ball Valve Upgrade: Technicians replace fragile plastic spigots with 3/4-inch full-port brass ball valves, creating an unrestricted pathway for large calcium chunks to exit.",
@@ -101,5 +102,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Water heater sediment flush and repair services",
+      "url": "/services/water-heater-repair"
+    },
+    {
+      "title": "Water heater repair in Houston, TX",
+      "url": "/location/houston/water-heater-repair"
+    }
+  ]
 }

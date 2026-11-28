@@ -25,7 +25,7 @@
   },
   "introduction": [
     "In all-electric homes across Greater Houston, traditional electric resistance water heaters are typically the single largest energy consumer after the central air conditioning system, accounting for 18% to 25% of monthly electric bills. Hybrid heat pump water heaters (HPWH) represent the most significant technological leap in residential energy efficiency in decades.",
-    "Operating on the reverse refrigeration cycle of an air conditioner, a hybrid heat pump does not generate heat directly with high-wattage electrical resistance coils. Instead, a compact compressor mounted on top of the tank extracts thermal energy from surrounding warm air and transfers it into the water via an internal heat exchanger. As a free byproduct, the unit blows cool, dehumidified air into the surrounding room.",
+    "Operating on the reverse refrigeration cycle of an air conditioner, a hybrid heat pump does not generate heat directly with high-wattage electrical resistance coils. Instead, a compact compressor mounted on top of the tank extracts thermal energy from surrounding warm air and transfers it into the water via an internal heat exchanger. As a free byproduct, the unit blows cool, dehumidified air into the surrounding room. If symptoms point to an active failure that requires a licensed technician, explore our [hybrid and residential water heater repair services](/services/water-heater-repair) guide to understand typical repair scopes before requesting contractor referrals.",
     "Because Houston enjoys warm, humid weather for nine to ten months of the year, it is one of the most geographically ideal markets in the United States for heat pump water heaters. However, successful performance requires careful planning regarding installation location (garage vs. attic), cubic air volume requirements, condensate plumbing, and electrical circuit capacity."
   ],
   "sections": [
@@ -69,7 +69,8 @@
       "content": [
         "While a hybrid heat pump water heater carries a higher initial equipment cost than a standard electric tank ($1,800 to $2,800 for the unit vs. $700 to $1,000 for standard electric), financial incentives drastically reduce the payback period:",
         "Under the federal Inflation Reduction Act (Section 25C Energy Efficient Home Improvement Credit), qualifying homeowners can claim a 30% federal tax credit up to $2,000 on the purchase and installation of a qualifying heat pump water heater.",
-        "Combined with local electric utility rebates and $400+ annual electricity bill reductions, most Houston households fully recoup the equipment premium in less than two to three years, enjoying pure energy savings for the remaining 10+ years of the unit's lifespan."
+        "Combined with local electric utility rebates and $400+ annual electricity bill reductions, most Houston households fully recoup the equipment premium in less than two to three years, enjoying pure energy savings for the remaining 10+ years of the unit's lifespan.",
+        "When you are ready to compare estimates from independent Texas-licensed contractors, visit our [water heater repair in Houston, TX](/location/houston/water-heater-repair) page or call [(877) 587-3986](tel:+18775873986) to request a local plumbing referral."
       ]
     }
   ],
@@ -93,5 +94,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Hybrid and residential water heater repair services",
+      "url": "/services/water-heater-repair"
+    },
+    {
+      "title": "Water heater repair in Houston, TX",
+      "url": "/location/houston/water-heater-repair"
+    }
+  ]
 }

@@ -31,7 +31,7 @@
   },
   "introduction": [
     "Purchasing a residential property in Greater Houston—particularly in established neighborhoods across Harris, Fort Bend, and Montgomery counties built between 1950 and 1990—presents unique geological and structural plumbing risks. Underneath thousands of Houston slab-on-grade foundations lie aging cast-iron sewer drainage systems subjected to decades of soil shifting.",
-    "Standard Texas Real Estate Commission (TREC) home inspections test visible fixture drainage but cannot determine whether the underground sanitary sewer system beneath the foundation slab is actively leaking wastewater into the soil. To uncover hidden under-slab sewer collapses, buyers and foundation engineers rely on a specialized diagnostic procedure: the hydrostatic plumbing test.",
+    "Standard Texas Real Estate Commission (TREC) home inspections test visible fixture drainage but cannot determine whether the underground sanitary sewer system beneath the foundation slab is actively leaking wastewater into the soil. To uncover hidden under-slab sewer collapses, buyers and foundation engineers rely on a specialized diagnostic procedure: the hydrostatic plumbing test. When on-site diagnostics or licensed repairs are required, review our [hydrostatic testing and plumbing leak detection services](/services/leak-detection) overview to see how PipeResque connects property owners with independent Texas plumbing professionals.",
     "Understanding how hydrostatic testing works, legal regulations governing who can perform it under Texas law, and how results influence purchase negotiations protects prospective buyers from five-figure sewer replacement surprises."
   ],
   "sections": [
@@ -93,7 +93,8 @@
       "title": "What Happens If a Home Fails a Hydrostatic Test?",
       "subtitle": "Exploring modern trenchless pipe lining vs. traditional under-slab tunneling",
       "content": [
-        "Failing a hydrostatic test does not automatically mean tearing up finished hardwood or tile floors inside the home. Modern Houston plumbing contractors utilize advanced repair techniques designed to preserve interior living spaces:"
+        "Failing a hydrostatic test does not automatically mean tearing up finished hardwood or tile floors inside the home. Modern Houston plumbing contractors utilize advanced repair techniques designed to preserve interior living spaces:",
+        "To connect with independent licensed plumbers familiar with local soil, water pressure, and municipal code requirements, explore [plumbing leak detection in Houston, TX](/location/houston/leak-detection) or call [(877) 587-3986](tel:+18775873986) for referral assistance."
       ],
       "bullets": [
         "Under-Slab Tunneling: Plumbers excavate tunnels beneath the exterior foundation grade beams to access and replace rotted cast-iron sewer lines with modern schedule 40 PVC without jackhammering through living room or kitchen floors.",
@@ -126,5 +127,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Hydrostatic testing and plumbing leak detection services",
+      "url": "/services/leak-detection"
+    },
+    {
+      "title": "Plumbing leak detection in Houston, TX",
+      "url": "/location/houston/leak-detection"
+    }
+  ]
 }

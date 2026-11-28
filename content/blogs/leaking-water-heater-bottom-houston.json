@@ -25,7 +25,7 @@
   },
   "introduction": [
     "Discovering water pooling around the bottom of your water heater is an urgent plumbing emergency that requires immediate diagnostic triage. While some leaks originate from easily repairable fittings—such as a loose drain spigot or leaking top flex lines—water genuinely seeping from beneath the outer metal jacket indicates that the internal steel tank has ruptured.",
-    "In Greater Houston, this scenario carries heightened risk because the vast majority of single-family residences have water heaters located in attics directly above finished drywall ceilings, hardwood flooring, and valuable living areas. A neglected bottom leak can rapidly escalate into a catastrophic ceiling collapse and thousands of dollars in secondary structural damage.",
+    "In Greater Houston, this scenario carries heightened risk because the vast majority of single-family residences have water heaters located in attics directly above finished drywall ceilings, hardwood flooring, and valuable living areas. A neglected bottom leak can rapidly escalate into a catastrophic ceiling collapse and thousands of dollars in secondary structural damage. When on-site diagnostics or licensed repairs are required, review our [leaking water heater repair and replacement services](/services/water-heater-repair) overview to see how PipeResque connects property owners with independent Texas plumbing professionals.",
     "Understanding how to isolate the exact source of water, execute an emergency shutdown, verify secondary drain pan integrity, and determine whether the unit can be repaired or must be replaced is essential knowledge for every Houston homeowner."
   ],
   "sections": [
@@ -75,7 +75,8 @@
       "subtitle": "Understanding internal pressure cycles and structural tank fatigue",
       "content": [
         "Homeowners occasionally ask if a licensed plumber can solder, weld, or patch a leaking water heater bottom. Under the Texas State Board of Plumbing Examiners (TSBPE) regulations and national safety standards, patching a pressurized residential water heater vessel is strictly illegal and mechanically impossible:",
-        "Water heaters continuously expand and contract under 50 to 80+ PSI of hydraulic pressure and thermal cycling. Any superficial patch would instantly blow out under operating pressure, risking scalding flash steam and catastrophic rupture. When internal tank corrosion breaches the vessel wall, installing a modern, warrantied replacement is the only safe and compliant resolution."
+        "Water heaters continuously expand and contract under 50 to 80+ PSI of hydraulic pressure and thermal cycling. Any superficial patch would instantly blow out under operating pressure, risking scalding flash steam and catastrophic rupture. When internal tank corrosion breaches the vessel wall, installing a modern, warrantied replacement is the only safe and compliant resolution.",
+        "To connect with independent licensed plumbers familiar with local soil, water pressure, and municipal code requirements, explore [water heater repair in Houston, TX](/location/houston/water-heater-repair) or call [(877) 587-3986](tel:+18775873986) for referral assistance."
       ]
     }
   ],
@@ -99,5 +100,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Leaking water heater repair and replacement services",
+      "url": "/services/water-heater-repair"
+    },
+    {
+      "title": "Water heater repair in Houston, TX",
+      "url": "/location/houston/water-heater-repair"
+    }
+  ]
 }

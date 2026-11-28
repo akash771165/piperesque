@@ -25,7 +25,7 @@
   },
   "introduction": [
     "For Houston restaurants, commercial kitchens, hotels, laundromats, fitness centers, and medical clinics, continuous hot water is not just a comfort—it is a strict regulatory requirement for legal operation. A sudden water heater breakdown stops commercial dish sanitization, halts laundry operations, and can force immediate facility closure by municipal health inspectors.",
-    "Commercial water heating equipment operates in an entirely different engineering class than residential appliances. Firing at 199,000 to over 500,000 BTUs, utilizing heavy-gauge ASME-rated steel tanks, electronic flame rectification ignition controls, and multi-pump recirculating loops, commercial systems endure constant thermal cycling and high mineral stress.",
+    "Commercial water heating equipment operates in an entirely different engineering class than residential appliances. Firing at 199,000 to over 500,000 BTUs, utilizing heavy-gauge ASME-rated steel tanks, electronic flame rectification ignition controls, and multi-pump recirculating loops, commercial systems endure constant thermal cycling and high mineral stress. Before approving any repair quote, homeowners and facility managers can compare diagnostic steps and referral options on our [commercial water heater and plumbing services](/services/commercial-plumbing) page.",
     "Understanding the signs of impending commercial water heater failure, adhering to Harris County Public Health and City of Houston hot water temperature codes, and establishing fast commercial diagnostic support protects businesses from catastrophic revenue loss and regulatory shutdowns."
   ],
   "sections": [
@@ -76,7 +76,8 @@
       "subtitle": "Minimizing downtime through proactive descaling and combustion tuning",
       "content": [
         "To prevent unscheduled closures during peak revenue hours, Houston facilities should schedule structured quarterly preventative maintenance with a licensed commercial plumbing contractor:",
-        "Maintenance visits include chemical deliming with food-grade descalers, testing ASME temperature and pressure relief valves, checking electronic flame signal strength with a micro-ammeter, cleaning air intake screens, testing combustion efficiency with a digital flue gas analyzer, and verifying thermal expansion tank air pre-charge."
+        "Maintenance visits include chemical deliming with food-grade descalers, testing ASME temperature and pressure relief valves, checking electronic flame signal strength with a micro-ammeter, cleaning air intake screens, testing combustion efficiency with a digital flue gas analyzer, and verifying thermal expansion tank air pre-charge.",
+        "Homeowners and property managers seeking qualified local evaluation can review [commercial plumbing in Houston, TX](/location/houston/commercial-plumbing) or call [(877) 587-3986](tel:+18775873986) to be matched with independent plumbing professionals in Houston, TX."
       ]
     }
   ],
@@ -100,5 +101,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Commercial water heater and plumbing services",
+      "url": "/services/commercial-plumbing"
+    },
+    {
+      "title": "Commercial plumbing in Houston, TX",
+      "url": "/location/houston/commercial-plumbing"
+    }
+  ]
 }

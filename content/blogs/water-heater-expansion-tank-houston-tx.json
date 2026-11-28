@@ -33,7 +33,7 @@
   },
   "introduction": [
     "Hearing unusual groaning from your water heater, noticing sudden pressure spikes at faucets, or discovering pooling water under your tank in Houston? One often overlooked component behind these symptoms is the thermal expansion tank.",
-    "When cold water is heated inside a conventional 40- to 80-gallon water heater, it physically expands by approximately 2% to 3% in volume. In older open plumbing systems, this extra volume simply pushed back into the municipal water main without causing harm.",
+    "When cold water is heated inside a conventional 40- to 80-gallon water heater, it physically expands by approximately 2% to 3% in volume. In older open plumbing systems, this extra volume simply pushed back into the municipal water main without causing harm. When on-site diagnostics or licensed repairs are required, review our [expansion tank and water heater repair services](/services/water-heater-repair) overview to see how PipeResque connects property owners with independent Texas plumbing professionals.",
     "However, modern plumbing codes across Greater Houston require closed plumbing systems equipped with backflow preventers, check valves, or pressure reducing valves (PRVs). Without a functional thermal expansion tank to absorb this expanding volume, water pressure can spike dangerously—straining water heater tanks, damaging fixture seals, and triggering leaks."
   ],
   "sections": [
@@ -122,7 +122,8 @@
       "title": "Questions to Ask Independent Plumbing Contractors",
       "subtitle": "Ensure your repair is code-compliant and built to last",
       "content": [
-        "When speaking with an independent plumbing service provider about your water heater expansion tank, consider asking these practical diagnostic questions:"
+        "When speaking with an independent plumbing service provider about your water heater expansion tank, consider asking these practical diagnostic questions:",
+        "To connect with independent licensed plumbers familiar with local soil, water pressure, and municipal code requirements, explore [water heater repair in Houston, TX](/location/houston/water-heater-repair) or call [(877) 587-3986](tel:+18775873986) for referral assistance."
       ],
       "numberedList": [
         "Will you test my home's static water pressure with a gauge before selecting and installing the new tank?",
@@ -161,5 +162,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Expansion tank and water heater repair services",
+      "url": "/services/water-heater-repair"
+    },
+    {
+      "title": "Water heater repair in Houston, TX",
+      "url": "/location/houston/water-heater-repair"
+    }
+  ]
 }

@@ -25,7 +25,7 @@
   },
   "introduction": [
     "Choosing the correct water heater size during replacement is a critical balance of comfort, energy efficiency, and physical space. Install a unit that is too small, and your family will suffer freezing showers during morning rush hours; choose a unit that is excessively large, and you will waste hundreds of dollars annually keeping unneeded water hot in Texas heat.",
-    "Many homeowners simply replace whatever tank is currently in their home. However, lifestyle changes—such as high-flow multi-head walk-in showers, soaking tubs, growing families, or teenagers—often demand higher capacity. Conversely, modern sizing relies not on total tank volume, but on the First Hour Rating (FHR) for storage tanks and Gallons Per Minute (GPM) with incoming water temperature rise for on-demand tankless systems.",
+    "Many homeowners simply replace whatever tank is currently in their home. However, lifestyle changes—such as high-flow multi-head walk-in showers, soaking tubs, growing families, or teenagers—often demand higher capacity. Conversely, modern sizing relies not on total tank volume, but on the First Hour Rating (FHR) for storage tanks and Gallons Per Minute (GPM) with incoming water temperature rise for on-demand tankless systems. Before approving any repair quote, homeowners and facility managers can compare diagnostic steps and referral options on our [water heater repair and replacement services](/services/water-heater-repair) page.",
     "In Greater Houston, seasonal groundwater temperatures and strict physical attic access dimensions (such as narrow 22.5-inch pull-down ladder openings) add unique engineering constraints that must be accounted for before purchasing a replacement water heater."
   ],
   "sections": [
@@ -108,7 +108,8 @@
       "content": [
         "In thousands of Houston homes, water heaters are located in the attic above the second floor. A frequent obstacle during replacement is physical access:",
         "Standard attic pull-down staircases have rough openings measuring only 22.5 to 25.5 inches wide. Modern energy efficiency standards (NAECA III) mandate thicker polyurethane insulation jackets on storage tanks, making new 50- and 75-gallon tanks 2 to 4 inches wider than older tanks installed in the 1990s and 2000s.",
-        "If an oversized 75-gallon tank cannot physically pass through the attic ladder opening, technicians either install two parallel 40-gallon tanks, enlarge the ceiling framing, or convert the home to a space-saving wall-mounted tankless unit."
+        "If an oversized 75-gallon tank cannot physically pass through the attic ladder opening, technicians either install two parallel 40-gallon tanks, enlarge the ceiling framing, or convert the home to a space-saving wall-mounted tankless unit.",
+        "Homeowners and property managers seeking qualified local evaluation can review [water heater repair in Houston, TX](/location/houston/water-heater-repair) or call [(877) 587-3986](tel:+18775873986) to be matched with independent plumbing professionals in Houston, TX."
       ]
     }
   ],
@@ -132,5 +133,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Water heater repair and replacement services",
+      "url": "/services/water-heater-repair"
+    },
+    {
+      "title": "Water heater repair in Houston, TX",
+      "url": "/location/houston/water-heater-repair"
+    }
+  ]
 }

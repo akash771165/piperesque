@@ -1,5 +1,6 @@
 {
   "lastUpdated": "2026-11-06T00:00:00.000Z",
+  "dailyLeadTarget": 5,
   "summary": {
     "totalPhoneClicks": 0,
     "totalFormSubmissions": 0,
@@ -9,6 +10,10 @@
     "totalJobsCompleted": 0,
     "totalVerifiedReferralRevenue": "$0.00",
     "totalPendingReferralRevenue": "$0.00"
+  },
+  "weeklyMetrics": {
+    "currentWeekQualifiedLeads": 0,
+    "previousWeekQualifiedLeads": 0
   },
   "conversionFunnel": {
     "phoneClickToQualifiedLeadRate": "0.0%",

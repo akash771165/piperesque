@@ -24,7 +24,7 @@
   },
   "introduction": [
     "Waking up to cold water and discovering the small blue pilot flame beneath your gas water heater has extinguished is one of the most frequent plumbing issues reported by Houston property owners.",
-    "While relighting a pilot light following the lighting instructions printed on the tank's jacket is a routine homeowner task, a pilot flame that repeatedly goes out immediately after releasing the control knob points to an underlying mechanical failure.",
+    "While relighting a pilot light following the lighting instructions printed on the tank's jacket is a routine homeowner task, a pilot flame that repeatedly goes out immediately after releasing the control knob points to an underlying mechanical failure. Before approving any repair quote, homeowners and facility managers can compare diagnostic steps and referral options on our [gas hot water heater repair services](/services/water-heater-repair) page.",
     "In gas water heating systems, safety mechanisms are engineered to completely shut off gas flow if the pilot flame fails, preventing explosive natural gas or carbon monoxide from collecting in your home. Understanding the thermocouple, thermopile, and burner assembly helps homeowners know when to contact a qualified technician."
   ],
   "sections": [
@@ -59,7 +59,8 @@
       "title": "What Professional Technicians Check During Pilot Service",
       "subtitle": "Ensuring safe gas combustion and draft in Houston homes",
       "content": [
-        "When an independent plumbing professional responds to a recurring pilot light failure, they follow strict safety diagnostic protocols:"
+        "When an independent plumbing professional responds to a recurring pilot light failure, they follow strict safety diagnostic protocols:",
+        "Homeowners and property managers seeking qualified local evaluation can review [water heater repair in Houston, TX](/location/houston/water-heater-repair) or call [(877) 587-3986](tel:+18775873986) to be matched with independent plumbing professionals in Houston, TX."
       ],
       "numberedList": [
         "Gas supply pressure testing: Verifies correct incoming inches of water column (WC) using a digital manometer.",
@@ -89,5 +90,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Gas hot water heater repair services",
+      "url": "/services/water-heater-repair"
+    },
+    {
+      "title": "Water heater repair in Houston, TX",
+      "url": "/location/houston/water-heater-repair"
+    }
+  ]
 }

@@ -5,8 +5,9 @@ import Link from "next/link";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import CTA from "@/components/sections/cta";
+import ServiceListingSection from "@/components/sections/service-listing";
 
-import { CheckCircle2, Phone, ArrowRight, ShieldCheck, Clock3 } from "lucide-react";
+import { Phone, ArrowRight, ShieldCheck, Clock3 } from "lucide-react";
 import { services } from "@/lib/data/services";
 
 export const metadata: Metadata = {
@@ -69,6 +70,7 @@ export default function ServicesPage() {
           fill
           priority
           sizes="100vw"
+          referrerPolicy="no-referrer"
           className="object-cover opacity-25"
         />
 
@@ -111,107 +113,31 @@ export default function ServicesPage() {
 
       {/* Quick Problem Intent Strip */}
       <section className="border-b border-slate-200 bg-slate-50 py-4">
-        <div className="container-custom flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-600 sm:text-sm">
+        <div className="container-custom flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-slate-600 sm:text-sm">
           <span className="font-semibold text-slate-900">Urgent Problem?</span>
-          <span>• Burst Pipes</span>
-          <span>• Main Sewer Backups</span>
-          <span>• Overflowing Toilets</span>
-          <span>• Water Heater Leaks</span>
-          <span>• Clogged Main Drains</span>
+          <Link href="/services/pipe-repair" className="hover:text-blue-700 hover:underline">
+            • Burst Pipes
+          </Link>
+          <Link href="/services/sewer-line-repair" className="hover:text-blue-700 hover:underline">
+            • Main Sewer Backups
+          </Link>
+          <Link href="/services/toilet-repair" className="hover:text-blue-700 hover:underline">
+            • Overflowing Toilets
+          </Link>
+          <Link href="/services/water-heater-repair" className="hover:text-blue-700 hover:underline">
+            • Water Heater Leaks
+          </Link>
+          <Link href="/services/drain-cleaning" className="hover:text-blue-700 hover:underline">
+            • Clogged Main Drains
+          </Link>
+          <Link href="/services/leak-detection" className="hover:text-blue-700 hover:underline">
+            • Hidden Slab Leaks
+          </Link>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 md:py-24">
-        <div className="container-custom">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-black text-slate-900 md:text-4xl">
-              Specialized Plumbing Services
-            </h2>
-            <p className="mt-4 text-slate-600">
-              Select your specific plumbing issue below to learn more about warning signs, diagnostic
-              methods, and typical repair solutions.
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2">
-            {services.map((service) => {
-              const Icon = service.icon;
-
-              return (
-                <div
-                  key={service.slug}
-                  className="group flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:shadow-xl"
-                >
-                  <div className="relative h-64 overflow-hidden bg-slate-100">
-                    <Image
-                      src={service.image}
-                      alt={`${service.shortTitle} plumbing services in Houston, TX`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      loading="lazy"
-                      className="object-cover transition duration-300 group-hover:scale-105"
-                    />
-                  </div>
-
-                  <div className="flex flex-1 flex-col p-8">
-                    <div className="flex items-center gap-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-700">
-                        <Icon size={28} aria-hidden="true" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-black text-slate-900">
-                          {service.shortTitle}
-                        </h3>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                          Houston, TX &amp; Suburbs
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="mt-5 leading-7 text-slate-600">
-                      {service.description}
-                    </p>
-
-                    <div className="mt-6 space-y-2.5 text-sm text-slate-700">
-                      <div className="flex items-center gap-2.5">
-                        <CheckCircle2 size={17} className="text-emerald-600" aria-hidden="true" />
-                        <span>Independent local plumbing contractors</span>
-                      </div>
-                      <div className="flex items-center gap-2.5">
-                        <CheckCircle2 size={17} className="text-emerald-600" aria-hidden="true" />
-                        <span>Clear problem diagnosis before work begins</span>
-                      </div>
-                      <div className="flex items-center gap-2.5">
-                        <CheckCircle2 size={17} className="text-emerald-600" aria-hidden="true" />
-                        <span>Direct telephone referral line for urgent situations</span>
-                      </div>
-                    </div>
-
-                    <div className="mt-8 flex flex-wrap items-center gap-3 pt-6 border-t border-slate-100">
-                      <a
-                        href="tel:+18775873986"
-                        className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-5 py-2.5 text-sm font-black text-slate-950 transition hover:bg-amber-400"
-                      >
-                        <Phone size={15} aria-hidden="true" />
-                        Call (877) 587-3986
-                      </a>
-
-                      <Link
-                        href={`/services/${service.slug}`}
-                        className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-bold text-slate-700 transition hover:border-slate-300 hover:text-slate-900"
-                      >
-                        Details &amp; FAQ
-                        <ArrowRight size={15} aria-hidden="true" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* Consistent Service Listing Section */}
+      <ServiceListingSection items={services} />
 
       {/* Transparent Service Notice */}
       <section className="bg-slate-50 py-12 border-t border-slate-200">

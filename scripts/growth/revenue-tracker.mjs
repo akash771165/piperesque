@@ -50,6 +50,7 @@ export class RevenueTracker {
   _getFreshZeroBaseline() {
     return {
       lastUpdated: new Date().toISOString(),
+      dailyLeadTarget: 5,
       summary: {
         totalPhoneClicks: 0,
         totalFormSubmissions: 0,
@@ -59,6 +60,10 @@ export class RevenueTracker {
         totalJobsCompleted: 0,
         totalVerifiedReferralRevenue: "$0.00",
         totalPendingReferralRevenue: "$0.00"
+      },
+      weeklyMetrics: {
+        currentWeekQualifiedLeads: 0,
+        previousWeekQualifiedLeads: 0
       },
       conversionFunnel: {
         phoneClickToQualifiedLeadRate: "0.0%",
@@ -94,6 +99,13 @@ export class RevenueTracker {
     this.data.summary.totalFormSubmissions += 1;
     if (isQualified) {
       this.data.summary.totalQualifiedLeads += 1;
+      if (!this.data.weeklyMetrics) {
+        this.data.weeklyMetrics = {
+          currentWeekQualifiedLeads: 0,
+          previousWeekQualifiedLeads: 0
+        };
+      }
+      this.data.weeklyMetrics.currentWeekQualifiedLeads += 1;
     }
     this._recalculateFunnel();
     this.save();

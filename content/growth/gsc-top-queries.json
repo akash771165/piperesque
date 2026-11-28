@@ -1,0 +1,21 @@
+{
+  "status": "NOT_CONFIGURED",
+  "source": "none",
+  "siteUrl": "https://www.piperesque.com/",
+  "updatedAt": null,
+  "dateRange": {
+    "startDate": null,
+    "endDate": null
+  },
+  "asOfDate": null,
+  "totalQueriesAnalyzed": 0,
+  "topLimit": 3,
+  "criteria": {
+    "primaryMinImpressions": 100,
+    "primaryMaxCtr": 0.02,
+    "fallbackMinImpressions": 10,
+    "fallbackMaxCtr": 0.03
+  },
+  "queries": [],
+  "auditNotice": "Initialized with zero fabricated Search Console queries. Populated by GoogleSearchConsoleService.fetchAndStoreTopLowCtrQueries() when live GSC credentials succeed."
+}

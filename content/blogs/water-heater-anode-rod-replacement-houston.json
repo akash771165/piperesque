@@ -25,7 +25,7 @@
   },
   "introduction": [
     "A sacrificial anode rod is the single most critical component protecting your water heater from catastrophic internal corrosion and premature tank rupture. Screwed into the top of your water heater, this long metal rod deliberately corrodes so that your steel tank does not.",
-    "In Greater Houston, municipal surface water sourced from Lake Houston and Lake Livingston, combined with groundwater from the Evangeline Aquifer, creates distinct chemical conditions inside water heaters. When dissolved minerals and naturally occurring sulfate-reducing bacteria interact with traditional magnesium anode rods, the chemical reaction produces offensive hydrogen sulfide gas, causing hot water to smell like rotten eggs.",
+    "In Greater Houston, municipal surface water sourced from Lake Houston and Lake Livingston, combined with groundwater from the Evangeline Aquifer, creates distinct chemical conditions inside water heaters. When dissolved minerals and naturally occurring sulfate-reducing bacteria interact with traditional magnesium anode rods, the chemical reaction produces offensive hydrogen sulfide gas, causing hot water to smell like rotten eggs. Before approving any repair quote, homeowners and facility managers can compare diagnostic steps and referral options on our [anode rod and water heater repair services](/services/water-heater-repair) page.",
     "Replacing a depleted anode rod every 3 to 5 years costs a fraction of a full water heater replacement. Understanding galvanic corrosion, knowing when to switch from magnesium to an aluminum-zinc alloy or powered titanium rod, and recognizing the signs of depletion can double the working lifespan of your water heater."
   ],
   "sections": [
@@ -82,7 +82,8 @@
       "content": [
         "While replacing an anode rod seems straightforward in theory, the mechanical realities in Texas homes frequently require specialized tools and experienced service:",
         "Factory-installed anode rods are torqued into the 3/4-inch hex port at over 100 to 140 foot-pounds. Loosening a seized anode hex head without spinning the entire water heater requires an impact wrench or heavy breaker bar while counter-holding the tank to prevent twisting copper supply lines.",
-        "Furthermore, many Houston water heaters are installed in attics, garage closets, or under low ceilings where 40-inch straight solid rods cannot be inserted. Technicians install flexible segmented (collapsible) anode rods linked like sausage links, allowing full insertion with as little as 12 inches of overhead clearance."
+        "Furthermore, many Houston water heaters are installed in attics, garage closets, or under low ceilings where 40-inch straight solid rods cannot be inserted. Technicians install flexible segmented (collapsible) anode rods linked like sausage links, allowing full insertion with as little as 12 inches of overhead clearance.",
+        "Homeowners and property managers seeking qualified local evaluation can review [water heater repair in Houston, TX](/location/houston/water-heater-repair) or call [(877) 587-3986](tel:+18775873986) to be matched with independent plumbing professionals in Houston, TX."
       ],
       "numberedList": [
         "Isolate electrical power at the circuit breaker or turn the gas control knob to PILOT.",
@@ -114,5 +115,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Anode rod and water heater repair services",
+      "url": "/services/water-heater-repair"
+    },
+    {
+      "title": "Water heater repair in Houston, TX",
+      "url": "/location/houston/water-heater-repair"
+    }
+  ]
 }

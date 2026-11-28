@@ -16,6 +16,12 @@ import {
   PhoneCall,
   AlertCircle
 } from "lucide-react";
+import { GscOpportunitySummary } from "@/components/growth/gsc-opportunity-summary";
+import { GrowthVelocity } from "@/components/growth/growth-velocity";
+import { RevenueConversionCard } from "@/components/growth/revenue-conversion-card";
+import { resolveDailyLeadTarget } from "@/lib/growth/daily-lead-goal";
+import { loadTopLowCtrQueries } from "@/lib/growth/gsc-opportunities";
+import type { WeeklyLeadSnapshot } from "@/lib/growth/growth-velocity";
 
 export const metadata: Metadata = {
   title: "Autonomous AI Growth Engine Dashboard",
@@ -25,6 +31,8 @@ export const metadata: Metadata = {
     follow: false
   }
 };
+
+export const dynamic = "force-dynamic";
 
 function readJsonFile<T>(relativePath: string, fallback: T): T {
   try {
@@ -38,11 +46,33 @@ function readJsonFile<T>(relativePath: string, fallback: T): T {
   return fallback;
 }
 
-export default function GrowthEngineDashboardPage() {
+export default async function GrowthEngineDashboardPage() {
   const currentTimestamp = new Date().toISOString().split("T")[0];
 
+interface RevenueStoreData {
+  dailyLeadTarget?: number;
+  summary: {
+    totalPhoneClicks: number;
+    totalFormSubmissions: number;
+    totalQualifiedLeads: number;
+    totalReferralsDispatched: number;
+    totalVerifiedReferralRevenue: string;
+    totalPendingReferralRevenue: string;
+  };
+  weeklyMetrics?: {
+    currentWeekQualifiedLeads: number;
+    previousWeekQualifiedLeads: number;
+  };
+  weeklySnapshots?: WeeklyLeadSnapshot[];
+  conversionFunnel: {
+    phoneClickToQualifiedLeadRate: string;
+    formSubmitToQualifiedLeadRate: string;
+    dispatchToProviderAcceptanceRate: string;
+  };
+}
+
   // 1. Read real persistent data stores
-  const revenueStore = readJsonFile("content/growth/revenue-store.json", {
+  const revenueStore = readJsonFile<RevenueStoreData>("content/growth/revenue-store.json", {
     summary: {
       totalPhoneClicks: 0,
       totalFormSubmissions: 0,
@@ -51,12 +81,21 @@ export default function GrowthEngineDashboardPage() {
       totalVerifiedReferralRevenue: "$0.00",
       totalPendingReferralRevenue: "$0.00"
     },
+    weeklyMetrics: {
+      currentWeekQualifiedLeads: 0,
+      previousWeekQualifiedLeads: 0
+    },
     conversionFunnel: {
       phoneClickToQualifiedLeadRate: "0.0%",
       formSubmitToQualifiedLeadRate: "0.0%",
       dispatchToProviderAcceptanceRate: "0.0%"
     }
   });
+
+  const dailyLeadTarget = resolveDailyLeadTarget(
+    revenueStore.dailyLeadTarget,
+    process.env.DAILY_LEAD_TARGET
+  );
 
   const contentRegistry = readJsonFile("content/growth/content-registry.json", {
     totalCount: 0,
@@ -112,6 +151,9 @@ interface ResearchStoreData {
   const gscStatus = gscConfigured ? "LIVE" : "NOT_CONFIGURED";
   const ga4Status = ga4Configured ? "LIVE" : "NOT_CONFIGURED";
   const geminiStatus = geminiConfigured ? "LIVE (Free Tier)" : "NOT_CONFIGURED (Deterministic Fallback)";
+
+  // 3. Load Top 3 High-Impression / Low-CTR Search Console queries (live API when available, persisted stores otherwise)
+  const gscOpportunitySummary = await loadTopLowCtrQueries(3);
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 py-12 px-4 sm:px-6 lg:px-8 font-sans">
@@ -231,6 +273,9 @@ interface ResearchStoreData {
           </div>
         </div>
 
+        {/* Week-over-Week Growth Velocity */}
+        <GrowthVelocity revenueStore={revenueStore} />
+
         {/* 3-Column Operations Breakdown */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           
@@ -331,62 +376,14 @@ interface ResearchStoreData {
           </div>
 
           {/* Column 3: Conversion Funnel & Verified Revenue */}
-          <div className="bg-slate-800/60 border border-slate-700 rounded-xl p-6 space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-700 pb-3">
-              <h2 className="text-base font-semibold text-white flex items-center gap-2">
-                <DollarSign className="w-5 h-5 text-amber-400" />
-                Referral Conversion Funnel
-              </h2>
-              <span className="text-xs text-slate-400">Zero-PII</span>
-            </div>
-
-            <div className="space-y-3 text-xs">
-              <div>
-                <div className="flex justify-between text-slate-300 mb-1">
-                  <span>1. Phone CTA Clicks</span>
-                  <span className="font-mono font-bold">{revenueStore.summary.totalPhoneClicks} clicks</span>
-                </div>
-                <div className="w-full bg-slate-900 h-2 rounded-full overflow-hidden">
-                  <div className="bg-blue-500 h-full" style={{ width: revenueStore.summary.totalPhoneClicks > 0 ? "100%" : "0%" }}></div>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex justify-between text-slate-300 mb-1">
-                  <span>2. Referral Form Inquiries</span>
-                  <span className="font-mono font-bold">{revenueStore.summary.totalFormSubmissions} inquiries</span>
-                </div>
-                <div className="w-full bg-slate-900 h-2 rounded-full overflow-hidden">
-                  <div className="bg-indigo-500 h-full" style={{ width: revenueStore.summary.totalFormSubmissions > 0 ? "100%" : "0%" }}></div>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex justify-between text-slate-300 mb-1">
-                  <span>3. Qualified Houston Leads</span>
-                  <span className="font-mono font-bold text-amber-400">{revenueStore.summary.totalQualifiedLeads} leads</span>
-                </div>
-                <div className="w-full bg-slate-900 h-2 rounded-full overflow-hidden">
-                  <div className="bg-amber-500 h-full" style={{ width: revenueStore.summary.totalQualifiedLeads > 0 ? "100%" : "0%" }}></div>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex justify-between text-slate-300 mb-1">
-                  <span>4. Verified Revenue Settlements</span>
-                  <span className="font-mono font-bold text-emerald-400">{revenueStore.summary.totalVerifiedReferralRevenue || "$0.00"}</span>
-                </div>
-                <div className="w-full bg-slate-900 h-2 rounded-full overflow-hidden">
-                  <div className="bg-emerald-400 h-full" style={{ width: revenueStore.summary.totalVerifiedReferralRevenue !== "$0.00" ? "100%" : "0%" }}></div>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-2 text-slate-400 text-xs">
-              <span className="text-amber-400 font-medium">Business Integrity</span>: PipeResque is strictly a referral platform. Revenue is only booked upon verified provider payment settlement.
-            </div>
-          </div>
+          <RevenueConversionCard
+            summary={revenueStore.summary}
+            dailyLeadTarget={dailyLeadTarget}
+          />
         </div>
+
+        {/* Top 3 High-Impression / Low-CTR Search Console Queries */}
+        <GscOpportunitySummary summary={gscOpportunitySummary} />
 
         {/* Houston Market Research Backlog & Seasonal Intelligence */}
         <div className="bg-slate-800/60 border border-slate-700 rounded-xl p-6 space-y-4">

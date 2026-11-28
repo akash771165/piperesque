@@ -25,7 +25,7 @@
   },
   "introduction": [
     "When toilets gurgle, bathtubs back up with dark wastewater, or multiple drains slow down simultaneously, property owners face an underground mystery. Because residential sewer lines run buried three to ten feet beneath concrete slab foundations, driveways, and lush landscaping, traditional plumbers in decades past had to guess where blockages were located—often leading to destructive and unnecessary excavation.",
-    "A modern sewer camera inspection completely eliminates guesswork. Utilizing a flexible fiber-optic push rod equipped with a self-leveling, high-resolution color camera and high-intensity LED array, a technician travels through your main sewer line in real time, projecting crystal-clear digital video of the pipe's interior walls onto a monitor.",
+    "A modern sewer camera inspection completely eliminates guesswork. Utilizing a flexible fiber-optic push rod equipped with a self-leveling, high-resolution color camera and high-intensity LED array, a technician travels through your main sewer line in real time, projecting crystal-clear digital video of the pipe's interior walls onto a monitor. When on-site diagnostics or licensed repairs are required, review our [sewer camera inspection and sewer line repair services](/services/sewer-line-repair) overview to see how PipeResque connects property owners with independent Texas plumbing professionals.",
     "In Greater Houston, where shifting Beaumont clay soils place severe structural shear stresses on buried sanitary pipes, a sewer scope inspection is the single most definitive diagnostic tool for identifying root intrusions, cracked cast iron, pipe bellies (sags), and offset joints before committing to major repairs."
   ],
   "sections": [
@@ -71,7 +71,8 @@
       "content": [
         "A standard Texas Real Estate Commission (TREC) home inspection covers electrical, HVAC, roofing, and superficial plumbing fixture operation. Home inspectors do NOT inspect buried underground sewer laterals.",
         "Buying an older Houston home without an independent video sewer scope inspection is a massive financial gamble. A sewer line can function normally during a 15-minute home inspection test, only to back up the first week the family moves in. Discovering collapsed cast iron or extensive tree root intrusions beneath the foundation after closing often costs $8,000 to over $25,000 in emergency replacement costs.",
-        "A pre-purchase sewer scope takes under an hour, provides digital video proof of pipe condition, and empowers buyers to negotiate repair credits or require seller repairs prior to closing."
+        "A pre-purchase sewer scope takes under an hour, provides digital video proof of pipe condition, and empowers buyers to negotiate repair credits or require seller repairs prior to closing.",
+        "To connect with independent licensed plumbers familiar with local soil, water pressure, and municipal code requirements, explore [sewer line repair in Houston, TX](/location/houston/sewer-line-repair) or call [(877) 587-3986](tel:+18775873986) for referral assistance."
       ]
     }
   ],
@@ -95,5 +96,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Sewer camera inspection and sewer line repair services",
+      "url": "/services/sewer-line-repair"
+    },
+    {
+      "title": "Sewer line repair in Houston, TX",
+      "url": "/location/houston/sewer-line-repair"
+    }
+  ]
 }

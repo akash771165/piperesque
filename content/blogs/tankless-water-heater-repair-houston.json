@@ -25,7 +25,7 @@
   },
   "introduction": [
     "On-demand tankless water heaters deliver high energy efficiency and endless hot water under normal conditions. However, when an on-demand unit suddenly shuts down mid-shower or flashes cryptic error codes, homeowners across Greater Houston face unique mechanical challenges.",
-    "Unlike conventional storage tanks that simply hold heated water, tankless systems are sophisticated micro-boiler appliances combining electronic circuit boards, modulating gas valves, vent sensors, flow turbines, and high-conductivity copper heat exchangers.",
+    "Unlike conventional storage tanks that simply hold heated water, tankless systems are sophisticated micro-boiler appliances combining electronic circuit boards, modulating gas valves, vent sensors, flow turbines, and high-conductivity copper heat exchangers. If symptoms point to an active failure that requires a licensed technician, explore our [tankless water heater repair services](/services/water-heater-repair) guide to understand typical repair scopes before requesting contractor referrals.",
     "In Houston, high water hardness and mineral content frequently precipitate inside narrow heat exchanger fins, while gas supply pressure fluctuations can trigger burner lockouts. Understanding these common failure points helps property owners recognize when professional service is required."
   ],
   "sections": [
@@ -69,7 +69,8 @@
       "title": "Repair vs. Replacement: What Houston Property Owners Should Consider",
       "subtitle": "Evaluating equipment age, parts availability, and heat exchanger condition",
       "content": [
-        "When an independent plumbing technician evaluates a malfunctioning tankless unit, several key factors determine whether component repair or full replacement is appropriate:"
+        "When an independent plumbing technician evaluates a malfunctioning tankless unit, several key factors determine whether component repair or full replacement is appropriate:",
+        "When you are ready to compare estimates from independent Texas-licensed contractors, visit our [water heater repair in Houston, TX](/location/houston/water-heater-repair) page or call [(877) 587-3986](tel:+18775873986) to request a local plumbing referral."
       ],
       "numberedList": [
         "Unit Age: Well-maintained tankless systems typically last 15 to 20 years. Units approaching 15 years with multiple failed electronic boards or obsolete parts may be more cost-effective to replace.",
@@ -98,5 +99,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Tankless water heater repair services",
+      "url": "/services/water-heater-repair"
+    },
+    {
+      "title": "Water heater repair in Houston, TX",
+      "url": "/location/houston/water-heater-repair"
+    }
+  ]
 }

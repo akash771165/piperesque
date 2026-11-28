@@ -25,7 +25,7 @@
   },
   "introduction": [
     "When an electric water heater produces only lukewarm water, runs out of hot water within three to five minutes of starting a shower, or continuously trips its dedicated circuit breaker, the issue is almost always a burned-out heating element or a malfunctioning thermostat switch.",
-    "Unlike gas water heaters that heat from a single burner plate beneath the tank, electric units utilize two independent immersion heating elements: an upper element and a lower element, each regulated by its own thermostat. They operate in a strict non-simultaneous electrical relay sequence.",
+    "Unlike gas water heaters that heat from a single burner plate beneath the tank, electric units utilize two independent immersion heating elements: an upper element and a lower element, each regulated by its own thermostat. They operate in a strict non-simultaneous electrical relay sequence. Before approving any repair quote, homeowners and facility managers can compare diagnostic steps and referral options on our [electric water heater repair services](/services/water-heater-repair) page.",
     "In Greater Houston, elevated calcium and magnesium hardness in municipal and well water accelerates electric element failure. When mineral scale cakes around the lower element, it insulates the metal sheath from water cooling, causing the coil to superheat and burn out. Diagnosing element resistance with a multimeter and safely restoring electrical integrity prevents unnecessary total tank replacements."
   ],
   "sections": [
@@ -81,7 +81,8 @@
       "subtitle": "Bi-metal switches, high-limit ECO reset buttons, and temperature calibration",
       "content": [
         "Thermostats are mounted flat against the steel tank exterior beneath insulation pads. If multimeter testing confirms that both heating elements have normal 12.8-ohm resistance, but water remains lukewarm or cold, the thermostats are tested:",
-        "Technicians test the upper thermostat's high-limit ECO (Emergency Cut-Off) switch, check voltage transfer between terminal 1, terminal 2, and terminal 4, and verify that the bi-metal dial snaps open and closed at calibrated temperature settings (recommended setting: 120°F to prevent scalding while inhibiting Legionella bacteria)."
+        "Technicians test the upper thermostat's high-limit ECO (Emergency Cut-Off) switch, check voltage transfer between terminal 1, terminal 2, and terminal 4, and verify that the bi-metal dial snaps open and closed at calibrated temperature settings (recommended setting: 120°F to prevent scalding while inhibiting Legionella bacteria).",
+        "Homeowners and property managers seeking qualified local evaluation can review [water heater repair in Houston, TX](/location/houston/water-heater-repair) or call [(877) 587-3986](tel:+18775873986) to be matched with independent plumbing professionals in Houston, TX."
       ]
     }
   ],
@@ -105,5 +106,15 @@
     "button": "Call (877) 587-3986",
     "phone": "(877) 587-3986",
     "url": "tel:+18775873986"
-  }
+  },
+  "internalLinks": [
+    {
+      "title": "Electric water heater repair services",
+      "url": "/services/water-heater-repair"
+    },
+    {
+      "title": "Water heater repair in Houston, TX",
+      "url": "/location/houston/water-heater-repair"
+    }
+  ]
 }

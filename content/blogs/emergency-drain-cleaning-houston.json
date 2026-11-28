@@ -42,7 +42,7 @@
   },
   "introduction": [
     "A clogged drain can be a minor inconvenience, but some drain problems require immediate attention. Water backing up into a sink, shower, bathtub, or floor drain can quickly create water damage, sanitation concerns, and additional plumbing problems.",
-    "If you are dealing with a serious drain blockage in Houston, the first priority is to stop using the affected fixture and prevent additional water from entering the drain. Professional drain cleaning may be necessary when plunging or other basic steps do not restore normal drainage.",
+    "If you are dealing with a serious drain blockage in Houston, the first priority is to stop using the affected fixture and prevent additional water from entering the drain. Professional drain cleaning may be necessary when plunging or other basic steps do not restore normal drainage. When on-site diagnostics or licensed repairs are required, review our [emergency drain cleaning services](/services/drain-cleaning) overview to see how PipeResque connects property owners with independent Texas plumbing professionals.",
     "This guide explains how to recognize a drain emergency, what you can safely do before professional help arrives, and when emergency drain cleaning is the appropriate next step."
   ],
   "sections": [
@@ -177,7 +177,8 @@
       "title": "When to Call for Emergency Drain Cleaning",
       "content": [
         "Professional help is appropriate when a drain is completely blocked, wastewater is backing up, multiple fixtures are affected, or basic clearing methods have failed.",
-        "If the problem is causing active water damage or involves sewage backup, delaying service can increase the potential for property damage and cleanup requirements."
+        "If the problem is causing active water damage or involves sewage backup, delaying service can increase the potential for property damage and cleanup requirements.",
+        "To connect with independent licensed plumbers familiar with local soil, water pressure, and municipal code requirements, explore [drain cleaning in Houston, TX](/location/houston/drain-cleaning) or call [(877) 587-3986](tel:+18775873986) for referral assistance."
       ],
       "bullets": [
         "Call promptly for sewage or wastewater backup.",
@@ -258,5 +259,15 @@
     "Cypress",
     "Spring",
     "The Woodlands"
+  ],
+  "internalLinks": [
+    {
+      "title": "Emergency drain cleaning services",
+      "url": "/services/drain-cleaning"
+    },
+    {
+      "title": "Drain cleaning in Houston, TX",
+      "url": "/location/houston/drain-cleaning"
+    }
   ]
 }
